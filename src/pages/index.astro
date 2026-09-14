@@ -18,7 +18,7 @@
   <!-- FUENTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,500;1,700;1,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:wght@500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -44,7 +44,7 @@
   <!-- SECCIÓN HERO COMPLETA -->
   <main class="hero-container">
     
-    <!-- TARJETA DESPLEGABLE IZQUIERDA (Clic para alternar) -->
+    <!-- TARJETA DESPLEGABLE IZQUIERDA -->
     <div class="glass-profile-card" onclick="this.classList.toggle('active')">
       <div class="card-min-header">
         <img src="/grey.jpeg" alt="Greydemar Serrano" class="profile-thumb" />
@@ -53,23 +53,22 @@
             <span class="green-dot"></span>
             <span class="status-text" data-es="En línea" data-en="Online">En línea</span>
           </div>
-          <!-- Nombre más grande y cargo transparente -->
+          <!-- Nombre y Nuevo Cargo -->
           <div class="name-group">
             <h2 class="min-name">GREYDEMAR SERRANO</h2>
-            <span class="min-title">Marketing Specialist</span>
+            <span class="min-title">Especialista en Marketing Digital y Conversión Web</span>
           </div>
         </div>
       </div>
       
       <div class="card-expand-content">
-        <!-- Textos mucho más grandes y con negritas fuertes -->
         <p class="expand-bio" 
            data-es="<strong>Marketing para atraer + Ventas para facturar + Web para escalar.</strong><br><br>No hago ruido, <strong>construyo ecosistemas rentables.</strong> Conecto contenido de alto impacto con sistemas de cierre comercial y plataformas ultrarrápidas.<br><br><strong>Mi objetivo:</strong> eliminar la fricción, posicionar tu autoridad y multiplicar tus conversiones." 
            data-en="<strong>Marketing to attract + Sales to invoice + Web to scale.</strong><br><br>I don't just make noise, <strong>I build profitable ecosystems.</strong> I connect high-impact content with commercial closing systems and ultra-fast platforms.<br><br><strong>My goal:</strong> eliminate friction, position your authority, and multiply your conversions.">
           <strong>Marketing para atraer + Ventas para facturar + Web para escalar.</strong><br><br>No hago ruido, <strong>construyo ecosistemas rentables.</strong> Conecto contenido de alto impacto con sistemas de cierre comercial y plataformas ultrarrápidas.<br><br><strong>Mi objetivo:</strong> eliminar la fricción, posicionar tu autoridad y multiplicar tus conversiones.
         </p>
         
-        <!-- SKILLS ACTUALIZADOS -->
+        <!-- SKILLS (Sin Metricool) -->
         <div class="skills-grid">
           <span>Astro</span>
           <span>GitHub</span>
@@ -78,17 +77,16 @@
           <span>GA4</span>
           <span>Salesforce</span>
           <span>Zoho CRM</span>
-          <span class="wide-skill">Creación de Contenido</span>
-          <span>Metricool</span>
           <span>Mailchimp</span>
+          <span class="wide-skill">Creación de Contenido</span>
         </div>
       </div>
     </div>
 
-    <!-- FRASE GANCHO CON FUENTE CREATIVA -->
+    <!-- FRASE GANCHO CON GUION Y SIN CURSIVA (Bajada en Desktop) -->
     <div class="quote-text">
-      <span data-es="Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar." data-en="Invoicing is no accident. It depends on how they see you, how you connect, and how easy you make it to buy.">
-        Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar.
+      <span data-es="- Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar." data-en="- Invoicing is no accident. It depends on how they see you, how you connect, and how easy you make it to buy.">
+        - Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar.
       </span>
     </div>
 
@@ -103,7 +101,7 @@
       <span class="floating-pill pill-yellow">Visual Content</span>
     </div>
 
-    <!-- TARJETA DESPLEGABLE DERECHA -->
+    <!-- TARJETA CASOS DESTACADOS (Bajada en Desktop) -->
     <div class="glass-cases-card" onclick="this.classList.toggle('active')">
       <div class="cases-min-header">
         <span class="cases-title-text" data-es="Casos Destacados" data-en="Featured Cases">Casos Destacados</span>
@@ -363,9 +361,9 @@
   }
   .min-title {
     font-size: 11.5px;
-    font-weight: 600;
+    font-weight: 700; /* Mayor legibilidad */
     color: var(--navy-dark);
-    opacity: 0.6;
+    opacity: 0.65;
   }
 
   .card-expand-content {
@@ -415,16 +413,17 @@
     grid-column: span 2;
   }
 
-  /* FRASE GANCHO */
+  /* FRASE GANCHO: Sin cursiva, bajada en Desktop */
   .quote-text {
     grid-column: 1;
     grid-row: 2;
     padding: 0 10px;
+    margin-top: 24px; /* Baja la frase en la versión web */
   }
   
   .quote-text span {
     font-family: 'Playfair Display', serif;
-    font-style: italic;
+    font-style: normal; /* Cursiva eliminada */
     font-size: 20px;
     font-weight: 700;
     color: #ffffff;
@@ -474,7 +473,7 @@
   .pill-green { background: var(--pastel-green); top: 52%; left: -25px; transform: rotate(-6deg); }
   .pill-yellow { background: var(--pastel-yellow); bottom: -25px; right: 40px; transform: rotate(2deg); }
 
-  /* TARJETA CASOS DERECHA */
+  /* TARJETA CASOS DERECHA: Bajada en Desktop */
   .glass-cases-card {
     grid-column: 3;
     grid-row: 1;
@@ -488,6 +487,7 @@
     box-shadow: var(--glass-shadow);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     overflow: hidden;
+    margin-top: 32px; /* Baja la tarjeta de Casos en la versión web */
   }
 
   .cases-min-header { display: flex; align-items: center; justify-content: space-between; width: 100%; }
@@ -562,16 +562,24 @@
   }
   .dock-item:hover::before { opacity: 1; visibility: visible; top: -56px; }
 
-  /* MÓVIL */
+  /* MÓVIL: Reordenamiento y reset de márgenes */
   @media (max-width: 900px) {
     .brand-centered { font-size: 16px; top: 20px; }
     
     .hero-container { display: flex; flex-direction: column; gap: 16px; margin-top: 50px; }
     .glass-profile-card { order: 1; }
     .hero-center-text { order: 2; margin-top: 10px; }
-    .glass-cases-card { order: 3; }
     
-    .quote-text { order: 4; text-align: center; margin-top: 10px; }
+    .glass-cases-card { 
+      order: 3; 
+      margin-top: 0; /* Se resetea el margen extra para no afectar el móvil */
+    }
+    
+    .quote-text { 
+      order: 4; 
+      text-align: center; 
+      margin-top: 10px; /* Se resetea el margen extra */
+    }
     .quote-text span { font-size: 20px; }
 
     .hero-center-text h1 { font-size: 2.6rem; }
