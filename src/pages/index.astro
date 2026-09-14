@@ -267,4 +267,217 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    font-family: 'Plus Jakarta Sans', sans-serif
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--navy-dark);
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* =========================================
+     FONDO GLOBAL ESTÁTICO (Nuevos Stickers)
+     ========================================= */
+  .global-fixed-bg {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background-color: #f8fafc;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    z-index: -999; 
+  }
+  
+  .sticker { position: absolute; opacity: 0.7; }
+  .sticker-star { top: 12%; right: 15%; transform: rotate(15deg); }
+  .sticker-plant { bottom: 20%; left: 8%; transform: rotate(-10deg); opacity: 0.6; }
+  .sticker-sparkle { top: 40%; right: 5%; transform: rotate(5deg); }
+
+  /* =========================================
+     SECCIÓN HERO 
+     ========================================= */
+  .hero-wrapper { position: relative; width: 100%; min-height: 100vh; overflow: hidden; }
+  .hero-video-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+  .video-bg { width: 100%; height: 100%; object-fit: cover; }
+  .avila-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.35); }
+
+  .top-header { position: relative; width: 100%; max-width: 1300px; margin: 0 auto; padding: 24px 32px; display: flex; justify-content: flex-end; align-items: center; z-index: 10; }
+  .brand-centered { position: absolute; top: 38px; left: 50%; transform: translateX(-50%); font-weight: 900; font-size: 20px; letter-spacing: -0.02em; color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.4); white-space: nowrap; }
+  .lang-switch { background: var(--glass-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); padding: 6px 14px; border-radius: 30px; display: flex; align-items: center; gap: 8px; border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow); }
+  .lang-btn { background: none; border: none; font-weight: 700; font-size: 12px; color: #334155; cursor: pointer; }
+  .lang-btn.active { color: var(--navy-dark); font-weight: 900; }
+  .lang-divider { color: #94a3b8; font-size: 12px; }
+
+  /* HERO GRID (Ahora con align-items: center para alinear perfectamente en el medio) */
+  .hero-container { 
+    max-width: 1300px; width: 100%; margin: auto auto; padding: 20px 32px 100px; 
+    display: grid; grid-template-columns: 320px 1fr 260px; gap: 24px; 
+    align-items: center; /* ESTO CENTRA TODO VERTICALMENTE */
+    min-height: calc(100vh - 120px);
+    position: relative; z-index: 10; 
+  }
+  
+  /* Contenedor Izquierdo */
+  .left-col { display: flex; flex-direction: column; gap: 28px; }
+
+  .glass-profile-card { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 24px; padding: 16px 20px; cursor: pointer; box-shadow: var(--glass-shadow); transition: all 0.4s; overflow: hidden; }
+  .card-min-header { display: flex; align-items: center; gap: 14px; }
+  .profile-thumb { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.9); transition: all 0.5s; flex-shrink: 0; }
+  .glass-profile-card.active .profile-thumb { width: 85px; height: 85px; border-width: 3px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+  .min-meta { display: flex; flex-direction: column; justify-content: center; }
+  .status-line { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+  @keyframes blink-green { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
+  .green-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: blink-green 2.5s infinite; }
+  .status-text { font-size: 11px; font-weight: 700; color: #1e293b; }
+  .name-group { display: flex; flex-direction: column; gap: 2px; }
+  .min-name { font-size: 15px; font-weight: 900; letter-spacing: -0.01em; line-height: 1.1; }
+  .min-title { font-size: 11.5px; font-weight: 700; opacity: 0.65; }
+
+  .card-expand-content { max-height: 0; opacity: 0; transition: all 0.5s; overflow: hidden; }
+  .glass-profile-card.active .card-expand-content { max-height: 600px; opacity: 1; margin-top: 20px; padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, 0.4); }
+  .expand-bio { font-size: 15px; font-weight: 500; line-height: 1.55; margin-bottom: 22px; }
+  .expand-bio strong { font-weight: 900; color: #000; }
+  .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .skills-grid span { font-size: 10.5px; font-weight: 800; background: rgba(255, 255, 255, 0.75); padding: 8px 10px; border-radius: 6px; text-align: center; white-space: nowrap; }
+  .skills-grid .wide-skill { grid-column: span 2; }
+
+  .quote-text { padding: 0 10px; }
+  .quote-text span { font-size: 18px; font-weight: 800; letter-spacing: -0.02em; color: #ffffff; text-shadow: 0 2px 14px rgba(0,0,0,0.8); line-height: 1.4; display: block; }
+
+  .hero-center-text { text-align: center; position: relative; display: flex; justify-content: center; align-items: center; }
+  .hero-center-text h1 { font-size: 4.8rem; font-weight: 900; line-height: 0.98; letter-spacing: -0.04em; text-transform: uppercase; margin: 0 auto; max-width: 900px; color: #ffffff; text-shadow: 0 8px 30px rgba(0,0,0,0.3); }
+  .floating-pill { position: absolute; padding: 6px 14px; border-radius: 30px; font-size: 12px; font-weight: 800; white-space: nowrap; color: var(--navy-dark); pointer-events: none;}
+  .pill-pink { background: var(--pastel-pink); top: -25px; right: 15px; transform: rotate(3deg); }
+  .pill-green { background: var(--pastel-green); top: 52%; left: -25px; transform: rotate(-6deg); }
+  .pill-yellow { background: var(--pastel-yellow); bottom: -25px; right: 40px; transform: rotate(2deg); }
+
+  .glass-cases-card { background: rgba(15, 23, 42, 0.5); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 20px; padding: 14px 18px; cursor: pointer; transition: all 0.4s; overflow: hidden; }
+  .cases-min-header { display: flex; align-items: center; justify-content: space-between; }
+  .cases-title-text { font-size: 14px; font-weight: 700; color: #ffffff; }
+  .search-icon-wrapper { background: rgba(255, 255, 255, 0.15); border-radius: 50%; padding: 6px; display: flex; color: #ffffff; }
+  .cases-expand-content { max-height: 0; opacity: 0; transition: all 0.5s; }
+  .glass-cases-card.active .cases-expand-content { max-height: 350px; opacity: 1; margin-top: 14px; }
+  .quick-cases-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .quick-cases-list a { text-decoration: none; color: #ffffff; display: flex; flex-direction: column; font-size: 13.5px; }
+  .quick-cases-list strong { font-weight: 800; color: #ffffff;}
+  .quick-cases-list span { font-size: 11px; color: #cbd5e1; margin-top: 2px;}
+
+  /* =========================================
+     SECCIÓN ABOUT ME Y PROYECTOS (ESTILOS COMPARTIDOS)
+     ========================================= */
+  .about-section, .projects-section {
+    position: relative;
+    width: 100%;
+    padding: 100px 32px 60px; 
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .projects-section { padding-top: 60px; padding-bottom: 140px; }
+
+  .about-container, .projects-container {
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Sticky Note (Pegatina) con PIN Real SVG */
+  .sticky-note {
+    position: relative;
+    background-color: var(--pastel-yellow);
+    padding: 10px 18px 6px;
+    border-radius: 6px;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.05);
+    transform: rotate(-3deg);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .real-pin {
+    position: absolute;
+    top: -12px; /* Clavado arriba */
+    width: 24px;
+    height: 24px;
+    filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.2));
+  }
+  .note-text { font-weight: 800; font-size: 13px; color: var(--navy-dark); text-transform: uppercase; letter-spacing: 0.05em; }
+
+  /* Encabezado */
+  .about-header, .projects-header { text-align: center; margin-bottom: 50px; }
+  .about-header h2, .projects-header h2 { font-size: 3.5rem; font-weight: 900; line-height: 1.1; letter-spacing: -0.03em; color: var(--navy-dark); margin-bottom: 20px; }
+  .about-subtitle { font-size: 1.1rem; line-height: 1.6; color: #475569; max-width: 700px; margin: 0 auto; font-weight: 500; }
+
+  /* Ventana Mac (Contenedor Info) */
+  .mac-window { width: 100%; background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(0,0,0,0.05); border-radius: 16px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06); overflow: hidden; }
+  .mac-titlebar { background: rgba(241, 245, 249, 0.8); padding: 14px 20px; display: flex; align-items: center; border-bottom: 1px solid rgba(0,0,0,0.05); }
+  .mac-buttons { display: flex; gap: 8px; }
+  .mac-dot { width: 12px; height: 12px; border-radius: 50%; }
+  .mac-dot.red { background-color: #ff5f56; border: 1px solid #e0443e; }
+  .mac-dot.yellow { background-color: #ffbd2e; border: 1px solid #dea123; }
+  .mac-dot.green { background-color: #27c93f; border: 1px solid #1aab29; }
+
+  .mac-content { display: grid; grid-template-columns: 280px 1fr; gap: 40px; padding: 40px; align-items: center; }
+
+  /* Memoji Circular */
+  .bio-image-col { display: flex; justify-content: center; }
+  .memoji-circle { width: 240px; height: 240px; border-radius: 50%; object-fit: cover; background-color: #fef08a; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+
+  .bio-info-col { display: flex; flex-direction: column; gap: 30px; }
+  .bio-intro { font-size: 1.2rem; line-height: 1.6; color: var(--navy-dark); }
+  .bio-intro strong { font-weight: 800; }
+
+  .stats-grid-about { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .stat-item h3 { font-size: 2.5rem; font-weight: 900; margin-bottom: 4px; background: linear-gradient(90deg, #9b51e0, #ff7e5f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .stat-item p { font-size: 15px; font-weight: 600; color: #475569; line-height: 1.3; }
+
+  /* =========================================
+     BARRA FLOTANTE DOCK (Tamaño Ajustado a Mediano)
+     ========================================= */
+  .floating-dock {
+    position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+    background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border); 
+    border-radius: 32px; /* Un poco menos redondeado porque es más fino */
+    padding: 10px 22px; /* Reducida la altura de la barra */
+    z-index: 9999; box-shadow: var(--glass-shadow);
+  }
+  .dock-list { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; align-items: center; }
+  .dock-item { position: relative; display: flex; justify-content: center; }
+  .dock-link { display: flex; align-items: center; }
+  
+  /* Iconos ajustados a un tamaño promedio mediano */
+  .mac-icon { width: 52px; height: 52px; object-fit: contain; transition: transform 0.2s; }
+  .dock-link:hover .mac-icon { transform: scale(1.2) translateY(-6px); }
+  
+  .dock-item::before {
+    content: attr(data-tooltip); position: absolute; top: -42px; background: var(--navy-dark); color: white;
+    font-size: 12px; font-weight: 700; padding: 6px 12px; border-radius: 8px; opacity: 0; visibility: hidden;
+    transition: all 0.2s; white-space: nowrap; pointer-events: none;
+  }
+  .dock-item:hover::before { opacity: 1; visibility: visible; top: -48px; }
+
+  /* MÓVIL (Con 'display: contents' reordenamos la columna izquierda) */
+  @media (max-width: 900px) {
+    .brand-centered { font-size: 16px; top: 20px; }
+    .hero-container { display: flex; flex-direction: column; gap: 16px; margin-top: 50px; }
+    
+    .left-col { display: contents; } /* Desintegra la columna para reordenar en móvil */
+    .glass-profile-card { order: 1; }
+    .hero-center-text { order: 2; margin-top: 10px; }
+    .glass-cases-card { order: 3; margin-top: 0; }
+    .quote-text { order: 4; text-align: center; margin-top: 10px; }
+    
+    .hero-center-text h1 { font-size: 2.6rem; }
+    .floating-pill { display: none; }
+    .floating-dock { padding: 10px 16px; }
+    .mac-icon { width: 44px; height: 44px; }
+    .dock-list { gap: 16px; }
+
+    /* Ajustes Móvil para About Me y Proyectos */
+    .about-section { padding: 80px 20px 60px; }
+    .projects-section { padding: 40px 20px 140px; }
+    .about-header h2, .projects-header h2 { font-size: 2.4rem; }
+    .mac-content { grid-template-columns: 1fr; gap: 24px; padding: 24px; text-align: center; }
+    .stats-grid-about { grid-template-columns: 1fr; gap: 16px; }
+    .stat-item h3 { font-size: 2.2rem; }
+  }
+</style>
