@@ -12,24 +12,30 @@
   <meta name="title" content="Greydemar Serrano | Marketing & Project Manager">
   <meta name="description" content="Especialista en Growth Marketing, Creación de Contenido y Project Management.">
 
+  <!-- FAVICON -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='50' fill='%23FEF08A'/><text x='50%' y='62%' font-size='42' font-weight='900' font-family='sans-serif' fill='%230F172A' text-anchor='middle'>GS</text></svg>" />
 
+  <!-- FUENTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
+  <!-- OJITOS QUE SIGUEN EL CURSOR -->
   <div class="eyes-follower" id="eyes">👀</div>
 
+  <!-- FONDO CON EL ÁVILA -->
   <div class="hero-bg-wrapper">
     <div class="avila-overlay"></div>
   </div>
 
+  <!-- NAVBAR CON CAMBIO DE IDIOMA DELICADO -->
   <nav class="top-nav">
     <div class="nav-container">
       <div class="logo"><span class="logo-badge">GS</span> GREYDEMAR®</div>
       
+      <!-- SWITCH DE IDIOMA EN / ES -->
       <div class="lang-switch">
         <button class="lang-btn active" onclick="setLanguage('es')">ES</button>
         <span class="lang-divider">|</span>
@@ -38,8 +44,10 @@
     </div>
   </nav>
 
+  <!-- SECCIÓN HERO COMPLETA -->
   <header class="hero-container">
     
+    <!-- TARJETA DE PERFIL INTERACTIVA (IZQUIERDA) -->
     <div class="interactive-card profile-card" tabindex="0">
       <div class="card-top-row">
         <span class="status-badge">
@@ -59,6 +67,7 @@
           Especializada en conectar estrategias de contenido, crecimiento orgánico y liderazgo de proyectos digitales.
         </p>
 
+        <!-- ETIQUETAS DE FUERTES EN COLORES PASTEL -->
         <div class="profile-tags">
           <span class="tag-pill tag-pink">Ventas & CRM</span>
           <span class="tag-pill tag-green">Social Media Marketing</span>
@@ -67,16 +76,19 @@
       </div>
     </div>
 
+    <!-- TÍTULO CENTRAL IMPACTANTE -->
     <div class="hero-center-text">
       <h1 data-es="ESTRATEGIA QUE HACE QUE LA GENTE REGRESE" data-en="STRATEGY THAT MAKES PEOPLE LOOK TWICE">
         ESTRATEGIA QUE HACE QUE LA GENTE REGRESE
       </h1>
 
+      <!-- PÍLDORAS FLOTANTES SOBRE EL TÍTULO -->
       <span class="floating-pill pill-pink">Growth Marketing</span>
       <span class="floating-pill pill-green">Project Manager</span>
       <span class="floating-pill pill-yellow">Visual Content</span>
     </div>
 
+    <!-- TARJETA DE CASOS RÁPIDOS (DERECHA) -->
     <div class="interactive-card cases-card" tabindex="0">
       <div class="card-top-row">
         <span class="cases-title-badge">
@@ -111,6 +123,7 @@
 
   </header>
 
+  <!-- NAVEGACIÓN DOCK FLOTANTE SUPERIOR / INFERIOR (MACOS STYLE) -->
   <nav class="floating-dock">
     <ul class="dock-list">
       <li class="dock-item" data-tooltip="Sobre mí">
@@ -128,6 +141,7 @@
     </ul>
   </nav>
 
+  <!-- SCRIPTS DE INTERACCIÓN -->
   <script is:inline>
     // OJITOS SEGIMIENTO DE MOUSE
     const eyes = document.getElementById('eyes');
@@ -151,6 +165,7 @@
 </body>
 </html>
 
+<!-- ESTILOS SINTAXIS SÓLIDA CORREGIDA -->
 <style is:global>
   :root {
     --navy-dark: #0f172a;
@@ -160,7 +175,11 @@
     --border-glass: rgba(255, 255, 255, 0.4);
   }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  * { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+  }
 
   body {
     font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
@@ -189,9 +208,10 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url('/image_bf09ce.jpg') no-repeat center center/cover;
+    background: url('/image_bf09ce.jpg') no-repeat center center / cover;
     z-index: -2;
   }
+
   .avila-overlay {
     position: absolute;
     width: 100%;
@@ -206,6 +226,7 @@
     position: relative;
     z-index: 100;
   }
+
   .nav-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -213,8 +234,22 @@
     justify-content: space-between;
     align-items: center;
   }
-  .logo { font-weight: 900; font-size: 18px; letter-spacing: -0.02em; display: flex; align-items: center; gap: 8px; }
-  .logo-badge { background: var(--pastel-yellow); padding: 4px 8px; border-radius: 50%; font-size: 12px; }
+
+  .logo { 
+    font-weight: 900; 
+    font-size: 18px; 
+    letter-spacing: -0.02em; 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+  }
+
+  .logo-badge { 
+    background: var(--pastel-yellow); 
+    padding: 4px 8px; 
+    border-radius: 50%; 
+    font-size: 12px; 
+  }
 
   /* SWITCH DE IDIOMA MINIMALISTA */
   .lang-switch {
@@ -227,6 +262,7 @@
     gap: 8px;
     border: 1px solid var(--border-glass);
   }
+
   .lang-btn {
     background: none;
     border: none;
@@ -236,8 +272,16 @@
     cursor: pointer;
     transition: color 0.2s;
   }
-  .lang-btn.active { color: var(--navy-dark); font-weight: 900; }
-  .lang-divider { color: #cbd5e1; font-size: 12px; }
+
+  .lang-btn.active { 
+    color: var(--navy-dark); 
+    font-weight: 900; 
+  }
+
+  .lang-divider { 
+    color: #cbd5e1; 
+    font-size: 12px; 
+  }
 
   /* HERO LAYOUT DE 3 COLUMNAS */
   .hero-container {
@@ -263,11 +307,38 @@
     overflow: hidden;
   }
 
-  .card-top-row { display: flex; align-items: center; justify-content: space-between; }
-  .status-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 800; background: rgba(34,197,94,0.15); color: #15803d; padding: 4px 12px; border-radius: 20px; }
-  .status-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; }
+  .card-top-row { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+  }
 
-  .cases-title-badge { font-size: 13px; font-weight: 800; display: flex; align-items: center; gap: 6px; }
+  .status-badge { 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 6px; 
+    font-size: 12px; 
+    font-weight: 800; 
+    background: rgba(34,197,94,0.15); 
+    color: #15803d; 
+    padding: 4px 12px; 
+    border-radius: 20px; 
+  }
+
+  .status-dot { 
+    width: 8px; 
+    height: 8px; 
+    background: #22c55e; 
+    border-radius: 50%; 
+  }
+
+  .cases-title-badge { 
+    font-size: 13px; 
+    font-weight: 800; 
+    display: flex; 
+    align-items: center; 
+    gap: 6px; 
+  }
 
   /* CONTENIDO DESPLEGABLE CON HOVER O CLICK */
   .card-content-expand {
@@ -284,14 +355,199 @@
     margin-top: 16px;
   }
 
-  .hero-avatar { width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 12px; border: 2px solid white; }
-  .profile-name { font-size: 16px; font-weight: 900; }
-  .profile-role { font-size: 12px; font-weight: 700; color: #64748b; margin-bottom: 8px; }
-  .profile-bio { font-size: 12px; color: #334155; line-height: 1.5; margin-bottom: 14px; }
-  
+  .hero-avatar { 
+    width: 70px; 
+    height: 70px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-bottom: 12px; 
+    border: 2px solid white; 
+  }
+
+  .profile-name { 
+    font-size: 16px; 
+    font-weight: 900; 
+  }
+
+  .profile-role { 
+    font-size: 12px; 
+    font-weight: 700; 
+    color: #64748b; 
+    margin-bottom: 8px; 
+  }
+
+  .profile-bio { 
+    font-size: 12px; 
+    color: #334155; 
+    line-height: 1.5; 
+    margin-bottom: 14px; 
+  }
+
   /* ETIQUETAS PASTEL */
-  .profile-tags { display: flex; gap: 6px; flex-wrap: wrap; }
-  .tag-pill { font-size: 11px; font-weight: 800; padding: 6px 12px; border-radius: 20px; }
-  .tag-pink { background: var(--pastel-pink); color: #831843; }
-  .tag-green { background: var(--pastel-green); color: #14532d; }
-  .tag-yellow { background: var(--pastel-yellow); color: #713f
+  .profile-tags { 
+    display: flex; 
+    gap: 6px; 
+    flex-wrap: wrap; 
+  }
+
+  .tag-pill { 
+    font-size: 11px; 
+    font-weight: 800; 
+    padding: 6px 12px; 
+    border-radius: 20px; 
+  }
+
+  .tag-pink { 
+    background: var(--pastel-pink); 
+    color: #831843; 
+  }
+
+  .tag-green { 
+    background: var(--pastel-green); 
+    color: #14532d; 
+  }
+
+  .tag-yellow { 
+    background: var(--pastel-yellow); 
+    color: #713f12; 
+  }
+
+  /* LISTA CASOS RÁPIDOS */
+  .quick-cases-list { 
+    list-style: none; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 12px; 
+  }
+
+  .quick-cases-list a { 
+    text-decoration: none; 
+    color: var(--navy-dark); 
+    display: flex; 
+    flex-direction: column; 
+    font-size: 13px; 
+  }
+
+  .quick-cases-list strong { 
+    font-weight: 800; 
+  }
+
+  .quick-cases-list span { 
+    font-size: 11px; 
+    color: #64748b; 
+  }
+
+  /* TÍTULO CENTRAL IMPACTANTE */
+  .hero-center-text { 
+    text-align: center; 
+    position: relative; 
+    padding: 20px 0; 
+  }
+
+  .hero-center-text h1 {
+    font-size: 3.6rem;
+    font-weight: 900;
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+  }
+
+  /* PÍLDORAS FLOTANTES SOBRE EL TÍTULO CENTRAL */
+  .floating-pill {
+    position: absolute;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 800;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+    pointer-events: none;
+  }
+
+  .pill-pink { 
+    background: var(--pastel-pink); 
+    top: 5%; 
+    right: 5%; 
+    transform: rotate(4deg); 
+  }
+
+  .pill-green { 
+    background: var(--pastel-green); 
+    top: 45%; 
+    left: -5%; 
+    transform: rotate(-5deg); 
+  }
+
+  .pill-yellow { 
+    background: var(--pastel-yellow); 
+    bottom: -5%; 
+    right: 15%; 
+    transform: rotate(3deg); 
+  }
+
+  /* BARRA FLOTANTE MACOS (DOCK) */
+  .floating-dock {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    border: 1.5px solid rgba(226, 232, 240, 0.9);
+    border-radius: 22px;
+    padding: 5px 10px;
+    z-index: 9999;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  }
+
+  .dock-list { 
+    display: flex; 
+    gap: 10px; 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+    align-items: center; 
+  }
+
+  .dock-item { 
+    position: relative; 
+    display: flex; 
+    justify-content: center; 
+  }
+
+  .dock-link { 
+    display: flex; 
+    align-items: center; 
+  }
+
+  .mac-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .dock-link:hover .mac-icon { 
+    transform: scale(1.2) translateY(-4px); 
+  }
+
+  /* MÓVIL ADAPTATIVO */
+  @media (max-width: 900px) {
+    .hero-container { 
+      grid-template-columns: 1fr; 
+      gap: 16px; 
+    }
+
+    .hero-center-text h1 { 
+      font-size: 2.2rem; 
+    }
+
+    .floating-pill { 
+      display: none; 
+    }
+
+    .mac-icon { 
+      width: 42px; 
+      height: 42px; 
+    }
+  }
+</style>
