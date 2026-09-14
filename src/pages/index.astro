@@ -1,5 +1,5 @@
 ---
-// Greydemar Serrano - Hero Centrado & Fondo de Video
+// Greydemar Serrano - Hero Centrado & Fondo de Video (WebM)
 ---
 
 <!DOCTYPE html>
@@ -15,17 +15,17 @@
   <!-- FAVICON -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='50' fill='%23FEF08A'/><text x='50%' y='62%' font-size='42' font-weight='900' font-family='sans-serif' fill='%230F172A' text-anchor='middle'>GS</text></svg>" />
 
-  <!-- FUENTES (Jakarta para UI y Playfair para la frase creativa, añadí peso 700 y 800) -->
+  <!-- FUENTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,500;1,700;1,800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- FONDO CON EL VIDEO DEL ÁVILA -->
+  <!-- FONDO CON EL VIDEO DEL ÁVILA (WEBM) -->
   <div class="hero-bg-wrapper">
     <video autoplay loop muted playsinline class="video-bg">
-      <source src="/avila.mp4" type="video/mp4" />
+      <source src="/avila.webm" type="video/webm" />
     </video>
     <div class="avila-overlay"></div>
   </div>
@@ -85,7 +85,7 @@
       </div>
     </div>
 
-    <!-- FRASE GANCHO CON FUENTE CREATIVA (Sin comillas, más gruesa y legible) -->
+    <!-- FRASE GANCHO CON FUENTE CREATIVA -->
     <div class="quote-text">
       <span data-es="Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar." data-en="Invoicing is no accident. It depends on how they see you, how you connect, and how easy you make it to buy.">
         Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar.
@@ -126,13 +126,13 @@
           <li>
             <a href="#projects">
               <strong>Eurobuilding</strong>
-              <span>Comunicaciones</span> <!-- Actualizado -->
+              <span>Comunicaciones</span>
             </a>
           </li>
           <li>
             <a href="#projects">
               <strong>Impaktemos</strong>
-              <span>Coordinación</span> <!-- Actualizado -->
+              <span>Coordinación</span>
             </a>
           </li>
           <li>
@@ -153,7 +153,7 @@
 
   </main>
 
-  <!-- BARRA FLOTANTE DOCK (AÚN MÁS GRANDE) -->
+  <!-- BARRA FLOTANTE DOCK -->
   <nav class="floating-dock">
     <ul class="dock-list">
       <li class="dock-item" data-tooltip="Sobre mí">
@@ -309,7 +309,6 @@
     gap: 14px; 
   }
   
-  /* ANIMACIÓN DE LA IMAGEN DE PERFIL (Crecimiento físico, no por escala) */
   .profile-thumb { 
     width: 48px; 
     height: 48px; 
@@ -321,7 +320,7 @@
   }
   
   .glass-profile-card.active .profile-thumb {
-    width: 85px;  /* Crece drásticamente empujando el texto */
+    width: 85px;
     height: 85px;
     border-width: 3px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
@@ -335,7 +334,6 @@
 
   .status-line { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
   
-  /* PUNTO VERDE SUTIL */
   @keyframes blink-green {
     0% { opacity: 1; }
     50% { opacity: 0.3; }
@@ -367,7 +365,7 @@
     font-size: 11.5px;
     font-weight: 600;
     color: var(--navy-dark);
-    opacity: 0.6; /* Subtítulo transparente */
+    opacity: 0.6;
   }
 
   .card-expand-content {
@@ -385,7 +383,7 @@
     border-top: 1px solid rgba(255, 255, 255, 0.4);
   }
 
-  /* TEXTO BIO MÁS GRANDE Y LEGIBLE */
+  /* TEXTO BIO */
   .expand-bio { 
     font-size: 15px; 
     font-weight: 500;
@@ -395,7 +393,7 @@
   }
   .expand-bio strong { font-weight: 900; color: #000; }
 
-  /* GRILLA DE SKILLS ACTUALIZADA */
+  /* GRILLA DE SKILLS */
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -414,10 +412,10 @@
     white-space: nowrap;
   }
   .skills-grid .wide-skill {
-    grid-column: span 2; /* Creación de Contenido ocupa dos columnas para que quepa bien */
+    grid-column: span 2;
   }
 
-  /* FRASE GANCHO CON FUENTE CREATIVA Y GRUESA */
+  /* FRASE GANCHO */
   .quote-text {
     grid-column: 1;
     grid-row: 2;
@@ -428,14 +426,14 @@
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-size: 20px;
-    font-weight: 700; /* Letra más gruesa y legible */
+    font-weight: 700;
     color: #ffffff;
     text-shadow: 0 2px 14px rgba(0,0,0,0.7);
     line-height: 1.35;
     display: block;
   }
 
-  /* TÍTULO PRINCIPAL: BLANCO Y CENTRADO */
+  /* TÍTULO PRINCIPAL */
   .hero-center-text { 
     grid-column: 2;
     grid-row: 1 / span 2;
@@ -480,7 +478,7 @@
   .glass-cases-card {
     grid-column: 3;
     grid-row: 1;
-    background: rgba(15, 23, 42, 0.5); /* Letras blancas muy legibles */
+    background: rgba(15, 23, 42, 0.5);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -493,8 +491,6 @@
   }
 
   .cases-min-header { display: flex; align-items: center; justify-content: space-between; width: 100%; }
-  
-  /* LETRAS EN BLANCO PARA CASOS DESTACADOS */
   .cases-title-text { font-size: 14px; font-weight: 700; color: #ffffff; letter-spacing: -0.01em; }
   
   .search-icon-wrapper {
@@ -520,7 +516,7 @@
   .quick-cases-list strong { font-weight: 800; color: #ffffff;}
   .quick-cases-list span { font-size: 11px; color: #cbd5e1; margin-top: 2px;}
 
-  /* DOCK FLOTANTE (ICONOS MUCHO MÁS GRANDES) */
+  /* DOCK FLOTANTE */
   .floating-dock {
     position: fixed;
     bottom: 24px;
@@ -540,7 +536,6 @@
   .dock-item { position: relative; display: flex; justify-content: center; }
   .dock-link { display: flex; align-items: center; }
 
-  /* ICONOS AUMENTADOS DE TAMAÑO (64px) */
   .mac-icon { 
     width: 64px; 
     height: 64px; 
