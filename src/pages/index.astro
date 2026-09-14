@@ -1,5 +1,5 @@
 ---
-// Greydemar Serrano - Hero, Fondo Estático & Sección About Me
+// Greydemar Serrano - Hero Centrado, Fondo Estático Mejorado & Secciones
 ---
 
 <!DOCTYPE html>
@@ -21,8 +21,19 @@
 <body>
 
   <div class="global-fixed-bg">
-    <svg class="sticker-star" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="sticker sticker-star" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M12 2L14.4 9.6H22L15.8 14.4L18.2 22L12 17.2L5.8 22L8.2 14.4L2 9.6H9.6L12 2Z" fill="#FEF08A" stroke="#0F172A" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+    
+    <svg class="sticker sticker-plant" width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 22C12 22 4 16 4 10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10C20 16 12 22 12 22Z" fill="#bbf7d0" stroke="#0F172A" stroke-width="1.5" stroke-linejoin="round"/>
+      <path d="M12 22V10" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M12 16C10 14 8 13 8 13" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M12 12C14 10 16 9 16 9" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+
+    <svg class="sticker sticker-sparkle" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2L14 10L22 12L14 14L12 22L10 14L2 12L10 10L12 2Z" fill="#fbcfe8" stroke="#0F172A" stroke-width="1.5" stroke-linejoin="round"/>
     </svg>
   </div>
 
@@ -45,48 +56,50 @@
 
     <main class="hero-container">
       
-      <div class="glass-profile-card" onclick="this.classList.toggle('active')">
-        <div class="card-min-header">
-          <img src="/grey.jpeg" alt="Greydemar Serrano" class="profile-thumb" />
-          <div class="min-meta">
-            <div class="status-line">
-              <span class="green-dot"></span>
-              <span class="status-text" data-es="En línea" data-en="Online">En línea</span>
-            </div>
-            <div class="name-group">
-              <h2 class="min-name">GREYDEMAR SERRANO</h2>
-              <span class="min-title" data-es="Especialista en Marketing Digital y Conversión Web" data-en="Digital Marketing & Web Conversion Specialist">
-                Especialista en Marketing Digital y Conversión Web
-              </span>
+      <div class="left-col">
+        <div class="glass-profile-card" onclick="this.classList.toggle('active')">
+          <div class="card-min-header">
+            <img src="/grey.jpeg" alt="Greydemar Serrano" class="profile-thumb" />
+            <div class="min-meta">
+              <div class="status-line">
+                <span class="green-dot"></span>
+                <span class="status-text" data-es="En línea" data-en="Online">En línea</span>
+              </div>
+              <div class="name-group">
+                <h2 class="min-name">GREYDEMAR SERRANO</h2>
+                <span class="min-title" data-es="Especialista en Marketing Digital y Conversión Web" data-en="Digital Marketing & Web Conversion Specialist">
+                  Especialista en Marketing Digital y Conversión Web
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <div class="card-expand-content">
-          <p class="expand-bio" 
-             data-es="<strong>Marketing para atraer + Ventas para facturar + Web para escalar.</strong><br><br>No hago ruido, <strong>construyo ecosistemas rentables.</strong> Conecto contenido de alto impacto con sistemas de cierre comercial y plataformas ultrarrápidas.<br><br><strong>Mi objetivo:</strong> eliminar la fricción, posicionar tu autoridad y multiplicar tus conversiones." 
-             data-en="<strong>Marketing to attract + Sales to invoice + Web to scale.</strong><br><br>I don't just make noise, <strong>I build profitable ecosystems.</strong> I connect high-impact content with commercial closing systems and ultra-fast platforms.<br><br><strong>My goal:</strong> eliminate friction, position your authority, and multiply your conversions.">
-            <strong>Marketing para atraer + Ventas para facturar + Web para escalar.</strong><br><br>No hago ruido, <strong>construyo ecosistemas rentables.</strong> Conecto contenido de alto impacto con sistemas de cierre comercial y plataformas ultrarrápidas.<br><br><strong>Mi objetivo:</strong> eliminar la fricción, posicionar tu autoridad y multiplicar tus conversiones.
-          </p>
           
-          <div class="skills-grid">
-            <span>Astro</span>
-            <span>GitHub</span>
-            <span>HTML5</span>
-            <span>CSS3</span>
-            <span>GA4</span>
-            <span>Salesforce</span>
-            <span>Zoho CRM</span>
-            <span>Mailchimp</span>
-            <span class="wide-skill">Creación de Contenido</span>
+          <div class="card-expand-content">
+            <p class="expand-bio" 
+               data-es="<strong>Marketing para atraer + Ventas para facturar + Web para escalar.</strong><br><br>No hago ruido, <strong>construyo ecosistemas rentables.</strong> Conecto contenido de alto impacto con sistemas de cierre comercial y plataformas ultrarrápidas.<br><br><strong>Mi objetivo:</strong> eliminar la fricción, posicionar tu autoridad y multiplicar tus conversiones." 
+               data-en="<strong>Marketing to attract + Sales to invoice + Web to scale.</strong><br><br>I don't just make noise, <strong>I build profitable ecosystems.</strong> I connect high-impact content with commercial closing systems and ultra-fast platforms.<br><br><strong>My goal:</strong> eliminate friction, position your authority, and multiply your conversions.">
+              <strong>Marketing para atraer + Ventas para facturar + Web para escalar.</strong><br><br>No hago ruido, <strong>construyo ecosistemas rentables.</strong> Conecto contenido de alto impacto con sistemas de cierre comercial y plataformas ultrarrápidas.<br><br><strong>Mi objetivo:</strong> eliminar la fricción, posicionar tu autoridad y multiplicar tus conversiones.
+            </p>
+            
+            <div class="skills-grid">
+              <span>Astro</span>
+              <span>GitHub</span>
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>GA4</span>
+              <span>Salesforce</span>
+              <span>Zoho CRM</span>
+              <span>Mailchimp</span>
+              <span class="wide-skill">Creación de Contenido</span>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="quote-text">
-        <span data-es="- Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar." data-en="- Invoicing is no accident. It depends on how they see you, how you connect, and how easy you make it to buy.">
-          - Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar.
-        </span>
+        <div class="quote-text">
+          <span data-es="- Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar." data-en="- Invoicing is no accident. It depends on how they see you, how you connect, and how easy you make it to buy.">
+            - Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar.
+          </span>
+        </div>
       </div>
 
       <div class="hero-center-text">
@@ -126,7 +139,11 @@
     <div class="about-container">
       
       <div class="sticky-note">
-        <span class="pin">📍</span>
+        <svg class="real-pin" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 10V22" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="12" cy="7" r="5" fill="#ef4444" stroke="#b91c1c" stroke-width="1.5"/>
+          <circle cx="10.5" cy="5.5" r="1.5" fill="#ffffff" opacity="0.6"/>
+        </svg>
         <span class="note-text" data-es="About Me" data-en="About Me">About Me</span>
       </div>
 
@@ -140,7 +157,6 @@
       </div>
 
       <div class="mac-window">
-        
         <div class="mac-titlebar">
           <div class="mac-buttons">
             <span class="mac-dot red"></span>
@@ -148,37 +164,28 @@
             <span class="mac-dot green"></span>
           </div>
         </div>
-
         <div class="mac-content">
-          
           <div class="bio-image-col">
             <img src="/memoji.png" alt="Memoji Greydemar" class="memoji-circle" />
           </div>
-
           <div class="bio-info-col">
             <p class="bio-intro" data-es="Soy <strong>Greydemar Serrano</strong>, comunicadora social con una visión estratégica orientada a resultados." data-en="I am <strong>Greydemar Serrano</strong>, a social communicator with a strategic, results-oriented vision.">
               Soy <strong>Greydemar Serrano</strong>, comunicadora social con una visión estratégica orientada a resultados.
             </p>
-            
             <div class="stats-grid-about">
               <div class="stat-item">
-                <h3>+4</h3>
-                <p data-es="Años de experiencia" data-en="Years of experience">Años de experiencia</p>
+                <h3>+4</h3><p data-es="Años de experiencia" data-en="Years of experience">Años de experiencia</p>
               </div>
               <div class="stat-item">
-                <h3>+8</h3>
-                <p data-es="Proyectos coordinados" data-en="Projects coordinated">Proyectos coordinados</p>
+                <h3>+8</h3><p data-es="Proyectos coordinados" data-en="Projects coordinated">Proyectos coordinados</p>
               </div>
               <div class="stat-item">
-                <h3>+5</h3>
-                <p data-es="Eventos de alto impacto" data-en="High-impact events">Eventos de alto impacto</p>
+                <h3>+5</h3><p data-es="Eventos de alto impacto" data-en="High-impact events">Eventos de alto impacto</p>
               </div>
               <div class="stat-item">
-                <h3>+13</h3>
-                <p data-es="Marcas y organizaciones" data-en="Brands and organizations">Marcas y organizaciones</p>
+                <h3>+13</h3><p data-es="Marcas y organizaciones" data-en="Brands and organizations">Marcas y organizaciones</p>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -186,6 +193,29 @@
     </div>
   </section>
 
+  <section id="projects" class="projects-section">
+    <div class="projects-container">
+      
+      <div class="sticky-note">
+        <svg class="real-pin pin-blue" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 10V22" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="12" cy="7" r="5" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5"/>
+          <circle cx="10.5" cy="5.5" r="1.5" fill="#ffffff" opacity="0.6"/>
+        </svg>
+        <span class="note-text" data-es="Casos" data-en="Cases">Casos</span>
+      </div>
+
+      <div class="projects-header">
+        <h2 data-es="Proyectos que cuentan historias." data-en="Projects that tell stories.">
+          Proyectos que cuentan historias.
+        </h2>
+      </div>
+
+      <div class="ios-windows-wrapper">
+         </div>
+
+    </div>
+  </section>
 
   <nav class="floating-dock">
     <ul class="dock-list">
@@ -237,273 +267,4 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    color: var(--navy-dark);
-    overflow-x: hidden;
-    position: relative;
-  }
-
-  /* =========================================
-     FONDO GLOBAL ESTÁTICO 
-     ========================================= */
-  .global-fixed-bg {
-    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-    background-color: #f8fafc;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
-    z-index: -999; 
-  }
-  .sticker-star { position: absolute; top: 15%; right: 10%; transform: rotate(15deg); opacity: 0.8; }
-
-  /* =========================================
-     SECCIÓN HERO 
-     ========================================= */
-  .hero-wrapper { position: relative; width: 100%; min-height: 100vh; overflow: hidden; }
-  .hero-video-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
-  .video-bg { width: 100%; height: 100%; object-fit: cover; }
-  .avila-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.35); }
-
-  .top-header { position: relative; width: 100%; max-width: 1300px; margin: 0 auto; padding: 24px 32px; display: flex; justify-content: flex-end; align-items: center; z-index: 10; }
-  .brand-centered { position: absolute; top: 38px; left: 50%; transform: translateX(-50%); font-weight: 900; font-size: 20px; letter-spacing: -0.02em; color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.4); white-space: nowrap; }
-  .lang-switch { background: var(--glass-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); padding: 6px 14px; border-radius: 30px; display: flex; align-items: center; gap: 8px; border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow); }
-  .lang-btn { background: none; border: none; font-weight: 700; font-size: 12px; color: #334155; cursor: pointer; }
-  .lang-btn.active { color: var(--navy-dark); font-weight: 900; }
-  .lang-divider { color: #94a3b8; font-size: 12px; }
-
-  .hero-container { max-width: 1300px; width: 100%; margin: auto auto; padding: 20px 32px 100px; display: grid; grid-template-columns: 320px 1fr 260px; grid-template-rows: auto auto; gap: 24px; align-items: start; position: relative; z-index: 10; }
-  
-  .glass-profile-card { grid-column: 1; grid-row: 1; background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 24px; padding: 16px 20px; cursor: pointer; box-shadow: var(--glass-shadow); transition: all 0.4s; overflow: hidden; }
-  .card-min-header { display: flex; align-items: center; gap: 14px; }
-  .profile-thumb { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.9); transition: all 0.5s; flex-shrink: 0; }
-  .glass-profile-card.active .profile-thumb { width: 85px; height: 85px; border-width: 3px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
-  .min-meta { display: flex; flex-direction: column; justify-content: center; }
-  .status-line { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
-  @keyframes blink-green { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
-  .green-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: blink-green 2.5s infinite; }
-  .status-text { font-size: 11px; font-weight: 700; color: #1e293b; }
-  .name-group { display: flex; flex-direction: column; gap: 2px; }
-  .min-name { font-size: 15px; font-weight: 900; letter-spacing: -0.01em; line-height: 1.1; }
-  .min-title { font-size: 11.5px; font-weight: 700; opacity: 0.65; }
-
-  .card-expand-content { max-height: 0; opacity: 0; transition: all 0.5s; overflow: hidden; }
-  .glass-profile-card.active .card-expand-content { max-height: 600px; opacity: 1; margin-top: 20px; padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, 0.4); }
-  .expand-bio { font-size: 15px; font-weight: 500; line-height: 1.55; margin-bottom: 22px; }
-  .expand-bio strong { font-weight: 900; color: #000; }
-  .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
-  .skills-grid span { font-size: 10.5px; font-weight: 800; background: rgba(255, 255, 255, 0.75); padding: 8px 10px; border-radius: 6px; text-align: center; white-space: nowrap; }
-  .skills-grid .wide-skill { grid-column: span 2; }
-
-  .quote-text { grid-column: 1; grid-row: 2; padding: 0 10px; margin-top: 24px; }
-  .quote-text span { font-size: 18px; font-weight: 800; letter-spacing: -0.02em; color: #ffffff; text-shadow: 0 2px 14px rgba(0,0,0,0.8); line-height: 1.4; display: block; }
-
-  .hero-center-text { grid-column: 2; grid-row: 1 / span 2; text-align: center; position: relative; display: flex; justify-content: center; align-items: center; margin-top: 40px; }
-  .hero-center-text h1 { font-size: 4.8rem; font-weight: 900; line-height: 0.98; letter-spacing: -0.04em; text-transform: uppercase; margin: 0 auto; max-width: 900px; color: #ffffff; text-shadow: 0 8px 30px rgba(0,0,0,0.3); }
-  .floating-pill { position: absolute; padding: 6px 14px; border-radius: 30px; font-size: 12px; font-weight: 800; white-space: nowrap; color: var(--navy-dark); pointer-events: none;}
-  .pill-pink { background: var(--pastel-pink); top: -25px; right: 15px; transform: rotate(3deg); }
-  .pill-green { background: var(--pastel-green); top: 52%; left: -25px; transform: rotate(-6deg); }
-  .pill-yellow { background: var(--pastel-yellow); bottom: -25px; right: 40px; transform: rotate(2deg); }
-
-  .glass-cases-card { grid-column: 3; grid-row: 1; background: rgba(15, 23, 42, 0.5); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 20px; padding: 14px 18px; cursor: pointer; transition: all 0.4s; overflow: hidden; margin-top: 32px; }
-  .cases-min-header { display: flex; align-items: center; justify-content: space-between; }
-  .cases-title-text { font-size: 14px; font-weight: 700; color: #ffffff; }
-  .search-icon-wrapper { background: rgba(255, 255, 255, 0.15); border-radius: 50%; padding: 6px; display: flex; color: #ffffff; }
-  .cases-expand-content { max-height: 0; opacity: 0; transition: all 0.5s; }
-  .glass-cases-card.active .cases-expand-content { max-height: 350px; opacity: 1; margin-top: 14px; }
-  .quick-cases-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-  .quick-cases-list a { text-decoration: none; color: #ffffff; display: flex; flex-direction: column; font-size: 13.5px; }
-  .quick-cases-list strong { font-weight: 800; color: #ffffff;}
-  .quick-cases-list span { font-size: 11px; color: #cbd5e1; margin-top: 2px;}
-
-
-  /* =========================================
-     SECCIÓN ABOUT ME 
-     ========================================= */
-  .about-section {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 120px 32px 140px; /* Espacio para el menú flotante abajo */
-    z-index: 5;
-    display: flex;
-    justify-content: center;
-  }
-
-  .about-container {
-    max-width: 900px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* Sticky Note (Pegatina) */
-  .sticky-note {
-    background-color: var(--pastel-yellow);
-    padding: 6px 16px;
-    border-radius: 6px;
-    box-shadow: 2px 4px 10px rgba(0,0,0,0.1);
-    transform: rotate(-3deg);
-    margin-bottom: 24px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .sticky-note .pin { font-size: 14px; }
-  .sticky-note .note-text { font-weight: 800; font-size: 13px; color: var(--navy-dark); text-transform: uppercase; letter-spacing: 0.05em; }
-
-  /* Encabezado About Me */
-  .about-header {
-    text-align: center;
-    margin-bottom: 50px;
-  }
-  .about-header h2 {
-    font-size: 3.5rem;
-    font-weight: 900;
-    line-height: 1.1;
-    letter-spacing: -0.03em;
-    color: var(--navy-dark);
-    margin-bottom: 20px;
-  }
-  .about-subtitle {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #475569;
-    max-width: 700px;
-    margin: 0 auto;
-    font-weight: 500;
-  }
-
-  /* Ventana Mac (Contenedor Info) */
-  .mac-window {
-    width: 100%;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(0,0,0,0.05);
-    border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
-    overflow: hidden;
-  }
-
-  .mac-titlebar {
-    background: rgba(241, 245, 249, 0.8);
-    padding: 14px 20px;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-  }
-  .mac-buttons {
-    display: flex;
-    gap: 8px;
-  }
-  .mac-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-  }
-  .mac-dot.red { background-color: #ff5f56; border: 1px solid #e0443e; }
-  .mac-dot.yellow { background-color: #ffbd2e; border: 1px solid #dea123; }
-  .mac-dot.green { background-color: #27c93f; border: 1px solid #1aab29; }
-
-  .mac-content {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 40px;
-    padding: 40px;
-    align-items: center;
-  }
-
-  /* Memoji Circular */
-  .bio-image-col {
-    display: flex;
-    justify-content: center;
-  }
-  .memoji-circle {
-    width: 240px;
-    height: 240px;
-    border-radius: 50%; /* Hace que el fondo se vea circular sin bordes blancos cuadrados */
-    object-fit: cover;
-    background-color: #fef08a; /* Por si la imagen tiene transparencias */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  }
-
-  .bio-info-col {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .bio-intro {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: var(--navy-dark);
-  }
-  .bio-intro strong {
-    font-weight: 800;
-  }
-
-  /* Grid de Stats (Con degradado en números) */
-  .stats-grid-about {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-  
-  .stat-item h3 {
-    font-size: 2.5rem;
-    font-weight: 900;
-    margin-bottom: 4px;
-    /* Degradado idéntico a tu referencia (+morado a +naranja) */
-    background: linear-gradient(90deg, #9b51e0, #ff7e5f);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  .stat-item p {
-    font-size: 15px;
-    font-weight: 600;
-    color: #475569;
-    line-height: 1.3;
-  }
-
-  /* =========================================
-     BARRA FLOTANTE DOCK 
-     ========================================= */
-  .floating-dock {
-    position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
-    background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border); border-radius: 40px; padding: 16px 32px; z-index: 9999; box-shadow: var(--glass-shadow);
-  }
-  .dock-list { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; align-items: center; }
-  .dock-item { position: relative; display: flex; justify-content: center; }
-  .dock-link { display: flex; align-items: center; }
-  .mac-icon { width: 64px; height: 64px; object-fit: contain; transition: transform 0.2s; }
-  .dock-link:hover .mac-icon { transform: scale(1.2) translateY(-6px); }
-  .dock-item::before {
-    content: attr(data-tooltip); position: absolute; top: -48px; background: var(--navy-dark); color: white;
-    font-size: 12.5px; font-weight: 700; padding: 6px 14px; border-radius: 8px; opacity: 0; visibility: hidden;
-    transition: all 0.2s; white-space: nowrap; pointer-events: none;
-  }
-  .dock-item:hover::before { opacity: 1; visibility: visible; top: -56px; }
-
-  /* MÓVIL */
-  @media (max-width: 900px) {
-    .brand-centered { font-size: 16px; top: 20px; }
-    .hero-container { display: flex; flex-direction: column; gap: 16px; margin-top: 50px; }
-    .glass-profile-card { order: 1; }
-    .hero-center-text { order: 2; margin-top: 10px; }
-    .glass-cases-card { order: 3; margin-top: 0; }
-    .quote-text { order: 4; text-align: center; margin-top: 10px; }
-    .hero-center-text h1 { font-size: 2.6rem; }
-    .floating-pill { display: none; }
-    .floating-dock { padding: 12px 20px; }
-    .mac-icon { width: 50px; height: 50px; }
-    .dock-list { gap: 20px; }
-
-    /* Ajustes Móvil para About Me */
-    .about-section { padding: 80px 20px 140px; }
-    .about-header h2 { font-size: 2.4rem; }
-    .mac-content { grid-template-columns: 1fr; gap: 24px; padding: 24px; text-align: center; }
-    .stats-grid-about { grid-template-columns: 1fr; gap: 16px; }
-    .stat-item h3 { font-size: 2.2rem; }
-  }
-</style>
+    font-family: 'Plus Jakarta Sans', sans-serif
