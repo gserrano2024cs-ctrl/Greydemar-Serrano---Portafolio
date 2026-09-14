@@ -1,5 +1,5 @@
 ---
-// Greydemar Serrano - Hero Replicado & Optimizado
+// Greydemar Serrano - Layout Glassmorphism Perfeccionado
 ---
 
 <!DOCTYPE html>
@@ -24,19 +24,17 @@
     <div class="avila-overlay"></div>
   </div>
 
-  <nav class="top-nav">
-    <div class="nav-container">
-      <div class="logo"><span class="logo-badge">GS</span> GREYDEMAR®</div>
-      
-      <div class="lang-switch">
-        <button class="lang-btn active" onclick="setLanguage('es')">ES</button>
-        <span class="lang-divider">|</span>
-        <button class="lang-btn" onclick="setLanguage('en')">EN</button>
-      </div>
+  <header class="top-header">
+    <div class="brand-centered">GREY SERRANO®</div>
+    
+    <div class="lang-switch">
+      <button class="lang-btn active" onclick="setLanguage('es')">ES</button>
+      <span class="lang-divider">|</span>
+      <button class="lang-btn" onclick="setLanguage('en')">EN</button>
     </div>
-  </nav>
+  </header>
 
-  <header class="hero-container">
+  <main class="hero-container">
     
     <div class="glass-profile-card" tabindex="0">
       <div class="card-min-header">
@@ -46,7 +44,7 @@
             <span class="green-dot"></span>
             <span class="status-text" data-es="En línea" data-en="Online">En línea</span>
           </div>
-          <h2 class="min-name">GREYDEMAR SERRANO - MARKETING SPECIALIST</h2>
+          <h2 class="min-name">GREYDEMAR SERRANO – MARKETING SPECIALIST</h2>
         </div>
       </div>
       
@@ -54,7 +52,6 @@
         <p class="expand-bio" data-es="Estrategias de crecimiento orgánico, creación de contenido con conversión y liderazgo de proyectos de marketing digital." data-en="Organic growth strategies, conversion-focused content creation, and digital marketing project leadership.">
           Estrategias de crecimiento orgánico, creación de contenido con conversión y liderazgo de proyectos de marketing digital.
         </p>
-
         <p class="expand-skills">
           Ventas & CRM &bull; Growth Marketing &bull; Web Front-End
         </p>
@@ -62,8 +59,8 @@
     </div>
 
     <div class="hero-center-text">
-      <h1 data-es="ESTRATEGIA QUE HACE QUE LA GENTE REGRESE" data-en="STRATEGY THAT MAKES PEOPLE LOOK TWICE">
-        ESTRATEGIA QUE HACE QUE LA GENTE REGRESE
+      <h1 data-es="ESTRATEGIA QUE UNE MARKETING, VENTAS Y WEB" data-en="STRATEGY BRIDGING MARKETING, SALES & WEB">
+        ESTRATEGIA QUE UNE MARKETING, VENTAS Y WEB
       </h1>
 
       <span class="floating-pill pill-pink">Growth Marketing</span>
@@ -101,7 +98,7 @@
       </div>
     </div>
 
-  </header>
+  </main>
 
   <nav class="floating-dock">
     <ul class="dock-list">
@@ -140,8 +137,11 @@
     --pastel-yellow: #fef08a;
     --pastel-pink: #fbcfe8;
     --pastel-green: #bbf7d0;
-    --glass-bg: rgba(255, 255, 255, 0.45);
-    --glass-border: rgba(255, 255, 255, 0.6);
+    
+    /* GLASSMORPHISM GLOBAL */
+    --glass-bg: rgba(255, 255, 255, 0.25);
+    --glass-border: rgba(255, 255, 255, 0.45);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -153,10 +153,9 @@
     position: relative;
     min-height: 100vh;
     padding-bottom: 120px;
-    background-color: #f1f5f9;
   }
 
-  /* FONDO DEL ÁVILA CLARO Y VISIBLE */
+  /* FONDO DEL ÁVILA */
   .hero-bg-wrapper {
     position: fixed;
     top: 0;
@@ -171,38 +170,45 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
   }
 
-  /* NAVBAR SUPERIOR */
-  .top-nav {
-    padding: 24px 32px;
+  /* 1. CABECERA Y MARCA CENTRAL */
+  .top-header {
     position: relative;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 24px 32px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     z-index: 100;
   }
 
-  .nav-container {
-    max-width: 1280px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .brand-centered {
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    color: var(--navy-dark);
+    white-space: nowrap;
   }
 
-  .logo { font-weight: 900; font-size: 18px; letter-spacing: -0.02em; display: flex; align-items: center; gap: 8px; }
-  .logo-badge { background: var(--pastel-yellow); padding: 4px 8px; border-radius: 50%; font-size: 12px; }
-
-  /* SWITCH IDIOMA */
   .lang-switch {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: 6px 16px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 6px 14px;
     border-radius: 30px;
     display: flex;
     align-items: center;
     gap: 8px;
     border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
   }
 
   .lang-btn {
@@ -217,27 +223,28 @@
   .lang-btn.active { color: var(--navy-dark); font-weight: 900; }
   .lang-divider { color: #cbd5e1; font-size: 12px; }
 
-  /* HERO CONTAINER */
+  /* CONTENEDOR HERO PRINCIPAL */
   .hero-container {
-    max-width: 1280px;
-    margin: 40px auto 0;
-    padding: 0 24px;
+    max-width: 1300px;
+    margin: 20px auto 0;
+    padding: 0 32px;
     display: grid;
-    grid-template-columns: 320px 1fr 240px;
+    grid-template-columns: 320px 1fr 260px;
     gap: 24px;
-    align-items: center;
+    align-items: start;
+    position: relative;
   }
 
-  /* TARJETA GLASSMORPHISM IZQUIERDA */
+  /* 3. TARJETA GLASSMORPHISM IZQUIERDA */
   .glass-profile-card {
-    background: rgba(255, 255, 255, 0.65);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
-    border-radius: 28px;
-    padding: 18px 20px;
+    border-radius: 24px;
+    padding: 14px 18px;
     cursor: pointer;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--glass-shadow);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     overflow: hidden;
   }
@@ -249,11 +256,11 @@
   }
 
   .profile-thumb {
-    width: 46px;
-    height: 46px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid white;
+    border: 2px solid rgba(255, 255, 255, 0.8);
   }
 
   .status-line {
@@ -277,13 +284,12 @@
   }
 
   .min-name {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 900;
     letter-spacing: -0.01em;
     color: var(--navy-dark);
   }
 
-  /* EXPANDIBLE */
   .card-expand-content {
     max-height: 0;
     opacity: 0;
@@ -295,40 +301,82 @@
   .glass-profile-card:focus .card-expand-content {
     max-height: 180px;
     opacity: 1;
-    margin-top: 14px;
+    margin-top: 12px;
     padding-top: 12px;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
   }
 
-  .expand-bio {
+  .expand-bio { font-size: 12px; line-height: 1.5; color: #334155; margin-bottom: 8px; }
+  .expand-skills { font-size: 11px; font-weight: 800; color: #0f172a; }
+
+  /* 2. TÍTULO Y BADGES SIN SUPERPOSICIÓN */
+  .hero-center-text { 
+    text-align: center; 
+    position: relative; 
+    padding: 10px 0;
+  }
+
+  .hero-center-text h1 {
+    font-size: 4.5rem;
+    font-weight: 900;
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 900px;
+    color: var(--navy-dark);
+  }
+
+  .floating-pill {
+    position: absolute;
+    padding: 6px 14px;
+    border-radius: 30px;
     font-size: 12px;
-    line-height: 1.5;
-    color: #334155;
-    margin-bottom: 10px;
-  }
-
-  .expand-skills {
-    font-size: 11px;
     font-weight: 800;
-    color: #0f172a;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    pointer-events: none;
+    white-space: nowrap;
   }
 
-  /* TARJETA CASOS DERECHA */
+  /* POSICIONES AJUSTADAS PARA NO TAPAR EL TEXTO */
+  .pill-pink { 
+    background: var(--pastel-pink); 
+    top: -20px; 
+    right: 10px; 
+    transform: rotate(3deg); 
+  }
+
+  .pill-green { 
+    background: var(--pastel-green); 
+    top: 52%; 
+    left: -25px; 
+    transform: rotate(-6deg); 
+  }
+
+  .pill-yellow { 
+    background: var(--pastel-yellow); 
+    bottom: -20px; 
+    right: 40px; 
+    transform: rotate(2deg); 
+  }
+
+  /* 5. TARJETA GLASSMORPHISM INFERIOR DERECHA (CASOS) */
   .glass-cases-card {
-    background: rgba(255, 255, 255, 0.65);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
-    border-radius: 24px;
-    padding: 18px 20px;
+    border-radius: 20px;
+    padding: 14px 18px;
     cursor: pointer;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--glass-shadow);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     overflow: hidden;
   }
 
   .cases-min-header {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 800;
     display: flex;
     align-items: center;
@@ -345,7 +393,7 @@
   .glass-cases-card:focus .cases-expand-content {
     max-height: 200px;
     opacity: 1;
-    margin-top: 14px;
+    margin-top: 12px;
   }
 
   .quick-cases-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
@@ -353,75 +401,76 @@
   .quick-cases-list strong { font-weight: 800; }
   .quick-cases-list span { font-size: 10px; color: #64748b; }
 
-  /* TÍTULO CENTRAL AGRANDADO Y CENTRADO */
-  .hero-center-text { 
-    text-align: center; 
-    position: relative; 
-    padding: 10px 0; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .hero-center-text h1 {
-    font-size: 5.2rem;
-    font-weight: 900;
-    line-height: 0.96;
-    letter-spacing: -0.04em;
-    text-transform: uppercase;
-    text-align: center;
-    margin: 0 auto;
-    max-width: 850px;
-    color: var(--navy-dark);
-    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.5);
-  }
-
-  .floating-pill {
-    position: absolute;
-    padding: 8px 18px;
-    border-radius: 30px;
-    font-size: 13px;
-    font-weight: 800;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    pointer-events: none;
-  }
-
-  .pill-pink { background: var(--pastel-pink); top: -10%; right: 0%; transform: rotate(4deg); }
-  .pill-green { background: var(--pastel-green); top: 40%; left: -6%; transform: rotate(-6deg); }
-  .pill-yellow { background: var(--pastel-yellow); bottom: -10%; right: 10%; transform: rotate(3deg); }
-
-  /* DOCK FLOTANTE MACOS */
+  /* 4. DOCK FLOTANTE INFERIOR (COMPACTO Y GLASSMORPHISM) */
   .floating-dock {
     position: fixed;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(255, 255, 255, 0.85);
+    background: var(--glass-bg);
     backdrop-filter: blur(20px);
-    border: 1.5px solid rgba(226, 232, 240, 0.9);
-    border-radius: 22px;
-    padding: 5px 10px;
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 6px 12px;
     z-index: 9999;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--glass-shadow);
   }
 
-  .dock-list { display: flex; gap: 10px; list-style: none; margin: 0; padding: 0; align-items: center; }
+  .dock-list { 
+    display: flex; 
+    gap: 12px; 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+    align-items: center; 
+  }
+
   .dock-item { position: relative; display: flex; justify-content: center; }
   .dock-link { display: flex; align-items: center; }
+
+  /* ESCALA DE ICONOS REDUCIDA Y COMPACTA (30px) */
   .mac-icon {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     object-fit: contain;
     transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
-  .dock-link:hover .mac-icon { transform: scale(1.2) translateY(-4px); }
+  .dock-link:hover .mac-icon { 
+    transform: scale(1.25) translateY(-3px); 
+  }
 
-  /* MÓVIL ADAPTATIVO */
+  /* DOCK TOOLTIP */
+  .dock-item::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -36px;
+    background: var(--navy-dark);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 6px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  .dock-item:hover::before { 
+    opacity: 1; 
+    visibility: visible; 
+    top: -40px; 
+  }
+
+  /* ADAPTACIÓN MÓVIL PANTALLAS PEQUEÑAS */
   @media (max-width: 900px) {
-    .hero-container { grid-template-columns: 1fr; gap: 20px; }
-    .hero-center-text h1 { font-size: 2.8rem; }
+    .brand-centered { font-size: 16px; }
+    .hero-container { grid-template-columns: 1fr; gap: 16px; }
+    .hero-center-text h1 { font-size: 2.5rem; }
     .floating-pill { display: none; }
-    .mac-icon { width: 42px; height: 42px; }
+    .mac-icon { width: 28px; height: 28px; }
   }
 </style>
