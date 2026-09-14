@@ -195,19 +195,63 @@
 
       <div class="projects-grid">
         
-        <div class="project-card" onclick="openModal('modal-yprealty')">
-          <div class="card-mac-header">
-            <div class="mac-dots">
-              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-            </div>
-            <span class="card-tag">Growth Marketing</span>
+       <div id="modal-yprealty" class="modal-overlay" onclick="closeModalOutside(event, 'modal-yprealty')">
+    <div class="modal-window">
+      
+      <div class="modal-mac-bar">
+        <div class="mac-dots">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        </div>
+        <div class="modal-search-bar">yprealty.com</div>
+        <button class="close-btn-text" onclick="closeModal('modal-yprealty')" data-es="Cerrar" data-en="Close">Cerrar</button>
+      </div>
+
+      <div class="modal-content-scroll">
+        <div class="modal-hero-banner">
+          <img src="/foto.png" alt="YP Realty Banner" />
+        </div>
+        
+        <div class="modal-title-row">
+          <h2>YP Realty</h2>
+          <a href="#" target="_blank" class="preview-link" data-es="Ver Proyecto" data-en="View Project">Ver Proyecto</a>
+        </div>
+        
+        <p class="modal-description" 
+           data-es="Lidero la estrategia de contenido y edición de video orgánico para el sector inmobiliario en Puerto Rico. Produzco formatos de alto impacto, redacto guiones persuasivos y aplico SEO para maximizar la conversión. Gracias al análisis de datos, logramos picos de 292% en alcance, 151% en interacción y un crecimiento sólido del +604%." 
+           data-en="I lead the content strategy and organic video editing for the real estate sector in Puerto Rico. I produce high-impact formats, write persuasive scripts, and apply SEO to maximize conversion. Through data analysis, we achieved peaks of 292% in reach, 151% in interaction, and a solid +604% growth.">
+          Lidero la estrategia de contenido y edición de video orgánico para el sector inmobiliario en Puerto Rico. Produzco formatos de alto impacto, redacto guiones persuasivos y aplico SEO para maximizar la conversión. Gracias al análisis de datos, logramos picos de 292% en alcance, 151% en interacción y un crecimiento sólido del +604%.
+        </p>
+        
+        <div class="metadata-grid" style="grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));">
+          <div>
+            <span class="meta-label" data-es="Rol" data-en="Role">Rol</span>
+            <span class="meta-val">Social Media Mgr. & Video Editor</span>
           </div>
-          <div class="card-body">
-            <img src="/foto.png" alt="YP Realty" class="card-img" />
-            <h3>YP Realty</h3>
-            <p class="card-company" data-es="Growth +604%" data-en="Growth +604%">Growth +604%</p>
+          <div>
+            <span class="meta-label" data-es="Herramientas" data-en="Tools">Herramientas</span>
+            <span class="meta-val">Meta Business, CapCut, Canva, GA4</span>
+          </div>
+          <div>
+            <span class="meta-label" data-es="Año" data-en="Year">Año</span>
+            <span class="meta-val">2026</span>
           </div>
         </div>
+        
+        <div class="modal-gallery">
+          <h3 data-es="Galería del Proyecto" data-en="Project Gallery">Galería del Proyecto</h3>
+          <div class="gallery-stack">
+            
+            <img src="/stats-yp.png" alt="Estadísticas de Meta Business Suite" />
+
+            <video controls autoplay loop muted playsinline style="width: 100%; border-radius: 12px; border: 1px solid var(--border-color);">
+              <source src="/video-yp1.mp4" type="video/mp4" />
+            </video>
+
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
         <div class="project-card" onclick="openModal('modal-eurobuilding')">
           <div class="card-mac-header">
