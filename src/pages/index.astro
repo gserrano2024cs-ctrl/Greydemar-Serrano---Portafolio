@@ -1,5 +1,5 @@
 ---
-// Greydemar Serrano - Layout Glassmorphism Perfeccionado
+// Greydemar Serrano - Hero Centrado & Fondo Ávila
 ---
 
 <!DOCTYPE html>
@@ -12,18 +12,22 @@
   <meta name="title" content="Greydemar Serrano | Marketing & Project Manager">
   <meta name="description" content="Especialista en Growth Marketing, Creación de Contenido y Project Management.">
 
+  <!-- FAVICON -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='50' fill='%23FEF08A'/><text x='50%' y='62%' font-size='42' font-weight='900' font-family='sans-serif' fill='%230F172A' text-anchor='middle'>GS</text></svg>" />
 
+  <!-- FUENTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
+  <!-- FONDO CON EL ÁVILA -->
   <div class="hero-bg-wrapper">
     <div class="avila-overlay"></div>
   </div>
 
+  <!-- CABECERA -->
   <header class="top-header">
     <div class="brand-centered">GREY SERRANO®</div>
     
@@ -34,11 +38,13 @@
     </div>
   </header>
 
+  <!-- SECCIÓN HERO COMPLETA -->
   <main class="hero-container">
     
+    <!-- TARJETA DESPLEGABLE IZQUIERDA -->
     <div class="glass-profile-card" tabindex="0">
       <div class="card-min-header">
-        <img src="/foto.png" alt="Greydemar Serrano" class="profile-thumb" />
+        <img src="/grey.jpeg" alt="Greydemar Serrano" class="profile-thumb" />
         <div class="min-meta">
           <div class="status-line">
             <span class="green-dot"></span>
@@ -49,8 +55,10 @@
       </div>
       
       <div class="card-expand-content">
-        <p class="expand-bio" data-es="Estrategias de crecimiento orgánico, creación de contenido con conversión y liderazgo de proyectos de marketing digital." data-en="Organic growth strategies, conversion-focused content creation, and digital marketing project leadership.">
-          Estrategias de crecimiento orgánico, creación de contenido con conversión y liderazgo de proyectos de marketing digital.
+        <p class="expand-bio" 
+           data-es="Marketing para atraer + Ventas para facturar + Tecnología para acelerar. Diseño ecosistemas donde el contenido de alto impacto conecta directamente con sistemas de cierre comercial (CRM y prospección), respaldados por el desarrollo de Landing Pages rápidas (Front-End). Mi misión es simple: eliminar la fricción hacia la facturación y ejecutar un marketing que marque la diferencia en el mercado." 
+           data-en="Marketing to attract + Sales to invoice + Technology to accelerate. I design ecosystems where high-impact content connects directly with commercial closing systems (CRM and prospecting), backed by the development of fast Landing Pages (Front-End). My mission is simple: eliminate friction towards billing and execute marketing that makes a difference in the market.">
+          Marketing para atraer + Ventas para facturar + Tecnología para acelerar. Diseño ecosistemas donde el contenido de alto impacto conecta directamente con sistemas de cierre comercial (CRM y prospección), respaldados por el desarrollo de Landing Pages rápidas (Front-End). Mi misión es simple: eliminar la fricción hacia la facturación y ejecutar un marketing que marque la diferencia en el mercado.
         </p>
         <p class="expand-skills">
           Ventas & CRM &bull; Growth Marketing &bull; Web Front-End
@@ -58,6 +66,7 @@
       </div>
     </div>
 
+    <!-- TÍTULO PRINCIPAL CENTRADO Y BAJADO -->
     <div class="hero-center-text">
       <h1 data-es="ESTRATEGIA QUE UNE MARKETING, VENTAS Y WEB" data-en="STRATEGY BRIDGING MARKETING, SALES & WEB">
         ESTRATEGIA QUE UNE MARKETING, VENTAS Y WEB
@@ -68,10 +77,17 @@
       <span class="floating-pill pill-yellow">Visual Content</span>
     </div>
 
+    <!-- TARJETA DESPLEGABLE DERECHA -->
     <div class="glass-cases-card" tabindex="0">
       <div class="cases-min-header">
-        <span class="icon">📂</span>
-        <span data-es="Casos Destacados" data-en="Featured Cases">Casos Destacados</span>
+        <span class="cases-title-text" data-es="Casos Destacados" data-en="Featured Cases">Casos Destacados</span>
+        <!-- Icono de lupa estilizado según la imagen de referencia -->
+        <span class="search-icon-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </span>
       </div>
 
       <div class="cases-expand-content">
@@ -100,6 +116,7 @@
 
   </main>
 
+  <!-- BARRA FLOTANTE DOCK (MACOS) AUMENTADA -->
   <nav class="floating-dock">
     <ul class="dock-list">
       <li class="dock-item" data-tooltip="Sobre mí">
@@ -117,6 +134,7 @@
     </ul>
   </nav>
 
+  <!-- SCRIPT DE IDIOMA -->
   <script is:inline>
     function setLanguage(lang) {
       document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
@@ -131,6 +149,7 @@
 </body>
 </html>
 
+<!-- ESTILOS CSS -->
 <style is:global>
   :root {
     --navy-dark: #0f172a;
@@ -138,9 +157,8 @@
     --pastel-pink: #fbcfe8;
     --pastel-green: #bbf7d0;
     
-    /* GLASSMORPHISM GLOBAL */
-    --glass-bg: rgba(255, 255, 255, 0.25);
-    --glass-border: rgba(255, 255, 255, 0.45);
+    --glass-bg: rgba(255, 255, 255, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.6);
     --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
   }
 
@@ -152,17 +170,18 @@
     overflow-x: hidden;
     position: relative;
     min-height: 100vh;
-    padding-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
-  /* FONDO DEL ÁVILA */
   .hero-bg-wrapper {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url('/image_bf09ce.jpg') no-repeat center center / cover;
+    background: url('/avila.jpg') no-repeat center center / cover;
     z-index: -2;
   }
 
@@ -170,10 +189,9 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.12);
   }
 
-  /* 1. CABECERA Y MARCA CENTRAL */
   .top-header {
     position: relative;
     width: 100%;
@@ -223,19 +241,19 @@
   .lang-btn.active { color: var(--navy-dark); font-weight: 900; }
   .lang-divider { color: #cbd5e1; font-size: 12px; }
 
-  /* CONTENEDOR HERO PRINCIPAL */
   .hero-container {
     max-width: 1300px;
-    margin: 20px auto 0;
-    padding: 0 32px;
+    width: 100%;
+    margin: auto auto;
+    padding: 20px 32px 100px;
     display: grid;
     grid-template-columns: 320px 1fr 260px;
     gap: 24px;
-    align-items: start;
+    align-items: center; /* Alineación vertical */
     position: relative;
   }
 
-  /* 3. TARJETA GLASSMORPHISM IZQUIERDA */
+  /* TARJETA GLASSMORPHISM IZQUIERDA */
   .glass-profile-card {
     background: var(--glass-bg);
     backdrop-filter: blur(20px);
@@ -249,75 +267,45 @@
     overflow: hidden;
   }
 
-  .card-min-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .profile-thumb {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid rgba(255, 255, 255, 0.8);
-  }
-
-  .status-line {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin-bottom: 2px;
-  }
-
-  .green-dot {
-    width: 7px;
-    height: 7px;
-    background: #22c55e;
-    border-radius: 50%;
-  }
-
-  .status-text {
-    font-size: 11px;
-    font-weight: 700;
-    color: #1e293b;
-  }
-
-  .min-name {
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: -0.01em;
-    color: var(--navy-dark);
-  }
+  .card-min-header { display: flex; align-items: center; gap: 12px; }
+  .profile-thumb { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.8); }
+  .status-line { display: flex; align-items: center; gap: 6px; margin-bottom: 2px; }
+  .green-dot { width: 7px; height: 7px; background: #22c55e; border-radius: 50%; }
+  .status-text { font-size: 11px; font-weight: 700; color: #1e293b; }
+  .min-name { font-size: 11px; font-weight: 900; letter-spacing: -0.01em; color: var(--navy-dark); }
 
   .card-expand-content {
     max-height: 0;
     opacity: 0;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     overflow: hidden;
   }
 
   .glass-profile-card:hover .card-expand-content,
   .glass-profile-card:focus .card-expand-content {
-    max-height: 180px;
+    max-height: 350px; /* Aumentado para que quepa todo el texto nuevo */
     opacity: 1;
     margin-top: 12px;
     padding-top: 12px;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
   }
 
-  .expand-bio { font-size: 12px; line-height: 1.5; color: #334155; margin-bottom: 8px; }
+  .expand-bio { font-size: 11.5px; line-height: 1.5; color: #334155; margin-bottom: 12px; }
   .expand-skills { font-size: 11px; font-weight: 800; color: #0f172a; }
 
-  /* 2. TÍTULO Y BADGES SIN SUPERPOSICIÓN */
+  /* TÍTULO PRINCIPAL: BAJADO Y CENTRADO */
   .hero-center-text { 
     text-align: center; 
     position: relative; 
-    padding: 10px 0;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px; /* Desplaza el título más hacia abajo */
   }
 
   .hero-center-text h1 {
-    font-size: 4.5rem;
+    font-size: 4.8rem;
     font-weight: 900;
     line-height: 0.98;
     letter-spacing: -0.04em;
@@ -339,29 +327,11 @@
     white-space: nowrap;
   }
 
-  /* POSICIONES AJUSTADAS PARA NO TAPAR EL TEXTO */
-  .pill-pink { 
-    background: var(--pastel-pink); 
-    top: -20px; 
-    right: 10px; 
-    transform: rotate(3deg); 
-  }
+  .pill-pink { background: var(--pastel-pink); top: -25px; right: 15px; transform: rotate(3deg); }
+  .pill-green { background: var(--pastel-green); top: 52%; left: -25px; transform: rotate(-6deg); }
+  .pill-yellow { background: var(--pastel-yellow); bottom: -25px; right: 40px; transform: rotate(2deg); }
 
-  .pill-green { 
-    background: var(--pastel-green); 
-    top: 52%; 
-    left: -25px; 
-    transform: rotate(-6deg); 
-  }
-
-  .pill-yellow { 
-    background: var(--pastel-yellow); 
-    bottom: -20px; 
-    right: 40px; 
-    transform: rotate(2deg); 
-  }
-
-  /* 5. TARJETA GLASSMORPHISM INFERIOR DERECHA (CASOS) */
+  /* TARJETA CASOS DERECHA */
   .glass-cases-card {
     background: var(--glass-bg);
     backdrop-filter: blur(20px);
@@ -375,12 +345,29 @@
     overflow: hidden;
   }
 
-  .cases-min-header {
-    font-size: 12px;
-    font-weight: 800;
+  /* NUEVO HEADER DE CASOS BASADO EN LA IMAGEN */
+  .cases-min-header { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; /* Texto izq, Lupa der */
+    width: 100%;
+  }
+
+  .cases-title-text {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e293b;
+    letter-spacing: -0.01em;
+  }
+
+  .search-icon-wrapper {
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 50%;
+    padding: 6px;
     display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+    color: #64748b;
   }
 
   .cases-expand-content {
@@ -393,7 +380,7 @@
   .glass-cases-card:focus .cases-expand-content {
     max-height: 200px;
     opacity: 1;
-    margin-top: 12px;
+    margin-top: 14px;
   }
 
   .quick-cases-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
@@ -401,57 +388,45 @@
   .quick-cases-list strong { font-weight: 800; }
   .quick-cases-list span { font-size: 10px; color: #64748b; }
 
-  /* 4. DOCK FLOTANTE INFERIOR (COMPACTO Y GLASSMORPHISM) */
+  /* DOCK FLOTANTE (MÁS GRANDE) */
   .floating-dock {
     position: fixed;
-    bottom: 20px;
+    bottom: 24px;
     left: 50%;
     transform: translateX(-50%);
     background: var(--glass-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
-    border-radius: 24px;
-    padding: 6px 12px;
+    border-radius: 36px;
+    padding: 12px 24px; /* Aumentado */
     z-index: 9999;
     box-shadow: var(--glass-shadow);
   }
 
-  .dock-list { 
-    display: flex; 
-    gap: 12px; 
-    list-style: none; 
-    margin: 0; 
-    padding: 0; 
-    align-items: center; 
-  }
-
+  .dock-list { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; align-items: center; } /* Gap aumentado */
   .dock-item { position: relative; display: flex; justify-content: center; }
   .dock-link { display: flex; align-items: center; }
 
-  /* ESCALA DE ICONOS REDUCIDA Y COMPACTA (30px) */
   .mac-icon {
-    width: 30px;
-    height: 30px;
+    width: 44px; /* Aumentado (antes 30px) */
+    height: 44px; /* Aumentado */
     object-fit: contain;
     transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
-  .dock-link:hover .mac-icon { 
-    transform: scale(1.25) translateY(-3px); 
-  }
+  .dock-link:hover .mac-icon { transform: scale(1.25) translateY(-4px); }
 
-  /* DOCK TOOLTIP */
   .dock-item::before {
     content: attr(data-tooltip);
     position: absolute;
-    top: -36px;
+    top: -46px;
     background: var(--navy-dark);
     color: white;
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 700;
-    padding: 4px 8px;
-    border-radius: 6px;
+    padding: 6px 10px;
+    border-radius: 8px;
     opacity: 0;
     visibility: hidden;
     transition: all 0.2s;
@@ -459,18 +434,17 @@
     pointer-events: none;
   }
 
-  .dock-item:hover::before { 
-    opacity: 1; 
-    visibility: visible; 
-    top: -40px; 
-  }
+  .dock-item:hover::before { opacity: 1; visibility: visible; top: -50px; }
 
-  /* ADAPTACIÓN MÓVIL PANTALLAS PEQUEÑAS */
+  /* MÓVIL */
   @media (max-width: 900px) {
     .brand-centered { font-size: 16px; }
-    .hero-container { grid-template-columns: 1fr; gap: 16px; }
+    .hero-container { grid-template-columns: 1fr; gap: 16px; margin-top: 40px; }
+    .hero-center-text { margin-top: 20px; }
     .hero-center-text h1 { font-size: 2.5rem; }
     .floating-pill { display: none; }
-    .mac-icon { width: 28px; height: 28px; }
+    .floating-dock { padding: 10px 18px; }
+    .mac-icon { width: 36px; height: 36px; }
+    .dock-list { gap: 16px; }
   }
 </style>
