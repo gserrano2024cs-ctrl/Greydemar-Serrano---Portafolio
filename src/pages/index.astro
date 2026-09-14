@@ -1,5 +1,5 @@
 ---
-// Greydemar Serrano - Hero Interactivo 2026
+// Greydemar Serrano - Hero Replicado
 ---
 
 <!DOCTYPE html>
@@ -41,26 +41,28 @@
   <header class="hero-container">
     
     <div class="interactive-card profile-card" tabindex="0">
-      <div class="card-min-header">
-        <span class="status-dot"></span>
-        <span class="status-text" data-es="Online" data-en="Online">Online</span>
+      <div class="card-top-row">
+        <span class="status-badge">
+          <span class="status-dot"></span>
+          <span data-es="Online" data-en="Online">Online</span>
+        </span>
       </div>
       
       <div class="card-content-expand">
         <img src="/foto.png" alt="Greydemar Serrano" class="hero-avatar" />
-        <h2 class="profile-name">GREYDEMAR SERRANO</h2>
-        <p class="profile-role" data-es="Marketing Digital Specialist & Project Manager" data-en="Digital Marketing Specialist & Project Manager">
-          Marketing Digital Specialist & Project Manager
+        <h2 class="profile-name">Greydemar Serrano</h2>
+        <p class="profile-role" data-es="Marketing Digital Specialist" data-en="Digital Marketing Specialist">
+          Marketing Digital Specialist
         </p>
 
-        <p class="profile-bio" data-es="Conecto estrategia, creatividad y sistemas comerciales para escalar marcas con impacto." data-en="Connecting strategy, creativity, and sales systems to scale impactful brands.">
-          Conecto estrategia, creatividad y sistemas comerciales para escalar marcas con impacto.
+        <p class="profile-bio" data-es="Especializada en conectar estrategias de contenido, crecimiento orgánico y liderazgo de proyectos digitales." data-en="Specialized in connecting content strategies, organic growth, and digital project leadership.">
+          Especializada en conectar estrategias de contenido, crecimiento orgánico y liderazgo de proyectos digitales.
         </p>
 
         <div class="profile-tags">
-          <span class="mini-tag">Growth</span>
-          <span class="mini-tag">Social Media</span>
-          <span class="mini-tag">Sales CRM</span>
+          <span class="tag-pill tag-pink">Ventas & CRM</span>
+          <span class="tag-pill tag-green">Social Media Marketing</span>
+          <span class="tag-pill tag-yellow">Web Front-End</span>
         </div>
       </div>
     </div>
@@ -70,15 +72,17 @@
         ESTRATEGIA QUE HACE QUE LA GENTE REGRESE
       </h1>
 
-      <span class="pill-badge pill-pink">Ventas & CRM</span>
-      <span class="pill-badge pill-green">Social Media Marketing</span>
-      <span class="pill-badge pill-yellow">Web Front-End</span>
+      <span class="floating-pill pill-pink">Growth Marketing</span>
+      <span class="floating-pill pill-green">Project Manager</span>
+      <span class="floating-pill pill-yellow">Visual Content</span>
     </div>
 
     <div class="interactive-card cases-card" tabindex="0">
-      <div class="card-min-header">
-        <span class="cases-icon">📂</span>
-        <span data-es="Casos Destacados" data-en="Featured Cases">Casos Destacados</span>
+      <div class="card-top-row">
+        <span class="cases-title-badge">
+          <span class="icon">📂</span>
+          <span data-es="Casos Destacados" data-en="Featured Cases">Casos Destacados</span>
+        </span>
       </div>
 
       <div class="card-content-expand">
@@ -91,7 +95,7 @@
           </li>
           <li>
             <a href="#projects">
-              <strong>PanHouse</strong>
+              <strong>Editorial PanHouse</strong>
               <span>Comunicaciones & VIP</span>
             </a>
           </li>
@@ -107,8 +111,25 @@
 
   </header>
 
+  <nav class="floating-dock">
+    <ul class="dock-list">
+      <li class="dock-item" data-tooltip="Sobre mí">
+        <a href="#about" class="dock-link"><img src="/notas.webp" class="mac-icon" alt="Notas"></a>
+      </li>
+      <li class="dock-item" data-tooltip="Casos">
+        <a href="#projects" class="dock-link"><img src="/foto.png" class="mac-icon" alt="Fotos"></a>
+      </li>
+      <li class="dock-item" data-tooltip="Servicios">
+        <a href="#services" class="dock-link"><img src="/finder icon.png" class="mac-icon" alt="Finder"></a>
+      </li>
+      <li class="dock-item" data-tooltip="Contacto">
+        <a href="mailto:greydemar@email.com" class="dock-link"><img src="/ICON MAIL.webp" class="mac-icon" alt="Mail"></a>
+      </li>
+    </ul>
+  </nav>
+
   <script is:inline>
-    // OJITOS QUE SIGUEN AL MOUSE
+    // OJITOS SEGIMIENTO DE MOUSE
     const eyes = document.getElementById('eyes');
     document.addEventListener('mousemove', (e) => {
       const x = e.clientX;
@@ -116,7 +137,7 @@
       eyes.style.transform = `translate3d(${x - 15}px, ${y - 15}px, 0)`;
     });
 
-    // CAMBIO DE IDIOMA (ESPAÑOL / INGLÉS)
+    // CAMBIO DE IDIOMA EN / ES
     function setLanguage(lang) {
       document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
       event.target.classList.add('active');
@@ -132,25 +153,25 @@
 
 <style is:global>
   :root {
-    --bg-dark: #0f172a;
-    --navy-text: #0f172a;
+    --navy-dark: #0f172a;
     --pastel-yellow: #fef08a;
     --pastel-pink: #fbcfe8;
     --pastel-green: #bbf7d0;
+    --border-glass: rgba(255, 255, 255, 0.4);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
     font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
-    background-color: #e2e8f0;
-    color: var(--navy-text);
+    color: var(--navy-dark);
     overflow-x: hidden;
     position: relative;
     min-height: 100vh;
+    padding-bottom: 120px;
   }
 
-  /* OJITOS QUE SIGUEN AL MOUSE */
+  /* OJITOS QUE SIGUEN EL CURSOR */
   .eyes-follower {
     position: fixed;
     top: 0;
@@ -161,27 +182,27 @@
     transition: transform 0.08s ease-out;
   }
 
-  /* FONDO CON ÁVILA */
+  /* FONDO DEL ÁVILA CON ACABADO GLASS */
   .hero-bg-wrapper {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url('/avila.jpg') no-repeat center center/cover;
+    background: url('/image_bf09ce.jpg') no-repeat center center/cover;
     z-index: -2;
   }
   .avila-overlay {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.45);
-    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(6px);
   }
 
-  /* NAVBAR */
+  /* NAVBAR SUPERIOR */
   .top-nav {
-    padding: 20px 32px;
+    padding: 24px 32px;
     position: relative;
     z-index: 100;
   }
@@ -195,16 +216,16 @@
   .logo { font-weight: 900; font-size: 18px; letter-spacing: -0.02em; display: flex; align-items: center; gap: 8px; }
   .logo-badge { background: var(--pastel-yellow); padding: 4px 8px; border-radius: 50%; font-size: 12px; }
 
-  /* SWITCH IDIOMA */
+  /* SWITCH DE IDIOMA MINIMALISTA */
   .lang-switch {
-    background: rgba(255,255,255,0.8);
-    backdrop-filter: blur(10px);
-    padding: 6px 14px;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(12px);
+    padding: 6px 16px;
     border-radius: 30px;
     display: flex;
     align-items: center;
     gap: 8px;
-    border: 1px solid rgba(0,0,0,0.08);
+    border: 1px solid var(--border-glass);
   }
   .lang-btn {
     background: none;
@@ -215,44 +236,40 @@
     cursor: pointer;
     transition: color 0.2s;
   }
-  .lang-btn.active { color: var(--navy-text); font-weight: 900; }
+  .lang-btn.active { color: var(--navy-dark); font-weight: 900; }
   .lang-divider { color: #cbd5e1; font-size: 12px; }
 
-  /* HERO CONTAINER */
+  /* HERO LAYOUT DE 3 COLUMNAS */
   .hero-container {
     max-width: 1200px;
-    margin: 40px auto 0;
+    margin: 30px auto 0;
     padding: 0 24px;
     display: grid;
-    grid-template-columns: 280px 1fr 240px;
+    grid-template-columns: 300px 1fr 240px;
     gap: 20px;
     align-items: start;
-    position: relative;
   }
 
   /* TARJETAS INTERACTIVAS DESPLEGABLES */
   .interactive-card {
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.9);
-    border-radius: 20px;
-    padding: 16px;
+    border: 1px solid var(--border-glass);
+    border-radius: 24px;
+    padding: 20px;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
     overflow: hidden;
   }
 
-  .card-min-header {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    font-weight: 800;
-  }
-  .status-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; display: inline-block; }
+  .card-top-row { display: flex; align-items: center; justify-content: space-between; }
+  .status-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 800; background: rgba(34,197,94,0.15); color: #15803d; padding: 4px 12px; border-radius: 20px; }
+  .status-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; }
 
-  /* CONTENIDO QUE SE DESPLIEGA AL HOVER O CLICK */
+  .cases-title-badge { font-size: 13px; font-weight: 800; display: flex; align-items: center; gap: 6px; }
+
+  /* CONTENIDO DESPLEGABLE CON HOVER O CLICK */
   .card-content-expand {
     max-height: 0;
     opacity: 0;
@@ -262,59 +279,19 @@
 
   .interactive-card:hover .card-content-expand,
   .interactive-card:focus .card-content-expand {
-    max-height: 320px;
+    max-height: 380px;
     opacity: 1;
     margin-top: 16px;
   }
 
-  .hero-avatar { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; margin-bottom: 12px; }
-  .profile-name { font-size: 14px; font-weight: 900; }
-  .profile-role { font-size: 11px; font-weight: 700; color: #64748b; margin-bottom: 8px; }
-  .profile-bio { font-size: 12px; color: #334155; line-height: 1.4; margin-bottom: 12px; }
+  .hero-avatar { width: 70px; height: 70px; border-radius: 50%; object-fit: cover; margin-bottom: 12px; border: 2px solid white; }
+  .profile-name { font-size: 16px; font-weight: 900; }
+  .profile-role { font-size: 12px; font-weight: 700; color: #64748b; margin-bottom: 8px; }
+  .profile-bio { font-size: 12px; color: #334155; line-height: 1.5; margin-bottom: 14px; }
+  
+  /* ETIQUETAS PASTEL */
   .profile-tags { display: flex; gap: 6px; flex-wrap: wrap; }
-  .mini-tag { background: #f1f5f9; font-size: 10px; font-weight: 700; padding: 4px 8px; border-radius: 12px; }
-
-  /* LISTA CASOS RÁPIDOS */
-  .quick-cases-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-  .quick-cases-list a { text-decoration: none; color: var(--navy-text); display: flex; flex-direction: column; font-size: 12px; }
-  .quick-cases-list strong { font-weight: 800; }
-  .quick-cases-list span { font-size: 10px; color: #64748b; }
-
-  /* TÍTULO CENTRAL IMPACTANTE TIPO CREATIE */
-  .hero-center-text {
-    text-align: center;
-    position: relative;
-    padding: 20px 0;
-  }
-  .hero-center-text h1 {
-    font-size: 3.8rem;
-    font-weight: 900;
-    line-height: 1.02;
-    letter-spacing: -0.04em;
-    text-transform: uppercase;
-  }
-
-  /* PÍLDORAS FLOTANTES SOBRE TÍTULO */
-  .pill-badge {
-    position: absolute;
-    padding: 6px 14px;
-    border-radius: 30px;
-    font-size: 12px;
-    font-weight: 800;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.06);
-    pointer-events: none;
-  }
-  .pill-pink { background: var(--pastel-pink); top: 10%; right: 10%; transform: rotate(4deg); }
-  .pill-green { background: var(--pastel-green); top: 50%; left: -5%; transform: rotate(-6deg); }
-  .pill-yellow { background: var(--pastel-yellow); bottom: 0; right: 20%; transform: rotate(2deg); }
-
-  /* ADAPTACIÓN CELULAR */
-  @media (max-width: 900px) {
-    .hero-container {
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-    .hero-center-text h1 { font-size: 2.4rem; }
-    .pill-badge { display: none; }
-  }
-</style>
+  .tag-pill { font-size: 11px; font-weight: 800; padding: 6px 12px; border-radius: 20px; }
+  .tag-pink { background: var(--pastel-pink); color: #831843; }
+  .tag-green { background: var(--pastel-green); color: #14532d; }
+  .tag-yellow { background: var(--pastel-yellow); color: #713f
