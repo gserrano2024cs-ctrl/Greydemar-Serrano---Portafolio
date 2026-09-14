@@ -1,5 +1,5 @@
 ---
-// Greydemar Serrano - Hero Centrado & Fondo Ávila
+// Greydemar Serrano - Hero Centrado & Fondo de Video
 ---
 
 <!DOCTYPE html>
@@ -15,15 +15,18 @@
   <!-- FAVICON -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='50' fill='%23FEF08A'/><text x='50%' y='62%' font-size='42' font-weight='900' font-family='sans-serif' fill='%230F172A' text-anchor='middle'>GS</text></svg>" />
 
-  <!-- FUENTES -->
+  <!-- FUENTES (Jakarta para UI y Playfair para la frase creativa) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- FONDO CON EL ÁVILA -->
+  <!-- FONDO CON EL VIDEO DEL ÁVILA (RUTA: /public/avila.mp4) -->
   <div class="hero-bg-wrapper">
+    <video autoplay loop muted playsinline class="video-bg">
+      <source src="/avila.mp4" type="video/mp4" />
+    </video>
     <div class="avila-overlay"></div>
   </div>
 
@@ -41,8 +44,8 @@
   <!-- SECCIÓN HERO COMPLETA -->
   <main class="hero-container">
     
-    <!-- TARJETA DESPLEGABLE IZQUIERDA -->
-    <div class="glass-profile-card" tabindex="0">
+    <!-- TARJETA DESPLEGABLE IZQUIERDA (Clic para alternar) -->
+    <div class="glass-profile-card" onclick="this.classList.toggle('active')">
       <div class="card-min-header">
         <img src="/grey.jpeg" alt="Greydemar Serrano" class="profile-thumb" />
         <div class="min-meta">
@@ -55,31 +58,38 @@
       </div>
       
       <div class="card-expand-content">
+        <!-- Textos más grandes y con negritas -->
         <p class="expand-bio" 
-           data-es="Marketing para atraer + Ventas para facturar + Web para escalar. No hago ruido, construyo ecosistemas rentables. Conecto contenido de alto impacto con sistemas de cierre comercial y plataformas ultrarrápidas. Mi objetivo: eliminar la fricción, posicionar tu autoridad y multiplicar tus conversiones." 
-           data-en="Marketing to attract + Sales to invoice + Web to scale. I don't just make noise, I build profitable ecosystems. I connect high-impact content with commercial closing systems and ultra-fast platforms. My goal: eliminate friction, position your authority, and multiply your conversions.">
-          Marketing para atraer + Ventas para facturar + Web para escalar. No hago ruido, construyo ecosistemas rentables. Conecto contenido de alto impacto con sistemas de cierre comercial y plataformas ultrarrápidas. Mi objetivo: eliminar la fricción, posicionar tu autoridad y multiplicar tus conversiones.
+           data-es="<strong>Marketing para atraer + Ventas para facturar + Web para escalar.</strong><br><br>No hago ruido, construyo ecosistemas rentables. Conecto contenido de alto impacto con sistemas de cierre comercial y plataformas ultrarrápidas.<br><br><strong>Mi objetivo:</strong> eliminar la fricción, posicionar tu autoridad y multiplicar tus conversiones." 
+           data-en="<strong>Marketing to attract + Sales to invoice + Web to scale.</strong><br><br>I don't just make noise, I build profitable ecosystems. I connect high-impact content with commercial closing systems and ultra-fast platforms.<br><br><strong>My goal:</strong> eliminate friction, position your authority, and multiply your conversions.">
+          <strong>Marketing para atraer + Ventas para facturar + Web para escalar.</strong><br><br>No hago ruido, construyo ecosistemas rentables. Conecto contenido de alto impacto con sistemas de cierre comercial y plataformas ultrarrápidas.<br><br><strong>Mi objetivo:</strong> eliminar la fricción, posicionar tu autoridad y multiplicar tus conversiones.
         </p>
         
-        <!-- SKILLS ORGANIZADOS EN CUADRÍCULA -->
+        <!-- NUEVOS SKILLS ORGANIZADOS EN CUADRÍCULA -->
         <div class="skills-grid">
+          <span>Metricool</span>
           <span>Meta Business</span>
-          <span>Canva Pro</span>
           <span>CapCut Pro</span>
-          <span>SEO</span>
-          <span>Astro</span>
-          <span>HTML & CSS</span>
-          <span>JavaScript</span>
-          <span>GitHub / Vercel</span>
+          <span>Canva Pro</span>
+          <span>GA4</span>
+          <span>Mailchimp</span>
+          <span>Salesforce</span>
+          <span>Zoho CRM</span>
+          <span>Trello</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>ASTRO</span>
+          <span>VERCEL</span>
+          <span>GITHUB</span>
         </div>
       </div>
     </div>
 
-    <!-- FRASE GANCHO (Debajo del perfil en Desktop, debajo de casos en Móvil) -->
+    <!-- FRASE GANCHO CON FUENTE CREATIVA -->
     <div class="quote-text">
-      <em data-es='"Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar."' data-en='"Invoicing is no accident. It depends on how they see you, how you connect, and how easy you make it to buy."'>
+      <span data-es='"Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar."' data-en='"Invoicing is no accident. It depends on how they see you, how you connect, and how easy you make it to buy."'>
         "Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar."
-      </em>
+      </span>
     </div>
 
     <!-- TÍTULO PRINCIPAL CENTRADO Y BLANCO -->
@@ -93,8 +103,8 @@
       <span class="floating-pill pill-yellow">Visual Content</span>
     </div>
 
-    <!-- TARJETA DESPLEGABLE DERECHA -->
-    <div class="glass-cases-card" tabindex="0">
+    <!-- TARJETA DESPLEGABLE DERECHA (Clic para alternar) -->
+    <div class="glass-cases-card" onclick="this.classList.toggle('active')">
       <div class="cases-min-header">
         <span class="cases-title-text" data-es="Casos Destacados" data-en="Featured Cases">Casos Destacados</span>
         <span class="search-icon-wrapper">
@@ -143,7 +153,7 @@
 
   </main>
 
-  <!-- BARRA FLOTANTE DOCK -->
+  <!-- BARRA FLOTANTE DOCK (ICONOS MÁS GRANDES) -->
   <nav class="floating-dock">
     <ul class="dock-list">
       <li class="dock-item" data-tooltip="Sobre mí">
@@ -162,12 +172,14 @@
   </nav>
 
   <script is:inline>
+    // Manejo de idioma (Preservar HTML interno si hay negritas)
     function setLanguage(lang) {
       document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
       event.target.classList.add('active');
 
       document.querySelectorAll('[data-es]').forEach(el => {
-        el.textContent = el.getAttribute(`data-${lang}`);
+        // Usar innerHTML para conservar las etiquetas <strong> y <br>
+        el.innerHTML = el.getAttribute(`data-${lang}`);
       });
     }
   </script>
@@ -200,21 +212,30 @@
     justify-content: space-between;
   }
 
+  /* VIDEO DE FONDO */
   .hero-bg-wrapper {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url('/avila.jpg') no-repeat center center / cover;
     z-index: -2;
+    overflow: hidden;
+    background-color: var(--navy-dark); /* Color de respaldo si el video tarda */
+  }
+
+  .video-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .avila-overlay {
     position: absolute;
+    top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2); /* Ligeramente oscurecido para resaltar el H1 blanco */
+    background: rgba(0, 0, 0, 0.3); /* Oscurecido ligeramente para mejor contraste */
   }
 
   .top-header {
@@ -229,16 +250,17 @@
     z-index: 100;
   }
 
+  /* MARCA "GREY SERRANO" - BAJADA */
   .brand-centered {
     position: absolute;
-    top: 24px;
+    top: 38px; /* Bajado desde 24px */
     left: 50%;
     transform: translateX(-50%);
     font-weight: 900;
     font-size: 20px;
     letter-spacing: -0.02em;
-    color: #ffffff; /* Ajustado a blanco por el fondo */
-    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.4);
     white-space: nowrap;
   }
 
@@ -259,7 +281,7 @@
   .lang-btn.active { color: var(--navy-dark); font-weight: 900; }
   .lang-divider { color: #94a3b8; font-size: 12px; }
 
-  /* SISTEMA DE GRILLA ACTUALIZADO PARA ACOMODAR LA FRASE */
+  /* SISTEMA DE GRILLA */
   .hero-container {
     max-width: 1300px;
     width: 100%;
@@ -269,7 +291,7 @@
     grid-template-columns: 320px 1fr 260px;
     grid-template-rows: auto auto;
     gap: 24px;
-    align-items: start; /* Ajuste para la frase inferior */
+    align-items: start;
     position: relative;
   }
 
@@ -289,27 +311,44 @@
     overflow: hidden;
   }
 
-  .card-min-header { display: flex; align-items: center; gap: 12px; }
+  .card-min-header { display: flex; align-items: center; gap: 12px; position: relative; }
   
-  /* ANIMACIÓN DE LA IMAGEN DE PERFIL */
+  /* ANIMACIÓN DE LA IMAGEN DE PERFIL (AMPLIACIÓN DRÁSTICA) */
   .profile-thumb { 
-    width: 42px; 
-    height: 42px; 
+    width: 44px; 
+    height: 44px; 
     border-radius: 50%; 
     object-fit: cover; 
-    border: 2px solid rgba(255, 255, 255, 0.8); 
-    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); 
+    border: 2px solid rgba(255, 255, 255, 0.9); 
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform-origin: top left;
   }
   
-  .glass-profile-card:hover .profile-thumb,
-  .glass-profile-card:focus .profile-thumb {
-    transform: scale(1.3) translateX(3px) translateY(3px); /* Se amplía sin empujar los textos */
+  /* Cuando la tarjeta tiene la clase 'active' por el clic */
+  .glass-profile-card.active .profile-thumb {
+    transform: scale(2.5) translate(8px, 6px); /* Crece enormemente sin mover el texto */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    z-index: 10;
   }
 
   .status-line { display: flex; align-items: center; gap: 6px; margin-bottom: 2px; }
-  .green-dot { width: 7px; height: 7px; background: #22c55e; border-radius: 50%; }
+  
+  /* PUNTO VERDE PARPADEANTE */
+  @keyframes blink-green {
+    0% { opacity: 1; box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6); }
+    50% { opacity: 0.4; }
+    70% { box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+    100% { opacity: 1; box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+  }
+  .green-dot { 
+    width: 8px; height: 8px; 
+    background: #22c55e; 
+    border-radius: 50%; 
+    animation: blink-green 2s infinite;
+  }
+  
   .status-text { font-size: 11px; font-weight: 700; color: #1e293b; }
-  .min-name { font-size: 11px; font-weight: 900; letter-spacing: -0.01em; color: var(--navy-dark); }
+  .min-name { font-size: 11px; font-weight: 900; letter-spacing: -0.01em; color: var(--navy-dark); z-index: 2; position: relative;}
 
   .card-expand-content {
     max-height: 0;
@@ -318,51 +357,59 @@
     overflow: hidden;
   }
 
-  .glass-profile-card:hover .card-expand-content,
-  .glass-profile-card:focus .card-expand-content {
-    max-height: 450px;
+  .glass-profile-card.active .card-expand-content {
+    max-height: 600px; /* Aumentado para el nuevo texto y grid */
     opacity: 1;
-    margin-top: 14px;
-    padding-top: 14px;
+    margin-top: 18px;
+    padding-top: 18px;
     border-top: 1px solid rgba(255, 255, 255, 0.4);
   }
 
-  /* TEXTO BIO AMPLIADO Y AUTORITARIO */
+  /* TEXTO BIO MÁS GRANDE Y LEGIBLE */
   .expand-bio { 
-    font-size: 13px; /* Más grande */
+    font-size: 14.5px; 
     font-weight: 500;
-    line-height: 1.5; 
-    color: #1e293b; 
-    margin-bottom: 16px; 
+    line-height: 1.6; 
+    color: #0f172a; 
+    margin-bottom: 20px; 
   }
+  .expand-bio strong { font-weight: 800; }
 
-  /* GRILLA DE SKILLS PAREJA Y ORGANIZADA */
+  /* GRILLA DE 14 SKILLS */
   .skills-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 8px;
   }
 
   .skills-grid span {
-    font-size: 10.5px;
+    font-size: 10px;
     font-weight: 800;
-    background: rgba(255, 255, 255, 0.6);
-    padding: 6px 10px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 8px 10px;
     border-radius: 6px;
     color: var(--navy-dark);
     text-align: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    white-space: nowrap;
   }
 
-  /* FRASE GANCHO ITERATIVA */
+  /* FRASE GANCHO CON FUENTE CREATIVA */
   .quote-text {
     grid-column: 1;
     grid-row: 2;
-    font-size: 13.5px;
-    color: #ffffff;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-    line-height: 1.4;
     padding: 0 10px;
+  }
+  
+  .quote-text span {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+    line-height: 1.3;
+    display: block;
   }
 
   /* TÍTULO PRINCIPAL: BLANCO Y CENTRADO */
@@ -386,8 +433,8 @@
     text-align: center;
     margin: 0 auto;
     max-width: 900px;
-    color: #ffffff; /* H1 BLANCO */
-    text-shadow: 0 8px 30px rgba(0,0,0,0.25); /* Sombra para que resalte sobre el Ávila */
+    color: #ffffff;
+    text-shadow: 0 8px 30px rgba(0,0,0,0.3);
   }
 
   .floating-pill {
@@ -406,14 +453,14 @@
   .pill-green { background: var(--pastel-green); top: 52%; left: -25px; transform: rotate(-6deg); }
   .pill-yellow { background: var(--pastel-yellow); bottom: -25px; right: 40px; transform: rotate(2deg); }
 
-  /* TARJETA CASOS DERECHA */
+  /* TARJETA CASOS DERECHA (Oscurecida para resaltar letras blancas) */
   .glass-cases-card {
     grid-column: 3;
     grid-row: 1;
-    background: var(--glass-bg);
+    background: rgba(15, 23, 42, 0.45); /* Fondo oscuro translúcido */
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     padding: 14px 18px;
     cursor: pointer;
@@ -423,33 +470,34 @@
   }
 
   .cases-min-header { display: flex; align-items: center; justify-content: space-between; width: 100%; }
-  .cases-title-text { font-size: 14px; font-weight: 700; color: #1e293b; letter-spacing: -0.01em; }
+  
+  /* LETRAS EN BLANCO PARA CASOS DESTACADOS */
+  .cases-title-text { font-size: 14px; font-weight: 700; color: #ffffff; letter-spacing: -0.01em; }
   
   .search-icon-wrapper {
-    background: rgba(0, 0, 0, 0.04);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     padding: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #64748b;
+    color: #ffffff;
   }
 
   .cases-expand-content { max-height: 0; opacity: 0; transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
   
-  .glass-cases-card:hover .cases-expand-content,
-  .glass-cases-card:focus .cases-expand-content {
-    max-height: 320px; /* Aumentado por los nuevos casos */
+  .glass-cases-card.active .cases-expand-content {
+    max-height: 350px;
     opacity: 1;
     margin-top: 14px;
   }
 
   .quick-cases-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-  .quick-cases-list a { text-decoration: none; color: var(--navy-dark); display: flex; flex-direction: column; font-size: 12px; }
-  .quick-cases-list strong { font-weight: 800; }
-  .quick-cases-list span { font-size: 10.5px; color: #475569; margin-top: 2px;}
+  .quick-cases-list a { text-decoration: none; color: #ffffff; display: flex; flex-direction: column; font-size: 13px; }
+  .quick-cases-list strong { font-weight: 800; color: #ffffff;}
+  .quick-cases-list span { font-size: 11px; color: #cbd5e1; margin-top: 2px;}
 
-  /* DOCK FLOTANTE */
+  /* DOCK FLOTANTE (ICONOS MÁS GRANDES) */
   .floating-dock {
     position: fixed;
     bottom: 24px;
@@ -459,17 +507,23 @@
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
-    border-radius: 36px;
-    padding: 12px 24px;
+    border-radius: 40px;
+    padding: 14px 28px;
     z-index: 9999;
     box-shadow: var(--glass-shadow);
   }
 
-  .dock-list { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; align-items: center; }
+  .dock-list { display: flex; gap: 24px; list-style: none; margin: 0; padding: 0; align-items: center; }
   .dock-item { position: relative; display: flex; justify-content: center; }
   .dock-link { display: flex; align-items: center; }
 
-  .mac-icon { width: 44px; height: 44px; object-fit: contain; transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1); }
+  /* ICONOS AUMENTADOS DE TAMAÑO */
+  .mac-icon { 
+    width: 56px; 
+    height: 56px; 
+    object-fit: contain; 
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1); 
+  }
   .dock-link:hover .mac-icon { transform: scale(1.25) translateY(-4px); }
 
   .dock-item::before {
@@ -478,9 +532,9 @@
     top: -46px;
     background: var(--navy-dark);
     color: white;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
-    padding: 6px 10px;
+    padding: 6px 12px;
     border-radius: 8px;
     opacity: 0;
     visibility: hidden;
@@ -488,36 +542,24 @@
     white-space: nowrap;
     pointer-events: none;
   }
-  .dock-item:hover::before { opacity: 1; visibility: visible; top: -50px; }
+  .dock-item:hover::before { opacity: 1; visibility: visible; top: -52px; }
 
-  /* MÓVIL: Reordenamiento y Ajustes */
+  /* MÓVIL */
   @media (max-width: 900px) {
     .brand-centered { font-size: 16px; top: 20px; }
     
-    .hero-container { 
-      display: flex; 
-      flex-direction: column; 
-      gap: 16px; 
-      margin-top: 50px; 
-    }
-    
-    /* REORDENAR ELEMENTOS EN MÓVIL */
+    .hero-container { display: flex; flex-direction: column; gap: 16px; margin-top: 50px; }
     .glass-profile-card { order: 1; }
     .hero-center-text { order: 2; margin-top: 10px; }
     .glass-cases-card { order: 3; }
     
-    /* La frase gancho baja al final en móviles */
-    .quote-text { 
-      order: 4; 
-      text-align: center; 
-      margin-top: 10px;
-      font-size: 14px;
-    }
+    .quote-text { order: 4; text-align: center; margin-top: 10px; }
+    .quote-text span { font-size: 20px; }
 
     .hero-center-text h1 { font-size: 2.6rem; }
     .floating-pill { display: none; }
-    .floating-dock { padding: 10px 18px; }
-    .mac-icon { width: 36px; height: 36px; }
-    .dock-list { gap: 16px; }
+    .floating-dock { padding: 12px 20px; }
+    .mac-icon { width: 44px; height: 44px; }
+    .dock-list { gap: 18px; }
   }
 </style>
