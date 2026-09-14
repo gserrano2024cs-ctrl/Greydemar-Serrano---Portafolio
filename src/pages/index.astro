@@ -56,17 +56,33 @@
       
       <div class="card-expand-content">
         <p class="expand-bio" 
-           data-es="Marketing para atraer + Ventas para facturar + Tecnología para acelerar. Diseño ecosistemas donde el contenido de alto impacto conecta directamente con sistemas de cierre comercial (CRM y prospección), respaldados por el desarrollo de Landing Pages rápidas (Front-End). Mi misión es simple: eliminar la fricción hacia la facturación y ejecutar un marketing que marque la diferencia en el mercado." 
-           data-en="Marketing to attract + Sales to invoice + Technology to accelerate. I design ecosystems where high-impact content connects directly with commercial closing systems (CRM and prospecting), backed by the development of fast Landing Pages (Front-End). My mission is simple: eliminate friction towards billing and execute marketing that makes a difference in the market.">
-          Marketing para atraer + Ventas para facturar + Tecnología para acelerar. Diseño ecosistemas donde el contenido de alto impacto conecta directamente con sistemas de cierre comercial (CRM y prospección), respaldados por el desarrollo de Landing Pages rápidas (Front-End). Mi misión es simple: eliminar la fricción hacia la facturación y ejecutar un marketing que marque la diferencia en el mercado.
+           data-es="Marketing para atraer + Ventas para facturar + Web para escalar. No hago ruido, construyo ecosistemas rentables. Conecto contenido de alto impacto con sistemas de cierre comercial y plataformas ultrarrápidas. Mi objetivo: eliminar la fricción, posicionar tu autoridad y multiplicar tus conversiones." 
+           data-en="Marketing to attract + Sales to invoice + Web to scale. I don't just make noise, I build profitable ecosystems. I connect high-impact content with commercial closing systems and ultra-fast platforms. My goal: eliminate friction, position your authority, and multiply your conversions.">
+          Marketing para atraer + Ventas para facturar + Web para escalar. No hago ruido, construyo ecosistemas rentables. Conecto contenido de alto impacto con sistemas de cierre comercial y plataformas ultrarrápidas. Mi objetivo: eliminar la fricción, posicionar tu autoridad y multiplicar tus conversiones.
         </p>
-        <p class="expand-skills">
-          Ventas & CRM &bull; Growth Marketing &bull; Web Front-End
-        </p>
+        
+        <!-- SKILLS ORGANIZADOS EN CUADRÍCULA -->
+        <div class="skills-grid">
+          <span>Meta Business</span>
+          <span>Canva Pro</span>
+          <span>CapCut Pro</span>
+          <span>SEO</span>
+          <span>Astro</span>
+          <span>HTML & CSS</span>
+          <span>JavaScript</span>
+          <span>GitHub / Vercel</span>
+        </div>
       </div>
     </div>
 
-    <!-- TÍTULO PRINCIPAL CENTRADO Y BAJADO -->
+    <!-- FRASE GANCHO (Debajo del perfil en Desktop, debajo de casos en Móvil) -->
+    <div class="quote-text">
+      <em data-es='"Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar."' data-en='"Invoicing is no accident. It depends on how they see you, how you connect, and how easy you make it to buy."'>
+        "Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar."
+      </em>
+    </div>
+
+    <!-- TÍTULO PRINCIPAL CENTRADO Y BLANCO -->
     <div class="hero-center-text">
       <h1 data-es="ESTRATEGIA QUE UNE MARKETING, VENTAS Y WEB" data-en="STRATEGY BRIDGING MARKETING, SALES & WEB">
         ESTRATEGIA QUE UNE MARKETING, VENTAS Y WEB
@@ -81,7 +97,6 @@
     <div class="glass-cases-card" tabindex="0">
       <div class="cases-min-header">
         <span class="cases-title-text" data-es="Casos Destacados" data-en="Featured Cases">Casos Destacados</span>
-        <!-- Icono de lupa estilizado según la imagen de referencia -->
         <span class="search-icon-wrapper">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8"></circle>
@@ -96,6 +111,18 @@
             <a href="#projects">
               <strong>YP Realty</strong>
               <span>Growth +604%</span>
+            </a>
+          </li>
+          <li>
+            <a href="#projects">
+              <strong>Eurobuilding</strong>
+              <span>Estrategia & Branding</span>
+            </a>
+          </li>
+          <li>
+            <a href="#projects">
+              <strong>Impaktemos</strong>
+              <span>Marketing & Conversión</span>
             </a>
           </li>
           <li>
@@ -116,7 +143,7 @@
 
   </main>
 
-  <!-- BARRA FLOTANTE DOCK (MACOS) AUMENTADA -->
+  <!-- BARRA FLOTANTE DOCK -->
   <nav class="floating-dock">
     <ul class="dock-list">
       <li class="dock-item" data-tooltip="Sobre mí">
@@ -134,7 +161,6 @@
     </ul>
   </nav>
 
-  <!-- SCRIPT DE IDIOMA -->
   <script is:inline>
     function setLanguage(lang) {
       document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
@@ -149,7 +175,6 @@
 </body>
 </html>
 
-<!-- ESTILOS CSS -->
 <style is:global>
   :root {
     --navy-dark: #0f172a;
@@ -189,7 +214,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(0, 0, 0, 0.2); /* Ligeramente oscurecido para resaltar el H1 blanco */
   }
 
   .top-header {
@@ -212,7 +237,8 @@
     font-weight: 900;
     font-size: 20px;
     letter-spacing: -0.02em;
-    color: var(--navy-dark);
+    color: #ffffff; /* Ajustado a blanco por el fondo */
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
     white-space: nowrap;
   }
 
@@ -229,18 +255,11 @@
     box-shadow: var(--glass-shadow);
   }
 
-  .lang-btn {
-    background: none;
-    border: none;
-    font-weight: 700;
-    font-size: 12px;
-    color: #64748b;
-    cursor: pointer;
-  }
-
+  .lang-btn { background: none; border: none; font-weight: 700; font-size: 12px; color: #334155; cursor: pointer; }
   .lang-btn.active { color: var(--navy-dark); font-weight: 900; }
-  .lang-divider { color: #cbd5e1; font-size: 12px; }
+  .lang-divider { color: #94a3b8; font-size: 12px; }
 
+  /* SISTEMA DE GRILLA ACTUALIZADO PARA ACOMODAR LA FRASE */
   .hero-container {
     max-width: 1300px;
     width: 100%;
@@ -248,13 +267,16 @@
     padding: 20px 32px 100px;
     display: grid;
     grid-template-columns: 320px 1fr 260px;
+    grid-template-rows: auto auto;
     gap: 24px;
-    align-items: center; /* Alineación vertical */
+    align-items: start; /* Ajuste para la frase inferior */
     position: relative;
   }
 
-  /* TARJETA GLASSMORPHISM IZQUIERDA */
+  /* TARJETA IZQUIERDA */
   .glass-profile-card {
+    grid-column: 1;
+    grid-row: 1;
     background: var(--glass-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -268,7 +290,22 @@
   }
 
   .card-min-header { display: flex; align-items: center; gap: 12px; }
-  .profile-thumb { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.8); }
+  
+  /* ANIMACIÓN DE LA IMAGEN DE PERFIL */
+  .profile-thumb { 
+    width: 42px; 
+    height: 42px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 2px solid rgba(255, 255, 255, 0.8); 
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); 
+  }
+  
+  .glass-profile-card:hover .profile-thumb,
+  .glass-profile-card:focus .profile-thumb {
+    transform: scale(1.3) translateX(3px) translateY(3px); /* Se amplía sin empujar los textos */
+  }
+
   .status-line { display: flex; align-items: center; gap: 6px; margin-bottom: 2px; }
   .green-dot { width: 7px; height: 7px; background: #22c55e; border-radius: 50%; }
   .status-text { font-size: 11px; font-weight: 700; color: #1e293b; }
@@ -283,25 +320,61 @@
 
   .glass-profile-card:hover .card-expand-content,
   .glass-profile-card:focus .card-expand-content {
-    max-height: 350px; /* Aumentado para que quepa todo el texto nuevo */
+    max-height: 450px;
     opacity: 1;
-    margin-top: 12px;
-    padding-top: 12px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
   }
 
-  .expand-bio { font-size: 11.5px; line-height: 1.5; color: #334155; margin-bottom: 12px; }
-  .expand-skills { font-size: 11px; font-weight: 800; color: #0f172a; }
+  /* TEXTO BIO AMPLIADO Y AUTORITARIO */
+  .expand-bio { 
+    font-size: 13px; /* Más grande */
+    font-weight: 500;
+    line-height: 1.5; 
+    color: #1e293b; 
+    margin-bottom: 16px; 
+  }
 
-  /* TÍTULO PRINCIPAL: BAJADO Y CENTRADO */
+  /* GRILLA DE SKILLS PAREJA Y ORGANIZADA */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .skills-grid span {
+    font-size: 10.5px;
+    font-weight: 800;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 6px 10px;
+    border-radius: 6px;
+    color: var(--navy-dark);
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  }
+
+  /* FRASE GANCHO ITERATIVA */
+  .quote-text {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 13.5px;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    line-height: 1.4;
+    padding: 0 10px;
+  }
+
+  /* TÍTULO PRINCIPAL: BLANCO Y CENTRADO */
   .hero-center-text { 
+    grid-column: 2;
+    grid-row: 1 / span 2;
     text-align: center; 
     position: relative; 
-    padding: 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 80px; /* Desplaza el título más hacia abajo */
+    margin-top: 40px; 
   }
 
   .hero-center-text h1 {
@@ -313,7 +386,8 @@
     text-align: center;
     margin: 0 auto;
     max-width: 900px;
-    color: var(--navy-dark);
+    color: #ffffff; /* H1 BLANCO */
+    text-shadow: 0 8px 30px rgba(0,0,0,0.25); /* Sombra para que resalte sobre el Ávila */
   }
 
   .floating-pill {
@@ -325,6 +399,7 @@
     box-shadow: 0 8px 20px rgba(0,0,0,0.06);
     pointer-events: none;
     white-space: nowrap;
+    color: var(--navy-dark);
   }
 
   .pill-pink { background: var(--pastel-pink); top: -25px; right: 15px; transform: rotate(3deg); }
@@ -333,6 +408,8 @@
 
   /* TARJETA CASOS DERECHA */
   .glass-cases-card {
+    grid-column: 3;
+    grid-row: 1;
     background: var(--glass-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -345,21 +422,9 @@
     overflow: hidden;
   }
 
-  /* NUEVO HEADER DE CASOS BASADO EN LA IMAGEN */
-  .cases-min-header { 
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; /* Texto izq, Lupa der */
-    width: 100%;
-  }
-
-  .cases-title-text {
-    font-size: 14px;
-    font-weight: 700;
-    color: #1e293b;
-    letter-spacing: -0.01em;
-  }
-
+  .cases-min-header { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+  .cases-title-text { font-size: 14px; font-weight: 700; color: #1e293b; letter-spacing: -0.01em; }
+  
   .search-icon-wrapper {
     background: rgba(0, 0, 0, 0.04);
     border-radius: 50%;
@@ -370,25 +435,21 @@
     color: #64748b;
   }
 
-  .cases-expand-content {
-    max-height: 0;
-    opacity: 0;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
+  .cases-expand-content { max-height: 0; opacity: 0; transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+  
   .glass-cases-card:hover .cases-expand-content,
   .glass-cases-card:focus .cases-expand-content {
-    max-height: 200px;
+    max-height: 320px; /* Aumentado por los nuevos casos */
     opacity: 1;
     margin-top: 14px;
   }
 
-  .quick-cases-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .quick-cases-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
   .quick-cases-list a { text-decoration: none; color: var(--navy-dark); display: flex; flex-direction: column; font-size: 12px; }
   .quick-cases-list strong { font-weight: 800; }
-  .quick-cases-list span { font-size: 10px; color: #64748b; }
+  .quick-cases-list span { font-size: 10.5px; color: #475569; margin-top: 2px;}
 
-  /* DOCK FLOTANTE (MÁS GRANDE) */
+  /* DOCK FLOTANTE */
   .floating-dock {
     position: fixed;
     bottom: 24px;
@@ -399,22 +460,16 @@
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
     border-radius: 36px;
-    padding: 12px 24px; /* Aumentado */
+    padding: 12px 24px;
     z-index: 9999;
     box-shadow: var(--glass-shadow);
   }
 
-  .dock-list { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; align-items: center; } /* Gap aumentado */
+  .dock-list { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; align-items: center; }
   .dock-item { position: relative; display: flex; justify-content: center; }
   .dock-link { display: flex; align-items: center; }
 
-  .mac-icon {
-    width: 44px; /* Aumentado (antes 30px) */
-    height: 44px; /* Aumentado */
-    object-fit: contain;
-    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-  }
-
+  .mac-icon { width: 44px; height: 44px; object-fit: contain; transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1); }
   .dock-link:hover .mac-icon { transform: scale(1.25) translateY(-4px); }
 
   .dock-item::before {
@@ -433,15 +488,33 @@
     white-space: nowrap;
     pointer-events: none;
   }
-
   .dock-item:hover::before { opacity: 1; visibility: visible; top: -50px; }
 
-  /* MÓVIL */
+  /* MÓVIL: Reordenamiento y Ajustes */
   @media (max-width: 900px) {
-    .brand-centered { font-size: 16px; }
-    .hero-container { grid-template-columns: 1fr; gap: 16px; margin-top: 40px; }
-    .hero-center-text { margin-top: 20px; }
-    .hero-center-text h1 { font-size: 2.5rem; }
+    .brand-centered { font-size: 16px; top: 20px; }
+    
+    .hero-container { 
+      display: flex; 
+      flex-direction: column; 
+      gap: 16px; 
+      margin-top: 50px; 
+    }
+    
+    /* REORDENAR ELEMENTOS EN MÓVIL */
+    .glass-profile-card { order: 1; }
+    .hero-center-text { order: 2; margin-top: 10px; }
+    .glass-cases-card { order: 3; }
+    
+    /* La frase gancho baja al final en móviles */
+    .quote-text { 
+      order: 4; 
+      text-align: center; 
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .hero-center-text h1 { font-size: 2.6rem; }
     .floating-pill { display: none; }
     .floating-dock { padding: 10px 18px; }
     .mac-icon { width: 36px; height: 36px; }
