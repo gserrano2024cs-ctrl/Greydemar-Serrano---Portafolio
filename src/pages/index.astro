@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greydemar Serrano | Portafolio Premium</title>
+</head>
+<body>
+
+  <main class="desktop-environment">
+    <!-- NUEVO HERO (ESTILO FRAMER / PREMIUM) -->
+    <header class="hero-section" id="about">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span> Disponible para nuevos proyectos
+      </div>
+      <h1 class="hero-title">Convierto estrategia <br> en <span class="text-gradient">ingresos medibles.</span></h1>
+      <p class="hero-subtitle">Diseño landing pages que capturan leads, gestiono comunidades y automatizo procesos con Inteligencia Artificial para que tu equipo venda más.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn-primary">Ver mi trabajo</a>
+        <a href="#services" class="btn-secondary">Mis servicios</a>
+      </div>
+    </header>
+
+    <!-- SERVICIOS -->
+    <section class="services-section" id="services">
+      <h2 class="section-title">¿Cómo puedo ayudarte?</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>💻 Desarrollo Web & IA</h3>
+          <p>Creación de Landing Pages rápidas orientadas a la conversión (Next.js, Astro) y automatización de procesos operativos con Inteligencia Artificial.</p>
+        </div>
+        <div class="service-card">
+          <h3>📱 Estrategia de Contenidos</h3>
+          <p>Edición de video orgánico (Hooks en tendencia) y gestión de comunidades para multiplicar el alcance y la retención en TikTok, IG y YouTube.</p>
+        </div>
+        <div class="service-card">
+          <h3>📈 Ventas & Operaciones (B2B/B2C)</h3>
+          <p>Gestión de CRM, estrategias de Email Marketing, Cold Calling y sincronización de equipos para cierres de ventas High-Ticket.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARPETAS DE EXPERIENCIA -->
+    <section class="experience-section" id="projects">
+      <h2 class="section-title">Mi Experiencia</h2>
+      <p class="instruction">Haz doble clic en las carpetas para abrir los archivos.</p>
+      
+      <div class="folders-grid">
+        <div class="mac-folder" onclick="openFolder('modal-yprealty')">
+          <svg viewBox="0 0 100 100" class="folder-icon"><path fill="#71b1ff" d="M10 20h30l10 10h40v60H10z"/><path fill="#97c9ff" d="M10 35h80v45H10z"/></svg>
+          <span>YP Realty</span>
+        </div>
+        <div class="mac-folder" onclick="openFolder('modal-panhouse')">
+          <svg viewBox="0 0 100 100" class="folder-icon"><path fill="#71b1ff" d="M10 20h30l10 10h40v60H10z"/><path fill="#97c9ff" d="M10 35h80v45H10z"/></svg>
+          <span>PanHouse</span>
+        </div>
+        <div class="mac-folder" onclick="openFolder('modal-eurobuilding')">
+          <svg viewBox="0 0 100 100" class="folder-icon"><path fill="#71b1ff" d="M10 20h30l10 10h40v60H10z"/><path fill="#97c9ff" d="M10 35h80v45H10z"/></svg>
+          <span>Eurobuilding</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODALES DE EXPERIENCIA (VENTANAS MAC) -->
+  <div id="modal-yprealty" class="modal-overlay hidden">
+    <div class="mac-window modal-window">
+      <div class="window-header">
+        <div class="mac-buttons"><span class="btn close" onclick="closeFolder('modal-yprealty')"></span></div>
+        <div class="window-title">YP Realty.pdf</div>
+      </div>
+      <div class="window-content">
+        <h3>Social Media Manager & Video Editor</h3>
+        <p><strong>Jul. 2026 - Presente | Puerto Rico</strong></p>
+        <ul>
+          <li>Lidero la estrategia de contenido y edición de video aplicando hooks en tendencia.</li>
+          <li>Analizo métricas en Meta Business Suite logrando picos de +604% en interacciones.</li>
+        </ul>
+        <button class="btn-close-modal" onclick="closeFolder('modal-yprealty')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-panhouse" class="modal-overlay hidden">
+    <div class="mac-window modal-window">
+      <div class="window-header">
+        <div class="mac-buttons"><span class="btn close" onclick="closeFolder('modal-panhouse')"></span></div>
+        <div class="window-title">PanHouse.pdf</div>
+      </div>
+      <div class="window-content">
+        <h3>Coordinadora de Comunicaciones Internas</h3>
+        <p><strong>Mar. 2024 - Ago. 2025</strong></p>
+        <ul>
+          <li>Diseñé sistemas de automatización con IA reduciendo tiempos de atención.</li>
+          <li>Sincronización de Marketing, Ventas y RRPP para eventos VIP.</li>
+        </ul>
+        <button class="btn-close-modal" onclick="closeFolder('modal-panhouse')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-eurobuilding" class="modal-overlay hidden">
+    <div class="mac-window modal-window">
+      <div class="window-header">
+        <div class="mac-buttons"><span class="btn close" onclick="closeFolder('modal-eurobuilding')"></span></div>
+        <div class="window-title">Eurobuilding.pdf</div>
+      </div>
+      <div class="window-content">
+        <h3>Coordinadora B2B & Business Center</h3>
+        <p><strong>Ago. 2022 - Jul. 2023</strong></p>
+        <ul>
+          <li>Gestión de portafolio corporativo (B2B) bajo estándares de calidad 5 estrellas.</li>
+          <li>Centralicé operaciones entre 7 departamentos críticos.</li>
+        </ul>
+        <button class="btn-close-modal" onclick="closeFolder('modal-eurobuilding')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LA BARRA FLOTANTE (DOCK) -->
+  <nav class="floating-dock">
+    <ul class="dock-list">
+      <li class="dock-item" data-tooltip="About Me">
+        <a href="#about" class="dock-link"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Apple_Notes_Icon_%282020%29.png" class="mac-icon"></a>
+      </li>
+      <li class="dock-item" data-tooltip="Experience">
+        <a href="#projects" class="dock-link"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Apple_Photos_Icon_%282020%29.png" class="mac-icon"></a>
+      </li>
+      <li class="dock-item" data-tooltip="Services">
+        <a href="#services" class="dock-link"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IMessage_logo.svg" class="mac-icon"></a>
+      </li>
+      <li class="dock-item" data-tooltip="Contact Me">
+        <a href="#contact" class="dock-link"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Mac_Mail_icon.png" class="mac-icon"></a>
+      </li>
+    </ul>
+  </nav>
+
+</body>
+</html>
+
+<!-- ESTILOS (El CSS se encapsula aquí en Astro) -->
+<style is:global>
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+    padding-bottom: 120px;
+  }
+  .desktop-environment { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+  /* HERO */
+  .hero-section { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 80px 20px 100px; max-width: 850px; margin: 0 auto; animation: fadeUp 1s ease; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: #fff; border: 1px solid #e5e5ea; padding: 8px 18px; border-radius: 50px; font-size: 13px; font-weight: 600; color: #555; margin-bottom: 30px; }
+  .pulse-dot { width: 8px; height: 8px; background-color: #34c759; border-radius: 50%; box-shadow: 0 0 0 rgba(52,199,89,0.4); animation: pulse 2s infinite; }
+  .hero-title { font-size: 4.5rem; line-height: 1.1; font-weight: 800; letter-spacing: -0.04em; margin: 0 0 24px; }
+  .text-gradient { background: linear-gradient(135deg, #0066cc, #5ac8fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero-subtitle { font-size: 1.3rem; color: #86868b; line-height: 1.6; max-width: 650px; margin: 0 auto 40px; }
+  .hero-buttons { display: flex; gap: 16px; }
+  .btn-primary, .btn-secondary { padding: 16px 32px; border-radius: 100px; font-size: 16px; font-weight: 600; text-decoration: none; transition: all 0.3s; }
+  .btn-primary { background: #1d1d1f; color: #fff; box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+  .btn-primary:hover { transform: translateY(-3px) scale(1.02); background: #333; }
+  .btn-secondary { background: #fff; color: #1d1d1f; border: 1px solid #d2d2d7; }
+  .btn-secondary:hover { background: #f5f5f7; transform: translateY(-3px); }
+
+  /* SERVICIOS Y CARPETAS */
+  .section-title { font-size: 2rem; margin-bottom: 20px; text-align: center; }
+  .instruction { text-align: center; color: #888; margin-top: -15px; margin-bottom: 30px; }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 60px; }
+  .service-card { background: #fff; padding: 24px; border-radius: 16px; border: 1px solid #eee; transition: transform 0.2s; }
+  .service-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+  
+  .folders-grid { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; margin-bottom: 60px; }
+  .mac-folder { display: flex; flex-direction: column; align-items: center; cursor: pointer; transition: transform 0.2s; width: 100px; }
+  .mac-folder:hover { transform: scale(1.1); }
+  .folder-icon { width: 80px; height: 80px; margin-bottom: 8px; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15)); }
+  .mac-folder span { background: rgba(0,0,0,0.05); padding: 2px 8px; border-radius: 4px; font-size: 14px; font-weight: 500; }
+
+  /* MODALES MAC */
+  .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); backdrop-filter: blur(5px); display: flex; justify-content: center; align-items: center; z-index: 10000; }
+  .modal-overlay.hidden { display: none; }
+  .mac-window { background: rgba(255,255,255,0.85); backdrop-filter: blur(20px); border-radius: 12px; border: 1px solid rgba(0,0,0,0.1); overflow: hidden; width: 90%; max-width: 600px; animation: popIn 0.3s; }
+  .window-header { background: #e8e8ed; height: 38px; display: flex; align-items: center; padding: 0 16px; border-bottom: 1px solid #d1d1d6; position: relative; }
+  .mac-buttons { display: flex; gap: 8px; }
+  .btn { width: 12px; height: 12px; border-radius: 50%; cursor: pointer; }
+  .btn.close { background: #ff5f56; border: 1px solid #e0443e; }
+  .window-title { position: absolute; left: 50%; transform: translateX(-50%); font-size: 13px; font-weight: 600; color: #49494d; }
+  .window-content { padding: 40px; }
+  .btn-close-modal { margin-top: 20px; padding: 10px 20px; background: #0066cc; color: white; border: none; border-radius: 8px; cursor: pointer; }
+
+  /* DOCK */
+  .floating-dock { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: rgba(255,255,255,0.5); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.6); border-radius: 28px; padding: 10px 16px; z-index: 9999; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+  .dock-list { display: flex; gap: 16px; list-style: none; margin: 0; padding: 0; align-items: flex-end; }
+  .dock-item { position: relative; display: flex; justify-content: center; }
+  .dock-link { display: flex; align-items: center; padding-bottom: 5px; text-decoration: none; }
+  .mac-icon { width: 64px; height: 64px; transition: all 0.2s; transform-origin: bottom center; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15)); }
+  .dock-link:hover .mac-icon { transform: scale(1.3) translateY(-12px); margin: 0 14px; }
+  .dock-item::before { content: attr(data-tooltip); position: absolute; top: -45px; background: rgba(255,255,255,0.9); font-size: 14px; padding: 5px 12px; border-radius: 8px; opacity: 0; visibility: hidden; transform: translateY(10px) scale(0.9); transition: all 0.2s; white-space: nowrap; pointer-events: none; border: 1px solid rgba(0,0,0,0.1); box-shadow: 0 4px 10px rgba(0,0,0,0.1); color: #000; }
+  .dock-item:hover::before { opacity: 1; visibility: visible; top: -55px; transform: translateY(0) scale(1); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(52,199,89,0.4); } 70% { box-shadow: 0 0 0 10px rgba(52,199,89,0); } 100% { box-shadow: 0 0 0 0 rgba(52,199,89,0); } }
+  @keyframes popIn { 0% { transform: scale(0.9); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+
+  @media (max-width: 600px) { .hero-title { font-size: 2.8rem; } .hero-buttons { flex-direction: column; width: 100%; } .mac-icon { width: 52px; height: 52px; } .dock-link:hover .mac-icon { transform: none; margin: 0; } .dock-item::before { display: none; } }
+</style>
+
+<!-- SCRIPTS (La interactividad se encapsula aquí) -->
+<script is:inline>
+  function openFolder(modalId) {
+    document.getElementById(modalId).classList.remove('hidden');
+  }
+  function closeFolder(modalId) {
+    document.getElementById(modalId).classList.add('hidden');
+  }
+</script>
