@@ -1,5 +1,5 @@
 ---
-// Greydemar Serrano - Hero Replicado
+// Greydemar Serrano - Glassmorphism UI
 ---
 
 <!DOCTYPE html>
@@ -12,30 +12,22 @@
   <meta name="title" content="Greydemar Serrano | Marketing & Project Manager">
   <meta name="description" content="Especialista en Growth Marketing, Creación de Contenido y Project Management.">
 
-  <!-- FAVICON -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='50' fill='%23FEF08A'/><text x='50%' y='62%' font-size='42' font-weight='900' font-family='sans-serif' fill='%230F172A' text-anchor='middle'>GS</text></svg>" />
 
-  <!-- FUENTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- OJITOS QUE SIGUEN EL CURSOR -->
-  <div class="eyes-follower" id="eyes">👀</div>
-
-  <!-- FONDO CON EL ÁVILA -->
   <div class="hero-bg-wrapper">
     <div class="avila-overlay"></div>
   </div>
 
-  <!-- NAVBAR CON CAMBIO DE IDIOMA DELICADO -->
   <nav class="top-nav">
     <div class="nav-container">
       <div class="logo"><span class="logo-badge">GS</span> GREYDEMAR®</div>
       
-      <!-- SWITCH DE IDIOMA EN / ES -->
       <div class="lang-switch">
         <button class="lang-btn active" onclick="setLanguage('es')">ES</button>
         <span class="lang-divider">|</span>
@@ -44,60 +36,48 @@
     </div>
   </nav>
 
-  <!-- SECCIÓN HERO COMPLETA -->
   <header class="hero-container">
     
-    <!-- TARJETA DE PERFIL INTERACTIVA (IZQUIERDA) -->
-    <div class="interactive-card profile-card" tabindex="0">
-      <div class="card-top-row">
-        <span class="status-badge">
-          <span class="status-dot"></span>
-          <span data-es="Online" data-en="Online">Online</span>
-        </span>
+    <div class="glass-profile-card" tabindex="0">
+      <div class="card-min-header">
+        <img src="/foto.png" alt="Greydemar Serrano" class="profile-thumb" />
+        <div class="min-meta">
+          <div class="status-line">
+            <span class="green-dot"></span>
+            <span class="status-text" data-es="En línea" data-en="Online">En línea</span>
+          </div>
+          <h2 class="min-name">GREYDEMAR SERRANO - MARKETING SPECIALIST</h2>
+        </div>
       </div>
       
-      <div class="card-content-expand">
-        <img src="/foto.png" alt="Greydemar Serrano" class="hero-avatar" />
-        <h2 class="profile-name">Greydemar Serrano</h2>
-        <p class="profile-role" data-es="Marketing Digital Specialist" data-en="Digital Marketing Specialist">
-          Marketing Digital Specialist
+      <div class="card-expand-content">
+        <p class="expand-bio" data-es="Estrategias de crecimiento orgánico, creación de contenido con conversión y liderazgo de proyectos de marketing digital." data-en="Organic growth strategies, conversion-focused content creation, and digital marketing project leadership.">
+          Estrategias de crecimiento orgánico, creación de contenido con conversión y liderazgo de proyectos de marketing digital.
         </p>
 
-        <p class="profile-bio" data-es="Especializada en conectar estrategias de contenido, crecimiento orgánico y liderazgo de proyectos digitales." data-en="Specialized in connecting content strategies, organic growth, and digital project leadership.">
-          Especializada en conectar estrategias de contenido, crecimiento orgánico y liderazgo de proyectos digitales.
+        <p class="expand-skills">
+          Ventas & CRM &bull; Growth Marketing &bull; Web Front-End
         </p>
-
-        <!-- ETIQUETAS DE FUERTES EN COLORES PASTEL -->
-        <div class="profile-tags">
-          <span class="tag-pill tag-pink">Ventas & CRM</span>
-          <span class="tag-pill tag-green">Social Media Marketing</span>
-          <span class="tag-pill tag-yellow">Web Front-End</span>
-        </div>
       </div>
     </div>
 
-    <!-- TÍTULO CENTRAL IMPACTANTE -->
     <div class="hero-center-text">
       <h1 data-es="ESTRATEGIA QUE HACE QUE LA GENTE REGRESE" data-en="STRATEGY THAT MAKES PEOPLE LOOK TWICE">
         ESTRATEGIA QUE HACE QUE LA GENTE REGRESE
       </h1>
 
-      <!-- PÍLDORAS FLOTANTES SOBRE EL TÍTULO -->
       <span class="floating-pill pill-pink">Growth Marketing</span>
       <span class="floating-pill pill-green">Project Manager</span>
       <span class="floating-pill pill-yellow">Visual Content</span>
     </div>
 
-    <!-- TARJETA DE CASOS RÁPIDOS (DERECHA) -->
-    <div class="interactive-card cases-card" tabindex="0">
-      <div class="card-top-row">
-        <span class="cases-title-badge">
-          <span class="icon">📂</span>
-          <span data-es="Casos Destacados" data-en="Featured Cases">Casos Destacados</span>
-        </span>
+    <div class="glass-cases-card" tabindex="0">
+      <div class="cases-min-header">
+        <span class="icon">📂</span>
+        <span data-es="Casos Destacados" data-en="Featured Cases">Casos Destacados</span>
       </div>
 
-      <div class="card-content-expand">
+      <div class="cases-expand-content">
         <ul class="quick-cases-list">
           <li>
             <a href="#projects">
@@ -123,7 +103,6 @@
 
   </header>
 
-  <!-- NAVEGACIÓN DOCK FLOTANTE SUPERIOR / INFERIOR (MACOS STYLE) -->
   <nav class="floating-dock">
     <ul class="dock-list">
       <li class="dock-item" data-tooltip="Sobre mí">
@@ -141,17 +120,7 @@
     </ul>
   </nav>
 
-  <!-- SCRIPTS DE INTERACCIÓN -->
   <script is:inline>
-    // OJITOS SEGIMIENTO DE MOUSE
-    const eyes = document.getElementById('eyes');
-    document.addEventListener('mousemove', (e) => {
-      const x = e.clientX;
-      const y = e.clientY;
-      eyes.style.transform = `translate3d(${x - 15}px, ${y - 15}px, 0)`;
-    });
-
-    // CAMBIO DE IDIOMA EN / ES
     function setLanguage(lang) {
       document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
       event.target.classList.add('active');
@@ -165,21 +134,17 @@
 </body>
 </html>
 
-<!-- ESTILOS SINTAXIS SÓLIDA CORREGIDA -->
 <style is:global>
   :root {
     --navy-dark: #0f172a;
     --pastel-yellow: #fef08a;
     --pastel-pink: #fbcfe8;
     --pastel-green: #bbf7d0;
-    --border-glass: rgba(255, 255, 255, 0.4);
+    --glass-bg: rgba(255, 255, 255, 0.28);
+    --glass-border: rgba(255, 255, 255, 0.45);
   }
 
-  * { 
-    box-sizing: border-box; 
-    margin: 0; 
-    padding: 0; 
-  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
     font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
@@ -190,18 +155,7 @@
     padding-bottom: 120px;
   }
 
-  /* OJITOS QUE SIGUEN EL CURSOR */
-  .eyes-follower {
-    position: fixed;
-    top: 0;
-    left: 0;
-    font-size: 26px;
-    pointer-events: none;
-    z-index: 9999;
-    transition: transform 0.08s ease-out;
-  }
-
-  /* FONDO DEL ÁVILA CON ACABADO GLASS */
+  /* FONDO CON ÁVILA */
   .hero-bg-wrapper {
     position: fixed;
     top: 0;
@@ -216,8 +170,8 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
   }
 
   /* NAVBAR SUPERIOR */
@@ -235,32 +189,20 @@
     align-items: center;
   }
 
-  .logo { 
-    font-weight: 900; 
-    font-size: 18px; 
-    letter-spacing: -0.02em; 
-    display: flex; 
-    align-items: center; 
-    gap: 8px; 
-  }
+  .logo { font-weight: 900; font-size: 18px; letter-spacing: -0.02em; display: flex; align-items: center; gap: 8px; }
+  .logo-badge { background: var(--pastel-yellow); padding: 4px 8px; border-radius: 50%; font-size: 12px; }
 
-  .logo-badge { 
-    background: var(--pastel-yellow); 
-    padding: 4px 8px; 
-    border-radius: 50%; 
-    font-size: 12px; 
-  }
-
-  /* SWITCH DE IDIOMA MINIMALISTA */
+  /* SWITCH IDIOMA */
   .lang-switch {
-    background: rgba(255,255,255,0.7);
-    backdrop-filter: blur(12px);
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     padding: 6px 16px;
     border-radius: 30px;
     display: flex;
     align-items: center;
     gap: 8px;
-    border: 1px solid var(--border-glass);
+    border: 1px solid var(--glass-border);
   }
 
   .lang-btn {
@@ -270,189 +212,157 @@
     font-size: 12px;
     color: #64748b;
     cursor: pointer;
-    transition: color 0.2s;
   }
 
-  .lang-btn.active { 
-    color: var(--navy-dark); 
-    font-weight: 900; 
-  }
+  .lang-btn.active { color: var(--navy-dark); font-weight: 900; }
+  .lang-divider { color: #cbd5e1; font-size: 12px; }
 
-  .lang-divider { 
-    color: #cbd5e1; 
-    font-size: 12px; 
-  }
-
-  /* HERO LAYOUT DE 3 COLUMNAS */
+  /* HERO CONTAINER */
   .hero-container {
     max-width: 1200px;
-    margin: 30px auto 0;
+    margin: 20px auto 0;
     padding: 0 24px;
     display: grid;
-    grid-template-columns: 300px 1fr 240px;
+    grid-template-columns: 340px 1fr 240px;
     gap: 20px;
     align-items: start;
   }
 
-  /* TARJETAS INTERACTIVAS DESPLEGABLES */
-  .interactive-card {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(16px);
-    border: 1px solid var(--border-glass);
-    border-radius: 24px;
-    padding: 20px;
+  /* REPLICACIÓN FIEL DE LA TARJERTA GLASSMORPHISM DEL VIDEO */
+  .glass-profile-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid var(--glass-border);
+    border-radius: 28px;
+    padding: 16px 20px;
     cursor: pointer;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
     overflow: hidden;
   }
 
-  .card-top-row { 
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
+  .card-min-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
   }
 
-  .status-badge { 
-    display: inline-flex; 
-    align-items: center; 
-    gap: 6px; 
-    font-size: 12px; 
-    font-weight: 800; 
-    background: rgba(34,197,94,0.15); 
-    color: #15803d; 
-    padding: 4px 12px; 
-    border-radius: 20px; 
+  .profile-thumb {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1.5px solid white;
   }
 
-  .status-dot { 
-    width: 8px; 
-    height: 8px; 
-    background: #22c55e; 
-    border-radius: 50%; 
+  .status-line {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 2px;
   }
 
-  .cases-title-badge { 
-    font-size: 13px; 
-    font-weight: 800; 
-    display: flex; 
-    align-items: center; 
-    gap: 6px; 
+  .green-dot {
+    width: 7px;
+    height: 7px;
+    background: #22c55e;
+    border-radius: 50%;
   }
 
-  /* CONTENIDO DESPLEGABLE CON HOVER O CLICK */
-  .card-content-expand {
+  .status-text {
+    font-size: 11px;
+    font-weight: 600;
+    color: #334155;
+  }
+
+  .min-name {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: var(--navy-dark);
+  }
+
+  /* CONTENIDO EXPANDIBLE EN HOVER / TAP */
+  .card-expand-content {
     max-height: 0;
     opacity: 0;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    margin-top: 0;
+    overflow: hidden;
   }
 
-  .interactive-card:hover .card-content-expand,
-  .interactive-card:focus .card-content-expand {
-    max-height: 380px;
+  .glass-profile-card:hover .card-expand-content,
+  .glass-profile-card:focus .card-expand-content {
+    max-height: 180px;
     opacity: 1;
-    margin-top: 16px;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
 
-  .hero-avatar { 
-    width: 70px; 
-    height: 70px; 
-    border-radius: 50%; 
-    object-fit: cover; 
-    margin-bottom: 12px; 
-    border: 2px solid white; 
+  .expand-bio {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #1e293b;
+    margin-bottom: 10px;
   }
 
-  .profile-name { 
-    font-size: 16px; 
-    font-weight: 900; 
+  .expand-skills {
+    font-size: 11px;
+    font-weight: 700;
+    color: #475569;
   }
 
-  .profile-role { 
-    font-size: 12px; 
-    font-weight: 700; 
-    color: #64748b; 
-    margin-bottom: 8px; 
+  /* TARJETA CASOS DERECHA */
+  .glass-cases-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 16px 20px;
+    cursor: pointer;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
   }
 
-  .profile-bio { 
-    font-size: 12px; 
-    color: #334155; 
-    line-height: 1.5; 
-    margin-bottom: 14px; 
+  .cases-min-header {
+    font-size: 13px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 
-  /* ETIQUETAS PASTEL */
-  .profile-tags { 
-    display: flex; 
-    gap: 6px; 
-    flex-wrap: wrap; 
+  .cases-expand-content {
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  .tag-pill { 
-    font-size: 11px; 
-    font-weight: 800; 
-    padding: 6px 12px; 
-    border-radius: 20px; 
+  .glass-cases-card:hover .cases-expand-content,
+  .glass-cases-card:focus .cases-expand-content {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 14px;
   }
 
-  .tag-pink { 
-    background: var(--pastel-pink); 
-    color: #831843; 
-  }
-
-  .tag-green { 
-    background: var(--pastel-green); 
-    color: #14532d; 
-  }
-
-  .tag-yellow { 
-    background: var(--pastel-yellow); 
-    color: #713f12; 
-  }
-
-  /* LISTA CASOS RÁPIDOS */
-  .quick-cases-list { 
-    list-style: none; 
-    display: flex; 
-    flex-direction: column; 
-    gap: 12px; 
-  }
-
-  .quick-cases-list a { 
-    text-decoration: none; 
-    color: var(--navy-dark); 
-    display: flex; 
-    flex-direction: column; 
-    font-size: 13px; 
-  }
-
-  .quick-cases-list strong { 
-    font-weight: 800; 
-  }
-
-  .quick-cases-list span { 
-    font-size: 11px; 
-    color: #64748b; 
-  }
+  .quick-cases-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .quick-cases-list a { text-decoration: none; color: var(--navy-dark); display: flex; flex-direction: column; font-size: 12px; }
+  .quick-cases-list strong { font-weight: 800; }
+  .quick-cases-list span { font-size: 10px; color: #64748b; }
 
   /* TÍTULO CENTRAL IMPACTANTE */
-  .hero-center-text { 
-    text-align: center; 
-    position: relative; 
-    padding: 20px 0; 
-  }
-
+  .hero-center-text { text-align: center; position: relative; padding: 20px 0; }
   .hero-center-text h1 {
-    font-size: 3.6rem;
+    font-size: 3.5rem;
     font-weight: 900;
     line-height: 1.02;
     letter-spacing: -0.04em;
     text-transform: uppercase;
   }
 
-  /* PÍLDORAS FLOTANTES SOBRE EL TÍTULO CENTRAL */
   .floating-pill {
     position: absolute;
     padding: 6px 14px;
@@ -463,28 +373,11 @@
     pointer-events: none;
   }
 
-  .pill-pink { 
-    background: var(--pastel-pink); 
-    top: 5%; 
-    right: 5%; 
-    transform: rotate(4deg); 
-  }
+  .pill-pink { background: var(--pastel-pink); top: 5%; right: 5%; transform: rotate(4deg); }
+  .pill-green { background: var(--pastel-green); top: 45%; left: -5%; transform: rotate(-5deg); }
+  .pill-yellow { background: var(--pastel-yellow); bottom: -5%; right: 15%; transform: rotate(3deg); }
 
-  .pill-green { 
-    background: var(--pastel-green); 
-    top: 45%; 
-    left: -5%; 
-    transform: rotate(-5deg); 
-  }
-
-  .pill-yellow { 
-    background: var(--pastel-yellow); 
-    bottom: -5%; 
-    right: 15%; 
-    transform: rotate(3deg); 
-  }
-
-  /* BARRA FLOTANTE MACOS (DOCK) */
+  /* DOCK FLOTANTE MACOS */
   .floating-dock {
     position: fixed;
     bottom: 20px;
@@ -499,26 +392,9 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
   }
 
-  .dock-list { 
-    display: flex; 
-    gap: 10px; 
-    list-style: none; 
-    margin: 0; 
-    padding: 0; 
-    align-items: center; 
-  }
-
-  .dock-item { 
-    position: relative; 
-    display: flex; 
-    justify-content: center; 
-  }
-
-  .dock-link { 
-    display: flex; 
-    align-items: center; 
-  }
-
+  .dock-list { display: flex; gap: 10px; list-style: none; margin: 0; padding: 0; align-items: center; }
+  .dock-item { position: relative; display: flex; justify-content: center; }
+  .dock-link { display: flex; align-items: center; }
   .mac-icon {
     width: 50px;
     height: 50px;
@@ -526,28 +402,13 @@
     transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
-  .dock-link:hover .mac-icon { 
-    transform: scale(1.2) translateY(-4px); 
-  }
+  .dock-link:hover .mac-icon { transform: scale(1.2) translateY(-4px); }
 
   /* MÓVIL ADAPTATIVO */
   @media (max-width: 900px) {
-    .hero-container { 
-      grid-template-columns: 1fr; 
-      gap: 16px; 
-    }
-
-    .hero-center-text h1 { 
-      font-size: 2.2rem; 
-    }
-
-    .floating-pill { 
-      display: none; 
-    }
-
-    .mac-icon { 
-      width: 42px; 
-      height: 42px; 
-    }
+    .hero-container { grid-template-columns: 1fr; gap: 16px; }
+    .hero-center-text h1 { font-size: 2.2rem; }
+    .floating-pill { display: none; }
+    .mac-icon { width: 42px; height: 42px; }
   }
 </style>
