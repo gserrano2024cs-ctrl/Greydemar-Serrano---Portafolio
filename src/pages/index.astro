@@ -1,5 +1,5 @@
 ---
-// Greydemar Serrano - Portafolio Completo Final
+// Greydemar Serrano - Portafolio Completo Final + Animaciones
 ---
 
 <!DOCTYPE html>
@@ -12,42 +12,24 @@
   <meta name="title" content="Greydemar Serrano | Marketing & Project Manager">
   <meta name="description" content="Especialista en Growth Marketing, Creación de Contenido y Project Management.">
 
-  <!-- FAVICON DE PLANTITA -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🪴</text></svg>">
-
-  <!-- FUENTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="animate-on-load">
 
-  <!-- ========================================== -->
   <!-- FONDO ESTÁTICO GLOBAL -->
-  <!-- ========================================== -->
   <div class="global-fixed-bg">
-    <svg class="sticker sticker-star" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2L14.4 9.6H22L15.8 14.4L18.2 22L12 17.2L5.8 22L8.2 14.4L2 9.6H9.6L12 2Z" fill="#FEF08A" stroke="#0F172A" stroke-width="1.5" stroke-linejoin="round"/>
-    </svg>
-    <svg class="sticker sticker-plant" width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 22C12 22 4 16 4 10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10C20 16 12 22 12 22Z" fill="#bbf7d0" stroke="#0F172A" stroke-width="1.5" stroke-linejoin="round"/>
-      <path d="M12 22V10" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/>
-      <path d="M12 16C10 14 8 13 8 13" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/>
-      <path d="M12 12C14 10 16 9 16 9" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/>
-    </svg>
-    <svg class="sticker sticker-sparkle" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2L14 10L22 12L14 14L12 22L10 14L2 12L10 10L12 2Z" fill="#fbcfe8" stroke="#0F172A" stroke-width="1.5" stroke-linejoin="round"/>
-    </svg>
+    <svg class="sticker sticker-star" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14.4 9.6H22L15.8 14.4L18.2 22L12 17.2L5.8 22L8.2 14.4L2 9.6H9.6L12 2Z" fill="#FEF08A" stroke="#0F172A" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    <svg class="sticker sticker-plant" width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C12 22 4 16 4 10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10C20 16 12 22 12 22Z" fill="#bbf7d0" stroke="#0F172A" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 22V10" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/><path d="M12 16C10 14 8 13 8 13" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/><path d="M12 12C14 10 16 9 16 9" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/></svg>
+    <svg class="sticker sticker-sparkle" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14 10L22 12L14 14L12 22L10 14L2 12L10 10L12 2Z" fill="#fbcfe8" stroke="#0F172A" stroke-width="1.5" stroke-linejoin="round"/></svg>
   </div>
 
-  <!-- ========================================== -->
   <!-- 1. SECCIÓN HERO -->
-  <!-- ========================================== -->
-  <section class="hero-wrapper">
+  <section class="hero-wrapper fade-in-section delay-1">
     <div class="hero-video-container">
-      <video autoplay loop muted playsinline class="video-bg">
-        <source src="/avila.webm" type="video/webm" />
-      </video>
+      <video autoplay loop muted playsinline class="video-bg"><source src="/avila.webm" type="video/webm" /></video>
       <div class="avila-overlay"></div>
     </div>
 
@@ -64,30 +46,22 @@
       <div class="left-col">
         <div class="glass-profile-card" onclick="this.classList.toggle('active')">
           <div class="card-min-header">
-            <!-- Imagen con animación de expansión -->
-            <img src="/grey.jpeg" alt="Greydemar Serrano" class="profile-thumb" />
+            <img src="/grey.jpeg" alt="Greydemar Serrano" class="profile-thumb shift-right" />
             <div class="min-meta">
-              <div class="status-line">
-                <span class="green-dot"></span>
-                <span class="status-text" data-es="En línea" data-en="Online">En línea</span>
-              </div>
+              <div class="status-line"><span class="green-dot"></span><span class="status-text" data-es="En línea" data-en="Online">En línea</span></div>
               <div class="name-group">
                 <h2 class="min-name">GREYDEMAR SERRANO</h2>
-                <span class="min-title" data-es="Especialista en Marketing Digital y Conversión Web" data-en="Digital Marketing & Web Conversion Specialist">
-                  Especialista en Marketing Digital y Conversión Web
-                </span>
+                <span class="min-title" data-es="Especialista en Marketing Digital y Conversión Web" data-en="Digital Marketing & Web Conversion Specialist">Especialista en Marketing Digital y Conversión Web</span>
               </div>
             </div>
           </div>
           
           <div class="card-expand-content">
-            <!-- Bio más reducida y con mayor gancho -->
-            <p class="expand-bio" 
-               data-es="<strong>Comunicadora Social</strong> que convierte atención en facturación.<br><br>No hago ruido, <strong>construyo ecosistemas rentables</strong> conectando contenido magnético con plataformas ultrarrápidas.<br><br><strong>Mi enfoque:</strong> eliminar la fricción y multiplicar tus conversiones." 
-               data-en="<strong>Social Communicator</strong> turning attention into revenue.<br><br>I don't make noise, <strong>I build profitable ecosystems</strong> connecting magnetic content with ultra-fast platforms.<br><br><strong>My focus:</strong> eliminating friction and multiplying your conversions.">
-              <strong>Comunicadora Social</strong> que convierte atención en facturación.<br><br>No hago ruido, <strong>construyo ecosistemas rentables</strong> conectando contenido magnético con plataformas ultrarrápidas.<br><br><strong>Mi enfoque:</strong> eliminar la fricción y multiplicar tus conversiones.
+            <p class="expand-bio" data-es="<strong>Estrategia que convierte atención en facturación.</strong><br><br>No hago ruido, <strong>construyo ecosistemas rentables.</strong> Conecto contenido de alto impacto con sistemas de cierre comercial y plataformas ultrarrápidas.<br><br><strong>Mi objetivo:</strong> eliminar la fricción, posicionar tu autoridad y multiplicar tus conversiones." data-en="<strong>Strategy that turns attention into revenue.</strong><br><br>I don't just make noise, <strong>I build profitable ecosystems.</strong> I connect high-impact content with commercial closing systems and ultra-fast platforms.<br><br><strong>My goal:</strong> eliminate friction, position your authority, and multiply your conversions.">
+              <strong>Estrategia que convierte atención en facturación.</strong><br><br>No hago ruido, <strong>construyo ecosistemas rentables.</strong> Conecto contenido de alto impacto con sistemas de cierre comercial y plataformas ultrarrápidas.<br><br><strong>Mi objetivo:</strong> eliminar la fricción, posicionar tu autoridad y multiplicar tus conversiones.
             </p>
             
+            <p class="skills-title" data-es="Skills:" data-en="Skills:">Skills:</p>
             <div class="skills-grid">
               <span>Astro</span><span>GitHub</span><span>HTML5</span><span>CSS3</span>
               <span>GA4</span><span>Salesforce</span><span>Zoho CRM</span><span>Mailchimp</span>
@@ -104,103 +78,75 @@
       </div>
 
       <div class="hero-center-text">
-        <h1 data-es="ESTRATEGIA QUE UNE MARKETING, VENTAS Y WEB" data-en="STRATEGY BRIDGING MARKETING, SALES & WEB">
-          ESTRATEGIA QUE UNE MARKETING, VENTAS Y WEB
-        </h1>
-        <span class="floating-pill pill-pink">Growth Marketing</span>
-        <span class="floating-pill pill-green">Project Manager</span>
-        <span class="floating-pill pill-yellow">Visual Content</span>
+        <h1 data-es="ESTRATEGIA QUE UNE MARKETING, VENTAS Y WEB" data-en="STRATEGY BRIDGING MARKETING, SALES & WEB">ESTRATEGIA QUE UNE MARKETING, VENTAS Y WEB</h1>
+        <span class="floating-pill pill-pink">Growth Marketing</span><span class="floating-pill pill-green">Project Manager</span><span class="floating-pill pill-yellow">Visual Content</span>
       </div>
 
       <div class="glass-cases-card" onclick="this.classList.toggle('active')">
         <div class="cases-min-header">
           <span class="cases-title-text" data-es="Casos Destacados" data-en="Featured Cases">Casos Destacados</span>
-          <span class="search-icon-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-          </span>
+          <span class="search-icon-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
         </div>
         <div class="cases-expand-content">
           <ul class="quick-cases-list">
-            <li><a href="#projects"><strong>YP Realty</strong><span>Growth +604%</span></a></li>
-            <li><a href="#projects"><strong>Editorial PanHouse</strong><span>Comunicaciones Internas</span></a></li>
-            <li><a href="#projects"><strong>Eurobuilding</strong><span>Comunicaciones</span></a></li>
-            <li><a href="#projects"><strong>Dislocal</strong><span>Project Coordinator</span></a></li>
-            <li><a href="#projects"><strong>Impaktemos</strong><span>Coordinación Operativa</span></a></li>
+            <li><a href="#projects"><strong>01. YP Realty</strong><span>Growth +604%</span></a></li>
+            <li><a href="#projects"><strong>02. Eurobuilding</strong><span>Comunicaciones</span></a></li>
+            <li><a href="#projects"><strong>03. Dislocal</strong><span>Project Coordinator</span></a></li>
+            <li><a href="#projects"><strong>04. Impaktemos</strong><span>Coordinación Operativa</span></a></li>
+            <li><a href="#projects"><strong>05. PanHouse</strong><span>Comunicaciones Internas</span></a></li>
           </ul>
         </div>
       </div>
     </main>
   </section>
 
-  <!-- ========================================== -->
-  <!-- 1.5 LOGO MARQUEE (BANDA DE CLIENTES LOGOS) -->
-  <!-- ========================================== -->
-  <section class="marquee-section">
+  <!-- 1.5 LOGO MARQUEE -->
+  <section class="marquee-section fade-in-section delay-2">
     <div class="marquee-container">
       <div class="marquee-track">
-        <!-- Nuevos logos integrados (Asegúrate de subirlos con estos nombres exactos a public/) -->
+        <img src="/logo plano creativo.png" alt="Plano Creativo">
+        <img src="/logo dislocal.png" alt="Dislocal">
+        <img src="/logo plano mariano moreno.png" alt="Instituto Superior Mariano Moreno">
+        <img src="/logo impaktemos.png" alt="Impaktemos">
+        <img src="/logo universidad.png" alt="Universidad">
         <img src="/logo-yprealty.png" alt="YP Realty">
-        <img src="/logo-plano-creativo.png" alt="Plano Creativo">
-        <img src="/logo-dislocal.png" alt="Dislocal">
-        <img src="/logo-plano-mariano-moreno.png" alt="Instituto Superior Mariano Moreno">
-        <img src="/logo-impaktemos.png" alt="Impaktemos">
-        <img src="/logo-universidad.png" alt="Universidad">
-        <img src="/logo-panhouse.png" alt="Pan House Casa Editorial">
-        <img src="/logo-eurobuilding.png" alt="Eurobuilding Hotels & Suites Caracas">
-        
-        <!-- Duplicados para el bucle infinito -->
+        <img src="/logo-eurobuilding.png" alt="Eurobuilding Hotels">
+        <img src="/logo-panhouse.png" alt="PanHouse">
+        <!-- Duplicados Bucle -->
+        <img src="/logo plano creativo.png" alt="Plano Creativo">
+        <img src="/logo dislocal.png" alt="Dislocal">
+        <img src="/logo plano mariano moreno.png" alt="Instituto Superior Mariano Moreno">
+        <img src="/logo impaktemos.png" alt="Impaktemos">
+        <img src="/logo universidad.png" alt="Universidad">
         <img src="/logo-yprealty.png" alt="YP Realty">
-        <img src="/logo-plano-creativo.png" alt="Plano Creativo">
-        <img src="/logo-dislocal.png" alt="Dislocal">
-        <img src="/logo-plano-mariano-moreno.png" alt="Instituto Superior Mariano Moreno">
-        <img src="/logo-impaktemos.png" alt="Impaktemos">
-        <img src="/logo-universidad.png" alt="Universidad">
-        <img src="/logo-panhouse.png" alt="Pan House Casa Editorial">
-        <img src="/logo-eurobuilding.png" alt="Eurobuilding Hotels & Suites Caracas">
+        <img src="/logo-eurobuilding.png" alt="Eurobuilding Hotels">
+        <img src="/logo-panhouse.png" alt="PanHouse">
       </div>
     </div>
   </section>
 
-  <!-- ========================================== -->
-  <!-- 2. SECCIÓN ABOUT ME -->
-  <!-- ========================================== -->
-  <section id="about" class="about-section">
+  <!-- 2. ABOUT ME -->
+  <section id="about" class="about-section fade-in-section delay-3">
     <div class="about-container">
-      
       <div class="sticky-note">
-        <svg class="real-pin" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 10V22" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
-          <circle cx="12" cy="7" r="5" fill="#ef4444" stroke="#b91c1c" stroke-width="1.5"/>
-          <circle cx="10.5" cy="5.5" r="1.5" fill="#ffffff" opacity="0.6"/>
-        </svg>
+        <svg class="real-pin" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10V22" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="5" fill="#ef4444" stroke="#b91c1c" stroke-width="1.5"/><circle cx="10.5" cy="5.5" r="1.5" fill="#ffffff" opacity="0.6"/></svg>
         <span class="note-text" data-es="About Me" data-en="About Me">About Me</span>
       </div>
 
       <div class="about-header">
-        <h2 data-es="Hago un trabajo que las personas nunca olvidan." data-en="I do work that people never forget.">
-          Hago un trabajo que las personas nunca olvidan.
-        </h2>
-        <p class="about-subtitle" data-es="La estrategia lo es todo. Entiendo el mercado y sé cómo funciona la mente del consumidor. Las ventas mantienen el negocio, pero <strong>nos compran por cómo nos ven</strong>, y ahí es donde pongo el foco. Presto especial atención a los detalles psicológicos para <strong>conectar, impactar y retener la atención</strong>, generando los frutos exactos que buscamos como equipo." data-en="Strategy is everything. I understand the market and how the consumer's mind works. Sales sustain the business, but <strong>they buy from us because of how they see us</strong>, and that's where I focus. I pay special attention to psychological details to <strong>connect, impact, and retain attention</strong>, generating the exact results we seek as a team.">
-          La estrategia lo es todo. Entiendo el mercado y sé cómo funciona la mente del consumidor. Las ventas mantienen el negocio, pero <strong>nos compran por cómo nos ven</strong>, y ahí es donde pongo el foco. Presto especial atención a los detalles psicológicos para <strong>conectar, impactar y retener la atención</strong>, generando los frutos exactos que buscamos como equipo.
-        </p>
+        <h2 data-es="Hago un trabajo que las personas nunca olvidan." data-en="I do work that people never forget.">Hago un trabajo que las personas nunca olvidan.</h2>
+        <p class="about-subtitle" data-es="La estrategia lo es todo. Entiendo el mercado y sé cómo funciona la mente del consumidor. Las ventas mantienen el negocio, pero <strong>nos compran por cómo nos ven</strong>, y ahí es donde pongo el foco. Presto especial atención a los detalles psicológicos para <strong>conectar, impactar y retener la atención</strong>, generando los frutos exactos que buscamos como equipo." data-en="Strategy is everything. I understand the market and how the consumer's mind works. Sales sustain the business, but <strong>they buy from us because of how they see us</strong>, and that's where I focus. I pay special attention to psychological details to <strong>connect, impact, and retain attention</strong>, generating the exact results we seek as a team.">La estrategia lo es todo. Entiendo el mercado y sé cómo funciona la mente del consumidor. Las ventas mantienen el negocio, pero <strong>nos compran por cómo nos ven</strong>, y ahí es donde pongo el foco. Presto especial atención a los detalles psicológicos para <strong>conectar, impactar y retener la atención</strong>, generando los frutos exactos que buscamos como equipo.</p>
       </div>
 
       <div class="mac-window">
         <div class="mac-titlebar">
-          <div class="mac-buttons">
-            <span class="mac-dot red"></span><span class="mac-dot yellow"></span><span class="mac-dot green"></span>
-          </div>
+          <div class="mac-buttons"><span class="mac-dot red"></span><span class="mac-dot yellow"></span><span class="mac-dot green"></span></div>
         </div>
         <div class="mac-content">
-          <div class="bio-image-col">
-            <img src="/memoji.png" alt="Memoji Greydemar" class="memoji-circle" />
-          </div>
+          <div class="bio-image-col"><img src="/memoji.png" alt="Memoji Greydemar" class="memoji-circle" /></div>
           <div class="bio-info-col">
-            <p class="bio-intro" data-es="Soy <strong>Greydemar Serrano</strong>, COMUNICADORA SOCIAL con una visión estratégica orientada a los resultados." data-en="I am <strong>Greydemar Serrano</strong>, a SOCIAL COMMUNICATOR with a strategic, results-oriented vision.">
-              Soy <strong>Greydemar Serrano</strong>, COMUNICADORA SOCIAL con una visión estratégica orientada a los resultados.
-            </p>
+            <!-- Comunicadora Social corregido -->
+            <p class="bio-intro" data-es="Soy <strong>Greydemar Serrano</strong>, Comunicadora Social con una visión estratégica orientada a los resultados." data-en="I am <strong>Greydemar Serrano</strong>, a Social Communicator with a strategic, results-oriented vision.">Soy <strong>Greydemar Serrano</strong>, Comunicadora Social con una visión estratégica orientada a los resultados.</p>
             <div class="stats-grid-about">
               <div class="stat-item"><h3 class="iridescent-text">+4</h3><p data-es="Años de experiencia" data-en="Years of experience">Años de experiencia</p></div>
               <div class="stat-item"><h3 class="iridescent-text">+8</h3><p data-es="Proyectos coordinados" data-en="Projects coordinated">Proyectos coordinados</p></div>
@@ -210,268 +156,136 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ========================================== -->
-  <!-- 3. SECCIÓN PROYECTOS -->
-  <!-- ========================================== -->
-  <section id="projects" class="projects-section">
+  <!-- 3. PROYECTOS -->
+  <section id="projects" class="projects-section fade-in-section delay-4">
     <div class="projects-container">
-      
       <div class="sticky-note">
-        <svg class="real-pin pin-blue" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 10V22" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
-          <circle cx="12" cy="7" r="5" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5"/>
-          <circle cx="10.5" cy="5.5" r="1.5" fill="#ffffff" opacity="0.6"/>
-        </svg>
+        <svg class="real-pin pin-blue" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10V22" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="5" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5"/><circle cx="10.5" cy="5.5" r="1.5" fill="#ffffff" opacity="0.6"/></svg>
         <span class="note-text" data-es="Casos" data-en="Cases">Casos</span>
       </div>
-
       <div class="section-header">
-        <h2 data-es="Proyectos que cuentan historias." data-en="Projects that tell stories.">
-          Proyectos que cuentan historias.
-        </h2>
-        <p data-es="Selección de ecosistemas y estrategias destacadas." data-en="Selection of featured ecosystems and strategies.">
-          Selección de ecosistemas y estrategias destacadas.
-        </p>
+        <h2 data-es="Proyectos que cuentan historias." data-en="Projects that tell stories.">Proyectos que cuentan historias.</h2>
+        <p data-es="Selección de ecosistemas y estrategias destacadas." data-en="Selection of featured ecosystems and strategies.">Selección de ecosistemas y estrategias destacadas.</p>
       </div>
 
       <div class="projects-grid">
-        
-        <!-- Tarjeta YP Realty -->
         <div class="project-card" onclick="openModal('modal-yprealty')">
-          <div class="card-mac-header">
-            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-            <span class="card-tag">Growth Marketing</span>
-          </div>
+          <div class="card-mac-header"><div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><span class="card-tag">Growth</span></div>
           <div class="card-body">
             <img src="/portada-yprealty.png" alt="YP Realty" class="card-img" style="object-position: top center;" />
-            <h3>YP Realty</h3>
-            <p class="card-company">Growth +604%</p>
+            <h3>01. YP Realty</h3><p class="card-company">Growth +604%</p>
           </div>
         </div>
-
-        <!-- Tarjeta PanHouse -->
-        <div class="project-card" onclick="openModal('modal-panhouse')">
-          <div class="card-mac-header">
-            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-            <span class="card-tag">PR Interno</span>
-          </div>
-          <div class="card-body">
-            <img src="/portada-panhouse.png" alt="Editorial PanHouse" class="card-img" />
-            <h3>Editorial PanHouse</h3>
-            <p class="card-company">Comunicaciones Internas</p>
-          </div>
-        </div>
-
-        <!-- Tarjeta Eurobuilding -->
         <div class="project-card" onclick="openModal('modal-eurobuilding')">
-          <div class="card-mac-header">
-            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-            <span class="card-tag">B2B & Operaciones</span>
-          </div>
+          <div class="card-mac-header"><div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><span class="card-tag">B2B & PR</span></div>
           <div class="card-body">
             <img src="/portada-eurobuilding.png" alt="Eurobuilding" class="card-img" />
-            <h3>Eurobuilding</h3>
-            <p class="card-company">Business Center</p>
+            <h3>02. Eurobuilding</h3><p class="card-company">Business Center</p>
           </div>
         </div>
-
-        <!-- Tarjeta Dislocal -->
         <div class="project-card" onclick="openModal('modal-dislocal')">
-          <div class="card-mac-header">
-            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-            <span class="card-tag">Project Mgmt</span>
-          </div>
+          <div class="card-mac-header"><div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><span class="card-tag">Project Mgmt</span></div>
           <div class="card-body">
             <img src="/portada-dislocal.png" alt="Dislocal" class="card-img" />
-            <h3>Dislocal</h3>
-            <p class="card-company">Coordinación Logística</p>
+            <h3>03. Dislocal</h3><p class="card-company">Coordinación Logística</p>
           </div>
         </div>
-
-        <!-- Impaktemos Centrado al final -->
         <div class="project-card" onclick="openModal('modal-impaktemos')">
-          <div class="card-mac-header">
-            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-            <span class="card-tag">Coordinación Operativa</span>
-          </div>
+          <div class="card-mac-header"><div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><span class="card-tag">Operativa</span></div>
           <div class="card-body">
             <img src="/portada-impaktemos.png" alt="Impaktemos" class="card-img" />
-            <h3>Impaktemos</h3>
-            <p class="card-company">Logística & Plataformas</p>
+            <h3>04. Impaktemos</h3><p class="card-company">Logística & Plataformas</p>
           </div>
         </div>
-
+        <div class="project-card" onclick="openModal('modal-panhouse')">
+          <div class="card-mac-header"><div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><span class="card-tag">PR Interno</span></div>
+          <div class="card-body">
+            <img src="/portada-panhouse.png" alt="Editorial PanHouse" class="card-img" />
+            <h3>05. Editorial PanHouse</h3><p class="card-company">Comunicaciones Internas</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ========================================== -->
-  <!-- 4. SECCIÓN SERVICIOS (GLASSMORPHISM) -->
-  <!-- ========================================== -->
-  <!-- Añadida la clase blur-backdrop para difuminar el fondo estático -->
-  <section id="services" class="services-section blur-backdrop">
+  <!-- 4. SERVICIOS -->
+  <section id="services" class="services-section blur-backdrop fade-in-section delay-5">
     <div class="services-container">
-      
       <div class="sticky-note">
-        <svg class="real-pin" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 10V22" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
-          <circle cx="12" cy="7" r="5" fill="#f59e0b" stroke="#b45309" stroke-width="1.5"/>
-          <circle cx="10.5" cy="5.5" r="1.5" fill="#ffffff" opacity="0.6"/>
-        </svg>
+        <svg class="real-pin" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10V22" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="5" fill="#f59e0b" stroke="#b45309" stroke-width="1.5"/><circle cx="10.5" cy="5.5" r="1.5" fill="#ffffff" opacity="0.6"/></svg>
         <span class="note-text" data-es="Servicios" data-en="Services">Servicios</span>
       </div>
-
       <div class="section-header">
         <h2 data-es="Cómo te ayudo a crecer." data-en="How I help you grow.">Cómo te ayudo a crecer.</h2>
         <p data-es="Haz clic en cada servicio para ver cómo soluciono tus necesidades." data-en="Click on each service to see how I solve your needs.">Haz clic en cada servicio para ver cómo soluciono tus necesidades.</p>
       </div>
 
       <div class="services-grid-blocks">
-        
         <div class="service-block service-toggle" style="background: rgba(251, 207, 232, 0.4); border-color: rgba(251, 207, 232, 0.8);" onclick="this.classList.toggle('open')">
-          <div class="service-block-header">
-            <h3 data-es="Social Media Manager" data-en="Social Media Manager">Social Media Manager</h3>
-            <span class="icon-plus">+</span>
-          </div>
-          <div class="service-block-body">
-            <p data-es="Me encargo de cómo te ve el mundo. Planificamos juntos lo que subes, estructuramos tu mensaje y construimos una presencia digital que tu audiencia no pase por alto." data-en="I take care of how the world sees you. We plan what you upload, structure your message, and build a digital presence your audience cannot ignore.">
-              Me encargo de cómo te ve el mundo. Planificamos juntos lo que subes, estructuramos tu mensaje y construimos una presencia digital que tu audiencia no pase por alto.
-            </p>
-          </div>
+          <div class="service-block-header"><h3 data-es="Social Media Manager" data-en="Social Media Manager">Social Media Manager</h3><span class="icon-plus">+</span></div>
+          <div class="service-block-body"><p data-es="Me encargo de cómo te ve el mundo. Planificamos juntos lo que subes, estructuramos tu mensaje y construimos una presencia digital que tu audiencia no pase por alto.">Me encargo de cómo te ve el mundo. Planificamos juntos lo que subes, estructuramos tu mensaje y construimos una presencia digital que tu audiencia no pase por alto.</p></div>
         </div>
-
         <div class="service-block service-toggle" style="background: rgba(254, 240, 138, 0.4); border-color: rgba(254, 240, 138, 0.8);" onclick="this.classList.toggle('open')">
-          <div class="service-block-header">
-            <h3 data-es="Edición de Contenido Visual" data-en="Visual Content Editing">Edición de Contenido Visual</h3>
-            <span class="icon-plus">+</span>
-          </div>
-          <div class="service-block-body">
-            <p data-es="Hagamos que se queden viendo. Tomo tus ideas y las convierto en videos dinámicos, aplicando ganchos visuales y cortes estratégicos para retener la atención al máximo." data-en="Let's make them keep watching. I turn your ideas into dynamic videos, applying visual hooks and strategic cuts to maximize attention retention.">
-              Hagamos que se queden viendo. Tomo tus ideas y las convierto en videos dinámicos, aplicando ganchos visuales y cortes estratégicos para retener la atención al máximo.
-            </p>
-          </div>
+          <div class="service-block-header"><h3 data-es="Edición de Contenido Visual" data-en="Visual Content Editing">Edición de Contenido Visual</h3><span class="icon-plus">+</span></div>
+          <div class="service-block-body"><p data-es="Hagamos que se queden viendo. Tomo tus ideas y las convierto en videos dinámicos, aplicando ganchos visuales y cortes estratégicos para retener la atención al máximo.">Hagamos que se queden viendo. Tomo tus ideas y las convierto en videos dinámicos, aplicando ganchos visuales y cortes estratégicos para retener la atención al máximo.</p></div>
         </div>
-
         <div class="service-block service-toggle" style="background: rgba(187, 247, 208, 0.4); border-color: rgba(187, 247, 208, 0.8);" onclick="this.classList.toggle('open')">
-          <div class="service-block-header">
-            <h3 data-es="Landing Pages & Websites" data-en="Landing Pages & Websites">Landing Pages & Websites</h3>
-            <span class="icon-plus">+</span>
-          </div>
-          <div class="service-block-body">
-            <p data-es="Tu casa digital. Diseño y construyo páginas web limpias, directas y rápidas que no solo se ven bien, sino que están pensadas para que el cliente haga clic donde queremos." data-en="Your digital home. I design and build clean, direct, and fast websites that not only look good but are designed for the client to click exactly where we want.">
-              Tu casa digital. Diseño y construyo páginas web limpias, directas y rápidas que no solo se ven bien, sino que están pensadas para que el cliente haga clic donde queremos.
-            </p>
-          </div>
+          <div class="service-block-header"><h3 data-es="Landing Pages & Websites" data-en="Landing Pages & Websites">Landing Pages & Websites</h3><span class="icon-plus">+</span></div>
+          <div class="service-block-body"><p data-es="Tu casa digital. Diseño y construyo páginas web limpias, directas y rápidas pensadas para que el cliente haga clic donde queremos.">Tu casa digital. Diseño y construyo páginas web limpias, directas y rápidas pensadas para que el cliente haga clic donde queremos.</p></div>
         </div>
-
         <div class="service-block service-toggle" style="background: rgba(191, 219, 254, 0.4); border-color: rgba(191, 219, 254, 0.8);" onclick="this.classList.toggle('open')">
-          <div class="service-block-header">
-            <h3 data-es="Ventas, CRM & Prospección" data-en="Sales, CRM & Prospecting">Ventas, CRM & Prospección</h3>
-            <span class="icon-plus">+</span>
-          </div>
-          <div class="service-block-body">
-            <p data-es="No dejamos dinero sobre la mesa. Superviso y organizo la estrategia de cierre, gestionando los prospectos para eliminar la fricción entre el 'me gusta' y el 'te compro'." data-en="We don't leave money on the table. I supervise and organize the closing strategy, managing prospects to eliminate friction between 'I like it' and 'I buy'.">
-              No dejamos dinero sobre la mesa. Superviso y organizo la estrategia de cierre, gestionando los prospectos para eliminar la fricción entre el 'me gusta' y el 'te compro'.
-            </p>
-          </div>
+          <div class="service-block-header"><h3 data-es="Ventas, CRM & Prospección" data-en="Sales, CRM & Prospecting">Ventas, CRM & Prospección</h3><span class="icon-plus">+</span></div>
+          <div class="service-block-body"><p data-es="No dejamos dinero sobre la mesa. Superviso y organizo la estrategia de cierre, gestionando los prospectos para eliminar la fricción.">No dejamos dinero sobre la mesa. Superviso y organizo la estrategia de cierre, gestionando los prospectos para eliminar la fricción.</p></div>
         </div>
-
         <div class="service-block service-toggle" style="background: rgba(233, 213, 255, 0.4); border-color: rgba(233, 213, 255, 0.8);" onclick="this.classList.toggle('open')">
-          <div class="service-block-header">
-            <h3 data-es="Project Management" data-en="Project Management">Project Management</h3>
-            <span class="icon-plus">+</span>
-          </div>
-          <div class="service-block-body">
-            <p data-es="Te quito el dolor de cabeza. Yo me encargo de organizar, dividir tareas, supervisar a los equipos y asegurar que todo el proyecto se ejecute de forma puntual y sin estrés para ti." data-en="I take the headache away. I organize, divide tasks, supervise teams, and ensure the entire project is executed punctually and stress-free for you.">
-              Te quito el dolor de cabeza. Yo me encargo de organizar, dividir tareas, supervisar a los equipos y asegurar que todo el proyecto se ejecute de forma puntual y sin estrés para ti.
-            </p>
-          </div>
+          <div class="service-block-header"><h3 data-es="Project Management" data-en="Project Management">Project Management</h3><span class="icon-plus">+</span></div>
+          <div class="service-block-body"><p data-es="Te quito el dolor de cabeza. Yo me encargo de organizar, dividir tareas, supervisar equipos y asegurar que todo se ejecute sin estrés para ti.">Te quito el dolor de cabeza. Yo me encargo de organizar, dividir tareas, supervisar equipos y asegurar que todo se ejecute sin estrés para ti.</p></div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ========================================== -->
-  <!-- 5. SECCIÓN CONTACTO (GLASS BLUR SMOOTH) -->
-  <!-- ========================================== -->
-  <section id="contact" class="contact-section blur-backdrop-heavy">
-    <div class="contact-container">
-      
-      <!-- Columna Izquierda (Info y Botones) con fondo pastel -->
-      <div class="contact-left pastel-bg">
-        <!-- Título con Café Animado Grande -->
+  <!-- 5. CONTACTO (Mismo Glass que Servicios) -->
+  <section id="contact" class="contact-section blur-backdrop-heavy fade-in-section delay-6">
+    <div class="contact-container mac-window">
+      <div class="contact-left">
         <h2 class="coffee-title">
           <span data-es="Tomemos un café virtual." data-en="Let's have a virtual coffee.">Tomemos un café virtual.</span>
-          <svg class="coffee-cup-svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
-            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
-            <path class="steam steam-1" d="M6 1v3"></path>
-            <path class="steam steam-2" d="M10 1v3"></path>
-            <path class="steam steam-3" d="M14 1v3"></path>
-          </svg>
+          <svg class="coffee-cup-svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><path class="steam steam-1" d="M6 1v3"></path><path class="steam steam-2" d="M10 1v3"></path><path class="steam steam-3" d="M14 1v3"></path></svg>
         </h2>
+        <p data-es="Si buscas resultados, orden y alguien que entienda el juego digital de principio a fin, escríbeme y hagamos que las cosas pasen." data-en="If you are looking for results, order, and someone who understands the digital game from start to finish, write me and let's make things happen.">Si buscas resultados, orden y alguien que entienda el juego digital de principio a fin, escríbeme y hagamos que las cosas pasen.</p>
         
-        <p data-es="Si buscas resultados, orden y alguien que entienda el juego digital de principio a fin, escríbeme y hagamos que las cosas pasen." data-en="If you are looking for results, order, and someone who understands the digital game from start to finish, write me and let's make things happen.">
-          Si buscas resultados, orden y alguien que entienda el juego digital de principio a fin, escríbeme y hagamos que las cosas pasen.
-        </p>
-        
-        <!-- Botones Privados sin Emojis -->
         <div class="contact-methods">
-          <a href="https://wa.me/584126339776" target="_blank" class="method-card">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-            Escríbeme por WhatsApp
-          </a>
-          <a href="mailto:greydemar06@gmail.com" class="method-card">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            Envíame un Correo
-          </a>
-          <a href="https://linkedin.com/in/greydemarserrano" target="_blank" class="method-card">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-            Conectar en LinkedIn
-          </a>
+          <a href="https://wa.me/584126339776" target="_blank" class="method-card"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg> Escríbeme por WhatsApp</a>
+          <a href="mailto:greydemar06@gmail.com" class="method-card"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Envíame un Correo</a>
+          <a href="https://www.linkedin.com/in/greydemarserrano/" target="_blank" class="method-card"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg> Conectar en LinkedIn</a>
         </div>
       </div>
 
-      <!-- Columna Derecha (Formulario) con fondo Glass -->
       <div class="contact-right glass-panel">
         <h3 style="margin-bottom: 24px; font-size: 1.8rem; font-weight: 800;" data-es="Déjame un mensaje." data-en="Leave me a message.">Déjame un mensaje.</h3>
         <form class="contact-form" id="wa-form" onsubmit="sendToWhatsApp(event)">
-          <div class="input-group">
-            <label data-es="Tu Nombre" data-en="Your Name">Tu Nombre</label>
-            <input type="text" id="wa-name" required placeholder="Ej. Ana Pérez" />
-          </div>
-          <div class="input-group">
-            <label data-es="Tu Correo" data-en="Your Email">Tu Correo</label>
-            <input type="email" id="wa-email" required placeholder="ana@empresa.com" />
-          </div>
-          <div class="input-group">
-            <label data-es="Mensaje" data-en="Message">Mensaje</label>
-            <textarea id="wa-message" rows="4" required placeholder="Hola Grey, me gustaría que trabajáramos en..." data-es-placeholder="Hola Grey, me gustaría que trabajáramos en..."></textarea>
-          </div>
+          <div class="input-group"><label data-es="Tu Nombre" data-en="Your Name">Tu Nombre</label><input type="text" id="wa-name" required placeholder="Ej. Ana Pérez" /></div>
+          <div class="input-group"><label data-es="Tu Correo" data-en="Your Email">Tu Correo</label><input type="email" id="wa-email" required placeholder="ana@empresa.com" /></div>
+          <div class="input-group"><label data-es="Mensaje" data-en="Message">Mensaje</label><textarea id="wa-message" rows="4" required placeholder="Hola Grey, me gustaría que trabajáramos en..." data-es-placeholder="Hola Grey, me gustaría que trabajáramos en..."></textarea></div>
           <button type="submit" class="submit-btn" data-es="Enviar mensaje" data-en="Send message">Enviar mensaje</button>
         </form>
       </div>
-
     </div>
   </section>
 
-  <!-- ========================================== -->
-  <!-- FOOTER (GLASSMORPHISM SUAVE) -->
-  <!-- ========================================== -->
+  <!-- FOOTER -->
   <footer class="site-footer blur-backdrop-heavy">
-    <p>© 2026 Greydemar Serrano. Todos los derechos reservados.</p>
+    <p>© 2026 Greydemar Serrano. Todos los derechos reservados. | <a href="/terminos" class="footer-link" data-es="Términos y Privacidad" data-en="Terms & Privacy">Términos y Privacidad</a></p>
   </footer>
 
   <!-- ========================================== -->
-  <!-- MODALES DE PROYECTOS -->
+  <!-- MODALES DE PROYECTOS (ANIMADOS) -->
   <!-- ========================================== -->
   
-  <!-- YP Realty -->
   <div id="modal-yprealty" class="modal-overlay" onclick="closeModalOutside(event, 'modal-yprealty')">
     <div class="modal-window">
       <div class="modal-mac-bar">
@@ -482,7 +296,11 @@
       <div class="modal-content-scroll">
         <div class="modal-hero-banner"><img src="/portada-yprealty.png" alt="YP Realty Banner" style="object-position: top center;" /></div>
         <div class="modal-title-row">
-          <h2>YP Realty</h2><a href="#" target="_blank" class="preview-link">Ver Proyecto</a>
+          <div class="title-with-logo">
+            <img src="/logo-yprealty.png" alt="YP Realty Logo" class="modal-company-logo">
+            <h2>01. YP Realty</h2>
+          </div>
+          <a href="#" target="_blank" class="preview-link">Ver Proyecto</a>
         </div>
         <p class="modal-description">Lidero la estrategia de contenido y edición de video orgánico para el sector inmobiliario en Puerto Rico. Produzco formatos de alto impacto, redacto guiones persuasivos y aplico SEO para maximizar la conversión. Gracias al análisis de datos, logramos picos de 292% en alcance, 151% en interacción y un crecimiento sólido del +604%.</p>
         <div class="metadata-grid">
@@ -494,30 +312,6 @@
     </div>
   </div>
 
-  <!-- PanHouse -->
-  <div id="modal-panhouse" class="modal-overlay" onclick="closeModalOutside(event, 'modal-panhouse')">
-    <div class="modal-window">
-      <div class="modal-mac-bar">
-        <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-        <div class="modal-search-bar">editorialpanhouse.com</div>
-        <button class="close-btn-text" onclick="closeModal('modal-panhouse')">Cerrar</button>
-      </div>
-      <div class="modal-content-scroll">
-        <div class="modal-hero-banner"><img src="/portada-panhouse.png" alt="PanHouse Banner" /></div>
-        <div class="modal-title-row">
-          <h2>PanHouse, Casa Editorial</h2><a href="#" target="_blank" class="preview-link">Ver Proyecto</a>
-        </div>
-        <p class="modal-description">Sincronicé las operaciones diarias entre los departamentos de Marketing, Ventas y Relaciones Públicas, garantizando la ejecución de eventos VIP. Diseñé e integré sistemas de automatización con IA que redujeron drásticamente los tiempos de atención y estandarizaron la comunicación corporativa.</p>
-        <div class="metadata-grid">
-          <div><span class="meta-label">Rol</span><span class="meta-val">Coord. Comunicaciones Internas</span></div>
-          <div><span class="meta-label">Herramientas</span><span class="meta-val">Meta Business Suite, CRM, Email Marketing</span></div>
-          <div><span class="meta-label">Año</span><span class="meta-val">2024 - 2025</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Eurobuilding -->
   <div id="modal-eurobuilding" class="modal-overlay" onclick="closeModalOutside(event, 'modal-eurobuilding')">
     <div class="modal-window">
       <div class="modal-mac-bar">
@@ -528,7 +322,11 @@
       <div class="modal-content-scroll">
         <div class="modal-hero-banner"><img src="/portada-eurobuilding.png" alt="Eurobuilding Banner" /></div>
         <div class="modal-title-row">
-          <h2>Eurobuilding Hotels & Suites</h2><a href="#" target="_blank" class="preview-link">Ver Proyecto</a>
+          <div class="title-with-logo">
+            <img src="/logo-eurobuilding.png" alt="Eurobuilding Logo" class="modal-company-logo">
+            <h2>02. Eurobuilding</h2>
+          </div>
+          <a href="#" target="_blank" class="preview-link">Ver Proyecto</a>
         </div>
         <p class="modal-description">Lideré el Business Center, gestionando el portafolio corporativo (B2B) y coordinando la logística bajo estrictos estándares 5 estrellas. Centralicé las operaciones entre 7 departamentos críticos, actuando como mediadora estratégica y alcanzando una tasa de resolución del 100% en incidencias operativas.</p>
         <div class="metadata-grid">
@@ -540,7 +338,6 @@
     </div>
   </div>
 
-  <!-- Dislocal -->
   <div id="modal-dislocal" class="modal-overlay" onclick="closeModalOutside(event, 'modal-dislocal')">
     <div class="modal-window">
       <div class="modal-mac-bar">
@@ -551,7 +348,11 @@
       <div class="modal-content-scroll">
         <div class="modal-hero-banner"><img src="/portada-dislocal.png" alt="Dislocal Banner" /></div>
         <div class="modal-title-row">
-          <h2>Dislocal</h2><a href="#" target="_blank" class="preview-link">Ver Proyecto</a>
+          <div class="title-with-logo">
+            <img src="/logo dislocal.png" alt="Dislocal Logo" class="modal-company-logo">
+            <h2>03. Dislocal</h2>
+          </div>
+          <a href="#" target="_blank" class="preview-link">Ver Proyecto</a>
         </div>
         <p class="modal-description">Lideré la planificación y ejecución logística de proyectos de impacto local (Barrio El Calvario). Apliqué metodologías ágiles para alinear cronogramas, recursos y a múltiples equipos internacionales operando en terreno directamente con el equipo de Dislocal.</p>
         <div class="metadata-grid">
@@ -563,7 +364,6 @@
     </div>
   </div>
 
-  <!-- Impaktemos -->
   <div id="modal-impaktemos" class="modal-overlay" onclick="closeModalOutside(event, 'modal-impaktemos')">
     <div class="modal-window">
       <div class="modal-mac-bar">
@@ -574,7 +374,11 @@
       <div class="modal-content-scroll">
         <div class="modal-hero-banner"><img src="/portada-impaktemos.png" alt="Impaktemos Banner" /></div>
         <div class="modal-title-row">
-          <h2>Impaktemos (Plataforma "Las Minitas")</h2><a href="#" target="_blank" class="preview-link">Ver Proyecto</a>
+          <div class="title-with-logo">
+            <img src="/logo impaktemos.png" alt="Impaktemos Logo" class="modal-company-logo">
+            <h2>04. Impaktemos (Plataforma "Las Minitas")</h2>
+          </div>
+          <a href="#" target="_blank" class="preview-link">Ver Proyecto</a>
         </div>
         <p class="modal-description">Dirigí la logística operativa de jornadas de campo y desarrollé activos digitales (Landing Pages) específicos para automatizar la asignación de tareas, organizar el flujo de voluntarios y realizar un monitoreo eficiente de todas las actividades.</p>
         <div class="metadata-grid">
@@ -586,43 +390,67 @@
     </div>
   </div>
 
-  <!-- BARRA FLOTANTE DOCK -->
+  <div id="modal-panhouse" class="modal-overlay" onclick="closeModalOutside(event, 'modal-panhouse')">
+    <div class="modal-window">
+      <div class="modal-mac-bar">
+        <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+        <div class="modal-search-bar">editorialpanhouse.com</div>
+        <button class="close-btn-text" onclick="closeModal('modal-panhouse')">Cerrar</button>
+      </div>
+      <div class="modal-content-scroll">
+        <div class="modal-hero-banner"><img src="/portada-panhouse.png" alt="PanHouse Banner" /></div>
+        <div class="modal-title-row">
+          <div class="title-with-logo">
+            <img src="/logo-panhouse.png" alt="PanHouse Logo" class="modal-company-logo">
+            <h2>05. PanHouse, Casa Editorial</h2>
+          </div>
+          <a href="#" target="_blank" class="preview-link">Ver Proyecto</a>
+        </div>
+        <p class="modal-description">Sincronicé las operaciones diarias entre los departamentos de Marketing, Ventas y Relaciones Públicas, garantizando la ejecución de eventos VIP. Diseñé e integré sistemas de automatización con IA que redujeron drásticamente los tiempos de atención y estandarizaron la comunicación corporativa.</p>
+        <div class="metadata-grid">
+          <div><span class="meta-label">Rol</span><span class="meta-val">Coord. Comunicaciones Internas</span></div>
+          <div><span class="meta-label">Herramientas</span><span class="meta-val">Meta Business Suite, CRM, Email Marketing</span></div>
+          <div><span class="meta-label">Año</span><span class="meta-val">2024 - 2025</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DOCK FLOTANTE -->
   <nav class="floating-dock">
     <ul class="dock-list">
-      <li class="dock-item" data-tooltip="Sobre mí" data-tooltip-es="Sobre mí" data-tooltip-en="About Me">
-        <a href="#about" class="dock-link"><img src="/notas.webp" class="mac-icon" alt="Notas"></a>
-      </li>
-      <li class="dock-item" data-tooltip="Casos" data-tooltip-es="Casos" data-tooltip-en="Cases">
-        <a href="#projects" class="dock-link"><img src="/foto.png" class="mac-icon" alt="Fotos"></a>
-      </li>
-      <li class="dock-item" data-tooltip="Servicios" data-tooltip-es="Servicios" data-tooltip-en="Services">
-        <a href="#services" class="dock-link"><img src="/finder icon.png" class="mac-icon" alt="Finder"></a>
-      </li>
-      <li class="dock-item" data-tooltip="Contacto" data-tooltip-es="Contacto" data-tooltip-en="Contact">
-        <a href="#contact" class="dock-link"><img src="/ICON MAIL.webp" class="mac-icon" alt="Mail"></a>
-      </li>
+      <li class="dock-item" data-tooltip="Sobre mí" data-tooltip-es="Sobre mí" data-tooltip-en="About Me"><a href="#about" class="dock-link"><img src="/notas.webp" class="mac-icon" alt="Notas"></a></li>
+      <li class="dock-item" data-tooltip="Casos" data-tooltip-es="Casos" data-tooltip-en="Cases"><a href="#projects" class="dock-link"><img src="/foto.png" class="mac-icon" alt="Fotos"></a></li>
+      <li class="dock-item" data-tooltip="Servicios" data-tooltip-es="Servicios" data-tooltip-en="Services"><a href="#services" class="dock-link"><img src="/finder icon.png" class="mac-icon" alt="Finder"></a></li>
+      <li class="dock-item" data-tooltip="Contacto" data-tooltip-es="Contacto" data-tooltip-en="Contact"><a href="#contact" class="dock-link"><img src="/ICON MAIL.webp" class="mac-icon" alt="Mail"></a></li>
     </ul>
   </nav>
 
-  <!-- SCRIPTS FUNCIONALES -->
   <script is:inline>
-    // Cambio de Idioma
+    // Idioma
     function setLanguage(lang) {
       document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
       event.target.classList.add('active');
       document.querySelectorAll('[data-es]').forEach(el => { el.innerHTML = el.getAttribute(`data-${lang}`); });
       document.querySelectorAll('[data-tooltip-es]').forEach(el => { el.setAttribute('data-tooltip', el.getAttribute(`data-tooltip-${lang}`)); });
-      
       const msgArea = document.getElementById('wa-message');
       if(msgArea) { msgArea.placeholder = lang === 'es' ? msgArea.getAttribute('data-es-placeholder') : "Hi Grey, I'd like to work on..."; }
     }
 
-    // Funciones Modales
-    function openModal(modalId) { document.getElementById(modalId).classList.add('active'); document.body.style.overflow = 'hidden'; }
-    function closeModal(modalId) { document.getElementById(modalId).classList.remove('active'); document.body.style.overflow = 'auto'; }
+    // Animación Modales
+    function openModal(modalId) { 
+      const modal = document.getElementById(modalId);
+      modal.classList.add('active'); 
+      document.body.style.overflow = 'hidden'; 
+    }
+    function closeModal(modalId) { 
+      const modal = document.getElementById(modalId);
+      modal.classList.remove('active'); 
+      document.body.style.overflow = 'auto'; 
+    }
     function closeModalOutside(event, modalId) { if (event.target.id === modalId) { closeModal(modalId); } }
 
-    // Enviar formulario a WhatsApp
+    // Enviar WhatsApp
     function sendToWhatsApp(event) {
       event.preventDefault();
       const name = document.getElementById('wa-name').value;
@@ -630,9 +458,13 @@
       const message = document.getElementById('wa-message').value;
       const phone = "584126339776";
       const text = `¡Hola Grey! Soy ${name} (${email}).%0A%0A${message}`;
-      const waUrl = `https://wa.me/${phone}?text=${text}`;
-      window.open(waUrl, '_blank');
+      window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
     }
+
+    // Animaciones de Scroll al Cargar
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add('loaded');
+    });
   </script>
 
 </body>
@@ -648,6 +480,12 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--navy-dark); overflow-x: hidden; position: relative; scroll-behavior: smooth; }
 
+  /* Animaciones Carga Inicial */
+  .fade-in-section { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+  body.loaded .fade-in-section { opacity: 1; transform: translateY(0); }
+  .delay-1 { transition-delay: 0.1s; } .delay-2 { transition-delay: 0.2s; } .delay-3 { transition-delay: 0.3s; }
+  .delay-4 { transition-delay: 0.4s; } .delay-5 { transition-delay: 0.5s; } .delay-6 { transition-delay: 0.6s; }
+
   /* FONDO GLOBAL */
   .global-fixed-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #f8fafc; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E"); z-index: -999; }
   .sticker { position: absolute; opacity: 0.7; }
@@ -655,7 +493,6 @@
   .sticker-plant { bottom: 20%; left: 8%; transform: rotate(-10deg); opacity: 0.6; }
   .sticker-sparkle { top: 40%; right: 5%; transform: rotate(5deg); }
   
-  /* CLASES DE DESENFOQUE PARA SECCIONES (PAUSAR FONDO) */
   .blur-backdrop { background: rgba(255, 255, 255, 0.3); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-top: 1px solid var(--glass-border); }
   .blur-backdrop-heavy { background: rgba(241, 245, 249, 0.6); backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px); border-top: 1px solid var(--glass-border); }
 
@@ -674,16 +511,15 @@
   .hero-container { max-width: 1300px; width: 100%; margin: auto auto; padding: 20px 32px 100px; display: grid; grid-template-columns: 320px 1fr 260px; gap: 24px; align-items: center; min-height: calc(100vh - 120px); position: relative; z-index: 10; }
   .left-col { display: flex; flex-direction: column; gap: 28px; }
   
-  /* NUEVA ANIMACIÓN DE LA TARJETA Y FOTO HERO */
   .glass-profile-card { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 24px; padding: 16px 20px; cursor: pointer; box-shadow: var(--glass-shadow); transition: all 0.4s; overflow: hidden; }
   .card-min-header { display: flex; align-items: center; gap: 14px; transition: all 0.4s ease; }
   
-  .glass-profile-card.active .card-min-header { flex-direction: column; align-items: flex-start; gap: 16px; }
-  .profile-thumb { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.9); transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); flex-shrink: 0; }
   .shift-right { margin-left: 12px; } 
+  .profile-thumb { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.9); transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); flex-shrink: 0; }
   
-  /* Expansión tipo Banner dentro de la tarjeta */
-  .glass-profile-card.active .profile-thumb { width: 100%; height: 160px; border-radius: 16px; border-width: 2px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); margin-left: 0; }
+  /* Círculo central en hover (revertido como pediste) */
+  .glass-profile-card.active .card-min-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .glass-profile-card.active .profile-thumb { width: 85px; height: 85px; border-width: 3px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); margin-left: 0; }
   
   .min-meta { display: flex; flex-direction: column; justify-content: center; }
   .status-line { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
@@ -695,8 +531,10 @@
   .min-title { font-size: 11.5px; font-weight: 700; opacity: 0.65; }
   .card-expand-content { max-height: 0; opacity: 0; transition: all 0.5s; overflow: hidden; }
   .glass-profile-card.active .card-expand-content { max-height: 600px; opacity: 1; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.4); }
-  .expand-bio { font-size: 15px; font-weight: 500; line-height: 1.55; margin-bottom: 22px; }
+  .expand-bio { font-size: 15px; font-weight: 500; line-height: 1.55; margin-bottom: 16px; }
   .expand-bio strong { font-weight: 900; color: #000; }
+  
+  .skills-title { font-size: 11px; font-weight: 800; color: var(--navy-dark); text-transform: uppercase; margin-bottom: 8px; opacity: 0.8; }
   .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
   .skills-grid span { font-size: 10.5px; font-weight: 800; background: rgba(255, 255, 255, 0.75); padding: 8px 10px; border-radius: 6px; text-align: center; white-space: nowrap; }
   .skills-grid .wide-skill { grid-column: span 2; }
@@ -721,7 +559,7 @@
   .quick-cases-list strong { font-weight: 800; color: #ffffff;}
   .quick-cases-list span { font-size: 11px; color: #cbd5e1; margin-top: 2px;}
 
-  /* MARQUEE (BANDA DE LOGOS) */
+  /* MARQUEE */
   .marquee-section { width: 100%; background: #ffffff; padding: 30px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); z-index: 5; position: relative; overflow: hidden; }
   .marquee-container { width: 100%; overflow: hidden; display: flex; align-items: center; }
   .marquee-track { display: flex; gap: 80px; align-items: center; animation: scroll-marquee 25s linear infinite; white-space: nowrap; }
@@ -756,23 +594,11 @@
   .bio-intro strong { font-weight: 800; }
   
   .stats-grid-about { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-  
-  /* EFECTO TORNASOL ANIMADO PARA LOS NÚMEROS */
-  .iridescent-text { 
-    font-size: 2.5rem; font-weight: 900; margin-bottom: 4px;
-    background: linear-gradient(90deg, #9b51e0, #ff7e5f, #00c6ff, #9b51e0);
-    background-size: 300% 100%;
-    animation: iridescence 5s ease infinite;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+  .iridescent-text { font-size: 2.5rem; font-weight: 900; margin-bottom: 4px; background: linear-gradient(90deg, #9b51e0, #ff7e5f, #00c6ff, #9b51e0); background-size: 300% 100%; animation: iridescence 5s ease infinite; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
   @keyframes iridescence { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
   .stat-item p { font-size: 15px; font-weight: 600; color: var(--text-muted); line-height: 1.3; }
 
-  /* PROYECTOS (Centrando la última fila) */
-  .projects-section { width: 100%; position: relative; padding: 60px 24px 140px; display: flex; justify-content: center; z-index: 5; } 
-  .projects-container { max-width: 1140px; width: 100%; display: flex; flex-direction: column; align-items: center; } 
-  
+  /* PROYECTOS */
   .projects-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; width: 100%; } 
   .project-card { flex: 0 1 calc(33.333% - 20px); max-width: 360px; min-width: 300px; background: var(--bg-soft); backdrop-filter: blur(12px); border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; } 
   .project-card:hover { transform: translateY(-6px); box-shadow: 0 20px 30px rgba(0,0,0,0.08); } 
@@ -798,30 +624,21 @@
   .service-block.open .service-block-body { max-height: 200px; opacity: 1; margin-top: 14px; }
   .service-block-body p { font-size: 1.05rem; line-height: 1.6; color: var(--text-muted); font-weight: 500; }
 
-  /* CONTACTO (Dos columnas diferenciadas) */
+  /* CONTACTO (Efecto Glass Total) */
   .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0; }
-  
-  /* Columna Izquierda con color pastel (Warm) */
-  .pastel-bg { background: rgba(254, 240, 138, 0.3); border-right: 1px solid var(--border-color); }
-  .contact-left { padding: 50px; }
-  
-  /* Título de Contacto con Café Animado Más Grande */
+  .contact-left { padding: 50px; background: rgba(255, 255, 255, 0.2); border-right: 1px solid var(--border-color); }
   .coffee-title { display: flex; align-items: center; gap: 12px; font-size: 2.4rem; font-weight: 900; margin-bottom: 16px; color: var(--navy-dark); letter-spacing: -0.02em; }
   .coffee-cup-svg { color: #8B5A2B; flex-shrink: 0;}
   .steam { animation: rise 2s infinite ease-in-out; opacity: 0; }
-  .steam-1 { animation-delay: 0s; }
-  .steam-2 { animation-delay: 0.5s; }
-  .steam-3 { animation-delay: 1s; }
+  .steam-1 { animation-delay: 0s; } .steam-2 { animation-delay: 0.5s; } .steam-3 { animation-delay: 1s; }
   @keyframes rise { 0% { transform: translateY(0); opacity: 0.8; } 100% { transform: translateY(-6px); opacity: 0; } }
 
   .contact-left p { font-size: 1.1rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 30px; font-weight: 500; }
   .contact-methods { display: flex; flex-direction: column; gap: 14px; }
-  
   .method-card { background: white; padding: 14px 20px; border-radius: 12px; text-decoration: none; color: var(--navy-dark); font-weight: 800; display: flex; align-items: center; gap: 12px; border: 1px solid var(--border-color); transition: all 0.3s; }
   .method-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
   .method-card svg { color: var(--navy-dark); }
   
-  /* Columna Derecha de formulario con Glass puro */
   .glass-panel { background: rgba(255, 255, 255, 0.4); }
   .contact-right { padding: 50px; }
   .contact-form { display: flex; flex-direction: column; gap: 20px; }
@@ -834,17 +651,21 @@
 
   /* FOOTER */
   .site-footer { text-align: center; padding: 40px 20px 100px; color: var(--navy-dark); font-size: 0.95rem; font-weight: 600; position: relative; z-index: 5; }
+  .footer-link { color: inherit; text-decoration: underline; margin-left: 8px; font-weight: 800; }
 
-  /* MODALES */
-  .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(8px); display: none; justify-content: center; align-items: center; z-index: 10000; padding: 20px; } 
-  .modal-overlay.active { display: flex; } 
-  .modal-window { background: white; width: 100%; max-width: 820px; max-height: 85vh; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 25px 50px rgba(0,0,0,0.25); border: 1px solid var(--border-color); } 
+  /* MODALES ANIMADOS */
+  .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(8px); display: flex; justify-content: center; align-items: center; z-index: 10000; padding: 20px; opacity: 0; visibility: hidden; transition: all 0.3s ease; } 
+  .modal-overlay.active { opacity: 1; visibility: visible; } 
+  .modal-window { background: white; width: 100%; max-width: 820px; max-height: 85vh; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 25px 50px rgba(0,0,0,0.25); border: 1px solid var(--border-color); transform: translateY(30px) scale(0.95); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); } 
+  .modal-overlay.active .modal-window { transform: translateY(0) scale(1); }
   .modal-mac-bar { background: #f1f5f9; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); } 
   .modal-search-bar { background: white; padding: 6px 16px; border-radius: 20px; font-size: 12px; color: var(--text-muted); font-weight: 500; border: 1px solid var(--border-color); flex-grow: 1; margin: 0 20px; text-align: center; } 
   .close-btn-text { background: none; border: none; font-size: 13px; font-weight: 800; color: var(--navy-dark); cursor: pointer; } 
   .modal-content-scroll { overflow-y: auto; padding: 30px; } 
   .modal-hero-banner img { width: 100%; max-height: 320px; object-fit: cover; border-radius: 12px; margin-bottom: 24px; border: 1px solid rgba(0,0,0,0.05); } 
   .modal-title-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; } 
+  .title-with-logo { display: flex; align-items: center; gap: 12px; }
+  .modal-company-logo { height: 32px; width: auto; border-radius: 6px; }
   .modal-title-row h2 { font-size: 24px; margin: 0; font-weight: 900; color: var(--navy-dark); } 
   .preview-link { background: var(--pastel-yellow); color: var(--navy-dark); padding: 8px 18px; border-radius: 30px; text-decoration: none; font-size: 12px; font-weight: 800; } 
   .modal-description { font-size: 15px; line-height: 1.6; color: var(--text-muted); margin-bottom: 28px; font-weight: 500; } 
@@ -888,5 +709,6 @@
     .modal-content-scroll { padding: 20px; }
     .marquee-track { gap: 40px; }
     .project-card { flex: 1 1 100%; max-width: 100%; }
+    .modal-title-row h2 { font-size: 20px; }
   }
 </style>
