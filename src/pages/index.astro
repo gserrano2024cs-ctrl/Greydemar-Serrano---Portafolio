@@ -1,5 +1,5 @@
 ---
-// Greydemar Serrano - Portafolio Completo Final + Bento Galleries
+// Greydemar Serrano - Portafolio Completo Final + Traducción Total + Links
 ---
 
 <!DOCTYPE html>
@@ -68,7 +68,7 @@
             <div class="skills-grid">
               <span>Astro</span><span>GitHub</span><span>HTML5</span><span>CSS3</span>
               <span>GA4</span><span>Salesforce</span><span>Zoho CRM</span><span>Mailchimp</span>
-              <span class="wide-skill">Creación de Contenido</span>
+              <span class="wide-skill" data-es="Creación de Contenido" data-en="Content Creation">Creación de Contenido</span>
             </div>
           </div>
         </div>
@@ -79,7 +79,7 @@
         <h1 data-es="ESTRATEGIA QUE UNE MARKETING, VENTAS Y WEB" data-en="STRATEGY BRIDGING MARKETING, SALES & WEB">ESTRATEGIA QUE UNE MARKETING, VENTAS Y WEB</h1>
         <span class="floating-pill pill-pink">Growth Marketing</span>
         <span class="floating-pill pill-green">Project Manager</span>
-        <span class="floating-pill pill-yellow">Visual Content</span>
+        <span class="floating-pill pill-yellow" data-es="Contenido Visual" data-en="Visual Content">Contenido Visual</span>
       </div>
 
       <div class="glass-cases-card" onclick="this.classList.toggle('active')">
@@ -89,17 +89,17 @@
         </div>
         <div class="cases-expand-content">
           <ul class="quick-cases-list">
-            <li><a href="#projects"><strong>YP Realty</strong><span>Growth +604%</span></a></li>
-            <li><a href="#projects"><strong>Eurobuilding</strong><span>Comunicaciones</span></a></li>
-            <li><a href="#projects"><strong>Dislocal</strong><span>Project Coordinator</span></a></li>
-            <li><a href="#projects"><strong>Impaktemos</strong><span>Coordinación Operativa</span></a></li>
-            <li><a href="#projects"><strong>Editorial PanHouse</strong><span>Comunicaciones Internas</span></a></li>
-            <li><a href="#projects"><strong>Freelance</strong><span>Diseño & Web</span></a></li>
+            <!-- Scroll + Open Modal Dinámico -->
+            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-yprealty'), 400);"><strong>YP Realty</strong><span data-es="Growth +604%" data-en="Growth +604%">Growth +604%</span></a></li>
+            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-eurobuilding'), 400);"><strong>Eurobuilding</strong><span data-es="Comunicaciones & Ventas" data-en="Comms & Sales">Comunicaciones & Ventas</span></a></li>
+            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-dislocal'), 400);"><strong>Dislocal</strong><span data-es="Project Coordinator" data-en="Project Coordinator">Project Coordinator</span></a></li>
+            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-impaktemos'), 400);"><strong>Impaktemos</strong><span data-es="Coordinación Operativa" data-en="Operational Coordination">Coordinación Operativa</span></a></li>
+            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-panhouse'), 400);"><strong>Editorial PanHouse</strong><span data-es="Comunicaciones Internas" data-en="Internal Comms">Comunicaciones Internas</span></a></li>
+            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-freelance'), 400);"><strong>Freelance</strong><span data-es="Diseño & Web" data-en="Design & Web">Diseño & Web</span></a></li>
           </ul>
         </div>
       </div>
 
-      <!-- FRASE GANCHO EN LA ESQUINA INFERIOR IZQUIERDA -->
       <div class="hero-quote-corner">
         <span data-es="- Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar." data-en="- Invoicing is no accident. It depends on how they see you, how you connect, and how easy you make it to buy.">
           - Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar.
@@ -108,7 +108,7 @@
     </main>
   </section>
 
-  <!-- 1.5 LOGO MARQUEE INFINITO -->
+  <!-- 1.5 LOGO MARQUEE -->
   <section class="marquee-section fade-in-section delay-2">
     <div class="marquee-container">
       <div class="marquee-track">
@@ -120,7 +120,7 @@
         <img src="/logo yprealty.png" alt="YP Realty">
         <img src="/logo eurobuilding.png" alt="Eurobuilding Hotels">
         <img src="/logo panhouse.png" alt="PanHouse">
-        <!-- Duplicados Bucle -->
+        <!-- Duplicados -->
         <img src="/logo plano creativo.png" alt="Plano Creativo">
         <img src="/logo dislocal.png" alt="Dislocal">
         <img src="/logo plano mariano moreno.png" alt="Instituto Superior Mariano Moreno">
@@ -187,7 +187,7 @@
           <div class="card-body">
             <img src="/portada-yprealty.png" alt="YP Realty" class="card-img" style="object-position: top center;" />
             <h3>YP Realty</h3>
-            <p class="card-company">Growth +604%</p>
+            <p class="card-company" data-es="Growth +604%" data-en="Growth +604%">Growth +604%</p>
           </div>
         </div>
         
@@ -199,7 +199,7 @@
           <div class="card-body">
             <img src="/portada-eurobuilding.png" alt="Eurobuilding" class="card-img" />
             <h3>Eurobuilding</h3>
-            <p class="card-company">Business Center</p>
+            <p class="card-company" data-es="Comunicaciones & Ventas" data-en="Comms & Sales">Comunicaciones & Ventas</p>
           </div>
         </div>
         
@@ -211,7 +211,7 @@
           <div class="card-body">
             <img src="/portada-dislocal.png" alt="Dislocal" class="card-img" />
             <h3>Dislocal</h3>
-            <p class="card-company">Coordinación Logística</p>
+            <p class="card-company" data-es="Coordinación Logística" data-en="Logistics Coordination">Coordinación Logística</p>
           </div>
         </div>
         
@@ -223,7 +223,7 @@
           <div class="card-body">
             <img src="/portada-impaktemos.png" alt="Impaktemos" class="card-img" />
             <h3>Impaktemos</h3>
-            <p class="card-company">Logística & Plataformas</p>
+            <p class="card-company" data-es="Logística & Plataformas" data-en="Logistics & Platforms">Logística & Plataformas</p>
           </div>
         </div>
         
@@ -235,7 +235,7 @@
           <div class="card-body">
             <img src="/portada-panhouse.png" alt="Editorial PanHouse" class="card-img" />
             <h3>Editorial PanHouse</h3>
-            <p class="card-company">Comunicaciones Internas</p>
+            <p class="card-company" data-es="Comunicaciones Internas" data-en="Internal Comms">Comunicaciones Internas</p>
           </div>
         </div>
 
@@ -246,15 +246,15 @@
           </div>
           <div class="card-body">
             <img src="/portada freelance.png" alt="Freelance" class="card-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlMmU4ZjAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZmlsbD0iIzk0YTNiOCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5EaXNlw7FvIHkgV2ViPC90ZXh0Pjwvc3ZnPg=='" />
-            <h3>Freelance</h3>
-            <p class="card-company">Diseño & Web</p>
+            <h3 data-es="Freelance" data-en="Freelance">Freelance</h3>
+            <p class="card-company" data-es="Diseño & Web" data-en="Design & Web">Diseño & Web</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4. SERVICIOS (COLORES PASTEL/VIVOS CON TRANSPARENCIA) -->
+  <!-- 4. SERVICIOS -->
   <section id="services" class="services-section fade-in-section delay-5">
     <div class="services-container">
       <div class="sticky-note">
@@ -267,36 +267,31 @@
       </div>
 
       <div class="services-grid-blocks">
-        <!-- Azul -->
         <div class="service-block service-toggle" style="background: rgba(59, 130, 246, 0.08); border-color: rgba(59, 130, 246, 0.2);" onclick="this.classList.toggle('open')">
           <div class="service-block-header"><h3 data-es="Social Media Manager" data-en="Social Media Manager">Social Media Manager</h3><span class="icon-plus">+</span></div>
-          <div class="service-block-body"><p data-es="Me encargo de cómo te ve el mundo. Planificamos juntos lo que subes, estructuramos tu mensaje y construimos una presencia digital que tu audiencia no pase por alto.">Me encargo de cómo te ve el mundo. Planificamos juntos lo que subes, estructuramos tu mensaje y construimos una presencia digital que tu audiencia no pase por alto.</p></div>
+          <div class="service-block-body"><p data-es="Me encargo de cómo te ve el mundo. Planificamos juntos lo que subes, estructuramos tu mensaje y construimos una presencia digital que tu audiencia no pase por alto." data-en="I take care of how the world sees you. We plan what you upload, structure your message, and build a digital presence your audience cannot ignore.">Me encargo de cómo te ve el mundo. Planificamos juntos lo que subes, estructuramos tu mensaje y construimos una presencia digital que tu audiencia no pase por alto.</p></div>
         </div>
-        <!-- Púrpura -->
         <div class="service-block service-toggle" style="background: rgba(168, 85, 247, 0.08); border-color: rgba(168, 85, 247, 0.2);" onclick="this.classList.toggle('open')">
           <div class="service-block-header"><h3 data-es="Edición de Contenido Visual" data-en="Visual Content Editing">Edición de Contenido Visual</h3><span class="icon-plus">+</span></div>
-          <div class="service-block-body"><p data-es="Hagamos que se queden viendo. Tomo tus ideas y las convierto en videos dinámicos, aplicando ganchos visuales y cortes estratégicos para retener la atención al máximo.">Hagamos que se queden viendo. Tomo tus ideas y las convierto en videos dinámicos, aplicando ganchos visuales y cortes estratégicos para retener la atención al máximo.</p></div>
+          <div class="service-block-body"><p data-es="Hagamos que se queden viendo. Tomo tus ideas y las convierto en videos dinámicos, aplicando ganchos visuales y cortes estratégicos para retener la atención al máximo." data-en="Let's make them keep watching. I turn your ideas into dynamic videos, applying visual hooks and strategic cuts to maximize attention retention.">Hagamos que se queden viendo. Tomo tus ideas y las convierto en videos dinámicos, aplicando ganchos visuales y cortes estratégicos para retener la atención al máximo.</p></div>
         </div>
-        <!-- Verde -->
         <div class="service-block service-toggle" style="background: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.2);" onclick="this.classList.toggle('open')">
           <div class="service-block-header"><h3 data-es="Landing Pages & Websites" data-en="Landing Pages & Websites">Landing Pages & Websites</h3><span class="icon-plus">+</span></div>
-          <div class="service-block-body"><p data-es="Tu casa digital. Diseño y construyo páginas web limpias, directas y rápidas pensadas para que el cliente haga clic donde queremos.">Tu casa digital. Diseño y construyo páginas web limpias, directas y rápidas pensadas para que el cliente haga clic donde queremos.</p></div>
+          <div class="service-block-body"><p data-es="Tu casa digital. Diseño y construyo páginas web limpias, directas y rápidas pensadas para que el cliente haga clic donde queremos." data-en="Your digital home. I design and build clean, direct, and fast websites designed for the client to click exactly where we want.">Tu casa digital. Diseño y construyo páginas web limpias, directas y rápidas pensadas para que el cliente haga clic donde queremos.</p></div>
         </div>
-        <!-- Naranja -->
         <div class="service-block service-toggle" style="background: rgba(245, 158, 11, 0.08); border-color: rgba(245, 158, 11, 0.2);" onclick="this.classList.toggle('open')">
           <div class="service-block-header"><h3 data-es="Ventas, CRM & Prospección" data-en="Sales, CRM & Prospecting">Ventas, CRM & Prospección</h3><span class="icon-plus">+</span></div>
-          <div class="service-block-body"><p data-es="No dejamos dinero sobre la mesa. Superviso y organizo la estrategia de cierre, gestionando los prospectos para eliminar la fricción.">No dejamos dinero sobre la mesa. Superviso y organizo la estrategia de cierre, gestionando los prospectos para eliminar la fricción.</p></div>
+          <div class="service-block-body"><p data-es="No dejamos dinero sobre la mesa. Superviso y organizo la estrategia de cierre, gestionando los prospectos para eliminar la fricción." data-en="We don't leave money on the table. I supervise and organize the closing strategy, managing prospects to eliminate friction.">No dejamos dinero sobre la mesa. Superviso y organizo la estrategia de cierre, gestionando los prospectos para eliminar la fricción.</p></div>
         </div>
-        <!-- Gris (Project Management) -->
         <div class="service-block service-toggle" style="background: rgba(100, 116, 139, 0.08); border-color: rgba(100, 116, 139, 0.2);" onclick="this.classList.toggle('open')">
           <div class="service-block-header"><h3 data-es="Project Management" data-en="Project Management">Project Management</h3><span class="icon-plus">+</span></div>
-          <div class="service-block-body"><p data-es="Te quito el dolor de cabeza. Yo me encargo de organizar, dividir tareas, supervisar equipos y asegurar que todo se ejecute sin estrés para ti.">Te quito el dolor de cabeza. Yo me encargo de organizar, dividir tareas, supervisar equipos y asegurar que todo se ejecute sin estrés para ti.</p></div>
+          <div class="service-block-body"><p data-es="Te quito el dolor de cabeza. Yo me encargo de organizar, dividir tareas, supervisar equipos y asegurar que todo se ejecute sin estrés para ti." data-en="I take the headache away. I organize, divide tasks, supervise teams, and ensure everything is executed stress-free for you.">Te quito el dolor de cabeza. Yo me encargo de organizar, dividir tareas, supervisar equipos y asegurar que todo se ejecute sin estrés para ti.</p></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 5. CONTACTO (FONDO BLANCO / SIN GLASS) -->
+  <!-- 5. CONTACTO -->
   <section id="contact" class="contact-section fade-in-section delay-6">
     <div class="contact-container mac-window">
       <div class="contact-left light-gray-bg">
@@ -327,7 +322,7 @@
           <div class="input-group"><label data-es="Mensaje" data-en="Message">Mensaje</label><textarea id="wa-message" rows="4" required placeholder="Hola Grey, me gustaría que trabajáramos en..." data-es-placeholder="Hola Grey, me gustaría que trabajáramos en..."></textarea></div>
           
           <div class="privacy-disclaimer">
-            <p data-es="Tus datos serán tratados por Greydemar Serrano con la finalidad de responder tu consulta. Puedes ejercer tus derechos de acceso, rectificación, cancelación y oposición en greydemar06@gmail.com. <a href='/terminos' target='_blank' class='privacy-link'>Más información</a>" data-en="Your data will be processed by Greydemar Serrano to answer your query. You can exercise your rights of access, rectification, cancellation, and opposition at greydemar06@gmail.com. <a href='/terminos' target='_blank' class='privacy-link'>More info</a>">
+            <p data-es="Tus datos serán tratados por Greydemar Serrano con la finalidad de responder tu consulta. No se almacenan en bases de datos. <a href='/terminos' target='_blank' class='privacy-link'>Más información</a>" data-en="Your data will be processed by Greydemar Serrano to answer your query. Data is not stored in databases. <a href='/terminos' target='_blank' class='privacy-link'>More info</a>">
               Tus datos serán tratados por Greydemar Serrano con la finalidad de responder tu consulta. Puedes ejercer tus derechos de acceso, rectificación, cancelación y oposición en greydemar06@gmail.com. <a href="/terminos" target="_blank" class="privacy-link">Más información</a>
             </p>
           </div>
@@ -345,11 +340,11 @@
 
   <!-- FOOTER NEGRO -->
   <footer class="site-footer black-footer">
-    <p>© 2026 Greydemar Serrano. Todos los derechos reservados.</p>
+    <p data-es="© 2026 Greydemar Serrano. Todos los derechos reservados." data-en="© 2026 Greydemar Serrano. All rights reserved.">© 2026 Greydemar Serrano. Todos los derechos reservados.</p>
   </footer>
 
   <!-- ========================================== -->
-  <!-- MODALES DE PROYECTOS CON GALERÍA BENTO -->
+  <!-- MODALES DE PROYECTOS CON BENTO GALLERIES -->
   <!-- ========================================== -->
   
   <div id="modal-yprealty" class="modal-overlay" onclick="closeModalOutside(event, 'modal-yprealty')">
@@ -357,24 +352,24 @@
       <div class="modal-mac-bar">
         <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
         <div class="modal-search-bar">yprealty.com</div>
-        <button class="close-btn-text" onclick="closeModal('modal-yprealty')">Cerrar</button>
+        <button class="close-btn-text" onclick="closeModal('modal-yprealty')" data-es="Cerrar" data-en="Close">Cerrar</button>
       </div>
       <div class="modal-content-scroll">
         <div class="modal-hero-banner"><img src="/portada-yprealty.png" alt="YP Realty Banner" style="object-position: top center;" /></div>
         <div class="modal-title-row">
           <div class="title-text-group">
+            <span class="project-counter" data-es="Proyecto 01 / 05" data-en="Project 01 / 05">Proyecto 01 / 05</span>
             <h2>YP Realty</h2>
           </div>
         </div>
-        <p class="modal-description">Lidero la estrategia de contenido y edición de video orgánico para el sector inmobiliario en Puerto Rico. Produzco formatos de alto impacto, redacto guiones persuasivos y aplico SEO para maximizar la conversión. Gracias al análisis de datos, logramos picos de 292% en alcance, 151% en interacción y un crecimiento sólido del +604%.</p>
+        <p class="modal-description" data-es="Lidero la estrategia de contenido y edición de video orgánico para el sector inmobiliario en Puerto Rico. Produzco formatos de alto impacto, redacto guiones persuasivos y aplico SEO para maximizar la conversión. Gracias al análisis de datos, logramos picos de 292% en alcance, 151% en interacción y un crecimiento sólido del +604%." data-en="I lead the content strategy and organic video editing for the real estate sector in Puerto Rico. I produce high-impact formats, write persuasive scripts, and apply SEO to maximize conversion. Thanks to data analysis, we achieved peaks of 292% in reach, 151% in engagement, and a solid growth of +604%.">Lidero la estrategia de contenido y edición de video orgánico para el sector inmobiliario en Puerto Rico. Produzco formatos de alto impacto, redacto guiones persuasivos y aplico SEO para maximizar la conversión. Gracias al análisis de datos, logramos picos de 292% en alcance, 151% en interacción y un crecimiento sólido del +604%.</p>
         <div class="metadata-grid">
-          <div><span class="meta-label">Rol</span><span class="meta-val">Social Media Mgr. & Video Editor</span></div>
-          <div><span class="meta-label">Herramientas</span><span class="meta-val">Meta Business, SEO, CapCut, Canva</span></div>
-          <div><span class="meta-label">Inicio</span><span class="meta-val">2026</span></div>
+          <div><span class="meta-label" data-es="Rol" data-en="Role">Rol</span><span class="meta-val">Social Media Mgr. & Video Editor</span></div>
+          <div><span class="meta-label" data-es="Herramientas" data-en="Tools">Herramientas</span><span class="meta-val">Meta Business, SEO, CapCut, Canva</span></div>
+          <div><span class="meta-label" data-es="Inicio" data-en="Start">Inicio</span><span class="meta-val">2026</span></div>
         </div>
-        <!-- Galería Bento -->
         <div class="modal-gallery-container">
-          <h3>Galería del Proyecto</h3>
+          <h3 data-es="Galería del Proyecto" data-en="Project Gallery">Galería del Proyecto</h3>
           <div class="bento-gallery">
             <img src="/metricas.png" alt="Métricas YP Realty" class="bento-item" onerror="this.style.display='none'">
           </div>
@@ -388,24 +383,24 @@
       <div class="modal-mac-bar">
         <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
         <div class="modal-search-bar">eurobuilding.com.ve</div>
-        <button class="close-btn-text" onclick="closeModal('modal-eurobuilding')">Cerrar</button>
+        <button class="close-btn-text" onclick="closeModal('modal-eurobuilding')" data-es="Cerrar" data-en="Close">Cerrar</button>
       </div>
       <div class="modal-content-scroll">
         <div class="modal-hero-banner"><img src="/portada-eurobuilding.png" alt="Eurobuilding Banner" /></div>
         <div class="modal-title-row">
           <div class="title-text-group">
+            <span class="project-counter" data-es="Proyecto 02 / 05" data-en="Project 02 / 05">Proyecto 02 / 05</span>
             <h2>Eurobuilding</h2>
           </div>
         </div>
-        <p class="modal-description">Lideré el Business Center, gestionando el portafolio corporativo (B2B) y coordinando la logística bajo estrictos estándares 5 estrellas. Centralicé las operaciones entre 7 departamentos críticos, actuando como mediadora estratégica y alcanzando una tasa de resolución del 100% en incidencias operativas.</p>
+        <p class="modal-description" data-es="En el área del Business Center gestioné el portafolio corporativo (B2B), reservas y ventas. Coordiné la logística bajo estrictos estándares 5 estrellas y manejé las comunicaciones internas, centralizando las operaciones entre 7 departamentos críticos para alcanzar una tasa de resolución del 100% en incidencias." data-en="In the Business Center area, I managed the corporate portfolio (B2B), reservations, and sales. I coordinated logistics under strict 5-star standards and handled internal communications, centralizing operations across 7 critical departments to achieve a 100% resolution rate for incidents.">En el área del Business Center gestioné el portafolio corporativo (B2B), reservas y ventas. Coordiné la logística bajo estrictos estándares 5 estrellas y manejé las comunicaciones internas, centralizando las operaciones entre 7 departamentos críticos para alcanzar una tasa de resolución del 100% en incidencias.</p>
         <div class="metadata-grid">
-          <div><span class="meta-label">Rol</span><span class="meta-val">Coordinadora B2B & Business Center</span></div>
-          <div><span class="meta-label">Herramientas</span><span class="meta-val">Opera PMS, Logística, CRM B2B</span></div>
-          <div><span class="meta-label">Inicio</span><span class="meta-val">2022</span></div>
+          <div><span class="meta-label" data-es="Rol" data-en="Role">Rol</span><span class="meta-val" data-es="Coordinadora B2B & Business Center" data-en="B2B & Business Center Coordinator">Coordinadora B2B & Business Center</span></div>
+          <div><span class="meta-label" data-es="Herramientas" data-en="Tools">Herramientas</span><span class="meta-val">Opera PMS, Logística, CRM B2B</span></div>
+          <div><span class="meta-label" data-es="Inicio" data-en="Start">Inicio</span><span class="meta-val">2022</span></div>
         </div>
-        <!-- Galería Bento -->
         <div class="modal-gallery-container">
-          <h3>Galería del Proyecto</h3>
+          <h3 data-es="Galería del Proyecto" data-en="Project Gallery">Galería del Proyecto</h3>
           <div class="bento-gallery">
             <video controls playsinline loop muted class="bento-video">
               <source src="/video euro.webm" type="video/webm" />
@@ -421,25 +416,25 @@
       <div class="modal-mac-bar">
         <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
         <div class="modal-search-bar">dislocal.com</div>
-        <button class="close-btn-text" onclick="closeModal('modal-dislocal')">Cerrar</button>
+        <button class="close-btn-text" onclick="closeModal('modal-dislocal')" data-es="Cerrar" data-en="Close">Cerrar</button>
       </div>
       <div class="modal-content-scroll">
         <div class="modal-hero-banner"><img src="/portada-dislocal.png" alt="Dislocal Banner" /></div>
         <div class="modal-title-row">
           <div class="title-text-group">
+            <span class="project-counter" data-es="Proyecto 03 / 05" data-en="Project 03 / 05">Proyecto 03 / 05</span>
             <h2>Dislocal</h2>
           </div>
-          <a href="https://www.dislocal.org/" target="_blank" class="simple-modal-link">🌐 Visitar Sitio Web</a>
+          <a href="https://www.dislocal.org/" target="_blank" class="simple-modal-link" data-es="🌐 Visitar Sitio Web" data-en="🌐 Visit Website">🌐 Visitar Sitio Web</a>
         </div>
-        <p class="modal-description">Lideré la planificación y ejecución logística de proyectos de impacto local (Barrio El Calvario). Apliqué metodologías ágiles para alinear cronogramas, recursos y a múltiples equipos internacionales operando en terreno directamente con el equipo de Dislocal.</p>
+        <p class="modal-description" data-es="Lideré la planificación y ejecución logística de proyectos de impacto local (Barrio El Calvario). Apliqué metodologías ágiles para alinear cronogramas, recursos y a múltiples equipos internacionales operando en terreno directamente con el equipo de Dislocal." data-en="I led the planning and logistical execution of local impact projects (Barrio El Calvario). I applied agile methodologies to align schedules, resources, and multiple international teams operating on the ground directly with the Dislocal team.">Lideré la planificación y ejecución logística de proyectos de impacto local (Barrio El Calvario). Apliqué metodologías ágiles para alinear cronogramas, recursos y a múltiples equipos internacionales operando en terreno directamente con el equipo de Dislocal.</p>
         <div class="metadata-grid">
-          <div><span class="meta-label">Rol</span><span class="meta-val">Production Mgr. & Project Coordinator</span></div>
-          <div><span class="meta-label">Herramientas</span><span class="meta-val">Trello, Asana, Metodologías Ágiles</span></div>
-          <div><span class="meta-label">Inicio</span><span class="meta-val">2021</span></div>
+          <div><span class="meta-label" data-es="Rol" data-en="Role">Rol</span><span class="meta-val">Production Mgr. & Project Coordinator</span></div>
+          <div><span class="meta-label" data-es="Herramientas" data-en="Tools">Herramientas</span><span class="meta-val" data-es="Trello, Asana, Metodologías Ágiles" data-en="Trello, Asana, Agile Methodologies">Trello, Asana, Metodologías Ágiles</span></div>
+          <div><span class="meta-label" data-es="Inicio" data-en="Start">Inicio</span><span class="meta-val">2021</span></div>
         </div>
-        <!-- Galería Bento -->
         <div class="modal-gallery-container">
-          <h3>Galería del Proyecto</h3>
+          <h3 data-es="Galería del Proyecto" data-en="Project Gallery">Galería del Proyecto</h3>
           <div class="bento-gallery">
             <img src="/dislocal 1.png" alt="Logística y trabajo de campo" class="bento-item" onerror="this.style.display='none'" />
             <img src="/dislocal 2.png" alt="Organización de eventos Dislocal" class="bento-item" onerror="this.style.display='none'" />
@@ -454,25 +449,25 @@
       <div class="modal-mac-bar">
         <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
         <div class="modal-search-bar">impaktemos.com</div>
-        <button class="close-btn-text" onclick="closeModal('modal-impaktemos')">Cerrar</button>
+        <button class="close-btn-text" onclick="closeModal('modal-impaktemos')" data-es="Cerrar" data-en="Close">Cerrar</button>
       </div>
       <div class="modal-content-scroll">
         <div class="modal-hero-banner"><img src="/portada-impaktemos.png" alt="Impaktemos Banner" /></div>
         <div class="modal-title-row">
           <div class="title-text-group">
+            <span class="project-counter" data-es="Proyecto 04 / 05" data-en="Project 04 / 05">Proyecto 04 / 05</span>
             <h2>Impaktemos</h2>
           </div>
-          <a href="https://www.instagram.com/impaktemos/" target="_blank" class="simple-modal-link">🔗 Ver en Instagram</a>
+          <a href="https://minitas-mission-guide.lovable.app/" target="_blank" class="simple-modal-link" data-es="🌐 Ver Landing Page" data-en="🌐 View Landing Page">🌐 Ver Landing Page</a>
         </div>
-        <p class="modal-description">Dirigí la logística operativa de jornadas de campo y desarrollé activos digitales (Landing Pages) específicos para automatizar la asignación de tareas, organizar el flujo de voluntarios y realizar un monitoreo eficiente de todas las actividades.</p>
+        <p class="modal-description" data-es="Colaboré en el proyecto de Impaktemos llamado plataforma 'Las Minitas'. Junto a la junta coordinadora del proyecto, creé y desarrollé esta landing page para organizar el flujo de voluntarios, asignar tareas y realizar un monitoreo eficiente de las actividades." data-en="I collaborated on the Impaktemos project called the 'Las Minitas' platform. Alongside the project's coordinating board, I created and developed this landing page to organize volunteer flow, assign tasks, and efficiently monitor activities.">Colaboré en el proyecto de Impaktemos llamado plataforma 'Las Minitas'. Junto a la junta coordinadora del proyecto, creé y desarrollé esta landing page para organizar el flujo de voluntarios, asignar tareas y realizar un monitoreo eficiente de las actividades.</p>
         <div class="metadata-grid">
-          <div><span class="meta-label">Rol</span><span class="meta-val">Coordinadora Operativa & Web</span></div>
-          <div><span class="meta-label">Herramientas</span><span class="meta-val">HTML, CSS, Astro, Landing Pages</span></div>
-          <div><span class="meta-label">Inicio</span><span class="meta-val">2023</span></div>
+          <div><span class="meta-label" data-es="Rol" data-en="Role">Rol</span><span class="meta-val" data-es="Coordinadora Operativa & Web" data-en="Operational & Web Coordinator">Coordinadora Operativa & Web</span></div>
+          <div><span class="meta-label" data-es="Herramientas" data-en="Tools">Herramientas</span><span class="meta-val">HTML, CSS, Astro, Landing Pages</span></div>
+          <div><span class="meta-label" data-es="Inicio" data-en="Start">Inicio</span><span class="meta-val">2023</span></div>
         </div>
-        <!-- Galería Bento -->
         <div class="modal-gallery-container">
-          <h3>Galería del Proyecto</h3>
+          <h3 data-es="Galería del Proyecto" data-en="Project Gallery">Galería del Proyecto</h3>
           <div class="bento-gallery">
             <img src="/impaktemos 1.png" alt="Landing page de Impaktemos" class="bento-item" onerror="this.style.display='none'" />
           </div>
@@ -486,20 +481,21 @@
       <div class="modal-mac-bar">
         <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
         <div class="modal-search-bar">editorialpanhouse.com</div>
-        <button class="close-btn-text" onclick="closeModal('modal-panhouse')">Cerrar</button>
+        <button class="close-btn-text" onclick="closeModal('modal-panhouse')" data-es="Cerrar" data-en="Close">Cerrar</button>
       </div>
       <div class="modal-content-scroll">
         <div class="modal-hero-banner"><img src="/portada-panhouse.png" alt="PanHouse Banner" /></div>
         <div class="modal-title-row">
           <div class="title-text-group">
+            <span class="project-counter" data-es="Proyecto 05 / 05" data-en="Project 05 / 05">Proyecto 05 / 05</span>
             <h2>Editorial PanHouse</h2>
           </div>
         </div>
-        <p class="modal-description">Sincronicé las operaciones diarias entre los departamentos de Marketing, Ventas y Relaciones Públicas, garantizando la ejecución de eventos VIP. Diseñé e integré sistemas de automatización con IA que redujeron drásticamente los tiempos de atención y estandarizaron la comunicación corporativa.</p>
+        <p class="modal-description" data-es="Sincronicé las operaciones diarias entre los departamentos de Marketing, Ventas y Relaciones Públicas, garantizando la ejecución de eventos VIP. Diseñé e integré sistemas de automatización con IA que redujeron drásticamente los tiempos de atención y estandarizaron la comunicación corporativa." data-en="I synchronized daily operations between the Marketing, Sales, and Public Relations departments, ensuring the execution of VIP events. I designed and integrated AI automation systems that drastically reduced response times and standardized corporate communication.">Sincronicé las operaciones diarias entre los departamentos de Marketing, Ventas y Relaciones Públicas, garantizando la ejecución de eventos VIP. Diseñé e integré sistemas de automatización con IA que redujeron drásticamente los tiempos de atención y estandarizaron la comunicación corporativa.</p>
         <div class="metadata-grid">
-          <div><span class="meta-label">Rol</span><span class="meta-val">Coord. Comunicaciones Internas</span></div>
-          <div><span class="meta-label">Herramientas</span><span class="meta-val">Meta Business Suite, CRM, Email Marketing</span></div>
-          <div><span class="meta-label">Inicio</span><span class="meta-val">2024</span></div>
+          <div><span class="meta-label" data-es="Rol" data-en="Role">Rol</span><span class="meta-val" data-es="Coord. Comunicaciones Internas" data-en="Internal Comms Coordinator">Coord. Comunicaciones Internas</span></div>
+          <div><span class="meta-label" data-es="Herramientas" data-en="Tools">Herramientas</span><span class="meta-val">Meta Business Suite, CRM, Email Marketing</span></div>
+          <div><span class="meta-label" data-es="Inicio" data-en="Start">Inicio</span><span class="meta-val">2024</span></div>
         </div>
       </div>
     </div>
@@ -510,25 +506,24 @@
       <div class="modal-mac-bar">
         <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
         <div class="modal-search-bar">freelance.projects</div>
-        <button class="close-btn-text" onclick="closeModal('modal-freelance')">Cerrar</button>
+        <button class="close-btn-text" onclick="closeModal('modal-freelance')" data-es="Cerrar" data-en="Close">Cerrar</button>
       </div>
       <div class="modal-content-scroll">
         <div class="modal-hero-banner"><img src="/portada freelance.png" alt="Freelance Banner" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlMmU4ZjAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZmlsbD0iIzk0YTNiOCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5EaXNlw7FvIHkgV2ViPC90ZXh0Pjwvc3ZnPg=='" /></div>
         <div class="modal-title-row">
           <div class="title-text-group">
-            <h2>Proyectos Freelance</h2>
+            <h2 data-es="Proyectos Freelance" data-en="Freelance Projects">Proyectos Freelance</h2>
           </div>
         </div>
-        <p class="modal-description">Diseño y desarrollo de Landing Pages optimizadas para la conversión. Creación de identidad visual y materiales POP adaptados a las necesidades específicas de múltiples clientes y agencias a nivel internacional.</p>
+        <p class="modal-description" data-es="Diseño y desarrollo de Landing Pages optimizadas para la conversión. Creación de identidad visual y materiales POP adaptados a las necesidades específicas de múltiples clientes y agencias a nivel internacional." data-en="Design and development of conversion-optimized Landing Pages. Creation of visual identity and POP materials adapted to the specific needs of multiple international clients and agencies.">Diseño y desarrollo de Landing Pages optimizadas para la conversión. Creación de identidad visual y materiales POP adaptados a las necesidades específicas de múltiples clientes y agencias a nivel internacional.</p>
         <div class="metadata-grid">
-          <div><span class="meta-label">Rol</span><span class="meta-val">Desarrolladora Web & Diseñadora</span></div>
-          <div><span class="meta-label">Herramientas</span><span class="meta-val">Astro, HTML/CSS, Canva Pro, Figma</span></div>
-          <div><span class="meta-label">Inicio</span><span class="meta-val">2026</span></div>
+          <div><span class="meta-label" data-es="Rol" data-en="Role">Rol</span><span class="meta-val" data-es="Desarrolladora Web & Diseñadora" data-en="Web Developer & Designer">Desarrolladora Web & Diseñadora</span></div>
+          <div><span class="meta-label" data-es="Herramientas" data-en="Tools">Herramientas</span><span class="meta-val">Astro, HTML/CSS, Canva Pro, Figma</span></div>
+          <div><span class="meta-label" data-es="Inicio" data-en="Start">Inicio</span><span class="meta-val">2026</span></div>
         </div>
-        <!-- Galería Bento -->
         <div class="modal-gallery-container">
-          <h3>Cliente Destacado: Laura Navarro</h3>
-          <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 12px; font-weight: 500;">Diseño de interfaz de sitio web e identidad de materiales POP corporativos.</p>
+          <h3 data-es="Cliente Destacado: Laura Navarro" data-en="Featured Client: Laura Navarro">Cliente Destacado: Laura Navarro</h3>
+          <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 12px; font-weight: 500;" data-es="Diseño de interfaz de sitio web e identidad de materiales POP corporativos." data-en="Website UI design and corporate POP materials identity.">Diseño de interfaz de sitio web e identidad de materiales POP corporativos.</p>
           <div class="bento-gallery">
             <img src="/freelance.png" alt="Sitio Web de Laura Navarro" class="bento-item" onerror="this.style.display='none'" />
             <img src="/freelance 2.png" alt="Material POP Laura Navarro 1" class="bento-item" onerror="this.style.display='none'" />
@@ -550,14 +545,23 @@
   </nav>
 
   <script is:inline>
-    // Idioma
+    // Idioma con Traducción Total
     function setLanguage(lang) {
       document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
       event.target.classList.add('active');
-      document.querySelectorAll('[data-es]').forEach(el => { el.innerHTML = el.getAttribute(`data-${lang}`); });
-      document.querySelectorAll('[data-tooltip-es]').forEach(el => { el.setAttribute('data-tooltip', el.getAttribute(`data-tooltip-${lang}`)); });
+      
+      document.querySelectorAll('[data-es]').forEach(el => { 
+        el.innerHTML = el.getAttribute(`data-${lang}`); 
+      });
+      
+      document.querySelectorAll('[data-tooltip-es]').forEach(el => { 
+        el.setAttribute('data-tooltip', el.getAttribute(`data-tooltip-${lang}`)); 
+      });
+      
       const msgArea = document.getElementById('wa-message');
-      if(msgArea) { msgArea.placeholder = lang === 'es' ? msgArea.getAttribute('data-es-placeholder') : "Hi Grey, I'd like to work on..."; }
+      if(msgArea) { 
+        msgArea.placeholder = lang === 'es' ? msgArea.getAttribute('data-es-placeholder') : "Hi Grey, I'd like to work on..."; 
+      }
     }
 
     // Funciones Modales
@@ -622,7 +626,6 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--navy-dark); overflow-x: hidden; position: relative; scroll-behavior: smooth; }
 
-  /* Animaciones Carga Inicial */
   .fade-in-section { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
   body.loaded .fade-in-section { opacity: 1; transform: translateY(0); }
   .delay-1 { transition-delay: 0.1s; } .delay-2 { transition-delay: 0.2s; } .delay-3 { transition-delay: 0.3s; }
@@ -652,17 +655,12 @@
   .hero-container { max-width: 1300px; width: 100%; margin: auto auto; padding: 20px 32px 100px; display: grid; grid-template-columns: 320px 1fr 260px; gap: 24px; align-items: center; min-height: calc(100vh - 120px); position: relative; z-index: 10; }
   .left-col { position: relative; display: flex; flex-direction: column; gap: 28px; }
   
-  /* TARJETA HERO (Estructura Original Recuperada con Nombre al Lado) */
   .glass-profile-card { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 24px; padding: 16px 20px; cursor: pointer; box-shadow: var(--glass-shadow); transition: all 0.4s; overflow: hidden; }
   
-  .card-min-header { display: flex; align-items: center; gap: 14px; transition: all 0.4s ease; flex-direction: row !important; }
+  .card-min-header { display: flex; align-items: center; gap: 14px; transition: all 0.4s ease; flex-direction: row; }
   .shift-right { margin-left: 6px; } 
   .profile-thumb { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.9); transition: all 0.3s ease; flex-shrink: 0; cursor: zoom-in; }
   
-  .glass-profile-card.active .card-min-header { flex-direction: row !important; align-items: center; gap: 16px; }
-  .glass-profile-card.active .profile-thumb { width: 64px; height: 64px; border-width: 3px; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.15); margin-left: 0; }
-  
-  /* Zoom al hacer clic en la foto */
   .profile-thumb.zoomed { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(5); z-index: 99999; box-shadow: 0 0 0 100vmax rgba(0,0,0,0.85); cursor: zoom-out; border: none; }
   @media (max-width: 900px) { .profile-thumb.zoomed { transform: translate(-50%, -50%) scale(3.5); } }
 
@@ -717,7 +715,7 @@
 
   /* ABOUT ME & SECTIONS GENERAL */
   .about-section, .projects-section, .services-section, .contact-section { position: relative; width: 100%; padding: 80px 32px; z-index: 5; display: flex; justify-content: center; }
-  .contact-section { padding-bottom: 160px; }
+  .contact-section { padding-bottom: 160px; background-color: #ffffff; }
   .about-container, .projects-container, .services-container, .contact-container { max-width: 900px; width: 100%; display: flex; flex-direction: column; align-items: center; }
   .projects-container { max-width: 1200px; }
 
@@ -752,7 +750,7 @@
   @keyframes iridescence { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
   .stat-item p { font-size: 15px; font-weight: 600; color: var(--text-muted); line-height: 1.3; }
 
-  /* PROYECTOS (AMPLIADOS EN ESCRITORIO) */
+  /* PROYECTOS */
   .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 30px; width: 100%; } 
   .project-card { background: var(--bg-soft); backdrop-filter: blur(12px); border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; } 
   .project-card:hover { transform: translateY(-6px); box-shadow: 0 20px 30px rgba(0,0,0,0.08); } 
@@ -766,7 +764,7 @@
   .card-body h3 { font-size: 18px; margin: 0 0 6px; font-weight: 800; } 
   .card-company { font-size: 13px; color: var(--text-muted); margin: 0; font-weight: 600;}
 
-  /* SERVICIOS CARDS CORPORATIVAS A COLOR */
+  /* SERVICIOS CARDS A COLOR (PASTELES SUAVES) */
   .services-grid-blocks { display: flex; flex-direction: column; gap: 20px; width: 100%; max-width: 800px;}
   .service-block { padding: 20px 30px; border-radius: 16px; backdrop-filter: blur(12px); border-width: 1px; border-style: solid; box-shadow: 0 10px 30px rgba(0,0,0,0.03); cursor: pointer; transition: all 0.3s; overflow: hidden;}
   .service-block:hover { transform: translateY(-3px); }
@@ -778,7 +776,7 @@
   .service-block.open .service-block-body { max-height: 200px; opacity: 1; margin-top: 14px; }
   .service-block-body p { font-size: 1.05rem; line-height: 1.6; color: var(--text-muted); font-weight: 500; }
 
-  /* CONTACTO (FONDO BLANCO / SIN GLASS) */
+  /* CONTACTO (FONDO BLANCO TOTAL) */
   .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0; }
   .light-gray-bg { background: #f8fafc; border-right: 1px solid var(--border-color); }
   .contact-left { padding: 50px; }
@@ -837,6 +835,9 @@
   .modal-title-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; } 
   .title-text-group { display: flex; flex-direction: column; }
   .modal-title-row h2 { font-size: 24px; margin: 0; font-weight: 900; color: var(--navy-dark); } 
+  .simple-modal-link { color: #3b82f6; font-weight: 700; text-decoration: none; font-size: 14px; transition: color 0.3s; }
+  .simple-modal-link:hover { color: #1d4ed8; text-decoration: underline; }
+  
   .modal-description { font-size: 15px; line-height: 1.6; color: var(--text-muted); margin-bottom: 28px; font-weight: 500; } 
   .metadata-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 16px; background: rgba(241, 245, 249, 0.5); padding: 20px; border-radius: 12px; border: 1px solid var(--border-color); margin-bottom: 30px; } 
   .meta-label { font-size: 11px; font-weight: 800; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 4px; } 
@@ -850,7 +851,7 @@
   .bento-item { width: 100%; height: 260px; object-fit: cover; border-radius: 16px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
   .bento-item:hover { transform: translateY(-4px); }
   
-  /* Logica Bento (1, 2 o 3 items) */
+  /* Lógica Bento (1, 2 o 3 items) */
   .bento-item:only-child { grid-column: 1 / -1; height: auto; max-height: 450px; }
   .bento-gallery img:first-child:nth-last-child(3) { grid-column: 1 / -1; height: 350px; }
   .bento-video { grid-column: 1 / -1; width: 100%; height: auto; max-height: 450px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
