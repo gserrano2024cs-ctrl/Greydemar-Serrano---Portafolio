@@ -45,32 +45,37 @@
 
     <main class="hero-container">
       <div class="left-col">
-        <!-- TARJETA DE PERFIL (Vuelve al estado original, empujando contenido al expandir) -->
-        <div class="glass-profile-card" onclick="this.classList.toggle('active')">
-          <div class="card-min-header">
-            <img src="/grey.jpeg" alt="Greydemar Serrano" class="profile-thumb shift-right" />
-            <div class="min-meta">
-              <div class="status-line"><span class="green-dot"></span><span class="status-text" data-es="En línea" data-en="Online">En línea</span></div>
-              <div class="name-group">
-                <h2 class="min-name">GREYDEMAR SERRANO</h2>
-                <span class="min-title" data-es="Especialista en Marketing Digital y Conversión Web" data-en="Digital Marketing & Web Conversion Specialist">Especialista en Marketing Digital y Conversión Web</span>
+        
+        <!-- TARJETA DE PERFIL (Más ancha al abrir, nombre al lado, imagen ampliable) -->
+        <div class="profile-wrapper">
+          <!-- El onclick togglea 'active' solo si no se clickeó la imagen -->
+          <div class="glass-profile-card" id="heroProfileCard">
+            <div class="card-min-header">
+              <img src="/grey.jpeg" alt="Greydemar Serrano" class="profile-thumb shift-right" id="heroProfileImg" title="Ver a detalle" />
+              <div class="min-meta">
+                <div class="status-line"><span class="green-dot"></span><span class="status-text" data-es="En línea" data-en="Online">En línea</span></div>
+                <div class="name-group">
+                  <h2 class="min-name">GREYDEMAR SERRANO</h2>
+                  <span class="min-title" data-es="Especialista en Marketing Digital y Conversión Web" data-en="Digital Marketing & Web Conversion Specialist">Especialista en Marketing Digital y Conversión Web</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card-expand-content">
+              <p class="expand-bio" data-es="<strong>Estrategia que convierte atención en facturación.</strong><br><br>No hago ruido, <strong>construyo ecosistemas rentables.</strong> Conecto contenido de alto impacto con sistemas de cierre comercial y plataformas ultrarrápidas.<br><br><strong>Mi objetivo:</strong> eliminar la fricción, posicionar tu autoridad y multiplicar tus conversiones." data-en="<strong>Strategy that turns attention into revenue.</strong><br><br>I don't just make noise, <strong>I build profitable ecosystems.</strong> I connect high-impact content with commercial closing systems and ultra-fast platforms.<br><br><strong>My goal:</strong> eliminate friction, position your authority, and multiply your conversions.">
+                <strong>Estrategia que convierte atención en facturación.</strong><br><br>No hago ruido, <strong>construyo ecosistemas rentables.</strong> Conecto contenido de alto impacto con sistemas de cierre comercial y plataformas ultrarrápidas.<br><br><strong>Mi objetivo:</strong> eliminar la fricción, posicionar tu autoridad y multiplicar tus conversiones.
+              </p>
+              
+              <p class="skills-title" data-es="Skills:" data-en="Skills:">Skills:</p>
+              <div class="skills-grid">
+                <span>Astro</span><span>GitHub</span><span>HTML5</span><span>CSS3</span>
+                <span>GA4</span><span>Salesforce</span><span>Zoho CRM</span><span>Mailchimp</span>
+                <span class="wide-skill">Creación de Contenido</span>
               </div>
             </div>
           </div>
-          
-          <div class="card-expand-content">
-            <p class="expand-bio" data-es="<strong>Estrategia que convierte atención en facturación.</strong><br><br>No hago ruido, <strong>construyo ecosistemas rentables.</strong> Conecto contenido de alto impacto con sistemas de cierre comercial y plataformas ultrarrápidas.<br><br><strong>Mi objetivo:</strong> eliminar la fricción, posicionar tu autoridad y multiplicar tus conversiones." data-en="<strong>Strategy that turns attention into revenue.</strong><br><br>I don't just make noise, <strong>I build profitable ecosystems.</strong> I connect high-impact content with commercial closing systems and ultra-fast platforms.<br><br><strong>My goal:</strong> eliminate friction, position your authority, and multiply your conversions.">
-              <strong>Estrategia que convierte atención en facturación.</strong><br><br>No hago ruido, <strong>construyo ecosistemas rentables.</strong> Conecto contenido de alto impacto con sistemas de cierre comercial y plataformas ultrarrápidas.<br><br><strong>Mi objetivo:</strong> eliminar la fricción, posicionar tu autoridad y multiplicar tus conversiones.
-            </p>
-            
-            <p class="skills-title" data-es="Skills:" data-en="Skills:">Skills:</p>
-            <div class="skills-grid">
-              <span>Astro</span><span>GitHub</span><span>HTML5</span><span>CSS3</span>
-              <span>GA4</span><span>Salesforce</span><span>Zoho CRM</span><span>Mailchimp</span>
-              <span class="wide-skill">Creación de Contenido</span>
-            </div>
-          </div>
         </div>
+
       </div>
 
       <div class="hero-center-text">
@@ -87,12 +92,11 @@
         </div>
         <div class="cases-expand-content">
           <ul class="quick-cases-list">
-            <li><span class="list-num">01</span> <a href="#projects"><strong>YP Realty</strong><span>Growth +604%</span></a></li>
-            <li><span class="list-num">02</span> <a href="#projects"><strong>Eurobuilding</strong><span>Comunicaciones</span></a></li>
-            <li><span class="list-num">03</span> <a href="#projects"><strong>Dislocal</strong><span>Project Coordinator</span></a></li>
-            <li><span class="list-num">04</span> <a href="#projects"><strong>Impaktemos</strong><span>Coordinación Operativa</span></a></li>
-            <li><span class="list-num">05</span> <a href="#projects"><strong>Editorial PanHouse</strong><span>Comunicaciones Internas</span></a></li>
-            <li><span class="list-num">06</span> <a href="#projects"><strong>Freelance</strong><span>Diseño & Web</span></a></li>
+            <li><span class="list-num">01/05</span> <a href="#projects"><strong>YP Realty</strong><span>Growth +604%</span></a></li>
+            <li><span class="list-num">02/05</span> <a href="#projects"><strong>Eurobuilding</strong><span>Comunicaciones</span></a></li>
+            <li><span class="list-num">03/05</span> <a href="#projects"><strong>Dislocal</strong><span>Project Coordinator</span></a></li>
+            <li><span class="list-num">04/05</span> <a href="#projects"><strong>Impaktemos</strong><span>Coordinación Operativa</span></a></li>
+            <li><span class="list-num">05/05</span> <a href="#projects"><strong>Editorial PanHouse</strong><span>Comunicaciones Internas</span></a></li>
           </ul>
         </div>
       </div>
@@ -106,7 +110,7 @@
     </main>
   </section>
 
-  <!-- 1.5 LOGO MARQUEE (AMPLIADO EN ESCRITORIO) -->
+  <!-- 1.5 LOGO MARQUEE INFINITO (Corregido a max-content) -->
   <section class="marquee-section fade-in-section delay-2">
     <div class="marquee-container">
       <div class="marquee-track">
@@ -164,7 +168,7 @@
     </div>
   </section>
 
-  <!-- 3. PROYECTOS (AMPLIADOS EN ESCRITORIO) -->
+  <!-- 3. PROYECTOS -->
   <section id="projects" class="projects-section fade-in-section delay-4">
     <div class="projects-container">
       <div class="sticky-note">
@@ -244,7 +248,8 @@
             <span class="project-num-tag">06</span>
           </div>
           <div class="card-body">
-            <img src="/portada-freelance.png" alt="Freelance" class="card-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlMmU4ZjAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZmlsbD0iIzk0YTNiOCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5Qb3J0YWRhIEZyZWVsYW5jZTwvdGV4dD48L3N2Zz4='" />
+            <!-- Portada genérica minimalista con texto si no hay imagen -->
+            <img src="/portada-freelance.png" alt="Freelance" class="card-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlMmU4ZjAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZmlsbD0iIzk0YTNiOCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5EaXNlw7FvIHkgV2ViPC90ZXh0Pjwvc3ZnPg=='" />
             <h3>Freelance</h3>
             <p class="card-company">Diseño & Web</p>
           </div>
@@ -254,7 +259,7 @@
     </div>
   </section>
 
-  <!-- 4. SERVICIOS (ACORDEÓN ORIGINAL RESTAURADO) -->
+  <!-- 4. SERVICIOS (COLORES SERIOS/SILVER) -->
   <section id="services" class="services-section fade-in-section delay-5">
     <div class="services-container">
       <div class="sticky-note">
@@ -266,45 +271,38 @@
         <p data-es="Haz clic en cada servicio para ver cómo soluciono tus necesidades." data-en="Click on each service to see how I solve your needs.">Haz clic en cada servicio para ver cómo soluciono tus necesidades.</p>
       </div>
 
-      <div class="services-list mac-window">
-        <div class="service-row" onclick="this.classList.toggle('active')">
-          <div class="service-header"><span data-es="Social Media Manager" data-en="Social Media Manager">Social Media Manager</span><span class="toggle-icon">+</span></div>
-          <div class="service-body"><p data-es="Me encargo de cómo te ve el mundo. Planificamos juntos lo que subes, estructuramos tu mensaje y construimos una presencia digital que tu audiencia no pase por alto.">Me encargo de cómo te ve el mundo. Planificamos juntos lo que subes, estructuramos tu mensaje y construimos una presencia digital que tu audiencia no pase por alto.</p></div>
+      <div class="services-grid-blocks">
+        <div class="service-block service-toggle" style="background: rgba(59, 130, 246, 0.08); border-color: rgba(59, 130, 246, 0.2);" onclick="this.classList.toggle('open')">
+          <div class="service-block-header"><h3 data-es="Social Media Manager" data-en="Social Media Manager">Social Media Manager</h3><span class="icon-plus">+</span></div>
+          <div class="service-block-body"><p data-es="Me encargo de cómo te ve el mundo. Planificamos juntos lo que subes, estructuramos tu mensaje y construimos una presencia digital que tu audiencia no pase por alto.">Me encargo de cómo te ve el mundo. Planificamos juntos lo que subes, estructuramos tu mensaje y construimos una presencia digital que tu audiencia no pase por alto.</p></div>
         </div>
-        <div class="service-row" onclick="this.classList.toggle('active')">
-          <div class="service-header"><span data-es="Edición de Contenido Visual" data-en="Visual Content Editing">Edición de Contenido Visual</span><span class="toggle-icon">+</span></div>
-          <div class="service-body"><p data-es="Hagamos que se queden viendo. Tomo tus ideas y las convierto en videos dinámicos, aplicando ganchos visuales y cortes estratégicos para retener la atención al máximo.">Hagamos que se queden viendo. Tomo tus ideas y las convierto en videos dinámicos, aplicando ganchos visuales y cortes estratégicos para retener la atención al máximo.</p></div>
+        <div class="service-block service-toggle" style="background: rgba(139, 92, 246, 0.08); border-color: rgba(139, 92, 246, 0.2);" onclick="this.classList.toggle('open')">
+          <div class="service-block-header"><h3 data-es="Edición de Contenido Visual" data-en="Visual Content Editing">Edición de Contenido Visual</h3><span class="icon-plus">+</span></div>
+          <div class="service-block-body"><p data-es="Hagamos que se queden viendo. Tomo tus ideas y las convierto en videos dinámicos, aplicando ganchos visuales y cortes estratégicos para retener la atención al máximo.">Hagamos que se queden viendo. Tomo tus ideas y las convierto en videos dinámicos, aplicando ganchos visuales y cortes estratégicos para retener la atención al máximo.</p></div>
         </div>
-        <div class="service-row" onclick="this.classList.toggle('active')">
-          <div class="service-header"><span data-es="Landing Pages & Websites" data-en="Landing Pages & Websites">Landing Pages & Websites</span><span class="toggle-icon">+</span></div>
-          <div class="service-body"><p data-es="Tu casa digital. Diseño y construyo páginas web limpias, directas y rápidas pensadas para que el cliente haga clic donde queremos.">Tu casa digital. Diseño y construyo páginas web limpias, directas y rápidas pensadas para que el cliente haga clic donde queremos.</p></div>
+        <div class="service-block service-toggle" style="background: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.2);" onclick="this.classList.toggle('open')">
+          <div class="service-block-header"><h3 data-es="Landing Pages & Websites" data-en="Landing Pages & Websites">Landing Pages & Websites</h3><span class="icon-plus">+</span></div>
+          <div class="service-block-body"><p data-es="Tu casa digital. Diseño y construyo páginas web limpias, directas y rápidas pensadas para que el cliente haga clic donde queremos.">Tu casa digital. Diseño y construyo páginas web limpias, directas y rápidas pensadas para que el cliente haga clic donde queremos.</p></div>
         </div>
-        <div class="service-row" onclick="this.classList.toggle('active')">
-          <div class="service-header"><span data-es="Ventas, CRM & Prospección" data-en="Sales, CRM & Prospecting">Ventas, CRM & Prospección</span><span class="toggle-icon">+</span></div>
-          <div class="service-body"><p data-es="No dejamos dinero sobre la mesa. Superviso y organizo la estrategia de cierre, gestionando los prospectos para eliminar la fricción.">No dejamos dinero sobre la mesa. Superviso y organizo la estrategia de cierre, gestionando los prospectos para eliminar la fricción.</p></div>
+        <div class="service-block service-toggle" style="background: rgba(245, 158, 11, 0.08); border-color: rgba(245, 158, 11, 0.2);" onclick="this.classList.toggle('open')">
+          <div class="service-block-header"><h3 data-es="Ventas, CRM & Prospección" data-en="Sales, CRM & Prospecting">Ventas, CRM & Prospección</h3><span class="icon-plus">+</span></div>
+          <div class="service-block-body"><p data-es="No dejamos dinero sobre la mesa. Superviso y organizo la estrategia de cierre, gestionando los prospectos para eliminar la fricción.">No dejamos dinero sobre la mesa. Superviso y organizo la estrategia de cierre, gestionando los prospectos para eliminar la fricción.</p></div>
         </div>
-        <div class="service-row" onclick="this.classList.toggle('active')">
-          <div class="service-header"><span data-es="Project Management" data-en="Project Management">Project Management</span><span class="toggle-icon">+</span></div>
-          <div class="service-body"><p data-es="Te quito el dolor de cabeza. Yo me encargo de organizar, dividir tareas, supervisar equipos y asegurar que todo se ejecute sin estrés para ti.">Te quito el dolor de cabeza. Yo me encargo de organizar, dividir tareas, supervisar equipos y asegurar que todo se ejecute sin estrés para ti.</p></div>
+        <div class="service-block service-toggle" style="background: rgba(71, 85, 105, 0.08); border-color: rgba(71, 85, 105, 0.2);" onclick="this.classList.toggle('open')">
+          <div class="service-block-header"><h3 data-es="Project Management" data-en="Project Management">Project Management</h3><span class="icon-plus">+</span></div>
+          <div class="service-block-body"><p data-es="Te quito el dolor de cabeza. Yo me encargo de organizar, dividir tareas, supervisar equipos y asegurar que todo se ejecute sin estrés para ti.">Te quito el dolor de cabeza. Yo me encargo de organizar, dividir tareas, supervisar equipos y asegurar que todo se ejecute sin estrés para ti.</p></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 5. CONTACTO (DARK MODE) -->
-  <section id="contact" class="contact-section dark-theme blur-backdrop-heavy fade-in-section delay-6">
-    <div class="contact-container mac-window dark-form">
+  <!-- 5. CONTACTO (FONDO BLANCO / SIN GLASS) -->
+  <section id="contact" class="contact-section fade-in-section delay-6">
+    <div class="contact-container mac-window">
       <div class="contact-left">
-        <!-- SVG CAFÉ HUMEANTE MEJORADO -->
         <h2 class="coffee-title">
           <span data-es="Tomemos un café virtual." data-en="Let's have a virtual coffee.">Tomemos un café virtual.</span>
-          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="coffee-cup-svg">
-            <path d="M17 8h1a4 4 0 1 1 0 8h-1" />
-            <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z" />
-            <path class="steam steam-1" d="M6 2c0 2-2 2-2 4s2 2 2 4" />
-            <path class="steam steam-2" d="M10 2c0 2-2 2-2 4s2 2 2 4" />
-            <path class="steam steam-3" d="M14 2c0 2-2 2-2 4s2 2 2 4" />
-          </svg>
+          <svg class="coffee-cup-svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"></path><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path><path class="steam steam-1" d="M6 2c0 2-2 2-2 4s2 2 2 4"></path><path class="steam steam-2" d="M10 2c0 2-2 2-2 4s2 2 2 4"></path><path class="steam steam-3" d="M14 2c0 2-2 2-2 4s2 2 2 4"></path></svg>
         </h2>
         <p data-es="Si buscas resultados, orden y alguien que entienda el juego digital de principio a fin, escríbeme y hagamos que las cosas pasen." data-en="If you are looking for results, order, and someone who understands the digital game from start to finish, write me and let's make things happen.">Si buscas resultados, orden y alguien que entienda el juego digital de principio a fin, escríbeme y hagamos que las cosas pasen.</p>
         
@@ -315,7 +313,7 @@
         </div>
       </div>
 
-      <div class="contact-right">
+      <div class="contact-right glass-panel">
         <h3 style="margin-bottom: 24px; font-size: 1.8rem; font-weight: 800;" data-es="Déjame un mensaje." data-en="Leave me a message.">Déjame un mensaje.</h3>
         <form class="contact-form" id="wa-form" onsubmit="sendToWhatsApp(event)">
           <div class="input-group"><label data-es="Tu Nombre" data-en="Your Name">Tu Nombre</label><input type="text" id="wa-name" required placeholder="Ej. Ana Pérez" /></div>
@@ -323,7 +321,7 @@
           <div class="input-group"><label data-es="Mensaje" data-en="Message">Mensaje</label><textarea id="wa-message" rows="4" required placeholder="Hola Grey, me gustaría que trabajáramos en..." data-es-placeholder="Hola Grey, me gustaría que trabajáramos en..."></textarea></div>
           
           <div class="privacy-disclaimer">
-            <p data-es="Tus datos serán tratados por Greydemar Serrano con la finalidad de responder tu consulta. No se almacenan en bases de datos. <a href='/terminos' target='_blank'>Más información</a>" data-en="Your data will be processed by Greydemar Serrano to answer your query. Data is not stored in databases. <a href='/terminos' target='_blank'>More info</a>">
+            <p data-es="Tus datos serán tratados por Greydemar Serrano con la finalidad de responder tu consulta. Puedes ejercer tus derechos de acceso, rectificación, cancelación y oposición en greydemar06@gmail.com. <a href='/terminos' target='_blank' class='privacy-link'>Más información</a>" data-en="Your data will be processed by Greydemar Serrano to answer your query. You can exercise your rights of access, rectification, cancellation, and opposition at greydemar06@gmail.com. <a href='/terminos' target='_blank' class='privacy-link'>More info</a>">
               Tus datos serán tratados por Greydemar Serrano con la finalidad de responder tu consulta. Puedes ejercer tus derechos de acceso, rectificación, cancelación y oposición en greydemar06@gmail.com. <a href="/terminos" target="_blank" class="privacy-link">Más información</a>
             </p>
           </div>
@@ -345,7 +343,7 @@
   </footer>
 
   <!-- ========================================== -->
-  <!-- MODALES DE PROYECTOS (SIN BOTÓN "VER PROYECTO") -->
+  <!-- MODALES DE PROYECTOS (ANIMADOS) -->
   <!-- ========================================== -->
   
   <div id="modal-yprealty" class="modal-overlay" onclick="closeModalOutside(event, 'modal-yprealty')">
@@ -365,12 +363,7 @@
           </div>
         </div>
         <p class="modal-description">Lidero la estrategia de contenido y edición de video orgánico para el sector inmobiliario en Puerto Rico. Produzco formatos de alto impacto, redacto guiones persuasivos y aplico SEO para maximizar la conversión. Gracias al análisis de datos, logramos picos de 292% en alcance, 151% en interacción y un crecimiento sólido del +604%.</p>
-        
-        <!-- Imagen de métricas integrada en el modal -->
-        <div class="modal-metrics-image">
-          <img src="/metricas.png" alt="Métricas YP Realty" onerror="this.style.display='none'">
-        </div>
-
+        <div class="modal-metrics-image"><img src="/metricas.png" alt="Métricas YP Realty" onerror="this.style.display='none'"></div>
         <div class="metadata-grid">
           <div><span class="meta-label">Rol</span><span class="meta-val">Social Media Mgr. & Video Editor</span></div>
           <div><span class="meta-label">Herramientas</span><span class="meta-val">Meta Business, SEO, CapCut, Canva</span></div>
@@ -533,7 +526,7 @@
       if(msgArea) { msgArea.placeholder = lang === 'es' ? msgArea.getAttribute('data-es-placeholder') : "Hi Grey, I'd like to work on..."; }
     }
 
-    // Animación Modales
+    // Funciones Modales
     function openModal(modalId) { 
       const modal = document.getElementById(modalId);
       modal.classList.add('active'); 
@@ -545,6 +538,21 @@
       document.body.style.overflow = 'auto'; 
     }
     function closeModalOutside(event, modalId) { if (event.target.id === modalId) { closeModal(modalId); } }
+
+    // Click en la foto de perfil para ampliar
+    function toggleProfileZoom(event) {
+        event.stopPropagation();
+        event.target.classList.toggle('zoomed');
+    }
+    document.getElementById('heroProfileImg').addEventListener('click', toggleProfileZoom);
+    
+    // Si la foto está ampliada y se hace clic en cualquier otro lado, se cierra
+    document.addEventListener('click', function(event) {
+        const profileImg = document.getElementById('heroProfileImg');
+        if (profileImg && profileImg.classList.contains('zoomed') && event.target !== profileImg) {
+            profileImg.classList.remove('zoomed');
+        }
+    });
 
     // Enviar WhatsApp
     function sendToWhatsApp(event) {
@@ -595,8 +603,6 @@
   .sticker-star { top: 12%; right: 15%; transform: rotate(15deg); }
   .sticker-plant { bottom: 20%; left: 8%; transform: rotate(-10deg); opacity: 0.6; }
   .sticker-sparkle { top: 40%; right: 5%; transform: rotate(5deg); }
-  
-  .blur-backdrop-heavy { background: rgba(241, 245, 249, 0.6); backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px); border-top: 1px solid var(--glass-border); }
 
   /* HERO */
   .hero-wrapper { position: relative; width: 100%; min-height: 100vh; overflow: hidden; z-index: 10; background: #000; }
@@ -606,26 +612,30 @@
   .top-header { position: relative; width: 100%; max-width: 1300px; margin: 0 auto; padding: 24px 32px; display: flex; justify-content: flex-end; align-items: center; z-index: 10; }
   .brand-centered { position: absolute; top: 38px; left: 50%; transform: translateX(-50%); font-weight: 900; font-size: 20px; letter-spacing: -0.02em; color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.4); white-space: nowrap; }
   
-  /* Botón de Idioma Estilo Píldora Negra Oscura */
   .lang-switch.dark-mode { background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px); padding: 4px; border-radius: 30px; display: flex; align-items: center; gap: 4px; border: 1px solid rgba(255,255,255,0.1); }
   .lang-btn { background: transparent; border: none; font-weight: 700; font-size: 12px; color: rgba(255,255,255,0.6); cursor: pointer; padding: 6px 12px; border-radius: 20px; transition: all 0.3s ease; }
   .lang-btn.active { background: rgba(255,255,255,0.15); color: #ffffff; font-weight: 900; }
   .lang-divider { display: none; }
 
   .hero-container { max-width: 1300px; width: 100%; margin: auto auto; padding: 20px 32px 100px; display: grid; grid-template-columns: 320px 1fr 260px; gap: 24px; align-items: center; min-height: calc(100vh - 120px); position: relative; z-index: 10; }
-  .left-col { display: flex; flex-direction: column; gap: 28px; }
+  .left-col { position: relative; display: flex; flex-direction: column; gap: 28px; }
   
-  /* Tarjeta de Perfil Compacta (Vuelve a empujar contenido) */
-  .glass-profile-card { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 24px; padding: 10px 14px; cursor: pointer; box-shadow: var(--glass-shadow); transition: all 0.4s; overflow: hidden; }
+  /* TARJETA DE PERFIL Y FOTO AMPLIABLE */
+  .profile-wrapper { position: relative; width: 100%; z-index: 50; }
+  .glass-profile-card { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 24px; padding: 14px 18px; cursor: pointer; box-shadow: var(--glass-shadow); transition: all 0.4s; overflow: hidden; width: 100%; }
+  .glass-profile-card.active { max-width: 380px; padding: 24px; }
   
-  .card-min-header { display: flex; align-items: center; gap: 10px; transition: all 0.4s ease; flex-direction: row; }
+  /* La info se mantiene SIEMPRE al lado de la imagen */
+  .card-min-header { display: flex; align-items: center; gap: 12px; transition: all 0.4s ease; flex-direction: row !important; }
+  .glass-profile-card.active .card-min-header { flex-direction: row !important; align-items: center; gap: 16px; }
   
-  .shift-right { margin-left: 6px; } 
-  .profile-thumb { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.9); transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); flex-shrink: 0; }
+  .profile-thumb { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.9); transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); flex-shrink: 0; cursor: zoom-in;}
+  .glass-profile-card.active .profile-thumb { width: 60px; height: 60px; border-width: 3px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-left: 0; }
   
-  .glass-profile-card.active .card-min-header { flex-direction: column; align-items: flex-start; gap: 16px; }
-  .glass-profile-card.active .profile-thumb { width: 85px; height: 85px; border-width: 3px; border-radius: 50%; box-shadow: 0 8px 20px rgba(0,0,0,0.15); margin-left: 0; }
-  
+  /* Zoom al hacer clic en la foto */
+  .profile-thumb.zoomed { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(5); z-index: 99999; box-shadow: 0 0 0 100vmax rgba(0,0,0,0.85); cursor: zoom-out; }
+  @media (max-width: 900px) { .profile-thumb.zoomed { transform: translate(-50%, -50%) scale(3.5); } }
+
   .min-meta { display: flex; flex-direction: column; justify-content: center; }
   .status-line { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
   @keyframes blink-green { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
@@ -636,7 +646,7 @@
   .min-title { font-size: 11.5px; font-weight: 700; opacity: 0.65; }
   
   .card-expand-content { max-height: 0; opacity: 0; transition: all 0.5s; overflow: hidden; }
-  .glass-profile-card.active .card-expand-content { max-height: 600px; opacity: 1; margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, 0.4); }
+  .glass-profile-card.active .card-expand-content { max-height: 600px; opacity: 1; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.4); }
   .expand-bio { font-size: 14.5px; font-weight: 500; line-height: 1.55; margin-bottom: 16px; }
   .expand-bio strong { font-weight: 900; color: #000; }
   
@@ -645,7 +655,6 @@
   .skills-grid span { font-size: 10.5px; font-weight: 800; background: rgba(255, 255, 255, 0.75); padding: 8px 10px; border-radius: 6px; text-align: center; white-space: nowrap; }
   .skills-grid .wide-skill { grid-column: span 2; }
   
-  /* FRASE GANCHO EN LA ESQUINA INFERIOR IZQUIERDA */
   .hero-quote-corner { position: absolute; bottom: 40px; left: 32px; max-width: 320px; z-index: 10;}
   .hero-quote-corner span { font-size: 17px; font-weight: 800; letter-spacing: -0.02em; color: #ffffff; text-shadow: 0 2px 14px rgba(0,0,0,0.8); line-height: 1.4; display: block; }
   
@@ -656,13 +665,12 @@
   .pill-green { background: var(--pastel-green); bottom: -30px; left: 10%; transform: rotate(-6deg); }
   .pill-yellow { background: var(--pastel-yellow); bottom: -25px; right: 40px; transform: rotate(2deg); }
   
-  /* CASOS DESTACADOS TIPO GLASS */
   .glass-cases-card { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 20px; padding: 14px 18px; cursor: pointer; transition: all 0.4s; overflow: hidden; box-shadow: var(--glass-shadow); }
   .cases-min-header { display: flex; align-items: center; justify-content: space-between; }
   .cases-title-text { font-size: 14px; font-weight: 800; color: var(--navy-dark); }
   .search-icon-wrapper { background: rgba(0, 0, 0, 0.05); border-radius: 50%; padding: 6px; display: flex; color: var(--navy-dark); }
   .cases-expand-content { max-height: 0; opacity: 0; transition: all 0.5s; }
-  .glass-cases-card.active .cases-expand-content { max-height: 350px; opacity: 1; margin-top: 14px; }
+  .glass-cases-card.active .cases-expand-content { max-height: 400px; opacity: 1; margin-top: 14px; }
   .quick-cases-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
   .quick-cases-list li { display: flex; align-items: flex-start; gap: 8px; }
   .list-num { font-size: 10px; font-weight: 800; color: #94a3b8; margin-top: 3px; font-family: monospace; }
@@ -670,20 +678,18 @@
   .quick-cases-list strong { font-weight: 800; color: var(--navy-dark);}
   .quick-cases-list span { font-size: 11px; color: var(--text-muted); margin-top: 2px;}
 
-  /* MARQUEE AUMENTADO EN ESCRITORIO */
+  /* MARQUEE INFINITO SIN HUECOS BLANCOS */
   .marquee-section { width: 100%; background: #ffffff; padding: 15px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); z-index: 5; position: relative; overflow: hidden; }
-  .marquee-container { width: 100%; overflow: hidden; display: flex; align-items: center; }
-  .marquee-track { display: flex; gap: 60px; align-items: center; animation: scroll-marquee 25s linear infinite; white-space: nowrap; }
-  .marquee-track img { height: 55px; width: auto; opacity: 0.4; filter: grayscale(100%); transition: all 0.3s ease; }
+  .marquee-container { width: 100vw; max-width: 100%; overflow: hidden; display: flex; align-items: center; }
+  .marquee-track { display: flex; gap: 60px; padding-right: 60px; width: max-content; animation: scroll-marquee 30s linear infinite; }
+  .marquee-track img { height: 35px; width: auto; opacity: 0.4; filter: grayscale(100%); transition: all 0.3s ease; }
   .marquee-track img:hover { opacity: 1; filter: grayscale(0%); cursor: pointer; }
   @keyframes scroll-marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
   /* ABOUT ME & SECTIONS GENERAL */
   .about-section, .projects-section, .services-section, .contact-section { position: relative; width: 100%; padding: 80px 32px; z-index: 5; display: flex; justify-content: center; }
-  .contact-section { padding-bottom: 160px; }
+  .contact-section { padding-bottom: 160px; background-color: #ffffff; }
   .about-container, .projects-container, .services-container, .contact-container { max-width: 900px; width: 100%; display: flex; flex-direction: column; align-items: center; }
-  
-  /* Contenedor de Proyectos más ancho en escritorio */
   .projects-container { max-width: 1200px; }
 
   .sticky-note { position: relative; background-color: var(--pastel-yellow); padding: 10px 18px 6px; border-radius: 6px; box-shadow: 2px 4px 10px rgba(0,0,0,0.05); transform: rotate(-3deg); margin-bottom: 24px; display: flex; align-items: center; justify-content: center; }
@@ -731,59 +737,57 @@
   .card-body h3 { font-size: 18px; margin: 0 0 6px; font-weight: 800; } 
   .card-company { font-size: 13px; color: var(--text-muted); margin: 0; font-weight: 600;}
 
-  /* SERVICIOS ACORDEÓN ORIGINAL RESTAURADO */
-  .services-list { display: flex; flex-direction: column; width: 100%; max-width: 900px; }
-  .service-row { border-bottom: 1px solid var(--border-color); padding: 24px 30px; cursor: pointer; transition: background 0.3s; }
-  .service-row:last-child { border-bottom: none; }
-  .service-row:hover { background: rgba(255,255,255, 0.9); }
-  .service-header { display: flex; justify-content: space-between; align-items: center; font-size: 1.3rem; font-weight: 800; color: var(--navy-dark); }
-  .toggle-icon { font-size: 1.5rem; transition: transform 0.3s; color: var(--text-muted); }
-  .service-row.active .toggle-icon { transform: rotate(45deg); color: #ef4444; }
-  .service-body { max-height: 0; overflow: hidden; opacity: 0; transition: all 0.4s ease; }
-  .service-row.active .service-body { max-height: 200px; opacity: 1; padding-top: 16px; }
-  .service-body p { font-size: 1.05rem; line-height: 1.6; color: var(--text-muted); font-weight: 500; }
+  /* SERVICIOS CARDS CORPORATIVAS */
+  .services-grid-blocks { display: flex; flex-direction: column; gap: 20px; width: 100%; max-width: 800px;}
+  .service-block { padding: 20px 30px; border-radius: 16px; backdrop-filter: blur(12px); border-width: 1px; border-style: solid; box-shadow: 0 10px 30px rgba(0,0,0,0.03); cursor: pointer; transition: all 0.3s; overflow: hidden;}
+  .service-block:hover { transform: translateY(-3px); }
+  .service-block-header { display: flex; justify-content: space-between; align-items: center; }
+  .service-block-header h3 { font-size: 1.4rem; font-weight: 800; color: var(--navy-dark); margin-bottom: 0;}
+  .icon-plus { font-size: 1.5rem; font-weight: 800; color: var(--navy-dark); transition: transform 0.3s; }
+  .service-block.open .icon-plus { transform: rotate(45deg); }
+  .service-block-body { max-height: 0; opacity: 0; transition: all 0.4s ease; overflow: hidden; }
+  .service-block.open .service-block-body { max-height: 200px; opacity: 1; margin-top: 14px; }
+  .service-block-body p { font-size: 1.05rem; line-height: 1.6; color: var(--text-muted); font-weight: 500; }
 
-  /* CONTACTO (DARK MODE) */
-  .contact-section.dark-theme { background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-top: 1px solid rgba(255,255,255,0.1); }
-  .contact-section.dark-theme h2, .contact-section.dark-theme h3, .contact-section.dark-theme label { color: #ffffff !important; }
-  .contact-section.dark-theme p { color: #cbd5e1 !important; }
-  
+  /* CONTACTO BLANCO TOTAL */
   .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0; }
-  .contact-left { padding: 50px; border-right: 1px solid rgba(255,255,255,0.1); }
+  .contact-left { padding: 50px; background: transparent; border-right: 1px solid var(--border-color); }
   
-  /* SVG CAFÉ HUMEANTE MEJORADO CURVAS SUAVES */
-  .coffee-title { display: flex; align-items: center; gap: 12px; font-size: 2.4rem; font-weight: 900; margin-bottom: 16px; letter-spacing: -0.02em; }
-  .coffee-cup-svg { color: var(--pastel-yellow); flex-shrink: 0;}
-  .steam { animation: rise 2.5s infinite ease-in-out; opacity: 0; }
-  .steam-1 { animation-delay: 0s; } .steam-2 { animation-delay: 0.7s; } .steam-3 { animation-delay: 1.4s; }
-  @keyframes rise { 0% { transform: translateY(0) scale(1); opacity: 0.8; } 100% { transform: translateY(-10px) scale(1.1); opacity: 0; } }
+  /* SVG CAFÉ REDISEÑADO CON HUMO FLUIDO */
+  .coffee-title { display: flex; align-items: center; gap: 12px; font-size: 2.4rem; font-weight: 900; margin-bottom: 16px; color: var(--navy-dark); letter-spacing: -0.02em; }
+  .coffee-cup-svg { color: #8B5A2B; flex-shrink: 0;}
+  .steam { animation: rise-smooth 2.5s infinite ease-in-out; opacity: 0; stroke-width: 1.5px; }
+  .steam-1 { animation-delay: 0s; } .steam-2 { animation-delay: 0.8s; } .steam-3 { animation-delay: 1.6s; }
+  @keyframes rise-smooth { 
+    0% { transform: translateY(2px) scale(0.9); opacity: 0; } 
+    30% { opacity: 0.6; } 
+    70% { opacity: 0.6; } 
+    100% { transform: translateY(-12px) scale(1.1); opacity: 0; } 
+  }
 
-  .contact-left p { font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px; font-weight: 500; }
+  .contact-left p { font-size: 1.1rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 30px; font-weight: 500; }
   
   .contact-socials-row { display: flex; gap: 16px; margin-top: 20px; }
-  .social-icon-btn { background: rgba(255,255,255,0.1); width: 54px; height: 54px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; border: 1px solid rgba(255,255,255,0.2); transition: all 0.3s; }
-  .social-icon-btn:hover { background: white; color: var(--navy-dark); transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+  .social-icon-btn { background: rgba(255,255,255,0.7); width: 54px; height: 54px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--navy-dark); border: 1px solid var(--border-color); transition: all 0.3s; }
+  .social-icon-btn:hover { background: white; transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); color: #000;}
   
-  .glass-panel.dark-form { background: rgba(255, 255, 255, 0.05); border-left: none; }
   .contact-right { padding: 50px; }
   .contact-form { display: flex; flex-direction: column; gap: 20px; }
   .input-group { display: flex; flex-direction: column; gap: 8px; }
-  .input-group label { font-size: 0.9rem; font-weight: 800; text-transform: uppercase; }
+  .input-group label { font-size: 0.9rem; font-weight: 800; color: var(--navy-dark); text-transform: uppercase; }
+  .input-group input, .input-group textarea { width: 100%; padding: 14px; border-radius: 8px; border: 1px solid var(--border-color); background: rgba(255,255,255,0.8); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1rem; color: var(--navy-dark); outline: none; transition: border 0.3s; }
+  .input-group input:focus, .input-group textarea:focus { border-color: var(--navy-dark); }
   
-  .contact-form input, .contact-form textarea { width: 100%; padding: 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1rem; color: #ffffff; outline: none; transition: border 0.3s; }
-  .contact-form input::placeholder, .contact-form textarea::placeholder { color: rgba(255,255,255,0.4); }
-  .contact-form input:focus, .contact-form textarea:focus { border-color: #ffffff; }
-  
-  .privacy-disclaimer { background: rgba(0, 0, 0, 0.4); padding: 16px; border-radius: 8px; margin-top: 10px; border: 1px solid rgba(255,255,255,0.1); }
-  .privacy-disclaimer p { font-size: 0.85rem; color: rgba(255,255,255,0.7) !important; line-height: 1.5; margin: 0; }
-  .privacy-link { color: var(--pastel-yellow); text-decoration: underline; font-weight: 600; }
-  .privacy-link:hover { color: #ffffff; }
+  .privacy-disclaimer { background: rgba(15, 23, 42, 0.8); padding: 16px; border-radius: 8px; margin-top: 10px; border: 1px solid rgba(0,0,0,0.2); }
+  .privacy-disclaimer p { font-size: 0.85rem; color: rgba(255,255,255,0.8) !important; line-height: 1.5; margin: 0; }
+  .privacy-link { color: #ef4444; text-decoration: underline; font-weight: 600; }
+  .privacy-link:hover { color: #f87171; }
   .privacy-checkbox-group { display: flex; align-items: center; gap: 10px; margin-top: 10px; }
-  .privacy-checkbox-group input { width: 18px; height: 18px; cursor: pointer; accent-color: var(--pastel-yellow); }
-  .privacy-checkbox-group label { font-size: 0.9rem; font-weight: 600; cursor: pointer; color: #cbd5e1 !important; }
+  .privacy-checkbox-group input { width: 18px; height: 18px; cursor: pointer; accent-color: var(--navy-dark); }
+  .privacy-checkbox-group label { font-size: 0.9rem; color: var(--navy-dark) !important; font-weight: 600; cursor: pointer; }
 
-  .submit-btn { background: #ffffff; color: var(--navy-dark); border: none; padding: 16px; border-radius: 8px; font-size: 1.1rem; font-weight: 800; cursor: pointer; transition: background 0.3s; margin-top: 10px; }
-  .submit-btn:hover { background: var(--pastel-yellow); }
+  .submit-btn { background: var(--navy-dark); color: white; border: none; padding: 16px; border-radius: 8px; font-size: 1.1rem; font-weight: 800; cursor: pointer; transition: background 0.3s; margin-top: 10px; }
+  .submit-btn:hover { background: #1e293b; }
 
   /* FOOTER NEGRO SÓLIDO */
   .black-footer { background: #000000; color: rgba(255,255,255,0.6); padding: 40px 20px 120px; text-align: center; font-size: 0.95rem; font-weight: 600; position: relative; z-index: 5; border: none; }
@@ -799,14 +803,13 @@
   .modal-content-scroll { overflow-y: auto; padding: 30px; } 
   .modal-hero-banner img { width: 100%; max-height: 320px; object-fit: cover; border-radius: 12px; margin-bottom: 24px; border: 1px solid rgba(0,0,0,0.05); } 
   .modal-title-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; } 
+  .title-with-logo { display: flex; align-items: center; gap: 12px; }
+  .title-text-group { display: flex; flex-direction: column; }
   .modal-title-row h2 { font-size: 24px; margin: 0; font-weight: 900; color: var(--navy-dark); } 
-  
   .simple-modal-link { color: #3b82f6; font-weight: 700; text-decoration: none; font-size: 14px; transition: color 0.3s; }
   .simple-modal-link:hover { color: #1d4ed8; text-decoration: underline; }
-
   .modal-metrics-image { margin: 20px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
   .modal-metrics-image img { width: 100%; display: block; }
-
   .modal-description { font-size: 15px; line-height: 1.6; color: var(--text-muted); margin-bottom: 28px; font-weight: 500; } 
   .metadata-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 16px; background: rgba(241, 245, 249, 0.5); padding: 20px; border-radius: 12px; border: 1px solid var(--border-color); margin-bottom: 30px; } 
   .meta-label { font-size: 11px; font-weight: 800; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 4px; } 
@@ -838,16 +841,16 @@
     .dock-list { gap: 16px; }
     .about-section, .services-section { padding: 60px 20px; }
     .projects-section { padding: 40px 20px; }
-    .projects-grid { grid-template-columns: 1fr; }
     .contact-section { padding: 60px 20px 140px; } 
     .about-header h2, .section-header h2, .coffee-title { font-size: 2.4rem; }
     .mac-content { grid-template-columns: 1fr; gap: 24px; padding: 24px; text-align: center; }
     .stats-grid-about { grid-template-columns: 1fr; gap: 16px; }
     .contact-container { grid-template-columns: 1fr; }
     .contact-left, .contact-right { padding: 30px; }
-    .contact-left { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .contact-left { border-right: none; border-bottom: 1px solid var(--border-color); }
     .modal-content-scroll { padding: 20px; }
-    .marquee-track img { height: 35px; }
+    .marquee-track { gap: 40px; }
+    .marquee-track img { height: 28px; }
     .project-card { flex: 1 1 100%; max-width: 100%; }
     .modal-title-row h2 { font-size: 20px; }
   }
