@@ -1,5 +1,5 @@
 ---
-// Greydemar Serrano - Portafolio Completo Final
+// Greydemar Serrano - Portafolio Completo Final (CV Integrado)
 ---
 
 <!DOCTYPE html>
@@ -64,7 +64,6 @@
       <div class="left-col">
         <div class="glass-profile-card" onclick="this.classList.toggle('active')">
           <div class="card-min-header">
-            <!-- Imagen desplazada a la derecha con la clase shift-right -->
             <img src="/grey.jpeg" alt="Greydemar Serrano" class="profile-thumb shift-right" />
             <div class="min-meta">
               <div class="status-line">
@@ -124,9 +123,9 @@
           <ul class="quick-cases-list">
             <li><a href="#projects"><strong>YP Realty</strong><span>Growth +604%</span></a></li>
             <li><a href="#projects"><strong>Eurobuilding</strong><span>Comunicaciones</span></a></li>
-            <li><a href="#projects"><strong>Impaktemos</strong><span>Coordinación</span></a></li>
-            <li><a href="#projects"><strong>Editorial PanHouse</strong><span>Comunicaciones & VIP</span></a></li>
             <li><a href="#projects"><strong>Dislocal</strong><span>Project Coordinator</span></a></li>
+            <li><a href="#projects"><strong>Impaktemos</strong><span>Coordinación Operativa</span></a></li>
+            <li><a href="#projects"><strong>Editorial PanHouse</strong><span>Comunicaciones Internas</span></a></li>
           </ul>
         </div>
       </div>
@@ -134,30 +133,30 @@
   </section>
 
   <!-- ========================================== -->
-  <!-- 1.5 LOGO MARQUEE (BANDA DE CLIENTES LOGOS) -->
+  <!-- 1.5 LOGO MARQUEE (BANDA DE CLIENTES) -->
   <!-- ========================================== -->
   <section class="marquee-section">
     <div class="marquee-container">
-      <!-- Asegúrate de exportar estos logos en PNG transparente y recortados al ras -->
       <div class="marquee-track">
         <img src="/logo-jci.png" alt="Junior Chamber International">
-        <img src="/logo-deeplearning.png" alt="Deep Learning">
+        <img src="/logo-activelearning.png" alt="Active Learning Education & Leadership">
         <img src="/logo-masciudadanos.png" alt="Más Ciudadanos">
         <img src="/logo-marianomoreno.png" alt="Instituto Superior Mariano Moreno">
         <img src="/logo-impaktemos.png" alt="Impaktemos">
-        <img src="/logo-eurobuilding.png" alt="Eurobuilding Hotels & Suites">
+        <img src="/logo-eurobuilding.png" alt="Eurobuilding Hotels & Suites Caracas">
         <img src="/logo-panhouse.png" alt="Pan House Casa Editorial">
         <img src="/logo-monteavila.png" alt="Universidad Monteávila">
-        
+        <img src="/logo-yprealty.png" alt="YP Realty">
         <!-- Duplicados para el bucle infinito -->
         <img src="/logo-jci.png" alt="Junior Chamber International">
-        <img src="/logo-deeplearning.png" alt="Deep Learning">
+        <img src="/logo-activelearning.png" alt="Active Learning Education & Leadership">
         <img src="/logo-masciudadanos.png" alt="Más Ciudadanos">
         <img src="/logo-marianomoreno.png" alt="Instituto Superior Mariano Moreno">
         <img src="/logo-impaktemos.png" alt="Impaktemos">
-        <img src="/logo-eurobuilding.png" alt="Eurobuilding Hotels & Suites">
+        <img src="/logo-eurobuilding.png" alt="Eurobuilding Hotels & Suites Caracas">
         <img src="/logo-panhouse.png" alt="Pan House Casa Editorial">
         <img src="/logo-monteavila.png" alt="Universidad Monteávila">
+        <img src="/logo-yprealty.png" alt="YP Realty">
       </div>
     </div>
   </section>
@@ -197,12 +196,10 @@
             <img src="/memoji.png" alt="Memoji Greydemar" class="memoji-circle" />
           </div>
           <div class="bio-info-col">
-            <!-- COMUNICADORA SOCIAL en mayúsculas -->
             <p class="bio-intro" data-es="Soy <strong>Greydemar Serrano</strong>, COMUNICADORA SOCIAL con una visión estratégica orientada a los resultados." data-en="I am <strong>Greydemar Serrano</strong>, a SOCIAL COMMUNICATOR with a strategic, results-oriented vision.">
               Soy <strong>Greydemar Serrano</strong>, COMUNICADORA SOCIAL con una visión estratégica orientada a los resultados.
             </p>
             <div class="stats-grid-about">
-              <!-- Números con clase iridiscente animada -->
               <div class="stat-item"><h3 class="iridescent-text">+4</h3><p data-es="Años de experiencia" data-en="Years of experience">Años de experiencia</p></div>
               <div class="stat-item"><h3 class="iridescent-text">+8</h3><p data-es="Proyectos coordinados" data-en="Projects coordinated">Proyectos coordinados</p></div>
               <div class="stat-item"><h3 class="iridescent-text">+5</h3><p data-es="Eventos de alto impacto" data-en="High-impact events">Eventos de alto impacto</p></div>
@@ -222,7 +219,7 @@
     <div class="projects-container">
       
       <div class="sticky-note">
-        <svg class="real-pin" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="real-pin pin-blue" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 10V22" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
           <circle cx="12" cy="7" r="5" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5"/>
           <circle cx="10.5" cy="5.5" r="1.5" fill="#ffffff" opacity="0.6"/>
@@ -239,9 +236,9 @@
         </p>
       </div>
 
+      <!-- Tarjetas de Proyectos en Grid Flex -->
       <div class="projects-grid">
         
-        <!-- Tarjeta YP Realty -->
         <div class="project-card" onclick="openModal('modal-yprealty')">
           <div class="card-mac-header">
             <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
@@ -254,46 +251,18 @@
           </div>
         </div>
 
-        <!-- Tarjeta Eurobuilding -->
         <div class="project-card" onclick="openModal('modal-eurobuilding')">
           <div class="card-mac-header">
             <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-            <span class="card-tag">Comunicaciones</span>
+            <span class="card-tag">B2B & Operaciones</span>
           </div>
           <div class="card-body">
             <img src="/portada-eurobuilding.png" alt="Eurobuilding" class="card-img" />
             <h3>Eurobuilding</h3>
-            <p class="card-company">Estrategia & PR</p>
+            <p class="card-company">Business Center Management</p>
           </div>
         </div>
 
-        <!-- Tarjeta Impaktemos -->
-        <div class="project-card" onclick="openModal('modal-impaktemos')">
-          <div class="card-mac-header">
-            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-            <span class="card-tag">Coordinación</span>
-          </div>
-          <div class="card-body">
-            <img src="/portada-impaktemos.png" alt="Impaktemos" class="card-img" />
-            <h3>Impaktemos</h3>
-            <p class="card-company">Marketing & Conversión</p>
-          </div>
-        </div>
-
-        <!-- Tarjeta Editorial PanHouse -->
-        <div class="project-card" onclick="openModal('modal-panhouse')">
-          <div class="card-mac-header">
-            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-            <span class="card-tag">PR & VIP</span>
-          </div>
-          <div class="card-body">
-            <img src="/portada-panhouse.png" alt="Editorial PanHouse" class="card-img" />
-            <h3>Editorial PanHouse</h3>
-            <p class="card-company">Comunicaciones & Eventos</p>
-          </div>
-        </div>
-
-        <!-- Tarjeta Dislocal -->
         <div class="project-card" onclick="openModal('modal-dislocal')">
           <div class="card-mac-header">
             <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
@@ -302,7 +271,32 @@
           <div class="card-body">
             <img src="/portada-dislocal.png" alt="Dislocal" class="card-img" />
             <h3>Dislocal</h3>
-            <p class="card-company">Coordinación Operativa</p>
+            <p class="card-company">Coordinación Logística</p>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="openModal('modal-impaktemos')">
+          <div class="card-mac-header">
+            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+            <span class="card-tag">Coordinación Operativa</span>
+          </div>
+          <div class="card-body">
+            <img src="/portada-impaktemos.png" alt="Impaktemos" class="card-img" />
+            <h3>Impaktemos</h3>
+            <p class="card-company">Logística & Plataformas</p>
+          </div>
+        </div>
+
+        <!-- PanHouse Centrado al final -->
+        <div class="project-card" onclick="openModal('modal-panhouse')">
+          <div class="card-mac-header">
+            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+            <span class="card-tag">PR Interno</span>
+          </div>
+          <div class="card-body">
+            <img src="/portada-panhouse.png" alt="Editorial PanHouse" class="card-img" />
+            <h3>Editorial PanHouse</h3>
+            <p class="card-company">Comunicaciones Internas</p>
           </div>
         </div>
 
@@ -311,7 +305,7 @@
   </section>
 
   <!-- ========================================== -->
-  <!-- 4. SECCIÓN SERVICIOS (TARJETAS SEPARADAS) -->
+  <!-- 4. SECCIÓN SERVICIOS (ACORDEÓN VERTICAL) -->
   <!-- ========================================== -->
   <section id="services" class="services-section">
     <div class="services-container">
@@ -327,49 +321,70 @@
 
       <div class="section-header">
         <h2 data-es="Cómo te ayudo a crecer." data-en="How I help you grow.">Cómo te ayudo a crecer.</h2>
-        <p data-es="Soluciones claras para necesidades reales." data-en="Clear solutions for real needs.">Soluciones claras para necesidades reales.</p>
+        <p data-es="Haz clic en cada servicio para ver cómo soluciono tus necesidades." data-en="Click on each service to see how I solve your needs.">Haz clic en cada servicio para ver cómo soluciono tus necesidades.</p>
       </div>
 
+      <!-- Tarjetas separadas y cerradas por defecto -->
       <div class="services-grid-blocks">
         
-        <!-- Tarjeta Servicio 1 -->
-        <div class="service-block" style="background: rgba(251, 207, 232, 0.4); border-color: rgba(251, 207, 232, 0.8);">
-          <h3 data-es="Social Media Manager" data-en="Social Media Manager">Social Media Manager</h3>
-          <p data-es="Me encargo de cómo te ve el mundo. Planificamos juntos lo que subes, estructuramos tu mensaje y construimos una presencia digital que tu audiencia no pase por alto." data-en="I take care of how the world sees you. We plan what you upload, structure your message, and build a digital presence your audience cannot ignore.">
-            Me encargo de cómo te ve el mundo. Planificamos juntos lo que subes, estructuramos tu mensaje y construimos una presencia digital que tu audiencia no pase por alto.
-          </p>
+        <div class="service-block service-toggle" style="background: rgba(251, 207, 232, 0.4); border-color: rgba(251, 207, 232, 0.8);" onclick="this.classList.toggle('open')">
+          <div class="service-block-header">
+            <h3 data-es="Social Media Manager" data-en="Social Media Manager">Social Media Manager</h3>
+            <span class="icon-plus">+</span>
+          </div>
+          <div class="service-block-body">
+            <p data-es="Me encargo de cómo te ve el mundo. Planificamos juntos lo que subes, estructuramos tu mensaje y construimos una presencia digital que tu audiencia no pase por alto." data-en="I take care of how the world sees you. We plan what you upload, structure your message, and build a digital presence your audience cannot ignore.">
+              Me encargo de cómo te ve el mundo. Planificamos juntos lo que subes, estructuramos tu mensaje y construimos una presencia digital que tu audiencia no pase por alto.
+            </p>
+          </div>
         </div>
 
-        <!-- Tarjeta Servicio 2 -->
-        <div class="service-block" style="background: rgba(254, 240, 138, 0.4); border-color: rgba(254, 240, 138, 0.8);">
-          <h3 data-es="Edición de Contenido Visual" data-en="Visual Content Editing">Edición de Contenido Visual</h3>
-          <p data-es="Hagamos que se queden viendo. Tomo tus ideas y las convierto en videos dinámicos, aplicando ganchos visuales y cortes estratégicos para retener la atención al máximo." data-en="Let's make them keep watching. I turn your ideas into dynamic videos, applying visual hooks and strategic cuts to maximize attention retention.">
-            Hagamos que se queden viendo. Tomo tus ideas y las convierto en videos dinámicos, aplicando ganchos visuales y cortes estratégicos para retener la atención al máximo.
-          </p>
+        <div class="service-block service-toggle" style="background: rgba(254, 240, 138, 0.4); border-color: rgba(254, 240, 138, 0.8);" onclick="this.classList.toggle('open')">
+          <div class="service-block-header">
+            <h3 data-es="Edición de Contenido Visual" data-en="Visual Content Editing">Edición de Contenido Visual</h3>
+            <span class="icon-plus">+</span>
+          </div>
+          <div class="service-block-body">
+            <p data-es="Hagamos que se queden viendo. Tomo tus ideas y las convierto en videos dinámicos, aplicando ganchos visuales y cortes estratégicos para retener la atención al máximo." data-en="Let's make them keep watching. I turn your ideas into dynamic videos, applying visual hooks and strategic cuts to maximize attention retention.">
+              Hagamos que se queden viendo. Tomo tus ideas y las convierto en videos dinámicos, aplicando ganchos visuales y cortes estratégicos para retener la atención al máximo.
+            </p>
+          </div>
         </div>
 
-        <!-- Tarjeta Servicio 3 -->
-        <div class="service-block" style="background: rgba(187, 247, 208, 0.4); border-color: rgba(187, 247, 208, 0.8);">
-          <h3 data-es="Landing Pages & Websites" data-en="Landing Pages & Websites">Landing Pages & Websites</h3>
-          <p data-es="Tu casa digital. Diseño y construyo páginas web limpias, directas y rápidas que no solo se ven bien, sino que están pensadas para que el cliente haga clic donde queremos." data-en="Your digital home. I design and build clean, direct, and fast websites that not only look good but are designed for the client to click exactly where we want.">
-            Tu casa digital. Diseño y construyo páginas web limpias, directas y rápidas que no solo se ven bien, sino que están pensadas para que el cliente haga clic donde queremos.
-          </p>
+        <div class="service-block service-toggle" style="background: rgba(187, 247, 208, 0.4); border-color: rgba(187, 247, 208, 0.8);" onclick="this.classList.toggle('open')">
+          <div class="service-block-header">
+            <h3 data-es="Landing Pages & Websites" data-en="Landing Pages & Websites">Landing Pages & Websites</h3>
+            <span class="icon-plus">+</span>
+          </div>
+          <div class="service-block-body">
+            <p data-es="Tu casa digital. Diseño y construyo páginas web limpias, directas y rápidas que no solo se ven bien, sino que están pensadas para que el cliente haga clic donde queremos." data-en="Your digital home. I design and build clean, direct, and fast websites that not only look good but are designed for the client to click exactly where we want.">
+              Tu casa digital. Diseño y construyo páginas web limpias, directas y rápidas que no solo se ven bien, sino que están pensadas para que el cliente haga clic donde queremos.
+            </p>
+          </div>
         </div>
 
-        <!-- Tarjeta Servicio 4 -->
-        <div class="service-block" style="background: rgba(191, 219, 254, 0.4); border-color: rgba(191, 219, 254, 0.8);">
-          <h3 data-es="Ventas, CRM & Prospección" data-en="Sales, CRM & Prospecting">Ventas, CRM & Prospección</h3>
-          <p data-es="No dejamos dinero sobre la mesa. Superviso y organizo la estrategia de cierre, gestionando los prospectos para eliminar la fricción entre el 'me gusta' y el 'te compro'." data-en="We don't leave money on the table. I supervise and organize the closing strategy, managing prospects to eliminate friction between 'I like it' and 'I buy'.">
-            No dejamos dinero sobre la mesa. Superviso y organizo la estrategia de cierre, gestionando los prospectos para eliminar la fricción entre el 'me gusta' y el 'te compro'.
-          </p>
+        <div class="service-block service-toggle" style="background: rgba(191, 219, 254, 0.4); border-color: rgba(191, 219, 254, 0.8);" onclick="this.classList.toggle('open')">
+          <div class="service-block-header">
+            <h3 data-es="Ventas, CRM & Prospección" data-en="Sales, CRM & Prospecting">Ventas, CRM & Prospección</h3>
+            <span class="icon-plus">+</span>
+          </div>
+          <div class="service-block-body">
+            <p data-es="No dejamos dinero sobre la mesa. Superviso y organizo la estrategia de cierre, gestionando los prospectos para eliminar la fricción entre el 'me gusta' y el 'te compro'." data-en="We don't leave money on the table. I supervise and organize the closing strategy, managing prospects to eliminate friction between 'I like it' and 'I buy'.">
+              No dejamos dinero sobre la mesa. Superviso y organizo la estrategia de cierre, gestionando los prospectos para eliminar la fricción entre el 'me gusta' y el 'te compro'.
+            </p>
+          </div>
         </div>
 
-        <!-- Tarjeta Servicio 5 -->
-        <div class="service-block" style="background: rgba(233, 213, 255, 0.4); border-color: rgba(233, 213, 255, 0.8);">
-          <h3 data-es="Project Management" data-en="Project Management">Project Management</h3>
-          <p data-es="Te quito el dolor de cabeza. Yo me encargo de organizar, dividir tareas, supervisar a los equipos y asegurar que todo el proyecto se ejecute de forma puntual y sin estrés para ti." data-en="I take the headache away. I organize, divide tasks, supervise teams, and ensure the entire project is executed punctually and stress-free for you.">
-            Te quito el dolor de cabeza. Yo me encargo de organizar, dividir tareas, supervisar a los equipos y asegurar que todo el proyecto se ejecute de forma puntual y sin estrés para ti.
-          </p>
+        <div class="service-block service-toggle" style="background: rgba(233, 213, 255, 0.4); border-color: rgba(233, 213, 255, 0.8);" onclick="this.classList.toggle('open')">
+          <div class="service-block-header">
+            <h3 data-es="Project Management" data-en="Project Management">Project Management</h3>
+            <span class="icon-plus">+</span>
+          </div>
+          <div class="service-block-body">
+            <p data-es="Te quito el dolor de cabeza. Yo me encargo de organizar, dividir tareas, supervisar a los equipos y asegurar que todo el proyecto se ejecute de forma puntual y sin estrés para ti." data-en="I take the headache away. I organize, divide tasks, supervise teams, and ensure the entire project is executed punctually and stress-free for you.">
+              Te quito el dolor de cabeza. Yo me encargo de organizar, dividir tareas, supervisar a los equipos y asegurar que todo el proyecto se ejecute de forma puntual y sin estrés para ti.
+            </p>
+          </div>
         </div>
 
       </div>
@@ -377,16 +392,17 @@
   </section>
 
   <!-- ========================================== -->
-  <!-- 5. SECCIÓN CONTACTO (FORMULARIO WHATSAPP) -->
+  <!-- 5. SECCIÓN CONTACTO (FONDO NEGRO) -->
   <!-- ========================================== -->
   <section id="contact" class="contact-section">
     <div class="contact-container mac-window">
       
+      <!-- Columna Izquierda (Info y Botones) -->
       <div class="contact-left">
-        <!-- Título con Café Humeante (SVG animado) -->
+        <!-- Título con Café Animado Grande -->
         <h2 class="coffee-title">
           <span data-es="Tomemos un café virtual." data-en="Let's have a virtual coffee.">Tomemos un café virtual.</span>
-          <svg class="coffee-cup-svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="coffee-cup-svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
             <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
             <path class="steam steam-1" d="M6 1v3"></path>
@@ -399,26 +415,24 @@
           Si buscas resultados, orden y alguien que entienda el juego digital de principio a fin, escríbeme y hagamos que las cosas pasen.
         </p>
         
+        <!-- Botones Privados -->
         <div class="contact-methods">
-          <a href="mailto:greydemar06@gmail.com" class="method-card">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            greydemar06@gmail.com
+          <a href="https://wa.me/584126339776" target="_blank" class="method-card whatsapp-btn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            Escríbeme por WhatsApp
           </a>
-          <a href="https://wa.me/584126339776" target="_blank" class="method-card">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-            +58 412 633 9776
+          <a href="mailto:greydemar06@gmail.com" class="method-card email-btn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            Envíame un Correo
           </a>
-          <a href="#" target="_blank" class="method-card">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-            LinkedIn
-          </a>
-          <a href="#" target="_blank" class="method-card">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-            Instagram
+          <a href="https://linkedin.com/in/greydemarserrano" target="_blank" class="method-card linkedin-btn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            Conectar en LinkedIn
           </a>
         </div>
       </div>
 
+      <!-- Columna Derecha (Formulario) -->
       <div class="contact-right">
         <form class="contact-form" id="wa-form" onsubmit="sendToWhatsApp(event)">
           <div class="input-group">
@@ -448,7 +462,7 @@
   </footer>
 
   <!-- ========================================== -->
-  <!-- MODALES DE PROYECTOS -->
+  <!-- MODALES DE PROYECTOS (ACTUALIZADOS CON EL CV) -->
   <!-- ========================================== -->
   
   <!-- YP Realty -->
@@ -467,8 +481,8 @@
         <p class="modal-description">Lidero la estrategia de contenido y edición de video orgánico para el sector inmobiliario en Puerto Rico. Produzco formatos de alto impacto, redacto guiones persuasivos y aplico SEO para maximizar la conversión. Gracias al análisis de datos, logramos picos de 292% en alcance, 151% en interacción y un crecimiento sólido del +604%.</p>
         <div class="metadata-grid">
           <div><span class="meta-label">Rol</span><span class="meta-val">Social Media Mgr. & Video Editor</span></div>
-          <div><span class="meta-label">Herramientas</span><span class="meta-val">Meta Business, CapCut, Canva, GA4</span></div>
-          <div><span class="meta-label">Año</span><span class="meta-val">2026</span></div>
+          <div><span class="meta-label">Herramientas</span><span class="meta-val">Meta Business, SEO, CapCut, Canva</span></div>
+          <div><span class="meta-label">Año</span><span class="meta-val">2026 - Presente</span></div>
         </div>
       </div>
     </div>
@@ -485,59 +499,13 @@
       <div class="modal-content-scroll">
         <div class="modal-hero-banner"><img src="/portada-eurobuilding.png" alt="Eurobuilding Banner" /></div>
         <div class="modal-title-row">
-          <h2>Eurobuilding</h2><a href="#" target="_blank" class="preview-link">Ver Proyecto</a>
+          <h2>Eurobuilding Hotels & Suites</h2><a href="#" target="_blank" class="preview-link">Ver Proyecto</a>
         </div>
-        <p class="modal-description">Gestión de comunicaciones corporativas e implementación de manual de marca para garantizar cohesión en todos los puntos de contacto.</p>
+        <p class="modal-description">Lideré el Business Center, gestionando el portafolio corporativo (B2B) y coordinando la logística bajo estrictos estándares 5 estrellas. Centralicé las operaciones entre 7 departamentos críticos, actuando como mediadora estratégica y alcanzando una tasa de resolución del 100% en incidencias operativas.</p>
         <div class="metadata-grid">
-          <div><span class="meta-label">Rol</span><span class="meta-val">Comunicaciones</span></div>
-          <div><span class="meta-label">Herramientas</span><span class="meta-val">Canva, Trello</span></div>
-          <div><span class="meta-label">Año</span><span class="meta-val">2025</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Impaktemos -->
-  <div id="modal-impaktemos" class="modal-overlay" onclick="closeModalOutside(event, 'modal-impaktemos')">
-    <div class="modal-window">
-      <div class="modal-mac-bar">
-        <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-        <div class="modal-search-bar">impaktemos.com</div>
-        <button class="close-btn-text" onclick="closeModal('modal-impaktemos')">Cerrar</button>
-      </div>
-      <div class="modal-content-scroll">
-        <div class="modal-hero-banner"><img src="/portada-impaktemos.png" alt="Impaktemos Banner" /></div>
-        <div class="modal-title-row">
-          <h2>Impaktemos</h2><a href="#" target="_blank" class="preview-link">Ver Proyecto</a>
-        </div>
-        <p class="modal-description">Aquí puedes redactar el impacto y funciones que desarrollaste para Impaktemos.</p>
-        <div class="metadata-grid">
-          <div><span class="meta-label">Rol</span><span class="meta-val">Coordinación</span></div>
-          <div><span class="meta-label">Herramientas</span><span class="meta-val">Herramienta 1, Herramienta 2</span></div>
-          <div><span class="meta-label">Año</span><span class="meta-val">2024</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- PanHouse -->
-  <div id="modal-panhouse" class="modal-overlay" onclick="closeModalOutside(event, 'modal-panhouse')">
-    <div class="modal-window">
-      <div class="modal-mac-bar">
-        <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-        <div class="modal-search-bar">editorialpanhouse.com</div>
-        <button class="close-btn-text" onclick="closeModal('modal-panhouse')">Cerrar</button>
-      </div>
-      <div class="modal-content-scroll">
-        <div class="modal-hero-banner"><img src="/portada-panhouse.png" alt="PanHouse Banner" /></div>
-        <div class="modal-title-row">
-          <h2>Editorial PanHouse</h2><a href="#" target="_blank" class="preview-link">Ver Proyecto</a>
-        </div>
-        <p class="modal-description">Aquí puedes redactar tu rol en PR y eventos con VIPs en la editorial.</p>
-        <div class="metadata-grid">
-          <div><span class="meta-label">Rol</span><span class="meta-val">PR & Comunicaciones</span></div>
-          <div><span class="meta-label">Herramientas</span><span class="meta-val">Herramienta 1</span></div>
-          <div><span class="meta-label">Año</span><span class="meta-val">2024</span></div>
+          <div><span class="meta-label">Rol</span><span class="meta-val">Coordinadora B2B & Business Center</span></div>
+          <div><span class="meta-label">Herramientas</span><span class="meta-val">Opera PMS, Logística, CRM B2B</span></div>
+          <div><span class="meta-label">Año</span><span class="meta-val">2022 - 2023</span></div>
         </div>
       </div>
     </div>
@@ -556,11 +524,57 @@
         <div class="modal-title-row">
           <h2>Dislocal</h2><a href="#" target="_blank" class="preview-link">Ver Proyecto</a>
         </div>
-        <p class="modal-description">Descripción de tu trabajo organizando y ejecutando proyectos en Dislocal.</p>
+        <p class="modal-description">Lideré la planificación y ejecución logística de proyectos de impacto local (Barrio El Calvario). Apliqué metodologías ágiles para alinear cronogramas, recursos y a múltiples equipos internacionales operando en terreno directamente con el equipo de Dislocal.</p>
         <div class="metadata-grid">
-          <div><span class="meta-label">Rol</span><span class="meta-val">Project Coordinator</span></div>
-          <div><span class="meta-label">Herramientas</span><span class="meta-val">Asana, Trello, Notion</span></div>
-          <div><span class="meta-label">Año</span><span class="meta-val">2023</span></div>
+          <div><span class="meta-label">Rol</span><span class="meta-val">Production Mgr. & Project Coordinator</span></div>
+          <div><span class="meta-label">Herramientas</span><span class="meta-val">Trello, Asana, Metodologías Ágiles</span></div>
+          <div><span class="meta-label">Año</span><span class="meta-val">2021 - 2022</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Impaktemos -->
+  <div id="modal-impaktemos" class="modal-overlay" onclick="closeModalOutside(event, 'modal-impaktemos')">
+    <div class="modal-window">
+      <div class="modal-mac-bar">
+        <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+        <div class="modal-search-bar">impaktemos.com</div>
+        <button class="close-btn-text" onclick="closeModal('modal-impaktemos')">Cerrar</button>
+      </div>
+      <div class="modal-content-scroll">
+        <div class="modal-hero-banner"><img src="/portada-impaktemos.png" alt="Impaktemos Banner" /></div>
+        <div class="modal-title-row">
+          <h2>Impaktemos (Plataforma "Las Minitas")</h2><a href="#" target="_blank" class="preview-link">Ver Proyecto</a>
+        </div>
+        <p class="modal-description">Dirigí la logística operativa de jornadas de campo y desarrollé activos digitales (Landing Pages) específicos para automatizar la asignación de tareas, organizar el flujo de voluntarios y realizar un monitoreo eficiente de todas las actividades.</p>
+        <div class="metadata-grid">
+          <div><span class="meta-label">Rol</span><span class="meta-val">Coordinadora Operativa & Web</span></div>
+          <div><span class="meta-label">Herramientas</span><span class="meta-val">HTML, CSS, Landing Pages</span></div>
+          <div><span class="meta-label">Año</span><span class="meta-val">2023 - 2024</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PanHouse -->
+  <div id="modal-panhouse" class="modal-overlay" onclick="closeModalOutside(event, 'modal-panhouse')">
+    <div class="modal-window">
+      <div class="modal-mac-bar">
+        <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+        <div class="modal-search-bar">editorialpanhouse.com</div>
+        <button class="close-btn-text" onclick="closeModal('modal-panhouse')">Cerrar</button>
+      </div>
+      <div class="modal-content-scroll">
+        <div class="modal-hero-banner"><img src="/portada-panhouse.png" alt="PanHouse Banner" /></div>
+        <div class="modal-title-row">
+          <h2>PanHouse, Casa Editorial</h2><a href="#" target="_blank" class="preview-link">Ver Proyecto</a>
+        </div>
+        <p class="modal-description">Sincronicé las operaciones diarias entre los departamentos de Marketing, Ventas y Relaciones Públicas, garantizando la ejecución de eventos VIP. Diseñé e integré sistemas de automatización con IA (ChatGPT, Claude) que redujeron drásticamente los tiempos de atención y estandarizaron la comunicación corporativa.</p>
+        <div class="metadata-grid">
+          <div><span class="meta-label">Rol</span><span class="meta-val">Coord. Comunicaciones Internas</span></div>
+          <div><span class="meta-label">Herramientas</span><span class="meta-val">CRM, Email Marketing, ChatGPT, Claude</span></div>
+          <div><span class="meta-label">Año</span><span class="meta-val">2024 - 2025</span></div>
         </div>
       </div>
     </div>
@@ -700,9 +714,8 @@
   @keyframes scroll-marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
   /* ABOUT ME & SECTIONS GENERAL */
-  .about-section, .projects-section, .services-section, .contact-section { position: relative; width: 100%; padding: 80px 32px; z-index: 5; display: flex; justify-content: center; }
-  .contact-section { padding-bottom: 160px; }
-  .about-container, .projects-container, .services-container, .contact-container { max-width: 900px; width: 100%; display: flex; flex-direction: column; align-items: center; }
+  .about-section, .projects-section, .services-section { position: relative; width: 100%; padding: 80px 32px; z-index: 5; display: flex; justify-content: center; }
+  .about-container, .projects-container, .services-container { max-width: 900px; width: 100%; display: flex; flex-direction: column; align-items: center; }
   .sticky-note { position: relative; background-color: var(--pastel-yellow); padding: 10px 18px 6px; border-radius: 6px; box-shadow: 2px 4px 10px rgba(0,0,0,0.05); transform: rotate(-3deg); margin-bottom: 24px; display: flex; align-items: center; justify-content: center; }
   .real-pin { position: absolute; top: -12px; width: 24px; height: 24px; filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.2)); }
   .note-text { font-weight: 800; font-size: 13px; color: var(--navy-dark); text-transform: uppercase; letter-spacing: 0.05em; }
@@ -739,9 +752,23 @@
   @keyframes iridescence { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
   .stat-item p { font-size: 15px; font-weight: 600; color: var(--text-muted); line-height: 1.3; }
 
-  /* PROYECTOS */
-  .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; width: 100%; } 
-  .project-card { background: var(--bg-soft); backdrop-filter: blur(12px); border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; } 
+  /* PROYECTOS (Centrando la última fila) */
+  .projects-section { width: 100%; position: relative; padding: 60px 24px 140px; display: flex; justify-content: center; z-index: 5; } 
+  .projects-container { max-width: 1140px; width: 100%; display: flex; flex-direction: column; align-items: center; } 
+  
+  .projects-grid { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 30px; 
+    width: 100%; 
+  } 
+  .project-card { 
+    flex: 0 1 calc(33.333% - 20px); 
+    max-width: 360px; 
+    min-width: 300px;
+    background: var(--bg-soft); backdrop-filter: blur(12px); border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; 
+  } 
   .project-card:hover { transform: translateY(-6px); box-shadow: 0 20px 30px rgba(0,0,0,0.08); } 
   .card-mac-header { background: rgba(241, 245, 249, 0.8); padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); } 
   .mac-dots { display: flex; gap: 6px; } 
@@ -749,37 +776,45 @@
   .dot.red { background: #ff5f56; } .dot.yellow { background: #ffbd2e; } .dot.green { background: #27c93f; } 
   .card-tag { font-size: 11px; font-weight: 800; color: var(--navy-dark); text-transform: uppercase; } 
   .card-body { padding: 20px; text-align: center; } 
-  .card-img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 16px; } 
+  .card-img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 16px; border: 1px solid rgba(0,0,0,0.05); } 
   .card-body h3 { font-size: 18px; margin: 0 0 6px; font-weight: 800; } 
   .card-company { font-size: 13px; color: var(--text-muted); margin: 0; font-weight: 600;}
 
-  /* SERVICIOS CARDS (Separadas sin Emojis) */
-  .services-grid-blocks { display: flex; flex-direction: column; gap: 20px; width: 100%; }
-  .service-block { padding: 30px; border-radius: 16px; backdrop-filter: blur(12px); border-width: 1px; border-style: solid; box-shadow: 0 10px 30px rgba(0,0,0,0.03); transition: transform 0.3s; }
+  /* SERVICIOS CARDS */
+  .services-grid-blocks { display: flex; flex-direction: column; gap: 20px; width: 100%; max-width: 800px;}
+  .service-block { padding: 20px 30px; border-radius: 16px; backdrop-filter: blur(12px); border-width: 1px; border-style: solid; box-shadow: 0 10px 30px rgba(0,0,0,0.03); cursor: pointer; transition: all 0.3s; overflow: hidden;}
   .service-block:hover { transform: translateY(-3px); }
-  .service-block h3 { font-size: 1.4rem; font-weight: 800; color: var(--navy-dark); margin-bottom: 12px; }
-  .service-block p { font-size: 1.05rem; line-height: 1.6; color: var(--text-muted); font-weight: 500; }
+  .service-block-header { display: flex; justify-content: space-between; align-items: center; }
+  .service-block-header h3 { font-size: 1.4rem; font-weight: 800; color: var(--navy-dark); }
+  .icon-plus { font-size: 1.5rem; font-weight: 800; color: var(--navy-dark); transition: transform 0.3s; }
+  .service-block.open .icon-plus { transform: rotate(45deg); }
+  .service-block-body { max-height: 0; opacity: 0; transition: all 0.4s ease; overflow: hidden; }
+  .service-block.open .service-block-body { max-height: 200px; opacity: 1; margin-top: 14px; }
+  .service-block-body p { font-size: 1.05rem; line-height: 1.6; color: var(--text-muted); font-weight: 500; }
 
-  /* CONTACTO */
-  .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0; }
+  /* CONTACTO (Fondo Negro Absoluto) */
+  .contact-section { position: relative; width: 100%; padding: 120px 32px 180px; z-index: 5; display: flex; justify-content: center; background-color: #000000; }
+  .contact-container { max-width: 1000px; display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0; }
+  
+  /* Separación visual entre la info y el formulario */
   .contact-left { padding: 50px; background: rgba(241, 245, 249, 0.4); border-right: 1px solid var(--border-color); }
   
-  /* Título de Contacto con Café Animado */
+  /* Título de Contacto con Café Animado Más Grande */
   .coffee-title { display: flex; align-items: center; gap: 12px; font-size: 2.4rem; font-weight: 900; margin-bottom: 16px; color: var(--navy-dark); letter-spacing: -0.02em; }
-  .coffee-cup-svg { color: #8B5A2B; /* Marrón café */ }
+  .coffee-cup-svg { color: #8B5A2B; flex-shrink: 0;}
   .steam { animation: rise 2s infinite ease-in-out; opacity: 0; }
   .steam-1 { animation-delay: 0s; }
   .steam-2 { animation-delay: 0.5s; }
   .steam-3 { animation-delay: 1s; }
-  @keyframes rise {
-    0% { transform: translateY(0); opacity: 0.8; }
-    100% { transform: translateY(-6px); opacity: 0; }
-  }
+  @keyframes rise { 0% { transform: translateY(0); opacity: 0.8; } 100% { transform: translateY(-6px); opacity: 0; } }
 
   .contact-left p { font-size: 1.1rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 30px; font-weight: 500; }
   .contact-methods { display: flex; flex-direction: column; gap: 14px; }
-  .method-card { background: white; padding: 14px 20px; border-radius: 12px; text-decoration: none; color: var(--navy-dark); font-weight: 700; display: flex; align-items: center; gap: 12px; border: 1px solid var(--border-color); transition: all 0.3s; }
+  
+  /* Botones Oficiales sin Emojis */
+  .method-card { background: white; padding: 14px 20px; border-radius: 12px; text-decoration: none; color: var(--navy-dark); font-weight: 800; display: flex; align-items: center; gap: 12px; border: 1px solid var(--border-color); transition: all 0.3s; }
   .method-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+  .method-card svg { color: var(--navy-dark); }
   
   .contact-right { padding: 50px; }
   .contact-form { display: flex; flex-direction: column; gap: 20px; }
@@ -791,7 +826,7 @@
   .submit-btn:hover { background: #1e293b; }
 
   /* FOOTER */
-  .site-footer { text-align: center; padding: 40px 20px 100px; background: #ffffff; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.95rem; font-weight: 600; position: relative; z-index: 5; }
+  .site-footer { text-align: center; padding: 40px 20px 100px; background: #000000; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); font-size: 0.95rem; font-weight: 600; position: relative; z-index: 5; }
 
   /* MODALES */
   .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(8px); display: none; justify-content: center; align-items: center; z-index: 10000; padding: 20px; } 
@@ -801,7 +836,7 @@
   .modal-search-bar { background: white; padding: 6px 16px; border-radius: 20px; font-size: 12px; color: var(--text-muted); font-weight: 500; border: 1px solid var(--border-color); flex-grow: 1; margin: 0 20px; text-align: center; } 
   .close-btn-text { background: none; border: none; font-size: 13px; font-weight: 800; color: var(--navy-dark); cursor: pointer; } 
   .modal-content-scroll { overflow-y: auto; padding: 30px; } 
-  .modal-hero-banner img { width: 100%; max-height: 320px; object-fit: cover; border-radius: 12px; margin-bottom: 24px; } 
+  .modal-hero-banner img { width: 100%; max-height: 320px; object-fit: cover; border-radius: 12px; margin-bottom: 24px; border: 1px solid rgba(0,0,0,0.05); } 
   .modal-title-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; } 
   .modal-title-row h2 { font-size: 24px; margin: 0; font-weight: 900; color: var(--navy-dark); } 
   .preview-link { background: var(--pastel-yellow); color: var(--navy-dark); padding: 8px 18px; border-radius: 30px; text-decoration: none; font-size: 12px; font-weight: 800; } 
@@ -836,7 +871,7 @@
     .dock-list { gap: 16px; }
     .about-section, .services-section { padding: 60px 20px; }
     .projects-section { padding: 40px 20px; }
-    .contact-section { padding: 40px 20px 40px; } /* Ajuste margen inferior */
+    .contact-section { padding: 60px 20px 140px; } 
     .about-header h2, .section-header h2, .coffee-title { font-size: 2.4rem; }
     .mac-content { grid-template-columns: 1fr; gap: 24px; padding: 24px; text-align: center; }
     .stats-grid-about { grid-template-columns: 1fr; gap: 16px; }
@@ -845,5 +880,6 @@
     .contact-left { border-right: none; border-bottom: 1px solid var(--border-color); }
     .modal-content-scroll { padding: 20px; }
     .marquee-track { gap: 40px; }
+    .project-card { flex: 1 1 100%; max-width: 100%; } /* Fuerza tarjetas de proyectos al 100% en móvil */
   }
 </style>
