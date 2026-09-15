@@ -37,8 +37,8 @@
 
     <header class="top-header">
       <div class="brand-centered">GREY SERRANO®</div>
-      <!-- Selector de idioma ajustado (Botones Negro tipo píldora) -->
-      <div class="lang-switch">
+      <!-- Botón oscuro y sutil -->
+      <div class="lang-switch dark-mode">
         <button class="lang-btn active" onclick="setLanguage('es')">ES</button>
         <button class="lang-btn" onclick="setLanguage('en')">EN</button>
       </div>
@@ -46,7 +46,6 @@
 
     <main class="hero-container">
       <div class="left-col">
-        <!-- Tarjeta de Perfil Compacta -->
         <div class="glass-profile-card" onclick="this.classList.toggle('active')">
           <div class="card-min-header">
             <img src="/grey.jpeg" alt="Greydemar Serrano" class="profile-thumb shift-right" />
@@ -76,10 +75,12 @@
 
       <div class="hero-center-text">
         <h1 data-es="ESTRATEGIA QUE UNE MARKETING, VENTAS Y WEB" data-en="STRATEGY BRIDGING MARKETING, SALES & WEB">ESTRATEGIA QUE UNE MARKETING, VENTAS Y WEB</h1>
-        <span class="floating-pill pill-pink">Growth Marketing</span><span class="floating-pill pill-green">Project Manager</span><span class="floating-pill pill-yellow">Visual Content</span>
+        <span class="floating-pill pill-pink">Growth Marketing</span>
+        <!-- Sticker ajustado para que no choque con la tarjeta -->
+        <span class="floating-pill pill-green">Project Manager</span>
+        <span class="floating-pill pill-yellow">Visual Content</span>
       </div>
 
-      <!-- Tarjeta Casos Destacados en Glassmorphism -->
       <div class="glass-cases-card" onclick="this.classList.toggle('active')">
         <div class="cases-min-header">
           <span class="cases-title-text" data-es="Casos Destacados" data-en="Featured Cases">Casos Destacados</span>
@@ -87,17 +88,16 @@
         </div>
         <div class="cases-expand-content">
           <ul class="quick-cases-list">
-            <!-- Enumeración visual externa -->
-            <li><span class="list-num">01/05</span> <a href="#projects"><strong>YP Realty</strong><span>Growth +604%</span></a></li>
-            <li><span class="list-num">02/05</span> <a href="#projects"><strong>Eurobuilding</strong><span>Comunicaciones</span></a></li>
-            <li><span class="list-num">03/05</span> <a href="#projects"><strong>Dislocal</strong><span>Project Coordinator</span></a></li>
-            <li><span class="list-num">04/05</span> <a href="#projects"><strong>Impaktemos</strong><span>Coordinación Operativa</span></a></li>
-            <li><span class="list-num">05/05</span> <a href="#projects"><strong>Editorial PanHouse</strong><span>Comunicaciones Internas</span></a></li>
+            <li><a href="#projects"><strong>YP Realty</strong><span>Growth +604%</span></a></li>
+            <li><a href="#projects"><strong>Eurobuilding</strong><span>Comunicaciones</span></a></li>
+            <li><a href="#projects"><strong>Dislocal</strong><span>Project Coordinator</span></a></li>
+            <li><a href="#projects"><strong>Impaktemos</strong><span>Coordinación Operativa</span></a></li>
+            <li><a href="#projects"><strong>Editorial PanHouse</strong><span>Comunicaciones Internas</span></a></li>
           </ul>
         </div>
       </div>
 
-      <!-- FRASE GANCHO (Ajustada para estar debajo en móvil) -->
+      <!-- FRASE GANCHO ESQUINA INFERIOR IZQUIERDA -->
       <div class="hero-quote-corner">
         <span data-es="- Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar." data-en="- Invoicing is no accident. It depends on how they see you, how you connect, and how easy you make it to buy.">
           - Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar.
@@ -177,40 +177,64 @@
       </div>
 
       <div class="projects-grid">
-        <!-- Indicador de enumeración externa dentro de los headers de tarjeta -->
+        <!-- Número de proyecto elegante al lado de la barra -->
         <div class="project-card" onclick="openModal('modal-yprealty')">
-          <div class="card-mac-header"><div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><span class="card-tag">01/05 &bull; Growth</span></div>
+          <div class="card-mac-header">
+            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+            <span class="project-num-tag">01</span>
+          </div>
           <div class="card-body">
             <img src="/portada-yprealty.png" alt="YP Realty" class="card-img" style="object-position: top center;" />
-            <h3>YP Realty</h3><p class="card-company">Growth +604%</p>
+            <h3>YP Realty</h3>
+            <p class="card-company">Growth +604%</p>
           </div>
         </div>
+        
         <div class="project-card" onclick="openModal('modal-eurobuilding')">
-          <div class="card-mac-header"><div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><span class="card-tag">02/05 &bull; B2B & PR</span></div>
+          <div class="card-mac-header">
+            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+            <span class="project-num-tag">02</span>
+          </div>
           <div class="card-body">
             <img src="/portada-eurobuilding.png" alt="Eurobuilding" class="card-img" />
-            <h3>Eurobuilding</h3><p class="card-company">Business Center</p>
+            <h3>Eurobuilding</h3>
+            <p class="card-company">Business Center</p>
           </div>
         </div>
+        
         <div class="project-card" onclick="openModal('modal-dislocal')">
-          <div class="card-mac-header"><div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><span class="card-tag">03/05 &bull; Project Mgmt</span></div>
+          <div class="card-mac-header">
+            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+            <span class="project-num-tag">03</span>
+          </div>
           <div class="card-body">
             <img src="/portada-dislocal.png" alt="Dislocal" class="card-img" />
-            <h3>Dislocal</h3><p class="card-company">Coordinación Logística</p>
+            <h3>Dislocal</h3>
+            <p class="card-company">Coordinación Logística</p>
           </div>
         </div>
+        
         <div class="project-card" onclick="openModal('modal-impaktemos')">
-          <div class="card-mac-header"><div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><span class="card-tag">04/05 &bull; Operativa</span></div>
+          <div class="card-mac-header">
+            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+            <span class="project-num-tag">04</span>
+          </div>
           <div class="card-body">
             <img src="/portada-impaktemos.png" alt="Impaktemos" class="card-img" />
-            <h3>Impaktemos</h3><p class="card-company">Logística & Plataformas</p>
+            <h3>Impaktemos</h3>
+            <p class="card-company">Logística & Plataformas</p>
           </div>
         </div>
+        
         <div class="project-card" onclick="openModal('modal-panhouse')">
-          <div class="card-mac-header"><div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><span class="card-tag">05/05 &bull; PR Interno</span></div>
+          <div class="card-mac-header">
+            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+            <span class="project-num-tag">05</span>
+          </div>
           <div class="card-body">
             <img src="/portada-panhouse.png" alt="Editorial PanHouse" class="card-img" />
-            <h3>Editorial PanHouse</h3><p class="card-company">Comunicaciones Internas</p>
+            <h3>Editorial PanHouse</h3>
+            <p class="card-company">Comunicaciones Internas</p>
           </div>
         </div>
       </div>
@@ -254,9 +278,9 @@
     </div>
   </section>
 
-  <!-- 5. CONTACTO -->
-  <section id="contact" class="contact-section blur-backdrop-heavy fade-in-section delay-6">
-    <div class="contact-container mac-window">
+  <!-- 5. CONTACTO (DARK MODE) -->
+  <section id="contact" class="contact-section dark-theme blur-backdrop-heavy fade-in-section delay-6">
+    <div class="contact-container mac-window dark-form">
       <div class="contact-left">
         <h2 class="coffee-title">
           <span data-es="Tomemos un café virtual." data-en="Let's have a virtual coffee.">Tomemos un café virtual.</span>
@@ -271,7 +295,7 @@
         </div>
       </div>
 
-      <div class="contact-right glass-panel">
+      <div class="contact-right">
         <h3 style="margin-bottom: 24px; font-size: 1.8rem; font-weight: 800;" data-es="Déjame un mensaje." data-en="Leave me a message.">Déjame un mensaje.</h3>
         <form class="contact-form" id="wa-form" onsubmit="sendToWhatsApp(event)">
           <div class="input-group"><label data-es="Tu Nombre" data-en="Your Name">Tu Nombre</label><input type="text" id="wa-name" required placeholder="Ej. Ana Pérez" /></div>
@@ -533,7 +557,8 @@
   .sticker-plant { bottom: 20%; left: 8%; transform: rotate(-10deg); opacity: 0.6; }
   .sticker-sparkle { top: 40%; right: 5%; transform: rotate(5deg); }
   
-  .blur-backdrop-heavy { background: rgba(241, 245, 249, 0.6); backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px); border-top: 1px solid var(--glass-border); }
+  /* Filtro Dark */
+  .contact-section.dark-theme { background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-top: 1px solid rgba(255,255,255,0.1); }
 
   /* HERO */
   .hero-wrapper { position: relative; width: 100%; min-height: 100vh; overflow: hidden; z-index: 10; background: #000; }
@@ -543,10 +568,10 @@
   .top-header { position: relative; width: 100%; max-width: 1300px; margin: 0 auto; padding: 24px 32px; display: flex; justify-content: flex-end; align-items: center; z-index: 10; }
   .brand-centered { position: absolute; top: 38px; left: 50%; transform: translateX(-50%); font-weight: 900; font-size: 20px; letter-spacing: -0.02em; color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.4); white-space: nowrap; }
   
-  /* Botón de Idioma Estilo Píldora Negra */
-  .lang-switch { background: var(--glass-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); padding: 4px; border-radius: 30px; display: flex; align-items: center; gap: 4px; border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow); }
-  .lang-btn { background: transparent; border: none; font-weight: 700; font-size: 12px; color: #334155; cursor: pointer; padding: 6px 12px; border-radius: 20px; transition: all 0.3s ease; }
-  .lang-btn.active { background: var(--navy-dark); color: #ffffff; font-weight: 900; }
+  /* Botón de Idioma Estilo Píldora Negra Oscura */
+  .lang-switch.dark-mode { background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px); padding: 4px; border-radius: 30px; display: flex; align-items: center; gap: 4px; border: 1px solid rgba(255,255,255,0.1); }
+  .lang-btn { background: transparent; border: none; font-weight: 700; font-size: 12px; color: rgba(255,255,255,0.6); cursor: pointer; padding: 6px 12px; border-radius: 20px; transition: all 0.3s ease; }
+  .lang-btn.active { background: rgba(255,255,255,0.15); color: #ffffff; font-weight: 900; }
   .lang-divider { display: none; }
 
   .hero-container { max-width: 1300px; width: 100%; margin: auto auto; padding: 20px 32px 100px; display: grid; grid-template-columns: 320px 1fr 260px; gap: 24px; align-items: center; min-height: calc(100vh - 120px); position: relative; z-index: 10; }
@@ -554,11 +579,14 @@
   
   /* Tarjeta de Perfil Compacta */
   .glass-profile-card { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 24px; padding: 10px 14px; cursor: pointer; box-shadow: var(--glass-shadow); transition: all 0.4s; overflow: hidden; }
+  
   .card-min-header { display: flex; align-items: center; gap: 10px; transition: all 0.4s ease; flex-direction: row; }
-  .glass-profile-card.active .card-min-header { flex-direction: row; align-items: center; gap: 10px; }
   
   .shift-right { margin-left: 6px; } 
   .profile-thumb { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.9); transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); flex-shrink: 0; }
+  
+  /* Retorno al efecto que no desarma la tarjeta */
+  .glass-profile-card.active .card-min-header { flex-direction: row; align-items: center; gap: 10px; }
   .glass-profile-card.active .profile-thumb { width: 55px; height: 55px; border-width: 3px; border-radius: 50%; box-shadow: 0 8px 20px rgba(0,0,0,0.15); margin-left: 0; }
   
   .min-meta { display: flex; flex-direction: column; justify-content: center; }
@@ -569,6 +597,7 @@
   .name-group { display: flex; flex-direction: column; gap: 2px; }
   .min-name { font-size: 14px; font-weight: 900; letter-spacing: -0.01em; line-height: 1.1; }
   .min-title { font-size: 11.5px; font-weight: 700; opacity: 0.65; }
+  
   .card-expand-content { max-height: 0; opacity: 0; transition: all 0.5s; overflow: hidden; }
   .glass-profile-card.active .card-expand-content { max-height: 600px; opacity: 1; margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, 0.4); }
   .expand-bio { font-size: 14.5px; font-weight: 500; line-height: 1.55; margin-bottom: 16px; }
@@ -587,7 +616,10 @@
   .hero-center-text h1 { font-size: 4.8rem; font-weight: 900; line-height: 0.98; letter-spacing: -0.04em; text-transform: uppercase; margin: 0 auto; max-width: 900px; color: #ffffff; text-shadow: 0 8px 30px rgba(0,0,0,0.3); }
   .floating-pill { position: absolute; padding: 6px 14px; border-radius: 30px; font-size: 12px; font-weight: 800; white-space: nowrap; color: var(--navy-dark); pointer-events: none;}
   .pill-pink { background: var(--pastel-pink); top: -25px; right: 15px; transform: rotate(3deg); }
-  .pill-green { background: var(--pastel-green); top: 52%; left: -25px; transform: rotate(-6deg); }
+  
+  /* Ajuste de Pildora PM para no chocar */
+  .pill-green { background: var(--pastel-green); bottom: -30px; left: 10%; transform: rotate(-6deg); }
+  
   .pill-yellow { background: var(--pastel-yellow); bottom: -25px; right: 40px; transform: rotate(2deg); }
   
   /* CASOS DESTACADOS TIPO GLASS */
@@ -651,7 +683,7 @@
   .mac-dots { display: flex; gap: 6px; } 
   .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; } 
   .dot.red { background: #ff5f56; } .dot.yellow { background: #ffbd2e; } .dot.green { background: #27c93f; } 
-  .card-tag { font-size: 11px; font-weight: 800; color: var(--navy-dark); text-transform: uppercase; } 
+  .project-num-tag { font-family: monospace; font-size: 14px; font-weight: 800; color: var(--text-muted); opacity: 0.5; }
   .card-body { padding: 20px; text-align: center; } 
   .card-img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 16px; border: 1px solid rgba(0,0,0,0.05); } 
   .card-body h3 { font-size: 18px; margin: 0 0 6px; font-weight: 800; } 
@@ -669,41 +701,50 @@
   .service-block.open .service-block-body { max-height: 200px; opacity: 1; margin-top: 14px; }
   .service-block-body p { font-size: 1.05rem; line-height: 1.6; color: var(--text-muted); font-weight: 500; }
 
-  /* CONTACTO (Fondo Transparente en Izquierda) */
-  .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0; }
-  .contact-left { padding: 50px; background: transparent; border-right: 1px solid var(--border-color); }
+  /* CONTACTO DARK MODE */
+  .contact-section.dark-theme { background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-top: 1px solid rgba(255,255,255,0.1); }
+  .contact-section.dark-theme h2, .contact-section.dark-theme h3, .contact-section.dark-theme label { color: #ffffff !important; }
+  .contact-section.dark-theme p { color: #cbd5e1 !important; }
   
-  .coffee-title { display: flex; align-items: center; gap: 12px; font-size: 2.4rem; font-weight: 900; margin-bottom: 16px; color: var(--navy-dark); letter-spacing: -0.02em; }
-  .coffee-cup-svg { color: #8B5A2B; flex-shrink: 0;}
+  .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0; }
+  .contact-left { padding: 50px; border-right: 1px solid rgba(255,255,255,0.1); }
+  
+  .coffee-title { display: flex; align-items: center; gap: 12px; font-size: 2.4rem; font-weight: 900; margin-bottom: 16px; letter-spacing: -0.02em; }
+  .coffee-cup-svg { color: var(--pastel-yellow); flex-shrink: 0;}
   .steam { animation: rise 2s infinite ease-in-out; opacity: 0; }
   .steam-1 { animation-delay: 0s; } .steam-2 { animation-delay: 0.5s; } .steam-3 { animation-delay: 1s; }
   @keyframes rise { 0% { transform: translateY(0); opacity: 0.8; } 100% { transform: translateY(-6px); opacity: 0; } }
 
-  .contact-left p { font-size: 1.1rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 30px; font-weight: 500; }
+  .contact-left p { font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px; font-weight: 500; }
   
+  /* Iconos Sociales Discretos */
   .contact-socials-row { display: flex; gap: 16px; margin-top: 20px; }
-  .social-icon-btn { background: rgba(255,255,255,0.7); width: 54px; height: 54px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--navy-dark); border: 1px solid var(--border-color); transition: all 0.3s; }
-  .social-icon-btn:hover { background: white; transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); color: #000;}
+  .social-icon-btn { background: rgba(255,255,255,0.1); width: 54px; height: 54px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; border: 1px solid rgba(255,255,255,0.2); transition: all 0.3s; }
+  .social-icon-btn:hover { background: white; color: var(--navy-dark); transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
   
-  .glass-panel { background: rgba(255, 255, 255, 0.4); }
+  /* Panel Derecha Formulario Oscuro */
+  .glass-panel.dark-form { background: rgba(255, 255, 255, 0.05); border-left: none; }
   .contact-right { padding: 50px; }
   .contact-form { display: flex; flex-direction: column; gap: 20px; }
   .input-group { display: flex; flex-direction: column; gap: 8px; }
-  .input-group label { font-size: 0.9rem; font-weight: 800; color: var(--navy-dark); text-transform: uppercase; }
-  .input-group input, .input-group textarea { width: 100%; padding: 14px; border-radius: 8px; border: 1px solid var(--border-color); background: rgba(255,255,255,0.8); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1rem; color: var(--navy-dark); outline: none; transition: border 0.3s; }
-  .input-group input:focus, .input-group textarea:focus { border-color: var(--navy-dark); }
+  .input-group label { font-size: 0.9rem; font-weight: 800; text-transform: uppercase; }
+  
+  /* Inputs Oscuros */
+  .contact-form input, .contact-form textarea { width: 100%; padding: 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1rem; color: #ffffff; outline: none; transition: border 0.3s; }
+  .contact-form input::placeholder, .contact-form textarea::placeholder { color: rgba(255,255,255,0.4); }
+  .contact-form input:focus, .contact-form textarea:focus { border-color: #ffffff; }
   
   /* ESTILOS DE PRIVACIDAD EN FORMULARIO */
-  .privacy-disclaimer { background: rgba(15, 23, 42, 0.8); padding: 16px; border-radius: 8px; margin-top: 10px; border: 1px solid rgba(0,0,0,0.2); }
-  .privacy-disclaimer p { font-size: 0.85rem; color: rgba(255,255,255,0.8); line-height: 1.5; margin: 0; }
-  .privacy-link { color: #ef4444; text-decoration: underline; font-weight: 600; }
-  .privacy-link:hover { color: #f87171; }
+  .privacy-disclaimer { background: rgba(0, 0, 0, 0.4); padding: 16px; border-radius: 8px; margin-top: 10px; border: 1px solid rgba(255,255,255,0.1); }
+  .privacy-disclaimer p { font-size: 0.85rem; color: rgba(255,255,255,0.7) !important; line-height: 1.5; margin: 0; }
+  .privacy-link { color: var(--pastel-yellow); text-decoration: underline; font-weight: 600; }
+  .privacy-link:hover { color: #ffffff; }
   .privacy-checkbox-group { display: flex; align-items: center; gap: 10px; margin-top: 10px; }
-  .privacy-checkbox-group input { width: 18px; height: 18px; cursor: pointer; accent-color: var(--navy-dark); }
-  .privacy-checkbox-group label { font-size: 0.9rem; color: var(--navy-dark); font-weight: 600; cursor: pointer; }
+  .privacy-checkbox-group input { width: 18px; height: 18px; cursor: pointer; accent-color: var(--pastel-yellow); }
+  .privacy-checkbox-group label { font-size: 0.9rem; font-weight: 600; cursor: pointer; color: #cbd5e1 !important; }
 
-  .submit-btn { background: var(--navy-dark); color: white; border: none; padding: 16px; border-radius: 8px; font-size: 1.1rem; font-weight: 800; cursor: pointer; transition: background 0.3s; margin-top: 10px; }
-  .submit-btn:hover { background: #1e293b; }
+  .submit-btn { background: #ffffff; color: var(--navy-dark); border: none; padding: 16px; border-radius: 8px; font-size: 1.1rem; font-weight: 800; cursor: pointer; transition: background 0.3s; margin-top: 10px; }
+  .submit-btn:hover { background: var(--pastel-yellow); }
 
   /* FOOTER NEGRO SÓLIDO */
   .black-footer { background: #000000; color: rgba(255,255,255,0.6); padding: 40px 20px 120px; text-align: center; font-size: 0.95rem; font-weight: 600; position: relative; z-index: 5; border: none; }
@@ -747,7 +788,10 @@
     .left-col { order: 1; }
     .hero-center-text { order: 2; margin-top: 10px; }
     .glass-cases-card { order: 3; margin-top: 0; }
-    .hero-quote-corner { order: 4; position: relative; bottom: auto; left: auto; text-align: center; margin-top: 10px; margin-bottom: 20px; max-width: 100%;}
+    
+    /* FRASE GANCHO CON MÁS MARGEN ABAJO EN MÓVIL */
+    .hero-quote-corner { order: 4; position: relative; bottom: auto; left: auto; text-align: center; margin-top: 40px; margin-bottom: 20px; max-width: 100%;}
+    
     .hero-center-text h1 { font-size: 2.6rem; }
     .floating-pill { display: none; }
     .floating-dock { padding: 10px 16px; }
@@ -761,7 +805,7 @@
     .stats-grid-about { grid-template-columns: 1fr; gap: 16px; }
     .contact-container { grid-template-columns: 1fr; }
     .contact-left, .contact-right { padding: 30px; }
-    .contact-left { border-right: none; border-bottom: 1px solid var(--border-color); }
+    .contact-left { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
     .modal-content-scroll { padding: 20px; }
     .marquee-track { gap: 40px; }
     .project-card { flex: 1 1 100%; max-width: 100%; }
