@@ -37,15 +37,16 @@
 
     <header class="top-header">
       <div class="brand-centered">GREY SERRANO®</div>
+      <!-- Selector de idioma ajustado (Botones Negro tipo píldora) -->
       <div class="lang-switch">
         <button class="lang-btn active" onclick="setLanguage('es')">ES</button>
-        <span class="lang-divider">|</span>
         <button class="lang-btn" onclick="setLanguage('en')">EN</button>
       </div>
     </header>
 
     <main class="hero-container">
       <div class="left-col">
+        <!-- Tarjeta de Perfil Compacta -->
         <div class="glass-profile-card" onclick="this.classList.toggle('active')">
           <div class="card-min-header">
             <img src="/grey.jpeg" alt="Greydemar Serrano" class="profile-thumb shift-right" />
@@ -78,6 +79,7 @@
         <span class="floating-pill pill-pink">Growth Marketing</span><span class="floating-pill pill-green">Project Manager</span><span class="floating-pill pill-yellow">Visual Content</span>
       </div>
 
+      <!-- Tarjeta Casos Destacados en Glassmorphism -->
       <div class="glass-cases-card" onclick="this.classList.toggle('active')">
         <div class="cases-min-header">
           <span class="cases-title-text" data-es="Casos Destacados" data-en="Featured Cases">Casos Destacados</span>
@@ -85,16 +87,17 @@
         </div>
         <div class="cases-expand-content">
           <ul class="quick-cases-list">
-            <li><a href="#projects"><strong>01. YP Realty</strong><span>Growth +604%</span></a></li>
-            <li><a href="#projects"><strong>02. Eurobuilding</strong><span>Comunicaciones</span></a></li>
-            <li><a href="#projects"><strong>03. Dislocal</strong><span>Project Coordinator</span></a></li>
-            <li><a href="#projects"><strong>04. Impaktemos</strong><span>Coordinación Operativa</span></a></li>
-            <li><a href="#projects"><strong>05. PanHouse</strong><span>Comunicaciones Internas</span></a></li>
+            <!-- Enumeración visual externa -->
+            <li><span class="list-num">01/05</span> <a href="#projects"><strong>YP Realty</strong><span>Growth +604%</span></a></li>
+            <li><span class="list-num">02/05</span> <a href="#projects"><strong>Eurobuilding</strong><span>Comunicaciones</span></a></li>
+            <li><span class="list-num">03/05</span> <a href="#projects"><strong>Dislocal</strong><span>Project Coordinator</span></a></li>
+            <li><span class="list-num">04/05</span> <a href="#projects"><strong>Impaktemos</strong><span>Coordinación Operativa</span></a></li>
+            <li><span class="list-num">05/05</span> <a href="#projects"><strong>Editorial PanHouse</strong><span>Comunicaciones Internas</span></a></li>
           </ul>
         </div>
       </div>
 
-      <!-- FRASE GANCHO ESQUINA INFERIOR IZQUIERDA -->
+      <!-- FRASE GANCHO (Ajustada para estar debajo en móvil) -->
       <div class="hero-quote-corner">
         <span data-es="- Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar." data-en="- Invoicing is no accident. It depends on how they see you, how you connect, and how easy you make it to buy.">
           - Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar.
@@ -174,46 +177,47 @@
       </div>
 
       <div class="projects-grid">
+        <!-- Indicador de enumeración externa dentro de los headers de tarjeta -->
         <div class="project-card" onclick="openModal('modal-yprealty')">
-          <div class="card-mac-header"><div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><span class="card-tag">Growth</span></div>
+          <div class="card-mac-header"><div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><span class="card-tag">01/05 &bull; Growth</span></div>
           <div class="card-body">
             <img src="/portada-yprealty.png" alt="YP Realty" class="card-img" style="object-position: top center;" />
-            <h3>01. YP Realty</h3><p class="card-company">Growth +604%</p>
+            <h3>YP Realty</h3><p class="card-company">Growth +604%</p>
           </div>
         </div>
         <div class="project-card" onclick="openModal('modal-eurobuilding')">
-          <div class="card-mac-header"><div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><span class="card-tag">B2B & PR</span></div>
+          <div class="card-mac-header"><div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><span class="card-tag">02/05 &bull; B2B & PR</span></div>
           <div class="card-body">
             <img src="/portada-eurobuilding.png" alt="Eurobuilding" class="card-img" />
-            <h3>02. Eurobuilding</h3><p class="card-company">Business Center</p>
+            <h3>Eurobuilding</h3><p class="card-company">Business Center</p>
           </div>
         </div>
         <div class="project-card" onclick="openModal('modal-dislocal')">
-          <div class="card-mac-header"><div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><span class="card-tag">Project Mgmt</span></div>
+          <div class="card-mac-header"><div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><span class="card-tag">03/05 &bull; Project Mgmt</span></div>
           <div class="card-body">
             <img src="/portada-dislocal.png" alt="Dislocal" class="card-img" />
-            <h3>03. Dislocal</h3><p class="card-company">Coordinación Logística</p>
+            <h3>Dislocal</h3><p class="card-company">Coordinación Logística</p>
           </div>
         </div>
         <div class="project-card" onclick="openModal('modal-impaktemos')">
-          <div class="card-mac-header"><div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><span class="card-tag">Operativa</span></div>
+          <div class="card-mac-header"><div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><span class="card-tag">04/05 &bull; Operativa</span></div>
           <div class="card-body">
             <img src="/portada-impaktemos.png" alt="Impaktemos" class="card-img" />
-            <h3>04. Impaktemos</h3><p class="card-company">Logística & Plataformas</p>
+            <h3>Impaktemos</h3><p class="card-company">Logística & Plataformas</p>
           </div>
         </div>
         <div class="project-card" onclick="openModal('modal-panhouse')">
-          <div class="card-mac-header"><div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><span class="card-tag">PR Interno</span></div>
+          <div class="card-mac-header"><div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div><span class="card-tag">05/05 &bull; PR Interno</span></div>
           <div class="card-body">
             <img src="/portada-panhouse.png" alt="Editorial PanHouse" class="card-img" />
-            <h3>05. Editorial PanHouse</h3><p class="card-company">Comunicaciones Internas</p>
+            <h3>Editorial PanHouse</h3><p class="card-company">Comunicaciones Internas</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4. SERVICIOS (SIN BLUR, FONDO FIJO TRANSPARENTE) -->
+  <!-- 4. SERVICIOS -->
   <section id="services" class="services-section fade-in-section delay-5">
     <div class="services-container">
       <div class="sticky-note">
@@ -312,7 +316,10 @@
         <div class="modal-title-row">
           <div class="title-with-logo">
             <img src="/logo-yprealty.png" alt="YP Realty Logo" class="modal-company-logo">
-            <h2>01. YP Realty</h2>
+            <div class="title-text-group">
+              <span class="project-counter">Proyecto 01 / 05</span>
+              <h2>YP Realty</h2>
+            </div>
           </div>
           <a href="#" target="_blank" class="preview-link">Ver Proyecto</a>
         </div>
@@ -338,7 +345,10 @@
         <div class="modal-title-row">
           <div class="title-with-logo">
             <img src="/logo-eurobuilding.png" alt="Eurobuilding Logo" class="modal-company-logo">
-            <h2>02. Eurobuilding</h2>
+            <div class="title-text-group">
+              <span class="project-counter">Proyecto 02 / 05</span>
+              <h2>Eurobuilding</h2>
+            </div>
           </div>
           <a href="#" target="_blank" class="preview-link">Ver Proyecto</a>
         </div>
@@ -364,7 +374,10 @@
         <div class="modal-title-row">
           <div class="title-with-logo">
             <img src="/logo dislocal.png" alt="Dislocal Logo" class="modal-company-logo">
-            <h2>03. Dislocal</h2>
+            <div class="title-text-group">
+              <span class="project-counter">Proyecto 03 / 05</span>
+              <h2>Dislocal</h2>
+            </div>
           </div>
           <a href="#" target="_blank" class="preview-link">Ver Proyecto</a>
         </div>
@@ -390,7 +403,10 @@
         <div class="modal-title-row">
           <div class="title-with-logo">
             <img src="/logo impaktemos.png" alt="Impaktemos Logo" class="modal-company-logo">
-            <h2>04. Impaktemos (Plataforma "Las Minitas")</h2>
+            <div class="title-text-group">
+              <span class="project-counter">Proyecto 04 / 05</span>
+              <h2>Impaktemos</h2>
+            </div>
           </div>
           <a href="#" target="_blank" class="preview-link">Ver Proyecto</a>
         </div>
@@ -416,7 +432,10 @@
         <div class="modal-title-row">
           <div class="title-with-logo">
             <img src="/logo-panhouse.png" alt="PanHouse Logo" class="modal-company-logo">
-            <h2>05. PanHouse, Casa Editorial</h2>
+            <div class="title-text-group">
+              <span class="project-counter">Proyecto 05 / 05</span>
+              <h2>Editorial PanHouse</h2>
+            </div>
           </div>
           <a href="#" target="_blank" class="preview-link">Ver Proyecto</a>
         </div>
@@ -523,23 +542,24 @@
   .avila-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.35); }
   .top-header { position: relative; width: 100%; max-width: 1300px; margin: 0 auto; padding: 24px 32px; display: flex; justify-content: flex-end; align-items: center; z-index: 10; }
   .brand-centered { position: absolute; top: 38px; left: 50%; transform: translateX(-50%); font-weight: 900; font-size: 20px; letter-spacing: -0.02em; color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.4); white-space: nowrap; }
-  .lang-switch { background: var(--glass-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); padding: 6px 14px; border-radius: 30px; display: flex; align-items: center; gap: 8px; border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow); }
-  .lang-btn { background: none; border: none; font-weight: 700; font-size: 12px; color: #334155; cursor: pointer; }
-  .lang-btn.active { color: var(--navy-dark); font-weight: 900; }
-  .lang-divider { color: #94a3b8; font-size: 12px; }
+  
+  /* Botón de Idioma Estilo Píldora Negra */
+  .lang-switch { background: var(--glass-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); padding: 4px; border-radius: 30px; display: flex; align-items: center; gap: 4px; border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow); }
+  .lang-btn { background: transparent; border: none; font-weight: 700; font-size: 12px; color: #334155; cursor: pointer; padding: 6px 12px; border-radius: 20px; transition: all 0.3s ease; }
+  .lang-btn.active { background: var(--navy-dark); color: #ffffff; font-weight: 900; }
+  .lang-divider { display: none; }
 
   .hero-container { max-width: 1300px; width: 100%; margin: auto auto; padding: 20px 32px 100px; display: grid; grid-template-columns: 320px 1fr 260px; gap: 24px; align-items: center; min-height: calc(100vh - 120px); position: relative; z-index: 10; }
   .left-col { display: flex; flex-direction: column; gap: 28px; }
   
-  .glass-profile-card { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 24px; padding: 16px 20px; cursor: pointer; box-shadow: var(--glass-shadow); transition: all 0.4s; overflow: hidden; }
+  /* Tarjeta de Perfil Compacta */
+  .glass-profile-card { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 24px; padding: 10px 14px; cursor: pointer; box-shadow: var(--glass-shadow); transition: all 0.4s; overflow: hidden; }
+  .card-min-header { display: flex; align-items: center; gap: 10px; transition: all 0.4s ease; flex-direction: row; }
+  .glass-profile-card.active .card-min-header { flex-direction: row; align-items: center; gap: 10px; }
   
-  /* Retorno al efecto original de la tarjeta Hero (horizontal con expansión sutil) */
-  .card-min-header { display: flex; align-items: center; gap: 14px; transition: all 0.4s ease; flex-direction: row; }
-  .glass-profile-card.active .card-min-header { flex-direction: row; align-items: center; gap: 16px; }
-  
-  .shift-right { margin-left: 12px; } 
-  .profile-thumb { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.9); transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); flex-shrink: 0; }
-  .glass-profile-card.active .profile-thumb { width: 85px; height: 85px; border-width: 3px; border-radius: 50%; box-shadow: 0 8px 20px rgba(0,0,0,0.15); margin-left: 0; }
+  .shift-right { margin-left: 6px; } 
+  .profile-thumb { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.9); transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); flex-shrink: 0; }
+  .glass-profile-card.active .profile-thumb { width: 55px; height: 55px; border-width: 3px; border-radius: 50%; box-shadow: 0 8px 20px rgba(0,0,0,0.15); margin-left: 0; }
   
   .min-meta { display: flex; flex-direction: column; justify-content: center; }
   .status-line { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
@@ -547,11 +567,11 @@
   .green-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: blink-green 2.5s infinite; }
   .status-text { font-size: 11px; font-weight: 700; color: #1e293b; }
   .name-group { display: flex; flex-direction: column; gap: 2px; }
-  .min-name { font-size: 15px; font-weight: 900; letter-spacing: -0.01em; line-height: 1.1; }
+  .min-name { font-size: 14px; font-weight: 900; letter-spacing: -0.01em; line-height: 1.1; }
   .min-title { font-size: 11.5px; font-weight: 700; opacity: 0.65; }
   .card-expand-content { max-height: 0; opacity: 0; transition: all 0.5s; overflow: hidden; }
-  .glass-profile-card.active .card-expand-content { max-height: 600px; opacity: 1; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.4); }
-  .expand-bio { font-size: 15px; font-weight: 500; line-height: 1.55; margin-bottom: 16px; }
+  .glass-profile-card.active .card-expand-content { max-height: 600px; opacity: 1; margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, 0.4); }
+  .expand-bio { font-size: 14.5px; font-weight: 500; line-height: 1.55; margin-bottom: 16px; }
   .expand-bio strong { font-weight: 900; color: #000; }
   
   .skills-title { font-size: 11px; font-weight: 800; color: var(--navy-dark); text-transform: uppercase; margin-bottom: 8px; opacity: 0.8; }
@@ -570,16 +590,19 @@
   .pill-green { background: var(--pastel-green); top: 52%; left: -25px; transform: rotate(-6deg); }
   .pill-yellow { background: var(--pastel-yellow); bottom: -25px; right: 40px; transform: rotate(2deg); }
   
-  .glass-cases-card { background: rgba(15, 23, 42, 0.5); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 20px; padding: 14px 18px; cursor: pointer; transition: all 0.4s; overflow: hidden; }
+  /* CASOS DESTACADOS TIPO GLASS */
+  .glass-cases-card { background: var(--glass-bg); backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 20px; padding: 14px 18px; cursor: pointer; transition: all 0.4s; overflow: hidden; box-shadow: var(--glass-shadow); }
   .cases-min-header { display: flex; align-items: center; justify-content: space-between; }
-  .cases-title-text { font-size: 14px; font-weight: 700; color: #ffffff; }
-  .search-icon-wrapper { background: rgba(255, 255, 255, 0.15); border-radius: 50%; padding: 6px; display: flex; color: #ffffff; }
+  .cases-title-text { font-size: 14px; font-weight: 800; color: var(--navy-dark); }
+  .search-icon-wrapper { background: rgba(0, 0, 0, 0.05); border-radius: 50%; padding: 6px; display: flex; color: var(--navy-dark); }
   .cases-expand-content { max-height: 0; opacity: 0; transition: all 0.5s; }
   .glass-cases-card.active .cases-expand-content { max-height: 350px; opacity: 1; margin-top: 14px; }
   .quick-cases-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-  .quick-cases-list a { text-decoration: none; color: #ffffff; display: flex; flex-direction: column; font-size: 13.5px; }
-  .quick-cases-list strong { font-weight: 800; color: #ffffff;}
-  .quick-cases-list span { font-size: 11px; color: #cbd5e1; margin-top: 2px;}
+  .quick-cases-list li { display: flex; align-items: flex-start; gap: 8px; }
+  .list-num { font-size: 10px; font-weight: 800; color: #94a3b8; margin-top: 3px; font-family: monospace; }
+  .quick-cases-list a { text-decoration: none; display: flex; flex-direction: column; font-size: 13.5px; }
+  .quick-cases-list strong { font-weight: 800; color: var(--navy-dark);}
+  .quick-cases-list span { font-size: 11px; color: var(--text-muted); margin-top: 2px;}
 
   /* MARQUEE REDUCIDO */
   .marquee-section { width: 100%; background: #ffffff; padding: 15px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); z-index: 5; position: relative; overflow: hidden; }
@@ -698,6 +721,8 @@
   .modal-title-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; } 
   .title-with-logo { display: flex; align-items: center; gap: 12px; }
   .modal-company-logo { height: 32px; width: auto; border-radius: 6px; }
+  .title-text-group { display: flex; flex-direction: column; }
+  .project-counter { font-size: 11px; font-weight: 800; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px; }
   .modal-title-row h2 { font-size: 24px; margin: 0; font-weight: 900; color: var(--navy-dark); } 
   .preview-link { background: var(--pastel-yellow); color: var(--navy-dark); padding: 8px 18px; border-radius: 30px; text-decoration: none; font-size: 12px; font-weight: 800; } 
   .modal-description { font-size: 15px; line-height: 1.6; color: var(--text-muted); margin-bottom: 28px; font-weight: 500; } 
@@ -719,11 +744,10 @@
   @media (max-width: 900px) {
     .brand-centered { font-size: 16px; top: 20px; }
     .hero-container { display: flex; flex-direction: column; gap: 16px; margin-top: 50px; }
-    .left-col { display: contents; } 
-    .glass-profile-card { order: 1; }
+    .left-col { order: 1; }
     .hero-center-text { order: 2; margin-top: 10px; }
     .glass-cases-card { order: 3; margin-top: 0; }
-    .hero-quote-corner { position: relative; bottom: auto; left: auto; text-align: center; margin-top: 10px; margin-bottom: 20px; max-width: 100%;}
+    .hero-quote-corner { order: 4; position: relative; bottom: auto; left: auto; text-align: center; margin-top: 10px; margin-bottom: 20px; max-width: 100%;}
     .hero-center-text h1 { font-size: 2.6rem; }
     .floating-pill { display: none; }
     .floating-dock { padding: 10px 16px; }
