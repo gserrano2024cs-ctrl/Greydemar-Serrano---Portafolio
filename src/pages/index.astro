@@ -103,10 +103,10 @@
         <div class="cases-expand-content">
           <ul class="quick-cases-list">
             <li><a href="#projects" onclick="setTimeout(() => openModal('modal-yprealty'), 400);"><strong>YP Realty</strong><span data-es="Growth +604%" data-en="Growth +604%">Growth +604%</span></a></li>
+            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-panhouse'), 400);"><strong>Editorial PanHouse</strong><span data-es="Comunicaciones Internas" data-en="Internal Comms">Comunicaciones Internas</span></a></li>
             <li><a href="#projects" onclick="setTimeout(() => openModal('modal-eurobuilding'), 400);"><strong>Eurobuilding</strong><span data-es="Comunicaciones & Ventas" data-en="Comms & Sales">Comunicaciones & Ventas</span></a></li>
             <li><a href="#projects" onclick="setTimeout(() => openModal('modal-dislocal'), 400);"><strong>Dislocal</strong><span data-es="Project Coordinator" data-en="Project Coordinator">Project Coordinator</span></a></li>
             <li><a href="#projects" onclick="setTimeout(() => openModal('modal-impaktemos'), 400);"><strong>Impaktemos</strong><span data-es="Coordinación Operativa" data-en="Operational Coordination">Coordinación Operativa</span></a></li>
-            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-panhouse'), 400);"><strong>Editorial PanHouse</strong><span data-es="Comunicaciones Internas" data-en="Internal Comms">Comunicaciones Internas</span></a></li>
             <li><a href="#projects" onclick="setTimeout(() => openModal('modal-freelance'), 400);"><strong>Freelance</strong><span data-es="Diseño & Web" data-en="Design & Web">Diseño & Web</span></a></li>
           </ul>
         </div>
@@ -187,11 +187,24 @@
             <p class="card-company" data-es="Growth +604%" data-en="Growth +604%">Growth +604%</p>
           </div>
         </div>
+
+        <!-- MOVIMOS PANHOUSE A LA POSICIÓN 02 -->
+        <div class="project-card" onclick="openModal('modal-panhouse')">
+          <div class="card-mac-header">
+            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+            <span class="project-num-tag">02</span>
+          </div>
+          <div class="card-body">
+            <img src="/portada-panhouse.png" alt="Editorial PanHouse" class="card-img" />
+            <h3>Editorial PanHouse</h3>
+            <p class="card-company" data-es="Comunicaciones Internas" data-en="Internal Comms">Comunicaciones Internas</p>
+          </div>
+        </div>
         
         <div class="project-card" onclick="openModal('modal-eurobuilding')">
           <div class="card-mac-header">
             <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-            <span class="project-num-tag">02</span>
+            <span class="project-num-tag">03</span>
           </div>
           <div class="card-body">
             <img src="/portada-eurobuilding.png" alt="Eurobuilding" class="card-img" />
@@ -203,7 +216,7 @@
         <div class="project-card" onclick="openModal('modal-dislocal')">
           <div class="card-mac-header">
             <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-            <span class="project-num-tag">03</span>
+            <span class="project-num-tag">04</span>
           </div>
           <div class="card-body">
             <img src="/portada-dislocal.png" alt="Dislocal" class="card-img" />
@@ -215,24 +228,12 @@
         <div class="project-card" onclick="openModal('modal-impaktemos')">
           <div class="card-mac-header">
             <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-            <span class="project-num-tag">04</span>
+            <span class="project-num-tag">05</span>
           </div>
           <div class="card-body">
             <img src="/portada-impaktemos.png" alt="Impaktemos" class="card-img" />
             <h3>Impaktemos</h3>
             <p class="card-company" data-es="Logística & Plataformas" data-en="Logistics & Platforms">Logística & Plataformas</p>
-          </div>
-        </div>
-        
-        <div class="project-card" onclick="openModal('modal-panhouse')">
-          <div class="card-mac-header">
-            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-            <span class="project-num-tag">05</span>
-          </div>
-          <div class="card-body">
-            <img src="/portada-panhouse.png" alt="Editorial PanHouse" class="card-img" />
-            <h3>Editorial PanHouse</h3>
-            <p class="card-company" data-es="Comunicaciones Internas" data-en="Internal Comms">Comunicaciones Internas</p>
           </div>
         </div>
 
@@ -337,17 +338,29 @@
 
   <!-- FOOTER NEGRO -->
   <footer class="site-footer black-footer">
+    
     <!-- Easter Egg: Recordatorio (Lucas 24, 25-33) -->
     <div class="hidden-eyes-container" title="Lucas 24:31">
-      <svg width="45" height="15" viewBox="0 0 100 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g class="blinking-eyes">
-          <path d="M10,15 Q25,0 40,15 Q25,30 10,15 Z" stroke="#ffffff" stroke-width="3" fill="none"/>
-          <circle cx="25" cy="15" r="4.5" fill="#ffffff"/>
-          <path d="M60,15 Q75,0 90,15 Q75,30 60,15 Z" stroke="#ffffff" stroke-width="3" fill="none"/>
-          <circle cx="75" cy="15" r="4.5" fill="#ffffff"/>
-        </g>
-      </svg>
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <svg width="60" height="25" viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g class="blinking-eyes">
+            <!-- Pestañas Izquierda -->
+            <path d="M15,10 L10,0 M25,8 L25,-2 M35,10 L40,0" stroke="#ffffff" stroke-width="1.5"/>
+            <!-- Ojo Izquierdo -->
+            <path d="M10,20 Q25,5 40,20 Q25,35 10,20 Z" stroke="#ffffff" stroke-width="2.5" fill="none"/>
+            <circle cx="25" cy="20" r="4.5" fill="#ffffff"/>
+
+            <!-- Pestañas Derecha -->
+            <path d="M65,10 L60,0 M75,8 L75,-2 M85,10 L90,0" stroke="#ffffff" stroke-width="1.5"/>
+            <!-- Ojo Derecho -->
+            <path d="M60,20 Q75,5 90,20 Q75,35 60,20 Z" stroke="#ffffff" stroke-width="2.5" fill="none"/>
+            <circle cx="75" cy="20" r="4.5" fill="#ffffff"/>
+          </g>
+        </svg>
+        <span style="font-size: 9px; letter-spacing: 2px; color: #ffffff; margin-top: 6px; font-weight: 700;">LUCAS 24, 25-33</span>
+      </div>
     </div>
+
     <p data-es="© 2026 Greydemar Serrano. Todos los derechos reservados." data-en="© 2026 Greydemar Serrano. All rights reserved.">© 2026 Greydemar Serrano. Todos los derechos reservados.</p>
   </footer>
 
@@ -401,6 +414,44 @@
     </div>
   </div>
 
+  <div id="modal-panhouse" class="modal-overlay" onclick="closeModalOutside(event, 'modal-panhouse')">
+    <div class="modal-window">
+      <div class="modal-mac-bar">
+        <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+        <div class="modal-search-bar">editorialpanhouse.com</div>
+        <button class="close-btn-text" onclick="closeModal('modal-panhouse')" data-es="Cerrar" data-en="Close">Cerrar</button>
+      </div>
+      <div class="modal-content-scroll">
+        <div class="modal-hero-banner"><img src="/portada-panhouse.png" alt="PanHouse Banner" /></div>
+        <div class="modal-title-row">
+          <div class="title-text-group">
+            <span class="project-counter" data-es="Proyecto 02 / 06" data-en="Project 02 / 06">Proyecto 02 / 06</span>
+            <h2>Editorial PanHouse</h2>
+          </div>
+        </div>
+        <p class="modal-description" data-es="Sincronicé las operaciones diarias entre los departamentos de Marketing, Ventas y Relaciones Públicas, garantizando la ejecución de eventos VIP. Diseñé e integré sistemas de automatización con IA que redujeron drásticamente los tiempos de atención y estandarizaron la comunicación corporativa." data-en="I synchronized daily operations between the Marketing, Sales, and Public Relations departments, ensuring the execution of VIP events. I designed and integrated AI automation systems that drastically reduced response times and standardized corporate communication.">Sincronicé las operaciones diarias entre los departamentos de Marketing, Ventas y Relaciones Públicas, garantizando la ejecución de eventos VIP. Diseñé e integré sistemas de automatización con IA que redujeron drásticamente los tiempos de atención y estandarizaron la comunicación corporativa.</p>
+        <div class="metadata-grid">
+          <div><span class="meta-label" data-es="Rol" data-en="Role">Rol</span><span class="meta-val" data-es="Coord. Comunicaciones Internas" data-en="Internal Comms Coordinator">Coord. Comunicaciones Internas</span></div>
+          <div><span class="meta-label" data-es="Herramientas" data-en="Tools">Herramientas</span><span class="meta-val">Meta Business Suite, CRM, Email Marketing</span></div>
+          <div><span class="meta-label" data-es="Inicio" data-en="Start">Inicio</span><span class="meta-val">2024</span></div>
+        </div>
+        <div class="modal-gallery-container">
+          <h3 data-es="Galería del Proyecto (Haz clic para ampliar)" data-en="Project Gallery (Click to expand)">Galería del Proyecto (Haz clic para ampliar)</h3>
+          <div class="gallery-vertical-feed">
+            <video playsinline loop muted autoplay class="gallery-item video-vertical" data-caption="Cobertura de comunicación en PanHouse" onclick="openGalleryZoom(this)" style="background:#000;">
+              <source src="/video panhouse.mp4" type="video/mp4" />
+            </video>
+            <video playsinline loop muted autoplay class="gallery-item video-vertical" data-caption="Campañas audiovisuales y cobertura de eventos" onclick="openGalleryZoom(this)" style="background:#000;">
+              <source src="/ph.mp4" type="video/mp4" />
+            </video>
+            <img src="/evento ph.png" alt="Evento VIP Editorial PanHouse" class="gallery-item w-full-img" data-caption="Ejecución de Evento VIP" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
+            <img src="/manychat.png" alt="Automatización ManyChat" class="gallery-item w-full-img" data-caption="Flujos de automatización de atención con IA (ManyChat)" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div id="modal-eurobuilding" class="modal-overlay" onclick="closeModalOutside(event, 'modal-eurobuilding')">
     <div class="modal-window">
       <div class="modal-mac-bar">
@@ -412,7 +463,7 @@
         <div class="modal-hero-banner"><img src="/portada-eurobuilding.png" alt="Eurobuilding Banner" /></div>
         <div class="modal-title-row">
           <div class="title-text-group">
-            <span class="project-counter" data-es="Proyecto 02 / 06" data-en="Project 02 / 06">Proyecto 02 / 06</span>
+            <span class="project-counter" data-es="Proyecto 03 / 06" data-en="Project 03 / 06">Proyecto 03 / 06</span>
             <h2>Eurobuilding</h2>
           </div>
         </div>
@@ -447,7 +498,7 @@
         <div class="modal-hero-banner"><img src="/portada-dislocal.png" alt="Dislocal Banner" /></div>
         <div class="modal-title-row">
           <div class="title-text-group">
-            <span class="project-counter" data-es="Proyecto 03 / 06" data-en="Project 03 / 06">Proyecto 03 / 06</span>
+            <span class="project-counter" data-es="Proyecto 04 / 06" data-en="Project 04 / 06">Proyecto 04 / 06</span>
             <h2>Dislocal</h2>
           </div>
           <a href="https://www.dislocal.org/" target="_blank" class="simple-modal-link" data-es="🌐 Visitar Sitio Web" data-en="🌐 Visit Website">🌐 Visitar Sitio Web</a>
@@ -461,6 +512,15 @@
         <div class="modal-gallery-container">
           <h3 data-es="Galería del Proyecto (Haz clic para ampliar)" data-en="Project Gallery (Click to expand)">Galería del Proyecto (Haz clic para ampliar)</h3>
           <div class="gallery-vertical-feed">
+            <video playsinline loop muted autoplay class="gallery-item video-vertical" data-caption="Proyecto Dislocal en acción" onclick="openGalleryZoom(this)" style="background:#000;">
+              <source src="/video dislocal.mp4" type="video/mp4" />
+            </video>
+            <video playsinline loop muted autoplay class="gallery-item video-vertical" data-caption="Navegación web Dislocal" onclick="openGalleryZoom(this)" style="background:#000;">
+              <source src="/web dislocal.mp4" type="video/mp4" />
+            </video>
+            <video playsinline loop muted autoplay class="gallery-item video-vertical" data-caption="Despliegue logístico y cobertura en Cerro Verde" onclick="openGalleryZoom(this)" style="background:#000;">
+              <source src="/cerro verde.mp4" type="video/mp4" />
+            </video>
             <img src="/dislocal 1.png" alt="Logística y trabajo de campo" class="gallery-item w-full-img" data-caption="Evento social para la comunidad del Calvario en el cine." onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
             <img src="/dislocal 202.png" alt="Organización de eventos Dislocal" class="gallery-item w-full-img" data-caption="Documentación de la vida cotidiana en el Calvario." onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
             <img src="/imagen trello dislocal (2).png" alt="Tablero Trello" class="gallery-item w-full-img" data-caption="Coordinación de recursos y tareas en Trello" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
@@ -481,7 +541,7 @@
         <div class="modal-hero-banner"><img src="/portada-impaktemos.png" alt="Impaktemos Banner" /></div>
         <div class="modal-title-row">
           <div class="title-text-group">
-            <span class="project-counter" data-es="Proyecto 04 / 06" data-en="Project 04 / 06">Proyecto 04 / 06</span>
+            <span class="project-counter" data-es="Proyecto 05 / 06" data-en="Project 05 / 06">Proyecto 05 / 06</span>
             <h2>Impaktemos</h2>
           </div>
           <a href="https://minitas-mission-guide.lovable.app/" target="_blank" class="simple-modal-link" data-es="🌐 Ver Landing Page" data-en="🌐 View Landing Page">🌐 Ver Landing Page</a>
@@ -498,43 +558,11 @@
             <video playsinline loop muted autoplay class="gallery-item video-vertical" data-caption="Plataforma Las Minitas en acción" onclick="openGalleryZoom(this)" style="background:#000;">
               <source src="/video plataforma.mp4" type="video/mp4" />
             </video>
+            <video playsinline loop muted autoplay class="gallery-item video-vertical" data-caption="Intervención logística en Ciudad Piar, La Guaira." onclick="openGalleryZoom(this)" style="background:#000;">
+              <source src="/ciudad piar.mp4" type="video/mp4" />
+            </video>
             <img src="/impaktemos 1.png" alt="Refuerzo escolar" class="gallery-item w-full-img" data-caption="Refuerzo escolar en plataforma las minitas." onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
             <img src="/landingpage platafoma.png" alt="Diseño de Landing Page" class="gallery-item w-full-img" data-caption="Diseño UI/UX de la Landing Page" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="modal-panhouse" class="modal-overlay" onclick="closeModalOutside(event, 'modal-panhouse')">
-    <div class="modal-window">
-      <div class="modal-mac-bar">
-        <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-        <div class="modal-search-bar">editorialpanhouse.com</div>
-        <button class="close-btn-text" onclick="closeModal('modal-panhouse')" data-es="Cerrar" data-en="Close">Cerrar</button>
-      </div>
-      <div class="modal-content-scroll">
-        <div class="modal-hero-banner"><img src="/portada-panhouse.png" alt="PanHouse Banner" /></div>
-        <div class="modal-title-row">
-          <div class="title-text-group">
-            <span class="project-counter" data-es="Proyecto 05 / 06" data-en="Project 05 / 06">Proyecto 05 / 06</span>
-            <h2>Editorial PanHouse</h2>
-          </div>
-        </div>
-        <p class="modal-description" data-es="Sincronicé las operaciones diarias entre los departamentos de Marketing, Ventas y Relaciones Públicas, garantizando la ejecución de eventos VIP. Diseñé e integré sistemas de automatización con IA que redujeron drásticamente los tiempos de atención y estandarizaron la comunicación corporativa." data-en="I synchronized daily operations between the Marketing, Sales, and Public Relations departments, ensuring the execution of VIP events. I designed and integrated AI automation systems that drastically reduced response times and standardized corporate communication.">Sincronicé las operaciones diarias entre los departamentos de Marketing, Ventas y Relaciones Públicas, garantizando la ejecución de eventos VIP. Diseñé e integré sistemas de automatización con IA que redujeron drásticamente los tiempos de atención y estandarizaron la comunicación corporativa.</p>
-        <div class="metadata-grid">
-          <div><span class="meta-label" data-es="Rol" data-en="Role">Rol</span><span class="meta-val" data-es="Coord. Comunicaciones Internas" data-en="Internal Comms Coordinator">Coord. Comunicaciones Internas</span></div>
-          <div><span class="meta-label" data-es="Herramientas" data-en="Tools">Herramientas</span><span class="meta-val">Meta Business Suite, CRM, Email Marketing</span></div>
-          <div><span class="meta-label" data-es="Inicio" data-en="Start">Inicio</span><span class="meta-val">2024</span></div>
-        </div>
-        <div class="modal-gallery-container">
-          <h3 data-es="Galería del Proyecto (Haz clic para ampliar)" data-en="Project Gallery (Click to expand)">Galería del Proyecto (Haz clic para ampliar)</h3>
-          <div class="gallery-vertical-feed">
-            <video playsinline loop muted autoplay class="gallery-item video-vertical" data-caption="Cobertura de comunicación en PanHouse" onclick="openGalleryZoom(this)" style="background:#000;">
-              <source src="/video panhouse.mp4" type="video/mp4" />
-            </video>
-            <img src="/evento ph.png" alt="Evento VIP Editorial PanHouse" class="gallery-item w-full-img" data-caption="Ejecución de Evento VIP" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
-            <img src="/manychat.png" alt="Automatización ManyChat" class="gallery-item w-full-img" data-caption="Flujos de automatización de atención con IA (ManyChat)" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
           </div>
         </div>
       </div>
@@ -565,14 +593,16 @@
         <div class="modal-gallery-container">
           <h3 data-es="Casos de Diseño y Web" data-en="Design & Web Cases">Casos de Diseño y Web</h3>
           <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 12px; font-weight: 500;" data-es="Diseño de interfaz de sitios web e identidad de materiales POP corporativos." data-en="Website UI design and corporate POP materials identity.">Diseño de interfaz de sitios web e identidad de materiales POP corporativos.</p>
-          <div class="gallery-vertical-feed">
-            <video playsinline loop muted autoplay class="gallery-item video-vertical" data-caption="Diseño Web - Laura Navarro" onclick="openGalleryZoom(this)" style="background:#000;">
+          
+          <!-- GALERÍA HORIZONTAL SOLO PARA FREELANCE -->
+          <div class="gallery-horizontal-stack">
+            <video playsinline loop muted autoplay class="gallery-item video-horizontal" data-caption="Diseño Web - Laura Navarro" onclick="openGalleryZoom(this)">
               <source src="/laura navarro.mp4" type="video/mp4" />
             </video>
-            <video playsinline loop muted autoplay class="gallery-item video-vertical" data-caption="Diseño Web - Bea Briceño" onclick="openGalleryZoom(this)" style="background:#000;">
+            <video playsinline loop muted autoplay class="gallery-item video-horizontal" data-caption="Diseño Web - Bea Briceño" onclick="openGalleryZoom(this)">
               <source src="/bea briceño.mp4" type="video/mp4" />
             </video>
-            <video playsinline loop muted autoplay class="gallery-item video-vertical" data-caption="Diseño Web - Mario Briceño Iragorry" onclick="openGalleryZoom(this)" style="background:#000;">
+            <video playsinline loop muted autoplay class="gallery-item video-horizontal" data-caption="Diseño Web - Mario Briceño Iragorry" onclick="openGalleryZoom(this)">
               <source src="/mbi.mp4" type="video/mp4" />
             </video>
             <img src="/freelance.png" alt="Sitio Web de Laura Navarro" class="gallery-item w-full-img" data-caption="Diseño Web Laura Navarro" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
@@ -897,7 +927,7 @@
   /* FOOTER NEGRO SÓLIDO Y ANIMACIÓN DE OJOS */
   .black-footer { background: #000000; color: rgba(255,255,255,0.6); padding: 30px 20px 120px; text-align: center; font-size: 0.95rem; font-weight: 600; position: relative; z-index: 5; border: none; }
   
-  .hidden-eyes-container { display: flex; justify-content: center; margin-bottom: 20px; opacity: 0.04; pointer-events: none; }
+  .hidden-eyes-container { display: flex; justify-content: center; margin-bottom: 20px; opacity: 0.06; pointer-events: none; }
   .blinking-eyes { transform-origin: center; animation: subtle-blink 5s infinite; }
   @keyframes subtle-blink {
     0%, 92%, 96%, 100% { transform: scaleY(1); }
@@ -929,11 +959,13 @@
   .modal-gallery-container h3 { font-size: 1.2rem; font-weight: 900; color: var(--navy-dark); margin-bottom: 16px; }
   
   .gallery-vertical-feed { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; width: 100%; }
+  .gallery-horizontal-stack { display: flex; flex-direction: column; gap: 20px; width: 100%; }
   
   .gallery-item { width: 100%; border-radius: 12px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 4px 15px rgba(0,0,0,0.05); cursor: zoom-in; transition: transform 0.3s ease; object-fit: cover; }
   .gallery-item:hover { transform: translateY(-4px); }
   
   .video-vertical { aspect-ratio: 9/16; min-height: 400px; background: #000; }
+  .video-horizontal { aspect-ratio: 16/9; height: auto; max-height: 500px; background: #000; width: 100%; object-fit: cover; }
   .w-full-img { height: auto; max-height: 500px; object-fit: contain; background: #f8fafc; }
 
   .floating-dock { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 32px; padding: 10px 22px; z-index: 9999; box-shadow: var(--glass-shadow); }
