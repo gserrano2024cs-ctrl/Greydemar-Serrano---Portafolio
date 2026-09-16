@@ -1,5 +1,5 @@
 ---
-// Greydemar Serrano - Portafolio Completo Final + Traducción Total + Links
+// Greydemar Serrano - Portafolio Completo Final + Videos YP Realty
 ---
 
 <!DOCTYPE html>
@@ -89,7 +89,6 @@
         </div>
         <div class="cases-expand-content">
           <ul class="quick-cases-list">
-            <!-- Scroll + Open Modal Dinámico -->
             <li><a href="#projects" onclick="setTimeout(() => openModal('modal-yprealty'), 400);"><strong>YP Realty</strong><span data-es="Growth +604%" data-en="Growth +604%">Growth +604%</span></a></li>
             <li><a href="#projects" onclick="setTimeout(() => openModal('modal-eurobuilding'), 400);"><strong>Eurobuilding</strong><span data-es="Comunicaciones & Ventas" data-en="Comms & Sales">Comunicaciones & Ventas</span></a></li>
             <li><a href="#projects" onclick="setTimeout(() => openModal('modal-dislocal'), 400);"><strong>Dislocal</strong><span data-es="Project Coordinator" data-en="Project Coordinator">Project Coordinator</span></a></li>
@@ -100,6 +99,7 @@
         </div>
       </div>
 
+      <!-- FRASE GANCHO EN LA ESQUINA INFERIOR IZQUIERDA -->
       <div class="hero-quote-corner">
         <span data-es="- Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar." data-en="- Invoicing is no accident. It depends on how they see you, how you connect, and how easy you make it to buy.">
           - Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar.
@@ -322,7 +322,7 @@
           <div class="input-group"><label data-es="Mensaje" data-en="Message">Mensaje</label><textarea id="wa-message" rows="4" required placeholder="Hola Grey, me gustaría que trabajáramos en..." data-es-placeholder="Hola Grey, me gustaría que trabajáramos en..."></textarea></div>
           
           <div class="privacy-disclaimer">
-            <p data-es="Tus datos serán tratados por Greydemar Serrano con la finalidad de responder tu consulta. No se almacenan en bases de datos. <a href='/terminos' target='_blank' class='privacy-link'>Más información</a>" data-en="Your data will be processed by Greydemar Serrano to answer your query. Data is not stored in databases. <a href='/terminos' target='_blank' class='privacy-link'>More info</a>">
+            <p data-es="Tus datos serán tratados por Greydemar Serrano con la finalidad de responder tu consulta. Puedes ejercer tus derechos de acceso, rectificación, cancelación y oposición en greydemar06@gmail.com. <a href='/terminos' target='_blank' class='privacy-link'>Más información</a>" data-en="Your data will be processed by Greydemar Serrano to answer your query. You can exercise your rights of access, rectification, cancellation, and opposition at greydemar06@gmail.com. <a href='/terminos' target='_blank' class='privacy-link'>More info</a>">
               Tus datos serán tratados por Greydemar Serrano con la finalidad de responder tu consulta. Puedes ejercer tus derechos de acceso, rectificación, cancelación y oposición en greydemar06@gmail.com. <a href="/terminos" target="_blank" class="privacy-link">Más información</a>
             </p>
           </div>
@@ -368,9 +368,20 @@
           <div><span class="meta-label" data-es="Herramientas" data-en="Tools">Herramientas</span><span class="meta-val">Meta Business, SEO, CapCut, Canva</span></div>
           <div><span class="meta-label" data-es="Inicio" data-en="Start">Inicio</span><span class="meta-val">2026</span></div>
         </div>
+        
+        <!-- Galería Bento YP Realty (Integrando los 3 Videos solicitados) -->
         <div class="modal-gallery-container">
           <h3 data-es="Galería del Proyecto" data-en="Project Gallery">Galería del Proyecto</h3>
           <div class="bento-gallery">
+            <video controls playsinline loop muted class="bento-item bento-video" style="background:#000;">
+              <source src="/PARA-PORTAFOLIO.webm" type="video/webm" />
+            </video>
+            <video controls playsinline loop muted class="bento-item bento-video" style="background:#000;">
+              <source src="/VIDEO-PARA-PORTAFOLIO-2.webm" type="video/webm" />
+            </video>
+            <video controls playsinline loop muted class="bento-item bento-video" style="background:#000;">
+              <source src="/VIDEO PARA PORTAFOLIO.webm" type="video/webm" />
+            </video>
             <img src="/metricas.png" alt="Métricas YP Realty" class="bento-item" onerror="this.style.display='none'">
           </div>
         </div>
@@ -655,12 +666,17 @@
   .hero-container { max-width: 1300px; width: 100%; margin: auto auto; padding: 20px 32px 100px; display: grid; grid-template-columns: 320px 1fr 260px; gap: 24px; align-items: center; min-height: calc(100vh - 120px); position: relative; z-index: 10; }
   .left-col { position: relative; display: flex; flex-direction: column; gap: 28px; }
   
+  /* TARJETA HERO (Estructura Original Recuperada con Nombre al Lado) */
   .glass-profile-card { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 24px; padding: 16px 20px; cursor: pointer; box-shadow: var(--glass-shadow); transition: all 0.4s; overflow: hidden; }
   
-  .card-min-header { display: flex; align-items: center; gap: 14px; transition: all 0.4s ease; flex-direction: row; }
+  .card-min-header { display: flex; align-items: center; gap: 14px; transition: all 0.4s ease; flex-direction: row !important; }
   .shift-right { margin-left: 6px; } 
   .profile-thumb { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.9); transition: all 0.3s ease; flex-shrink: 0; cursor: zoom-in; }
   
+  .glass-profile-card.active .card-min-header { flex-direction: row !important; align-items: center; gap: 16px; }
+  .glass-profile-card.active .profile-thumb { width: 64px; height: 64px; border-width: 3px; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.15); margin-left: 0; }
+  
+  /* Zoom al hacer clic en la foto */
   .profile-thumb.zoomed { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(5); z-index: 99999; box-shadow: 0 0 0 100vmax rgba(0,0,0,0.85); cursor: zoom-out; border: none; }
   @media (max-width: 900px) { .profile-thumb.zoomed { transform: translate(-50%, -50%) scale(3.5); } }
 
@@ -704,6 +720,7 @@
   .quick-cases-list a { text-decoration: none; display: flex; flex-direction: column; font-size: 13.5px; }
   .quick-cases-list strong { font-weight: 800; color: var(--navy-dark);}
   .quick-cases-list span { font-size: 11px; color: var(--text-muted); margin-top: 2px;}
+  .list-num { font-size: 10px; font-weight: 800; color: #94a3b8; margin-top: 3px; font-family: monospace; }
 
   /* MARQUEE REDUCIDO INFINITO MAX-CONTENT */
   .marquee-section { width: 100%; background: #ffffff; padding: 15px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); z-index: 5; position: relative; overflow: hidden; }
@@ -750,7 +767,7 @@
   @keyframes iridescence { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
   .stat-item p { font-size: 15px; font-weight: 600; color: var(--text-muted); line-height: 1.3; }
 
-  /* PROYECTOS */
+  /* PROYECTOS (AMPLIADOS EN ESCRITORIO) */
   .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 30px; width: 100%; } 
   .project-card { background: var(--bg-soft); backdrop-filter: blur(12px); border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; } 
   .project-card:hover { transform: translateY(-6px); box-shadow: 0 20px 30px rgba(0,0,0,0.08); } 
@@ -764,7 +781,7 @@
   .card-body h3 { font-size: 18px; margin: 0 0 6px; font-weight: 800; } 
   .card-company { font-size: 13px; color: var(--text-muted); margin: 0; font-weight: 600;}
 
-  /* SERVICIOS CARDS A COLOR (PASTELES SUAVES) */
+  /* SERVICIOS CARDS CORPORATIVAS A COLOR */
   .services-grid-blocks { display: flex; flex-direction: column; gap: 20px; width: 100%; max-width: 800px;}
   .service-block { padding: 20px 30px; border-radius: 16px; backdrop-filter: blur(12px); border-width: 1px; border-style: solid; box-shadow: 0 10px 30px rgba(0,0,0,0.03); cursor: pointer; transition: all 0.3s; overflow: hidden;}
   .service-block:hover { transform: translateY(-3px); }
@@ -799,7 +816,6 @@
   .social-icon-btn { background: rgba(255,255,255,0.7); width: 54px; height: 54px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--navy-dark); border: 1px solid var(--border-color); transition: all 0.3s; }
   .social-icon-btn:hover { background: white; transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); color: #000;}
   
-  .glass-panel { background: rgba(255, 255, 255, 0.4); }
   .contact-right { padding: 50px; }
   .contact-form { display: flex; flex-direction: column; gap: 20px; }
   .input-group { display: flex; flex-direction: column; gap: 8px; }
