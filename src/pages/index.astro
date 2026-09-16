@@ -1,5 +1,5 @@
 ---
-// Greydemar Serrano - Portafolio Completo Final + Videos YP Realty
+// Greydemar Serrano - Portafolio Completo Final + Grid 2x2 Videos + Stickers Pro
 ---
 
 <!DOCTYPE html>
@@ -21,11 +21,27 @@
 </head>
 <body class="animate-on-load">
 
-  <!-- FONDO ESTÁTICO GLOBAL -->
+  <!-- FONDO ESTÁTICO GLOBAL (NUEVOS STICKERS PROFESIONALES) -->
   <div class="global-fixed-bg">
-    <svg class="sticker sticker-star" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14.4 9.6H22L15.8 14.4L18.2 22L12 17.2L5.8 22L8.2 14.4L2 9.6H9.6L12 2Z" fill="#FEF08A" stroke="#0F172A" stroke-width="1.5" stroke-linejoin="round"/></svg>
-    <svg class="sticker sticker-plant" width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C12 22 4 16 4 10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10C20 16 12 22 12 22Z" fill="#bbf7d0" stroke="#0F172A" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 22V10" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/><path d="M12 16C10 14 8 13 8 13" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/><path d="M12 12C14 10 16 9 16 9" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/></svg>
-    <svg class="sticker sticker-sparkle" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14 10L22 12L14 14L12 22L10 14L2 12L10 10L12 2Z" fill="#fbcfe8" stroke="#0F172A" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    <!-- Gráfico de Ventas (Amarillo) -->
+    <svg class="sticker sticker-star" width="45" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polyline points="3 3 3 21 21 21" stroke="#FEF08A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="3 17 9 11 13 15 21 7" stroke="#FEF08A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="14 7 21 7 21 14" stroke="#FEF08A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <!-- Monitor y Código (Verde) -->
+    <svg class="sticker sticker-plant" width="65" height="65" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="3" width="20" height="14" rx="2" stroke="#bbf7d0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M8 21h8" stroke="#bbf7d0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M12 17v4" stroke="#bbf7d0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="8 8 5 11 8 14" stroke="#bbf7d0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="16 8 19 11 16 14" stroke="#bbf7d0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <!-- Cámara de Contenido (Rosa) -->
+    <svg class="sticker sticker-sparkle" width="45" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" stroke="#fbcfe8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="12" cy="13" r="3" stroke="#fbcfe8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
   </div>
 
   <!-- 1. SECCIÓN HERO -->
@@ -46,7 +62,7 @@
     <main class="hero-container">
       <div class="left-col">
         
-        <!-- TARJETA DE PERFIL -->
+        <!-- TARJETA DE PERFIL (Ahora la biografía se ve más grande en Web) -->
         <div class="glass-profile-card" onclick="this.classList.toggle('active')">
           <div class="card-min-header">
             <img src="/grey.jpeg" alt="Greydemar Serrano" class="profile-thumb shift-right" id="heroProfileImg" onclick="toggleProfileZoom(event)" title="Ver a detalle" />
@@ -108,27 +124,18 @@
     </main>
   </section>
 
-  <!-- 1.5 LOGO MARQUEE -->
+  <!-- 1.5 LOGO MARQUEE INFINITO (MULTIPLICADO PARA CERO ESPACIOS BLANCOS) -->
   <section class="marquee-section fade-in-section delay-2">
     <div class="marquee-container">
       <div class="marquee-track">
-        <img src="/logo plano creativo.png" alt="Plano Creativo">
-        <img src="/logo dislocal.png" alt="Dislocal">
-        <img src="/logo plano mariano moreno.png" alt="Instituto Superior Mariano Moreno">
-        <img src="/logo impaktemos.png" alt="Impaktemos">
-        <img src="/logo universidad.png" alt="Universidad">
-        <img src="/logo yprealty.png" alt="YP Realty">
-        <img src="/logo eurobuilding.png" alt="Eurobuilding Hotels">
-        <img src="/logo panhouse.png" alt="PanHouse">
-        <!-- Duplicados -->
-        <img src="/logo plano creativo.png" alt="Plano Creativo">
-        <img src="/logo dislocal.png" alt="Dislocal">
-        <img src="/logo plano mariano moreno.png" alt="Instituto Superior Mariano Moreno">
-        <img src="/logo impaktemos.png" alt="Impaktemos">
-        <img src="/logo universidad.png" alt="Universidad">
-        <img src="/logo yprealty.png" alt="YP Realty">
-        <img src="/logo eurobuilding.png" alt="Eurobuilding Hotels">
-        <img src="/logo panhouse.png" alt="PanHouse">
+        <!-- Set 1 -->
+        <img src="/logo plano creativo.png" alt="Plano Creativo"><img src="/logo dislocal.png" alt="Dislocal"><img src="/logo plano mariano moreno.png" alt="Instituto Superior Mariano Moreno"><img src="/logo impaktemos.png" alt="Impaktemos"><img src="/logo universidad.png" alt="Universidad"><img src="/logo yprealty.png" alt="YP Realty"><img src="/logo eurobuilding.png" alt="Eurobuilding Hotels"><img src="/logo panhouse.png" alt="PanHouse">
+        <!-- Set 2 -->
+        <img src="/logo plano creativo.png" alt="Plano Creativo"><img src="/logo dislocal.png" alt="Dislocal"><img src="/logo plano mariano moreno.png" alt="Instituto Superior Mariano Moreno"><img src="/logo impaktemos.png" alt="Impaktemos"><img src="/logo universidad.png" alt="Universidad"><img src="/logo yprealty.png" alt="YP Realty"><img src="/logo eurobuilding.png" alt="Eurobuilding Hotels"><img src="/logo panhouse.png" alt="PanHouse">
+        <!-- Set 3 -->
+        <img src="/logo plano creativo.png" alt="Plano Creativo"><img src="/logo dislocal.png" alt="Dislocal"><img src="/logo plano mariano moreno.png" alt="Instituto Superior Mariano Moreno"><img src="/logo impaktemos.png" alt="Impaktemos"><img src="/logo universidad.png" alt="Universidad"><img src="/logo yprealty.png" alt="YP Realty"><img src="/logo eurobuilding.png" alt="Eurobuilding Hotels"><img src="/logo panhouse.png" alt="PanHouse">
+        <!-- Set 4 -->
+        <img src="/logo plano creativo.png" alt="Plano Creativo"><img src="/logo dislocal.png" alt="Dislocal"><img src="/logo plano mariano moreno.png" alt="Instituto Superior Mariano Moreno"><img src="/logo impaktemos.png" alt="Impaktemos"><img src="/logo universidad.png" alt="Universidad"><img src="/logo yprealty.png" alt="YP Realty"><img src="/logo eurobuilding.png" alt="Eurobuilding Hotels"><img src="/logo panhouse.png" alt="PanHouse">
       </div>
     </div>
   </section>
@@ -143,6 +150,7 @@
 
       <div class="about-header">
         <h2 data-es="Hago un trabajo que las personas nunca olvidan." data-en="I do work that people never forget.">Hago un trabajo que las personas nunca olvidan.</h2>
+        <!-- Texto agrandado -->
         <p class="about-subtitle" data-es="La estrategia lo es todo. Entiendo el mercado y sé cómo funciona la mente del consumidor. Las ventas mantienen el negocio, pero <strong>nos compran por cómo nos ven</strong>, y ahí es donde pongo el foco. Presto especial atención a los detalles psicológicos para <strong>conectar, impactar y retener la atención</strong>, generando los frutos exactos que buscamos como equipo." data-en="Strategy is everything. I understand the market and how the consumer's mind works. Sales sustain the business, but <strong>they buy from us because of how they see us</strong>, and that's where I focus. I pay special attention to psychological details to <strong>connect, impact, and retain attention</strong>, generating the exact results we seek as a team.">La estrategia lo es todo. Entiendo el mercado y sé cómo funciona la mente del consumidor. Las ventas mantienen el negocio, pero <strong>nos compran por cómo nos ven</strong>, y ahí es donde pongo el foco. Presto especial atención a los detalles psicológicos para <strong>conectar, impactar y retener la atención</strong>, generando los frutos exactos que buscamos como equipo.</p>
       </div>
 
@@ -254,7 +262,7 @@
     </div>
   </section>
 
-  <!-- 4. SERVICIOS -->
+  <!-- 4. SERVICIOS (COLORES PASTEL CON TRANSPARENCIA) -->
   <section id="services" class="services-section fade-in-section delay-5">
     <div class="services-container">
       <div class="sticky-note">
@@ -322,7 +330,7 @@
           <div class="input-group"><label data-es="Mensaje" data-en="Message">Mensaje</label><textarea id="wa-message" rows="4" required placeholder="Hola Grey, me gustaría que trabajáramos en..." data-es-placeholder="Hola Grey, me gustaría que trabajáramos en..."></textarea></div>
           
           <div class="privacy-disclaimer">
-            <p data-es="Tus datos serán tratados por Greydemar Serrano con la finalidad de responder tu consulta. Puedes ejercer tus derechos de acceso, rectificación, cancelación y oposición en greydemar06@gmail.com. <a href='/terminos' target='_blank' class='privacy-link'>Más información</a>" data-en="Your data will be processed by Greydemar Serrano to answer your query. You can exercise your rights of access, rectification, cancellation, and opposition at greydemar06@gmail.com. <a href='/terminos' target='_blank' class='privacy-link'>More info</a>">
+            <p data-es="Tus datos serán tratados por Greydemar Serrano con la finalidad de responder tu consulta. No se almacenan en bases de datos. <a href='/terminos' target='_blank' class='privacy-link'>Más información</a>" data-en="Your data will be processed by Greydemar Serrano to answer your query. Data is not stored in databases. <a href='/terminos' target='_blank' class='privacy-link'>More info</a>">
               Tus datos serán tratados por Greydemar Serrano con la finalidad de responder tu consulta. Puedes ejercer tus derechos de acceso, rectificación, cancelación y oposición en greydemar06@gmail.com. <a href="/terminos" target="_blank" class="privacy-link">Más información</a>
             </p>
           </div>
@@ -344,7 +352,7 @@
   </footer>
 
   <!-- ========================================== -->
-  <!-- MODALES DE PROYECTOS CON BENTO GALLERIES -->
+  <!-- MODALES DE PROYECTOS (CON GRID 2x2 DE VIDEOS) -->
   <!-- ========================================== -->
   
   <div id="modal-yprealty" class="modal-overlay" onclick="closeModalOutside(event, 'modal-yprealty')">
@@ -358,7 +366,7 @@
         <div class="modal-hero-banner"><img src="/portada-yprealty.png" alt="YP Realty Banner" style="object-position: top center;" /></div>
         <div class="modal-title-row">
           <div class="title-text-group">
-            <span class="project-counter" data-es="Proyecto 01 / 05" data-en="Project 01 / 05">Proyecto 01 / 05</span>
+            <span class="project-counter" data-es="Proyecto 01 / 06" data-en="Project 01 / 06">Proyecto 01 / 06</span>
             <h2>YP Realty</h2>
           </div>
         </div>
@@ -369,20 +377,27 @@
           <div><span class="meta-label" data-es="Inicio" data-en="Start">Inicio</span><span class="meta-val">2026</span></div>
         </div>
         
-        <!-- Galería Bento YP Realty (Integrando los 3 Videos solicitados) -->
+        <!-- Galería 2x2 para YP Realty (4 Elementos) -->
         <div class="modal-gallery-container">
           <h3 data-es="Galería del Proyecto" data-en="Project Gallery">Galería del Proyecto</h3>
-          <div class="bento-gallery">
-            <video controls playsinline loop muted class="bento-item bento-video" style="background:#000;">
-              <source src="/PARA-PORTAFOLIO.webm" type="video/webm" />
-            </video>
-            <video controls playsinline loop muted class="bento-item bento-video" style="background:#000;">
-              <source src="/VIDEO-PARA-PORTAFOLIO-2.webm" type="video/webm" />
-            </video>
-            <video controls playsinline loop muted class="bento-item bento-video" style="background:#000;">
+          <div class="video-grid-2x2">
+            <!-- Video 1 -->
+            <video controls playsinline loop muted class="bento-video" style="background:#000;">
               <source src="/VIDEO PARA PORTAFOLIO.webm" type="video/webm" />
             </video>
-            <img src="/metricas.png" alt="Métricas YP Realty" class="bento-item" onerror="this.style.display='none'">
+            <!-- Video 2 -->
+            <video controls playsinline loop muted class="bento-video" style="background:#000;">
+              <source src="/PARA-PORTAFOLIO.webm" type="video/webm" />
+            </video>
+            <!-- Video 3 con botón de Drive -->
+            <div class="video-wrapper">
+              <video controls playsinline loop muted class="bento-video" style="background:#000;">
+                <source src="/VIDEO-PARA-PORTAFOLIO-2.webm" type="video/webm" />
+              </video>
+              <a href="https://drive.google.com/file/d/1b-NMmLfQIzru3jkomQar4OJd5YbqZGeM/view?usp=drive_link" target="_blank" class="drive-btn" data-es="Ver 'Quién paga qué' en Drive" data-en="View 'Who pays what' on Drive">Ver "Quién paga qué" en Drive</a>
+            </div>
+            <!-- Elemento 4 (Métricas / Placeholder 4to Video) -->
+            <img src="/metricas.png" alt="Métricas YP Realty" class="bento-video" onerror="this.style.display='none'">
           </div>
         </div>
       </div>
@@ -400,7 +415,7 @@
         <div class="modal-hero-banner"><img src="/portada-eurobuilding.png" alt="Eurobuilding Banner" /></div>
         <div class="modal-title-row">
           <div class="title-text-group">
-            <span class="project-counter" data-es="Proyecto 02 / 05" data-en="Project 02 / 05">Proyecto 02 / 05</span>
+            <span class="project-counter" data-es="Proyecto 02 / 06" data-en="Project 02 / 06">Proyecto 02 / 06</span>
             <h2>Eurobuilding</h2>
           </div>
         </div>
@@ -433,7 +448,7 @@
         <div class="modal-hero-banner"><img src="/portada-dislocal.png" alt="Dislocal Banner" /></div>
         <div class="modal-title-row">
           <div class="title-text-group">
-            <span class="project-counter" data-es="Proyecto 03 / 05" data-en="Project 03 / 05">Proyecto 03 / 05</span>
+            <span class="project-counter" data-es="Proyecto 03 / 06" data-en="Project 03 / 06">Proyecto 03 / 06</span>
             <h2>Dislocal</h2>
           </div>
           <a href="https://www.dislocal.org/" target="_blank" class="simple-modal-link" data-es="🌐 Visitar Sitio Web" data-en="🌐 Visit Website">🌐 Visitar Sitio Web</a>
@@ -466,7 +481,7 @@
         <div class="modal-hero-banner"><img src="/portada-impaktemos.png" alt="Impaktemos Banner" /></div>
         <div class="modal-title-row">
           <div class="title-text-group">
-            <span class="project-counter" data-es="Proyecto 04 / 05" data-en="Project 04 / 05">Proyecto 04 / 05</span>
+            <span class="project-counter" data-es="Proyecto 04 / 06" data-en="Project 04 / 06">Proyecto 04 / 06</span>
             <h2>Impaktemos</h2>
           </div>
           <a href="https://minitas-mission-guide.lovable.app/" target="_blank" class="simple-modal-link" data-es="🌐 Ver Landing Page" data-en="🌐 View Landing Page">🌐 Ver Landing Page</a>
@@ -498,7 +513,7 @@
         <div class="modal-hero-banner"><img src="/portada-panhouse.png" alt="PanHouse Banner" /></div>
         <div class="modal-title-row">
           <div class="title-text-group">
-            <span class="project-counter" data-es="Proyecto 05 / 05" data-en="Project 05 / 05">Proyecto 05 / 05</span>
+            <span class="project-counter" data-es="Proyecto 05 / 06" data-en="Project 05 / 06">Proyecto 05 / 06</span>
             <h2>Editorial PanHouse</h2>
           </div>
         </div>
@@ -523,6 +538,7 @@
         <div class="modal-hero-banner"><img src="/portada freelance.png" alt="Freelance Banner" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlMmU4ZjAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZmlsbD0iIzk0YTNiOCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5EaXNlw7FvIHkgV2ViPC90ZXh0Pjwvc3ZnPg=='" /></div>
         <div class="modal-title-row">
           <div class="title-text-group">
+            <span class="project-counter" data-es="Proyecto 06 / 06" data-en="Project 06 / 06">Proyecto 06 / 06</span>
             <h2 data-es="Proyectos Freelance" data-en="Freelance Projects">Proyectos Freelance</h2>
           </div>
         </div>
@@ -648,8 +664,6 @@
   .sticker-star { top: 12%; right: 15%; transform: rotate(15deg); }
   .sticker-plant { bottom: 20%; left: 8%; transform: rotate(-10deg); opacity: 0.6; }
   .sticker-sparkle { top: 40%; right: 5%; transform: rotate(5deg); }
-  
-  .blur-backdrop-heavy { background: rgba(241, 245, 249, 0.6); backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px); border-top: 1px solid var(--glass-border); }
 
   /* HERO */
   .hero-wrapper { position: relative; width: 100%; min-height: 100vh; overflow: hidden; z-index: 10; background: #000; }
@@ -666,7 +680,7 @@
   .hero-container { max-width: 1300px; width: 100%; margin: auto auto; padding: 20px 32px 100px; display: grid; grid-template-columns: 320px 1fr 260px; gap: 24px; align-items: center; min-height: calc(100vh - 120px); position: relative; z-index: 10; }
   .left-col { position: relative; display: flex; flex-direction: column; gap: 28px; }
   
-  /* TARJETA HERO (Estructura Original Recuperada con Nombre al Lado) */
+  /* TARJETA DE PERFIL (Despliega normal, foto no desarma el layout) */
   .glass-profile-card { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 24px; padding: 16px 20px; cursor: pointer; box-shadow: var(--glass-shadow); transition: all 0.4s; overflow: hidden; }
   
   .card-min-header { display: flex; align-items: center; gap: 14px; transition: all 0.4s ease; flex-direction: row !important; }
@@ -674,7 +688,7 @@
   .profile-thumb { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.9); transition: all 0.3s ease; flex-shrink: 0; cursor: zoom-in; }
   
   .glass-profile-card.active .card-min-header { flex-direction: row !important; align-items: center; gap: 16px; }
-  .glass-profile-card.active .profile-thumb { width: 64px; height: 64px; border-width: 3px; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.15); margin-left: 0; }
+  .glass-profile-card.active .profile-thumb { width: 75px; height: 75px; border-width: 3px; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.15); margin-left: 0; }
   
   /* Zoom al hacer clic en la foto */
   .profile-thumb.zoomed { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(5); z-index: 99999; box-shadow: 0 0 0 100vmax rgba(0,0,0,0.85); cursor: zoom-out; border: none; }
@@ -691,7 +705,7 @@
   
   .card-expand-content { max-height: 0; opacity: 0; transition: all 0.5s; overflow: hidden; }
   .glass-profile-card.active .card-expand-content { max-height: 600px; opacity: 1; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.4); }
-  .expand-bio { font-size: 14.5px; font-weight: 500; line-height: 1.55; margin-bottom: 16px; }
+  .expand-bio { font-size: 16.5px; font-weight: 500; line-height: 1.55; margin-bottom: 16px; }
   .expand-bio strong { font-weight: 900; color: #000; }
   
   .skills-title { font-size: 11px; font-weight: 800; color: var(--navy-dark); text-transform: uppercase; margin-bottom: 8px; opacity: 0.8; }
@@ -703,7 +717,7 @@
   .hero-quote-corner span { font-size: 17px; font-weight: 800; letter-spacing: -0.02em; color: #ffffff; text-shadow: 0 2px 14px rgba(0,0,0,0.8); line-height: 1.4; display: block; }
   
   .hero-center-text { text-align: center; position: relative; display: flex; justify-content: center; align-items: center; }
-  .hero-center-text h1 { font-size: 4.8rem; font-weight: 900; line-height: 0.98; letter-spacing: -0.04em; text-transform: uppercase; margin: 0 auto; max-width: 900px; color: #ffffff; text-shadow: 0 8px 30px rgba(0,0,0,0.3); }
+  .hero-center-text h1 { font-size: 5.5rem; font-weight: 900; line-height: 0.98; letter-spacing: -0.04em; text-transform: uppercase; margin: 0 auto; max-width: 900px; color: #ffffff; text-shadow: 0 8px 30px rgba(0,0,0,0.3); }
   .floating-pill { position: absolute; padding: 6px 14px; border-radius: 30px; font-size: 12px; font-weight: 800; white-space: nowrap; color: var(--navy-dark); pointer-events: none;}
   .pill-pink { background: var(--pastel-pink); top: -25px; right: 15px; transform: rotate(3deg); }
   .pill-green { background: var(--pastel-green); bottom: -30px; left: 10%; transform: rotate(-6deg); }
@@ -726,7 +740,7 @@
   .marquee-section { width: 100%; background: #ffffff; padding: 15px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); z-index: 5; position: relative; overflow: hidden; }
   .marquee-container { width: 100vw; max-width: 100%; overflow: hidden; display: flex; align-items: center; }
   .marquee-track { display: flex; gap: 60px; padding-right: 60px; width: max-content; animation: scroll-marquee 30s linear infinite; }
-  .marquee-track img { height: 35px; width: auto; opacity: 0.4; filter: grayscale(100%); transition: all 0.3s ease; }
+  .marquee-track img { height: 60px; width: auto; opacity: 0.4; filter: grayscale(100%); transition: all 0.3s ease; }
   .marquee-track img:hover { opacity: 1; filter: grayscale(0%); cursor: pointer; }
   @keyframes scroll-marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
@@ -741,7 +755,7 @@
   .note-text { font-weight: 800; font-size: 13px; color: var(--navy-dark); text-transform: uppercase; letter-spacing: 0.05em; }
   .about-header, .section-header { text-align: center; margin-bottom: 40px; }
   .about-header h2, .section-header h2 { font-size: 3.5rem; font-weight: 900; line-height: 1.1; letter-spacing: -0.03em; color: var(--navy-dark); margin-bottom: 16px; }
-  .about-subtitle, .section-header p { font-size: 1.1rem; line-height: 1.6; color: var(--text-muted); max-width: 700px; margin: 0 auto; font-weight: 500; }
+  .about-subtitle, .section-header p { font-size: 1.4rem; line-height: 1.6; color: var(--text-muted); max-width: 800px; margin: 0 auto; font-weight: 500; }
   
   .mac-window { width: 100%; background: var(--bg-soft); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--border-color); border-radius: 16px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06); overflow: hidden; }
   .mac-titlebar { background: rgba(241, 245, 249, 0.8); padding: 14px 20px; display: flex; align-items: center; border-bottom: 1px solid var(--border-color); }
@@ -767,7 +781,7 @@
   @keyframes iridescence { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
   .stat-item p { font-size: 15px; font-weight: 600; color: var(--text-muted); line-height: 1.3; }
 
-  /* PROYECTOS (AMPLIADOS EN ESCRITORIO) */
+  /* PROYECTOS */
   .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 30px; width: 100%; } 
   .project-card { background: var(--bg-soft); backdrop-filter: blur(12px); border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; } 
   .project-card:hover { transform: translateY(-6px); box-shadow: 0 20px 30px rgba(0,0,0,0.08); } 
@@ -859,7 +873,7 @@
   .meta-label { font-size: 11px; font-weight: 800; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 4px; } 
   .meta-val { font-size: 14px; font-weight: 700; color: var(--navy-dark); } 
 
-  /* GALERÍAS BENTO DENTRO DEL MODAL */
+  /* GALERÍAS BENTO DENTRO DEL MODAL (Con Grid 2x2 para YP Realty) */
   .modal-gallery-container { margin-top: 30px; border-top: 1px solid var(--border-color); padding-top: 24px; }
   .modal-gallery-container h3 { font-size: 1.2rem; font-weight: 900; color: var(--navy-dark); margin-bottom: 16px; }
   
@@ -870,7 +884,13 @@
   /* Lógica Bento (1, 2 o 3 items) */
   .bento-item:only-child { grid-column: 1 / -1; height: auto; max-height: 450px; }
   .bento-gallery img:first-child:nth-last-child(3) { grid-column: 1 / -1; height: 350px; }
-  .bento-video { grid-column: 1 / -1; width: 100%; height: auto; max-height: 450px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+  
+  /* Grid 2x2 Específico para Videos */
+  .video-grid-2x2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .bento-video { width: 100%; height: 260px; object-fit: cover; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+  .video-wrapper { display: flex; flex-direction: column; gap: 8px; }
+  .drive-btn { background: #0f172a; color: white; padding: 10px; border-radius: 8px; text-align: center; text-decoration: none; font-size: 13px; font-weight: 800; transition: background 0.3s; }
+  .drive-btn:hover { background: #1e293b; }
 
   /* DOCK FLOTANTE */
   .floating-dock { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 32px; padding: 10px 22px; z-index: 9999; box-shadow: var(--glass-shadow); }
@@ -891,7 +911,10 @@
     
     .hero-quote-corner { position: relative; bottom: auto; left: auto; text-align: center; margin-top: 40px; margin-bottom: 20px; max-width: 100%;}
     
-    .hero-center-text h1 { font-size: 2.6rem; }
+    .hero-center-text h1 { font-size: 2.8rem; }
+    .expand-bio { font-size: 14.5px; }
+    .about-subtitle { font-size: 1.15rem; }
+    
     .floating-pill { display: none; }
     .floating-dock { padding: 10px 16px; }
     .mac-icon { width: 44px; height: 44px; }
@@ -907,11 +930,17 @@
     .contact-left, .contact-right { padding: 30px; }
     .contact-left { border-right: none; border-bottom: 1px solid var(--border-color); }
     .modal-content-scroll { padding: 20px; }
+    
     .marquee-track { gap: 40px; }
-    .marquee-track img { height: 28px; }
+    .marquee-track img { height: 35px; }
+    
     .project-card { flex: 1 1 100%; max-width: 100%; }
     .modal-title-row h2 { font-size: 20px; }
-    .bento-gallery { grid-template-columns: 1fr; } /* Bento apilado en móvil */
+    
+    /* Bento apilado en móvil */
+    .bento-gallery { grid-template-columns: 1fr; } 
+    .video-grid-2x2 { grid-template-columns: 1fr; }
     .bento-item { height: auto; }
+    .bento-video { height: auto; }
   }
 </style>
