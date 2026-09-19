@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Greydemar Serrano | Marketing & Project Manager</title>
-  <meta name="title" content="Greydemar Serrano | Marketing & Project Manager">
-  <meta name="description" content="Especialista en Growth Marketing, Creación de Contenido y Project Management.">
+
+  <title>Greydemar Serrano | Front-End Developer, Social Media & Project Manager</title>
+  <meta name="title" content="Greydemar Serrano | Front-End Developer, Social Media & Project Manager">
+  <meta name="description" content="Front-End Developer (HTML5, CSS3, Vanilla JS, Astro), especialista en Social Media y Project Manager. Interfaces rápidas, contenido que convierte y operaciones sin fricción.">
 
   <!-- FAVICON: "G" en perspectiva -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230f172a%22 rx=%2212%22/><g transform=%22skewX(-15)%22><text x=%2260%22 y=%2272%22 font-size=%2265%22 font-weight=%22900%22 font-family=%22sans-serif%22 fill=%22%23ffffff%22 text-anchor=%22middle%22>G</text></g></svg>">
@@ -14,12 +14,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Marca el documento como "con JS" para que las animaciones de entrada solo se oculten si el script puede revelarlas -->
+  <script is:inline>document.documentElement.classList.add('js');</script>
 </head>
-<body class="animate-on-load">
+<body>
 
   <!-- SISTEMA DE ZOOM GLOBAL -->
   <div id="zoom-overlay" class="zoom-overlay" onclick="closeZoom(event)">
-    <button class="zoom-close" onclick="closeZoom(event)">✕</button>
+    <button class="zoom-close" onclick="closeZoom(event)" aria-label="Cerrar">✕</button>
     <div class="zoom-content-wrapper">
       <div id="zoom-media-container"></div>
       <p id="zoom-caption"></p>
@@ -47,8 +50,12 @@
   </div>
 
   <!-- 1. SECCIÓN HERO -->
-  <section class="hero-wrapper fade-in-section delay-1">
+  <section class="hero-wrapper fade-in-section">
     <div class="hero-video-container">
+      <!--
+        IDEA DE FONDO: si prefieres una imagen limpia en lugar del video, reemplaza el <video> por:
+        <img src="/hero-bg.webp" alt="" class="video-bg" />
+      -->
       <video autoplay loop muted playsinline class="video-bg"><source src="/avila.webm" type="video/webm" /></video>
       <div class="avila-overlay"></div>
     </div>
@@ -56,16 +63,17 @@
     <header class="top-header">
       <div class="brand-centered">GREY SERRANO®</div>
       <div class="lang-switch dark-mode">
-        <button class="lang-btn active" onclick="setLanguage('es')">ES</button>
-        <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+        <button class="lang-btn active" data-lang="es" onclick="setLanguage('es')">ES</button>
+        <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
       </div>
     </header>
 
     <main class="hero-container">
       <div class="left-col">
-        <div class="glass-profile-card" onclick="this.classList.toggle('active')">
+        <!-- TARJETA PERFIL · LIQUID GLASS -->
+        <div class="glass-profile-card liquid-glass" data-toggle="active">
           <div class="card-min-header">
-            <img src="/grey.jpeg" alt="Greydemar Serrano" class="profile-thumb shift-right" id="heroProfileImg" onclick="toggleProfileZoom(event)" title="Ver a detalle" />
+            <img src="/grey.jpeg" alt="Greydemar Serrano" class="profile-thumb shift-right" id="heroProfileImg" data-caption="Greydemar Serrano" onclick="openProfileZoom(event)" title="Ver a detalle" />
             <div class="min-meta">
               <div class="status-line"><span class="green-dot"></span><span class="status-text" data-es="En línea" data-en="Online">En línea</span></div>
               <div class="name-group">
@@ -73,18 +81,30 @@
                 <span class="min-title" data-es="Especialista en Marketing Digital y Conversión Web" data-en="Digital Marketing & Web Conversion Specialist">Especialista en Marketing Digital y Conversión Web</span>
               </div>
             </div>
+            <svg class="card-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </div>
-          <div class="card-expand-content">
-            <p class="expand-bio" data-es="<strong>Marketing para atraer + Ventas para facturar + Web para escalar.</strong><br><br>Un gusto, soy Greydemar Serrano.<br><br>Construyo ecosistemas rentables con contenido de alto impacto, sistemas de cierre comercial y plataformas ultrarrápidas.<br><br><strong>Mi objetivo:</strong> eliminar la fricción, posicionar tu autoridad y multiplicar tus conversiones." data-en="<strong>Marketing to attract + Sales to invoice + Web to scale.</strong><br><br>Nice to meet you, I'm Greydemar Serrano.<br><br>I build profitable ecosystems with high-impact content, commercial closing systems, and ultra-fast platforms.<br><br><strong>My goal:</strong> eliminate friction, position your authority, and multiply your conversions.">
-              <strong>Marketing para atraer + Ventas para facturar + Web para escalar.</strong><br><br>Un gusto, soy Greydemar Serrano.<br><br>Construyo ecosistemas rentables con contenido de alto impacto, sistemas de cierre comercial y plataformas ultrarrápidas.<br><br><strong>Mi objetivo:</strong> eliminar la fricción, posicionar tu autoridad y multiplicar tus conversiones.
-            </p>
-            <p class="skills-title" data-es="Mis habilidades:" data-en="My skills:">Mis habilidades:</p>
-            <div class="skills-grid">
-              <span>Astro</span><span>GitHub</span><span>HTML5</span><span>CSS3</span>
-              <span>GA4</span><span>Salesforce</span><span>Zoho CRM</span><span>Mailchimp</span>
-              <span class="wide-skill" data-es="Creación de Contenido" data-en="Content Creation">Creación de Contenido</span>
+          <div class="card-expand">
+            <div class="card-expand-inner">
+              <div class="card-expand-body">
+                <p class="expand-bio" data-es="<strong>Marketing para atraer + Ventas para facturar + Web para escalar.</strong><br><br>Un gusto, soy Greydemar Serrano.<br><br>Construyo ecosistemas rentables con contenido de alto impacto, sistemas de cierre comercial y plataformas ultrarrápidas.<br><br><strong>Mi objetivo:</strong> eliminar la fricción, posicionar tu autoridad y multiplicar tus conversiones." data-en="<strong>Marketing to attract + Sales to invoice + Web to scale.</strong><br><br>Nice to meet you, I'm Greydemar Serrano.<br><br>I build profitable ecosystems with high-impact content, commercial closing systems, and ultra-fast platforms.<br><br><strong>My goal:</strong> eliminate friction, position your authority, and multiply your conversions.">
+                  <strong>Marketing para atraer + Ventas para facturar + Web para escalar.</strong><br><br>Un gusto, soy Greydemar Serrano.<br><br>Construyo ecosistemas rentables con contenido de alto impacto, sistemas de cierre comercial y plataformas ultrarrápidas.<br><br><strong>Mi objetivo:</strong> eliminar la fricción, posicionar tu autoridad y multiplicar tus conversiones.
+                </p>
+                <p class="skills-title" data-es="Mis habilidades:" data-en="My skills:">Mis habilidades:</p>
+                <div class="skills-grid">
+                  <span>Astro</span><span>GitHub</span><span>HTML5</span><span>CSS3</span>
+                  <span>GA4</span><span>Salesforce</span><span>Zoho CRM</span><span>Mailchimp</span>
+                  <span class="wide-skill" data-es="Creación de Contenido" data-en="Content Creation">Creación de Contenido</span>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+
+        <!-- FRASE DEL FONDO: vive en el flujo de la columna, así el card nunca la tapa al desplegarse -->
+        <div class="hero-quote-corner">
+          <span data-es="- Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar." data-en="- Invoicing is no accident. It depends on how they see you, how you connect, and how easy you make it to buy.">
+            - Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar.
+          </span>
         </div>
       </div>
 
@@ -95,33 +115,29 @@
         <span class="floating-pill pill-yellow" data-es="Contenido Visual" data-en="Visual Content">Contenido Visual</span>
       </div>
 
-      <div class="glass-cases-card" onclick="this.classList.toggle('active')">
+      <!-- TARJETA ÁREAS · LIQUID GLASS -->
+      <div class="glass-cases-card liquid-glass" data-toggle="active">
         <div class="cases-min-header">
-          <span class="cases-title-text" data-es="Casos Destacados" data-en="Featured Cases">Casos Destacados</span>
+          <span class="cases-title-text" data-es="Áreas de Expertise" data-en="Areas of Expertise">Áreas de Expertise</span>
           <span class="search-icon-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
         </div>
-        <div class="cases-expand-content">
-          <ul class="quick-cases-list">
-            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-yprealty'), 400);"><strong>YP Realty</strong><span data-es="Growth +604%" data-en="Growth +604%">Growth +604%</span></a></li>
-            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-panhouse'), 400);"><strong>Editorial PanHouse</strong><span data-es="Comunicaciones Internas" data-en="Internal Comms">Comunicaciones Internas</span></a></li>
-            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-eurobuilding'), 400);"><strong>Eurobuilding</strong><span data-es="Comunicaciones & Ventas" data-en="Comms & Sales">Comunicaciones & Ventas</span></a></li>
-            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-dislocal'), 400);"><strong>Dislocal</strong><span data-es="Project Coordinator" data-en="Project Coordinator">Project Coordinator</span></a></li>
-            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-impaktemos'), 400);"><strong>Impaktemos</strong><span data-es="Coordinación Operativa" data-en="Operational Coordination">Coordinación Operativa</span></a></li>
-            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-freelance'), 400);"><strong>Freelance</strong><span data-es="Diseño & Web" data-en="Design & Web">Diseño & Web</span></a></li>
-          </ul>
+        <div class="card-expand">
+          <div class="card-expand-inner">
+            <div class="card-expand-body">
+              <ul class="quick-cases-list">
+                <li><a href="#frontend" onclick="event.stopPropagation()"><strong>Front-End Developer</strong><span data-es="Interfaces de alto rendimiento" data-en="High-performance interfaces">Interfaces de alto rendimiento</span></a></li>
+                <li><a href="#social" onclick="event.stopPropagation()"><strong>Social Media</strong><span data-es="Contenido & Growth +604%" data-en="Content & Growth +604%">Contenido & Growth +604%</span></a></li>
+                <li><a href="#pm" onclick="event.stopPropagation()"><strong data-es="Ventas / Project Manager" data-en="Sales / Project Manager">Ventas / Project Manager</strong><span data-es="CRM, Logística & Operaciones" data-en="CRM, Logistics & Operations">CRM, Logística & Operaciones</span></a></li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div class="hero-quote-corner">
-        <span data-es="- Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar." data-en="- Invoicing is no accident. It depends on how they see you, how you connect, and how easy you make it to buy.">
-          - Facturar no es casualidad. Depende de cómo te ven, cómo conectas y qué tan fácil les haces comprar.
-        </span>
       </div>
     </main>
   </section>
 
   <!-- 1.5 LOGO MARQUEE INFINITO -->
-  <section class="marquee-section fade-in-section delay-2">
+  <section class="marquee-section reveal">
     <div class="marquee-container">
       <div class="marquee-track">
         <img src="/logo plano creativo.png" alt="Plano Creativo"><img src="/logo dislocal.png" alt="Dislocal"><img src="/logo plano mariano moreno.png" alt="Instituto Superior Mariano Moreno"><img src="/logo impaktemos.png" alt="Impaktemos"><img src="/logo universidad.png" alt="Universidad"><img src="/logo yprealty.png" alt="YP Realty"><img src="/logo eurobuilding.png" alt="Eurobuilding Hotels"><img src="/logo panhouse.png" alt="PanHouse">
@@ -132,18 +148,18 @@
   </section>
 
   <!-- 2. ABOUT ME -->
-  <section id="about" class="about-section fade-in-section delay-3">
+  <section id="about" class="about-section">
     <div class="about-container">
-      <div class="sticky-note">
+      <div class="sticky-note reveal">
         <svg class="real-pin" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10V22" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="5" fill="#ef4444" stroke="#b91c1c" stroke-width="1.5"/><circle cx="10.5" cy="5.5" r="1.5" fill="#ffffff" opacity="0.6"/></svg>
         <span class="note-text" data-es="About Me" data-en="About Me">About Me</span>
       </div>
-      <div class="about-header">
+      <div class="about-header reveal">
         <h2 data-es="Hago un trabajo que las personas nunca olvidan." data-en="I do work that people never forget.">Hago un trabajo que las personas nunca olvidan.</h2>
         <p class="about-subtitle" data-es="Entiendo cómo funciona la mente del consumidor. Las ventas mantienen tu negocio, pero la gente compra por <strong>cómo te ve</strong>. Me enfoco en la psicología detrás de cada detalle para conectar de forma genuina, retener la atención y generar los resultados exactos que buscas como equipo." data-en="I understand how the consumer's mind works. Sales sustain your business, but people buy based on <strong>how they see you</strong>. I focus on the psychology behind every detail to connect genuinely, retain attention, and generate the exact results you seek as a team.">Entiendo cómo funciona la mente del consumidor. Las ventas mantienen tu negocio, pero la gente compra por <strong>cómo te ve</strong>. Me enfoco en la psicología detrás de cada detalle para conectar de forma genuina, retener la atención y generar los resultados exactos que buscas como equipo.</p>
       </div>
 
-      <div class="mac-window">
+      <div class="mac-window reveal">
         <div class="mac-titlebar">
           <div class="mac-buttons"><span class="mac-dot red"></span><span class="mac-dot yellow"></span><span class="mac-dot green"></span></div>
         </div>
@@ -163,206 +179,437 @@
     </div>
   </section>
 
-  <!-- 3. PROYECTOS -->
-  <section id="projects" class="projects-section fade-in-section delay-4">
+  <!-- 3. PORTAFOLIO POR ÁREAS DE EXPERTISE -->
+  <section id="projects" class="projects-section">
     <div class="projects-container">
-      <div class="sticky-note">
+      <div class="sticky-note reveal">
         <svg class="real-pin pin-blue" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10V22" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="5" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5"/><circle cx="10.5" cy="5.5" r="1.5" fill="#ffffff" opacity="0.6"/></svg>
-        <span class="note-text" data-es="Casos" data-en="Cases">Casos</span>
+        <span class="note-text" data-es="Portafolio" data-en="Portfolio">Portafolio</span>
       </div>
-      <div class="section-header">
+      <div class="section-header reveal">
         <h2 data-es="Proyectos que cuentan historias." data-en="Projects that tell stories.">Proyectos que cuentan historias.</h2>
-        <p data-es="Selección de ecosistemas y estrategias destacadas." data-en="Selection of featured ecosystems and strategies.">Selección de ecosistemas y estrategias destacadas.</p>
+        <p data-es="Organizado por áreas de expertise: del código al cierre comercial." data-en="Organized by area of expertise: from code to closing the deal.">Organizado por áreas de expertise: del código al cierre comercial.</p>
       </div>
 
-      <div class="projects-grid">
-        <div class="project-card" onclick="openModal('modal-yprealty')">
-          <div class="card-mac-header">
-            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-            <span class="project-num-tag">01</span>
-          </div>
-          <div class="card-body">
-            <img src="/portada-yprealty.png" alt="YP Realty" class="card-img" style="object-position: top center;" />
-            <h3>YP Realty</h3>
-            <p class="card-company" data-es="Growth +604%" data-en="Growth +604%">Growth +604%</p>
-          </div>
-        </div>
+      <nav class="area-nav reveal" aria-label="Áreas de expertise">
+        <a href="#frontend"><span class="num">01</span>Front-End</a>
+        <a href="#social"><span class="num">02</span>Social Media</a>
+        <a href="#pm"><span class="num">03</span><span data-es="Ventas / Project Manager" data-en="Sales / Project Manager">Ventas / Project Manager</span></a>
+      </nav>
 
-        <div class="project-card" onclick="openModal('modal-panhouse')">
-          <div class="card-mac-header">
-            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-            <span class="project-num-tag">02</span>
-          </div>
-          <div class="card-body">
-            <img src="/portada-panhouse.png" alt="Editorial PanHouse" class="card-img" />
-            <h3>Editorial PanHouse</h3>
-            <p class="card-company" data-es="Comunicaciones Internas" data-en="Internal Comms">Comunicaciones Internas</p>
-          </div>
+      <!-- ============ ÁREA 01 · FRONT-END ============ -->
+      <article id="frontend" class="mac-window area-window">
+        <div class="mac-titlebar">
+          <div class="mac-buttons"><span class="mac-dot red"></span><span class="mac-dot yellow"></span><span class="mac-dot green"></span></div>
+          <div class="window-label">~/portafolio/front-end</div>
+          <span class="area-index">01 / 03</span>
         </div>
-        
-        <div class="project-card" onclick="openModal('modal-eurobuilding')">
-          <div class="card-mac-header">
-            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-            <span class="project-num-tag">03</span>
+        <div class="area-body">
+          <div class="area-head reveal">
+            <div>
+              <h3 class="area-title">Front-End Developer</h3>
+              <p class="area-desc" data-es="Interfaces rápidas, accesibles y orientadas a conversión. Arquitectura semántica, CSS moderno y JavaScript sin dependencias innecesarias, desplegadas con flujos Git y CI/CD en Vercel." data-en="Fast, accessible, conversion-driven interfaces. Semantic architecture, modern CSS, and dependency-free JavaScript, shipped through Git workflows and CI/CD on Vercel.">Interfaces rápidas, accesibles y orientadas a conversión. Arquitectura semántica, CSS moderno y JavaScript sin dependencias innecesarias, desplegadas con flujos Git y CI/CD en Vercel.</p>
+            </div>
+            <span class="area-badge badge-yellow" data-es="Especialidad principal" data-en="Core expertise">Especialidad principal</span>
           </div>
-          <div class="card-body">
-            <img src="/portada-eurobuilding.png" alt="Eurobuilding" class="card-img" />
-            <h3>Eurobuilding</h3>
-            <p class="card-company" data-es="Comunicaciones & Ventas" data-en="Comms & Sales">Comunicaciones & Ventas</p>
-          </div>
-        </div>
-        
-        <div class="project-card" onclick="openModal('modal-dislocal')">
-          <div class="card-mac-header">
-            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-            <span class="project-num-tag">04</span>
-          </div>
-          <div class="card-body">
-            <img src="/portada-dislocal.png" alt="Dislocal" class="card-img" />
-            <h3>Dislocal</h3>
-            <p class="card-company" data-es="Coordinación Logística" data-en="Logistics Coordination">Coordinación Logística</p>
-          </div>
-        </div>
-        
-        <div class="project-card" onclick="openModal('modal-impaktemos')">
-          <div class="card-mac-header">
-            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-            <span class="project-num-tag">05</span>
-          </div>
-          <div class="card-body">
-            <img src="/portada-impaktemos.png" alt="Impaktemos" class="card-img" />
-            <h3>Impaktemos</h3>
-            <p class="card-company" data-es="Logística & Plataformas" data-en="Logistics & Platforms">Logística & Plataformas</p>
-          </div>
-        </div>
 
-        <div class="project-card" onclick="openModal('modal-freelance')">
-          <div class="card-mac-header">
-            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-            <span class="project-num-tag">06</span>
+          <!-- STACK TECNOLÓGICO -->
+          <div class="stack-block">
+            <p class="stack-title reveal" data-es="Stack tecnológico" data-en="Tech stack">Stack tecnológico</p>
+            <div class="stack-grid">
+              <div class="stack-item reveal">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3l1.6 17.2L12 22l6.4-1.8L20 3H4z" fill="#E34F26"/><path d="M12 4.5v15.9l5-1.4 1.3-13.9L12 4.5z" fill="#EF652A"/><path d="M15.6 7.5H8.4l.3 3h6.1l-.35 4-2.45.8-2.45-.8-.15-1.8" stroke="#fff" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>HTML5</span>
+              </div>
+              <div class="stack-item reveal">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3l1.6 17.2L12 22l6.4-1.8L20 3H4z" fill="#1572B6"/><path d="M12 4.5v15.9l5-1.4 1.3-13.9L12 4.5z" fill="#33A9DC"/><path d="M15.6 7.5H8.4l.25 2.8h6.7l-.4 4.4-2.95.9-2.95-.9-.15-1.9" stroke="#fff" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>CSS3</span>
+              </div>
+              <div class="stack-item reveal">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3" fill="#F7DF1E"/><text x="12" y="17" font-size="10.5" font-weight="900" font-family="sans-serif" text-anchor="middle" fill="#0f172a">JS</text></svg>
+                <span>Vanilla JavaScript</span>
+              </div>
+              <div class="stack-item reveal">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#007ACC" fill-rule="evenodd" d="M17.2 2.3 9.6 9.4 5 5.9 3 7v10l2 1.1 4.6-3.5 7.6 7.1 3.8-1.8V4.1l-3.8-1.8zM17 8.1v7.8l-4.7-3.9L17 8.1z"/></svg>
+                <span>VS Code</span>
+              </div>
+              <div class="stack-item reveal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                <span>Git &amp; GitHub</span>
+              </div>
+              <div class="stack-item reveal">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 22 20.5H2L12 3z" fill="#0f172a"/></svg>
+                <span>Vercel</span>
+              </div>
+              <div class="stack-item reveal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/><polyline points="7.5 13.5 10 11 12 12.5 14.5 8.5"/></svg>
+                <span>SEO Basics</span>
+              </div>
+            </div>
           </div>
-          <div class="card-body">
-            <img src="/portada freelance.png" alt="Freelance" class="card-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlMmU4ZjAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZmlsbD0iIzk0YTNiOCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5EaXNlw7FvIHkgV2ViPC90ZXh0Pjwvc3ZnPg=='" />
-            <h3 data-es="Freelance" data-en="Freelance">Freelance</h3>
-            <p class="card-company" data-es="Diseño & Web" data-en="Design & Web">Diseño & Web</p>
+
+          <ul class="area-notes">
+            <li class="reveal">
+              <span class="note-company">Impaktemos</span>
+              <p data-es="Landing 'Las Minitas': diseño y desarrollo de la plataforma que organiza el flujo de voluntarios, asigna tareas y monitorea actividades." data-en="'Las Minitas' landing: design and development of the platform that organizes volunteer flow, assigns tasks, and monitors activities.">Landing 'Las Minitas': diseño y desarrollo de la plataforma que organiza el flujo de voluntarios, asigna tareas y monitorea actividades.</p>
+            </li>
+            <li class="reveal">
+              <span class="note-company">Freelance</span>
+              <p data-es="Landing pages optimizadas para conversión e identidad visual adaptada a clientes internacionales (Astro, HTML/CSS, Figma, Canva Pro)." data-en="Conversion-optimized landing pages and visual identity tailored to international clients (Astro, HTML/CSS, Figma, Canva Pro).">Landing pages optimizadas para conversión e identidad visual adaptada a clientes internacionales (Astro, HTML/CSS, Figma, Canva Pro).</p>
+            </li>
+          </ul>
+
+          <div class="media-grid">
+            <figure class="media-card bento-horizontal reveal">
+              <video playsinline loop muted preload="metadata" class="horizontal-vid lazy-video" onclick="openGalleryZoom(this)">
+                <source src="/laura navarro.mp4" type="video/mp4" />
+              </video>
+              <figcaption class="media-caption"><span class="cap-title" data-es="Diseño Web: Dra. Laura Navarro" data-en="Web Design: Dr. Laura Navarro">Diseño Web: Dra. Laura Navarro</span> <span class="cap-sep" aria-hidden="true">|</span> <span class="cap-company">Freelance</span></figcaption>
+              <a href="https://gserrano2024cs-ctrl.github.io/Dra.LauraNavarroActiveLearningEducationLeadership/" target="_blank" rel="noopener" class="media-link" data-es="🌐 Ver sitio web" data-en="🌐 View website">🌐 Ver sitio web</a>
+            </figure>
+
+            <figure class="media-card bento-horizontal reveal">
+              <img src="/landingpage plataforma.png" alt="Diseño de Landing Page Impaktemos" class="horizontal-img w-full-img" onclick="openGalleryZoom(this)" onerror="this.closest('.media-card').style.display='none'" />
+              <figcaption class="media-caption"><span class="cap-title" data-es="Diseño UI/UX de Landing Page" data-en="Landing Page UI/UX Design">Diseño UI/UX de Landing Page</span> <span class="cap-sep" aria-hidden="true">|</span> <span class="cap-company">Impaktemos</span></figcaption>
+              <a href="https://minitas-mission-guide.lovable.app/" target="_blank" rel="noopener" class="media-link" data-es="🌐 Ver Landing Page" data-en="🌐 View Landing Page">🌐 Ver Landing Page</a>
+            </figure>
+
+            <figure class="media-card bento-horizontal reveal">
+              <video playsinline loop muted preload="metadata" class="horizontal-vid lazy-video" onclick="openGalleryZoom(this)">
+                <source src="/bea briceño.mp4" type="video/mp4" />
+              </video>
+              <figcaption class="media-caption"><span class="cap-title" data-es="Diseño Web: Beatriz Briceño" data-en="Web Design: Beatriz Briceño">Diseño Web: Beatriz Briceño</span> <span class="cap-sep" aria-hidden="true">|</span> <span class="cap-company">Freelance</span></figcaption>
+              <a href="https://beatriz-brice-o-pic-n.vercel.app/" target="_blank" rel="noopener" class="media-link" data-es="🌐 Ver sitio web" data-en="🌐 View website">🌐 Ver sitio web</a>
+            </figure>
+
+            <figure class="media-card bento-vertical reveal">
+              <video playsinline loop muted preload="metadata" class="vertical-vid lazy-video" onclick="openGalleryZoom(this)">
+                <source src="/video plataforma.mp4" type="video/mp4" />
+              </video>
+              <figcaption class="media-caption"><span class="cap-title" data-es="Plataforma Las Minitas en acción" data-en="Las Minitas platform in action">Plataforma Las Minitas en acción</span> <span class="cap-sep" aria-hidden="true">|</span> <span class="cap-company">Impaktemos</span></figcaption>
+            </figure>
+
+            <figure class="media-card bento-horizontal reveal">
+              <video playsinline loop muted preload="metadata" class="horizontal-vid lazy-video" onclick="openGalleryZoom(this)">
+                <source src="/mbi.mp4" type="video/mp4" />
+              </video>
+              <figcaption class="media-caption"><span class="cap-title" data-es="Diseño Web: Mario Briceño Iragorry" data-en="Web Design: Mario Briceño Iragorry">Diseño Web: Mario Briceño Iragorry</span> <span class="cap-sep" aria-hidden="true">|</span> <span class="cap-company">Freelance</span></figcaption>
+              <a href="https://mbihoy.vercel.app/?v=1" target="_blank" rel="noopener" class="media-link" data-es="🌐 Ver sitio web" data-en="🌐 View website">🌐 Ver sitio web</a>
+            </figure>
+
+            <figure class="media-card bento-horizontal reveal">
+              <video playsinline loop muted preload="metadata" class="horizontal-vid lazy-video" onclick="openGalleryZoom(this)">
+                <source src="/web dislocal.mp4" type="video/mp4" />
+              </video>
+              <figcaption class="media-caption"><span class="cap-title" data-es="Navegación web" data-en="Web navigation">Navegación web</span> <span class="cap-sep" aria-hidden="true">|</span> <span class="cap-company">Dislocal</span></figcaption>
+              <a href="https://www.dislocal.org/" target="_blank" rel="noopener" class="media-link" data-es="🌐 Visitar Sitio Web" data-en="🌐 Visit Website">🌐 Visitar Sitio Web</a>
+            </figure>
           </div>
         </div>
-      </div>
+      </article>
+
+      <!-- ============ ÁREA 02 · SOCIAL MEDIA ============ -->
+      <article id="social" class="mac-window area-window">
+        <div class="mac-titlebar">
+          <div class="mac-buttons"><span class="mac-dot red"></span><span class="mac-dot yellow"></span><span class="mac-dot green"></span></div>
+          <div class="window-label">~/portafolio/social-media</div>
+          <span class="area-index">02 / 03</span>
+        </div>
+        <div class="area-body">
+          <div class="area-head reveal">
+            <div>
+              <h3 class="area-title">Social Media</h3>
+              <p class="area-desc" data-es="Estrategia, guion y edición de contenido orgánico de respuesta directa. Formatos de alto impacto medidos con analítica real para convertir atención en clientes." data-en="Strategy, scripting, and editing of direct-response organic content. High-impact formats measured with real analytics to turn attention into customers.">Estrategia, guion y edición de contenido orgánico de respuesta directa. Formatos de alto impacto medidos con analítica real para convertir atención en clientes.</p>
+            </div>
+            <span class="area-badge badge-pink">Growth +604%</span>
+          </div>
+
+          <div class="area-tools reveal">
+            <span>GA4</span><span>TikTok Analytics</span><span>YouTube Analytics</span><span>Meta Business Suite</span><span>ROAS</span><span>CPA</span><span>CPM</span><span>CTR</span><span>CPC</span>
+          </div>
+
+          <ul class="area-notes">
+            <li class="reveal">
+              <span class="note-company">YP Realty</span>
+              <p data-es="Estrategia de contenido y edición de video orgánico para el sector inmobiliario en Puerto Rico: formatos de alto impacto, guiones persuasivos y SEO para maximizar la conversión." data-en="Content strategy and organic video editing for the Puerto Rico real estate sector: high-impact formats, persuasive scripts, and SEO to maximize conversion.">Estrategia de contenido y edición de video orgánico para el sector inmobiliario en Puerto Rico: formatos de alto impacto, guiones persuasivos y SEO para maximizar la conversión.</p>
+            </li>
+            <li class="reveal">
+              <span class="note-company">Editorial PanHouse</span>
+              <p data-es="Cobertura audiovisual de comunicaciones corporativas y ferias editoriales internacionales." data-en="Audiovisual coverage of corporate communications and international book fairs.">Cobertura audiovisual de comunicaciones corporativas y ferias editoriales internacionales.</p>
+            </li>
+          </ul>
+
+          <div class="media-grid">
+            <figure class="media-card bento-vertical reveal">
+              <video playsinline loop muted preload="metadata" class="vertical-vid lazy-video" onclick="openGalleryZoom(this)">
+                <source src="/VIDEO PARA PORTAFOLIO.webm" type="video/webm" />
+              </video>
+              <figcaption class="media-caption"><span class="cap-title" data-es="Cisterna de agua en PR" data-en="Water cistern in PR">Cisterna de agua en PR</span> <span class="cap-sep" aria-hidden="true">|</span> <span class="cap-company">YP Realty</span></figcaption>
+            </figure>
+
+            <figure class="media-card bento-vertical reveal">
+              <video playsinline loop muted preload="metadata" class="vertical-vid lazy-video" onclick="openGalleryZoom(this)">
+                <source src="/PARA-PORTAFOLIO.webm" type="video/webm" />
+              </video>
+              <figcaption class="media-caption"><span class="cap-title" data-es="Cierre de venta en Arecibo, Puerto Rico" data-en="Sales closing in Arecibo, Puerto Rico">Cierre de venta en Arecibo, Puerto Rico</span> <span class="cap-sep" aria-hidden="true">|</span> <span class="cap-company">YP Realty</span></figcaption>
+            </figure>
+
+            <figure class="media-card bento-vertical reveal">
+              <video playsinline loop muted preload="metadata" class="vertical-vid lazy-video" onclick="openGalleryZoom(this)">
+                <source src="/VIDEO PARA PORTAFOLIO 2.webm" type="video/webm" />
+              </video>
+              <figcaption class="media-caption"><span class="cap-title" data-es="Trend: ¿quién paga qué en un arrendamiento?" data-en="Trend: who pays for what in a lease?">Trend: ¿quién paga qué en un arrendamiento?</span> <span class="cap-sep" aria-hidden="true">|</span> <span class="cap-company">YP Realty</span></figcaption>
+            </figure>
+
+            <figure class="media-card bento-vertical reveal">
+              <video playsinline loop muted preload="metadata" class="vertical-vid lazy-video" onclick="openGalleryZoom(this)">
+                <source src="/ISLA-DEL-ENCATO-PORTAFOLIO-.webm" type="video/webm" />
+              </video>
+              <figcaption class="media-caption"><span class="cap-title" data-es="Isla del Encanto" data-en="Island of Enchantment">Isla del Encanto</span> <span class="cap-sep" aria-hidden="true">|</span> <span class="cap-company">YP Realty</span></figcaption>
+            </figure>
+
+            <figure class="media-card bento-vertical reveal">
+              <video playsinline loop muted preload="metadata" class="vertical-vid lazy-video" onclick="openGalleryZoom(this)">
+                <source src="/video panhouse.mp4" type="video/mp4" />
+              </video>
+              <figcaption class="media-caption"><span class="cap-title" data-es="Cobertura de comunicaciones" data-en="Communications coverage">Cobertura de comunicaciones</span> <span class="cap-sep" aria-hidden="true">|</span> <span class="cap-company">Editorial PanHouse</span></figcaption>
+            </figure>
+
+            <figure class="media-card bento-vertical reveal">
+              <video playsinline loop muted preload="metadata" class="vertical-vid lazy-video" onclick="openGalleryZoom(this)">
+                <source src="/ph.mp4" type="video/mp4" />
+              </video>
+              <figcaption class="media-caption"><span class="cap-title" data-es="Feria Internacional del Libro en Guadalajara" data-en="Guadalajara International Book Fair">Feria Internacional del Libro en Guadalajara</span> <span class="cap-sep" aria-hidden="true">|</span> <span class="cap-company">Editorial PanHouse</span></figcaption>
+            </figure>
+
+            <figure class="media-card bento-horizontal reveal">
+              <img src="/metricas.png" alt="Métricas YP Realty" class="horizontal-img w-full-img" onclick="openGalleryZoom(this)" onerror="this.closest('.media-card').style.display='none'" />
+              <figcaption class="media-caption"><span class="cap-title" data-es="Análisis de Métricas" data-en="Metrics Analysis">Análisis de Métricas</span> <span class="cap-sep" aria-hidden="true">|</span> <span class="cap-company">YP Realty</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============ ÁREA 03 · VENTAS / PROJECT MANAGER ============ -->
+      <article id="pm" class="mac-window area-window">
+        <div class="mac-titlebar">
+          <div class="mac-buttons"><span class="mac-dot red"></span><span class="mac-dot yellow"></span><span class="mac-dot green"></span></div>
+          <div class="window-label">~/portafolio/ventas-pm</div>
+          <span class="area-index">03 / 03</span>
+        </div>
+        <div class="area-body">
+          <div class="area-head reveal">
+            <div>
+              <h3 class="area-title" data-es="Ventas / Project Manager" data-en="Sales / Project Manager">Ventas / Project Manager</h3>
+              <p class="area-desc" data-es="Coordinación operativa, logística de eventos y sistemas comerciales B2B bajo estándares exigentes. Convierto la complejidad de múltiples equipos en una sola operación sin fricción." data-en="Operational coordination, event logistics, and B2B commercial systems under demanding standards. I turn the complexity of multiple teams into a single frictionless operation.">Coordinación operativa, logística de eventos y sistemas comerciales B2B bajo estándares exigentes. Convierto la complejidad de múltiples equipos en una sola operación sin fricción.</p>
+            </div>
+            <span class="area-badge badge-green" data-es="100% incidencias resueltas" data-en="100% incidents resolved">100% incidencias resueltas</span>
+          </div>
+
+          <div class="area-tools reveal">
+            <span>Trello</span><span>Asana</span><span>Opera PMS</span><span>CRM B2B</span><span>ManyChat</span><span data-es="Metodologías Ágiles" data-en="Agile Methodologies">Metodologías Ágiles</span>
+          </div>
+
+          <ul class="area-notes">
+            <li class="reveal">
+              <span class="note-company">Dislocal</span>
+              <p data-es="Planificación y logística de proyectos de impacto local (Barrio El Calvario) con metodologías ágiles, alineando cronogramas, recursos y equipos internacionales en terreno." data-en="Planning and logistics for local impact projects (El Calvario neighborhood) using agile methodologies, aligning schedules, resources, and international teams on the ground.">Planificación y logística de proyectos de impacto local (Barrio El Calvario) con metodologías ágiles, alineando cronogramas, recursos y equipos internacionales en terreno.</p>
+            </li>
+            <li class="reveal">
+              <span class="note-company">Eurobuilding</span>
+              <p data-es="Portafolio corporativo B2B, reservas y ventas en el Business Center, con comunicación interna centralizada entre 7 departamentos y 100% de resolución de incidencias." data-en="B2B corporate portfolio, reservations, and sales at the Business Center, with internal communication centralized across 7 departments and a 100% incident resolution rate.">Portafolio corporativo B2B, reservas y ventas en el Business Center, con comunicación interna centralizada entre 7 departamentos y 100% de resolución de incidencias.</p>
+            </li>
+            <li class="reveal">
+              <span class="note-company">Editorial PanHouse</span>
+              <p data-es="Sincronización diaria de Marketing, Ventas y Relaciones Públicas, ejecución de eventos VIP y automatización de atención con IA." data-en="Daily synchronization of Marketing, Sales, and Public Relations, VIP event execution, and AI-powered customer service automation.">Sincronización diaria de Marketing, Ventas y Relaciones Públicas, ejecución de eventos VIP y automatización de atención con IA.</p>
+            </li>
+            <li class="reveal">
+              <span class="note-company">Impaktemos</span>
+              <p data-es="Coordinación operativa de intervenciones y voluntariado en terreno junto a la junta coordinadora." data-en="Operational coordination of field interventions and volunteering alongside the coordinating board.">Coordinación operativa de intervenciones y voluntariado en terreno junto a la junta coordinadora.</p>
+            </li>
+          </ul>
+
+          <div class="media-grid">
+            <figure class="media-card bento-vertical reveal">
+              <video playsinline loop muted preload="metadata" class="vertical-vid lazy-video" onclick="openGalleryZoom(this)">
+                <source src="/video dislocal.mp4" type="video/mp4" />
+              </video>
+              <figcaption class="media-caption"><span class="cap-title" data-es="Proyecto Dislocal en acción" data-en="Dislocal project in action">Proyecto Dislocal en acción</span> <span class="cap-sep" aria-hidden="true">|</span> <span class="cap-company">Dislocal</span></figcaption>
+            </figure>
+
+            <figure class="media-card bento-horizontal reveal">
+              <img src="/dislocal 1.png" alt="Evento social en el cine, El Calvario" class="horizontal-img w-full-img" onclick="openGalleryZoom(this)" onerror="this.closest('.media-card').style.display='none'" />
+              <figcaption class="media-caption"><span class="cap-title" data-es="Evento social para la comunidad en el cine" data-en="Community social event at the cinema">Evento social para la comunidad en el cine</span> <span class="cap-sep" aria-hidden="true">|</span> <span class="cap-company">Dislocal</span></figcaption>
+            </figure>
+
+            <figure class="media-card bento-horizontal reveal">
+              <img src="/dislocal 202.png" alt="Documentación en campo, El Calvario" class="horizontal-img w-full-img" onclick="openGalleryZoom(this)" onerror="this.closest('.media-card').style.display='none'" />
+              <figcaption class="media-caption"><span class="cap-title" data-es="Documentación de la vida cotidiana en El Calvario" data-en="Documenting everyday life in El Calvario">Documentación de la vida cotidiana en El Calvario</span> <span class="cap-sep" aria-hidden="true">|</span> <span class="cap-company">Dislocal</span></figcaption>
+            </figure>
+
+            <figure class="media-card bento-horizontal reveal">
+              <img src="/imagen trello dislocal (2).png" alt="Tablero Trello Dislocal" class="horizontal-img w-full-img" onclick="openGalleryZoom(this)" onerror="this.closest('.media-card').style.display='none'" />
+              <figcaption class="media-caption"><span class="cap-title" data-es="Coordinación de recursos y tareas en Trello" data-en="Resource and task coordination in Trello">Coordinación de recursos y tareas en Trello</span> <span class="cap-sep" aria-hidden="true">|</span> <span class="cap-company">Dislocal</span></figcaption>
+            </figure>
+
+            <figure class="media-card bento-vertical reveal">
+              <video playsinline loop muted preload="metadata" class="vertical-vid lazy-video" onclick="openGalleryZoom(this)">
+                <source src="/cerro verde ph.mp4" type="video/mp4" />
+              </video>
+              <figcaption class="media-caption"><span class="cap-title" data-es="Despliegue logístico en Cerro Verde" data-en="Logistics deployment in Cerro Verde">Despliegue logístico en Cerro Verde</span> <span class="cap-sep" aria-hidden="true">|</span> <span class="cap-company">Editorial PanHouse</span></figcaption>
+            </figure>
+
+            <figure class="media-card bento-horizontal reveal">
+              <img src="/evento ph.png" alt="Evento VIP Editorial PanHouse" class="horizontal-img w-full-img" onclick="openGalleryZoom(this)" onerror="this.closest('.media-card').style.display='none'" />
+              <figcaption class="media-caption"><span class="cap-title" data-es="Ejecución de Evento VIP" data-en="VIP Event Execution">Ejecución de Evento VIP</span> <span class="cap-sep" aria-hidden="true">|</span> <span class="cap-company">Editorial PanHouse</span></figcaption>
+            </figure>
+
+            <figure class="media-card bento-horizontal reveal">
+              <img src="/manychat.png" alt="Automatización ManyChat" class="horizontal-img w-full-img" onclick="openGalleryZoom(this)" onerror="this.closest('.media-card').style.display='none'" />
+              <figcaption class="media-caption"><span class="cap-title" data-es="Flujos de atención automatizada con IA (ManyChat)" data-en="AI-powered automated service flows (ManyChat)">Flujos de atención automatizada con IA (ManyChat)</span> <span class="cap-sep" aria-hidden="true">|</span> <span class="cap-company">Editorial PanHouse</span></figcaption>
+            </figure>
+
+            <figure class="media-card bento-horizontal reveal">
+              <img src="/impaktemos 1.png" alt="Refuerzo escolar Las Minitas" class="horizontal-img w-full-img" onclick="openGalleryZoom(this)" onerror="this.closest('.media-card').style.display='none'" />
+              <figcaption class="media-caption"><span class="cap-title" data-es="Refuerzo escolar en Las Minitas" data-en="School tutoring at Las Minitas">Refuerzo escolar en Las Minitas</span> <span class="cap-sep" aria-hidden="true">|</span> <span class="cap-company">Impaktemos</span></figcaption>
+            </figure>
+
+            <figure class="media-card bento-vertical reveal">
+              <video playsinline loop muted preload="metadata" class="vertical-vid lazy-video" onclick="openGalleryZoom(this)">
+                <source src="/ciudad piar.mp4" type="video/mp4" />
+              </video>
+              <figcaption class="media-caption"><span class="cap-title" data-es="Intervención logística en Ciudad Piar, La Guaira" data-en="Logistics intervention in Ciudad Piar, La Guaira">Intervención logística en Ciudad Piar, La Guaira</span> <span class="cap-sep" aria-hidden="true">|</span> <span class="cap-company">Impaktemos</span></figcaption>
+            </figure>
+
+            <figure class="media-card bento-horizontal reveal">
+              <video playsinline loop muted preload="metadata" class="horizontal-vid lazy-video" onclick="openGalleryZoom(this)">
+                <source src="/video euro.mp4" type="video/mp4" />
+              </video>
+              <figcaption class="media-caption"><span class="cap-title" data-es="Operaciones y estándares de servicio 5 estrellas" data-en="5-star operations and service standards">Operaciones y estándares de servicio 5 estrellas</span> <span class="cap-sep" aria-hidden="true">|</span> <span class="cap-company">Eurobuilding</span></figcaption>
+            </figure>
+
+            <figure class="media-card bento-horizontal reveal">
+              <img src="/equipo euro.png" alt="Equipo Eurobuilding" class="horizontal-img w-full-img" onclick="openGalleryZoom(this)" onerror="this.closest('.media-card').style.display='none'" />
+              <figcaption class="media-caption"><span class="cap-title" data-es="Equipo de trabajo" data-en="Work team">Equipo de trabajo</span> <span class="cap-sep" aria-hidden="true">|</span> <span class="cap-company">Eurobuilding</span></figcaption>
+            </figure>
+
+            <figure class="media-card bento-horizontal reveal">
+              <img src="/OPERA PMS.png" alt="Sistema Opera PMS" class="horizontal-img w-full-img" onclick="openGalleryZoom(this)" onerror="this.closest('.media-card').style.display='none'" />
+              <figcaption class="media-caption"><span class="cap-title" data-es="Gestión y reservas con Opera PMS" data-en="Management and reservations with Opera PMS">Gestión y reservas con Opera PMS</span> <span class="cap-sep" aria-hidden="true">|</span> <span class="cap-company">Eurobuilding</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 
-  <!-- 4. SERVICIOS (ESTILO macOS MINIMALISTA Y ELEGANTE) -->
-  <section id="services" class="services-section fade-in-section delay-5">
+  <!-- 4. SERVICIOS · PROBLEMA → SOLUCIÓN -->
+  <section id="services" class="services-section">
     <div class="services-container">
-      <div class="sticky-note">
+      <div class="sticky-note reveal">
         <svg class="real-pin" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10V22" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="5" fill="#f59e0b" stroke="#b45309" stroke-width="1.5"/><circle cx="10.5" cy="5.5" r="1.5" fill="#ffffff" opacity="0.6"/></svg>
         <span class="note-text" data-es="Cómo te ayudo" data-en="How I help">Cómo te ayudo</span>
       </div>
-      <div class="section-header">
-        <h2 data-es="Mi Metodología de Trabajo." data-en="My Working Methodology.">Mi Metodología de Trabajo.</h2>
-        <p data-es="Sistemas claros. Resultados predecibles. Despliega cada área para ver mi enfoque." data-en="Clear systems. Predictable results. Expand each area to see my approach.">Sistemas claros. Resultados predecibles. Despliega cada área para ver mi enfoque.</p>
+      <div class="section-header reveal">
+        <h2 data-es="Problemas reales. Soluciones estratégicas." data-en="Real problems. Strategic solutions.">Problemas reales. Soluciones estratégicas.</h2>
+        <p data-es="Despliega cada área para ver el problema que resuelvo y cómo lo hago." data-en="Expand each area to see the problem I solve and how I do it.">Despliega cada área para ver el problema que resuelvo y cómo lo hago.</p>
       </div>
 
       <div class="services-grid-blocks">
-        
-        <!-- SMM -->
-        <div class="service-block service-toggle" style="background: rgba(59, 130, 246, 0.08); border-color: rgba(59, 130, 246, 0.2);" onclick="this.classList.toggle('open')">
-          <div class="service-block-header"><h3 data-es="Social Media" data-en="Social Media">Social Media</h3><span class="icon-plus">+</span></div>
-          <div class="service-block-body">
+
+        <!-- 1 · FRONT-END -->
+        <div class="service-block reveal open" data-toggle="open" style="background: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.2);">
+          <div class="service-block-header"><h3 data-es="Desarrollo Front-End & Landing Pages" data-en="Front-End Development & Landing Pages">Desarrollo Front-End & Landing Pages</h3><span class="icon-plus" aria-hidden="true">+</span></div>
+          <div class="service-block-body"><div class="service-block-inner">
             <div class="minimal-flow">
               <div class="flow-block">
                 <span class="flow-label" data-es="El Problema" data-en="The Problem">El Problema</span>
-                <p class="flow-text text-muted" data-es="Ruido digital sin estrategia. Métricas de vanidad que no se traducen en ventas reales ni autoridad." data-en="Digital noise without strategy. Vanity metrics that do not translate into real sales or authority.">Ruido digital sin estrategia. Métricas de vanidad que no se traducen en ventas reales ni autoridad.</p>
+                <p class="flow-text text-muted" data-es="Invertiste en un sitio que se ve bien pero carga lento, se rompe en móvil y no aparece en Google. Cada segundo extra de carga es un cliente que rebota antes de ver tu oferta, y tu presupuesto de publicidad se quema en una página que no convierte." data-en="You invested in a site that looks good but loads slowly, breaks on mobile, and doesn't show up on Google. Every extra second of load time is a customer who bounces before seeing your offer, and your ad budget burns on a page that doesn't convert.">Invertiste en un sitio que se ve bien pero carga lento, se rompe en móvil y no aparece en Google. Cada segundo extra de carga es un cliente que rebota antes de ver tu oferta, y tu presupuesto de publicidad se quema en una página que no convierte.</p>
               </div>
-              <div class="flow-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </div>
+              <div class="flow-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
               <div class="flow-block">
-                <span class="flow-label" data-es="Mi Enfoque" data-en="My Approach">Mi Enfoque</span>
-                <p class="flow-text text-strong" data-es="Ecosistemas de autoridad. Audito la presencia, defino el arquetipo de marca y ejecuto estrategias de contenido orientadas exclusivamente a la conversión." data-en="Authority ecosystems. I audit the presence, define the brand archetype, and execute content strategies focused exclusively on conversion.">Ecosistemas de autoridad. Audito la presencia, defino el arquetipo de marca y ejecuto estrategias de contenido orientadas exclusivamente a la conversión.</p>
+                <span class="flow-label" data-es="La Solución" data-en="The Solution">La Solución</span>
+                <p class="flow-text text-strong" data-es="Ingeniería front-end orientada a rendimiento. Desarrollo con HTML5 semántico, CSS3 moderno (Grid, Flexbox, custom properties) y Vanilla JavaScript sin dependencias innecesarias. Uso arquitectura de islas con Astro para enviar cero JS por defecto, optimizo Core Web Vitals (LCP, CLS, INP), implemento SEO técnico y despliego con CI/CD en Vercel sobre flujos Git versionados." data-en="Performance-driven front-end engineering. I build with semantic HTML5, modern CSS3 (Grid, Flexbox, custom properties), and Vanilla JavaScript with no unnecessary dependencies. I use Astro's islands architecture to ship zero JS by default, tune Core Web Vitals (LCP, CLS, INP), implement technical SEO, and deploy with CI/CD on Vercel through versioned Git workflows.">Ingeniería front-end orientada a rendimiento. Desarrollo con HTML5 semántico, CSS3 moderno (Grid, Flexbox, custom properties) y Vanilla JavaScript sin dependencias innecesarias. Uso arquitectura de islas con Astro para enviar cero JS por defecto, optimizo Core Web Vitals (LCP, CLS, INP), implemento SEO técnico y despliego con CI/CD en Vercel sobre flujos Git versionados.</p>
               </div>
             </div>
-          </div>
+            <div class="service-tags"><span>Semantic HTML5</span><span>CSS Grid &amp; Flexbox</span><span>Vanilla JS</span><span>Astro Islands</span><span>Core Web Vitals</span><span>Technical SEO</span><span>CI/CD · Vercel</span><span>Mobile-First</span></div>
+          </div></div>
         </div>
 
-        <!-- VIDEO EDICION -->
-        <div class="service-block service-toggle" style="background: rgba(168, 85, 247, 0.08); border-color: rgba(168, 85, 247, 0.2);" onclick="this.classList.toggle('open')">
-          <div class="service-block-header"><h3 data-es="Edición de Contenido Visual" data-en="Visual Content Editing">Edición de Contenido Visual</h3><span class="icon-plus">+</span></div>
-          <div class="service-block-body">
+        <!-- 2 · SOCIAL MEDIA -->
+        <div class="service-block reveal" data-toggle="open" style="background: rgba(59, 130, 246, 0.08); border-color: rgba(59, 130, 246, 0.2);">
+          <div class="service-block-header"><h3 data-es="Social Media & Estrategia de Contenido" data-en="Social Media & Content Strategy">Social Media & Estrategia de Contenido</h3><span class="icon-plus" aria-hidden="true">+</span></div>
+          <div class="service-block-body"><div class="service-block-inner">
             <div class="minimal-flow">
               <div class="flow-block">
                 <span class="flow-label" data-es="El Problema" data-en="The Problem">El Problema</span>
-                <p class="flow-text text-muted" data-es="Pérdida de atención inmediata. Espectadores que se aburren y abandonan el video en los primeros 3 segundos." data-en="Immediate loss of attention. Viewers who get bored and leave the video in the first 3 seconds.">Pérdida de atención inmediata. Espectadores que se aburren y abandonan el video en los primeros 3 segundos.</p>
+                <p class="flow-text text-muted" data-es="Publicas con constancia y nadie compra: alcance sin intención de compra, una comunidad que no convierte y métricas de vanidad que no puedes atribuir a un solo peso de ingreso." data-en="You post consistently and nobody buys: reach with no purchase intent, a community that doesn't convert, and vanity metrics you can't tie to a single dollar of revenue.">Publicas con constancia y nadie compra: alcance sin intención de compra, una comunidad que no convierte y métricas de vanidad que no puedes atribuir a un solo peso de ingreso.</p>
               </div>
-              <div class="flow-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </div>
+              <div class="flow-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
               <div class="flow-block">
-                <span class="flow-label" data-es="Mi Enfoque" data-en="My Approach">Mi Enfoque</span>
-                <p class="flow-text text-strong" data-es="Retención magnética. Inyecto ganchos visuales (Hooks) y estructuro una narrativa dinámica con cortes limpios para mantener al usuario hasta el final." data-en="Magnetic retention. I inject visual hooks and structure a dynamic narrative with clean cuts to keep the user engaged until the end.">Retención magnética. Inyecto ganchos visuales (Hooks) y estructuro una narrativa dinámica con cortes limpios para mantener al usuario hasta el final.</p>
+                <span class="flow-label" data-es="La Solución" data-en="The Solution">La Solución</span>
+                <p class="flow-text text-strong" data-es="Sistemas de contenido de respuesta directa. Audito tu presencia, defino el arquetipo de marca y mapeo pilares editoriales a cada etapa del embudo (TOFU, MOFU, BOFU). Mido con GA4, TikTok Analytics y YouTube Analytics, y optimizo sobre KPIs de negocio (CTR, CPC, CPA, ROAS) para decidir con datos y no con intuición." data-en="Direct-response content systems. I audit your presence, define the brand archetype, and map editorial pillars to every funnel stage (TOFU, MOFU, BOFU). I measure with GA4, TikTok Analytics, and YouTube Analytics, and optimize against business KPIs (CTR, CPC, CPA, ROAS) so decisions are driven by data, not intuition.">Sistemas de contenido de respuesta directa. Audito tu presencia, defino el arquetipo de marca y mapeo pilares editoriales a cada etapa del embudo (TOFU, MOFU, BOFU). Mido con GA4, TikTok Analytics y YouTube Analytics, y optimizo sobre KPIs de negocio (CTR, CPC, CPA, ROAS) para decidir con datos y no con intuición.</p>
               </div>
             </div>
-          </div>
+            <div class="service-tags"><span>Brand Archetype</span><span>Content Funnel</span><span>GA4</span><span>TikTok Analytics</span><span>CTR · CPA · ROAS</span><span>SEO Content</span></div>
+          </div></div>
         </div>
 
-        <!-- LANDING PAGES -->
-        <div class="service-block service-toggle" style="background: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.2);" onclick="this.classList.toggle('open')">
-          <div class="service-block-header"><h3 data-es="Landing Pages & Websites" data-en="Landing Pages & Websites">Landing Pages & Websites</h3><span class="icon-plus">+</span></div>
-          <div class="service-block-body">
+        <!-- 3 · EDICIÓN VISUAL -->
+        <div class="service-block reveal" data-toggle="open" style="background: rgba(168, 85, 247, 0.08); border-color: rgba(168, 85, 247, 0.2);">
+          <div class="service-block-header"><h3 data-es="Edición de Contenido Visual" data-en="Visual Content Editing">Edición de Contenido Visual</h3><span class="icon-plus" aria-hidden="true">+</span></div>
+          <div class="service-block-body"><div class="service-block-inner">
             <div class="minimal-flow">
               <div class="flow-block">
                 <span class="flow-label" data-es="El Problema" data-en="The Problem">El Problema</span>
-                <p class="flow-text text-muted" data-es="Fricción en la navegación. Sitios web lentos o confusos donde el cliente potencial se frustra y abandona antes de comprar." data-en="Navigation friction. Slow or confusing websites where the potential client gets frustrated and leaves before buying.">Fricción en la navegación. Sitios web lentos o confusos donde el cliente potencial se frustra y abandona antes de comprar.</p>
+                <p class="flow-text text-muted" data-es="Tu video pierde a la audiencia en los primeros 3 segundos: contenido valioso, retención pobre y un algoritmo que deja de distribuirte." data-en="Your video loses the audience in the first 3 seconds: valuable content, poor retention, and an algorithm that stops distributing you.">Tu video pierde a la audiencia en los primeros 3 segundos: contenido valioso, retención pobre y un algoritmo que deja de distribuirte.</p>
               </div>
-              <div class="flow-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </div>
+              <div class="flow-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
               <div class="flow-block">
-                <span class="flow-label" data-es="Mi Enfoque" data-en="My Approach">Mi Enfoque</span>
-                <p class="flow-text text-strong" data-es="Arquitecturas de alta conversión. Interfaces ultrarrápidas, fluidas y diseñadas con un único propósito psicológico: lograr que hagan clic." data-en="High-conversion architectures. Ultra-fast, fluid interfaces designed with a single psychological purpose: getting them to click.">Arquitecturas de alta conversión. Interfaces ultrarrápidas, fluidas y diseñadas con un único propósito psicológico: lograr que hagan clic.</p>
+                <span class="flow-label" data-es="La Solución" data-en="The Solution">La Solución</span>
+                <p class="flow-text text-strong" data-es="Edición diseñada para retención. Inyecto ganchos visuales (hooks) desde el primer segundo, estructuro un ritmo narrativo con cortes limpios, subtitulado dinámico y sound design, y entrego formatos nativos 9:16 por plataforma. Analizo las curvas de retención de cada pieza para iterar la siguiente." data-en="Editing engineered for retention. I inject visual hooks from the first second, structure a narrative rhythm with clean cuts, dynamic captions, and sound design, and deliver native 9:16 formats per platform. I analyze each piece's retention curve to iterate on the next one.">Edición diseñada para retención. Inyecto ganchos visuales (hooks) desde el primer segundo, estructuro un ritmo narrativo con cortes limpios, subtitulado dinámico y sound design, y entrego formatos nativos 9:16 por plataforma. Analizo las curvas de retención de cada pieza para iterar la siguiente.</p>
               </div>
             </div>
-          </div>
+            <div class="service-tags"><span>Hook Design</span><span>Retention Curves</span><span>9:16 Native</span><span>Dynamic Captions</span><span>Sound Design</span></div>
+          </div></div>
         </div>
 
-        <!-- VENTAS Y CRM -->
-        <div class="service-block service-toggle" style="background: rgba(245, 158, 11, 0.08); border-color: rgba(245, 158, 11, 0.2);" onclick="this.classList.toggle('open')">
-          <div class="service-block-header"><h3 data-es="Ventas, CRM & Prospección" data-en="Sales, CRM & Prospecting">Ventas, CRM & Prospección</h3><span class="icon-plus">+</span></div>
-          <div class="service-block-body">
+        <!-- 4 · VENTAS Y CRM -->
+        <div class="service-block reveal" data-toggle="open" style="background: rgba(245, 158, 11, 0.08); border-color: rgba(245, 158, 11, 0.2);">
+          <div class="service-block-header"><h3 data-es="Ventas, CRM & Prospección" data-en="Sales, CRM & Prospecting">Ventas, CRM & Prospección</h3><span class="icon-plus" aria-hidden="true">+</span></div>
+          <div class="service-block-body"><div class="service-block-inner">
             <div class="minimal-flow">
               <div class="flow-block">
                 <span class="flow-label" data-es="El Problema" data-en="The Problem">El Problema</span>
-                <p class="flow-text text-muted" data-es="Procesos comerciales rotos. Prospectos fríos y falta de seguimientos sistemáticos que dejan dinero sobre la mesa." data-en="Broken commercial processes. Cold prospects and a lack of systematic follow-ups that leave money on the table.">Procesos comerciales rotos. Prospectos fríos y falta de seguimientos sistemáticos que dejan dinero sobre la mesa.</p>
+                <p class="flow-text text-muted" data-es="Tu equipo persigue leads fríos, los seguimientos dependen de la memoria de alguien y los prospectos calificados se enfrían en un chat sin respuesta. Ya pagaste por adquirirlos y los pierdes por falta de proceso." data-en="Your team chases cold leads, follow-ups depend on someone's memory, and qualified prospects go cold in an unanswered chat. You already paid to acquire them and you lose them for lack of process.">Tu equipo persigue leads fríos, los seguimientos dependen de la memoria de alguien y los prospectos calificados se enfrían en un chat sin respuesta. Ya pagaste por adquirirlos y los pierdes por falta de proceso.</p>
               </div>
-              <div class="flow-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </div>
+              <div class="flow-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
               <div class="flow-block">
-                <span class="flow-label" data-es="Mi Enfoque" data-en="My Approach">Mi Enfoque</span>
-                <p class="flow-text text-strong" data-es="Embudos predecibles. Automatizo la pre-calificación y estructuro el flujo en tu CRM para que solo hables con clientes listos para cerrar el trato." data-en="Predictable funnels. I automate pre-qualification and structure the flow in your CRM so you only talk to clients ready to close the deal.">Embudos predecibles. Automatizo la pre-calificación y estructuro el flujo en tu CRM para que solo hables con clientes listos para cerrar el trato.</p>
+                <span class="flow-label" data-es="La Solución" data-en="The Solution">La Solución</span>
+                <p class="flow-text text-strong" data-es="Pipeline comercial predecible. Estructuro las etapas y automatizaciones en tu CRM (Salesforce, Zoho), implemento pre-calificación y lead scoring con chatbots e IA (ManyChat), secuencias de nurturing por email (Mailchimp) y triggers de seguimiento, para que tu equipo hable solo con prospectos listos para cerrar." data-en="A predictable sales pipeline. I structure stages and automations in your CRM (Salesforce, Zoho), implement pre-qualification and lead scoring with chatbots and AI (ManyChat), email nurturing sequences (Mailchimp), and follow-up triggers, so your team only talks to prospects ready to close.">Pipeline comercial predecible. Estructuro las etapas y automatizaciones en tu CRM (Salesforce, Zoho), implemento pre-calificación y lead scoring con chatbots e IA (ManyChat), secuencias de nurturing por email (Mailchimp) y triggers de seguimiento, para que tu equipo hable solo con prospectos listos para cerrar.</p>
               </div>
             </div>
-          </div>
+            <div class="service-tags"><span>Salesforce</span><span>Zoho CRM</span><span>ManyChat</span><span>Mailchimp</span><span>Lead Scoring</span><span>Pipeline Automation</span></div>
+          </div></div>
         </div>
 
-        <!-- PROJECT MANAGEMENT -->
-        <div class="service-block service-toggle" style="background: rgba(100, 116, 139, 0.08); border-color: rgba(100, 116, 139, 0.2);" onclick="this.classList.toggle('open')">
-          <div class="service-block-header"><h3 data-es="Project Management" data-en="Project Management">Project Management</h3><span class="icon-plus">+</span></div>
-          <div class="service-block-body">
+        <!-- 5 · PROJECT MANAGEMENT -->
+        <div class="service-block reveal" data-toggle="open" style="background: rgba(100, 116, 139, 0.08); border-color: rgba(100, 116, 139, 0.2);">
+          <div class="service-block-header"><h3 data-es="Project Management" data-en="Project Management">Project Management</h3><span class="icon-plus" aria-hidden="true">+</span></div>
+          <div class="service-block-body"><div class="service-block-inner">
             <div class="minimal-flow">
               <div class="flow-block">
                 <span class="flow-label" data-es="El Problema" data-en="The Problem">El Problema</span>
-                <p class="flow-text text-muted" data-es="Caos operativo e ineficiencia. Entregas atrasadas debido a la desorganización, mala delegación y comunicación interna rota." data-en="Operational chaos and inefficiency. Delayed deliveries due to disorganization, poor delegation, and broken internal communication.">Caos operativo e ineficiencia. Entregas atrasadas debido a la desorganización, mala delegación y comunicación interna rota.</p>
+                <p class="flow-text text-muted" data-es="Entregas atrasadas, responsabilidades difusas e información dispersa en mil chats. Reuniones que no deciden nada y equipos que no saben quién responde por qué." data-en="Late deliveries, blurred responsibilities, and information scattered across a dozen chats. Meetings that decide nothing and teams that don't know who is accountable for what.">Entregas atrasadas, responsabilidades difusas e información dispersa en mil chats. Reuniones que no deciden nada y equipos que no saben quién responde por qué.</p>
               </div>
-              <div class="flow-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </div>
+              <div class="flow-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
               <div class="flow-block">
-                <span class="flow-label" data-es="Mi Enfoque" data-en="My Approach">Mi Enfoque</span>
-                <p class="flow-text text-strong" data-es="Operaciones centralizadas. Mapeo los flujos de trabajo en tableros ágiles, asigno responsabilidades exactas y garantizo una ejecución puntual y sin fricción." data-en="Centralized operations. I map workflows on agile boards, assign exact responsibilities, and guarantee timely, frictionless execution.">Operaciones centralizadas. Mapeo los flujos de trabajo en tableros ágiles, asigno responsabilidades exactas y garantizo una ejecución puntual y sin fricción.</p>
+                <span class="flow-label" data-es="La Solución" data-en="The Solution">La Solución</span>
+                <p class="flow-text text-strong" data-es="Operación centralizada con metodologías ágiles. Descompongo el alcance en un backlog priorizado, organizo sprints y tableros Kanban (Trello, Asana), asigno un responsable por entregable, defino hitos y criterios de aceptación, y establezco una cadencia clara de comunicación interna: ejecución puntual y sin fricción." data-en="Centralized operations with agile methodologies. I break scope down into a prioritized backlog, organize sprints and Kanban boards (Trello, Asana), assign one owner per deliverable, define milestones and acceptance criteria, and set a clear internal communication cadence: timely, frictionless execution.">Operación centralizada con metodologías ágiles. Descompongo el alcance en un backlog priorizado, organizo sprints y tableros Kanban (Trello, Asana), asigno un responsable por entregable, defino hitos y criterios de aceptación, y establezco una cadencia clara de comunicación interna: ejecución puntual y sin fricción.</p>
               </div>
             </div>
-          </div>
+            <div class="service-tags"><span>Agile &amp; Kanban</span><span>Trello</span><span>Asana</span><span>Backlog &amp; Sprints</span><span>Stakeholder Comms</span></div>
+          </div></div>
         </div>
 
       </div>
@@ -370,8 +617,8 @@
   </section>
 
   <!-- 5. CONTACTO -->
-  <section id="contact" class="contact-section fade-in-section delay-6">
-    <div class="contact-container mac-window">
+  <section id="contact" class="contact-section">
+    <div class="contact-container mac-window reveal">
       <div class="contact-left light-gray-bg">
         <h2 class="coffee-title">
           <span data-es="Tomemos un café virtual." data-en="Let's have a virtual coffee.">Tomemos un café virtual.</span>
@@ -384,27 +631,27 @@
           </svg>
         </h2>
         <p data-es="Si buscas resultados, orden y alguien que entienda el juego digital de principio a fin, escríbeme y hagamos que las cosas pasen." data-en="If you are looking for results, order, and someone who understands the digital game from start to finish, write me and let's make things happen.">Si buscas resultados, orden y alguien que entienda el juego digital de principio a fin, escríbeme y hagamos que las cosas pasen.</p>
-        
+
         <div class="contact-socials-row">
-          <a href="https://wa.me/584126339776" target="_blank" class="social-icon-btn" title="WhatsApp"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a>
-          <a href="mailto:greydemar06@gmail.com" class="social-icon-btn" title="Correo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
-          <a href="https://www.linkedin.com/in/greydemarserrano/" target="_blank" class="social-icon-btn" title="LinkedIn"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+          <a href="https://wa.me/584126339776" target="_blank" rel="noopener" class="social-icon-btn" title="WhatsApp" aria-label="WhatsApp"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a>
+          <a href="mailto:greydemar06@gmail.com" class="social-icon-btn" title="Correo" aria-label="Correo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+          <a href="https://www.linkedin.com/in/greydemarserrano/" target="_blank" rel="noopener" class="social-icon-btn" title="LinkedIn" aria-label="LinkedIn"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
         </div>
       </div>
 
       <div class="contact-right glass-panel">
         <h3 style="margin-bottom: 24px; font-size: 1.8rem; font-weight: 800;" data-es="Déjame un mensaje." data-en="Leave me a message.">Déjame un mensaje.</h3>
         <form class="contact-form" id="wa-form" onsubmit="sendToWhatsApp(event)">
-          <div class="input-group"><label data-es="Tu Nombre" data-en="Your Name">Tu Nombre</label><input type="text" id="wa-name" required placeholder="Ej. Ana Pérez" /></div>
-          <div class="input-group"><label data-es="Tu Correo" data-en="Your Email">Tu Correo</label><input type="email" id="wa-email" required placeholder="ana@empresa.com" /></div>
-          <div class="input-group"><label data-es="Mensaje" data-en="Message">Mensaje</label><textarea id="wa-message" rows="4" required placeholder="Hola Grey, me gustaría que trabajáramos en..." data-es-placeholder="Hola Grey, me gustaría que trabajáramos en..."></textarea></div>
-          
+          <div class="input-group"><label for="wa-name" data-es="Tu Nombre" data-en="Your Name">Tu Nombre</label><input type="text" id="wa-name" required placeholder="Ej. Ana Pérez" /></div>
+          <div class="input-group"><label for="wa-email" data-es="Tu Correo" data-en="Your Email">Tu Correo</label><input type="email" id="wa-email" required placeholder="ana@empresa.com" /></div>
+          <div class="input-group"><label for="wa-message" data-es="Mensaje" data-en="Message">Mensaje</label><textarea id="wa-message" rows="4" required placeholder="Hola Grey, me gustaría que trabajáramos en..." data-es-placeholder="Hola Grey, me gustaría que trabajáramos en..."></textarea></div>
+
           <div class="privacy-disclaimer">
-            <p data-es="Tus datos serán tratados por Greydemar Serrano con la finalidad de responder tu consulta. No se almacenan en bases de datos. <a href='/terminos' target='_blank' class='privacy-link'>Más información</a>" data-en="Your data will be processed by Greydemar Serrano to answer your query. Data is not stored in databases. <a href='/terminos' target='_blank' class='privacy-link'>More info</a>">
+            <p data-es="Tus datos serán tratados por Greydemar Serrano con la finalidad de responder tu consulta. Puedes ejercer tus derechos de acceso, rectificación, cancelación y oposición en greydemar06@gmail.com. <a href='/terminos' target='_blank' class='privacy-link'>Más información</a>" data-en="Your data will be processed by Greydemar Serrano to answer your query. You may exercise your rights of access, rectification, cancellation, and objection at greydemar06@gmail.com. <a href='/terminos' target='_blank' class='privacy-link'>More info</a>">
               Tus datos serán tratados por Greydemar Serrano con la finalidad de responder tu consulta. Puedes ejercer tus derechos de acceso, rectificación, cancelación y oposición en greydemar06@gmail.com. <a href="/terminos" target="_blank" class="privacy-link">Más información</a>
             </p>
           </div>
-          
+
           <div class="privacy-checkbox-group">
             <input type="checkbox" id="privacy-accept" required />
             <label for="privacy-accept" data-es="He leído y acepto la <a href='/terminos' target='_blank' class='privacy-link'>política de privacidad</a>" data-en="I have read and accept the <a href='/terminos' target='_blank' class='privacy-link'>privacy policy</a>">He leído y acepto la <a href="/terminos" target="_blank" class="privacy-link">política de privacidad</a></label>
@@ -418,7 +665,7 @@
 
   <!-- FOOTER NEGRO -->
   <footer class="site-footer black-footer">
-    
+
     <!-- Easter Egg: Recordatorio (Lucas 24, 25-33) -->
     <div class="hidden-eyes-container" title="Lucas 24:31">
       <div style="display: flex; flex-direction: column; align-items: center;">
@@ -444,459 +691,187 @@
     <p data-es="© 2026 Greydemar Serrano. Todos los derechos reservados." data-en="© 2026 Greydemar Serrano. All rights reserved.">© 2026 Greydemar Serrano. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- ========================================== -->
-  <!-- MODALES DE PROYECTOS (ESTRUCTURA COLLAGE BENTO) -->
-  <!-- ========================================== -->
-  
-  <div id="modal-yprealty" class="modal-overlay" onclick="closeModalOutside(event, 'modal-yprealty')">
-    <div class="modal-window">
-      <div class="modal-mac-bar">
-        <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-        <div class="modal-search-bar">yprealty.com</div>
-        <button class="close-btn-text" onclick="closeModal('modal-yprealty')" data-es="Cerrar" data-en="Close">Cerrar</button>
-      </div>
-      <div class="modal-content-scroll">
-        <div class="modal-hero-banner"><img src="/portada-yprealty.png" alt="YP Realty Banner" style="object-position: top center;" /></div>
-        <div class="modal-title-row">
-          <div class="title-text-group">
-            <span class="project-counter" data-es="Proyecto 01 / 06" data-en="Project 01 / 06">Proyecto 01 / 06</span>
-            <h2>YP Realty</h2>
-          </div>
-        </div>
-        <p class="modal-description" data-es="Lidero la estrategia de contenido y edición de video orgánico para el sector inmobiliario en Puerto Rico. Produzco formatos de alto impacto, redacto guiones persuasivos y aplico SEO para maximizar la conversión." data-en="I lead the content strategy and organic video editing for the real estate sector in Puerto Rico. I produce high-impact formats, write persuasive scripts, and apply SEO to maximize conversion.">Lidero la estrategia de contenido y edición de video orgánico para el sector inmobiliario en Puerto Rico. Produzco formatos de alto impacto, redacto guiones persuasivos y aplico SEO para maximizar la conversión.</p>
-        <div class="metadata-grid">
-          <div><span class="meta-label" data-es="Rol" data-en="Role">Rol</span><span class="meta-val">Social Media Mgr. & Video Editor</span></div>
-          <div><span class="meta-label" data-es="Herramientas" data-en="Tools">Herramientas</span><span class="meta-val">GA4, TikTok Analytics, YouTube Analytics, ROAS, CPA, CPM, CTR, CPC</span></div>
-          <div><span class="meta-label" data-es="Inicio" data-en="Start">Inicio</span><span class="meta-val">2026</span></div>
-        </div>
-        
-        <div class="modal-gallery-container">
-          <h3 data-es="Galería del Proyecto" data-en="Project Gallery">Galería del Proyecto</h3>
-          
-          <div class="bento-collage">
-            <div class="media-card bento-vertical">
-              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Cisterna de agua en PR." onclick="openGalleryZoom(this)" style="background:#000;">
-                <source src="/VIDEO PARA PORTAFOLIO.webm" type="video/webm" />
-              </video>
-              <div class="media-caption">Cisterna de agua en PR.</div>
-            </div>
-            
-            <div class="media-card bento-vertical">
-              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Cierre de venta en Arecibo, Puerto Rico." onclick="openGalleryZoom(this)" style="background:#000;">
-                <source src="/PARA-PORTAFOLIO.webm" type="video/webm" />
-              </video>
-              <div class="media-caption">Cierre de venta en Arecibo, Puerto Rico.</div>
-            </div>
-
-            <div class="media-card bento-vertical">
-              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Interacción con el público trend, quién paga qué en temas de arrendamientos." onclick="openGalleryZoom(this)" style="background:#000;">
-                <source src="/VIDEO PARA PORTAFOLIO 2.webm" type="video/webm" />
-              </video>
-              <div class="media-caption">Interacción trend: ¿Quién paga qué?</div>
-            </div>
-
-            <div class="media-card bento-vertical">
-              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Isla del encanto." onclick="openGalleryZoom(this)" style="background:#000;">
-                <source src="/ISLA-DEL-ENCATO-PORTAFOLIO-.webm" type="video/webm" />
-              </video>
-              <div class="media-caption">Isla del encanto.</div>
-            </div>
-
-            <div class="media-card bento-horizontal">
-              <img src="/metricas.png" alt="Métricas YP Realty" class="horizontal-img w-full-img" data-caption="Análisis de Métricas" onclick="openGalleryZoom(this)" onerror="this.style.display='none'">
-              <div class="media-caption">Análisis de Métricas</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="modal-panhouse" class="modal-overlay" onclick="closeModalOutside(event, 'modal-panhouse')">
-    <div class="modal-window">
-      <div class="modal-mac-bar">
-        <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-        <div class="modal-search-bar">editorialpanhouse.com</div>
-        <button class="close-btn-text" onclick="closeModal('modal-panhouse')" data-es="Cerrar" data-en="Close">Cerrar</button>
-      </div>
-      <div class="modal-content-scroll">
-        <div class="modal-hero-banner"><img src="/portada-panhouse.png" alt="PanHouse Banner" /></div>
-        <div class="modal-title-row">
-          <div class="title-text-group">
-            <span class="project-counter" data-es="Proyecto 02 / 06" data-en="Project 02 / 06">Proyecto 02 / 06</span>
-            <h2>Editorial PanHouse</h2>
-          </div>
-        </div>
-        <p class="modal-description" data-es="Sincronicé las operaciones diarias entre los departamentos de Marketing, Ventas y Relaciones Públicas, garantizando la ejecución de eventos VIP. Diseñé e integré sistemas de automatización con IA que redujeron drásticamente los tiempos de atención y estandarizaron la comunicación corporativa." data-en="I synchronized daily operations between the Marketing, Sales, and Public Relations departments, ensuring the execution of VIP events. I designed and integrated AI automation systems that drastically reduced response times and standardized corporate communication.">Sincronicé las operaciones diarias entre los departamentos de Marketing, Ventas y Relaciones Públicas, garantizando la ejecución de eventos VIP. Diseñé e integré sistemas de automatización con IA que redujeron drásticamente los tiempos de atención y estandarizaron la comunicación corporativa.</p>
-        <div class="metadata-grid">
-          <div><span class="meta-label" data-es="Rol" data-en="Role">Rol</span><span class="meta-val" data-es="Coord. Comunicaciones Internas" data-en="Internal Comms Coordinator">Coord. Comunicaciones Internas</span></div>
-          <div><span class="meta-label" data-es="Herramientas" data-en="Tools">Herramientas</span><span class="meta-val">Meta Business Suite, CRM, Email Marketing</span></div>
-          <div><span class="meta-label" data-es="Inicio" data-en="Start">Inicio</span><span class="meta-val">2024</span></div>
-        </div>
-        <div class="modal-gallery-container">
-          <h3 data-es="Galería del Proyecto" data-en="Project Gallery">Galería del Proyecto</h3>
-          <div class="bento-collage">
-            
-            <div class="media-card bento-vertical">
-              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Cobertura de comunicación en PanHouse" onclick="openGalleryZoom(this)" style="background:#000;">
-                <source src="/video panhouse.mp4" type="video/mp4" />
-              </video>
-              <div class="media-caption">Cobertura de comunicaciones PanHouse</div>
-            </div>
-
-            <div class="media-card bento-vertical">
-              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Feria Internacional del Libro en Guadalajara" onclick="openGalleryZoom(this)" style="background:#000;">
-                <source src="/ph.mp4" type="video/mp4" />
-              </video>
-              <div class="media-caption">Feria Internacional del Libro en Guadalajara</div>
-            </div>
-
-            <div class="media-card bento-vertical">
-              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Despliegue logístico en Cerro Verde" onclick="openGalleryZoom(this)" style="background:#000;">
-                <source src="/cerro verde ph.mp4" type="video/mp4" />
-              </video>
-              <div class="media-caption">Despliegue logístico en Cerro Verde</div>
-            </div>
-
-            <div class="media-card bento-horizontal">
-              <img src="/evento ph.png" alt="Evento VIP Editorial PanHouse" class="horizontal-img w-full-img" data-caption="Ejecución de Evento VIP" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
-              <div class="media-caption">Ejecución de Evento VIP</div>
-            </div>
-
-            <div class="media-card bento-horizontal">
-              <img src="/manychat.png" alt="Automatización ManyChat" class="horizontal-img w-full-img" data-caption="Flujos de automatización de atención con IA (ManyChat)" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
-              <div class="media-caption">Automatización de atención con IA</div>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="modal-eurobuilding" class="modal-overlay" onclick="closeModalOutside(event, 'modal-eurobuilding')">
-    <div class="modal-window">
-      <div class="modal-mac-bar">
-        <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-        <div class="modal-search-bar">eurobuilding.com.ve</div>
-        <button class="close-btn-text" onclick="closeModal('modal-eurobuilding')" data-es="Cerrar" data-en="Close">Cerrar</button>
-      </div>
-      <div class="modal-content-scroll">
-        <div class="modal-hero-banner"><img src="/portada-eurobuilding.png" alt="Eurobuilding Banner" /></div>
-        <div class="modal-title-row">
-          <div class="title-text-group">
-            <span class="project-counter" data-es="Proyecto 03 / 06" data-en="Project 03 / 06">Proyecto 03 / 06</span>
-            <h2>Eurobuilding</h2>
-          </div>
-        </div>
-        <p class="modal-description" data-es="En el área del Business Center gestioné el portafolio corporativo (B2B), reservas y ventas. Coordiné la logística bajo estrictos estándares 5 estrellas y manejé las comunicaciones internas, centralizando las operaciones entre 7 departamentos críticos (como Ventas, Room Service, Ama de Llaves y Experiencias) para alcanzar una tasa de resolución del 100% en incidencias." data-en="In the Business Center area, I managed the corporate portfolio (B2B), reservations, and sales. I coordinated logistics under strict 5-star standards and handled internal communications, centralizing operations across 7 critical departments (such as Sales, Room Service, Housekeeping, and Experiences) to achieve a 100% resolution rate for incidents.">En el área del Business Center gestioné el portafolio corporativo (B2B), reservas y ventas. Coordiné la logística bajo estrictos estándares 5 estrellas y manejé las comunicaciones internas, centralizando las operaciones entre 7 departamentos críticos (como Ventas, Room Service, Ama de Llaves y Experiencias) para alcanzar una tasa de resolución del 100% en incidencias.</p>
-        <div class="metadata-grid">
-          <div><span class="meta-label" data-es="Rol" data-en="Role">Rol</span><span class="meta-val" data-es="Coordinadora B2B & Business Center" data-en="B2B & Business Center Coordinator">Coordinadora B2B & Business Center</span></div>
-          <div><span class="meta-label" data-es="Herramientas" data-en="Tools">Herramientas</span><span class="meta-val">Opera PMS, Logística, CRM B2B</span></div>
-          <div><span class="meta-label" data-es="Inicio" data-en="Start">Inicio</span><span class="meta-val">2022</span></div>
-        </div>
-        <div class="modal-gallery-container">
-          <h3 data-es="Galería del Proyecto" data-en="Project Gallery">Galería del Proyecto</h3>
-          <div class="bento-collage">
-            
-            <div class="media-card bento-horizontal">
-              <video playsinline loop muted autoplay class="horizontal-vid" data-caption="Operaciones y estándares de servicio en Eurobuilding." onclick="openGalleryZoom(this)">
-                <source src="/video euro.mp4" type="video/mp4" />
-              </video>
-              <div class="media-caption">Operaciones y estándares de servicio</div>
-            </div>
-
-            <div class="media-card bento-horizontal">
-              <img src="/equipo euro.png" alt="Equipo Eurobuilding" class="horizontal-img w-full-img" data-caption="Equipo de trabajo Eurobuilding" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
-              <div class="media-caption">Equipo de trabajo Eurobuilding</div>
-            </div>
-
-            <div class="media-card bento-horizontal">
-              <img src="/OPERA PMS.png" alt="Sistema Opera PMS" class="horizontal-img w-full-img" data-caption="Gestión y reservas con Opera PMS" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
-              <div class="media-caption">Gestión y reservas con Opera PMS</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="modal-dislocal" class="modal-overlay" onclick="closeModalOutside(event, 'modal-dislocal')">
-    <div class="modal-window">
-      <div class="modal-mac-bar">
-        <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-        <div class="modal-search-bar">dislocal.com</div>
-        <button class="close-btn-text" onclick="closeModal('modal-dislocal')" data-es="Cerrar" data-en="Close">Cerrar</button>
-      </div>
-      <div class="modal-content-scroll">
-        <div class="modal-hero-banner"><img src="/portada-dislocal.png" alt="Dislocal Banner" /></div>
-        <div class="modal-title-row">
-          <div class="title-text-group">
-            <span class="project-counter" data-es="Proyecto 04 / 06" data-en="Project 04 / 06">Proyecto 04 / 06</span>
-            <h2>Dislocal</h2>
-          </div>
-          <a href="https://www.dislocal.org/" target="_blank" class="simple-modal-link" data-es="🌐 Visitar Sitio Web" data-en="🌐 Visit Website">🌐 Visitar Sitio Web</a>
-        </div>
-        <p class="modal-description" data-es="Lideré la planificación y ejecución logística de proyectos de impacto local (Barrio El Calvario). Apliqué metodologías ágiles para alinear cronogramas, recursos y a múltiples equipos internacionales operando en terreno directamente con el equipo de Dislocal." data-en="I led the planning and logistical execution of local impact projects (Barrio El Calvario). I applied agile methodologies to align schedules, resources, and multiple international teams operating on the ground directly with the Dislocal team.">Lideré la planificación y ejecución logística de proyectos de impacto local (Barrio El Calvario). Apliqué metodologías ágiles para alinear cronogramas, recursos y a múltiples equipos internacionales operando en terreno directamente con el equipo de Dislocal.</p>
-        <div class="metadata-grid">
-          <div><span class="meta-label" data-es="Rol" data-en="Role">Rol</span><span class="meta-val">Production Mgr. & Project Coordinator</span></div>
-          <div><span class="meta-label" data-es="Herramientas" data-en="Tools">Herramientas</span><span class="meta-val" data-es="Trello, Asana, Metodologías Ágiles" data-en="Trello, Asana, Agile Methodologies">Trello, Asana, Metodologías Ágiles</span></div>
-          <div><span class="meta-label" data-es="Inicio" data-en="Start">Inicio</span><span class="meta-val">2021</span></div>
-        </div>
-        <div class="modal-gallery-container">
-          <h3 data-es="Galería del Proyecto" data-en="Project Gallery">Galería del Proyecto</h3>
-          <div class="bento-collage">
-            
-            <div class="media-card bento-vertical">
-              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Proyecto Dislocal en acción" onclick="openGalleryZoom(this)" style="background:#000;">
-                <source src="/video dislocal.mp4" type="video/mp4" />
-              </video>
-              <div class="media-caption">Proyecto Dislocal en acción</div>
-            </div>
-
-            <div class="media-card bento-horizontal">
-              <video playsinline loop muted autoplay class="horizontal-vid" data-caption="Navegación web Dislocal" onclick="openGalleryZoom(this)" style="background:#000;">
-                <source src="/web dislocal.mp4" type="video/mp4" />
-              </video>
-              <div class="media-caption">Navegación web Dislocal</div>
-            </div>
-
-            <div class="media-card bento-horizontal">
-              <img src="/dislocal 1.png" alt="Logística y trabajo de campo" class="horizontal-img w-full-img" data-caption="Evento social para la comunidad del Calvario en el cine." onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
-              <div class="media-caption">Evento social en el cine (El Calvario)</div>
-            </div>
-
-            <div class="media-card bento-horizontal">
-              <img src="/dislocal 202.png" alt="Organización de eventos Dislocal" class="horizontal-img w-full-img" data-caption="Documentación de la vida cotidiana en el Calvario." onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
-              <div class="media-caption">Documentación en campo</div>
-            </div>
-
-            <div class="media-card bento-horizontal">
-              <img src="/imagen trello dislocal (2).png" alt="Tablero Trello" class="horizontal-img w-full-img" data-caption="Coordinación de recursos y tareas en Trello" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
-              <div class="media-caption">Coordinación de recursos en Trello</div>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="modal-impaktemos" class="modal-overlay" onclick="closeModalOutside(event, 'modal-impaktemos')">
-    <div class="modal-window">
-      <div class="modal-mac-bar">
-        <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-        <div class="modal-search-bar">impaktemos.com</div>
-        <button class="close-btn-text" onclick="closeModal('modal-impaktemos')" data-es="Cerrar" data-en="Close">Cerrar</button>
-      </div>
-      <div class="modal-content-scroll">
-        <div class="modal-hero-banner"><img src="/portada-impaktemos.png" alt="Impaktemos Banner" /></div>
-        <div class="modal-title-row">
-          <div class="title-text-group">
-            <span class="project-counter" data-es="Proyecto 05 / 06" data-en="Project 05 / 06">Proyecto 05 / 06</span>
-            <h2>Impaktemos</h2>
-          </div>
-          <a href="https://minitas-mission-guide.lovable.app/" target="_blank" class="simple-modal-link" data-es="🌐 Ver Landing Page" data-en="🌐 View Landing Page">🌐 Ver Landing Page</a>
-        </div>
-        <p class="modal-description" data-es="Colaboré en el proyecto de Impaktemos llamado plataforma 'Las Minitas'. Junto a la junta coordinadora del proyecto, creé y desarrollé esta landing page para organizar el flujo de voluntarios, asignar tareas y realizar un monitoreo eficiente de las actividades." data-en="I collaborated on the Impaktemos project called the 'Las Minitas' platform. Alongside the project's coordinating board, I created and developed this landing page to organize volunteer flow, assign tasks, and efficiently monitor activities.">Colaboré en el proyecto de Impaktemos llamado plataforma 'Las Minitas'. Junto a la junta coordinadora del proyecto, creé y desarrollé esta landing page para organizar el flujo de voluntarios, asignar tareas y realizar un monitoreo eficiente de las actividades.</p>
-        <div class="metadata-grid">
-          <div><span class="meta-label" data-es="Rol" data-en="Role">Rol</span><span class="meta-val" data-es="Coordinadora Operativa & Web" data-en="Operational & Web Coordinator">Coordinadora Operativa & Web</span></div>
-          <div><span class="meta-label" data-es="Herramientas" data-en="Tools">Herramientas</span><span class="meta-val">HTML, CSS, Astro, Landing Pages</span></div>
-          <div><span class="meta-label" data-es="Inicio" data-en="Start">Inicio</span><span class="meta-val">2023</span></div>
-        </div>
-        <div class="modal-gallery-container">
-          <h3 data-es="Galería del Proyecto" data-en="Project Gallery">Galería del Proyecto</h3>
-          <div class="bento-collage">
-            
-            <div class="media-card bento-vertical">
-              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Plataforma Las Minitas en acción" onclick="openGalleryZoom(this)" style="background:#000;">
-                <source src="/video plataforma.mp4" type="video/mp4" />
-              </video>
-              <div class="media-caption">Plataforma Las Minitas en acción</div>
-            </div>
-
-            <div class="media-card bento-vertical">
-              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Intervención logística en Ciudad Piar, La Guaira." onclick="openGalleryZoom(this)" style="background:#000;">
-                <source src="/ciudad piar.mp4" type="video/mp4" />
-              </video>
-              <div class="media-caption">Logística en Ciudad Piar, La Guaira</div>
-            </div>
-
-            <div class="media-card bento-horizontal">
-              <img src="/impaktemos 1.png" alt="Refuerzo escolar" class="horizontal-img w-full-img" data-caption="Refuerzo escolar en plataforma las minitas." onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
-              <div class="media-caption">Refuerzo escolar (Las Minitas)</div>
-            </div>
-
-            <div class="media-card bento-horizontal">
-              <img src="/landingpage plataforma.png" alt="Diseño de Landing Page" class="horizontal-img w-full-img" data-caption="Diseño UI/UX de la Landing Page" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
-              <div class="media-caption">Diseño de Landing Page</div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="modal-freelance" class="modal-overlay" onclick="closeModalOutside(event, 'modal-freelance')">
-    <div class="modal-window">
-      <div class="modal-mac-bar">
-        <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-        <div class="modal-search-bar">freelance.projects</div>
-        <button class="close-btn-text" onclick="closeModal('modal-freelance')" data-es="Cerrar" data-en="Close">Cerrar</button>
-      </div>
-      <div class="modal-content-scroll">
-        <div class="modal-hero-banner"><img src="/portada freelance.png" alt="Freelance Banner" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlMmU4ZjAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZmlsbD0iIzk0YTNiOCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5EaXNlw7FvIHkgV2ViPC90ZXh0Pjwvc3ZnPg=='" /></div>
-        <div class="modal-title-row">
-          <div class="title-text-group">
-            <span class="project-counter" data-es="Proyecto 06 / 06" data-en="Project 06 / 06">Proyecto 06 / 06</span>
-            <h2 data-es="Proyectos Freelance" data-en="Freelance Projects">Proyectos Freelance</h2>
-          </div>
-        </div>
-        <p class="modal-description" data-es="Diseño y desarrollo de Landing Pages optimizadas para la conversión. Creación de identidad visual adaptada a las necesidades específicas de múltiples clientes a nivel internacional." data-en="Design and development of conversion-optimized Landing Pages. Creation of visual identity adapted to the specific needs of multiple international clients.">Diseño y desarrollo de Landing Pages optimizadas para la conversión. Creación de identidad visual adaptada a las necesidades específicas de múltiples clientes a nivel internacional.</p>
-        <div class="metadata-grid">
-          <div><span class="meta-label" data-es="Rol" data-en="Role">Rol</span><span class="meta-val" data-es="Desarrolladora Web & Diseñadora" data-en="Web Developer & Designer">Desarrolladora Web & Diseñadora</span></div>
-          <div><span class="meta-label" data-es="Herramientas" data-en="Tools">Herramientas</span><span class="meta-val">Astro, HTML/CSS, Canva Pro, Figma</span></div>
-          <div><span class="meta-label" data-es="Inicio" data-en="Start">Inicio</span><span class="meta-val">2026</span></div>
-        </div>
-        <div class="modal-gallery-container">
-          <h3 data-es="Casos de Diseño Web" data-en="Web Design Cases">Casos de Diseño Web</h3>
-          
-          <div class="bento-collage">
-            <!-- Video Laura Navarro -->
-            <div class="media-card bento-horizontal">
-              <video playsinline loop muted autoplay class="horizontal-vid" data-caption="Diseño Web - Laura Navarro" onclick="openGalleryZoom(this)">
-                <source src="/laura navarro.mp4" type="video/mp4" />
-              </video>
-              <div class="media-caption">Diseño Web - Laura Navarro</div>
-              <a href="https://gserrano2024cs-ctrl.github.io/Dra.LauraNavarroActiveLearningEducationLeadership/" target="_blank" class="freelance-link" data-es="🌐 Ver sitio: Laura Navarro" data-en="🌐 View site: Laura Navarro">🌐 Ver sitio web</a>
-            </div>
-
-            <!-- Video Beatriz Briceño -->
-            <div class="media-card bento-horizontal">
-              <video playsinline loop muted autoplay class="horizontal-vid" data-caption="Diseño Web - Beatriz Briceño" onclick="openGalleryZoom(this)">
-                <source src="/bea briceño.mp4" type="video/mp4" />
-              </video>
-              <div class="media-caption">Diseño Web - Beatriz Briceño</div>
-              <a href="https://beatriz-brice-o-pic-n.vercel.app/" target="_blank" class="freelance-link" data-es="🌐 Ver sitio: Beatriz Briceño" data-en="🌐 View site: Beatriz Briceño">🌐 Ver sitio web</a>
-            </div>
-
-            <!-- Video MBI -->
-            <div class="media-card bento-horizontal">
-              <video playsinline loop muted autoplay class="horizontal-vid" data-caption="Diseño Web - Mario Briceño Iragorry" onclick="openGalleryZoom(this)">
-                <source src="/mbi.mp4" type="video/mp4" />
-              </video>
-              <div class="media-caption">Diseño Web - Mario Briceño Iragorry</div>
-              <a href="https://mbihoy.vercel.app/?v=1" target="_blank" class="freelance-link" data-es="🌐 Ver sitio: Mario Briceño Iragorry" data-en="🌐 View site: Mario Briceño Iragorry">🌐 Ver sitio web</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- DOCK FLOTANTE -->
-  <nav class="floating-dock">
+  <!-- DOCK FLOTANTE · LIQUID GLASS -->
+  <nav class="floating-dock" aria-label="Navegación principal">
     <ul class="dock-list">
-      <li class="dock-item" data-tooltip="Sobre mí" data-tooltip-es="Sobre mí" data-tooltip-en="About Me"><a href="#about" class="dock-link"><img src="/notas.webp" class="mac-icon" alt="Notas"></a></li>
-      <li class="dock-item" data-tooltip="Casos" data-tooltip-es="Casos" data-tooltip-en="Cases"><a href="#projects" class="dock-link"><img src="/foto.png" class="mac-icon" alt="Fotos"></a></li>
-      <li class="dock-item" data-tooltip="Servicios" data-tooltip-es="Servicios" data-tooltip-en="Services"><a href="#services" class="dock-link"><img src="/finder icon.png" class="mac-icon" alt="Finder"></a></li>
-      <li class="dock-item" data-tooltip="Contacto" data-tooltip-es="Contacto" data-tooltip-en="Contact"><a href="#contact" class="dock-link"><img src="/ICON MAIL.webp" class="mac-icon" alt="Mail"></a></li>
+      <li class="dock-item" data-target="about" data-tooltip="Sobre mí" data-tooltip-es="Sobre mí" data-tooltip-en="About Me"><a href="#about" class="dock-link"><img src="/notas.webp" class="mac-icon" alt="Notas"></a></li>
+      <li class="dock-item" data-target="projects" data-tooltip="Portafolio" data-tooltip-es="Portafolio" data-tooltip-en="Portfolio"><a href="#projects" class="dock-link"><img src="/foto.png" class="mac-icon" alt="Fotos"></a></li>
+      <li class="dock-item" data-target="services" data-tooltip="Servicios" data-tooltip-es="Servicios" data-tooltip-en="Services"><a href="#services" class="dock-link"><img src="/finder icon.png" class="mac-icon" alt="Finder"></a></li>
+      <li class="dock-item" data-target="contact" data-tooltip="Contacto" data-tooltip-es="Contacto" data-tooltip-en="Contact"><a href="#contact" class="dock-link"><img src="/ICON MAIL.webp" class="mac-icon" alt="Mail"></a></li>
     </ul>
   </nav>
 
   <script is:inline>
+    /* ---------- IDIOMA ---------- */
     function setLanguage(lang) {
-      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
-      
-      document.querySelectorAll('[data-es]').forEach(el => { 
-        el.innerHTML = el.getAttribute(`data-${lang}`); 
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll('.lang-btn').forEach(function (btn) {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
       });
-      
-      document.querySelectorAll('[data-tooltip-es]').forEach(el => { 
-        el.setAttribute('data-tooltip', el.getAttribute(`data-tooltip-${lang}`)); 
+
+      document.querySelectorAll('[data-es]').forEach(function (el) {
+        var value = el.getAttribute('data-' + lang);
+        if (value !== null) { el.innerHTML = value; }
       });
-      
-      const msgArea = document.getElementById('wa-message');
-      if(msgArea) { 
-        msgArea.placeholder = lang === 'es' ? msgArea.getAttribute('data-es-placeholder') : "Hi Grey, I'd like to work on..."; 
+
+      document.querySelectorAll('[data-tooltip-es]').forEach(function (el) {
+        el.setAttribute('data-tooltip', el.getAttribute('data-tooltip-' + lang));
+      });
+
+      var msgArea = document.getElementById('wa-message');
+      if (msgArea) {
+        msgArea.placeholder = lang === 'es' ? msgArea.getAttribute('data-es-placeholder') : "Hi Grey, I'd like to work on...";
       }
     }
 
-    function openModal(modalId) { 
-      const modal = document.getElementById(modalId);
-      modal.classList.add('active'); 
-      document.body.style.overflow = 'hidden'; 
-    }
-    function closeModal(modalId) { 
-      const modal = document.getElementById(modalId);
-      modal.classList.remove('active'); 
-      document.body.style.overflow = 'auto'; 
-    }
-    function closeModalOutside(event, modalId) { if (event.target.id === modalId) { closeModal(modalId); } }
-
-    function toggleProfileZoom(event) {
-        event.stopPropagation();
-        event.target.classList.toggle('zoomed');
-    }
-    
+    /* ---------- ZOOM DE MEDIA ---------- */
     function openGalleryZoom(element) {
-        const overlay = document.getElementById('zoom-overlay');
-        const container = document.getElementById('zoom-media-container');
-        const caption = document.getElementById('zoom-caption');
-        
-        container.innerHTML = ''; 
-        
-        if (element.tagName === 'VIDEO') {
-            const video = document.createElement('video');
-            video.src = element.querySelector('source').src;
-            video.controls = true; 
-            video.autoplay = true;
-            video.className = 'zoom-media';
-            container.appendChild(video);
-        } else {
-            const img = document.createElement('img');
-            img.src = element.src;
-            img.className = 'zoom-media';
-            container.appendChild(img);
-        }
-        
-        caption.innerText = element.getAttribute('data-caption') || '';
-        overlay.classList.add('active');
+      var overlay = document.getElementById('zoom-overlay');
+      var container = document.getElementById('zoom-media-container');
+      var caption = document.getElementById('zoom-caption');
+
+      container.innerHTML = '';
+
+      if (element.tagName === 'VIDEO') {
+        var video = document.createElement('video');
+        video.src = element.currentSrc || element.querySelector('source').src;
+        video.controls = true;
+        video.autoplay = true;
+        video.playsInline = true;
+        video.className = 'zoom-media';
+        container.appendChild(video);
+      } else {
+        var img = document.createElement('img');
+        img.src = element.currentSrc || element.src;
+        img.alt = element.alt || '';
+        img.className = 'zoom-media';
+        container.appendChild(img);
+      }
+
+      /* El pie del zoom se toma del caption visible (siempre en el idioma activo) */
+      var card = element.closest('.media-card');
+      var cap = card ? card.querySelector('.media-caption') : null;
+      var text = cap ? cap.textContent.replace(/\s+/g, ' ').trim() : (element.getAttribute('data-caption') || '');
+      caption.textContent = text;
+
+      overlay.classList.add('active');
+    }
+
+    function openProfileZoom(event) {
+      event.stopPropagation();
+      openGalleryZoom(event.currentTarget);
+    }
+
+    function closeZoomNow() {
+      document.getElementById('zoom-overlay').classList.remove('active');
+      document.getElementById('zoom-media-container').innerHTML = '';
     }
 
     function closeZoom(e) {
-        if (e.target.id === 'zoom-overlay' || e.target.classList.contains('zoom-close')) {
-            document.getElementById('zoom-overlay').classList.remove('active');
-            document.getElementById('zoom-media-container').innerHTML = ''; 
-        }
+      if (e.target.id === 'zoom-overlay' || e.target.classList.contains('zoom-close')) { closeZoomNow(); }
     }
 
-    document.addEventListener('click', function(event) {
-        const profileImg = document.getElementById('heroProfileImg');
-        if (profileImg && profileImg.classList.contains('zoomed') && event.target !== profileImg) {
-            profileImg.classList.remove('zoomed');
-        }
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { closeZoomNow(); }
     });
 
+    /* ---------- FORMULARIO → WHATSAPP ---------- */
     function sendToWhatsApp(event) {
       event.preventDefault();
-      const acceptCheckbox = document.getElementById('privacy-accept');
-      if(!acceptCheckbox.checked) {
-          alert("Debes aceptar la política de privacidad para enviar el mensaje.");
-          return;
+      var acceptCheckbox = document.getElementById('privacy-accept');
+      if (!acceptCheckbox.checked) {
+        alert("Debes aceptar la política de privacidad para enviar el mensaje.");
+        return;
       }
-      const name = document.getElementById('wa-name').value;
-      const email = document.getElementById('wa-email').value;
-      const message = document.getElementById('wa-message').value;
-      const phone = "584126339776";
-      const text = `¡Hola Grey! Soy ${name} (${email}).%0A%0A${message}`;
-      window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+      var name = document.getElementById('wa-name').value;
+      var email = document.getElementById('wa-email').value;
+      var message = document.getElementById('wa-message').value;
+      var phone = "584126339776";
+      var text = "¡Hola Grey! Soy " + name + " (" + email + ").\n\n" + message;
+      window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(text), '_blank');
     }
 
-    document.addEventListener("DOMContentLoaded", () => {
+    /* ---------- TARJETAS DESPLEGABLES (hero + servicios) ---------- */
+    document.querySelectorAll('[data-toggle]').forEach(function (el) {
+      var cls = el.getAttribute('data-toggle');
+      el.setAttribute('role', 'button');
+      el.setAttribute('tabindex', '0');
+      el.setAttribute('aria-expanded', String(el.classList.contains(cls)));
+
+      function toggle() {
+        var open = el.classList.toggle(cls);
+        el.setAttribute('aria-expanded', String(open));
+      }
+      el.addEventListener('click', toggle);
+      el.addEventListener('keydown', function (e) {
+        if ((e.key === 'Enter' || e.key === ' ') && e.target === el) {
+          e.preventDefault();
+          toggle();
+        }
+      });
+    });
+
+    /* ---------- ANIMACIONES DE ENTRADA AL HACER SCROLL ---------- */
+    (function () {
+      var items = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        items.forEach(function (el) { el.classList.add('in-view'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        var visible = entries.filter(function (e) { return e.isIntersecting; });
+        visible.forEach(function (entry, i) {
+          /* Escalonado suave entre los elementos que entran a la vez */
+          entry.target.style.setProperty('--d', Math.min(i, 5));
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+      items.forEach(function (el) { io.observe(el); });
+    })();
+
+    /* ---------- VIDEOS: reproducir solo lo visible (rendimiento) ---------- */
+    (function () {
+      var videos = document.querySelectorAll('video.lazy-video');
+      if (!('IntersectionObserver' in window)) {
+        videos.forEach(function (v) { v.setAttribute('autoplay', ''); });
+        return;
+      }
+      var vio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var v = entry.target;
+          if (entry.isIntersecting) {
+            var p = v.play();
+            if (p && p.catch) { p.catch(function () {}); }
+          } else {
+            v.pause();
+          }
+        });
+      }, { threshold: 0.25 });
+      videos.forEach(function (v) { vio.observe(v); });
+    })();
+
+    /* ---------- DOCK: sección activa ---------- */
+    (function () {
+      if (!('IntersectionObserver' in window)) { return; }
+      var dockItems = document.querySelectorAll('.dock-item');
+      var spy = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            dockItems.forEach(function (item) {
+              item.classList.toggle('active', item.getAttribute('data-target') === entry.target.id);
+            });
+          }
+        });
+      }, { rootMargin: '-45% 0px -50% 0px' });
+      ['about', 'projects', 'services', 'contact'].forEach(function (id) {
+        var section = document.getElementById(id);
+        if (section) { spy.observe(section); }
+      });
+    })();
+
+    document.addEventListener('DOMContentLoaded', function () {
       document.body.classList.add('loaded');
     });
   </script>
@@ -909,15 +884,34 @@
     --navy-dark: #0f172a; --pastel-yellow: #fef08a; --pastel-pink: #fbcfe8; --pastel-green: #bbf7d0;
     --glass-bg: rgba(255, 255, 255, 0.4); --glass-border: rgba(255, 255, 255, 0.6); --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
     --text-muted: #475569; --bg-soft: rgba(255, 255, 255, 0.7); --border-color: rgba(0, 0, 0, 0.1);
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-ios: cubic-bezier(0.32, 0.72, 0, 1);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--navy-dark); overflow-x: hidden; position: relative; scroll-behavior: smooth; }
 
-  .fade-in-section { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
-  body.loaded .fade-in-section { opacity: 1; transform: translateY(0); }
-  .delay-1 { transition-delay: 0.1s; } .delay-2 { transition-delay: 0.2s; } .delay-3 { transition-delay: 0.3s; }
-  .delay-4 { transition-delay: 0.4s; } .delay-5 { transition-delay: 0.5s; } .delay-6 { transition-delay: 0.6s; }
+  /* SMOOTH SCROLL GLOBAL (debe ir en html, no en body) */
+  html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+  body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--navy-dark); overflow-x: hidden; position: relative; }
+
+  a:focus-visible, button:focus-visible, [role="button"]:focus-visible { outline: 2px solid #3b82f6; outline-offset: 3px; }
+
+  /* ---------- CARGA DEL HERO ---------- */
+  .js .fade-in-section { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s var(--ease-out); }
+  .js body.loaded .fade-in-section { opacity: 1; transform: translateY(0); }
+
+  /* ---------- ENTRADA AL HACER SCROLL ---------- */
+  .js .reveal { opacity: 0; }
+  .js .reveal.in-view { opacity: 1; animation: reveal-up 0.85s var(--ease-out) backwards; animation-delay: calc(var(--d, 0) * 90ms); }
+  @keyframes reveal-up { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .js .reveal { opacity: 1; }
+    .js .reveal.in-view { animation: none; }
+    .js .fade-in-section { transition: none; }
+    .marquee-track, .steam, .blinking-eyes, .iridescent-text, .green-dot { animation: none; }
+  }
 
   .global-fixed-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #f8fafc; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E"); z-index: -999; }
   .sticker { position: absolute; opacity: 0.7; }
@@ -925,6 +919,7 @@
   .sticker-plant { bottom: 20%; left: 8%; transform: rotate(-10deg); opacity: 0.6; }
   .sticker-sparkle { top: 40%; right: 5%; transform: rotate(5deg); }
 
+  /* ---------- ZOOM ---------- */
   .zoom-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.92); z-index: 999999; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; visibility: hidden; transition: all 0.3s ease; padding: 20px; backdrop-filter: blur(5px); }
   .zoom-overlay.active { opacity: 1; visibility: visible; }
   .zoom-content-wrapper { position: relative; display: flex; flex-direction: column; align-items: center; max-width: 90vw; }
@@ -933,73 +928,108 @@
   .zoom-close { position: absolute; top: 25px; right: 35px; background: rgba(255,255,255,0.15); border: none; color: white; width: 44px; height: 44px; border-radius: 50%; font-size: 22px; cursor: pointer; transition: background 0.3s; z-index: 9999999; display: flex; align-items: center; justify-content: center; }
   .zoom-close:hover { background: rgba(255,255,255,0.35); }
 
+  /* ---------- HERO ---------- */
   .hero-wrapper { position: relative; width: 100%; min-height: 100vh; overflow: hidden; z-index: 10; background: #000; }
   .hero-video-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
-  .video-bg { width: 100%; height: 100%; object-fit: cover; opacity: 0.8;}
+  .video-bg { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; }
   .avila-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.35); }
   .top-header { position: relative; width: 100%; max-width: 1300px; margin: 0 auto; padding: 24px 32px; display: flex; justify-content: flex-end; align-items: center; z-index: 10; }
   .brand-centered { position: absolute; top: 38px; left: 50%; transform: translateX(-50%); font-weight: 900; font-size: 20px; letter-spacing: -0.02em; color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.4); white-space: nowrap; }
-  
-  .lang-switch.dark-mode { background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px); padding: 4px; border-radius: 30px; display: flex; align-items: center; gap: 4px; border: 1px solid rgba(255,255,255,0.1); }
+
+  .lang-switch.dark-mode { background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); padding: 4px; border-radius: 30px; display: flex; align-items: center; gap: 4px; border: 1px solid rgba(255,255,255,0.1); }
   .lang-btn { background: transparent; border: none; font-weight: 700; font-size: 12px; color: rgba(255,255,255,0.6); cursor: pointer; padding: 6px 12px; border-radius: 20px; transition: all 0.3s ease; }
   .lang-btn.active { background: rgba(255,255,255,0.15); color: #ffffff; font-weight: 900; }
 
-  .hero-container { max-width: 1300px; width: 100%; margin: auto auto; padding: 20px 32px 100px; display: grid; grid-template-columns: 320px 1fr 260px; gap: 24px; align-items: center; min-height: calc(100vh - 120px); position: relative; z-index: 10; }
-  .left-col { position: relative; display: flex; flex-direction: column; gap: 28px; }
-  
-  .glass-profile-card { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 24px; padding: 16px 20px; cursor: pointer; box-shadow: var(--glass-shadow); transition: all 0.4s; overflow: hidden; }
-  
-  .card-min-header { display: flex; align-items: center; gap: 14px; transition: all 0.4s ease; flex-direction: row !important; }
-  .shift-right { margin-left: 6px; } 
-  .profile-thumb { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.9); transition: all 0.3s ease; flex-shrink: 0; cursor: zoom-in; }
-  
-  .glass-profile-card.active .card-min-header { flex-direction: row !important; align-items: center; gap: 16px; }
-  .glass-profile-card.active .profile-thumb { width: 75px; height: 75px; border-width: 3px; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.15); margin-left: 0; }
-  
-  .profile-thumb.zoomed { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(5); z-index: 99999; box-shadow: 0 0 0 100vmax rgba(0,0,0,0.85); cursor: zoom-out; border: none; }
-  @media (max-width: 900px) { .profile-thumb.zoomed { transform: translate(-50%, -50%) scale(3.5); } }
+  /* Grid: la columna izquierda se estira para que la frase quede abajo sin superponerse al card */
+  .hero-container { max-width: 1300px; width: 100%; margin: 0 auto; padding: 20px 32px 110px; display: grid; grid-template-columns: 320px 1fr 260px; gap: 24px; align-items: stretch; min-height: calc(100vh - 100px); position: relative; z-index: 10; }
+  .left-col { display: flex; flex-direction: column; justify-content: space-between; gap: 32px; }
 
-  .min-meta { display: flex; flex-direction: column; justify-content: center; }
+  /* ---------- LIQUID GLASS (estilo iOS "Clear") ---------- */
+  .liquid-glass {
+    position: relative; isolation: isolate;
+    background:
+      linear-gradient(135deg, rgba(255,255,255,0.20) 0%, rgba(255,255,255,0.05) 42%, rgba(255,255,255,0.12) 100%),
+      rgba(10, 16, 30, 0.40);
+    -webkit-backdrop-filter: blur(16px) saturate(180%) brightness(1.08);
+    backdrop-filter: blur(16px) saturate(180%) brightness(1.08);
+    border: 1px solid rgba(255,255,255,0.22);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.55),
+      inset 0 -1px 0 rgba(255,255,255,0.10),
+      inset 1px 0 0 rgba(255,255,255,0.14),
+      inset 0 0 26px rgba(255,255,255,0.08),
+      0 12px 32px rgba(0,0,0,0.30),
+      0 2px 6px rgba(0,0,0,0.18);
+    color: #ffffff;
+    transition: transform 0.5s var(--ease-ios), box-shadow 0.5s var(--ease-ios), background 0.5s ease;
+  }
+  /* Reflejo especular en el borde */
+  .liquid-glass::before { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; z-index: -1; pointer-events: none;
+    background: linear-gradient(145deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0) 28%, rgba(255,255,255,0) 68%, rgba(255,255,255,0.45) 100%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude; }
+  /* Brillo superior curvo */
+  .liquid-glass::after { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 55%; border-radius: inherit; z-index: -1; pointer-events: none;
+    background: radial-gradient(120% 100% at 15% 0%, rgba(255,255,255,0.22), rgba(255,255,255,0) 65%); }
+  .liquid-glass:hover { transform: translateY(-2px); box-shadow: inset 0 1px 0 rgba(255,255,255,0.65), inset 0 -1px 0 rgba(255,255,255,0.14), inset 1px 0 0 rgba(255,255,255,0.18), inset 0 0 30px rgba(255,255,255,0.10), 0 18px 40px rgba(0,0,0,0.34), 0 2px 8px rgba(0,0,0,0.2); }
+
+  /* Card perfil */
+  .glass-profile-card { border-radius: 26px; padding: 16px 20px; cursor: pointer; overflow: hidden; }
+  .card-min-header { display: flex; align-items: center; gap: 14px; flex-direction: row; }
+  .shift-right { margin-left: 6px; }
+  .profile-thumb { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.9); transition: width 0.5s var(--ease-ios), height 0.5s var(--ease-ios), margin 0.5s var(--ease-ios), box-shadow 0.4s ease; flex-shrink: 0; cursor: zoom-in; }
+  .glass-profile-card.active .profile-thumb { width: 72px; height: 72px; border-width: 3px; box-shadow: 0 4px 14px rgba(0,0,0,0.3); margin-left: 0; }
+
+  .min-meta { display: flex; flex-direction: column; justify-content: center; min-width: 0; }
   .status-line { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
   @keyframes blink-green { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
-  .green-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: blink-green 2.5s infinite; }
-  .status-text { font-size: 11px; font-weight: 700; color: #1e293b; }
+  .green-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: blink-green 2.5s infinite; box-shadow: 0 0 8px rgba(34,197,94,0.8); }
+  .status-text { font-size: 11px; font-weight: 700; color: #ffffff; text-shadow: 0 1px 2px rgba(0,0,0,0.35); }
   .name-group { display: flex; flex-direction: column; gap: 2px; }
-  .min-name { font-size: 15px; font-weight: 900; letter-spacing: -0.01em; line-height: 1.1; }
-  .min-title { font-size: 11.5px; font-weight: 700; opacity: 0.65; }
-  
-  .card-expand-content { max-height: 0; opacity: 0; transition: all 0.5s; overflow: hidden; }
-  .glass-profile-card.active .card-expand-content { max-height: 600px; opacity: 1; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.4); }
-  .expand-bio { font-size: 15px; font-weight: 500; line-height: 1.55; margin-bottom: 16px; }
-  .expand-bio strong { font-weight: 900; color: #000; }
-  
-  .skills-title { font-size: 11px; font-weight: 800; color: var(--navy-dark); text-transform: uppercase; margin-bottom: 8px; opacity: 0.8; }
+  .min-name { font-size: 15px; font-weight: 900; letter-spacing: -0.01em; line-height: 1.1; color: #ffffff; text-shadow: 0 1px 3px rgba(0,0,0,0.4); }
+  .min-title { font-size: 11.5px; font-weight: 700; color: rgba(255,255,255,0.88); text-shadow: 0 1px 2px rgba(0,0,0,0.35); }
+
+  .card-chevron { margin-left: auto; flex-shrink: 0; color: rgba(255,255,255,0.85); transition: transform 0.5s var(--ease-ios); }
+  .glass-profile-card.active .card-chevron { transform: rotate(180deg); }
+
+  /* Despliegue: anima la altura real (0fr → 1fr), sin saltos ni max-height arbitrarios */
+  .card-expand { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 0.6s var(--ease-ios), opacity 0.4s ease; }
+  .card-expand-inner { overflow: hidden; min-height: 0; }
+  .card-expand-body { margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.25); }
+  .active > .card-expand { grid-template-rows: 1fr; opacity: 1; transition-delay: 0s, 0.1s; }
+
+  .expand-bio { font-size: 14.5px; font-weight: 500; line-height: 1.55; margin-bottom: 16px; color: rgba(255,255,255,0.95); text-shadow: 0 1px 2px rgba(0,0,0,0.3); }
+  .expand-bio strong { font-weight: 900; color: #ffffff; }
+
+  .skills-title { font-size: 11px; font-weight: 800; color: #ffffff; text-transform: uppercase; margin-bottom: 8px; opacity: 0.9; }
   .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
-  .skills-grid span { font-size: 10.5px; font-weight: 800; background: rgba(255, 255, 255, 0.75); padding: 8px 10px; border-radius: 6px; text-align: center; white-space: nowrap; }
+  .skills-grid span { font-size: 10.5px; font-weight: 800; color: #ffffff; background: rgba(255, 255, 255, 0.16); border: 1px solid rgba(255,255,255,0.22); padding: 8px 10px; border-radius: 8px; text-align: center; white-space: nowrap; }
   .skills-grid .wide-skill { grid-column: span 2; }
-  
-  .hero-quote-corner { position: absolute; bottom: 40px; left: 32px; max-width: 320px; z-index: 10;}
+
+  /* Frase del fondo del hero */
+  .hero-quote-corner { max-width: 320px; }
   .hero-quote-corner span { font-size: 17px; font-weight: 800; letter-spacing: -0.02em; color: #ffffff; text-shadow: 0 2px 14px rgba(0,0,0,0.8); line-height: 1.4; display: block; }
-  
-  .hero-center-text { text-align: center; position: relative; display: flex; justify-content: center; align-items: center; }
+
+  .hero-center-text { text-align: center; position: relative; display: flex; justify-content: center; align-items: center; align-self: center; }
   .hero-center-text h1 { font-size: 5.5rem; font-weight: 900; line-height: 0.98; letter-spacing: -0.04em; text-transform: uppercase; margin: 0 auto; max-width: 900px; color: #ffffff; text-shadow: 0 8px 30px rgba(0,0,0,0.3); }
-  .floating-pill { position: absolute; padding: 6px 14px; border-radius: 30px; font-size: 12px; font-weight: 800; white-space: nowrap; color: var(--navy-dark); pointer-events: none;}
+  .floating-pill { position: absolute; padding: 6px 14px; border-radius: 30px; font-size: 12px; font-weight: 800; white-space: nowrap; color: var(--navy-dark); pointer-events: none; }
   .pill-pink { background: var(--pastel-pink); top: -25px; right: 15px; transform: rotate(3deg); }
   .pill-green { background: var(--pastel-green); bottom: -30px; left: 10%; transform: rotate(-6deg); }
   .pill-yellow { background: var(--pastel-yellow); bottom: -25px; right: 40px; transform: rotate(2deg); }
-  
-  .glass-cases-card { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 20px; padding: 14px 18px; cursor: pointer; transition: all 0.4s; overflow: hidden; box-shadow: var(--glass-shadow); }
-  .cases-min-header { display: flex; align-items: center; justify-content: space-between; }
-  .cases-title-text { font-size: 14px; font-weight: 800; color: var(--navy-dark); }
-  .search-icon-wrapper { background: rgba(0, 0, 0, 0.05); border-radius: 50%; padding: 6px; display: flex; color: var(--navy-dark); }
-  .cases-expand-content { max-height: 0; opacity: 0; transition: all 0.5s; }
-  .glass-cases-card.active .cases-expand-content { max-height: 350px; opacity: 1; margin-top: 14px; }
-  .quick-cases-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-  .quick-cases-list li { display: flex; align-items: flex-start; gap: 8px; }
-  .quick-cases-list a { text-decoration: none; display: flex; flex-direction: column; font-size: 13.5px; }
-  .quick-cases-list strong { font-weight: 800; color: var(--navy-dark);}
-  .quick-cases-list span { font-size: 11px; color: var(--text-muted); margin-top: 2px;}
 
+  /* Card áreas */
+  .glass-cases-card { align-self: start; border-radius: 22px; padding: 14px 18px; cursor: pointer; overflow: hidden; }
+  .cases-min-header { display: flex; align-items: center; justify-content: space-between; }
+  .cases-title-text { font-size: 14px; font-weight: 800; color: #ffffff; text-shadow: 0 1px 2px rgba(0,0,0,0.35); }
+  .search-icon-wrapper { background: rgba(255, 255, 255, 0.18); border-radius: 50%; padding: 6px; display: flex; color: #ffffff; }
+  .glass-cases-card .card-expand-body { margin-top: 14px; padding-top: 0; border-top: none; }
+  .quick-cases-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+  .quick-cases-list a { text-decoration: none; display: flex; flex-direction: column; font-size: 13.5px; transition: transform 0.3s var(--ease-ios); }
+  .quick-cases-list a:hover { transform: translateX(4px); }
+  .quick-cases-list strong { font-weight: 800; color: #ffffff; text-shadow: 0 1px 2px rgba(0,0,0,0.35); }
+  .quick-cases-list span { font-size: 11.5px; color: rgba(255,255,255,0.82); margin-top: 2px; }
+
+  /* ---------- MARQUEE ---------- */
   .marquee-section { width: 100%; background: #ffffff; padding: 15px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); z-index: 5; position: relative; overflow: hidden; }
   .marquee-container { width: 100vw; max-width: 100%; overflow: hidden; display: flex; align-items: center; }
   .marquee-track { display: flex; gap: 60px; padding-right: 60px; width: max-content; animation: scroll-marquee 30s linear infinite; }
@@ -1007,6 +1037,7 @@
   .marquee-track img:hover { opacity: 1; filter: grayscale(0%); cursor: pointer; }
   @keyframes scroll-marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
+  /* ---------- SECCIONES ---------- */
   .about-section, .projects-section, .services-section, .contact-section { position: relative; width: 100%; padding: 80px 32px; z-index: 5; display: flex; justify-content: center; }
   .contact-section { padding-bottom: 160px; background-color: #ffffff; }
   .about-container, .projects-container, .services-container, .contact-container { max-width: 900px; width: 100%; display: flex; flex-direction: column; align-items: center; }
@@ -1018,7 +1049,7 @@
   .about-header, .section-header { text-align: center; margin-bottom: 40px; }
   .about-header h2, .section-header h2 { font-size: 3.5rem; font-weight: 900; line-height: 1.1; letter-spacing: -0.03em; color: var(--navy-dark); margin-bottom: 16px; }
   .about-subtitle, .section-header p { font-size: 1.4rem; line-height: 1.6; color: var(--text-muted); max-width: 800px; margin: 0 auto; font-weight: 500; }
-  
+
   .mac-window { width: 100%; background: var(--bg-soft); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--border-color); border-radius: 16px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06); overflow: hidden; }
   .mac-titlebar { background: rgba(241, 245, 249, 0.8); padding: 14px 20px; display: flex; align-items: center; border-bottom: 1px solid var(--border-color); }
   .mac-buttons { display: flex; gap: 8px; }
@@ -1026,84 +1057,130 @@
   .mac-dot.red { background-color: #ff5f56; border: 1px solid #e0443e; }
   .mac-dot.yellow { background-color: #ffbd2e; border: 1px solid #dea123; }
   .mac-dot.green { background-color: #27c93f; border: 1px solid #1aab29; }
-  
+
   .mac-content { display: grid; grid-template-columns: 280px 1fr; gap: 40px; padding: 40px; align-items: center; }
   .bio-image-col { display: flex; justify-content: center; }
-  
-  .animated-memoji { animation: slideUpFade 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards; opacity: 0; transform: translateY(40px); }
+
+  .animated-memoji { animation: slideUpFade 1.2s var(--ease-out) 0.5s forwards; opacity: 0; transform: translateY(40px); }
   @keyframes slideUpFade { to { opacity: 1; transform: translateY(0); } }
-  
+
   .memoji-circle { width: 240px; height: 240px; border-radius: 50%; object-fit: cover; background-color: #fef08a; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
   .bio-info-col { display: flex; flex-direction: column; gap: 30px; }
   .bio-intro { font-size: 1.2rem; line-height: 1.6; color: var(--navy-dark); }
   .bio-intro strong { font-weight: 800; }
-  
+
   .stats-grid-about { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .iridescent-text { font-size: 2.5rem; font-weight: 900; margin-bottom: 4px; background: linear-gradient(90deg, #9b51e0, #ff7e5f, #00c6ff, #9b51e0); background-size: 300% 100%; animation: iridescence 5s ease infinite; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
   @keyframes iridescence { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
   .stat-item p { font-size: 15px; font-weight: 600; color: var(--text-muted); line-height: 1.3; }
 
-  .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 30px; width: 100%; } 
-  .project-card { background: var(--bg-soft); backdrop-filter: blur(12px); border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; } 
-  .project-card:hover { transform: translateY(-6px); box-shadow: 0 20px 30px rgba(0,0,0,0.08); } 
-  .card-mac-header { background: rgba(241, 245, 249, 0.8); padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); } 
-  .mac-dots { display: flex; gap: 6px; } 
-  .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; } 
-  .dot.red { background: #ff5f56; } .dot.yellow { background: #ffbd2e; } .dot.green { background: #27c93f; } 
-  .project-num-tag { font-family: monospace; font-size: 14px; font-weight: 800; color: var(--text-muted); opacity: 0.5; }
-  .card-body { padding: 20px; text-align: center; } 
-  .card-img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 16px; border: 1px solid rgba(0,0,0,0.05); } 
-  .card-body h3 { font-size: 18px; margin: 0 0 6px; font-weight: 800; } 
-  .card-company { font-size: 13px; color: var(--text-muted); margin: 0; font-weight: 600;}
+  /* ---------- PORTAFOLIO POR ÁREAS ---------- */
+  .area-nav { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 40px; }
+  .area-nav a { display: flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 30px; background: var(--bg-soft); border: 1px solid var(--border-color); text-decoration: none; color: var(--navy-dark); font-weight: 800; font-size: 14px; transition: background 0.3s ease, color 0.3s ease, transform 0.3s var(--ease-ios); }
+  .area-nav a .num { font-family: monospace; font-size: 12px; opacity: 0.5; }
+  .area-nav a:hover { background: var(--navy-dark); color: #ffffff; transform: translateY(-2px); }
 
-  .services-grid-blocks { display: flex; flex-direction: column; gap: 20px; width: 100%; max-width: 800px;}
-  .service-block { padding: 20px 30px; border-radius: 16px; backdrop-filter: blur(12px); border-width: 1px; border-style: solid; box-shadow: 0 10px 30px rgba(0,0,0,0.03); cursor: pointer; transition: all 0.3s; overflow: hidden;}
+  .area-window { max-width: 1200px; margin-bottom: 48px; backdrop-filter: none; -webkit-backdrop-filter: none; background: rgba(255,255,255,0.85); scroll-margin-top: 24px; }
+  .area-window .mac-titlebar { justify-content: space-between; gap: 16px; }
+  .window-label { background: white; padding: 6px 16px; border-radius: 20px; font-size: 12px; color: var(--text-muted); font-weight: 500; border: 1px solid var(--border-color); flex-grow: 1; max-width: 420px; text-align: center; }
+  .area-index { font-family: monospace; font-size: 13px; font-weight: 800; color: var(--text-muted); opacity: 0.5; }
+  .area-body { padding: 36px; }
+
+  .area-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 22px; }
+  .area-title { font-size: 2.2rem; font-weight: 900; letter-spacing: -0.03em; line-height: 1.1; color: var(--navy-dark); }
+  .area-desc { font-size: 1.05rem; line-height: 1.6; color: var(--text-muted); font-weight: 500; max-width: 720px; margin-top: 10px; }
+  .area-badge { padding: 8px 16px; border-radius: 30px; font-size: 12.5px; font-weight: 800; color: var(--navy-dark); white-space: nowrap; transform: rotate(2deg); }
+  .badge-yellow { background: var(--pastel-yellow); }
+  .badge-pink { background: var(--pastel-pink); }
+  .badge-green { background: var(--pastel-green); }
+
+  .area-tools { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+  .area-tools span { font-size: 12px; font-weight: 700; padding: 6px 12px; border-radius: 20px; background: rgba(241,245,249,0.9); border: 1px solid var(--border-color); color: var(--navy-dark); }
+
+  .area-notes { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-bottom: 32px; }
+  .area-notes li { padding: 16px 18px; border-radius: 14px; background: rgba(241, 245, 249, 0.6); border: 1px solid var(--border-color); }
+  .note-company { display: block; font-size: 13px; font-weight: 900; color: var(--navy-dark); margin-bottom: 6px; }
+  .area-notes p { font-size: 13.5px; line-height: 1.55; color: var(--text-muted); font-weight: 500; }
+
+  /* Stack tecnológico */
+  .stack-block { margin: 6px 0 28px; }
+  .stack-title { font-size: 13px; font-weight: 800; color: var(--text-muted); margin-bottom: 12px; }
+  .stack-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)); gap: 12px; }
+  .stack-item { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 18px 10px 14px; border-radius: 16px; background: rgba(255,255,255,0.8); border: 1px solid var(--border-color); font-size: 13px; font-weight: 700; text-align: center; color: var(--navy-dark); transition: transform 0.3s var(--ease-ios), box-shadow 0.3s ease; }
+  .stack-item:hover { transform: translateY(-4px); box-shadow: 0 14px 26px rgba(15,23,42,0.08); }
+  .stack-item svg { width: 38px; height: 38px; }
+
+  /* Collage de media (masonry con columnas CSS) */
+  .media-grid { column-count: 3; column-gap: 20px; }
+  .media-card { break-inside: avoid; -webkit-column-break-inside: avoid; page-break-inside: avoid; margin: 0 0 20px; background: #f8fafc; border: 1px solid var(--border-color); border-radius: 16px; padding: 12px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+  .media-card video, .media-card img { width: 100%; border-radius: 10px; object-fit: cover; cursor: zoom-in; transition: transform 0.3s ease; display: block; }
+  .media-card video:hover, .media-card img:hover { transform: translateY(-2px); }
+
+  .vertical-vid { aspect-ratio: 9/16; background: #000; }
+  .horizontal-vid { aspect-ratio: 16/9; background: #000; }
+  .horizontal-img.w-full-img { aspect-ratio: auto; height: auto; max-height: 500px; object-fit: contain; background: transparent; }
+
+  .media-caption { font-size: 13.5px; line-height: 1.4; text-align: center; padding: 0 4px 4px; }
+  .cap-title { font-weight: 800; color: var(--navy-dark); }
+  .cap-sep { margin: 0 4px; opacity: 0.35; }
+  .cap-company { font-weight: 600; color: var(--text-muted); white-space: nowrap; }
+
+  .media-link { background: #f1f5f9; color: var(--navy-dark); padding: 12px; border-radius: 8px; text-align: center; text-decoration: none; font-weight: 800; font-size: 14px; border: 1px solid var(--border-color); transition: all 0.3s ease; }
+  .media-link:hover { background: var(--navy-dark); color: #ffffff; }
+
+  /* ---------- SERVICIOS ---------- */
+  .services-grid-blocks { display: flex; flex-direction: column; gap: 20px; width: 100%; max-width: 800px; }
+  .service-block { padding: 20px 30px; border-radius: 16px; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-width: 1px; border-style: solid; box-shadow: 0 10px 30px rgba(0,0,0,0.03); cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; overflow: hidden; }
   .service-block:hover { transform: translateY(-3px); }
-  .service-block-header { display: flex; justify-content: space-between; align-items: center; }
-  .service-block-header h3 { font-size: 1.4rem; font-weight: 800; color: var(--navy-dark); margin-bottom: 0;}
-  .icon-plus { font-size: 1.5rem; font-weight: 800; color: var(--navy-dark); transition: transform 0.3s; }
+  .service-block-header { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  .service-block-header h3 { font-size: 1.4rem; font-weight: 800; color: var(--navy-dark); margin-bottom: 0; }
+  .icon-plus { font-size: 1.5rem; font-weight: 800; color: var(--navy-dark); transition: transform 0.4s var(--ease-ios); flex-shrink: 0; }
   .service-block.open .icon-plus { transform: rotate(45deg); }
-  .service-block-body { max-height: 0; opacity: 0; transition: all 0.4s ease; overflow: hidden; }
-  .service-block.open .service-block-body { max-height: 800px; opacity: 1; margin-top: 14px; }
-  
-  /* ESTILOS DE SOLUCIÓN Y PROBLEMA (MINIMALISTA - APPLE STYLE) */
-  .minimal-flow { display: flex; align-items: center; gap: 20px; margin-top: 10px; background: rgba(255,255,255,0.6); padding: 20px; border-radius: 12px; border: 1px solid var(--border-color); }
+  .service-block-body { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 0.5s var(--ease-ios), opacity 0.4s ease; }
+  .service-block-inner { overflow: hidden; min-height: 0; }
+  .service-block.open .service-block-body { grid-template-rows: 1fr; opacity: 1; }
+
+  .minimal-flow { display: flex; align-items: center; gap: 20px; margin-top: 16px; background: rgba(255,255,255,0.6); padding: 20px; border-radius: 12px; border: 1px solid var(--border-color); }
   .flow-block { flex: 1; display: flex; flex-direction: column; gap: 8px; }
   .flow-label { font-size: 11px; font-weight: 800; text-transform: uppercase; color: var(--navy-dark); opacity: 0.5; letter-spacing: 0.5px; }
-  .flow-text { font-size: 1.05rem; line-height: 1.5; color: var(--navy-dark); margin: 0; }
+  .flow-text { font-size: 1.02rem; line-height: 1.55; color: var(--navy-dark); margin: 0; }
   .flow-text.text-muted { font-weight: 500; color: var(--text-muted); }
   .flow-text.text-strong { font-weight: 700; color: var(--navy-dark); }
   .flow-arrow { flex-shrink: 0; color: var(--navy-dark); opacity: 0.3; display: flex; align-items: center; justify-content: center; }
   .flow-arrow svg { width: 24px; height: 24px; }
 
+  .service-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 4px; }
+  .service-tags span { font-size: 11.5px; font-weight: 700; padding: 6px 12px; border-radius: 20px; background: rgba(255,255,255,0.7); border: 1px solid var(--border-color); color: var(--navy-dark); }
+
+  /* ---------- CONTACTO ---------- */
   .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0; }
   .light-gray-bg { background: #f8fafc; border-right: 1px solid var(--border-color); }
   .contact-left { padding: 50px; }
-  
+
   .coffee-title { display: flex; align-items: center; gap: 12px; font-size: 2.4rem; font-weight: 900; margin-bottom: 16px; color: var(--navy-dark); letter-spacing: -0.02em; }
-  .coffee-cup-svg { color: #8B5A2B; flex-shrink: 0;}
+  .coffee-cup-svg { color: #8B5A2B; flex-shrink: 0; }
   .steam { animation: rise-smooth 2.5s infinite ease-in-out; opacity: 0; stroke-width: 1.5px; }
   .steam-1 { animation-delay: 0s; } .steam-2 { animation-delay: 0.8s; } .steam-3 { animation-delay: 1.6s; }
-  @keyframes rise-smooth { 
-    0% { transform: translateY(2px) scale(0.9); opacity: 0; } 
-    30% { opacity: 0.6; } 
-    70% { opacity: 0.6; } 
-    100% { transform: translateY(-12px) scale(1.1); opacity: 0; } 
+  @keyframes rise-smooth {
+    0% { transform: translateY(2px) scale(0.9); opacity: 0; }
+    30% { opacity: 0.6; }
+    70% { opacity: 0.6; }
+    100% { transform: translateY(-12px) scale(1.1); opacity: 0; }
   }
 
   .contact-left p { font-size: 1.1rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 30px; font-weight: 500; }
-  
+
   .contact-socials-row { display: flex; gap: 16px; margin-top: 20px; }
   .social-icon-btn { background: rgba(255,255,255,0.7); width: 54px; height: 54px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--navy-dark); border: 1px solid var(--border-color); transition: all 0.3s; }
-  .social-icon-btn:hover { background: white; transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); color: #000;}
-  
+  .social-icon-btn:hover { background: white; transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); color: #000; }
+
   .contact-right { padding: 50px; }
   .contact-form { display: flex; flex-direction: column; gap: 20px; }
   .input-group { display: flex; flex-direction: column; gap: 8px; }
   .input-group label { font-size: 0.9rem; font-weight: 800; color: var(--navy-dark); text-transform: uppercase; }
   .input-group input, .input-group textarea { width: 100%; padding: 14px; border-radius: 8px; border: 1px solid var(--border-color); background: rgba(255,255,255,0.8); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1rem; color: var(--navy-dark); outline: none; transition: border 0.3s; }
   .input-group input:focus, .input-group textarea:focus { border-color: var(--navy-dark); }
-  
+
   .privacy-disclaimer { background: rgba(15, 23, 42, 0.8); padding: 16px; border-radius: 8px; margin-top: 10px; border: 1px solid rgba(0,0,0,0.2); }
   .privacy-disclaimer p { font-size: 0.85rem; color: rgba(255,255,255,0.8) !important; line-height: 1.5; margin: 0; }
   .privacy-link { color: #ef4444; text-decoration: underline; font-weight: 600; }
@@ -1115,9 +1192,9 @@
   .submit-btn { background: var(--navy-dark); color: white; border: none; padding: 16px; border-radius: 8px; font-size: 1.1rem; font-weight: 800; cursor: pointer; transition: background 0.3s; margin-top: 10px; }
   .submit-btn:hover { background: #1e293b; }
 
-  /* FOOTER NEGRO SÓLIDO Y ANIMACIÓN DE OJOS */
+  /* ---------- FOOTER ---------- */
   .black-footer { background: #000000; color: rgba(255,255,255,0.6); padding: 30px 20px 120px; text-align: center; font-size: 0.95rem; font-weight: 600; position: relative; z-index: 5; border: none; }
-  
+
   .hidden-eyes-container { display: flex; justify-content: center; margin-bottom: 20px; opacity: 0.06; pointer-events: none; }
   .blinking-eyes { transform-origin: center; animation: subtle-blink 5s infinite; }
   @keyframes subtle-blink {
@@ -1125,101 +1202,97 @@
     94%, 98% { transform: scaleY(0.1); }
   }
 
-  .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(8px); display: flex; justify-content: center; align-items: center; z-index: 10000; padding: 20px; opacity: 0; visibility: hidden; transition: all 0.3s ease; } 
-  .modal-overlay.active { opacity: 1; visibility: visible; } 
-  .modal-window { background: white; width: 100%; max-width: 820px; max-height: 85vh; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 25px 50px rgba(0,0,0,0.25); border: 1px solid var(--border-color); transform: translateY(30px) scale(0.95); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); } 
-  .modal-overlay.active .modal-window { transform: translateY(0) scale(1); }
-  .modal-mac-bar { background: #f1f5f9; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); } 
-  .modal-search-bar { background: white; padding: 6px 16px; border-radius: 20px; font-size: 12px; color: var(--text-muted); font-weight: 500; border: 1px solid var(--border-color); flex-grow: 1; margin: 0 20px; text-align: center; } 
-  .close-btn-text { background: none; border: none; font-size: 13px; font-weight: 800; color: var(--navy-dark); cursor: pointer; } 
-  .modal-content-scroll { overflow-y: auto; padding: 30px; } 
-  .modal-hero-banner img { width: 100%; max-height: 320px; object-fit: cover; border-radius: 12px; margin-bottom: 24px; border: 1px solid rgba(0,0,0,0.05); } 
-  
-  .modal-title-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; } 
-  .title-text-group { display: flex; flex-direction: column; }
-  .modal-title-row h2 { font-size: 24px; margin: 0; font-weight: 900; color: var(--navy-dark); } 
-  .simple-modal-link { color: #3b82f6; font-weight: 700; text-decoration: none; font-size: 14px; transition: color 0.3s; }
-  .simple-modal-link:hover { color: #1d4ed8; text-decoration: underline; }
-  
-  .modal-description { font-size: 15px; line-height: 1.6; color: var(--text-muted); margin-bottom: 28px; font-weight: 500; } 
-  .metadata-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 16px; background: rgba(241, 245, 249, 0.5); padding: 20px; border-radius: 12px; border: 1px solid var(--border-color); margin-bottom: 30px; } 
-  .meta-label { font-size: 11px; font-weight: 800; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 4px; } 
-  .meta-val { font-size: 14px; font-weight: 700; color: var(--navy-dark); } 
+  /* ---------- DOCK FLOTANTE · LIQUID GLASS ---------- */
+  .floating-dock {
+    position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%);
+    padding: 10px 20px 16px; border-radius: 34px; z-index: 9999; isolation: isolate;
+    background: linear-gradient(180deg, rgba(255,255,255,0.46) 0%, rgba(255,255,255,0.16) 100%);
+    -webkit-backdrop-filter: blur(22px) saturate(200%);
+    backdrop-filter: blur(22px) saturate(200%);
+    border: 1px solid rgba(255,255,255,0.55);
+    box-shadow:
+      inset 0 1.5px 0 rgba(255,255,255,0.95),
+      inset 0 -1px 0 rgba(255,255,255,0.28),
+      inset 0 0 18px rgba(255,255,255,0.28),
+      0 0 0 0.5px rgba(15,23,42,0.10),
+      0 18px 40px rgba(15,23,42,0.22),
+      0 4px 10px rgba(15,23,42,0.10);
+    animation: dock-in 0.9s var(--ease-out) 0.6s backwards;
+  }
+  .floating-dock::before { content: ""; position: absolute; inset: 0; border-radius: inherit; z-index: -1; pointer-events: none;
+    background:
+      radial-gradient(120% 90% at 18% 0%, rgba(255,255,255,0.6), rgba(255,255,255,0) 55%),
+      linear-gradient(115deg, rgba(255,255,255,0) 38%, rgba(255,255,255,0.22) 50%, rgba(255,255,255,0) 62%); }
+  @keyframes dock-in { from { opacity: 0; transform: translate(-50%, 40px); } to { opacity: 1; transform: translate(-50%, 0); } }
 
-  /* ESTRUCTURA BENTO COLLAGE Y MEDIA CARDS */
-  .modal-gallery-container { margin-top: 30px; border-top: 1px solid var(--border-color); padding-top: 24px; }
-  .modal-gallery-container h3 { font-size: 1.2rem; font-weight: 900; color: var(--navy-dark); margin-bottom: 16px; }
-  
-  .bento-collage { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; width: 100%; align-items: start; }
-  .bento-vertical { grid-column: span 1; }
-  .bento-horizontal { grid-column: 1 / -1; }
-  
-  .media-card { background: #f8fafc; border: 1px solid var(--border-color); border-radius: 16px; padding: 12px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
-  .media-card video, .media-card img { width: 100%; border-radius: 10px; object-fit: cover; cursor: zoom-in; transition: transform 0.3s ease; }
-  .media-card video:hover, .media-card img:hover { transform: translateY(-2px); }
-  
-  .vertical-vid { aspect-ratio: 9/16; }
-  .horizontal-vid, .horizontal-img { aspect-ratio: 16/9; }
-  .w-full-img { height: auto; max-height: 500px; object-fit: contain; background: transparent; }
-
-  .media-caption { font-size: 13.5px; font-weight: 600; color: var(--navy-dark); text-align: center; padding: 0 4px 4px; line-height: 1.4; }
-
-  /* ESTILOS NUEVOS PARA TARJETA FREELANCE (BOTONES) */
-  .freelance-link { background: #f1f5f9; color: var(--navy-dark); padding: 12px; border-radius: 8px; text-align: center; text-decoration: none; font-weight: 800; font-size: 14px; border: 1px solid var(--border-color); transition: all 0.3s ease; }
-  .freelance-link:hover { background: var(--navy-dark); color: #ffffff; }
-
-  .floating-dock { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 32px; padding: 10px 22px; z-index: 9999; box-shadow: var(--glass-shadow); }
   .dock-list { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; align-items: center; }
   .dock-item { position: relative; display: flex; justify-content: center; }
   .dock-link { display: flex; align-items: center; }
-  .mac-icon { width: 52px; height: 52px; object-fit: contain; transition: transform 0.2s; }
-  .dock-link:hover .mac-icon { transform: scale(1.2) translateY(-6px); }
-  .dock-item::before { content: attr(data-tooltip); position: absolute; top: -42px; background: var(--navy-dark); color: white; font-size: 12px; font-weight: 700; padding: 6px 12px; border-radius: 8px; opacity: 0; visibility: hidden; transition: all 0.2s; white-space: nowrap; pointer-events: none; }
-  .dock-item:hover::before { opacity: 1; visibility: visible; top: -48px; }
+  .mac-icon { width: 52px; height: 52px; object-fit: contain; transition: transform 0.35s var(--ease-ios); filter: drop-shadow(0 4px 6px rgba(15,23,42,0.18)); }
+  .dock-item:hover .mac-icon { transform: scale(1.22) translateY(-8px); }
+  .dock-item:hover + .dock-item .mac-icon,
+  .dock-item:has(+ .dock-item:hover) .mac-icon { transform: scale(1.1) translateY(-3px); }
+
+  /* Indicador de sección activa */
+  .dock-item::after { content: ""; position: absolute; bottom: -10px; width: 4px; height: 4px; border-radius: 50%; background: rgba(15,23,42,0.75); opacity: 0; transform: scale(0.5); transition: opacity 0.3s ease, transform 0.3s var(--ease-ios); }
+  .dock-item.active::after { opacity: 1; transform: scale(1); }
+
+  .dock-item::before { content: attr(data-tooltip); position: absolute; top: -42px; background: rgba(15,23,42,0.88); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); color: white; font-size: 12px; font-weight: 700; padding: 6px 12px; border-radius: 10px; opacity: 0; visibility: hidden; transition: all 0.2s; white-space: nowrap; pointer-events: none; }
+  .dock-item:hover::before { opacity: 1; visibility: visible; top: -50px; }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 1000px) {
+    .media-grid { column-count: 2; }
+  }
 
   @media (max-width: 900px) {
     .brand-centered { font-size: 16px; top: 20px; }
-    .hero-container { display: flex; flex-direction: column; gap: 16px; margin-top: 50px; }
-    .left-col { position: relative; z-index: 50; } 
-    .hero-center-text { margin-top: 10px; }
-    
-    .hero-quote-corner { position: relative; bottom: auto; left: auto; text-align: center; margin-top: 40px; margin-bottom: 20px; max-width: 100%;}
-    
+
+    /* En móvil, los hijos de la columna izquierda pasan a ser hijos directos del flex para poder reordenarlos */
+    .hero-container { display: flex; flex-direction: column; gap: 16px; margin-top: 50px; min-height: auto; padding-bottom: 120px; }
+    .left-col { display: contents; }
+    .glass-profile-card { order: 1; }
+    .hero-center-text { order: 2; margin-top: 10px; align-self: auto; }
+    .glass-cases-card { order: 3; align-self: stretch; }
+    .hero-quote-corner { order: 4; text-align: center; margin: 24px auto 0; max-width: 100%; }
+
     .hero-center-text h1 { font-size: 2.8rem; }
     .expand-bio { font-size: 14.5px; }
     .about-subtitle { font-size: 1.15rem; }
-    
+
     .floating-pill { display: none; }
-    .floating-dock { padding: 10px 16px; }
+    .floating-dock { padding: 10px 16px 14px; }
     .mac-icon { width: 44px; height: 44px; }
     .dock-list { gap: 16px; }
     .about-section, .services-section { padding: 60px 20px; }
     .projects-section { padding: 40px 20px; }
-    .projects-grid { grid-template-columns: 1fr; }
-    .contact-section { padding: 60px 20px 140px; } 
+    .contact-section { padding: 60px 20px 140px; }
     .about-header h2, .section-header h2, .coffee-title { font-size: 2.4rem; }
     .mac-content { grid-template-columns: 1fr; gap: 24px; padding: 24px; text-align: center; }
     .stats-grid-about { grid-template-columns: 1fr; gap: 16px; }
     .contact-container { grid-template-columns: 1fr; }
     .contact-left, .contact-right { padding: 30px; }
     .contact-left { border-right: none; border-bottom: 1px solid var(--border-color); }
-    .modal-content-scroll { padding: 20px; }
-    
+
     .marquee-track { gap: 40px; }
     .marquee-track img { height: 35px; }
-    
-    .project-card { flex: 1 1 100%; max-width: 100%; }
-    .modal-title-row h2 { font-size: 20px; }
-    
-    .bento-vertical { grid-column: span 1; }
-    .bento-horizontal { grid-column: 1 / -1; }
+
+    .area-body { padding: 20px; }
+    .area-title { font-size: 1.7rem; }
+    .area-desc { font-size: 0.98rem; }
+    .window-label { display: none; }
+    .stack-grid { grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
     .media-card { padding: 8px; gap: 8px; }
-    .media-caption { font-size: 12px; }
+    .media-caption { font-size: 12.5px; }
     .zoom-caption { font-size: 0.95rem; }
-    
-    .service-block.open .service-block-body { max-height: 1000px; }
 
     .minimal-flow { flex-direction: column; align-items: flex-start; gap: 16px; }
     .flow-arrow { transform: rotate(90deg); margin: -4px 0; }
+    .service-block { padding: 18px 20px; }
+  }
+
+  @media (max-width: 600px) {
+    .media-grid { column-count: 1; }
+    .media-card.bento-vertical { max-width: 340px; margin-left: auto; margin-right: auto; }
   }
 </style>
