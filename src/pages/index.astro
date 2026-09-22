@@ -123,3 +123,2162 @@ const projects = [
     title: "Producción del proyecto comunitario El Calvario",
     shortTitle: "Proyecto El Calvario",
     company: "Dislocal",
+    category: "Production · Logistics · Social Impact",
+    description:
+      "Coordiné logística, cronogramas y ejecución en terreno junto a equipos multidisciplinarios para una iniciativa de impacto comunitario.",
+    result: "Planificación + ejecución en campo",
+    role: "Production Manager & Project Coordinator",
+    image: "/dislocal%201.png",
+    imageAlt: "Actividad comunitaria del proyecto Dislocal",
+    size: "medium",
+    theme: "cream",
+    href: "https://www.dislocal.org",
+  },
+
+  {
+    number: "08",
+    title: "Una landing para coordinar voluntarios en campo",
+    shortTitle: "Plataforma Las Minitas",
+    company: "Impaktemos",
+    category: "Web · Operations · Coordination",
+    description:
+      "Diseñé y desarrollé una experiencia web para ordenar horarios, tareas y flujo de voluntarios durante una jornada comunitaria.",
+    result: "Información operativa centralizada en una sola experiencia",
+    role: "Coordinación Operativa & Web",
+    image: "/landingpage%20plataforma.png",
+    imageAlt: "Landing page para la Plataforma Las Minitas",
+    size: "large",
+    theme: "purple",
+    href: "https://minitas-mission-guide.lovable.app",
+  },
+
+  {
+    number: "09",
+    title: "Web personal para una marca profesional",
+    shortTitle: "Web · Laura Navarro",
+    company: "Freelance",
+    category: "Web Design · Development",
+    description:
+      "Diseño y desarrollo de una presencia digital enfocada en presentar con claridad la marca, trayectoria y propuesta profesional.",
+    result: "Diseño + desarrollo web",
+    role: "Web Designer & Developer",
+    image: "/portada%20freelance.png",
+    imageAlt: "Proyecto de diseño y desarrollo web freelance",
+    size: "medium",
+    theme: "orange",
+    href: "https://gserrano2024cs-ctrl.github.io",
+  },
+
+  {
+    number: "10",
+    title: "Archivo digital y storytelling para Beatriz Briceño-Picón",
+    shortTitle: "Web · Beatriz Briceño-Picón",
+    company: "Freelance",
+    category: "Web Design · Storytelling · Development",
+    description:
+      "Transformé una historia personal y profesional en una experiencia web que organiza recuerdos, textos y legado de forma clara y cercana.",
+    result: "Narrativa digital + experiencia web",
+    role: "Web Designer & Developer",
+    image: "/portada%20freelance.png",
+    imageAlt: "Sitio web desarrollado para Beatriz Briceño-Picón",
+    size: "wide",
+    theme: "black",
+    href: "https://beatriz-brice-o-pic-n.vercel.app",
+  },
+
+  {
+    number: "11",
+    title: "Sitio editorial para Mario Briceño Iragorry",
+    shortTitle: "Web · Mario Briceño Iragorry",
+    company: "Freelance",
+    category: "Editorial Web · UX · Development",
+    description:
+      "Diseño y desarrollo web orientado a organizar contenido histórico y editorial dentro de una navegación accesible y contemporánea.",
+    result: "Contenido histórico llevado a una experiencia digital",
+    role: "Web Designer & Developer",
+    image: "/portada%20freelance.png",
+    imageAlt: "Proyecto web desarrollado para Mario Briceño Iragorry",
+    size: "medium",
+    theme: "yellow",
+    href: "https://mbihoy.vercel.app",
+  },
+];
+
+const capabilities = [
+  {
+    number: "01",
+    title: "Marketing & Content",
+    text: "Estrategia de contenido, copy, video, SEO y análisis de rendimiento.",
+  },
+  {
+    number: "02",
+    title: "Project Coordination",
+    text: "Cronogramas, equipos, logística, eventos, procesos y ejecución.",
+  },
+  {
+    number: "03",
+    title: "Web",
+    text: "Landing pages y sitios rápidos construidos con Astro, HTML y CSS.",
+  },
+  {
+    number: "04",
+    title: "CRM & Automation",
+    text: "Sistemas de seguimiento, organización comercial y automatización.",
+  },
+];
+
+const tools = [
+  "Astro",
+  "HTML + CSS",
+  "JavaScript",
+  "GitHub",
+  "GA4",
+  "Meta Business Suite",
+  "ManyChat",
+  "Salesforce",
+  "Zoho CRM",
+  "Trello",
+  "Asana",
+  "Figma",
+  "Canva",
+];
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+
+    <meta
+      name="description"
+      content="Portfolio de Greydemar Serrano. Marketing, coordinación de proyectos, contenido y desarrollo web."
+    />
+
+    <meta
+      name="keywords"
+      content="Greydemar Serrano, Grey Serrano, marketing, project manager, portfolio, Astro, web design, content"
+    />
+
+    <meta name="author" content="Greydemar Serrano" />
+
+    <meta name="theme-color" content="#f4f0e7" />
+
+    <meta property="og:title" content="Grey Serrano — Portfolio" />
+
+    <meta
+      property="og:description"
+      content="Marketing, coordinación de proyectos, contenido y experiencias web."
+    />
+
+    <meta property="og:type" content="website" />
+
+    <meta
+      property="og:url"
+      content="https://portafolio-greydemar.vercel.app/"
+    />
+
+    <title>Grey Serrano — Marketing, Projects & Web</title>
+
+    <link rel="icon" href="/favicon.svg" />
+
+    <style is:global>
+      /* =========================================================
+         RESET
+      ========================================================= */
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        background: #f4f0e7;
+      }
+
+      body {
+        margin: 0;
+        background: #f4f0e7;
+        color: #171717;
+        font-family:
+          "Helvetica Neue",
+          Helvetica,
+          Arial,
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+
+      body.menu-open {
+        overflow: hidden;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      button,
+      input,
+      textarea {
+        font: inherit;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      a {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      ::selection {
+        background: #ffe558;
+        color: #111;
+      }
+
+      /* =========================================================
+         VARIABLES
+      ========================================================= */
+
+      :root {
+        --bg: #f4f0e7;
+        --paper: #faf8f1;
+        --ink: #171717;
+        --muted: #6f6b64;
+
+        --yellow: #ffe65b;
+        --pink: #ffb6c9;
+        --blue: #9cbcff;
+        --green: #a8d7a8;
+        --purple: #c7b4ff;
+        --orange: #ffb66d;
+
+        --border: rgba(23, 23, 23, 0.17);
+
+        --container: 1500px;
+        --page-pad: clamp(20px, 4vw, 64px);
+
+        --radius-s: 16px;
+        --radius-m: 28px;
+        --radius-l: 44px;
+      }
+
+      /* =========================================================
+         UTILITIES
+      ========================================================= */
+
+      .container {
+        width: min(
+          calc(100% - (var(--page-pad) * 2)),
+          var(--container)
+        );
+        margin-inline: auto;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        margin: 0;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        background: currentColor;
+      }
+
+      .section-kicker {
+        margin: 0 0 22px;
+        color: var(--muted);
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.11em;
+        text-transform: uppercase;
+      }
+
+      .section-title {
+        max-width: 1000px;
+        margin: 0;
+        font-size: clamp(3rem, 7vw, 7.8rem);
+        font-weight: 600;
+        letter-spacing: -0.07em;
+        line-height: 0.88;
+        text-wrap: balance;
+      }
+
+      .section-copy {
+        max-width: 650px;
+        margin: 28px 0 0 auto;
+        color: #383632;
+        font-size: clamp(1.04rem, 1.5vw, 1.35rem);
+        line-height: 1.5;
+      }
+
+      /* =========================================================
+         NAV
+      ========================================================= */
+
+      .site-header {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding-top: 18px;
+        pointer-events: none;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 62px;
+        padding: 8px 10px 8px 20px;
+        border: 1px solid rgba(23, 23, 23, 0.12);
+        border-radius: 100px;
+        background: rgba(250, 248, 241, 0.86);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        pointer-events: auto;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        font-size: 0.88rem;
+        font-weight: 750;
+        letter-spacing: -0.02em;
+      }
+
+      .brand-dot {
+        width: 11px;
+        height: 11px;
+        border-radius: 100%;
+        background: var(--yellow);
+        border: 1px solid rgba(23, 23, 23, 0.22);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .nav-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 0 17px;
+        border-radius: 100px;
+        color: #292826;
+        font-size: 0.84rem;
+        transition:
+          background 160ms ease,
+          transform 160ms ease;
+      }
+
+      .nav-link:hover {
+        background: rgba(23, 23, 23, 0.07);
+      }
+
+      .nav-link.contact {
+        background: var(--ink);
+        color: white;
+      }
+
+      .nav-link.contact:hover {
+        transform: translateY(-2px);
+        background: #292929;
+      }
+
+      /* =========================================================
+         HERO
+      ========================================================= */
+
+      .hero {
+        min-height: 100svh;
+        padding-top: 135px;
+        padding-bottom: 34px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .hero-inner {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .hero-topline {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 30px;
+      }
+
+      .hero-status {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        color: #595650;
+        font-size: 0.8rem;
+      }
+
+      .status-dot {
+        position: relative;
+        width: 9px;
+        height: 9px;
+        border-radius: 100%;
+        background: #54aa67;
+      }
+
+      .status-dot::after {
+        content: "";
+        position: absolute;
+        inset: -4px;
+        border: 1px solid #54aa67;
+        border-radius: inherit;
+        opacity: 0.25;
+      }
+
+      .hero-intro {
+        max-width: 350px;
+        margin: 0;
+        color: #4c4944;
+        font-size: 0.94rem;
+        line-height: 1.5;
+      }
+
+      .hero-title {
+        margin: auto 0 0;
+        padding-top: clamp(90px, 13vh, 180px);
+      }
+
+      .hello {
+        display: block;
+        margin-bottom: 18px;
+        font-size: clamp(1rem, 1.4vw, 1.25rem);
+        font-weight: 500;
+        letter-spacing: -0.02em;
+      }
+
+      .hero-name {
+        display: block;
+        margin-left: -0.05em;
+        font-size: clamp(5rem, 14.3vw, 15.5rem);
+        font-weight: 700;
+        line-height: 0.73;
+        letter-spacing: -0.09em;
+        white-space: nowrap;
+      }
+
+      .hero-name span {
+        position: relative;
+        display: inline-block;
+      }
+
+      .hero-name span::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 2%;
+        bottom: 1%;
+        width: 97%;
+        height: 24%;
+        background: var(--yellow);
+        transform: rotate(-1.2deg);
+        border-radius: 3px;
+      }
+
+      .hero-bottom {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        align-items: end;
+        gap: 50px;
+        margin-top: 54px;
+        padding-top: 24px;
+        border-top: 1px solid var(--border);
+      }
+
+      .hero-role {
+        margin: 0;
+        font-size: clamp(1.4rem, 2.5vw, 2.8rem);
+        font-weight: 500;
+        line-height: 1.05;
+        letter-spacing: -0.045em;
+      }
+
+      .hero-description {
+        max-width: 650px;
+        margin: 0 0 0 auto;
+        color: #4c4944;
+        font-size: clamp(0.98rem, 1.25vw, 1.16rem);
+        line-height: 1.55;
+      }
+
+      /* =========================================================
+         INTRO / RECRUITER
+      ========================================================= */
+
+      .recruiter-strip {
+        margin-top: 25px;
+        padding: 22px 0;
+        background: var(--ink);
+        color: white;
+        overflow: hidden;
+      }
+
+      .marquee {
+        display: flex;
+        width: max-content;
+        animation: marquee 25s linear infinite;
+      }
+
+      .marquee-row {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+        padding-right: 35px;
+        white-space: nowrap;
+      }
+
+      .marquee-item {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+        font-size: clamp(1rem, 1.6vw, 1.45rem);
+        letter-spacing: -0.03em;
+      }
+
+      .marquee-item::after {
+        content: "✦";
+        color: var(--yellow);
+      }
+
+      @keyframes marquee {
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* =========================================================
+         ABOUT
+      ========================================================= */
+
+      .about {
+        padding: clamp(100px, 14vw, 220px) 0;
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: minmax(270px, 0.72fr) 1.3fr;
+        gap: clamp(60px, 10vw, 180px);
+        align-items: start;
+      }
+
+      .about-photo-wrap {
+        position: sticky;
+        top: 120px;
+      }
+
+      .about-photo {
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        background: var(--yellow);
+        border: 1px solid var(--border);
+      }
+
+      .about-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .about-sticker {
+        position: absolute;
+        right: -4%;
+        bottom: 8%;
+        display: grid;
+        place-items: center;
+        width: 118px;
+        height: 118px;
+        border-radius: 100%;
+        background: var(--ink);
+        color: white;
+        text-align: center;
+        font-size: 0.68rem;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        transform: rotate(9deg);
+      }
+
+      .about-copy h2 {
+        margin: 0;
+        font-size: clamp(3.1rem, 6.5vw, 7.2rem);
+        font-weight: 600;
+        line-height: 0.92;
+        letter-spacing: -0.07em;
+      }
+
+      .about-copy h2 em {
+        position: relative;
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 400;
+      }
+
+      .about-copy h2 em::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: -2%;
+        bottom: 6%;
+        width: 105%;
+        height: 22%;
+        border-radius: 3px;
+        background: var(--pink);
+        transform: rotate(-2deg);
+      }
+
+      .about-text {
+        max-width: 700px;
+        margin: 52px 0 0;
+        color: #37342f;
+        font-size: clamp(1.15rem, 1.7vw, 1.55rem);
+        line-height: 1.52;
+        letter-spacing: -0.02em;
+      }
+
+      .about-text p {
+        margin: 0 0 24px;
+      }
+
+      .about-text strong {
+        color: var(--ink);
+        font-weight: 650;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-top: 70px;
+      }
+
+      .stat {
+        min-height: 170px;
+        padding: 25px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-m);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .stat-number {
+        font-size: clamp(2.8rem, 5vw, 5.4rem);
+        font-weight: 600;
+        line-height: 0.9;
+        letter-spacing: -0.07em;
+      }
+
+      .stat-label {
+        max-width: 140px;
+        color: var(--muted);
+        font-size: 0.78rem;
+        line-height: 1.35;
+      }
+
+      /* =========================================================
+         WORK HEADER
+      ========================================================= */
+
+      .work {
+        padding: clamp(100px, 14vw, 210px) 0;
+        background: var(--paper);
+        border-radius: var(--radius-l) var(--radius-l) 0 0;
+      }
+
+      .work-header {
+        margin-bottom: clamp(70px, 9vw, 130px);
+      }
+
+      .work-intro {
+        display: grid;
+        grid-template-columns: 1fr 0.55fr;
+        align-items: end;
+        gap: 40px;
+      }
+
+      .work-count {
+        justify-self: end;
+        align-self: end;
+        margin: 0 0 8px;
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+
+      /* =========================================================
+         PROJECTS
+      ========================================================= */
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .project-card {
+        position: relative;
+        min-width: 0;
+      }
+
+      .project-card.large {
+        grid-column: span 2;
+      }
+
+      .project-card.wide {
+        grid-column: span 2;
+      }
+
+      .project-link {
+        display: block;
+      }
+
+      .project-media {
+        position: relative;
+        overflow: hidden;
+        min-height: 500px;
+        aspect-ratio: 1.15 / 1;
+        border-radius: var(--radius-m);
+        border: 1px solid rgba(23, 23, 23, 0.12);
+        background: #e5e1d8;
+      }
+
+      .project-card.large .project-media {
+        aspect-ratio: 1.9 / 1;
+        min-height: 620px;
+      }
+
+      .project-card.wide .project-media {
+        aspect-ratio: 2 / 1;
+        min-height: 560px;
+      }
+
+      .project-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 650ms cubic-bezier(0.2, 0.75, 0.2, 1);
+      }
+
+      .project-link:hover .project-media img {
+        transform: scale(1.035);
+      }
+
+      .project-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: clamp(20px, 3vw, 38px);
+        background:
+          linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.14) 0%,
+            transparent 38%,
+            rgba(0, 0, 0, 0.58) 100%
+          );
+        color: white;
+      }
+
+      .project-number {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .project-company {
+        display: inline-flex;
+        align-items: center;
+        min-height: 34px;
+        padding: 0 14px;
+        border-radius: 100px;
+        background: rgba(255, 255, 255, 0.9);
+        color: #171717;
+        font-size: 0.7rem;
+        font-weight: 700;
+        backdrop-filter: blur(8px);
+      }
+
+      .project-title {
+        max-width: 930px;
+        margin: 0;
+        font-size: clamp(2rem, 4.3vw, 5.4rem);
+        font-weight: 600;
+        line-height: 0.94;
+        letter-spacing: -0.06em;
+        text-wrap: balance;
+      }
+
+      .project-card:not(.large):not(.wide) .project-title {
+        font-size: clamp(1.8rem, 3vw, 3.6rem);
+      }
+
+      .project-arrow {
+        position: absolute;
+        right: 25px;
+        bottom: 25px;
+        display: grid;
+        place-items: center;
+        width: 52px;
+        height: 52px;
+        border-radius: 100%;
+        background: white;
+        color: #171717;
+        font-size: 1.3rem;
+        transform: translateY(10px) rotate(-45deg);
+        opacity: 0;
+        transition:
+          transform 220ms ease,
+          opacity 220ms ease;
+      }
+
+      .project-link:hover .project-arrow {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+
+      .project-meta {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        padding: 19px 5px 58px;
+      }
+
+      .project-meta-left,
+      .project-meta-right {
+        min-width: 0;
+      }
+
+      .project-category {
+        margin: 0 0 10px;
+        color: var(--muted);
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 0.055em;
+        text-transform: uppercase;
+      }
+
+      .project-description {
+        max-width: 580px;
+        margin: 0;
+        color: #393631;
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      .project-result {
+        max-width: 330px;
+        margin: 0 0 0 auto;
+        font-size: 0.92rem;
+        line-height: 1.45;
+      }
+
+      .project-role {
+        display: block;
+        margin-top: 9px;
+        color: var(--muted);
+        font-size: 0.74rem;
+      }
+
+      /* =========================================================
+         COLLAGE
+      ========================================================= */
+
+      .collage-section {
+        position: relative;
+        padding: clamp(120px, 15vw, 230px) 0;
+        background: var(--yellow);
+        overflow: hidden;
+      }
+
+      .collage-header {
+        position: relative;
+        z-index: 20;
+        display: grid;
+        grid-template-columns: 1.2fr 0.7fr;
+        gap: 60px;
+        align-items: end;
+      }
+
+      .collage-title {
+        max-width: 1000px;
+        margin: 0;
+        font-size: clamp(3.5rem, 8vw, 9rem);
+        font-weight: 600;
+        line-height: 0.84;
+        letter-spacing: -0.075em;
+      }
+
+      .collage-copy {
+        max-width: 420px;
+        justify-self: end;
+        margin: 0;
+        font-size: clamp(1rem, 1.5vw, 1.3rem);
+        line-height: 1.5;
+      }
+
+      .collage {
+        position: relative;
+        height: clamp(680px, 74vw, 1050px);
+        margin-top: clamp(70px, 9vw, 140px);
+      }
+
+      .collage-card {
+        position: absolute;
+        overflow: hidden;
+        border: clamp(6px, 0.8vw, 12px) solid #f9f6ef;
+        border-radius: 7px;
+        background: #f9f6ef;
+        box-shadow:
+          0 35px 80px rgba(25, 21, 7, 0.18),
+          0 5px 15px rgba(25, 21, 7, 0.08);
+        transition:
+          transform 400ms cubic-bezier(0.2, 0.75, 0.2, 1),
+          z-index 0ms;
+      }
+
+      .collage-card:hover {
+        z-index: 30;
+      }
+
+      .collage-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .collage-card.one {
+        z-index: 5;
+        top: 6%;
+        left: 4%;
+        width: 37%;
+        aspect-ratio: 1.4 / 1;
+        transform: rotate(-7deg);
+      }
+
+      .collage-card.one:hover {
+        transform: rotate(-3deg) scale(1.03);
+      }
+
+      .collage-card.two {
+        z-index: 7;
+        top: 1%;
+        right: 8%;
+        width: 35%;
+        aspect-ratio: 1.35 / 1;
+        transform: rotate(6deg);
+      }
+
+      .collage-card.two:hover {
+        transform: rotate(2deg) scale(1.03);
+      }
+
+      .collage-card.three {
+        z-index: 10;
+        top: 30%;
+        left: 31%;
+        width: 41%;
+        aspect-ratio: 1.35 / 1;
+        transform: rotate(-1deg);
+      }
+
+      .collage-card.three:hover {
+        transform: rotate(2deg) scale(1.03);
+      }
+
+      .collage-card.four {
+        z-index: 12;
+        bottom: 5%;
+        left: 8%;
+        width: 31%;
+        aspect-ratio: 1.25 / 1;
+        transform: rotate(7deg);
+      }
+
+      .collage-card.four:hover {
+        transform: rotate(3deg) scale(1.03);
+      }
+
+      .collage-card.five {
+        z-index: 9;
+        right: 5%;
+        bottom: 3%;
+        width: 36%;
+        aspect-ratio: 1.45 / 1;
+        transform: rotate(-8deg);
+      }
+
+      .collage-card.five:hover {
+        transform: rotate(-3deg) scale(1.03);
+      }
+
+      .collage-note {
+        position: absolute;
+        z-index: 20;
+        right: 29%;
+        bottom: 24%;
+        width: 175px;
+        padding: 18px;
+        background: #ffb6c9;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.13);
+        font-family: Georgia, serif;
+        font-size: 0.92rem;
+        line-height: 1.35;
+        transform: rotate(7deg);
+      }
+
+      /* =========================================================
+         CAPABILITIES
+      ========================================================= */
+
+      .capabilities {
+        padding: clamp(100px, 14vw, 210px) 0;
+      }
+
+      .capabilities-header {
+        display: grid;
+        grid-template-columns: 1fr 0.65fr;
+        gap: 60px;
+        align-items: end;
+        margin-bottom: 90px;
+      }
+
+      .capabilities-copy {
+        max-width: 500px;
+        justify-self: end;
+        margin: 0;
+        color: #47433e;
+        font-size: 1.05rem;
+        line-height: 1.55;
+      }
+
+      .capability-list {
+        border-top: 1px solid var(--border);
+      }
+
+      .capability {
+        display: grid;
+        grid-template-columns: 70px 1fr 0.75fr;
+        gap: 30px;
+        align-items: center;
+        min-height: 150px;
+        border-bottom: 1px solid var(--border);
+        transition: padding 180ms ease;
+      }
+
+      .capability:hover {
+        padding-left: 12px;
+      }
+
+      .capability-number {
+        color: var(--muted);
+        font-size: 0.72rem;
+        font-weight: 700;
+      }
+
+      .capability-title {
+        margin: 0;
+        font-size: clamp(1.8rem, 3.4vw, 4rem);
+        font-weight: 500;
+        letter-spacing: -0.055em;
+      }
+
+      .capability-text {
+        max-width: 430px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.94rem;
+        line-height: 1.5;
+      }
+
+      /* =========================================================
+         TOOLS
+      ========================================================= */
+
+      .tools {
+        padding: 40px 0 clamp(100px, 12vw, 180px);
+      }
+
+      .tools-box {
+        padding: clamp(30px, 5vw, 70px);
+        border-radius: var(--radius-l);
+        background: var(--ink);
+        color: white;
+      }
+
+      .tools-title {
+        margin: 0 0 50px;
+        font-size: clamp(2.5rem, 5vw, 6rem);
+        font-weight: 550;
+        line-height: 0.9;
+        letter-spacing: -0.065em;
+      }
+
+      .tool-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .tool-pill {
+        display: inline-flex;
+        align-items: center;
+        min-height: 46px;
+        padding: 0 18px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 100px;
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 0.84rem;
+      }
+
+      /* =========================================================
+         CTA
+      ========================================================= */
+
+      .contact-section {
+        padding: clamp(120px, 15vw, 230px) 0 50px;
+        background: #ffb6c9;
+      }
+
+      .contact-label {
+        margin-bottom: 35px;
+      }
+
+      .contact-title {
+        max-width: 1200px;
+        margin: 0;
+        font-size: clamp(4.5rem, 11vw, 12.5rem);
+        font-weight: 650;
+        line-height: 0.78;
+        letter-spacing: -0.09em;
+      }
+
+      .contact-title em {
+        display: block;
+        margin-left: 13%;
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 400;
+      }
+
+      .contact-bottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: end;
+        margin-top: 100px;
+        padding-top: 25px;
+        border-top: 1px solid rgba(23, 23, 23, 0.25);
+      }
+
+      .contact-copy {
+        max-width: 510px;
+        margin: 0;
+        font-size: clamp(1.1rem, 1.8vw, 1.45rem);
+        line-height: 1.45;
+      }
+
+      .contact-actions {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 13px;
+        min-height: 58px;
+        padding: 0 24px;
+        border-radius: 100px;
+        border: 1px solid var(--ink);
+        font-size: 0.88rem;
+        font-weight: 600;
+        transition:
+          transform 180ms ease,
+          background 180ms ease,
+          color 180ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-3px);
+      }
+
+      .button.primary {
+        background: var(--ink);
+        color: white;
+      }
+
+      .button.secondary:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+
+      /* =========================================================
+         FOOTER
+      ========================================================= */
+
+      .footer {
+        padding: 30px 0 0;
+        background: #ffb6c9;
+      }
+
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 28px 0;
+        border-top: 1px solid rgba(23, 23, 23, 0.2);
+        color: rgba(23, 23, 23, 0.75);
+        font-size: 0.76rem;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 25px;
+      }
+
+      .footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* =========================================================
+         REVEALS
+      ========================================================= */
+
+      [data-reveal] {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 700ms ease,
+          transform 700ms cubic-bezier(0.2, 0.75, 0.2, 1);
+      }
+
+      [data-reveal].visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* =========================================================
+         TABLET
+      ========================================================= */
+
+      @media (max-width: 1000px) {
+        .nav-link:not(.contact) {
+          display: none;
+        }
+
+        .hero-name {
+          font-size: clamp(5rem, 17vw, 10rem);
+        }
+
+        .hero-bottom,
+        .about-grid,
+        .work-intro,
+        .collage-header,
+        .capabilities-header,
+        .contact-bottom {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-description,
+        .section-copy,
+        .collage-copy,
+        .capabilities-copy {
+          margin-left: 0;
+          justify-self: start;
+        }
+
+        .about-photo-wrap {
+          position: relative;
+          top: 0;
+          max-width: 480px;
+        }
+
+        .about-photo {
+          max-width: 390px;
+        }
+
+        .about-sticker {
+          right: 10%;
+        }
+
+        .work-count {
+          justify-self: start;
+        }
+
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .project-card.large,
+        .project-card.wide {
+          grid-column: auto;
+        }
+
+        .project-card.large .project-media,
+        .project-card.wide .project-media,
+        .project-media {
+          min-height: 560px;
+          aspect-ratio: 1.1 / 1;
+        }
+
+        .project-meta {
+          grid-template-columns: 1fr;
+        }
+
+        .project-result {
+          margin-left: 0;
+        }
+
+        .capability {
+          grid-template-columns: 50px 1fr;
+          padding: 30px 0;
+        }
+
+        .capability-text {
+          grid-column: 2;
+        }
+
+        .contact-actions {
+          justify-content: flex-start;
+        }
+      }
+
+      /* =========================================================
+         MOBILE
+      ========================================================= */
+
+      @media (max-width: 700px) {
+        :root {
+          --radius-m: 20px;
+          --radius-l: 28px;
+        }
+
+        .site-header {
+          padding-top: 10px;
+        }
+
+        .nav {
+          min-height: 54px;
+          padding: 5px 6px 5px 15px;
+        }
+
+        .nav-link.contact {
+          min-height: 41px;
+          padding-inline: 15px;
+        }
+
+        .hero {
+          min-height: 93svh;
+          padding-top: 105px;
+          padding-bottom: 15px;
+        }
+
+        .hero-topline {
+          display: block;
+        }
+
+        .hero-status {
+          margin-bottom: 24px;
+        }
+
+        .hero-intro {
+          max-width: 290px;
+        }
+
+        .hero-title {
+          padding-top: 90px;
+        }
+
+        .hello {
+          margin-bottom: 13px;
+        }
+
+        .hero-name {
+          white-space: normal;
+          font-size: clamp(4.6rem, 23vw, 7.2rem);
+          line-height: 0.78;
+        }
+
+        .hero-bottom {
+          gap: 25px;
+          margin-top: 50px;
+        }
+
+        .hero-role {
+          max-width: 360px;
+        }
+
+        .about {
+          padding-top: 120px;
+        }
+
+        .about-grid {
+          gap: 75px;
+        }
+
+        .about-photo {
+          width: 78%;
+        }
+
+        .about-sticker {
+          right: 3%;
+          width: 100px;
+          height: 100px;
+          font-size: 0.6rem;
+        }
+
+        .about-text {
+          margin-top: 35px;
+        }
+
+        .stats {
+          grid-template-columns: 1fr;
+        }
+
+        .stat {
+          min-height: 125px;
+        }
+
+        .work {
+          padding-top: 110px;
+        }
+
+        .section-title {
+          font-size: clamp(3.6rem, 18vw, 6rem);
+        }
+
+        .project-media,
+        .project-card.large .project-media,
+        .project-card.wide .project-media {
+          min-height: 480px;
+          aspect-ratio: 0.86 / 1;
+        }
+
+        .project-overlay {
+          padding: 18px;
+        }
+
+        .project-number {
+          align-items: flex-start;
+        }
+
+        .project-title,
+        .project-card:not(.large):not(.wide) .project-title {
+          padding-right: 15px;
+          font-size: clamp(2.2rem, 11vw, 3.6rem);
+        }
+
+        .project-arrow {
+          display: none;
+        }
+
+        .project-meta {
+          padding-bottom: 45px;
+        }
+
+        .collage-section {
+          padding-top: 110px;
+        }
+
+        .collage-title {
+          font-size: clamp(4rem, 19vw, 6.2rem);
+        }
+
+        .collage {
+          height: 680px;
+        }
+
+        .collage-card.one {
+          top: 4%;
+          left: -3%;
+          width: 68%;
+        }
+
+        .collage-card.two {
+          top: 18%;
+          right: -5%;
+          width: 61%;
+        }
+
+        .collage-card.three {
+          top: 39%;
+          left: 11%;
+          width: 77%;
+        }
+
+        .collage-card.four {
+          bottom: 2%;
+          left: -4%;
+          width: 60%;
+        }
+
+        .collage-card.five {
+          right: -7%;
+          bottom: 7%;
+          width: 58%;
+        }
+
+        .collage-note {
+          right: 4%;
+          bottom: 29%;
+          width: 135px;
+          padding: 13px;
+          font-size: 0.76rem;
+        }
+
+        .capability {
+          grid-template-columns: 38px 1fr;
+          gap: 12px;
+        }
+
+        .capability-title {
+          font-size: clamp(1.9rem, 9vw, 3rem);
+        }
+
+        .capability-text {
+          grid-column: 2;
+        }
+
+        .tools-box {
+          border-radius: 25px;
+        }
+
+        .contact-title {
+          font-size: clamp(4.3rem, 21vw, 7rem);
+        }
+
+        .contact-title em {
+          margin-left: 0;
+        }
+
+        .contact-bottom {
+          margin-top: 70px;
+        }
+
+        .contact-actions {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .button {
+          width: 100%;
+        }
+
+        .footer-inner {
+          flex-direction: column;
+        }
+      }
+
+      /* =========================================================
+         REDUCED MOTION
+      ========================================================= */
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          animation-duration: 0.001ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.001ms !important;
+        }
+
+        [data-reveal] {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =======================================================
+         NAV
+    ======================================================== -->
+
+    <header class="site-header">
+      <nav class="nav container" aria-label="Navegación principal">
+        <a class="brand" href="#top" aria-label="Ir al inicio">
+          <span class="brand-dot"></span>
+          GREY SERRANO®
+        </a>
+
+        <div class="nav-links">
+          <a class="nav-link" href="#work">Trabajo</a>
+          <a class="nav-link" href="#about">Sobre mí</a>
+          <a class="nav-link" href="#skills">Lo que hago</a>
+
+          <a
+            class="nav-link contact"
+            href="mailto:greydemar06@gmail.com"
+          >
+            Hablemos ↗
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <!-- =====================================================
+           HERO
+      ====================================================== -->
+
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-topline">
+            <div class="hero-status">
+              <span class="status-dot"></span>
+              Marketing · Projects · Web
+            </div>
+
+            <p class="hero-intro">
+              Me muevo entre la estrategia y la ejecución:
+              organizar ideas, conectar equipos y convertirlas en
+              algo que realmente pueda salir al mundo.
+            </p>
+          </div>
+
+          <div class="hero-title">
+            <span class="hello">Hola, soy</span>
+
+            <h1 class="hero-name">
+              <span>Grey.</span>
+            </h1>
+          </div>
+
+          <div class="hero-bottom">
+            <p class="hero-role">
+              Marketing, coordinación de proyectos y experiencias web.
+            </p>
+
+            <p class="hero-description">
+              Soy comunicadora social y llevo más de cinco años
+              trabajando con contenido, operaciones, eventos,
+              proyectos digitales y equipos multidisciplinarios.
+              Me gusta esa parte del trabajo donde una buena idea
+              necesita orden para convertirse en algo real.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           MARQUEE
+      ====================================================== -->
+
+      <div
+        class="recruiter-strip"
+        aria-label="Áreas de experiencia"
+      >
+        <div class="marquee">
+          {
+            [0, 1].map(() => (
+              <div class="marquee-row" aria-hidden="true">
+                <span class="marquee-item">Marketing Strategy</span>
+                <span class="marquee-item">Project Coordination</span>
+                <span class="marquee-item">Content</span>
+                <span class="marquee-item">Web</span>
+                <span class="marquee-item">Operations</span>
+                <span class="marquee-item">Automation</span>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- =====================================================
+           ABOUT
+      ====================================================== -->
+
+      <section class="about" id="about">
+        <div class="container about-grid">
+          <div class="about-photo-wrap" data-reveal>
+            <div class="about-photo">
+              <img
+                src="/memoji.png"
+                alt="Avatar ilustrado de Greydemar Serrano"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="about-sticker">
+              strategy<br />
+              meets<br />
+              execution
+            </div>
+          </div>
+
+          <div class="about-copy">
+            <p class="section-kicker">Un poco sobre mí</p>
+
+            <h2 data-reveal>
+              Hago que las ideas
+              <em>se muevan.</em>
+            </h2>
+
+            <div class="about-text" data-reveal>
+              <p>
+                No trabajo desde una sola casilla.
+                He coordinado eventos, creado estrategias de contenido,
+                organizado operaciones, trabajado con equipos comerciales
+                y construido experiencias web.
+              </p>
+
+              <p>
+                Lo que conecta todo es bastante sencillo:
+                <strong>
+                  entender qué queremos lograr, ordenar lo necesario
+                  y hacer que ocurra.
+                </strong>
+              </p>
+
+              <p>
+                Me interesa especialmente trabajar con equipos donde
+                comunicación, creatividad y organización tienen que
+                convivir. Ahí es donde mejor trabajo.
+              </p>
+            </div>
+
+            <div class="stats">
+              <article class="stat" data-reveal>
+                <strong class="stat-number">5+</strong>
+                <span class="stat-label">
+                  años trabajando entre comunicación, marketing y proyectos
+                </span>
+              </article>
+
+              <article class="stat" data-reveal>
+                <strong class="stat-number">13+</strong>
+                <span class="stat-label">
+                  marcas y organizaciones
+                </span>
+              </article>
+
+              <article class="stat" data-reveal>
+                <strong class="stat-number">360°</strong>
+                <span class="stat-label">
+                  estrategia + coordinación + ejecución
+                </span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           WORK
+      ====================================================== -->
+
+      <section class="work" id="work">
+        <div class="container">
+          <header class="work-header">
+            <p class="section-kicker">Selected work · 2021—2026</p>
+
+            <div class="work-intro">
+              <h2 class="section-title" data-reveal>
+                Trabajo que salió del papel.
+              </h2>
+
+              <p class="work-count">
+                {projects.length} proyectos seleccionados ↓
+              </p>
+            </div>
+
+            <p class="section-copy" data-reveal>
+              Aquí no vas a encontrar mi experiencia agrupada por empresas.
+              Prefiero enseñarte qué problema tuve delante,
+              qué construí y cuál fue mi papel en cada proyecto.
+            </p>
+          </header>
+
+          <div class="projects-grid">
+            {
+              projects.map((project) => (
+                <article
+                  class:list={[
+                    "project-card",
+                    project.size,
+                  ]}
+                  data-reveal
+                >
+                  <a
+                    class="project-link"
+                    href={project.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Ver ${project.shortTitle}`}
+                  >
+                    <div class="project-media">
+                      <img
+                        src={project.image}
+                        alt={project.imageAlt}
+                        loading="lazy"
+                      />
+
+                      <div class="project-overlay">
+                        <div class="project-number">
+                          <span>Proyecto {project.number}</span>
+
+                          <span class="project-company">
+                            {project.company}
+                          </span>
+                        </div>
+
+                        <h3 class="project-title">
+                          {project.title}
+                        </h3>
+
+                        <span
+                          class="project-arrow"
+                          aria-hidden="true"
+                        >
+                          ↗
+                        </span>
+                      </div>
+                    </div>
+
+                    <div class="project-meta">
+                      <div class="project-meta-left">
+                        <p class="project-category">
+                          {project.category}
+                        </p>
+
+                        <p class="project-description">
+                          {project.description}
+                        </p>
+                      </div>
+
+                      <div class="project-meta-right">
+                        <p class="project-result">
+                          <strong>{project.result}</strong>
+
+                          <span class="project-role">
+                            Mi rol · {project.role}
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </article>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           COLLAGE
+      ====================================================== -->
+
+      <section class="collage-section">
+        <div class="container">
+          <div class="collage-header">
+            <div>
+              <p class="section-kicker">
+                Presentaciones · sistemas · ideas
+              </p>
+
+              <h2 class="collage-title" data-reveal>
+                También pienso visualmente.
+              </h2>
+            </div>
+
+            <p class="collage-copy" data-reveal>
+              Estrategias, presentaciones, dashboards, automatizaciones
+              y documentos de trabajo también forman parte del proceso.
+              No todo termina siendo una pieza para Instagram.
+            </p>
+          </div>
+
+          <div class="collage" aria-label="Collage de trabajos">
+            <figure
+              class="collage-card one"
+              data-reveal
+            >
+              <img
+                src="/metricas.png"
+                alt="Dashboard de métricas de contenido"
+                loading="lazy"
+              />
+            </figure>
+
+            <figure
+              class="collage-card two"
+              data-reveal
+            >
+              <img
+                src="/manychat.png"
+                alt="Sistema de automatización en ManyChat"
+                loading="lazy"
+              />
+            </figure>
+
+            <figure
+              class="collage-card three"
+              data-reveal
+            >
+              <img
+                src="/imagen%20trello%20dislocal%20%282%29.png"
+                alt="Tablero de coordinación de proyectos"
+                loading="lazy"
+              />
+            </figure>
+
+            <figure
+              class="collage-card four"
+              data-reveal
+            >
+              <img
+                src="/OPERA%20PMS.png"
+                alt="Sistema de operaciones y reservas"
+                loading="lazy"
+              />
+            </figure>
+
+            <figure
+              class="collage-card five"
+              data-reveal
+            >
+              <img
+                src="/landingpage%20plataforma.png"
+                alt="Diseño de la plataforma Las Minitas"
+                loading="lazy"
+              />
+            </figure>
+
+            <div class="collage-note" aria-hidden="true">
+              Una buena idea es bonita.
+              <br /><br />
+              Una buena idea que además funciona
+              es mucho mejor. :)
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           CAPABILITIES
+      ====================================================== -->
+
+      <section class="capabilities" id="skills">
+        <div class="container">
+          <header class="capabilities-header">
+            <div>
+              <p class="section-kicker">Lo que hago</p>
+
+              <h2 class="section-title" data-reveal>
+                Cuatro áreas.<br />
+                Una misma cabeza.
+              </h2>
+            </div>
+
+            <p class="capabilities-copy" data-reveal>
+              No intento hacer de todo. Estas son las áreas que aparecen
+              una y otra vez en mi trabajo y donde puedo aportar
+              desde el primer día.
+            </p>
+          </header>
+
+          <div class="capability-list">
+            {
+              capabilities.map((item) => (
+                <article class="capability" data-reveal>
+                  <span class="capability-number">
+                    {item.number}
+                  </span>
+
+                  <h3 class="capability-title">
+                    {item.title}
+                  </h3>
+
+                  <p class="capability-text">
+                    {item.text}
+                  </p>
+                </article>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           TOOLS
+      ====================================================== -->
+
+      <section class="tools">
+        <div class="container">
+          <div class="tools-box" data-reveal>
+            <p class="section-kicker">
+              Algunas herramientas
+            </p>
+
+            <h2 class="tools-title">
+              Las herramientas cambian.<br />
+              Saber resolver no.
+            </h2>
+
+            <div class="tool-pills">
+              {
+                tools.map((tool) => (
+                  <span class="tool-pill">
+                    {tool}
+                  </span>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           CONTACT
+      ====================================================== -->
+
+      <section class="contact-section" id="contact">
+        <div class="container">
+          <p class="section-kicker contact-label">
+            ¿Trabajamos juntos?
+          </p>
+
+          <h2 class="contact-title" data-reveal>
+            Hagamos algo
+            <em>que funcione.</em>
+          </h2>
+
+          <div class="contact-bottom">
+            <p class="contact-copy" data-reveal>
+              Si estás buscando a alguien que pueda moverse
+              entre estrategia, organización y ejecución,
+              me encantará conocer qué están construyendo.
+            </p>
+
+            <div class="contact-actions" data-reveal>
+              <a
+                class="button primary"
+                href="mailto:greydemar06@gmail.com?subject=Hola%20Grey%20—%20Vi%20tu%20portfolio"
+              >
+                Escríbeme
+                <span aria-hidden="true">↗</span>
+              </a>
+
+              <a
+                class="button secondary"
+                href="#work"
+              >
+                Volver al trabajo ↑
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =======================================================
+         FOOTER
+    ======================================================== -->
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <span>
+          © {currentYear} Greydemar Serrano
+        </span>
+
+        <div class="footer-links">
+          <a href="mailto:greydemar06@gmail.com">
+            Email
+          </a>
+
+          <a href="#top">
+            Volver arriba ↑
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =======================================================
+         JS
+    ======================================================== -->
+
+    <script>
+      const revealElements =
+        document.querySelectorAll("[data-reveal]");
+
+      if (
+        "IntersectionObserver" in window &&
+        !window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches
+      ) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: "0px 0px -60px 0px",
+          }
+        );
+
+        revealElements.forEach((element) => {
+          observer.observe(element);
+        });
+      } else {
+        revealElements.forEach((element) => {
+          element.classList.add("visible");
+        });
+      }
+    </script>
+  </body>
+</html>
