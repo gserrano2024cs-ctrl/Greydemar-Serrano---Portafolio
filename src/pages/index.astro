@@ -1,2284 +1,1467 @@
----
-/**
- * GREY SERRANO — PORTFOLIO
- * Home pensada para recruiters.
- *
- * La lógica cambia de:
- * EMPRESA → todo lo que hice ahí
- *
- * a:
- * PROYECTO → problema / trabajo / resultado → empresa
- *
- * Todas las imágenes utilizadas aquí ya aparecen
- * actualmente publicadas en tu portfolio.
- */
-
-const currentYear = new Date().getFullYear();
-
-const projects = [
-  {
-    number: "01",
-    title: "Estrategia de contenido que aumentó las interacciones +604%",
-    shortTitle: "Growth orgánico +604%",
-    company: "YP Realty",
-    category: "Social Media · Video · SEO",
-    description:
-      "Estrategia, guiones, edición de video y optimización de contenido orgánico para una marca inmobiliaria en Puerto Rico.",
-    result: "+604.5% en interacciones de contenido",
-    role: "Social Media Manager & Video Editor",
-    image: "/metricas.png",
-    imageAlt: "Resultados de rendimiento de contenido para YP Realty",
-    size: "large",
-    theme: "yellow",
-    href: "https://yprealty.com",
-  },
-
-  {
-    number: "02",
-    title: "Automatización de atención y comunicación",
-    shortTitle: "Automatización con ManyChat",
-    company: "Editorial PanHouse",
-    category: "Automation · CRM · Comunicación",
-    description:
-      "Diseñé un flujo automatizado para agilizar respuestas, organizar conversaciones y hacer más consistente la comunicación con la audiencia.",
-    result: "Menos fricción en atención y seguimiento",
-    role: "Coordinación de Comunicaciones",
-    image: "/manychat.png",
-    imageAlt: "Flujo de automatización desarrollado con ManyChat",
-    size: "medium",
-    theme: "blue",
-    href: "https://editorialpanhouse.com",
-  },
-
-  {
-    number: "03",
-    title: "Producción y coordinación de un evento VIP",
-    shortTitle: "Evento VIP",
-    company: "Editorial PanHouse",
-    category: "Events · Production · Operations",
-    description:
-      "Coordiné la ejecución operativa y comunicación entre equipos para una experiencia presencial con autores, invitados y aliados.",
-    result: "Coordinación de equipos, invitados y operación",
-    role: "Coordinación de Comunicaciones",
-    image: "/evento%20ph.png",
-    imageAlt: "Equipo e invitados durante evento de Editorial PanHouse",
-    size: "medium",
-    theme: "cream",
-    href: "https://editorialpanhouse.com",
-  },
-
-  {
-    number: "04",
-    title: "Cobertura de la Feria Internacional del Libro",
-    shortTitle: "FIL Guadalajara",
-    company: "Editorial PanHouse",
-    category: "Content · Communications · Events",
-    description:
-      "Participé en la cobertura y coordinación de comunicaciones alrededor de la presencia editorial en la Feria Internacional del Libro de Guadalajara.",
-    result: "Comunicación de marca en un evento internacional",
-    role: "Coordinación de Comunicaciones",
-    image: "/portada-panhouse.png",
-    imageAlt: "Trabajo realizado con Editorial PanHouse",
-    size: "wide",
-    theme: "black",
-    href: "https://editorialpanhouse.com",
-  },
-
-  {
-    number: "05",
-    title: "Operación B2B entre siete departamentos",
-    shortTitle: "Operación B2B",
-    company: "Eurobuilding",
-    category: "Operations · B2B · Customer Experience",
-    description:
-      "Gestioné reservas, ventas corporativas y comunicaciones internas conectando áreas como Ventas, Room Service, Ama de Llaves y Experiencias.",
-    result: "Coordinación transversal entre 7 departamentos",
-    role: "Coordinadora B2B & Business Center",
-    image: "/equipo%20euro.png",
-    imageAlt: "Equipo de trabajo del Hotel Eurobuilding",
-    size: "medium",
-    theme: "pink",
-    href: "https://eurobuilding.com.ve",
-  },
-
-  {
-    number: "06",
-    title: "Planificación de proyectos y operaciones con Trello",
-    shortTitle: "Sistemas de trabajo",
-    company: "Dislocal",
-    category: "Project Management · Agile · Operations",
-    description:
-      "Organicé tareas, responsables, tiempos y recursos en sistemas visuales de trabajo para mantener alineados a equipos y entregables.",
-    result: "Procesos visibles y responsabilidades claras",
-    role: "Project Coordinator",
-    image: "/imagen%20trello%20dislocal%20%282%29.png",
-    imageAlt: "Sistema de coordinación de proyectos desarrollado en Trello",
-    size: "medium",
-    theme: "green",
-    href: "https://www.dislocal.org",
-  },
-
-  {
-    number: "07",
-    title: "Producción del proyecto comunitario El Calvario",
-    shortTitle: "Proyecto El Calvario",
-    company: "Dislocal",
-    category: "Production · Logistics · Social Impact",
-    description:
-      "Coordiné logística, cronogramas y ejecución en terreno junto a equipos multidisciplinarios para una iniciativa de impacto comunitario.",
-    result: "Planificación + ejecución en campo",
-    role: "Production Manager & Project Coordinator",
-    image: "/dislocal%201.png",
-    imageAlt: "Actividad comunitaria del proyecto Dislocal",
-    size: "medium",
-    theme: "cream",
-    href: "https://www.dislocal.org",
-  },
-
-  {
-    number: "08",
-    title: "Una landing para coordinar voluntarios en campo",
-    shortTitle: "Plataforma Las Minitas",
-    company: "Impaktemos",
-    category: "Web · Operations · Coordination",
-    description:
-      "Diseñé y desarrollé una experiencia web para ordenar horarios, tareas y flujo de voluntarios durante una jornada comunitaria.",
-    result: "Información operativa centralizada en una sola experiencia",
-    role: "Coordinación Operativa & Web",
-    image: "/landingpage%20plataforma.png",
-    imageAlt: "Landing page para la Plataforma Las Minitas",
-    size: "large",
-    theme: "purple",
-    href: "https://minitas-mission-guide.lovable.app",
-  },
-
-  {
-    number: "09",
-    title: "Web personal para una marca profesional",
-    shortTitle: "Web · Laura Navarro",
-    company: "Freelance",
-    category: "Web Design · Development",
-    description:
-      "Diseño y desarrollo de una presencia digital enfocada en presentar con claridad la marca, trayectoria y propuesta profesional.",
-    result: "Diseño + desarrollo web",
-    role: "Web Designer & Developer",
-    image: "/portada%20freelance.png",
-    imageAlt: "Proyecto de diseño y desarrollo web freelance",
-    size: "medium",
-    theme: "orange",
-    href: "https://gserrano2024cs-ctrl.github.io",
-  },
-
-  {
-    number: "10",
-    title: "Archivo digital y storytelling para Beatriz Briceño-Picón",
-    shortTitle: "Web · Beatriz Briceño-Picón",
-    company: "Freelance",
-    category: "Web Design · Storytelling · Development",
-    description:
-      "Transformé una historia personal y profesional en una experiencia web que organiza recuerdos, textos y legado de forma clara y cercana.",
-    result: "Narrativa digital + experiencia web",
-    role: "Web Designer & Developer",
-    image: "/portada%20freelance.png",
-    imageAlt: "Sitio web desarrollado para Beatriz Briceño-Picón",
-    size: "wide",
-    theme: "black",
-    href: "https://beatriz-brice-o-pic-n.vercel.app",
-  },
-
-  {
-    number: "11",
-    title: "Sitio editorial para Mario Briceño Iragorry",
-    shortTitle: "Web · Mario Briceño Iragorry",
-    company: "Freelance",
-    category: "Editorial Web · UX · Development",
-    description:
-      "Diseño y desarrollo web orientado a organizar contenido histórico y editorial dentro de una navegación accesible y contemporánea.",
-    result: "Contenido histórico llevado a una experiencia digital",
-    role: "Web Designer & Developer",
-    image: "/portada%20freelance.png",
-    imageAlt: "Proyecto web desarrollado para Mario Briceño Iragorry",
-    size: "medium",
-    theme: "yellow",
-    href: "https://mbihoy.vercel.app",
-  },
-];
-
-const capabilities = [
-  {
-    number: "01",
-    title: "Marketing & Content",
-    text: "Estrategia de contenido, copy, video, SEO y análisis de rendimiento.",
-  },
-  {
-    number: "02",
-    title: "Project Coordination",
-    text: "Cronogramas, equipos, logística, eventos, procesos y ejecución.",
-  },
-  {
-    number: "03",
-    title: "Web",
-    text: "Landing pages y sitios rápidos construidos con Astro, HTML y CSS.",
-  },
-  {
-    number: "04",
-    title: "CRM & Automation",
-    text: "Sistemas de seguimiento, organización comercial y automatización.",
-  },
-];
-
-const tools = [
-  "Astro",
-  "HTML + CSS",
-  "JavaScript",
-  "GitHub",
-  "GA4",
-  "Meta Business Suite",
-  "ManyChat",
-  "Salesforce",
-  "Zoho CRM",
-  "Trello",
-  "Asana",
-  "Figma",
-  "Canva",
-];
----
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
-
-    <meta
-      name="description"
-      content="Portfolio de Greydemar Serrano. Marketing, coordinación de proyectos, contenido y desarrollo web."
-    />
-
-    <meta
-      name="keywords"
-      content="Greydemar Serrano, Grey Serrano, marketing, project manager, portfolio, Astro, web design, content"
-    />
-
-    <meta name="author" content="Greydemar Serrano" />
-
-    <meta name="theme-color" content="#f4f0e7" />
-
-    <meta property="og:title" content="Grey Serrano — Portfolio" />
-
-    <meta
-      property="og:description"
-      content="Marketing, coordinación de proyectos, contenido y experiencias web."
-    />
-
-    <meta property="og:type" content="website" />
-
-    <meta
-      property="og:url"
-      content="https://portafolio-greydemar.vercel.app/"
-    />
-
-    <title>Grey Serrano — Marketing, Projects & Web</title>
-
-    <link rel="icon" href="/favicon.svg" />
-
-    <style is:global>
-      /* =========================================================
-         RESET
-      ========================================================= */
-
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-        background: #f4f0e7;
-      }
-
-      body {
-        margin: 0;
-        background: #f4f0e7;
-        color: #171717;
-        font-family:
-          "Helvetica Neue",
-          Helvetica,
-          Arial,
-          sans-serif;
-        -webkit-font-smoothing: antialiased;
-        overflow-x: hidden;
-      }
-
-      body.menu-open {
-        overflow: hidden;
-      }
-
-      img {
-        display: block;
-        width: 100%;
-        max-width: 100%;
-      }
-
-      button,
-      input,
-      textarea {
-        font: inherit;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      button,
-      a {
-        -webkit-tap-highlight-color: transparent;
-      }
-
-      ::selection {
-        background: #ffe558;
-        color: #111;
-      }
-
-      /* =========================================================
-         VARIABLES
-      ========================================================= */
-
-      :root {
-        --bg: #f4f0e7;
-        --paper: #faf8f1;
-        --ink: #171717;
-        --muted: #6f6b64;
-
-        --yellow: #ffe65b;
-        --pink: #ffb6c9;
-        --blue: #9cbcff;
-        --green: #a8d7a8;
-        --purple: #c7b4ff;
-        --orange: #ffb66d;
-
-        --border: rgba(23, 23, 23, 0.17);
-
-        --container: 1500px;
-        --page-pad: clamp(20px, 4vw, 64px);
-
-        --radius-s: 16px;
-        --radius-m: 28px;
-        --radius-l: 44px;
-      }
-
-      /* =========================================================
-         UTILITIES
-      ========================================================= */
-
-      .container {
-        width: min(
-          calc(100% - (var(--page-pad) * 2)),
-          var(--container)
-        );
-        margin-inline: auto;
-      }
-
-      .eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 9px;
-        margin: 0;
-        font-size: 0.76rem;
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-      }
-
-      .eyebrow::before {
-        content: "";
-        width: 8px;
-        height: 8px;
-        border-radius: 100%;
-        background: currentColor;
-      }
-
-      .section-kicker {
-        margin: 0 0 22px;
-        color: var(--muted);
-        font-size: 0.76rem;
-        font-weight: 700;
-        letter-spacing: 0.11em;
-        text-transform: uppercase;
-      }
-
-      .section-title {
-        max-width: 1000px;
-        margin: 0;
-        font-size: clamp(3rem, 7vw, 7.8rem);
-        font-weight: 600;
-        letter-spacing: -0.07em;
-        line-height: 0.88;
-        text-wrap: balance;
-      }
-
-      .section-copy {
-        max-width: 650px;
-        margin: 28px 0 0 auto;
-        color: #383632;
-        font-size: clamp(1.04rem, 1.5vw, 1.35rem);
-        line-height: 1.5;
-      }
-
-      /* =========================================================
-         NAV
-      ========================================================= */
-
-      .site-header {
-        position: fixed;
-        z-index: 100;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding-top: 18px;
-        pointer-events: none;
-      }
-
-      .nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        min-height: 62px;
-        padding: 8px 10px 8px 20px;
-        border: 1px solid rgba(23, 23, 23, 0.12);
-        border-radius: 100px;
-        background: rgba(250, 248, 241, 0.86);
-        backdrop-filter: blur(18px);
-        -webkit-backdrop-filter: blur(18px);
-        pointer-events: auto;
-      }
-
-      .brand {
-        display: flex;
-        align-items: center;
-        gap: 11px;
-        font-size: 0.88rem;
-        font-weight: 750;
-        letter-spacing: -0.02em;
-      }
-
-      .brand-dot {
-        width: 11px;
-        height: 11px;
-        border-radius: 100%;
-        background: var(--yellow);
-        border: 1px solid rgba(23, 23, 23, 0.22);
-      }
-
-      .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-      }
-
-      .nav-link {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 42px;
-        padding: 0 17px;
-        border-radius: 100px;
-        color: #292826;
-        font-size: 0.84rem;
-        transition:
-          background 160ms ease,
-          transform 160ms ease;
-      }
-
-      .nav-link:hover {
-        background: rgba(23, 23, 23, 0.07);
-      }
-
-      .nav-link.contact {
-        background: var(--ink);
-        color: white;
-      }
-
-      .nav-link.contact:hover {
-        transform: translateY(-2px);
-        background: #292929;
-      }
-
-      /* =========================================================
-         HERO
-      ========================================================= */
-
-      .hero {
-        min-height: 100svh;
-        padding-top: 135px;
-        padding-bottom: 34px;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .hero-inner {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .hero-topline {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 30px;
-      }
-
-      .hero-status {
-        display: flex;
-        align-items: center;
-        gap: 9px;
-        color: #595650;
-        font-size: 0.8rem;
-      }
-
-      .status-dot {
-        position: relative;
-        width: 9px;
-        height: 9px;
-        border-radius: 100%;
-        background: #54aa67;
-      }
-
-      .status-dot::after {
-        content: "";
-        position: absolute;
-        inset: -4px;
-        border: 1px solid #54aa67;
-        border-radius: inherit;
-        opacity: 0.25;
-      }
-
-      .hero-intro {
-        max-width: 350px;
-        margin: 0;
-        color: #4c4944;
-        font-size: 0.94rem;
-        line-height: 1.5;
-      }
-
-      .hero-title {
-        margin: auto 0 0;
-        padding-top: clamp(90px, 13vh, 180px);
-      }
-
-      .hello {
-        display: block;
-        margin-bottom: 18px;
-        font-size: clamp(1rem, 1.4vw, 1.25rem);
-        font-weight: 500;
-        letter-spacing: -0.02em;
-      }
-
-      .hero-name {
-        display: block;
-        margin-left: -0.05em;
-        font-size: clamp(5rem, 14.3vw, 15.5rem);
-        font-weight: 700;
-        line-height: 0.73;
-        letter-spacing: -0.09em;
-        white-space: nowrap;
-      }
-
-      .hero-name span {
-        position: relative;
-        display: inline-block;
-      }
-
-      .hero-name span::after {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        left: 2%;
-        bottom: 1%;
-        width: 97%;
-        height: 24%;
-        background: var(--yellow);
-        transform: rotate(-1.2deg);
-        border-radius: 3px;
-      }
-
-      .hero-bottom {
-        display: grid;
-        grid-template-columns: 1.1fr 1fr;
-        align-items: end;
-        gap: 50px;
-        margin-top: 54px;
-        padding-top: 24px;
-        border-top: 1px solid var(--border);
-      }
-
-      .hero-role {
-        margin: 0;
-        font-size: clamp(1.4rem, 2.5vw, 2.8rem);
-        font-weight: 500;
-        line-height: 1.05;
-        letter-spacing: -0.045em;
-      }
-
-      .hero-description {
-        max-width: 650px;
-        margin: 0 0 0 auto;
-        color: #4c4944;
-        font-size: clamp(0.98rem, 1.25vw, 1.16rem);
-        line-height: 1.55;
-      }
-
-      /* =========================================================
-         INTRO / RECRUITER
-      ========================================================= */
-
-      .recruiter-strip {
-        margin-top: 25px;
-        padding: 22px 0;
-        background: var(--ink);
-        color: white;
-        overflow: hidden;
-      }
-
-      .marquee {
-        display: flex;
-        width: max-content;
-        animation: marquee 25s linear infinite;
-      }
-
-      .marquee-row {
-        display: flex;
-        align-items: center;
-        gap: 35px;
-        padding-right: 35px;
-        white-space: nowrap;
-      }
-
-      .marquee-item {
-        display: flex;
-        align-items: center;
-        gap: 35px;
-        font-size: clamp(1rem, 1.6vw, 1.45rem);
-        letter-spacing: -0.03em;
-      }
-
-      .marquee-item::after {
-        content: "✦";
-        color: var(--yellow);
-      }
-
-      @keyframes marquee {
-        to {
-          transform: translateX(-50%);
-        }
-      }
-
-      /* =========================================================
-         ABOUT
-      ========================================================= */
-
-      .about {
-        padding: clamp(100px, 14vw, 220px) 0;
-      }
-
-      .about-grid {
-        display: grid;
-        grid-template-columns: minmax(270px, 0.72fr) 1.3fr;
-        gap: clamp(60px, 10vw, 180px);
-        align-items: start;
-      }
-
-      .about-photo-wrap {
-        position: sticky;
-        top: 120px;
-      }
-
-      .about-photo {
-        position: relative;
-        overflow: hidden;
-        aspect-ratio: 1 / 1;
-        border-radius: 50%;
-        background: var(--yellow);
-        border: 1px solid var(--border);
-      }
-
-      .about-photo img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .about-sticker {
-        position: absolute;
-        right: -4%;
-        bottom: 8%;
-        display: grid;
-        place-items: center;
-        width: 118px;
-        height: 118px;
-        border-radius: 100%;
-        background: var(--ink);
-        color: white;
-        text-align: center;
-        font-size: 0.68rem;
-        font-weight: 700;
-        line-height: 1.2;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        transform: rotate(9deg);
-      }
-
-      .about-copy h2 {
-        margin: 0;
-        font-size: clamp(3.1rem, 6.5vw, 7.2rem);
-        font-weight: 600;
-        line-height: 0.92;
-        letter-spacing: -0.07em;
-      }
-
-      .about-copy h2 em {
-        position: relative;
-        font-family: Georgia, "Times New Roman", serif;
-        font-weight: 400;
-      }
-
-      .about-copy h2 em::after {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        left: -2%;
-        bottom: 6%;
-        width: 105%;
-        height: 22%;
-        border-radius: 3px;
-        background: var(--pink);
-        transform: rotate(-2deg);
-      }
-
-      .about-text {
-        max-width: 700px;
-        margin: 52px 0 0;
-        color: #37342f;
-        font-size: clamp(1.15rem, 1.7vw, 1.55rem);
-        line-height: 1.52;
-        letter-spacing: -0.02em;
-      }
-
-      .about-text p {
-        margin: 0 0 24px;
-      }
-
-      .about-text strong {
-        color: var(--ink);
-        font-weight: 650;
-      }
-
-      .stats {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
-        margin-top: 70px;
-      }
-
-      .stat {
-        min-height: 170px;
-        padding: 25px;
-        border: 1px solid var(--border);
-        border-radius: var(--radius-m);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-
-      .stat-number {
-        font-size: clamp(2.8rem, 5vw, 5.4rem);
-        font-weight: 600;
-        line-height: 0.9;
-        letter-spacing: -0.07em;
-      }
-
-      .stat-label {
-        max-width: 140px;
-        color: var(--muted);
-        font-size: 0.78rem;
-        line-height: 1.35;
-      }
-
-      /* =========================================================
-         WORK HEADER
-      ========================================================= */
-
-      .work {
-        padding: clamp(100px, 14vw, 210px) 0;
-        background: var(--paper);
-        border-radius: var(--radius-l) var(--radius-l) 0 0;
-      }
-
-      .work-header {
-        margin-bottom: clamp(70px, 9vw, 130px);
-      }
-
-      .work-intro {
-        display: grid;
-        grid-template-columns: 1fr 0.55fr;
-        align-items: end;
-        gap: 40px;
-      }
-
-      .work-count {
-        justify-self: end;
-        align-self: end;
-        margin: 0 0 8px;
-        color: var(--muted);
-        font-size: 0.82rem;
-      }
-
-      /* =========================================================
-         PROJECTS
-      ========================================================= */
-
-      .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 18px;
-      }
-
-      .project-card {
-        position: relative;
-        min-width: 0;
-      }
-
-      .project-card.large {
-        grid-column: span 2;
-      }
-
-      .project-card.wide {
-        grid-column: span 2;
-      }
-
-      .project-link {
-        display: block;
-      }
-
-      .project-media {
-        position: relative;
-        overflow: hidden;
-        min-height: 500px;
-        aspect-ratio: 1.15 / 1;
-        border-radius: var(--radius-m);
-        border: 1px solid rgba(23, 23, 23, 0.12);
-        background: #e5e1d8;
-      }
-
-      .project-card.large .project-media {
-        aspect-ratio: 1.9 / 1;
-        min-height: 620px;
-      }
-
-      .project-card.wide .project-media {
-        aspect-ratio: 2 / 1;
-        min-height: 560px;
-      }
-
-      .project-media img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 650ms cubic-bezier(0.2, 0.75, 0.2, 1);
-      }
-
-      .project-link:hover .project-media img {
-        transform: scale(1.035);
-      }
-
-      .project-overlay {
-        position: absolute;
-        inset: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: clamp(20px, 3vw, 38px);
-        background:
-          linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.14) 0%,
-            transparent 38%,
-            rgba(0, 0, 0, 0.58) 100%
-          );
-        color: white;
-      }
-
-      .project-number {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-        font-size: 0.76rem;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      .project-company {
-        display: inline-flex;
-        align-items: center;
-        min-height: 34px;
-        padding: 0 14px;
-        border-radius: 100px;
-        background: rgba(255, 255, 255, 0.9);
-        color: #171717;
-        font-size: 0.7rem;
-        font-weight: 700;
-        backdrop-filter: blur(8px);
-      }
-
-      .project-title {
-        max-width: 930px;
-        margin: 0;
-        font-size: clamp(2rem, 4.3vw, 5.4rem);
-        font-weight: 600;
-        line-height: 0.94;
-        letter-spacing: -0.06em;
-        text-wrap: balance;
-      }
-
-      .project-card:not(.large):not(.wide) .project-title {
-        font-size: clamp(1.8rem, 3vw, 3.6rem);
-      }
-
-      .project-arrow {
-        position: absolute;
-        right: 25px;
-        bottom: 25px;
-        display: grid;
-        place-items: center;
-        width: 52px;
-        height: 52px;
-        border-radius: 100%;
-        background: white;
-        color: #171717;
-        font-size: 1.3rem;
-        transform: translateY(10px) rotate(-45deg);
-        opacity: 0;
-        transition:
-          transform 220ms ease,
-          opacity 220ms ease;
-      }
-
-      .project-link:hover .project-arrow {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-      }
-
-      .project-meta {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 25px;
-        padding: 19px 5px 58px;
-      }
-
-      .project-meta-left,
-      .project-meta-right {
-        min-width: 0;
-      }
-
-      .project-category {
-        margin: 0 0 10px;
-        color: var(--muted);
-        font-size: 0.74rem;
-        font-weight: 700;
-        letter-spacing: 0.055em;
-        text-transform: uppercase;
-      }
-
-      .project-description {
-        max-width: 580px;
-        margin: 0;
-        color: #393631;
-        font-size: 0.95rem;
-        line-height: 1.5;
-      }
-
-      .project-result {
-        max-width: 330px;
-        margin: 0 0 0 auto;
-        font-size: 0.92rem;
-        line-height: 1.45;
-      }
-
-      .project-role {
-        display: block;
-        margin-top: 9px;
-        color: var(--muted);
-        font-size: 0.74rem;
-      }
-
-      /* =========================================================
-         COLLAGE
-      ========================================================= */
-
-      .collage-section {
-        position: relative;
-        padding: clamp(120px, 15vw, 230px) 0;
-        background: var(--yellow);
-        overflow: hidden;
-      }
-
-      .collage-header {
-        position: relative;
-        z-index: 20;
-        display: grid;
-        grid-template-columns: 1.2fr 0.7fr;
-        gap: 60px;
-        align-items: end;
-      }
-
-      .collage-title {
-        max-width: 1000px;
-        margin: 0;
-        font-size: clamp(3.5rem, 8vw, 9rem);
-        font-weight: 600;
-        line-height: 0.84;
-        letter-spacing: -0.075em;
-      }
-
-      .collage-copy {
-        max-width: 420px;
-        justify-self: end;
-        margin: 0;
-        font-size: clamp(1rem, 1.5vw, 1.3rem);
-        line-height: 1.5;
-      }
-
-      .collage {
-        position: relative;
-        height: clamp(680px, 74vw, 1050px);
-        margin-top: clamp(70px, 9vw, 140px);
-      }
-
-      .collage-card {
-        position: absolute;
-        overflow: hidden;
-        border: clamp(6px, 0.8vw, 12px) solid #f9f6ef;
-        border-radius: 7px;
-        background: #f9f6ef;
-        box-shadow:
-          0 35px 80px rgba(25, 21, 7, 0.18),
-          0 5px 15px rgba(25, 21, 7, 0.08);
-        transition:
-          transform 400ms cubic-bezier(0.2, 0.75, 0.2, 1),
-          z-index 0ms;
-      }
-
-      .collage-card:hover {
-        z-index: 30;
-      }
-
-      .collage-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .collage-card.one {
-        z-index: 5;
-        top: 6%;
-        left: 4%;
-        width: 37%;
-        aspect-ratio: 1.4 / 1;
-        transform: rotate(-7deg);
-      }
-
-      .collage-card.one:hover {
-        transform: rotate(-3deg) scale(1.03);
-      }
-
-      .collage-card.two {
-        z-index: 7;
-        top: 1%;
-        right: 8%;
-        width: 35%;
-        aspect-ratio: 1.35 / 1;
-        transform: rotate(6deg);
-      }
-
-      .collage-card.two:hover {
-        transform: rotate(2deg) scale(1.03);
-      }
-
-      .collage-card.three {
-        z-index: 10;
-        top: 30%;
-        left: 31%;
-        width: 41%;
-        aspect-ratio: 1.35 / 1;
-        transform: rotate(-1deg);
-      }
-
-      .collage-card.three:hover {
-        transform: rotate(2deg) scale(1.03);
-      }
-
-      .collage-card.four {
-        z-index: 12;
-        bottom: 5%;
-        left: 8%;
-        width: 31%;
-        aspect-ratio: 1.25 / 1;
-        transform: rotate(7deg);
-      }
-
-      .collage-card.four:hover {
-        transform: rotate(3deg) scale(1.03);
-      }
-
-      .collage-card.five {
-        z-index: 9;
-        right: 5%;
-        bottom: 3%;
-        width: 36%;
-        aspect-ratio: 1.45 / 1;
-        transform: rotate(-8deg);
-      }
-
-      .collage-card.five:hover {
-        transform: rotate(-3deg) scale(1.03);
-      }
-
-      .collage-note {
-        position: absolute;
-        z-index: 20;
-        right: 29%;
-        bottom: 24%;
-        width: 175px;
-        padding: 18px;
-        background: #ffb6c9;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.13);
-        font-family: Georgia, serif;
-        font-size: 0.92rem;
-        line-height: 1.35;
-        transform: rotate(7deg);
-      }
-
-      /* =========================================================
-         CAPABILITIES
-      ========================================================= */
-
-      .capabilities {
-        padding: clamp(100px, 14vw, 210px) 0;
-      }
-
-      .capabilities-header {
-        display: grid;
-        grid-template-columns: 1fr 0.65fr;
-        gap: 60px;
-        align-items: end;
-        margin-bottom: 90px;
-      }
-
-      .capabilities-copy {
-        max-width: 500px;
-        justify-self: end;
-        margin: 0;
-        color: #47433e;
-        font-size: 1.05rem;
-        line-height: 1.55;
-      }
-
-      .capability-list {
-        border-top: 1px solid var(--border);
-      }
-
-      .capability {
-        display: grid;
-        grid-template-columns: 70px 1fr 0.75fr;
-        gap: 30px;
-        align-items: center;
-        min-height: 150px;
-        border-bottom: 1px solid var(--border);
-        transition: padding 180ms ease;
-      }
-
-      .capability:hover {
-        padding-left: 12px;
-      }
-
-      .capability-number {
-        color: var(--muted);
-        font-size: 0.72rem;
-        font-weight: 700;
-      }
-
-      .capability-title {
-        margin: 0;
-        font-size: clamp(1.8rem, 3.4vw, 4rem);
-        font-weight: 500;
-        letter-spacing: -0.055em;
-      }
-
-      .capability-text {
-        max-width: 430px;
-        margin: 0;
-        color: var(--muted);
-        font-size: 0.94rem;
-        line-height: 1.5;
-      }
-
-      /* =========================================================
-         TOOLS
-      ========================================================= */
-
-      .tools {
-        padding: 40px 0 clamp(100px, 12vw, 180px);
-      }
-
-      .tools-box {
-        padding: clamp(30px, 5vw, 70px);
-        border-radius: var(--radius-l);
-        background: var(--ink);
-        color: white;
-      }
-
-      .tools-title {
-        margin: 0 0 50px;
-        font-size: clamp(2.5rem, 5vw, 6rem);
-        font-weight: 550;
-        line-height: 0.9;
-        letter-spacing: -0.065em;
-      }
-
-      .tool-pills {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-
-      .tool-pill {
-        display: inline-flex;
-        align-items: center;
-        min-height: 46px;
-        padding: 0 18px;
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        border-radius: 100px;
-        color: rgba(255, 255, 255, 0.88);
-        font-size: 0.84rem;
-      }
-
-      /* =========================================================
-         CTA
-      ========================================================= */
-
-      .contact-section {
-        padding: clamp(120px, 15vw, 230px) 0 50px;
-        background: #ffb6c9;
-      }
-
-      .contact-label {
-        margin-bottom: 35px;
-      }
-
-      .contact-title {
-        max-width: 1200px;
-        margin: 0;
-        font-size: clamp(4.5rem, 11vw, 12.5rem);
-        font-weight: 650;
-        line-height: 0.78;
-        letter-spacing: -0.09em;
-      }
-
-      .contact-title em {
-        display: block;
-        margin-left: 13%;
-        font-family: Georgia, "Times New Roman", serif;
-        font-weight: 400;
-      }
-
-      .contact-bottom {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 50px;
-        align-items: end;
-        margin-top: 100px;
-        padding-top: 25px;
-        border-top: 1px solid rgba(23, 23, 23, 0.25);
-      }
-
-      .contact-copy {
-        max-width: 510px;
-        margin: 0;
-        font-size: clamp(1.1rem, 1.8vw, 1.45rem);
-        line-height: 1.45;
-      }
-
-      .contact-actions {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 10px;
-        flex-wrap: wrap;
-      }
-
-      .button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 13px;
-        min-height: 58px;
-        padding: 0 24px;
-        border-radius: 100px;
-        border: 1px solid var(--ink);
-        font-size: 0.88rem;
-        font-weight: 600;
-        transition:
-          transform 180ms ease,
-          background 180ms ease,
-          color 180ms ease;
-      }
-
-      .button:hover {
-        transform: translateY(-3px);
-      }
-
-      .button.primary {
-        background: var(--ink);
-        color: white;
-      }
-
-      .button.secondary:hover {
-        background: rgba(255, 255, 255, 0.3);
-      }
-
-      /* =========================================================
-         FOOTER
-      ========================================================= */
-
-      .footer {
-        padding: 30px 0 0;
-        background: #ffb6c9;
-      }
-
-      .footer-inner {
-        display: flex;
-        justify-content: space-between;
-        gap: 30px;
-        padding: 28px 0;
-        border-top: 1px solid rgba(23, 23, 23, 0.2);
-        color: rgba(23, 23, 23, 0.75);
-        font-size: 0.76rem;
-      }
-
-      .footer-links {
-        display: flex;
-        gap: 25px;
-      }
-
-      .footer a:hover {
-        text-decoration: underline;
-      }
-
-      /* =========================================================
-         REVEALS
-      ========================================================= */
-
-      [data-reveal] {
-        opacity: 0;
-        transform: translateY(28px);
-        transition:
-          opacity 700ms ease,
-          transform 700ms cubic-bezier(0.2, 0.75, 0.2, 1);
-      }
-
-      [data-reveal].visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      /* =========================================================
-         TABLET
-      ========================================================= */
-
-      @media (max-width: 1000px) {
-        .nav-link:not(.contact) {
-          display: none;
-        }
-
-        .hero-name {
-          font-size: clamp(5rem, 17vw, 10rem);
-        }
-
-        .hero-bottom,
-        .about-grid,
-        .work-intro,
-        .collage-header,
-        .capabilities-header,
-        .contact-bottom {
-          grid-template-columns: 1fr;
-        }
-
-        .hero-description,
-        .section-copy,
-        .collage-copy,
-        .capabilities-copy {
-          margin-left: 0;
-          justify-self: start;
-        }
-
-        .about-photo-wrap {
-          position: relative;
-          top: 0;
-          max-width: 480px;
-        }
-
-        .about-photo {
-          max-width: 390px;
-        }
-
-        .about-sticker {
-          right: 10%;
-        }
-
-        .work-count {
-          justify-self: start;
-        }
-
-        .projects-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .project-card.large,
-        .project-card.wide {
-          grid-column: auto;
-        }
-
-        .project-card.large .project-media,
-        .project-card.wide .project-media,
-        .project-media {
-          min-height: 560px;
-          aspect-ratio: 1.1 / 1;
-        }
-
-        .project-meta {
-          grid-template-columns: 1fr;
-        }
-
-        .project-result {
-          margin-left: 0;
-        }
-
-        .capability {
-          grid-template-columns: 50px 1fr;
-          padding: 30px 0;
-        }
-
-        .capability-text {
-          grid-column: 2;
-        }
-
-        .contact-actions {
-          justify-content: flex-start;
-        }
-      }
-
-      /* =========================================================
-         MOBILE
-      ========================================================= */
-
-      @media (max-width: 700px) {
-        :root {
-          --radius-m: 20px;
-          --radius-l: 28px;
-        }
-
-        .site-header {
-          padding-top: 10px;
-        }
-
-        .nav {
-          min-height: 54px;
-          padding: 5px 6px 5px 15px;
-        }
-
-        .nav-link.contact {
-          min-height: 41px;
-          padding-inline: 15px;
-        }
-
-        .hero {
-          min-height: 93svh;
-          padding-top: 105px;
-          padding-bottom: 15px;
-        }
-
-        .hero-topline {
-          display: block;
-        }
-
-        .hero-status {
-          margin-bottom: 24px;
-        }
-
-        .hero-intro {
-          max-width: 290px;
-        }
-
-        .hero-title {
-          padding-top: 90px;
-        }
-
-        .hello {
-          margin-bottom: 13px;
-        }
-
-        .hero-name {
-          white-space: normal;
-          font-size: clamp(4.6rem, 23vw, 7.2rem);
-          line-height: 0.78;
-        }
-
-        .hero-bottom {
-          gap: 25px;
-          margin-top: 50px;
-        }
-
-        .hero-role {
-          max-width: 360px;
-        }
-
-        .about {
-          padding-top: 120px;
-        }
-
-        .about-grid {
-          gap: 75px;
-        }
-
-        .about-photo {
-          width: 78%;
-        }
-
-        .about-sticker {
-          right: 3%;
-          width: 100px;
-          height: 100px;
-          font-size: 0.6rem;
-        }
-
-        .about-text {
-          margin-top: 35px;
-        }
-
-        .stats {
-          grid-template-columns: 1fr;
-        }
-
-        .stat {
-          min-height: 125px;
-        }
-
-        .work {
-          padding-top: 110px;
-        }
-
-        .section-title {
-          font-size: clamp(3.6rem, 18vw, 6rem);
-        }
-
-        .project-media,
-        .project-card.large .project-media,
-        .project-card.wide .project-media {
-          min-height: 480px;
-          aspect-ratio: 0.86 / 1;
-        }
-
-        .project-overlay {
-          padding: 18px;
-        }
-
-        .project-number {
-          align-items: flex-start;
-        }
-
-        .project-title,
-        .project-card:not(.large):not(.wide) .project-title {
-          padding-right: 15px;
-          font-size: clamp(2.2rem, 11vw, 3.6rem);
-        }
-
-        .project-arrow {
-          display: none;
-        }
-
-        .project-meta {
-          padding-bottom: 45px;
-        }
-
-        .collage-section {
-          padding-top: 110px;
-        }
-
-        .collage-title {
-          font-size: clamp(4rem, 19vw, 6.2rem);
-        }
-
-        .collage {
-          height: 680px;
-        }
-
-        .collage-card.one {
-          top: 4%;
-          left: -3%;
-          width: 68%;
-        }
-
-        .collage-card.two {
-          top: 18%;
-          right: -5%;
-          width: 61%;
-        }
-
-        .collage-card.three {
-          top: 39%;
-          left: 11%;
-          width: 77%;
-        }
-
-        .collage-card.four {
-          bottom: 2%;
-          left: -4%;
-          width: 60%;
-        }
-
-        .collage-card.five {
-          right: -7%;
-          bottom: 7%;
-          width: 58%;
-        }
-
-        .collage-note {
-          right: 4%;
-          bottom: 29%;
-          width: 135px;
-          padding: 13px;
-          font-size: 0.76rem;
-        }
-
-        .capability {
-          grid-template-columns: 38px 1fr;
-          gap: 12px;
-        }
-
-        .capability-title {
-          font-size: clamp(1.9rem, 9vw, 3rem);
-        }
-
-        .capability-text {
-          grid-column: 2;
-        }
-
-        .tools-box {
-          border-radius: 25px;
-        }
-
-        .contact-title {
-          font-size: clamp(4.3rem, 21vw, 7rem);
-        }
-
-        .contact-title em {
-          margin-left: 0;
-        }
-
-        .contact-bottom {
-          margin-top: 70px;
-        }
-
-        .contact-actions {
-          flex-direction: column;
-          align-items: stretch;
-        }
-
-        .button {
-          width: 100%;
-        }
-
-        .footer-inner {
-          flex-direction: column;
-        }
-      }
-
-      /* =========================================================
-         REDUCED MOTION
-      ========================================================= */
-
-      @media (prefers-reduced-motion: reduce) {
-        html {
-          scroll-behavior: auto;
-        }
-
-        *,
-        *::before,
-        *::after {
-          scroll-behavior: auto !important;
-          animation-duration: 0.001ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.001ms !important;
-        }
-
-        [data-reveal] {
-          opacity: 1;
-          transform: none;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <!-- =======================================================
-         NAV
-    ======================================================== -->
-
-    <header class="site-header">
-      <nav class="nav container" aria-label="Navegación principal">
-        <a class="brand" href="#top" aria-label="Ir al inicio">
-          <span class="brand-dot"></span>
-          GREY SERRANO®
-        </a>
-
-        <div class="nav-links">
-          <a class="nav-link" href="#work">Trabajo</a>
-          <a class="nav-link" href="#about">Sobre mí</a>
-          <a class="nav-link" href="#skills">Lo que hago</a>
-
-          <a
-            class="nav-link contact"
-            href="mailto:greydemar06@gmail.com"
-          >
-            Hablemos ↗
-          </a>
-        </div>
-      </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Greydemar Serrano | Marketing, Project Management & Web</title>
+  <meta name="title" content="Greydemar Serrano | Marketing, Project Management & Web">
+  <meta name="description" content="Portafolio de Greydemar Serrano: marketing, coordinación de proyectos, contenido y desarrollo web.">
+
+  <!-- FAVICON: "G" en perspectiva -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230f172a%22 rx=%2212%22/><g transform=%22skewX(-15)%22><text x=%2260%22 y=%2272%22 font-size=%2265%22 font-weight=%22900%22 font-family=%22sans-serif%22 fill=%22%23ffffff%22 text-anchor=%22middle%22>G</text></g></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="animate-on-load">
+
+  <!-- SISTEMA DE ZOOM GLOBAL -->
+  <div id="zoom-overlay" class="zoom-overlay" role="dialog" aria-modal="true" aria-label="Vista ampliada" onclick="closeZoom(event)">
+    <button type="button" class="zoom-close" aria-label="Cerrar vista ampliada" onclick="closeZoom(event)">✕</button>
+    <div class="zoom-content-wrapper">
+      <div id="zoom-media-container"></div>
+      <p id="zoom-caption"></p>
+    </div>
+  </div>
+
+  <!-- FONDO ESTÁTICO GLOBAL -->
+  <div class="global-fixed-bg">
+    <svg class="sticker sticker-star" width="45" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polyline points="3 3 3 21 21 21" stroke="#FEF08A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="3 17 9 11 13 15 21 7" stroke="#FEF08A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="14 7 21 7 21 14" stroke="#FEF08A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <svg class="sticker sticker-plant" width="65" height="65" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="3" width="20" height="14" rx="2" stroke="#bbf7d0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M8 21h8" stroke="#bbf7d0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M12 17v4" stroke="#bbf7d0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="8 8 5 11 8 14" stroke="#bbf7d0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="16 8 19 11 16 14" stroke="#bbf7d0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <svg class="sticker sticker-sparkle" width="45" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" stroke="#fbcfe8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="12" cy="13" r="3" stroke="#fbcfe8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <!-- 1. SECCIÓN HERO -->
+  <section class="hero-wrapper fade-in-section delay-1">
+    <div class="hero-video-container">
+      <video autoplay loop muted playsinline class="video-bg"><source src="/avila.webm" type="video/webm" /></video>
+      <div class="avila-overlay"></div>
+    </div>
+
+    <header class="top-header">
+      <div class="brand-centered">GREY SERRANO®</div>
+      <div class="lang-switch dark-mode">
+        <button type="button" class="lang-btn active" aria-pressed="true" onclick="setLanguage('es', this)">ES</button>
+        <button type="button" class="lang-btn" aria-pressed="false" onclick="setLanguage('en', this)">EN</button>
+      </div>
     </header>
 
-    <main id="top">
-      <!-- =====================================================
-           HERO
-      ====================================================== -->
-
-      <section class="hero">
-        <div class="container hero-inner">
-          <div class="hero-topline">
-            <div class="hero-status">
-              <span class="status-dot"></span>
-              Marketing · Projects · Web
-            </div>
-
-            <p class="hero-intro">
-              Me muevo entre la estrategia y la ejecución:
-              organizar ideas, conectar equipos y convertirlas en
-              algo que realmente pueda salir al mundo.
-            </p>
-          </div>
-
-          <div class="hero-title">
-            <span class="hello">Hola, soy</span>
-
-            <h1 class="hero-name">
-              <span>Grey.</span>
-            </h1>
-          </div>
-
-          <div class="hero-bottom">
-            <p class="hero-role">
-              Marketing, coordinación de proyectos y experiencias web.
-            </p>
-
-            <p class="hero-description">
-              Soy comunicadora social y llevo más de cinco años
-              trabajando con contenido, operaciones, eventos,
-              proyectos digitales y equipos multidisciplinarios.
-              Me gusta esa parte del trabajo donde una buena idea
-              necesita orden para convertirse en algo real.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- =====================================================
-           MARQUEE
-      ====================================================== -->
-
-      <div
-        class="recruiter-strip"
-        aria-label="Áreas de experiencia"
-      >
-        <div class="marquee">
-          {
-            [0, 1].map(() => (
-              <div class="marquee-row" aria-hidden="true">
-                <span class="marquee-item">Marketing Strategy</span>
-                <span class="marquee-item">Project Coordination</span>
-                <span class="marquee-item">Content</span>
-                <span class="marquee-item">Web</span>
-                <span class="marquee-item">Operations</span>
-                <span class="marquee-item">Automation</span>
+    <main class="hero-container">
+      <div class="left-col">
+        <div class="glass-profile-card" onclick="this.classList.toggle('active')">
+          <div class="card-min-header">
+            <img src="/grey.jpeg" alt="Greydemar Serrano" class="profile-thumb shift-right" id="heroProfileImg" onclick="toggleProfileZoom(event)" title="Ver a detalle" />
+            <div class="min-meta">
+              <div class="status-line"><span class="green-dot"></span><span class="status-text" data-es="En línea" data-en="Online">En línea</span></div>
+              <div class="name-group">
+                <h2 class="min-name">GREYDEMAR SERRANO</h2>
+                <span class="min-title" data-es="Marketing · Project Management · Web" data-en="Marketing · Project Management · Web">Marketing · Project Management · Web</span>
               </div>
-            ))
-          }
+            </div>
+          </div>
+          <div class="card-expand-content">
+            <p class="expand-bio" data-es="<strong>Hola, soy Grey.</strong><br><br>Soy comunicadora social y trabajo entre marketing, coordinación de proyectos, contenido y web.<br><br>Me gusta entender qué necesita un proyecto, poner orden y llevarlo de la idea a la ejecución. A veces eso significa una estrategia de contenido; otras, coordinar un evento, ordenar un proceso o construir una landing." data-en="<strong>Hi, I'm Grey.</strong><br><br>I'm a communications professional working across marketing, project coordination, content and web.<br><br>I like understanding what a project needs, bringing structure to it and moving it from idea to execution. Sometimes that means a content strategy; other times, coordinating an event, organizing a process or building a landing page.">
+              <strong>Hola, soy Grey.</strong><br><br>Soy comunicadora social y trabajo entre marketing, coordinación de proyectos, contenido y web.<br><br>Me gusta entender qué necesita un proyecto, poner orden y llevarlo de la idea a la ejecución. A veces eso significa una estrategia de contenido; otras, coordinar un evento, ordenar un proceso o construir una landing.
+            </p>
+            <p class="skills-title" data-es="Mis habilidades:" data-en="My skills:">Mis habilidades:</p>
+            <div class="skills-grid">
+              <span>Astro</span><span>GitHub</span><span>HTML5</span><span>CSS3</span>
+              <span>GA4</span><span>Salesforce</span><span>Zoho CRM</span><span>Mailchimp</span>
+              <span class="wide-skill" data-es="Creación de Contenido" data-en="Content Creation">Creación de Contenido</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- =====================================================
-           ABOUT
-      ====================================================== -->
+      <div class="hero-center-text">
+        <h1 data-es="IDEAS, EQUIPOS Y PROYECTOS QUE SE MUEVEN" data-en="IDEAS, TEAMS & PROJECTS IN MOTION">IDEAS, EQUIPOS Y PROYECTOS QUE SE MUEVEN</h1>
+        <span class="floating-pill pill-pink">Marketing</span>
+        <span class="floating-pill pill-green">Project Manager</span>
+        <span class="floating-pill pill-yellow" data-es="Web & Contenido" data-en="Web & Content">Web & Contenido</span>
+      </div>
 
-      <section class="about" id="about">
-        <div class="container about-grid">
-          <div class="about-photo-wrap" data-reveal>
-            <div class="about-photo">
-              <img
-                src="/memoji.png"
-                alt="Avatar ilustrado de Greydemar Serrano"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="about-sticker">
-              strategy<br />
-              meets<br />
-              execution
-            </div>
-          </div>
-
-          <div class="about-copy">
-            <p class="section-kicker">Un poco sobre mí</p>
-
-            <h2 data-reveal>
-              Hago que las ideas
-              <em>se muevan.</em>
-            </h2>
-
-            <div class="about-text" data-reveal>
-              <p>
-                No trabajo desde una sola casilla.
-                He coordinado eventos, creado estrategias de contenido,
-                organizado operaciones, trabajado con equipos comerciales
-                y construido experiencias web.
-              </p>
-
-              <p>
-                Lo que conecta todo es bastante sencillo:
-                <strong>
-                  entender qué queremos lograr, ordenar lo necesario
-                  y hacer que ocurra.
-                </strong>
-              </p>
-
-              <p>
-                Me interesa especialmente trabajar con equipos donde
-                comunicación, creatividad y organización tienen que
-                convivir. Ahí es donde mejor trabajo.
-              </p>
-            </div>
-
-            <div class="stats">
-              <article class="stat" data-reveal>
-                <strong class="stat-number">5+</strong>
-                <span class="stat-label">
-                  años trabajando entre comunicación, marketing y proyectos
-                </span>
-              </article>
-
-              <article class="stat" data-reveal>
-                <strong class="stat-number">13+</strong>
-                <span class="stat-label">
-                  marcas y organizaciones
-                </span>
-              </article>
-
-              <article class="stat" data-reveal>
-                <strong class="stat-number">360°</strong>
-                <span class="stat-label">
-                  estrategia + coordinación + ejecución
-                </span>
-              </article>
-            </div>
-          </div>
+      <div class="glass-cases-card" onclick="this.classList.toggle('active')">
+        <div class="cases-min-header">
+          <span class="cases-title-text" data-es="Casos Destacados" data-en="Featured Cases">Casos Destacados</span>
+          <span class="search-icon-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
         </div>
-      </section>
-
-      <!-- =====================================================
-           WORK
-      ====================================================== -->
-
-      <section class="work" id="work">
-        <div class="container">
-          <header class="work-header">
-            <p class="section-kicker">Selected work · 2021—2026</p>
-
-            <div class="work-intro">
-              <h2 class="section-title" data-reveal>
-                Trabajo que salió del papel.
-              </h2>
-
-              <p class="work-count">
-                {projects.length} proyectos seleccionados ↓
-              </p>
-            </div>
-
-            <p class="section-copy" data-reveal>
-              Aquí no vas a encontrar mi experiencia agrupada por empresas.
-              Prefiero enseñarte qué problema tuve delante,
-              qué construí y cuál fue mi papel en cada proyecto.
-            </p>
-          </header>
-
-          <div class="projects-grid">
-            {
-              projects.map((project) => (
-                <article
-                  class:list={[
-                    "project-card",
-                    project.size,
-                  ]}
-                  data-reveal
-                >
-                  <a
-                    class="project-link"
-                    href={project.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Ver ${project.shortTitle}`}
-                  >
-                    <div class="project-media">
-                      <img
-                        src={project.image}
-                        alt={project.imageAlt}
-                        loading="lazy"
-                      />
-
-                      <div class="project-overlay">
-                        <div class="project-number">
-                          <span>Proyecto {project.number}</span>
-
-                          <span class="project-company">
-                            {project.company}
-                          </span>
-                        </div>
-
-                        <h3 class="project-title">
-                          {project.title}
-                        </h3>
-
-                        <span
-                          class="project-arrow"
-                          aria-hidden="true"
-                        >
-                          ↗
-                        </span>
-                      </div>
-                    </div>
-
-                    <div class="project-meta">
-                      <div class="project-meta-left">
-                        <p class="project-category">
-                          {project.category}
-                        </p>
-
-                        <p class="project-description">
-                          {project.description}
-                        </p>
-                      </div>
-
-                      <div class="project-meta-right">
-                        <p class="project-result">
-                          <strong>{project.result}</strong>
-
-                          <span class="project-role">
-                            Mi rol · {project.role}
-                          </span>
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </article>
-              ))
-            }
-          </div>
+        <div class="cases-expand-content">
+          <ul class="quick-cases-list">
+            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-yprealty'), 400);"><strong data-es="+604% en interacción orgánica" data-en="+604% organic engagement">+604% en interacción orgánica</strong><span>YP Realty · Social Media</span></a></li>
+            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-panhouse'), 400);"><strong data-es="Automatización de atención con IA" data-en="AI-powered customer support automation">Automatización de atención con IA</strong><span>Editorial PanHouse · Automation</span></a></li>
+            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-eurobuilding'), 400);"><strong data-es="Coordinación B2B entre 7 áreas" data-en="B2B coordination across 7 teams">Coordinación B2B entre 7 áreas</strong><span>Eurobuilding · Operations</span></a></li>
+            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-dislocal'), 400);"><strong data-es="Producción del proyecto El Calvario" data-en="El Calvario project production">Producción del proyecto El Calvario</strong><span>Dislocal · Project Coordination</span></a></li>
+            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-impaktemos'), 400);"><strong data-es="Plataforma Las Minitas" data-en="Las Minitas platform">Plataforma Las Minitas</strong><span>Impaktemos · Web + Operations</span></a></li>
+            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-freelance'), 400);"><strong data-es="Sitios web con historias propias" data-en="Websites with stories of their own">Sitios web con historias propias</strong><span>Freelance · Web Design</span></a></li>
+          </ul>
         </div>
-      </section>
+      </div>
 
-      <!-- =====================================================
-           COLLAGE
-      ====================================================== -->
-
-      <section class="collage-section">
-        <div class="container">
-          <div class="collage-header">
-            <div>
-              <p class="section-kicker">
-                Presentaciones · sistemas · ideas
-              </p>
-
-              <h2 class="collage-title" data-reveal>
-                También pienso visualmente.
-              </h2>
-            </div>
-
-            <p class="collage-copy" data-reveal>
-              Estrategias, presentaciones, dashboards, automatizaciones
-              y documentos de trabajo también forman parte del proceso.
-              No todo termina siendo una pieza para Instagram.
-            </p>
-          </div>
-
-          <div class="collage" aria-label="Collage de trabajos">
-            <figure
-              class="collage-card one"
-              data-reveal
-            >
-              <img
-                src="/metricas.png"
-                alt="Dashboard de métricas de contenido"
-                loading="lazy"
-              />
-            </figure>
-
-            <figure
-              class="collage-card two"
-              data-reveal
-            >
-              <img
-                src="/manychat.png"
-                alt="Sistema de automatización en ManyChat"
-                loading="lazy"
-              />
-            </figure>
-
-            <figure
-              class="collage-card three"
-              data-reveal
-            >
-              <img
-                src="/imagen%20trello%20dislocal%20%282%29.png"
-                alt="Tablero de coordinación de proyectos"
-                loading="lazy"
-              />
-            </figure>
-
-            <figure
-              class="collage-card four"
-              data-reveal
-            >
-              <img
-                src="/OPERA%20PMS.png"
-                alt="Sistema de operaciones y reservas"
-                loading="lazy"
-              />
-            </figure>
-
-            <figure
-              class="collage-card five"
-              data-reveal
-            >
-              <img
-                src="/landingpage%20plataforma.png"
-                alt="Diseño de la plataforma Las Minitas"
-                loading="lazy"
-              />
-            </figure>
-
-            <div class="collage-note" aria-hidden="true">
-              Una buena idea es bonita.
-              <br /><br />
-              Una buena idea que además funciona
-              es mucho mejor. :)
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- =====================================================
-           CAPABILITIES
-      ====================================================== -->
-
-      <section class="capabilities" id="skills">
-        <div class="container">
-          <header class="capabilities-header">
-            <div>
-              <p class="section-kicker">Lo que hago</p>
-
-              <h2 class="section-title" data-reveal>
-                Cuatro áreas.<br />
-                Una misma cabeza.
-              </h2>
-            </div>
-
-            <p class="capabilities-copy" data-reveal>
-              No intento hacer de todo. Estas son las áreas que aparecen
-              una y otra vez en mi trabajo y donde puedo aportar
-              desde el primer día.
-            </p>
-          </header>
-
-          <div class="capability-list">
-            {
-              capabilities.map((item) => (
-                <article class="capability" data-reveal>
-                  <span class="capability-number">
-                    {item.number}
-                  </span>
-
-                  <h3 class="capability-title">
-                    {item.title}
-                  </h3>
-
-                  <p class="capability-text">
-                    {item.text}
-                  </p>
-                </article>
-              ))
-            }
-          </div>
-        </div>
-      </section>
-
-      <!-- =====================================================
-           TOOLS
-      ====================================================== -->
-
-      <section class="tools">
-        <div class="container">
-          <div class="tools-box" data-reveal>
-            <p class="section-kicker">
-              Algunas herramientas
-            </p>
-
-            <h2 class="tools-title">
-              Las herramientas cambian.<br />
-              Saber resolver no.
-            </h2>
-
-            <div class="tool-pills">
-              {
-                tools.map((tool) => (
-                  <span class="tool-pill">
-                    {tool}
-                  </span>
-                ))
-              }
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- =====================================================
-           CONTACT
-      ====================================================== -->
-
-      <section class="contact-section" id="contact">
-        <div class="container">
-          <p class="section-kicker contact-label">
-            ¿Trabajamos juntos?
-          </p>
-
-          <h2 class="contact-title" data-reveal>
-            Hagamos algo
-            <em>que funcione.</em>
-          </h2>
-
-          <div class="contact-bottom">
-            <p class="contact-copy" data-reveal>
-              Si estás buscando a alguien que pueda moverse
-              entre estrategia, organización y ejecución,
-              me encantará conocer qué están construyendo.
-            </p>
-
-            <div class="contact-actions" data-reveal>
-              <a
-                class="button primary"
-                href="mailto:greydemar06@gmail.com?subject=Hola%20Grey%20—%20Vi%20tu%20portfolio"
-              >
-                Escríbeme
-                <span aria-hidden="true">↗</span>
-              </a>
-
-              <a
-                class="button secondary"
-                href="#work"
-              >
-                Volver al trabajo ↑
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- =======================================================
-         FOOTER
-    ======================================================== -->
-
-    <footer class="footer">
-      <div class="container footer-inner">
-        <span>
-          © {currentYear} Greydemar Serrano
+      <div class="hero-quote-corner">
+        <span data-es="Me gustan las buenas ideas. Pero me gustan todavía más cuando logramos hacerlas realidad." data-en="I like good ideas. I like them even more when we manage to make them real.">
+          Me gustan las buenas ideas. Pero me gustan todavía más cuando logramos hacerlas realidad.
         </span>
+      </div>
+    </main>
+  </section>
 
-        <div class="footer-links">
-          <a href="mailto:greydemar06@gmail.com">
-            Email
-          </a>
+  <!-- 1.5 LOGO MARQUEE INFINITO -->
+  <section class="marquee-section fade-in-section delay-2">
+    <div class="marquee-container">
+      <div class="marquee-track">
+        <img src="/logo plano creativo.png" alt="Plano Creativo"><img src="/logo dislocal.png" alt="Dislocal"><img src="/logo plano mariano moreno.png" alt="Instituto Superior Mariano Moreno"><img src="/logo impaktemos.png" alt="Impaktemos"><img src="/logo universidad.png" alt="Universidad"><img src="/logo yprealty.png" alt="YP Realty"><img src="/logo eurobuilding.png" alt="Eurobuilding Hotels"><img src="/logo panhouse.png" alt="PanHouse">
+        <img src="/logo plano creativo.png" alt="Plano Creativo"><img src="/logo dislocal.png" alt="Dislocal"><img src="/logo plano mariano moreno.png" alt="Instituto Superior Mariano Moreno"><img src="/logo impaktemos.png" alt="Impaktemos"><img src="/logo universidad.png" alt="Universidad"><img src="/logo yprealty.png" alt="YP Realty"><img src="/logo eurobuilding.png" alt="Eurobuilding Hotels"><img src="/logo panhouse.png" alt="PanHouse">
+        <img src="/logo plano creativo.png" alt="Plano Creativo"><img src="/logo dislocal.png" alt="Dislocal"><img src="/logo plano mariano moreno.png" alt="Instituto Superior Mariano Moreno"><img src="/logo impaktemos.png" alt="Impaktemos"><img src="/logo universidad.png" alt="Universidad"><img src="/logo yprealty.png" alt="YP Realty"><img src="/logo eurobuilding.png" alt="Eurobuilding Hotels"><img src="/logo panhouse.png" alt="PanHouse">
+      </div>
+    </div>
+  </section>
 
-          <a href="#top">
-            Volver arriba ↑
-          </a>
+  <!-- 2. ABOUT ME -->
+  <section id="about" class="about-section fade-in-section delay-3">
+    <div class="about-container">
+      <div class="sticky-note">
+        <svg class="real-pin" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10V22" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="5" fill="#ef4444" stroke="#b91c1c" stroke-width="1.5"/><circle cx="10.5" cy="5.5" r="1.5" fill="#ffffff" opacity="0.6"/></svg>
+        <span class="note-text" data-es="About Me" data-en="About Me">About Me</span>
+      </div>
+      <div class="about-header">
+        <h2 data-es="Me gusta hacer que las cosas pasen." data-en="I like making things happen.">Me gusta hacer que las cosas pasen.</h2>
+        <p class="about-subtitle" data-es="He trabajado con equipos comerciales, editoriales, hoteles, organizaciones sociales y marcas digitales. Mi trabajo cambia según el proyecto, pero casi siempre parte del mismo lugar: <strong>entender qué necesitamos lograr, ordenar las piezas y encontrar una forma clara de avanzar.</strong>" data-en="I have worked with commercial teams, publishers, hotels, social organizations and digital brands. My work changes with each project, but it almost always starts in the same place: <strong>understanding what we need to achieve, organizing the moving pieces and finding a clear way forward.</strong>">He trabajado con equipos comerciales, editoriales, hoteles, organizaciones sociales y marcas digitales. Mi trabajo cambia según el proyecto, pero casi siempre parte del mismo lugar: <strong>entender qué necesitamos lograr, ordenar las piezas y encontrar una forma clara de avanzar.</strong></p>
+      </div>
+
+      <div class="mac-window">
+        <div class="mac-titlebar">
+          <div class="mac-buttons"><span class="mac-dot red"></span><span class="mac-dot yellow"></span><span class="mac-dot green"></span></div>
+          <span class="window-title">about-grey.app</span>
+          <span class="window-title-spacer" aria-hidden="true"></span>
+        </div>
+        <div class="mac-content">
+          <div class="bio-image-col"><img src="/memoji.png" alt="Memoji Greydemar" class="memoji-circle animated-memoji" /></div>
+          <div class="bio-info-col">
+            <p class="bio-intro" data-es="Soy <strong>Greydemar Serrano</strong>, comunicadora social con más de 5 años de experiencia trabajando entre marketing, operaciones, contenido y coordinación de proyectos. Me gusta estar justo en el punto donde una idea necesita estructura para convertirse en algo real." data-en="I am <strong>Greydemar Serrano</strong>, a communications professional with more than 5 years of experience across marketing, operations, content and project coordination. I enjoy working at the point where an idea needs structure to become something real.">Soy <strong>Greydemar Serrano</strong>, comunicadora social con más de 5 años de experiencia trabajando entre marketing, operaciones, contenido y coordinación de proyectos. Me gusta estar justo en el punto donde una idea necesita estructura para convertirse en algo real.</p>
+            <div class="stats-grid-about">
+              <div class="stat-item"><h3 class="iridescent-text">+5</h3><p data-es="Años de experiencia" data-en="Years of experience">Años de experiencia</p></div>
+              <div class="stat-item"><h3 class="iridescent-text">+8</h3><p data-es="Proyectos coordinados" data-en="Projects coordinated">Proyectos coordinados</p></div>
+              <div class="stat-item"><h3 class="iridescent-text">+5</h3><p data-es="Eventos de alto impacto" data-en="High-impact events">Eventos de alto impacto</p></div>
+              <div class="stat-item"><h3 class="iridescent-text">+13</h3><p data-es="Marcas y organizaciones" data-en="Brands and organizations">Marcas y organizaciones</p></div>
+            </div>
+          </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <!-- =======================================================
-         JS
-    ======================================================== -->
+  <!-- 3. PROYECTOS -->
+  <section id="projects" class="projects-section fade-in-section delay-4">
+    <div class="projects-container">
+      <div class="sticky-note">
+        <svg class="real-pin pin-blue" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10V22" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="5" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5"/><circle cx="10.5" cy="5.5" r="1.5" fill="#ffffff" opacity="0.6"/></svg>
+        <span class="note-text" data-es="Trabajo" data-en="Work">Trabajo</span>
+      </div>
+      <div class="section-header">
+        <h2 data-es="Algunas cosas que he hecho." data-en="A few things I have done.">Algunas cosas que he hecho.</h2>
+        <p data-es="Campañas, sistemas, eventos, contenido y productos digitales. Aquí el trabajo va primero; la empresa es el contexto." data-en="Campaigns, systems, events, content and digital products. Here, the work comes first; the company is the context.">Campañas, sistemas, eventos, contenido y productos digitales. Aquí el trabajo va primero; la empresa es el contexto.</p>
+      </div>
 
-    <script>
-      const revealElements =
-        document.querySelectorAll("[data-reveal]");
+      <div class="projects-grid">
+        <div class="project-card" role="button" tabindex="0" onclick="openModal('modal-yprealty')" onkeydown="openCardFromKeyboard(event, 'modal-yprealty')">
+          <div class="card-mac-header">
+            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+            <span class="project-num-tag">01</span>
+          </div>
+          <div class="card-body">
+            <img src="/metricas.png" alt="Métricas de crecimiento orgánico de YP Realty" class="card-img" style="object-position: top center;" />
+            <h3 data-es="+604% en interacción orgánica" data-en="+604% organic engagement">+604% en interacción orgánica</h3>
+            <p class="card-company">YP Realty · Social Media & Video</p>
+          </div>
+        </div>
 
-      if (
-        "IntersectionObserver" in window &&
-        !window.matchMedia(
-          "(prefers-reduced-motion: reduce)"
-        ).matches
-      ) {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (!entry.isIntersecting) return;
+        <div class="project-card" role="button" tabindex="0" onclick="openModal('modal-panhouse')" onkeydown="openCardFromKeyboard(event, 'modal-panhouse')">
+          <div class="card-mac-header">
+            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+            <span class="project-num-tag">02</span>
+          </div>
+          <div class="card-body">
+            <img src="/manychat.png" alt="Flujo de automatización de atención con IA" class="card-img" />
+            <h3 data-es="Automatización de atención con IA" data-en="AI-powered support automation">Automatización de atención con IA</h3>
+            <p class="card-company">Editorial PanHouse · Automation</p>
+          </div>
+        </div>
 
-              entry.target.classList.add("visible");
-              observer.unobserve(entry.target);
-            });
-          },
-          {
-            threshold: 0.1,
-            rootMargin: "0px 0px -60px 0px",
-          }
-        );
+        <div class="project-card" role="button" tabindex="0" onclick="openModal('modal-panhouse')" onkeydown="openCardFromKeyboard(event, 'modal-panhouse')">
+          <div class="card-mac-header">
+            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+            <span class="project-num-tag">03</span>
+          </div>
+          <div class="card-body">
+            <img src="/evento ph.png" alt="Producción de evento VIP para Editorial PanHouse" class="card-img" />
+            <h3 data-es="Producción de evento VIP" data-en="VIP event production">Producción de evento VIP</h3>
+            <p class="card-company">Editorial PanHouse · Events & Operations</p>
+          </div>
+        </div>
 
-        revealElements.forEach((element) => {
-          observer.observe(element);
-        });
-      } else {
-        revealElements.forEach((element) => {
-          element.classList.add("visible");
-        });
+        <div class="project-card" role="button" tabindex="0" onclick="openModal('modal-panhouse')" onkeydown="openCardFromKeyboard(event, 'modal-panhouse')">
+          <div class="card-mac-header">
+            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+            <span class="project-num-tag">04</span>
+          </div>
+          <div class="card-body">
+            <img src="/portada-panhouse.png" alt="Cobertura de Editorial PanHouse" class="card-img" />
+            <h3 data-es="Cobertura de la FIL Guadalajara" data-en="Guadalajara Book Fair coverage">Cobertura de la FIL Guadalajara</h3>
+            <p class="card-company">Editorial PanHouse · Content & Communications</p>
+          </div>
+        </div>
+
+        <div class="project-card" role="button" tabindex="0" onclick="openModal('modal-eurobuilding')" onkeydown="openCardFromKeyboard(event, 'modal-eurobuilding')">
+          <div class="card-mac-header">
+            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+            <span class="project-num-tag">05</span>
+          </div>
+          <div class="card-body">
+            <img src="/OPERA PMS.png" alt="Gestión de reservas y operación con Opera PMS" class="card-img" />
+            <h3 data-es="Coordinación B2B entre 7 áreas" data-en="B2B coordination across 7 teams">Coordinación B2B entre 7 áreas</h3>
+            <p class="card-company">Eurobuilding · Operations & Sales</p>
+          </div>
+        </div>
+
+        <div class="project-card" role="button" tabindex="0" onclick="openModal('modal-dislocal')" onkeydown="openCardFromKeyboard(event, 'modal-dislocal')">
+          <div class="card-mac-header">
+            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+            <span class="project-num-tag">06</span>
+          </div>
+          <div class="card-body">
+            <img src="/portada-dislocal.png" alt="Proyecto comunitario El Calvario" class="card-img" />
+            <h3 data-es="Producción del proyecto El Calvario" data-en="El Calvario project production">Producción del proyecto El Calvario</h3>
+            <p class="card-company">Dislocal · Project Coordination</p>
+          </div>
+        </div>
+
+        <div class="project-card" role="button" tabindex="0" onclick="openModal('modal-dislocal')" onkeydown="openCardFromKeyboard(event, 'modal-dislocal')">
+          <div class="card-mac-header">
+            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+            <span class="project-num-tag">07</span>
+          </div>
+          <div class="card-body">
+            <img src="/imagen trello dislocal (2).png" alt="Tablero de coordinación de proyectos en Trello" class="card-img" />
+            <h3 data-es="Sistema de trabajo para coordinar equipos" data-en="Workflow system for team coordination">Sistema de trabajo para coordinar equipos</h3>
+            <p class="card-company">Dislocal · Project Management</p>
+          </div>
+        </div>
+
+        <div class="project-card" role="button" tabindex="0" onclick="openModal('modal-impaktemos')" onkeydown="openCardFromKeyboard(event, 'modal-impaktemos')">
+          <div class="card-mac-header">
+            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+            <span class="project-num-tag">08</span>
+          </div>
+          <div class="card-body">
+            <img src="/landingpage plataforma.png" alt="Landing page de la plataforma Las Minitas" class="card-img" />
+            <h3 data-es="Plataforma para coordinar voluntarios" data-en="Volunteer coordination platform">Plataforma para coordinar voluntarios</h3>
+            <p class="card-company">Impaktemos · Web & Operations</p>
+          </div>
+        </div>
+
+        <div class="project-card" role="button" tabindex="0" onclick="openModal('modal-freelance')" onkeydown="openCardFromKeyboard(event, 'modal-freelance')">
+          <div class="card-mac-header">
+            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+            <span class="project-num-tag">09</span>
+          </div>
+          <div class="card-body">
+            <img src="/portada freelance.png" alt="Proyectos web freelance" class="card-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlMmU4ZjAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZmlsbD0iIzk0YTNiOCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5XaWIgUHJvamVjdHM8L3RleHQ+PC9zdmc+'" />
+            <h3 data-es="Webs con una historia propia" data-en="Websites with stories of their own">Webs con una historia propia</h3>
+            <p class="card-company">Freelance · Web Design & Development</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SERVICIOS (ESTILO macOS MINIMALISTA Y ELEGANTE) -->
+  <section id="services" class="services-section fade-in-section delay-5">
+    <div class="services-container">
+      <div class="sticky-note">
+        <svg class="real-pin" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10V22" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="5" fill="#f59e0b" stroke="#b45309" stroke-width="1.5"/><circle cx="10.5" cy="5.5" r="1.5" fill="#ffffff" opacity="0.6"/></svg>
+        <span class="note-text" data-es="Cómo trabajo" data-en="How I work">Cómo trabajo</span>
+      </div>
+      <div class="section-header">
+        <h2 data-es="Lo que suelo aportar a un equipo." data-en="What I usually bring to a team.">Lo que suelo aportar a un equipo.</h2>
+        <p data-es="Mi trabajo cambia según el proyecto, pero estas son las áreas que aparecen una y otra vez. Abre cada una para ver cómo las abordo." data-en="My work changes depending on the project, but these are the areas that show up again and again. Open each one to see how I approach them.">Mi trabajo cambia según el proyecto, pero estas son las áreas que aparecen una y otra vez. Abre cada una para ver cómo las abordo.</p>
+      </div>
+
+      <div class="services-grid-blocks">
+        
+        <!-- SMM -->
+        <div class="service-block service-toggle" style="background: rgba(59, 130, 246, 0.08); border-color: rgba(59, 130, 246, 0.2);" onclick="this.classList.toggle('open')">
+          <div class="service-block-header"><h3 data-es="Contenido & Social Media" data-en="Social Media">Contenido & Social Media</h3><span class="icon-plus">+</span></div>
+          <div class="service-block-body">
+            <div class="minimal-flow">
+              <div class="flow-block">
+                <span class="flow-label" data-es="El reto" data-en="The challenge">El reto</span>
+                <p class="flow-text text-muted" data-es="Cuando una marca tiene cosas interesantes que decir, pero todavía no encuentra una forma consistente de convertirlas en contenido que la gente quiera ver." data-en="When a brand has interesting things to say but has not yet found a consistent way to turn them into content people actually want to watch.">Cuando una marca tiene cosas interesantes que decir, pero todavía no encuentra una forma consistente de convertirlas en contenido que la gente quiera ver.</p>
+              </div>
+              <div class="flow-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+              <div class="flow-block">
+                <span class="flow-label" data-es="Cómo trabajo" data-en="How I work">Cómo trabajo</span>
+                <p class="flow-text text-strong" data-es="Investigo, planteo ideas, escribo guiones, produzco contenido y reviso qué está funcionando para decidir qué hacemos después." data-en="I research, develop ideas, write scripts, produce content and review what is working so we can decide what to do next.">Investigo, planteo ideas, escribo guiones, produzco contenido y reviso qué está funcionando para decidir qué hacemos después.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIDEO EDICION -->
+        <div class="service-block service-toggle" style="background: rgba(168, 85, 247, 0.08); border-color: rgba(168, 85, 247, 0.2);" onclick="this.classList.toggle('open')">
+          <div class="service-block-header"><h3 data-es="Contenido Visual" data-en="Visual Content Editing">Contenido Visual</h3><span class="icon-plus">+</span></div>
+          <div class="service-block-body">
+            <div class="minimal-flow">
+              <div class="flow-block">
+                <span class="flow-label" data-es="El reto" data-en="The challenge">El reto</span>
+                <p class="flow-text text-muted" data-es="Una buena idea también necesita ritmo, intención y una forma visual que ayude a entenderla." data-en="A good idea also needs rhythm, intention and a visual form that helps people understand it.">Una buena idea también necesita ritmo, intención y una forma visual que ayude a entenderla.</p>
+              </div>
+              <div class="flow-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+              <div class="flow-block">
+                <span class="flow-label" data-es="Cómo trabajo" data-en="How I work">Cómo trabajo</span>
+                <p class="flow-text text-strong" data-es="Trabajo la estructura, la edición y la narrativa de cada pieza para que los recursos visuales acompañen la idea, en lugar de competir con ella." data-en="I work on structure, editing and narrative so the visual choices support the idea instead of competing with it.">Trabajo la estructura, la edición y la narrativa de cada pieza para que los recursos visuales acompañen la idea, en lugar de competir con ella.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LANDING PAGES -->
+        <div class="service-block service-toggle" style="background: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.2);" onclick="this.classList.toggle('open')">
+          <div class="service-block-header"><h3 data-es="Landing Pages & Websites" data-en="Landing Pages & Websites">Landing Pages & Websites</h3><span class="icon-plus">+</span></div>
+          <div class="service-block-body">
+            <div class="minimal-flow">
+              <div class="flow-block">
+                <span class="flow-label" data-es="El reto" data-en="The challenge">El reto</span>
+                <p class="flow-text text-muted" data-es="A veces un proyecto necesita un lugar claro donde vivir: rápido, fácil de recorrer y con una historia que se entienda." data-en="Sometimes a project needs a clear place to live: fast, easy to navigate and with a story people can understand.">A veces un proyecto necesita un lugar claro donde vivir: rápido, fácil de recorrer y con una historia que se entienda.</p>
+              </div>
+              <div class="flow-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+              <div class="flow-block">
+                <span class="flow-label" data-es="Cómo trabajo" data-en="How I work">Cómo trabajo</span>
+                <p class="flow-text text-strong" data-es="Diseño y construyo landing pages y sitios web cuidando la jerarquía, el contenido, la velocidad y la experiencia de quien llega." data-en="I design and build landing pages and websites with attention to hierarchy, content, speed and the experience of the person visiting.">Diseño y construyo landing pages y sitios web cuidando la jerarquía, el contenido, la velocidad y la experiencia de quien llega.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VENTAS Y CRM -->
+        <div class="service-block service-toggle" style="background: rgba(245, 158, 11, 0.08); border-color: rgba(245, 158, 11, 0.2);" onclick="this.classList.toggle('open')">
+          <div class="service-block-header"><h3 data-es="CRM & Procesos Comerciales" data-en="Sales, CRM & Prospecting">CRM & Procesos Comerciales</h3><span class="icon-plus">+</span></div>
+          <div class="service-block-body">
+            <div class="minimal-flow">
+              <div class="flow-block">
+                <span class="flow-label" data-es="El reto" data-en="The challenge">El reto</span>
+                <p class="flow-text text-muted" data-es="Cuando información, conversaciones y oportunidades empiezan a perderse entre demasiados lugares, el seguimiento se vuelve más difícil de lo necesario." data-en="When information, conversations and opportunities start getting lost across too many places, follow-up becomes harder than it needs to be.">Cuando información, conversaciones y oportunidades empiezan a perderse entre demasiados lugares, el seguimiento se vuelve más difícil de lo necesario.</p>
+              </div>
+              <div class="flow-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+              <div class="flow-block">
+                <span class="flow-label" data-es="Cómo trabajo" data-en="How I work">Cómo trabajo</span>
+                <p class="flow-text text-strong" data-es="Ordeno el proceso, creo sistemas de seguimiento y utilizo automatizaciones cuando realmente ayudan a simplificar el trabajo del equipo." data-en="I organize the process, build follow-up systems and use automation when it genuinely helps simplify the team’s work.">Ordeno el proceso, creo sistemas de seguimiento y utilizo automatizaciones cuando realmente ayudan a simplificar el trabajo del equipo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT MANAGEMENT -->
+        <div class="service-block service-toggle" style="background: rgba(100, 116, 139, 0.08); border-color: rgba(100, 116, 139, 0.2);" onclick="this.classList.toggle('open')">
+          <div class="service-block-header"><h3 data-es="Project Management" data-en="Project Management">Project Management</h3><span class="icon-plus">+</span></div>
+          <div class="service-block-body">
+            <div class="minimal-flow">
+              <div class="flow-block">
+                <span class="flow-label" data-es="El reto" data-en="The challenge">El reto</span>
+                <p class="flow-text text-muted" data-es="Cuando hay muchas personas, tareas y fechas involucradas, la claridad deja de ser un detalle y se convierte en parte del proyecto." data-en="When many people, tasks and deadlines are involved, clarity stops being a detail and becomes part of the project itself.">Cuando hay muchas personas, tareas y fechas involucradas, la claridad deja de ser un detalle y se convierte en parte del proyecto.</p>
+              </div>
+              <div class="flow-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+              <div class="flow-block">
+                <span class="flow-label" data-es="Cómo trabajo" data-en="How I work">Cómo trabajo</span>
+                <p class="flow-text text-strong" data-es="Organizo prioridades, responsables, tiempos y comunicación para que cada persona sepa qué sigue y el equipo pueda concentrarse en ejecutar." data-en="I organize priorities, owners, timelines and communication so everyone knows what comes next and the team can focus on execution.">Organizo prioridades, responsables, tiempos y comunicación para que cada persona sepa qué sigue y el equipo pueda concentrarse en ejecutar.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CONTACTO -->
+  <section id="contact" class="contact-section fade-in-section delay-6">
+    <div class="contact-container mac-window">
+      <div class="contact-left light-gray-bg">
+        <h2 class="coffee-title">
+          <span data-es="Tomemos un café virtual." data-en="Let's have a virtual coffee.">Tomemos un café virtual.</span>
+          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="coffee-cup-svg">
+            <path d="M17 8h1a4 4 0 1 1 0 8h-1" />
+            <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z" />
+            <path class="steam steam-1" d="M6 2c0 2-2 2-2 4s2 2 2 4" />
+            <path class="steam steam-2" d="M10 2c0 2-2 2-2 4s2 2 2 4" />
+            <path class="steam steam-3" d="M14 2c0 2-2 2-2 4s2 2 2 4" />
+          </svg>
+        </h2>
+        <p data-es="Si viste algo aquí que conectó contigo, escríbeme. Siempre estoy abierta a conocer proyectos interesantes, equipos con buenas ideas y problemas que valga la pena resolver." data-en="If something here connected with you, send me a note. I am always open to interesting projects, thoughtful teams and problems worth solving.">Si viste algo aquí que conectó contigo, escríbeme. Siempre estoy abierta a conocer proyectos interesantes, equipos con buenas ideas y problemas que valga la pena resolver.</p>
+        
+        <div class="contact-socials-row">
+          <a href="https://wa.me/584126339776" target="_blank" class="social-icon-btn" title="WhatsApp"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a>
+          <a href="mailto:greydemar06@gmail.com" class="social-icon-btn" title="Correo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+          <a href="https://www.linkedin.com/in/greydemarserrano/" target="_blank" class="social-icon-btn" title="LinkedIn"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+        </div>
+      </div>
+
+      <div class="contact-right glass-panel">
+        <h3 style="margin-bottom: 24px; font-size: 1.8rem; font-weight: 800;" data-es="Cuéntame qué tienes en mente." data-en="Tell me what you have in mind.">Cuéntame qué tienes en mente.</h3>
+        <form class="contact-form" id="wa-form" onsubmit="sendToWhatsApp(event)">
+          <div class="input-group"><label data-es="Tu Nombre" data-en="Your Name">Tu Nombre</label><input type="text" id="wa-name" required placeholder="Ej. Ana Pérez" /></div>
+          <div class="input-group"><label data-es="Tu Correo" data-en="Your Email">Tu Correo</label><input type="email" id="wa-email" required placeholder="ana@empresa.com" /></div>
+          <div class="input-group"><label data-es="Mensaje" data-en="Message">Mensaje</label><textarea id="wa-message" rows="4" required placeholder="Hola Grey, estoy trabajando en..." data-es-placeholder="Hola Grey, estoy trabajando en..."></textarea></div>
+          
+          <div class="privacy-disclaimer">
+            <p data-es="Tus datos serán tratados por Greydemar Serrano con la finalidad de responder tu consulta. No se almacenan en bases de datos. <a href='/terminos' target='_blank' class='privacy-link'>Más información</a>" data-en="Your data will be processed by Greydemar Serrano to answer your query. Data is not stored in databases. <a href='/terminos' target='_blank' class='privacy-link'>More info</a>">
+              Tus datos serán tratados por Greydemar Serrano con la finalidad de responder tu consulta. Puedes ejercer tus derechos de acceso, rectificación, cancelación y oposición en greydemar06@gmail.com. <a href="/terminos" target="_blank" class="privacy-link">Más información</a>
+            </p>
+          </div>
+          
+          <div class="privacy-checkbox-group">
+            <input type="checkbox" id="privacy-accept" required />
+            <label for="privacy-accept" data-es="He leído y acepto la <a href='/terminos' target='_blank' class='privacy-link'>política de privacidad</a>" data-en="I have read and accept the <a href='/terminos' target='_blank' class='privacy-link'>privacy policy</a>">He leído y acepto la <a href="/terminos" target="_blank" class="privacy-link">política de privacidad</a></label>
+          </div>
+
+          <button type="submit" class="submit-btn" data-es="Enviar mensaje" data-en="Send message">Enviar mensaje</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER NEGRO -->
+  <footer class="site-footer black-footer">
+    
+    <!-- Easter Egg: Recordatorio (Lucas 24, 25-33) -->
+    <div class="hidden-eyes-container" title="Lucas 24:31">
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <svg width="60" height="25" viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g class="blinking-eyes">
+            <!-- Pestañas Izquierda -->
+            <path d="M15,10 L10,0 M25,8 L25,-2 M35,10 L40,0" stroke="#ffffff" stroke-width="1.5"/>
+            <!-- Ojo Izquierdo -->
+            <path d="M10,20 Q25,5 40,20 Q25,35 10,20 Z" stroke="#ffffff" stroke-width="2.5" fill="none"/>
+            <circle cx="25" cy="20" r="4.5" fill="#ffffff"/>
+
+            <!-- Pestañas Derecha -->
+            <path d="M65,10 L60,0 M75,8 L75,-2 M85,10 L90,0" stroke="#ffffff" stroke-width="1.5"/>
+            <!-- Ojo Derecho -->
+            <path d="M60,20 Q75,5 90,20 Q75,35 60,20 Z" stroke="#ffffff" stroke-width="2.5" fill="none"/>
+            <circle cx="75" cy="20" r="4.5" fill="#ffffff"/>
+          </g>
+        </svg>
+        <span style="font-size: 9px; letter-spacing: 2px; color: #ffffff; margin-top: 6px; font-weight: 700;">LUCAS 24, 25-33</span>
+      </div>
+    </div>
+
+    <p data-es="© 2026 Greydemar Serrano. Todos los derechos reservados." data-en="© 2026 Greydemar Serrano. All rights reserved.">© 2026 Greydemar Serrano. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- MODALES DE PROYECTOS (ESTRUCTURA COLLAGE BENTO) -->
+  <!-- ========================================== -->
+  
+  <div id="modal-yprealty" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true" onclick="closeModalOutside(event, 'modal-yprealty')">
+    <div class="modal-window">
+      <div class="modal-mac-bar">
+        <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+        <div class="modal-search-bar">yprealty.com</div>
+        <button type="button" class="close-btn-text" onclick="closeModal('modal-yprealty')" data-es="Cerrar" data-en="Close">Cerrar</button>
+      </div>
+      <div class="modal-content-scroll">
+        <div class="modal-hero-banner"><img src="/portada-yprealty.png" alt="YP Realty Banner" style="object-position: top center;" /></div>
+        <div class="modal-title-row">
+          <div class="title-text-group">
+            <span class="project-counter" data-es="Contexto del proyecto" data-en="Project context">Contexto del proyecto</span>
+            <h2>YP Realty</h2>
+          </div>
+        </div>
+        <p class="modal-description" data-es="Trabajo la estrategia de contenido orgánico de YP Realty para el mercado inmobiliario de Puerto Rico: investigación, guiones, edición de video, publicación y análisis. El foco está en convertir información útil del sector en contenido claro, reconocible y medible." data-en="I work on YP Realty’s organic content strategy for the Puerto Rico real estate market: research, scripting, video editing, publishing and analysis. The focus is turning useful industry information into clear, recognizable and measurable content.">Trabajo la estrategia de contenido orgánico de YP Realty para el mercado inmobiliario de Puerto Rico: investigación, guiones, edición de video, publicación y análisis. El foco está en convertir información útil del sector en contenido claro, reconocible y medible.</p>
+        <div class="metadata-grid">
+          <div><span class="meta-label" data-es="Rol" data-en="Role">Rol</span><span class="meta-val">Social Media Mgr. & Video Editor</span></div>
+          <div><span class="meta-label" data-es="Herramientas" data-en="Tools">Herramientas</span><span class="meta-val">GA4, TikTok Analytics, YouTube Analytics, ROAS, CPA, CPM, CTR, CPC</span></div>
+          <div><span class="meta-label" data-es="Inicio" data-en="Start">Inicio</span><span class="meta-val">2026</span></div>
+        </div>
+        
+        <div class="modal-gallery-container">
+          <h3 data-es="Galería del Proyecto" data-en="Project Gallery">Galería del Proyecto</h3>
+          
+          <div class="bento-collage">
+            <div class="media-card bento-vertical">
+              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Cisterna de agua en PR." onclick="openGalleryZoom(this)" style="background:#000;">
+                <source src="/VIDEO PARA PORTAFOLIO.webm" type="video/webm" />
+              </video>
+              <div class="media-caption">Cisterna de agua en PR.</div>
+            </div>
+            
+            <div class="media-card bento-vertical">
+              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Cierre de venta en Arecibo, Puerto Rico." onclick="openGalleryZoom(this)" style="background:#000;">
+                <source src="/PARA-PORTAFOLIO.webm" type="video/webm" />
+              </video>
+              <div class="media-caption">Cierre de venta en Arecibo, Puerto Rico.</div>
+            </div>
+
+            <div class="media-card bento-vertical">
+              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Interacción con el público trend, quién paga qué en temas de arrendamientos." onclick="openGalleryZoom(this)" style="background:#000;">
+                <source src="/VIDEO PARA PORTAFOLIO 2.webm" type="video/webm" />
+              </video>
+              <div class="media-caption">Interacción trend: ¿Quién paga qué?</div>
+            </div>
+
+            <div class="media-card bento-vertical">
+              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Isla del encanto." onclick="openGalleryZoom(this)" style="background:#000;">
+                <source src="/ISLA-DEL-ENCATO-PORTAFOLIO-.webm" type="video/webm" />
+              </video>
+              <div class="media-caption">Isla del encanto.</div>
+            </div>
+
+            <div class="media-card bento-horizontal">
+              <img src="/metricas.png" alt="Métricas YP Realty" class="horizontal-img w-full-img" data-caption="Análisis de Métricas" onclick="openGalleryZoom(this)" onerror="this.style.display='none'">
+              <div class="media-caption">Análisis de Métricas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-panhouse" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true" onclick="closeModalOutside(event, 'modal-panhouse')">
+    <div class="modal-window">
+      <div class="modal-mac-bar">
+        <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+        <div class="modal-search-bar">editorialpanhouse.com</div>
+        <button type="button" class="close-btn-text" onclick="closeModal('modal-panhouse')" data-es="Cerrar" data-en="Close">Cerrar</button>
+      </div>
+      <div class="modal-content-scroll">
+        <div class="modal-hero-banner"><img src="/portada-panhouse.png" alt="PanHouse Banner" /></div>
+        <div class="modal-title-row">
+          <div class="title-text-group">
+            <span class="project-counter" data-es="Contexto del proyecto" data-en="Project context">Contexto del proyecto</span>
+            <h2>Editorial PanHouse</h2>
+          </div>
+        </div>
+        <p class="modal-description" data-es="En PanHouse trabajé entre comunicación y operación. Coordiné acciones con Marketing, Ventas y Relaciones Públicas, participé en la producción de eventos y coberturas, y desarrollé flujos de automatización para ordenar consultas y hacer más consistente la atención." data-en="At PanHouse I worked across communications and operations. I coordinated with Marketing, Sales and PR, supported event production and coverage, and built automation flows to organize inquiries and make customer communication more consistent.">En PanHouse trabajé entre comunicación y operación. Coordiné acciones con Marketing, Ventas y Relaciones Públicas, participé en la producción de eventos y coberturas, y desarrollé flujos de automatización para ordenar consultas y hacer más consistente la atención.</p>
+        <div class="metadata-grid">
+          <div><span class="meta-label" data-es="Rol" data-en="Role">Rol</span><span class="meta-val" data-es="Coord. Comunicaciones Internas" data-en="Internal Comms Coordinator">Coord. Comunicaciones Internas</span></div>
+          <div><span class="meta-label" data-es="Herramientas" data-en="Tools">Herramientas</span><span class="meta-val">Meta Business Suite, CRM, Email Marketing</span></div>
+          <div><span class="meta-label" data-es="Inicio" data-en="Start">Inicio</span><span class="meta-val">2024</span></div>
+        </div>
+        <div class="modal-gallery-container">
+          <h3 data-es="Galería del Proyecto" data-en="Project Gallery">Galería del Proyecto</h3>
+          <div class="bento-collage">
+            
+            <div class="media-card bento-vertical">
+              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Cobertura de comunicación en PanHouse" onclick="openGalleryZoom(this)" style="background:#000;">
+                <source src="/video panhouse.mp4" type="video/mp4" />
+              </video>
+              <div class="media-caption">Cobertura de comunicaciones PanHouse</div>
+            </div>
+
+            <div class="media-card bento-vertical">
+              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Feria Internacional del Libro en Guadalajara" onclick="openGalleryZoom(this)" style="background:#000;">
+                <source src="/ph.mp4" type="video/mp4" />
+              </video>
+              <div class="media-caption">Feria Internacional del Libro en Guadalajara</div>
+            </div>
+
+            <div class="media-card bento-vertical">
+              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Despliegue logístico en Cerro Verde" onclick="openGalleryZoom(this)" style="background:#000;">
+                <source src="/cerro verde ph.mp4" type="video/mp4" />
+              </video>
+              <div class="media-caption">Despliegue logístico en Cerro Verde</div>
+            </div>
+
+            <div class="media-card bento-horizontal">
+              <img src="/evento ph.png" alt="Evento VIP Editorial PanHouse" class="horizontal-img w-full-img" data-caption="Ejecución de Evento VIP" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
+              <div class="media-caption">Ejecución de Evento VIP</div>
+            </div>
+
+            <div class="media-card bento-horizontal">
+              <img src="/manychat.png" alt="Automatización ManyChat" class="horizontal-img w-full-img" data-caption="Flujos de automatización de atención con IA (ManyChat)" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
+              <div class="media-caption">Automatización de atención con IA</div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-eurobuilding" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true" onclick="closeModalOutside(event, 'modal-eurobuilding')">
+    <div class="modal-window">
+      <div class="modal-mac-bar">
+        <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+        <div class="modal-search-bar">eurobuilding.com.ve</div>
+        <button type="button" class="close-btn-text" onclick="closeModal('modal-eurobuilding')" data-es="Cerrar" data-en="Close">Cerrar</button>
+      </div>
+      <div class="modal-content-scroll">
+        <div class="modal-hero-banner"><img src="/portada-eurobuilding.png" alt="Eurobuilding Banner" /></div>
+        <div class="modal-title-row">
+          <div class="title-text-group">
+            <span class="project-counter" data-es="Contexto del proyecto" data-en="Project context">Contexto del proyecto</span>
+            <h2>Eurobuilding</h2>
+          </div>
+        </div>
+        <p class="modal-description" data-es="En el Business Center gestioné cuentas corporativas, reservas y ventas, mientras coordinaba solicitudes entre siete áreas del hotel —incluyendo Ventas, Room Service, Ama de Llaves y Experiencias—. El trabajo exigía seguimiento cercano, comunicación clara y resolución rápida en un entorno de servicio 5 estrellas." data-en="At the Business Center I managed corporate accounts, reservations and sales while coordinating requests across seven hotel departments, including Sales, Room Service, Housekeeping and Experiences. The work required close follow-up, clear communication and fast problem-solving in a five-star service environment.">En el Business Center gestioné cuentas corporativas, reservas y ventas, mientras coordinaba solicitudes entre siete áreas del hotel —incluyendo Ventas, Room Service, Ama de Llaves y Experiencias—. El trabajo exigía seguimiento cercano, comunicación clara y resolución rápida en un entorno de servicio 5 estrellas.</p>
+        <div class="metadata-grid">
+          <div><span class="meta-label" data-es="Rol" data-en="Role">Rol</span><span class="meta-val" data-es="Coordinadora B2B & Business Center" data-en="B2B & Business Center Coordinator">Coordinadora B2B & Business Center</span></div>
+          <div><span class="meta-label" data-es="Herramientas" data-en="Tools">Herramientas</span><span class="meta-val">Opera PMS, Logística, CRM B2B</span></div>
+          <div><span class="meta-label" data-es="Inicio" data-en="Start">Inicio</span><span class="meta-val">2022</span></div>
+        </div>
+        <div class="modal-gallery-container">
+          <h3 data-es="Galería del Proyecto" data-en="Project Gallery">Galería del Proyecto</h3>
+          <div class="bento-collage">
+            
+            <div class="media-card bento-horizontal">
+              <video playsinline loop muted autoplay class="horizontal-vid" data-caption="Operaciones y estándares de servicio en Eurobuilding." onclick="openGalleryZoom(this)">
+                <source src="/video euro.mp4" type="video/mp4" />
+              </video>
+              <div class="media-caption">Operaciones y estándares de servicio</div>
+            </div>
+
+            <div class="media-card bento-horizontal">
+              <img src="/equipo euro.png" alt="Equipo Eurobuilding" class="horizontal-img w-full-img" data-caption="Equipo de trabajo Eurobuilding" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
+              <div class="media-caption">Equipo de trabajo Eurobuilding</div>
+            </div>
+
+            <div class="media-card bento-horizontal">
+              <img src="/OPERA PMS.png" alt="Sistema Opera PMS" class="horizontal-img w-full-img" data-caption="Gestión y reservas con Opera PMS" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
+              <div class="media-caption">Gestión y reservas con Opera PMS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-dislocal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true" onclick="closeModalOutside(event, 'modal-dislocal')">
+    <div class="modal-window">
+      <div class="modal-mac-bar">
+        <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+        <div class="modal-search-bar">dislocal.com</div>
+        <button type="button" class="close-btn-text" onclick="closeModal('modal-dislocal')" data-es="Cerrar" data-en="Close">Cerrar</button>
+      </div>
+      <div class="modal-content-scroll">
+        <div class="modal-hero-banner"><img src="/portada-dislocal.png" alt="Dislocal Banner" /></div>
+        <div class="modal-title-row">
+          <div class="title-text-group">
+            <span class="project-counter" data-es="Contexto del proyecto" data-en="Project context">Contexto del proyecto</span>
+            <h2>Dislocal</h2>
+          </div>
+          <a href="https://www.dislocal.org/" target="_blank" class="simple-modal-link" data-es="🌐 Visitar Sitio Web" data-en="🌐 Visit Website">🌐 Visitar Sitio Web</a>
+        </div>
+        <p class="modal-description" data-es="Coordiné la planificación y ejecución logística de proyectos de impacto local, entre ellos el trabajo en Barrio El Calvario. Organicé cronogramas, tareas, responsables y recursos para mantener alineados a equipos que trabajaban tanto en planificación como en terreno." data-en="I coordinated the planning and logistics of local-impact projects, including work in Barrio El Calvario. I organized timelines, tasks, owners and resources to keep teams aligned across both planning and field execution.">Coordiné la planificación y ejecución logística de proyectos de impacto local, entre ellos el trabajo en Barrio El Calvario. Organicé cronogramas, tareas, responsables y recursos para mantener alineados a equipos que trabajaban tanto en planificación como en terreno.</p>
+        <div class="metadata-grid">
+          <div><span class="meta-label" data-es="Rol" data-en="Role">Rol</span><span class="meta-val">Production Mgr. & Project Coordinator</span></div>
+          <div><span class="meta-label" data-es="Herramientas" data-en="Tools">Herramientas</span><span class="meta-val" data-es="Trello, Asana, Metodologías Ágiles" data-en="Trello, Asana, Agile Methodologies">Trello, Asana, Metodologías Ágiles</span></div>
+          <div><span class="meta-label" data-es="Inicio" data-en="Start">Inicio</span><span class="meta-val">2021</span></div>
+        </div>
+        <div class="modal-gallery-container">
+          <h3 data-es="Galería del Proyecto" data-en="Project Gallery">Galería del Proyecto</h3>
+          <div class="bento-collage">
+            
+            <div class="media-card bento-vertical">
+              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Proyecto Dislocal en acción" onclick="openGalleryZoom(this)" style="background:#000;">
+                <source src="/video dislocal.mp4" type="video/mp4" />
+              </video>
+              <div class="media-caption">Proyecto Dislocal en acción</div>
+            </div>
+
+            <div class="media-card bento-horizontal">
+              <video playsinline loop muted autoplay class="horizontal-vid" data-caption="Navegación web Dislocal" onclick="openGalleryZoom(this)" style="background:#000;">
+                <source src="/web dislocal.mp4" type="video/mp4" />
+              </video>
+              <div class="media-caption">Navegación web Dislocal</div>
+            </div>
+
+            <div class="media-card bento-horizontal">
+              <img src="/dislocal 1.png" alt="Logística y trabajo de campo" class="horizontal-img w-full-img" data-caption="Evento social para la comunidad del Calvario en el cine." onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
+              <div class="media-caption">Evento social en el cine (El Calvario)</div>
+            </div>
+
+            <div class="media-card bento-horizontal">
+              <img src="/dislocal 202.png" alt="Organización de eventos Dislocal" class="horizontal-img w-full-img" data-caption="Documentación de la vida cotidiana en el Calvario." onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
+              <div class="media-caption">Documentación en campo</div>
+            </div>
+
+            <div class="media-card bento-horizontal">
+              <img src="/imagen trello dislocal (2).png" alt="Tablero Trello" class="horizontal-img w-full-img" data-caption="Coordinación de recursos y tareas en Trello" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
+              <div class="media-caption">Coordinación de recursos en Trello</div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-impaktemos" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true" onclick="closeModalOutside(event, 'modal-impaktemos')">
+    <div class="modal-window">
+      <div class="modal-mac-bar">
+        <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+        <div class="modal-search-bar">impaktemos.com</div>
+        <button type="button" class="close-btn-text" onclick="closeModal('modal-impaktemos')" data-es="Cerrar" data-en="Close">Cerrar</button>
+      </div>
+      <div class="modal-content-scroll">
+        <div class="modal-hero-banner"><img src="/portada-impaktemos.png" alt="Impaktemos Banner" /></div>
+        <div class="modal-title-row">
+          <div class="title-text-group">
+            <span class="project-counter" data-es="Contexto del proyecto" data-en="Project context">Contexto del proyecto</span>
+            <h2>Impaktemos</h2>
+          </div>
+          <a href="https://minitas-mission-guide.lovable.app/" target="_blank" class="simple-modal-link" data-es="🌐 Ver Landing Page" data-en="🌐 View Landing Page">🌐 Ver Landing Page</a>
+        </div>
+        <p class="modal-description" data-es="En la Plataforma Las Minitas combiné coordinación operativa y web. Junto al equipo organizador desarrollé una landing para centralizar información, ordenar horarios y tareas, y facilitar la coordinación de voluntarios durante la jornada." data-en="For the Las Minitas Platform I combined operations and web work. Together with the organizing team, I developed a landing page to centralize information, organize schedules and tasks, and make volunteer coordination easier during the event.">En la Plataforma Las Minitas combiné coordinación operativa y web. Junto al equipo organizador desarrollé una landing para centralizar información, ordenar horarios y tareas, y facilitar la coordinación de voluntarios durante la jornada.</p>
+        <div class="metadata-grid">
+          <div><span class="meta-label" data-es="Rol" data-en="Role">Rol</span><span class="meta-val" data-es="Coordinadora Operativa & Web" data-en="Operational & Web Coordinator">Coordinadora Operativa & Web</span></div>
+          <div><span class="meta-label" data-es="Herramientas" data-en="Tools">Herramientas</span><span class="meta-val">HTML, CSS, Astro, Landing Pages</span></div>
+          <div><span class="meta-label" data-es="Inicio" data-en="Start">Inicio</span><span class="meta-val">2023</span></div>
+        </div>
+        <div class="modal-gallery-container">
+          <h3 data-es="Galería del Proyecto" data-en="Project Gallery">Galería del Proyecto</h3>
+          <div class="bento-collage">
+            
+            <div class="media-card bento-vertical">
+              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Plataforma Las Minitas en acción" onclick="openGalleryZoom(this)" style="background:#000;">
+                <source src="/video plataforma.mp4" type="video/mp4" />
+              </video>
+              <div class="media-caption">Plataforma Las Minitas en acción</div>
+            </div>
+
+            <div class="media-card bento-vertical">
+              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Intervención logística en Ciudad Piar, La Guaira." onclick="openGalleryZoom(this)" style="background:#000;">
+                <source src="/ciudad piar.mp4" type="video/mp4" />
+              </video>
+              <div class="media-caption">Logística en Ciudad Piar, La Guaira</div>
+            </div>
+
+            <div class="media-card bento-horizontal">
+              <img src="/impaktemos 1.png" alt="Refuerzo escolar" class="horizontal-img w-full-img" data-caption="Refuerzo escolar en plataforma las minitas." onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
+              <div class="media-caption">Refuerzo escolar (Las Minitas)</div>
+            </div>
+
+            <div class="media-card bento-horizontal">
+              <img src="/landingpage plataforma.png" alt="Diseño de Landing Page" class="horizontal-img w-full-img" data-caption="Diseño UI/UX de la Landing Page" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
+              <div class="media-caption">Diseño de Landing Page</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-freelance" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true" onclick="closeModalOutside(event, 'modal-freelance')">
+    <div class="modal-window">
+      <div class="modal-mac-bar">
+        <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+        <div class="modal-search-bar">freelance.projects</div>
+        <button type="button" class="close-btn-text" onclick="closeModal('modal-freelance')" data-es="Cerrar" data-en="Close">Cerrar</button>
+      </div>
+      <div class="modal-content-scroll">
+        <div class="modal-hero-banner"><img src="/portada freelance.png" alt="Freelance Banner" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlMmU4ZjAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZmlsbD0iIzk0YTNiOCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5EaXNlw7FvIHkgV2ViPC90ZXh0Pjwvc3ZnPg=='" /></div>
+        <div class="modal-title-row">
+          <div class="title-text-group">
+            <span class="project-counter" data-es="Contexto del proyecto" data-en="Project context">Contexto del proyecto</span>
+            <h2 data-es="Proyectos Freelance" data-en="Freelance Projects">Proyectos Freelance</h2>
+          </div>
+        </div>
+        <p class="modal-description" data-es="Diseño y desarrollo sitios web para proyectos con necesidades muy distintas: marcas personales, perfiles profesionales y archivos editoriales. Me encargo de ordenar el contenido, definir la experiencia y llevarla a una web rápida y fácil de recorrer." data-en="I design and build websites for projects with very different needs: personal brands, professional profiles and editorial archives. I organize the content, define the experience and turn it into a fast, easy-to-navigate website.">Diseño y desarrollo sitios web para proyectos con necesidades muy distintas: marcas personales, perfiles profesionales y archivos editoriales. Me encargo de ordenar el contenido, definir la experiencia y llevarla a una web rápida y fácil de recorrer.</p>
+        <div class="metadata-grid">
+          <div><span class="meta-label" data-es="Rol" data-en="Role">Rol</span><span class="meta-val" data-es="Desarrolladora Web & Diseñadora" data-en="Web Developer & Designer">Desarrolladora Web & Diseñadora</span></div>
+          <div><span class="meta-label" data-es="Herramientas" data-en="Tools">Herramientas</span><span class="meta-val">Astro, HTML/CSS, Canva Pro, Figma</span></div>
+          <div><span class="meta-label" data-es="Inicio" data-en="Start">Inicio</span><span class="meta-val">2026</span></div>
+        </div>
+        <div class="modal-gallery-container">
+          <h3 data-es="Casos de Diseño Web" data-en="Web Design Cases">Casos de Diseño Web</h3>
+          
+          <div class="bento-collage">
+            <!-- Video Laura Navarro -->
+            <div class="media-card bento-horizontal">
+              <video playsinline loop muted autoplay class="horizontal-vid" data-caption="Diseño Web - Laura Navarro" onclick="openGalleryZoom(this)">
+                <source src="/laura navarro.mp4" type="video/mp4" />
+              </video>
+              <div class="media-caption">Diseño Web - Laura Navarro</div>
+              <a href="https://gserrano2024cs-ctrl.github.io/Dra.LauraNavarroActiveLearningEducationLeadership/" target="_blank" class="freelance-link" data-es="🌐 Ver sitio: Laura Navarro" data-en="🌐 View site: Laura Navarro">🌐 Ver sitio web</a>
+            </div>
+
+            <!-- Video Beatriz Briceño -->
+            <div class="media-card bento-horizontal">
+              <video playsinline loop muted autoplay class="horizontal-vid" data-caption="Diseño Web - Beatriz Briceño" onclick="openGalleryZoom(this)">
+                <source src="/bea briceño.mp4" type="video/mp4" />
+              </video>
+              <div class="media-caption">Diseño Web - Beatriz Briceño</div>
+              <a href="https://beatriz-brice-o-pic-n.vercel.app/" target="_blank" class="freelance-link" data-es="🌐 Ver sitio: Beatriz Briceño" data-en="🌐 View site: Beatriz Briceño">🌐 Ver sitio web</a>
+            </div>
+
+            <!-- Video MBI -->
+            <div class="media-card bento-horizontal">
+              <video playsinline loop muted autoplay class="horizontal-vid" data-caption="Diseño Web - Mario Briceño Iragorry" onclick="openGalleryZoom(this)">
+                <source src="/mbi.mp4" type="video/mp4" />
+              </video>
+              <div class="media-caption">Diseño Web - Mario Briceño Iragorry</div>
+              <a href="https://mbihoy.vercel.app/?v=1" target="_blank" class="freelance-link" data-es="🌐 Ver sitio: Mario Briceño Iragorry" data-en="🌐 View site: Mario Briceño Iragorry">🌐 Ver sitio web</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DOCK FLOTANTE -->
+  <nav class="floating-dock">
+    <ul class="dock-list">
+      <li class="dock-item" data-tooltip="Sobre mí" data-tooltip-es="Sobre mí" data-tooltip-en="About Me"><a href="#about" class="dock-link"><img src="/notas.webp" class="mac-icon" alt="Notas"></a></li>
+      <li class="dock-item" data-tooltip="Trabajo" data-tooltip-es="Trabajo" data-tooltip-en="Work"><a href="#projects" class="dock-link"><img src="/foto.png" class="mac-icon" alt="Fotos"></a></li>
+      <li class="dock-item" data-tooltip="Cómo trabajo" data-tooltip-es="Cómo trabajo" data-tooltip-en="How I work"><a href="#services" class="dock-link"><img src="/finder icon.png" class="mac-icon" alt="Finder"></a></li>
+      <li class="dock-item" data-tooltip="Contacto" data-tooltip-es="Contacto" data-tooltip-en="Contact"><a href="#contact" class="dock-link"><img src="/ICON MAIL.webp" class="mac-icon" alt="Mail"></a></li>
+    </ul>
+  </nav>
+
+  <script is:inline>
+    function setLanguage(lang, trigger) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn === trigger);
+        btn.setAttribute('aria-pressed', btn === trigger ? 'true' : 'false');
+      });
+      
+      document.querySelectorAll('[data-es]').forEach(el => { 
+        const value = el.getAttribute(`data-${lang}`);
+        if (value !== null) el.innerHTML = value;
+      });
+      
+      document.querySelectorAll('[data-tooltip-es]').forEach(el => { 
+        el.setAttribute('data-tooltip', el.getAttribute(`data-tooltip-${lang}`)); 
+      });
+      
+      const msgArea = document.getElementById('wa-message');
+      if(msgArea) { 
+        msgArea.placeholder = lang === 'es' ? msgArea.getAttribute('data-es-placeholder') : "Hi Grey, I'm working on..."; 
       }
-    </script>
-  </body>
+    }
+
+    function openModal(modalId) { 
+      const modal = document.getElementById(modalId);
+      if (!modal) return;
+      modal.classList.add('active');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+      const closeButton = modal.querySelector('.close-btn-text');
+      closeButton?.focus({ preventScroll: true });
+    }
+
+    function closeModal(modalId) { 
+      const modal = document.getElementById(modalId);
+      if (!modal) return;
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden', 'true');
+      if (!document.querySelector('.modal-overlay.active') && !document.getElementById('zoom-overlay')?.classList.contains('active')) {
+        document.body.classList.remove('modal-open');
+      }
+    }
+
+    function closeModalOutside(event, modalId) {
+      if (event.target.id === modalId) closeModal(modalId);
+    }
+
+    function openCardFromKeyboard(event, modalId) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openModal(modalId);
+      }
+    }
+
+    function toggleProfileZoom(event) {
+        event.stopPropagation();
+        event.target.classList.toggle('zoomed');
+    }
+    
+    function openGalleryZoom(element) {
+        const overlay = document.getElementById('zoom-overlay');
+        const container = document.getElementById('zoom-media-container');
+        const caption = document.getElementById('zoom-caption');
+        
+        container.innerHTML = ''; 
+        
+        if (element.tagName === 'VIDEO') {
+            const video = document.createElement('video');
+            video.src = element.querySelector('source').src;
+            video.controls = true; 
+            video.autoplay = true;
+            video.className = 'zoom-media';
+            container.appendChild(video);
+        } else {
+            const img = document.createElement('img');
+            img.src = element.src;
+            img.className = 'zoom-media';
+            container.appendChild(img);
+        }
+        
+        caption.innerText = element.getAttribute('data-caption') || '';
+        overlay.classList.add('active');
+        document.body.classList.add('modal-open');
+    }
+
+    function closeZoom(e) {
+        if (e.target.id === 'zoom-overlay' || e.target.classList.contains('zoom-close')) {
+            document.getElementById('zoom-overlay').classList.remove('active');
+            document.getElementById('zoom-media-container').innerHTML = '';
+            if (!document.querySelector('.modal-overlay.active')) document.body.classList.remove('modal-open');
+        }
+    }
+
+    document.addEventListener('click', function(event) {
+        const profileImg = document.getElementById('heroProfileImg');
+        if (profileImg && profileImg.classList.contains('zoomed') && event.target !== profileImg) {
+            profileImg.classList.remove('zoomed');
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape') return;
+
+      const zoom = document.getElementById('zoom-overlay');
+      if (zoom?.classList.contains('active')) {
+        zoom.classList.remove('active');
+        document.getElementById('zoom-media-container').innerHTML = '';
+      }
+
+      document.querySelectorAll('.modal-overlay.active').forEach(modal => {
+        closeModal(modal.id);
+      });
+
+      document.getElementById('heroProfileImg')?.classList.remove('zoomed');
+    });
+
+    function sendToWhatsApp(event) {
+      event.preventDefault();
+      const acceptCheckbox = document.getElementById('privacy-accept');
+      if(!acceptCheckbox.checked) {
+          alert("Debes aceptar la política de privacidad para enviar el mensaje.");
+          return;
+      }
+      const name = document.getElementById('wa-name').value;
+      const email = document.getElementById('wa-email').value;
+      const message = document.getElementById('wa-message').value;
+      const phone = "584126339776";
+      const text = encodeURIComponent(`¡Hola Grey! Soy ${name} (${email}).\n\n${message}`);
+      window.open(`https://wa.me/${phone}?text=${text}`, '_blank', 'noopener,noreferrer');
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add('loaded');
+    });
+  </script>
+
+</body>
 </html>
+
+<style is:global>
+  :root {
+    --navy-dark: #0f172a; --pastel-yellow: #fef08a; --pastel-pink: #fbcfe8; --pastel-green: #bbf7d0;
+    --glass-bg: rgba(255, 255, 255, 0.4); --glass-border: rgba(255, 255, 255, 0.6); --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
+    --text-muted: #475569; --bg-soft: rgba(255, 255, 255, 0.7); --border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--navy-dark); overflow-x: hidden; position: relative; scroll-behavior: smooth; }
+
+  .fade-in-section { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+  body.loaded .fade-in-section { opacity: 1; transform: translateY(0); }
+  .delay-1 { transition-delay: 0.1s; } .delay-2 { transition-delay: 0.2s; } .delay-3 { transition-delay: 0.3s; }
+  .delay-4 { transition-delay: 0.4s; } .delay-5 { transition-delay: 0.5s; } .delay-6 { transition-delay: 0.6s; }
+
+  .global-fixed-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #f8fafc; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E"); z-index: -999; }
+  .sticker { position: absolute; opacity: 0.7; }
+  .sticker-star { top: 12%; right: 15%; transform: rotate(15deg); }
+  .sticker-plant { bottom: 20%; left: 8%; transform: rotate(-10deg); opacity: 0.6; }
+  .sticker-sparkle { top: 40%; right: 5%; transform: rotate(5deg); }
+
+  .zoom-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.92); z-index: 999999; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; visibility: hidden; transition: all 0.3s ease; padding: 20px; backdrop-filter: blur(5px); }
+  .zoom-overlay.active { opacity: 1; visibility: visible; }
+  .zoom-content-wrapper { position: relative; display: flex; flex-direction: column; align-items: center; max-width: 90vw; }
+  .zoom-media { max-width: 100%; max-height: 75vh; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); object-fit: contain; }
+  .zoom-caption { color: #ffffff; margin-top: 16px; font-size: 1.15rem; font-weight: 600; text-align: center; max-width: 600px; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
+  .zoom-close { position: absolute; top: 25px; right: 35px; background: rgba(255,255,255,0.15); border: none; color: white; width: 44px; height: 44px; border-radius: 50%; font-size: 22px; cursor: pointer; transition: background 0.3s; z-index: 9999999; display: flex; align-items: center; justify-content: center; }
+  .zoom-close:hover { background: rgba(255,255,255,0.35); }
+
+  .hero-wrapper { position: relative; width: 100%; min-height: 100vh; overflow: hidden; z-index: 10; background: #000; }
+  .hero-video-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+  .video-bg { width: 100%; height: 100%; object-fit: cover; opacity: 0.8;}
+  .avila-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.35); }
+  .top-header { position: relative; width: 100%; max-width: 1300px; margin: 0 auto; padding: 24px 32px; display: flex; justify-content: flex-end; align-items: center; z-index: 10; }
+  .brand-centered { position: absolute; top: 38px; left: 50%; transform: translateX(-50%); font-weight: 900; font-size: 20px; letter-spacing: -0.02em; color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.4); white-space: nowrap; }
+  
+  .lang-switch.dark-mode { background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px); padding: 4px; border-radius: 30px; display: flex; align-items: center; gap: 4px; border: 1px solid rgba(255,255,255,0.1); }
+  .lang-btn { background: transparent; border: none; font-weight: 700; font-size: 12px; color: rgba(255,255,255,0.6); cursor: pointer; padding: 6px 12px; border-radius: 20px; transition: all 0.3s ease; }
+  .lang-btn.active { background: rgba(255,255,255,0.15); color: #ffffff; font-weight: 900; }
+
+  .hero-container { max-width: 1300px; width: 100%; margin: auto auto; padding: 20px 32px 100px; display: grid; grid-template-columns: 320px 1fr 260px; gap: 24px; align-items: center; min-height: calc(100vh - 120px); position: relative; z-index: 10; }
+  .left-col { position: relative; display: flex; flex-direction: column; gap: 28px; }
+  
+  .glass-profile-card { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 24px; padding: 16px 20px; cursor: pointer; box-shadow: var(--glass-shadow); transition: all 0.4s; overflow: hidden; }
+  
+  .card-min-header { display: flex; align-items: center; gap: 14px; transition: all 0.4s ease; flex-direction: row !important; }
+  .shift-right { margin-left: 6px; } 
+  .profile-thumb { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.9); transition: all 0.3s ease; flex-shrink: 0; cursor: zoom-in; }
+  
+  .glass-profile-card.active .card-min-header { flex-direction: row !important; align-items: center; gap: 16px; }
+  .glass-profile-card.active .profile-thumb { width: 75px; height: 75px; border-width: 3px; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.15); margin-left: 0; }
+  
+  .profile-thumb.zoomed { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(5); z-index: 99999; box-shadow: 0 0 0 100vmax rgba(0,0,0,0.85); cursor: zoom-out; border: none; }
+  @media (max-width: 900px) { .profile-thumb.zoomed { transform: translate(-50%, -50%) scale(3.5); } }
+
+  .min-meta { display: flex; flex-direction: column; justify-content: center; }
+  .status-line { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+  @keyframes blink-green { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
+  .green-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: blink-green 2.5s infinite; }
+  .status-text { font-size: 11px; font-weight: 700; color: #1e293b; }
+  .name-group { display: flex; flex-direction: column; gap: 2px; }
+  .min-name { font-size: 15px; font-weight: 900; letter-spacing: -0.01em; line-height: 1.1; }
+  .min-title { font-size: 11.5px; font-weight: 700; opacity: 0.65; }
+  
+  .card-expand-content { max-height: 0; opacity: 0; transition: all 0.5s; overflow: hidden; }
+  .glass-profile-card.active .card-expand-content { max-height: 600px; opacity: 1; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.4); }
+  .expand-bio { font-size: 15px; font-weight: 500; line-height: 1.55; margin-bottom: 16px; }
+  .expand-bio strong { font-weight: 900; color: #000; }
+  
+  .skills-title { font-size: 11px; font-weight: 800; color: var(--navy-dark); text-transform: uppercase; margin-bottom: 8px; opacity: 0.8; }
+  .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .skills-grid span { font-size: 10.5px; font-weight: 800; background: rgba(255, 255, 255, 0.75); padding: 8px 10px; border-radius: 6px; text-align: center; white-space: nowrap; }
+  .skills-grid .wide-skill { grid-column: span 2; }
+  
+  .hero-quote-corner { position: absolute; bottom: 40px; left: 32px; max-width: 320px; z-index: 10;}
+  .hero-quote-corner span { font-size: 17px; font-weight: 800; letter-spacing: -0.02em; color: #ffffff; text-shadow: 0 2px 14px rgba(0,0,0,0.8); line-height: 1.4; display: block; }
+  
+  .hero-center-text { text-align: center; position: relative; display: flex; justify-content: center; align-items: center; }
+  .hero-center-text h1 { font-size: 5.5rem; font-weight: 900; line-height: 0.98; letter-spacing: -0.04em; text-transform: uppercase; margin: 0 auto; max-width: 900px; color: #ffffff; text-shadow: 0 8px 30px rgba(0,0,0,0.3); }
+  .floating-pill { position: absolute; padding: 6px 14px; border-radius: 30px; font-size: 12px; font-weight: 800; white-space: nowrap; color: var(--navy-dark); pointer-events: none;}
+  .pill-pink { background: var(--pastel-pink); top: -25px; right: 15px; transform: rotate(3deg); }
+  .pill-green { background: var(--pastel-green); bottom: -30px; left: 10%; transform: rotate(-6deg); }
+  .pill-yellow { background: var(--pastel-yellow); bottom: -25px; right: 40px; transform: rotate(2deg); }
+  
+  .glass-cases-card { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 20px; padding: 14px 18px; cursor: pointer; transition: all 0.4s; overflow: hidden; box-shadow: var(--glass-shadow); }
+  .cases-min-header { display: flex; align-items: center; justify-content: space-between; }
+  .cases-title-text { font-size: 14px; font-weight: 800; color: var(--navy-dark); }
+  .search-icon-wrapper { background: rgba(0, 0, 0, 0.05); border-radius: 50%; padding: 6px; display: flex; color: var(--navy-dark); }
+  .cases-expand-content { max-height: 0; opacity: 0; transition: all 0.5s; }
+  .glass-cases-card.active .cases-expand-content { max-height: 350px; opacity: 1; margin-top: 14px; }
+  .quick-cases-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .quick-cases-list li { display: flex; align-items: flex-start; gap: 8px; }
+  .quick-cases-list a { text-decoration: none; display: flex; flex-direction: column; font-size: 13.5px; }
+  .quick-cases-list strong { font-weight: 800; color: var(--navy-dark);}
+  .quick-cases-list span { font-size: 11px; color: var(--text-muted); margin-top: 2px;}
+
+  .marquee-section { width: 100%; background: #ffffff; padding: 15px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); z-index: 5; position: relative; overflow: hidden; }
+  .marquee-container { width: 100vw; max-width: 100%; overflow: hidden; display: flex; align-items: center; }
+  .marquee-track { display: flex; gap: 60px; padding-right: 60px; width: max-content; animation: scroll-marquee 30s linear infinite; }
+  .marquee-track img { height: 60px; width: auto; opacity: 0.4; filter: grayscale(100%); transition: all 0.3s ease; }
+  .marquee-track img:hover { opacity: 1; filter: grayscale(0%); cursor: pointer; }
+  @keyframes scroll-marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+  .about-section, .projects-section, .services-section, .contact-section { position: relative; width: 100%; padding: 80px 32px; z-index: 5; display: flex; justify-content: center; }
+  .contact-section { padding-bottom: 160px; background-color: #ffffff; }
+  .about-container, .projects-container, .services-container, .contact-container { max-width: 900px; width: 100%; display: flex; flex-direction: column; align-items: center; }
+  .projects-container { max-width: 1200px; }
+
+  .sticky-note { position: relative; background-color: var(--pastel-yellow); padding: 10px 18px 6px; border-radius: 6px; box-shadow: 2px 4px 10px rgba(0,0,0,0.05); transform: rotate(-3deg); margin-bottom: 24px; display: flex; align-items: center; justify-content: center; }
+  .real-pin { position: absolute; top: -12px; width: 24px; height: 24px; filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.2)); }
+  .note-text { font-weight: 800; font-size: 13px; color: var(--navy-dark); text-transform: uppercase; letter-spacing: 0.05em; }
+  .about-header, .section-header { text-align: center; margin-bottom: 40px; }
+  .about-header h2, .section-header h2 { font-size: 3.5rem; font-weight: 900; line-height: 1.1; letter-spacing: -0.03em; color: var(--navy-dark); margin-bottom: 16px; }
+  .about-subtitle, .section-header p { font-size: 1.4rem; line-height: 1.6; color: var(--text-muted); max-width: 800px; margin: 0 auto; font-weight: 500; }
+  
+  .mac-window { width: 100%; background: var(--bg-soft); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--border-color); border-radius: 16px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06); overflow: hidden; }
+  .mac-titlebar { background: rgba(241, 245, 249, 0.8); padding: 14px 20px; display: flex; align-items: center; border-bottom: 1px solid var(--border-color); }
+  .mac-buttons { display: flex; gap: 8px; }
+  .mac-dot { width: 12px; height: 12px; border-radius: 50%; }
+  .mac-dot.red { background-color: #ff5f56; border: 1px solid #e0443e; }
+  .mac-dot.yellow { background-color: #ffbd2e; border: 1px solid #dea123; }
+  .mac-dot.green { background-color: #27c93f; border: 1px solid #1aab29; }
+  
+  .mac-content { display: grid; grid-template-columns: 280px 1fr; gap: 40px; padding: 40px; align-items: center; }
+  .bio-image-col { display: flex; justify-content: center; }
+  
+  .animated-memoji { animation: slideUpFade 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards; opacity: 0; transform: translateY(40px); }
+  @keyframes slideUpFade { to { opacity: 1; transform: translateY(0); } }
+  
+  .memoji-circle { width: 240px; height: 240px; border-radius: 50%; object-fit: cover; background-color: #fef08a; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+  .bio-info-col { display: flex; flex-direction: column; gap: 30px; }
+  .bio-intro { font-size: 1.2rem; line-height: 1.6; color: var(--navy-dark); }
+  .bio-intro strong { font-weight: 800; }
+  
+  .stats-grid-about { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .iridescent-text { font-size: 2.5rem; font-weight: 900; margin-bottom: 4px; background: linear-gradient(90deg, #9b51e0, #ff7e5f, #00c6ff, #9b51e0); background-size: 300% 100%; animation: iridescence 5s ease infinite; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  @keyframes iridescence { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+  .stat-item p { font-size: 15px; font-weight: 600; color: var(--text-muted); line-height: 1.3; }
+
+  .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 30px; width: 100%; } 
+  .project-card { background: var(--bg-soft); backdrop-filter: blur(12px); border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; } 
+  .project-card:hover { transform: translateY(-6px); box-shadow: 0 20px 30px rgba(0,0,0,0.08); } 
+  .card-mac-header { background: rgba(241, 245, 249, 0.8); padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); } 
+  .mac-dots { display: flex; gap: 6px; } 
+  .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; } 
+  .dot.red { background: #ff5f56; } .dot.yellow { background: #ffbd2e; } .dot.green { background: #27c93f; } 
+  .project-num-tag { font-family: monospace; font-size: 14px; font-weight: 800; color: var(--text-muted); opacity: 0.5; }
+  .card-body { padding: 20px; text-align: center; } 
+  .card-img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 16px; border: 1px solid rgba(0,0,0,0.05); } 
+  .card-body h3 { font-size: 18px; margin: 0 0 6px; font-weight: 800; } 
+  .card-company { font-size: 13px; color: var(--text-muted); margin: 0; font-weight: 600;}
+
+  .services-grid-blocks { display: flex; flex-direction: column; gap: 20px; width: 100%; max-width: 800px;}
+  .service-block { padding: 20px 30px; border-radius: 16px; backdrop-filter: blur(12px); border-width: 1px; border-style: solid; box-shadow: 0 10px 30px rgba(0,0,0,0.03); cursor: pointer; transition: all 0.3s; overflow: hidden;}
+  .service-block:hover { transform: translateY(-3px); }
+  .service-block-header { display: flex; justify-content: space-between; align-items: center; }
+  .service-block-header h3 { font-size: 1.4rem; font-weight: 800; color: var(--navy-dark); margin-bottom: 0;}
+  .icon-plus { font-size: 1.5rem; font-weight: 800; color: var(--navy-dark); transition: transform 0.3s; }
+  .service-block.open .icon-plus { transform: rotate(45deg); }
+  .service-block-body { max-height: 0; opacity: 0; transition: all 0.4s ease; overflow: hidden; }
+  .service-block.open .service-block-body { max-height: 800px; opacity: 1; margin-top: 14px; }
+  
+  /* ESTILOS DE SOLUCIÓN Y PROBLEMA (MINIMALISTA - APPLE STYLE) */
+  .minimal-flow { display: flex; align-items: center; gap: 20px; margin-top: 10px; background: rgba(255,255,255,0.6); padding: 20px; border-radius: 12px; border: 1px solid var(--border-color); }
+  .flow-block { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+  .flow-label { font-size: 11px; font-weight: 800; text-transform: uppercase; color: var(--navy-dark); opacity: 0.5; letter-spacing: 0.5px; }
+  .flow-text { font-size: 1.05rem; line-height: 1.5; color: var(--navy-dark); margin: 0; }
+  .flow-text.text-muted { font-weight: 500; color: var(--text-muted); }
+  .flow-text.text-strong { font-weight: 700; color: var(--navy-dark); }
+  .flow-arrow { flex-shrink: 0; color: var(--navy-dark); opacity: 0.3; display: flex; align-items: center; justify-content: center; }
+  .flow-arrow svg { width: 24px; height: 24px; }
+
+  .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0; }
+  .light-gray-bg { background: #f8fafc; border-right: 1px solid var(--border-color); }
+  .contact-left { padding: 50px; }
+  
+  .coffee-title { display: flex; align-items: center; gap: 12px; font-size: 2.4rem; font-weight: 900; margin-bottom: 16px; color: var(--navy-dark); letter-spacing: -0.02em; }
+  .coffee-cup-svg { color: #8B5A2B; flex-shrink: 0;}
+  .steam { animation: rise-smooth 2.5s infinite ease-in-out; opacity: 0; stroke-width: 1.5px; }
+  .steam-1 { animation-delay: 0s; } .steam-2 { animation-delay: 0.8s; } .steam-3 { animation-delay: 1.6s; }
+  @keyframes rise-smooth { 
+    0% { transform: translateY(2px) scale(0.9); opacity: 0; } 
+    30% { opacity: 0.6; } 
+    70% { opacity: 0.6; } 
+    100% { transform: translateY(-12px) scale(1.1); opacity: 0; } 
+  }
+
+  .contact-left p { font-size: 1.1rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 30px; font-weight: 500; }
+  
+  .contact-socials-row { display: flex; gap: 16px; margin-top: 20px; }
+  .social-icon-btn { background: rgba(255,255,255,0.7); width: 54px; height: 54px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--navy-dark); border: 1px solid var(--border-color); transition: all 0.3s; }
+  .social-icon-btn:hover { background: white; transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); color: #000;}
+  
+  .contact-right { padding: 50px; }
+  .contact-form { display: flex; flex-direction: column; gap: 20px; }
+  .input-group { display: flex; flex-direction: column; gap: 8px; }
+  .input-group label { font-size: 0.9rem; font-weight: 800; color: var(--navy-dark); text-transform: uppercase; }
+  .input-group input, .input-group textarea { width: 100%; padding: 14px; border-radius: 8px; border: 1px solid var(--border-color); background: rgba(255,255,255,0.8); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1rem; color: var(--navy-dark); outline: none; transition: border 0.3s; }
+  .input-group input:focus, .input-group textarea:focus { border-color: var(--navy-dark); }
+  
+  .privacy-disclaimer { background: rgba(15, 23, 42, 0.8); padding: 16px; border-radius: 8px; margin-top: 10px; border: 1px solid rgba(0,0,0,0.2); }
+  .privacy-disclaimer p { font-size: 0.85rem; color: rgba(255,255,255,0.8) !important; line-height: 1.5; margin: 0; }
+  .privacy-link { color: #ef4444; text-decoration: underline; font-weight: 600; }
+  .privacy-link:hover { color: #f87171; }
+  .privacy-checkbox-group { display: flex; align-items: center; gap: 10px; margin-top: 10px; }
+  .privacy-checkbox-group input { width: 18px; height: 18px; cursor: pointer; accent-color: var(--navy-dark); }
+  .privacy-checkbox-group label { font-size: 0.9rem; color: var(--navy-dark) !important; font-weight: 600; cursor: pointer; }
+
+  .submit-btn { background: var(--navy-dark); color: white; border: none; padding: 16px; border-radius: 8px; font-size: 1.1rem; font-weight: 800; cursor: pointer; transition: background 0.3s; margin-top: 10px; }
+  .submit-btn:hover { background: #1e293b; }
+
+  /* FOOTER NEGRO SÓLIDO Y ANIMACIÓN DE OJOS */
+  .black-footer { background: #000000; color: rgba(255,255,255,0.6); padding: 30px 20px 120px; text-align: center; font-size: 0.95rem; font-weight: 600; position: relative; z-index: 5; border: none; }
+  
+  .hidden-eyes-container { display: flex; justify-content: center; margin-bottom: 20px; opacity: 0.06; pointer-events: none; }
+  .blinking-eyes { transform-origin: center; animation: subtle-blink 5s infinite; }
+  @keyframes subtle-blink {
+    0%, 92%, 96%, 100% { transform: scaleY(1); }
+    94%, 98% { transform: scaleY(0.1); }
+  }
+
+  .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(8px); display: flex; justify-content: center; align-items: center; z-index: 10000; padding: 20px; opacity: 0; visibility: hidden; transition: all 0.3s ease; } 
+  .modal-overlay.active { opacity: 1; visibility: visible; } 
+  .modal-window { background: white; width: 100%; max-width: 820px; max-height: 85vh; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 25px 50px rgba(0,0,0,0.25); border: 1px solid var(--border-color); transform: translateY(30px) scale(0.95); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); } 
+  .modal-overlay.active .modal-window { transform: translateY(0) scale(1); }
+  .modal-mac-bar { background: #f1f5f9; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); } 
+  .modal-search-bar { background: white; padding: 6px 16px; border-radius: 20px; font-size: 12px; color: var(--text-muted); font-weight: 500; border: 1px solid var(--border-color); flex-grow: 1; margin: 0 20px; text-align: center; } 
+  .close-btn-text { background: none; border: none; font-size: 13px; font-weight: 800; color: var(--navy-dark); cursor: pointer; } 
+  .modal-content-scroll { overflow-y: auto; padding: 30px; } 
+  .modal-hero-banner img { width: 100%; max-height: 320px; object-fit: cover; border-radius: 12px; margin-bottom: 24px; border: 1px solid rgba(0,0,0,0.05); } 
+  
+  .modal-title-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; } 
+  .title-text-group { display: flex; flex-direction: column; }
+  .modal-title-row h2 { font-size: 24px; margin: 0; font-weight: 900; color: var(--navy-dark); } 
+  .simple-modal-link { color: #3b82f6; font-weight: 700; text-decoration: none; font-size: 14px; transition: color 0.3s; }
+  .simple-modal-link:hover { color: #1d4ed8; text-decoration: underline; }
+  
+  .modal-description { font-size: 15px; line-height: 1.6; color: var(--text-muted); margin-bottom: 28px; font-weight: 500; } 
+  .metadata-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 16px; background: rgba(241, 245, 249, 0.5); padding: 20px; border-radius: 12px; border: 1px solid var(--border-color); margin-bottom: 30px; } 
+  .meta-label { font-size: 11px; font-weight: 800; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 4px; } 
+  .meta-val { font-size: 14px; font-weight: 700; color: var(--navy-dark); } 
+
+  /* ESTRUCTURA BENTO COLLAGE Y MEDIA CARDS */
+  .modal-gallery-container { margin-top: 30px; border-top: 1px solid var(--border-color); padding-top: 24px; }
+  .modal-gallery-container h3 { font-size: 1.2rem; font-weight: 900; color: var(--navy-dark); margin-bottom: 16px; }
+  
+  .bento-collage { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; width: 100%; align-items: start; }
+  .bento-vertical { grid-column: span 1; }
+  .bento-horizontal { grid-column: 1 / -1; }
+  
+  .media-card { background: #f8fafc; border: 1px solid var(--border-color); border-radius: 16px; padding: 12px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+  .media-card video, .media-card img { width: 100%; border-radius: 10px; object-fit: cover; cursor: zoom-in; transition: transform 0.3s ease; }
+  .media-card video:hover, .media-card img:hover { transform: translateY(-2px); }
+  
+  .vertical-vid { aspect-ratio: 9/16; }
+  .horizontal-vid, .horizontal-img { aspect-ratio: 16/9; }
+  .w-full-img { height: auto; max-height: 500px; object-fit: contain; background: transparent; }
+
+  .media-caption { font-size: 13.5px; font-weight: 600; color: var(--navy-dark); text-align: center; padding: 0 4px 4px; line-height: 1.4; }
+
+  /* ESTILOS NUEVOS PARA TARJETA FREELANCE (BOTONES) */
+  .freelance-link { background: #f1f5f9; color: var(--navy-dark); padding: 12px; border-radius: 8px; text-align: center; text-decoration: none; font-weight: 800; font-size: 14px; border: 1px solid var(--border-color); transition: all 0.3s ease; }
+  .freelance-link:hover { background: var(--navy-dark); color: #ffffff; }
+
+  .floating-dock { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 32px; padding: 10px 22px; z-index: 9999; box-shadow: var(--glass-shadow); }
+  .dock-list { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; align-items: center; }
+  .dock-item { position: relative; display: flex; justify-content: center; }
+  .dock-link { display: flex; align-items: center; }
+  .mac-icon { width: 52px; height: 52px; object-fit: contain; transition: transform 0.2s; }
+  .dock-link:hover .mac-icon { transform: scale(1.2) translateY(-6px); }
+  .dock-item::before { content: attr(data-tooltip); position: absolute; top: -42px; background: var(--navy-dark); color: white; font-size: 12px; font-weight: 700; padding: 6px 12px; border-radius: 8px; opacity: 0; visibility: hidden; transition: all 0.2s; white-space: nowrap; pointer-events: none; }
+  .dock-item:hover::before { opacity: 1; visibility: visible; top: -48px; }
+
+  @media (max-width: 900px) {
+    .brand-centered { font-size: 16px; top: 20px; }
+    .hero-container { display: flex; flex-direction: column; gap: 16px; margin-top: 50px; }
+    .left-col { position: relative; z-index: 50; } 
+    .hero-center-text { margin-top: 10px; }
+    
+    .hero-quote-corner { position: relative; bottom: auto; left: auto; text-align: center; margin-top: 40px; margin-bottom: 20px; max-width: 100%;}
+    
+    .hero-center-text h1 { font-size: 2.8rem; }
+    .expand-bio { font-size: 14.5px; }
+    .about-subtitle { font-size: 1.15rem; }
+    
+    .floating-pill { display: none; }
+    .floating-dock { padding: 10px 16px; }
+    .mac-icon { width: 44px; height: 44px; }
+    .dock-list { gap: 16px; }
+    .about-section, .services-section { padding: 60px 20px; }
+    .projects-section { padding: 40px 20px; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .contact-section { padding: 60px 20px 140px; } 
+    .about-header h2, .section-header h2, .coffee-title { font-size: 2.4rem; }
+    .mac-content { grid-template-columns: 1fr; gap: 24px; padding: 24px; text-align: center; }
+    .stats-grid-about { grid-template-columns: 1fr; gap: 16px; }
+    .contact-container { grid-template-columns: 1fr; }
+    .contact-left, .contact-right { padding: 30px; }
+    .contact-left { border-right: none; border-bottom: 1px solid var(--border-color); }
+    .modal-content-scroll { padding: 20px; }
+    
+    .marquee-track { gap: 40px; }
+    .marquee-track img { height: 35px; }
+    
+    .project-card { flex: 1 1 100%; max-width: 100%; }
+    .modal-title-row h2 { font-size: 20px; }
+    
+    .bento-vertical { grid-column: span 1; }
+    .bento-horizontal { grid-column: 1 / -1; }
+    .media-card { padding: 8px; gap: 8px; }
+    .media-caption { font-size: 12px; }
+    .zoom-caption { font-size: 0.95rem; }
+    
+    .service-block.open .service-block-body { max-height: 1000px; }
+
+    .minimal-flow { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .flow-arrow { transform: rotate(90deg); margin: -4px 0; }
+  }
+
+
+  /* ==========================================================
+     REFINAMIENTO iOS / macOS — misma identidad, más precisión
+  ========================================================== */
+  :root {
+    --glass-bg: rgba(255, 255, 255, 0.34);
+    --glass-border: rgba(255, 255, 255, 0.56);
+    --glass-shadow: 0 18px 55px rgba(15, 23, 42, 0.14), inset 0 1px 0 rgba(255,255,255,0.52);
+  }
+
+  body.modal-open { overflow: hidden; }
+
+  :focus-visible {
+    outline: 3px solid rgba(59, 130, 246, 0.55);
+    outline-offset: 4px;
+  }
+
+  .glass-profile-card,
+  .glass-cases-card,
+  .mac-window,
+  .project-card,
+  .service-block,
+  .contact-container {
+    box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255,255,255,0.6);
+  }
+
+  .glass-profile-card,
+  .glass-cases-card {
+    border-color: rgba(255,255,255,0.5);
+    backdrop-filter: saturate(145%) blur(22px);
+    -webkit-backdrop-filter: saturate(145%) blur(22px);
+  }
+
+  .glass-profile-card:hover,
+  .glass-cases-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 22px 60px rgba(15, 23, 42, 0.17), inset 0 1px 0 rgba(255,255,255,0.64);
+  }
+
+  .mac-titlebar,
+  .card-mac-header,
+  .modal-mac-bar {
+    background: linear-gradient(180deg, rgba(248,250,252,0.98), rgba(241,245,249,0.92));
+    box-shadow: inset 0 -1px 0 rgba(15,23,42,0.07), inset 0 1px 0 rgba(255,255,255,0.9);
+  }
+
+  .mac-titlebar {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+  }
+
+  .window-title {
+    font-size: 11px;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+    color: rgba(15,23,42,0.5);
+    user-select: none;
+  }
+
+  .window-title-spacer { min-width: 52px; }
+
+  .mac-dot,
+  .dot {
+    box-shadow: inset 0 0 0 0.5px rgba(0,0,0,0.16), 0 0.5px 1px rgba(0,0,0,0.12);
+  }
+
+  .project-card {
+    transition: transform .36s cubic-bezier(.16,1,.3,1), box-shadow .36s ease, border-color .36s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-4px) scale(1.004);
+    box-shadow: 0 22px 50px rgba(15, 23, 42, 0.10), inset 0 1px 0 rgba(255,255,255,0.7);
+    border-color: rgba(15,23,42,0.14);
+  }
+
+  .project-card:focus-visible {
+    transform: translateY(-2px);
+  }
+
+  .card-body h3,
+  .modal-title-row h2,
+  .about-header h2,
+  .section-header h2,
+  .coffee-title {
+    font-weight: 800;
+  }
+
+  .hero-center-text h1 { font-weight: 800; }
+  .brand-centered { font-weight: 800; }
+  .min-name { font-weight: 800; }
+  .expand-bio strong { font-weight: 800; }
+
+  .card-company {
+    line-height: 1.45;
+    color: #64748b;
+  }
+
+  .modal-window {
+    box-shadow: 0 40px 100px rgba(2, 6, 23, 0.34), 0 1px 0 rgba(255,255,255,0.8) inset;
+    border-color: rgba(255,255,255,0.65);
+  }
+
+  .modal-content-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(100,116,139,.35) transparent;
+  }
+  .modal-content-scroll::-webkit-scrollbar { width: 10px; }
+  .modal-content-scroll::-webkit-scrollbar-track { background: transparent; }
+  .modal-content-scroll::-webkit-scrollbar-thumb {
+    background: rgba(100,116,139,.28);
+    border: 3px solid transparent;
+    background-clip: padding-box;
+    border-radius: 999px;
+  }
+
+  .floating-dock {
+    background: rgba(255,255,255,0.42);
+    backdrop-filter: saturate(160%) blur(24px);
+    -webkit-backdrop-filter: saturate(160%) blur(24px);
+    border-color: rgba(255,255,255,0.68);
+    box-shadow: 0 20px 50px rgba(15,23,42,.17), inset 0 1px 0 rgba(255,255,255,.72);
+  }
+
+  .mac-icon {
+    transition: transform .28s cubic-bezier(.16,1,.3,1), filter .28s ease;
+  }
+  .dock-link:hover .mac-icon {
+    transform: scale(1.13) translateY(-5px);
+    filter: drop-shadow(0 8px 9px rgba(15,23,42,.16));
+  }
+
+  .dock-item::before {
+    background: rgba(15,23,42,.86);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,.12);
+    box-shadow: 0 8px 24px rgba(15,23,42,.18);
+  }
+
+  .input-group input,
+  .input-group textarea {
+    transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+  }
+  .input-group input:focus,
+  .input-group textarea:focus {
+    border-color: rgba(59,130,246,.55);
+    box-shadow: 0 0 0 4px rgba(59,130,246,.10);
+    background: rgba(255,255,255,.95);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      scroll-behavior: auto !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    .fade-in-section { opacity: 1; transform: none; }
+  }
+
+</style>
