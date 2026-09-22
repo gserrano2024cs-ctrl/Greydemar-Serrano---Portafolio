@@ -46,75 +46,107 @@
     </svg>
   </div>
 
-  <!-- 1. SECCIÓN HERO -->
-  <section class="hero-wrapper fade-in-section delay-1">
-    <div class="hero-video-container">
-      <video autoplay loop muted playsinline class="video-bg"><source src="/avila.webm" type="video/webm" /></video>
-      <div class="avila-overlay"></div>
+  <!-- 1. HERO — EDITORIAL / DIGITAL STUDIO -->
+  <section class="hero-editorial fade-in-section delay-1" id="top">
+    <div class="hero-editorial-shell">
+      <div class="hero-dot-grid" aria-hidden="true"></div>
+
+      <header class="hero-editorial-top">
+        <div class="hero-meta" aria-label="Portfolio information">
+          <span>PORTFOLIO / 2026</span>
+          <span data-es="MARKETING · PROYECTOS · WEB" data-en="MARKETING · PROJECTS · WEB">MARKETING · PROYECTOS · WEB</span>
+        </div>
+
+        <nav class="hero-pill-nav" aria-label="Hero navigation">
+          <a class="hero-pill-logo" href="#top" aria-label="Greydemar Serrano — inicio">grey®</a>
+          <a class="hero-pill-action" href="#projects" data-es="Ver trabajo" data-en="View work">Ver trabajo</a>
+          <a class="hero-pill-menu" href="#about" aria-label="Ir a Sobre mí">
+            <span></span><span></span>
+          </a>
+        </nav>
+
+        <div class="hero-socials" aria-label="Contacto y redes">
+          <a href="mailto:greydemar06@gmail.com" aria-label="Email" title="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6.5A2.5 2.5 0 0 1 6 4h12a2.5 2.5 0 0 1 2.5 2.5v11A2.5 2.5 0 0 1 18 20H6a2.5 2.5 0 0 1-2.5-2.5v-11Z"/><path d="m4.5 7 7.5 5.5L19.5 7"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/greydemarserrano/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 9v9M6.5 6.25v.01M10.5 18v-5c0-2.2 1.3-3.6 3.25-3.6 1.84 0 3.25 1.2 3.25 3.6v5M10.5 12.7c.5-2.05 3.3-2.4 4.6-.85"/></svg>
+          </a>
+          <a href="https://wa.me/584126339776" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.6a8 8 0 0 1-11.85 7.02L4 20l1.36-4A8 8 0 1 1 20 11.6Z"/><path d="M8.8 8.1c.2-.45.4-.46.7-.47h.6c.18 0 .37.05.5.4l.72 1.75c.1.25.04.47-.08.65l-.5.65c-.13.16-.22.3-.08.55.45.8 1.15 1.65 2 2.15.26.15.4.13.58-.06l.78-.9c.17-.2.38-.23.62-.13l1.7.8c.27.13.45.2.5.32.05.13.05.73-.2 1.4-.25.68-1.4 1.3-2.1 1.38-.55.07-1.25.1-3.7-1.05-3.1-1.45-5.1-5-5.25-5.25-.15-.25-1.25-1.65-1.25-3.15 0-1.5.78-2.25 1.05-2.55Z"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-lang lang-switch dark-mode" aria-label="Selector de idioma">
+          <button type="button" class="lang-btn active" aria-pressed="true" onclick="setLanguage('es', this)">ES</button>
+          <button type="button" class="lang-btn" aria-pressed="false" onclick="setLanguage('en', this)">EN</button>
+        </div>
+      </header>
+
+      <div class="hero-editorial-content">
+        <a class="hero-orbit-card orbit-one" href="#projects" aria-label="Ver resultados de contenido">
+          <img src="/metricas.png" alt="Métricas de proyecto" loading="eager" />
+          <span>+604%</span>
+        </a>
+
+        <a class="hero-orbit-card orbit-two" href="#projects" aria-label="Ver proyectos web">
+          <img src="/landingpage plataforma.png" alt="Proyecto web Las Minitas" loading="eager" />
+          <span data-es="WEB" data-en="WEB">WEB</span>
+        </a>
+
+        <div class="hero-editorial-copy">
+          <p class="hero-kicker">GREY SERRANO / COMMUNICATIONS + DIGITAL</p>
+          <h1
+            data-es="Ideas que se mueven.<br><span>Sistemas que funcionan.</span>"
+            data-en="Ideas in motion.<br><span>Systems that work.</span>"
+          >
+            Ideas que se mueven.<br><span>Sistemas que funcionan.</span>
+          </h1>
+          <p class="hero-lead"
+            data-es="Trabajo entre marketing, coordinación de proyectos, contenido y web. Conecto estrategia y ejecución para convertir ideas en entregables claros, procesos útiles y experiencias digitales."
+            data-en="I work across marketing, project coordination, content and web. I connect strategy and execution to turn ideas into clear deliverables, useful systems and digital experiences."
+          >Trabajo entre marketing, coordinación de proyectos, contenido y web. Conecto estrategia y ejecución para convertir ideas en entregables claros, procesos útiles y experiencias digitales.</p>
+
+          <div class="hero-skill-row" aria-label="Áreas principales">
+            <span>Marketing</span>
+            <span>Project Management</span>
+            <span>Web</span>
+            <span>Content</span>
+          </div>
+        </div>
+
+        <figure class="hero-profile-art">
+          <div class="hero-profile-ring">
+            <img
+              src="/grey profile (2).jpeg"
+              onerror="this.onerror=null;this.src='/grey.jpeg';"
+              alt="Greydemar Serrano"
+              loading="eager"
+            />
+          </div>
+          <figcaption>
+            <strong>GREY SERRANO</strong>
+            <span data-es="Estrategia + ejecución" data-en="Strategy + execution">Estrategia + ejecución</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="hero-wordmark" aria-hidden="true">GREY</div>
+
+      <div class="hero-ink" aria-hidden="true">
+        <span class="ink-base"></span>
+        <span class="ink-blob ink-a"></span>
+        <span class="ink-blob ink-b"></span>
+        <span class="ink-blob ink-c"></span>
+        <span class="ink-blob ink-d"></span>
+        <span class="ink-grain"></span>
+      </div>
+
+      <div class="hero-bottom-line">
+        <span data-es="PORTFOLIO SELECCIONADO · 2021—2026" data-en="SELECTED WORK · 2021—2026">PORTFOLIO SELECCIONADO · 2021—2026</span>
+        <a href="#projects" data-es="Explorar ↓" data-en="Explore ↓">Explorar ↓</a>
+      </div>
     </div>
-
-    <header class="top-header">
-      <div class="brand-centered">GREY SERRANO®</div>
-      <div class="lang-switch dark-mode">
-        <button type="button" class="lang-btn active" aria-pressed="true" onclick="setLanguage('es', this)">ES</button>
-        <button type="button" class="lang-btn" aria-pressed="false" onclick="setLanguage('en', this)">EN</button>
-      </div>
-    </header>
-
-    <main class="hero-container">
-      <div class="left-col">
-        <div class="glass-profile-card" onclick="this.classList.toggle('active')">
-          <div class="card-min-header">
-            <img src="/grey.jpeg" alt="Greydemar Serrano" class="profile-thumb shift-right" id="heroProfileImg" onclick="toggleProfileZoom(event)" title="Ver a detalle" />
-            <div class="min-meta">
-              <div class="status-line"><span class="green-dot"></span><span class="status-text" data-es="En línea" data-en="Online">En línea</span></div>
-              <div class="name-group">
-                <h2 class="min-name">GREYDEMAR SERRANO</h2>
-                <span class="min-title" data-es="Marketing · Project Management · Web" data-en="Marketing · Project Management · Web">Marketing · Project Management · Web</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-expand-content">
-            <p class="expand-bio" data-es="<strong>Hola, soy Grey.</strong><br><br>Soy comunicadora social y trabajo entre marketing, coordinación de proyectos, contenido y web.<br><br>Me gusta entender qué necesita un proyecto, poner orden y llevarlo de la idea a la ejecución. A veces eso significa una estrategia de contenido; otras, coordinar un evento, ordenar un proceso o construir una landing." data-en="<strong>Hi, I'm Grey.</strong><br><br>I'm a communications professional working across marketing, project coordination, content and web.<br><br>I like understanding what a project needs, bringing structure to it and moving it from idea to execution. Sometimes that means a content strategy; other times, coordinating an event, organizing a process or building a landing page.">
-              <strong>Hola, soy Grey.</strong><br><br>Soy comunicadora social y trabajo entre marketing, coordinación de proyectos, contenido y web.<br><br>Me gusta entender qué necesita un proyecto, poner orden y llevarlo de la idea a la ejecución. A veces eso significa una estrategia de contenido; otras, coordinar un evento, ordenar un proceso o construir una landing.
-            </p>
-            <p class="skills-title" data-es="Mis habilidades:" data-en="My skills:">Mis habilidades:</p>
-            <div class="skills-grid" aria-label="Habilidades destacadas">
-              <span class="skill-featured" data-es="Project Management" data-en="Project Management">Project Management</span>
-              <span data-es="Estrategia de Contenido" data-en="Content Strategy">Estrategia de Contenido</span>
-              <span class="skill-featured" data-es="Coordinación Cross-functional" data-en="Cross-functional Coordination">Coordinación Cross-functional</span>
-              <span data-es="Desarrollo Web" data-en="Web Development">Desarrollo Web</span>
-              <span data-es="CRM & Automatización" data-en="CRM & Automation">CRM & Automatización</span>
-              <span data-es="Analítica & Optimización" data-en="Analytics & Optimization">Analítica & Optimización</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-center-text">
-        <h1 data-es="IDEAS, EQUIPOS Y PROYECTOS QUE SE MUEVEN" data-en="IDEAS, TEAMS & PROJECTS IN MOTION">IDEAS, EQUIPOS Y PROYECTOS QUE SE MUEVEN</h1>
-        <span class="floating-pill pill-pink">Marketing</span>
-        <span class="floating-pill pill-green">Project Manager</span>
-        <span class="floating-pill pill-yellow" data-es="Web & Contenido" data-en="Web & Content">Web & Contenido</span>
-      </div>
-
-      <div class="glass-cases-card" onclick="this.classList.toggle('active')">
-        <div class="cases-min-header">
-          <span class="cases-title-text" data-es="Casos Destacados" data-en="Featured Cases">Casos Destacados</span>
-          <span class="search-icon-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
-        </div>
-        <div class="cases-expand-content">
-          <ul class="quick-cases-list">
-            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-yprealty'), 400);"><strong data-es="+604% en interacción orgánica" data-en="+604% organic engagement">+604% en interacción orgánica</strong><span>YP Realty · Social Media</span></a></li>
-            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-panhouse-automation'), 400);"><strong data-es="Automatización de atención con IA" data-en="AI-powered customer support automation">Automatización de atención con IA</strong><span>Editorial PanHouse · Automation</span></a></li>
-            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-eurobuilding'), 400);"><strong data-es="Coordinación B2B entre 7 áreas" data-en="B2B coordination across 7 teams">Coordinación B2B entre 7 áreas</strong><span>Eurobuilding · Operations</span></a></li>
-            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-dislocal-calvario'), 400);"><strong data-es="Producción del proyecto El Calvario" data-en="El Calvario project production">Producción del proyecto El Calvario</strong><span>Dislocal · Project Coordination</span></a></li>
-            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-impaktemos'), 400);"><strong data-es="Plataforma Las Minitas" data-en="Las Minitas platform">Plataforma Las Minitas</strong><span>Impaktemos · Web + Operations</span></a></li>
-            <li><a href="#projects" onclick="setTimeout(() => openModal('modal-freelance'), 400);"><strong data-es="Sitios web con historias propias" data-en="Websites with stories of their own">Sitios web con historias propias</strong><span>Freelance · Web Design</span></a></li>
-          </ul>
-        </div>
-      </div>
-    </main>
   </section>
 
   <!-- 1.5 LOGO MARQUEE INFINITO -->
@@ -2045,6 +2077,509 @@
   @media (prefers-reduced-motion: reduce) {
     .reveal-card { opacity: 1 !important; transform: none !important; }
     .process-piece { transform: none !important; }
+  }
+
+
+  /* =========================================================
+     HERO EDITORIAL — estudio digital + iOS/macOS restraint
+     ========================================================= */
+  .hero-editorial {
+    position: relative;
+    z-index: 10;
+    padding: 22px;
+    min-height: 100svh;
+    background: #ececec;
+    overflow: hidden;
+  }
+
+  .hero-editorial-shell {
+    --hero-pad: clamp(24px, 4vw, 64px);
+    position: relative;
+    min-height: calc(100svh - 44px);
+    max-width: 1600px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: clamp(30px, 4vw, 64px);
+    background: #fbfbfa;
+    border: 1px solid rgba(15, 23, 42, .08);
+    box-shadow:
+      0 34px 80px rgba(15, 23, 42, .10),
+      inset 0 1px 0 rgba(255, 255, 255, .96);
+    isolation: isolate;
+  }
+
+  .hero-dot-grid {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, rgba(15,23,42,.12) 1px, transparent 1.2px);
+    background-size: 14px 14px;
+    opacity: .55;
+    -webkit-mask-image: radial-gradient(circle at 42% 45%, #000 0 30%, transparent 72%);
+    mask-image: radial-gradient(circle at 42% 45%, #000 0 30%, transparent 72%);
+  }
+
+  .hero-editorial-top {
+    position: relative;
+    z-index: 20;
+    display: grid;
+    grid-template-columns: minmax(190px, 1fr) auto minmax(190px, 1fr);
+    align-items: start;
+    gap: 24px;
+    padding: 30px var(--hero-pad) 0;
+  }
+
+  .hero-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding-top: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    line-height: 1.35;
+    color: #171717;
+  }
+
+  .hero-pill-nav {
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    min-height: 52px;
+    padding: 5px;
+    border-radius: 999px;
+    background: rgba(4, 4, 4, .96);
+    border: 1px solid rgba(255,255,255,.10);
+    box-shadow:
+      0 16px 42px rgba(0,0,0,.18),
+      inset 0 1px 0 rgba(255,255,255,.12);
+  }
+
+  .hero-pill-logo {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 17px;
+    height: 40px;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -.06em;
+  }
+
+  .hero-pill-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 18px;
+    border-radius: 999px;
+    color: rgba(255,255,255,.92);
+    background: rgba(255,255,255,.17);
+    border: 1px solid rgba(255,255,255,.08);
+    font-size: 12px;
+    font-weight: 650;
+    transition: background .22s ease, transform .22s ease;
+  }
+  .hero-pill-action:hover { background: rgba(255,255,255,.25); transform: translateY(-1px); }
+
+  .hero-pill-menu {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    gap: 5px;
+    background: rgba(255,255,255,.20);
+    border: 1px solid rgba(255,255,255,.08);
+  }
+  .hero-pill-menu span { width: 15px; height: 1.5px; border-radius: 999px; background: white; display: block; }
+
+  .hero-socials {
+    justify-self: end;
+    display: flex;
+    gap: 8px;
+    padding-top: 2px;
+  }
+
+  .hero-socials a {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,.64);
+    border: 1px solid rgba(15,23,42,.18);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.95),
+      0 7px 22px rgba(15,23,42,.05);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    backdrop-filter: blur(20px) saturate(150%);
+    transition: transform .22s ease, background .22s ease;
+  }
+  .hero-socials a:hover { transform: translateY(-2px); background: rgba(255,255,255,.88); }
+  .hero-socials svg { width: 18px; height: 18px; fill: none; stroke: #111; stroke-width: 1.65; stroke-linecap: round; stroke-linejoin: round; }
+
+  .hero-lang {
+    position: absolute !important;
+    right: var(--hero-pad);
+    top: 82px;
+    z-index: 22;
+    background: rgba(255,255,255,.64) !important;
+    border: 1px solid rgba(15,23,42,.10) !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.92), 0 8px 20px rgba(15,23,42,.06) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    backdrop-filter: blur(20px) saturate(160%);
+  }
+  .hero-lang .lang-btn { color: rgba(15,23,42,.55); }
+  .hero-lang .lang-btn.active { color: #111; background: rgba(255,255,255,.88) !important; box-shadow: 0 2px 7px rgba(15,23,42,.06) !important; }
+
+  .hero-editorial-content {
+    position: relative;
+    z-index: 8;
+    min-height: calc(100svh - 200px);
+    display: grid;
+    grid-template-columns: 1fr minmax(500px, 1.65fr) 1fr;
+    align-items: center;
+    gap: clamp(24px, 4vw, 74px);
+    padding: clamp(90px, 10vh, 125px) var(--hero-pad) clamp(190px, 24vh, 250px);
+  }
+
+  .hero-editorial-copy {
+    grid-column: 2;
+    text-align: center;
+    align-self: center;
+    position: relative;
+    z-index: 8;
+  }
+
+  .hero-kicker {
+    margin: 0 0 14px;
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: .035em;
+    color: rgba(15,23,42,.78);
+  }
+
+  .hero-editorial-copy h1 {
+    margin: 0;
+    font-size: clamp(3.6rem, 6.2vw, 7.4rem);
+    font-weight: 800;
+    line-height: .88;
+    letter-spacing: -.075em;
+    color: #090909;
+    text-wrap: balance;
+  }
+  .hero-editorial-copy h1 span { font-weight: 500; }
+
+  .hero-lead {
+    max-width: 620px;
+    margin: 26px auto 0;
+    color: rgba(15,23,42,.70);
+    font-size: clamp(1rem, 1.15vw, 1.16rem);
+    line-height: 1.62;
+    letter-spacing: -.015em;
+  }
+
+  .hero-skill-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 26px;
+  }
+  .hero-skill-row span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 0 13px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.68);
+    border: 1px solid rgba(15,23,42,.12);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.92);
+    -webkit-backdrop-filter: blur(16px) saturate(150%);
+    backdrop-filter: blur(16px) saturate(150%);
+    font-size: 11px;
+    font-weight: 700;
+    color: #171717;
+  }
+
+  .hero-profile-art {
+    grid-column: 3;
+    justify-self: end;
+    align-self: center;
+    width: min(29vw, 390px);
+    margin: 0;
+    position: relative;
+    z-index: 10;
+  }
+  .hero-profile-ring {
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 50%;
+    background: #ddd;
+    border: 1px solid rgba(15,23,42,.08);
+    box-shadow: 0 28px 70px rgba(15,23,42,.14), inset 0 0 0 8px rgba(255,255,255,.35);
+    transform: translateY(5px);
+  }
+  .hero-profile-ring img { width: 100%; height: 100%; object-fit: cover; object-position: center 28%; transition: transform .8s cubic-bezier(.2,.8,.2,1); }
+  .hero-profile-art:hover .hero-profile-ring img { transform: scale(1.035); }
+  .hero-profile-art figcaption {
+    position: absolute;
+    right: 5%;
+    bottom: 4%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 11px 14px;
+    border-radius: 16px;
+    background: rgba(255,255,255,.74);
+    border: 1px solid rgba(255,255,255,.88);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.98), 0 14px 36px rgba(15,23,42,.12);
+    -webkit-backdrop-filter: blur(20px) saturate(170%);
+    backdrop-filter: blur(20px) saturate(170%);
+  }
+  .hero-profile-art figcaption strong { font-size: 10px; letter-spacing: .04em; }
+  .hero-profile-art figcaption span { font-size: 9.5px; color: rgba(15,23,42,.58); }
+
+  .hero-orbit-card {
+    position: absolute;
+    z-index: 9;
+    display: block;
+    width: clamp(108px, 11vw, 165px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #d9d9d9;
+    border: 1px solid rgba(15,23,42,.08);
+    box-shadow: 0 18px 45px rgba(15,23,42,.12);
+    transition: transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .3s ease;
+  }
+  .hero-orbit-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .55s cubic-bezier(.2,.8,.2,1); }
+  .hero-orbit-card span {
+    position: absolute;
+    left: 50%;
+    bottom: 9px;
+    transform: translateX(-50%);
+    padding: 5px 9px;
+    border-radius: 999px;
+    background: rgba(0,0,0,.77);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .02em;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+  .hero-orbit-card:hover { transform: translateY(-6px) rotate(2deg); box-shadow: 0 26px 58px rgba(15,23,42,.17); }
+  .hero-orbit-card:hover img { transform: scale(1.06); }
+  .orbit-one { left: 9%; top: 24%; animation: orbitFloatA 8s ease-in-out infinite; }
+  .orbit-two { left: 20%; bottom: 28%; width: clamp(88px, 9vw, 132px); animation: orbitFloatB 10s ease-in-out infinite; }
+
+  .hero-wordmark {
+    position: absolute;
+    z-index: 2;
+    left: 2.5%;
+    right: 2.5%;
+    bottom: -6.8%;
+    color: #070707;
+    font-size: clamp(11rem, 23.7vw, 27rem);
+    font-weight: 900;
+    line-height: .72;
+    letter-spacing: -.105em;
+    text-align: center;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .hero-ink {
+    position: absolute;
+    z-index: 3;
+    left: -5%;
+    right: -5%;
+    bottom: -5%;
+    height: 42%;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .ink-base,
+  .ink-blob {
+    position: absolute;
+    display: block;
+    background: #050505;
+    will-change: transform, border-radius;
+  }
+  .ink-base {
+    left: -4%;
+    right: -4%;
+    bottom: -50%;
+    height: 88%;
+    border-radius: 48% 52% 0 0 / 26% 30% 0 0;
+    animation: inkBase 12s ease-in-out infinite alternate;
+  }
+  .ink-blob { filter: blur(17px); opacity: .98; }
+  .ink-a { width: 38%; height: 88%; left: 0%; bottom: -35%; border-radius: 46% 54% 60% 40% / 54% 38% 62% 46%; animation: inkA 13s ease-in-out infinite alternate; }
+  .ink-b { width: 34%; height: 94%; left: 29%; bottom: -46%; border-radius: 55% 45% 36% 64% / 48% 58% 42% 52%; animation: inkB 15s ease-in-out infinite alternate; }
+  .ink-c { width: 40%; height: 100%; right: 4%; bottom: -45%; border-radius: 42% 58% 51% 49% / 60% 44% 56% 40%; animation: inkC 14s ease-in-out infinite alternate; }
+  .ink-d { width: 21%; height: 62%; right: 30%; bottom: -24%; border-radius: 50%; animation: inkD 11s ease-in-out infinite alternate; }
+  .ink-grain {
+    position: absolute;
+    inset: 0;
+    opacity: .13;
+    mix-blend-mode: screen;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.68'/%3E%3C/svg%3E");
+    animation: grainShift .6s steps(2) infinite;
+  }
+
+  .hero-bottom-line {
+    position: absolute;
+    z-index: 12;
+    left: var(--hero-pad);
+    right: var(--hero-pad);
+    bottom: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgba(255,255,255,.84);
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+  .hero-bottom-line a { color: #fff; font-size: 10px; }
+
+  @keyframes orbitFloatA {
+    0%,100% { transform: translate3d(0,0,0) rotate(-3deg); }
+    50% { transform: translate3d(10px,-12px,0) rotate(2deg); }
+  }
+  @keyframes orbitFloatB {
+    0%,100% { transform: translate3d(0,0,0) rotate(4deg); }
+    50% { transform: translate3d(-8px,12px,0) rotate(-2deg); }
+  }
+  @keyframes inkBase {
+    0% { transform: translate3d(-1%, 2%, 0) scaleX(1.02); border-radius: 50% 50% 0 0 / 29% 23% 0 0; }
+    100% { transform: translate3d(1%, -3%, 0) scaleX(.98); border-radius: 43% 57% 0 0 / 20% 33% 0 0; }
+  }
+  @keyframes inkA {
+    0% { transform: translate3d(-9%, 3%, 0) rotate(-6deg) scale(1); }
+    100% { transform: translate3d(9%, -14%, 0) rotate(6deg) scale(1.16); }
+  }
+  @keyframes inkB {
+    0% { transform: translate3d(-5%, 9%, 0) rotate(4deg) scale(.96); }
+    100% { transform: translate3d(7%, -15%, 0) rotate(-5deg) scale(1.13); }
+  }
+  @keyframes inkC {
+    0% { transform: translate3d(7%, 5%, 0) rotate(5deg) scale(1.02); }
+    100% { transform: translate3d(-10%, -12%, 0) rotate(-4deg) scale(1.12); }
+  }
+  @keyframes inkD {
+    0% { transform: translate3d(0, 6%, 0) scale(.92); }
+    100% { transform: translate3d(13%, -24%, 0) scale(1.17); }
+  }
+  @keyframes grainShift {
+    0% { transform: translate3d(0,0,0); }
+    25% { transform: translate3d(1%, -1%, 0); }
+    50% { transform: translate3d(-1%, 1%, 0); }
+    75% { transform: translate3d(1%, 1%, 0); }
+    100% { transform: translate3d(-1%, -1%, 0); }
+  }
+
+  @media (max-width: 1180px) {
+    .hero-editorial-content { grid-template-columns: .7fr minmax(450px, 1.5fr) .9fr; gap: 28px; }
+    .hero-profile-art { width: min(28vw, 330px); }
+    .orbit-one { left: 5%; }
+    .orbit-two { left: 14%; }
+    .hero-editorial-copy h1 { font-size: clamp(3.5rem, 6.4vw, 5.8rem); }
+  }
+
+  @media (max-width: 900px) {
+    .hero-editorial { padding: 10px; }
+    .hero-editorial-shell { min-height: calc(100svh - 20px); border-radius: 32px; }
+    .hero-editorial-top {
+      grid-template-columns: 1fr auto;
+      padding: 18px 18px 0;
+      align-items: center;
+    }
+    .hero-meta { display: none; }
+    .hero-pill-nav { justify-self: start; min-height: 48px; }
+    .hero-pill-logo { font-size: 17px; height: 36px; padding: 0 14px; }
+    .hero-pill-action { height: 36px; padding-inline: 14px; }
+    .hero-pill-menu { width: 36px; height: 36px; }
+    .hero-socials { justify-self: end; padding: 0; }
+    .hero-socials a { width: 38px; height: 38px; }
+    .hero-socials a:nth-child(1) { display: none; }
+    .hero-lang { right: 18px; top: 68px; }
+
+    .hero-editorial-content {
+      min-height: calc(100svh - 110px);
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      align-content: start;
+      gap: 30px;
+      padding: 112px 24px 270px;
+    }
+    .hero-editorial-copy { grid-column: 1; grid-row: 1; max-width: 680px; margin: 0 auto; }
+    .hero-editorial-copy h1 { font-size: clamp(3.8rem, 10vw, 6.5rem); }
+    .hero-lead { max-width: 590px; font-size: 1.03rem; }
+    .hero-profile-art { grid-column: 1; grid-row: 2; justify-self: center; width: min(48vw, 340px); }
+    .hero-orbit-card { width: 112px; }
+    .orbit-one { left: 6%; top: 48%; }
+    .orbit-two { left: auto; right: 7%; bottom: 28%; width: 94px; }
+    .hero-wordmark { font-size: clamp(11rem, 31vw, 18rem); bottom: -3.3%; }
+    .hero-ink { height: 33%; }
+    .hero-bottom-line { left: 24px; right: 24px; bottom: 20px; }
+  }
+
+  @media (max-width: 640px) {
+    .hero-editorial-shell { border-radius: 26px; }
+    .hero-editorial-top { padding: 14px 14px 0; gap: 8px; }
+    .hero-pill-nav { min-height: 44px; padding: 4px; }
+    .hero-pill-logo { font-size: 16px; padding: 0 11px; height: 34px; }
+    .hero-pill-action { height: 34px; padding-inline: 12px; font-size: 10.5px; }
+    .hero-pill-menu { width: 34px; height: 34px; }
+    .hero-socials { gap: 6px; }
+    .hero-socials a { width: 35px; height: 35px; }
+    .hero-socials a:nth-child(2) { display: none; }
+    .hero-socials svg { width: 16px; height: 16px; }
+    .hero-lang { top: 61px; right: 14px; transform: scale(.92); transform-origin: top right; }
+
+    .hero-editorial-content {
+      min-height: calc(100svh - 86px);
+      padding: 110px 18px 245px;
+      gap: 24px;
+    }
+    .hero-kicker { font-size: 9px; margin-bottom: 10px; }
+    .hero-editorial-copy h1 { font-size: clamp(3rem, 14.3vw, 4.7rem); line-height: .88; letter-spacing: -.07em; }
+    .hero-lead { margin-top: 20px; font-size: .98rem; line-height: 1.56; max-width: 430px; }
+    .hero-skill-row { margin-top: 18px; gap: 6px; }
+    .hero-skill-row span { min-height: 31px; padding-inline: 10px; font-size: 9.5px; }
+    .hero-profile-art { width: min(65vw, 280px); }
+    .hero-profile-art figcaption { right: -3%; bottom: 1%; padding: 8px 10px; border-radius: 12px; }
+    .hero-profile-art figcaption strong { font-size: 8.5px; }
+    .hero-profile-art figcaption span { font-size: 8px; }
+    .hero-orbit-card { display: none; }
+    .hero-wordmark { font-size: clamp(9rem, 43vw, 15rem); bottom: -1.8%; left: -3%; right: -3%; }
+    .hero-ink { left: -22%; right: -22%; height: 30%; bottom: -3%; }
+    .hero-bottom-line { left: 17px; right: 17px; bottom: 15px; font-size: 7.5px; }
+    .hero-bottom-line a { font-size: 8px; }
+  }
+
+  @media (max-width: 390px) {
+    .hero-pill-action { display: none; }
+    .hero-editorial-content { padding-top: 104px; padding-bottom: 228px; }
+    .hero-editorial-copy h1 { font-size: clamp(2.75rem, 14.8vw, 3.65rem); }
+    .hero-lead { font-size: .92rem; }
+    .hero-profile-art { width: min(70vw, 250px); }
+    .hero-wordmark { font-size: 42vw; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-orbit-card,
+    .ink-base,
+    .ink-blob,
+    .ink-grain { animation: none !important; }
   }
 
 </style>
