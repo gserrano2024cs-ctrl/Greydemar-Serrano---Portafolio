@@ -35,7 +35,7 @@
     </div>
   </div>
 
-  <!-- FONDO ESTÁTICO GLOBAL -->
+  <!-- FONDO ESTÁTICO GLOBAL (Para las demás secciones) -->
   <div class="global-fixed-bg">
     <svg class="sticker sticker-star" width="45" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <polyline points="3 3 3 21 21 21" stroke="#FEF08A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -60,8 +60,8 @@
     
     <!-- NUEVO FONDO FLUIDO Y GRANO -->
     <div class="fluid-bg-container">
-      <div class="fluid-blob"></div>
-      <div class="hero-grain"></div>
+      <div class="noise-overlay"></div>
+      <div class="liquid-blob"></div>
     </div>
 
     <header class="top-header">
@@ -81,18 +81,22 @@
               <div class="status-line"><span class="green-dot"></span><span class="status-text" data-es="En línea" data-en="Online">En línea</span></div>
               <div class="name-group">
                 <h2 class="min-name">GREYDEMAR SERRANO</h2>
-                <span class="min-title" data-es="Social Media Specialist | Content Creator | Front-End Developer" data-en="Social Media Specialist | Content Creator | Front-End Developer">Social Media Specialist | Content Creator | Front-End Developer</span>
+                <span class="min-title" data-es="Social Media Specialist & Front-End Developer" data-en="Social Media Specialist & Front-End Developer">Social Media Specialist & Front-End Developer</span>
               </div>
             </div>
           </div>
           <div class="card-expand-content">
-            <p class="expand-bio" data-es="<strong>Contenido que conecta. Comunidades que crecen. Experiencias web que convierten.</strong><br><br>Soy Greydemar Serrano, Social Media Specialist enfocado en creación de contenido, edición de video y gestión de comunidades digitales.<br><br>Trabajo creando Reels, Shorts y estrategias de contenido que ayudan a marcas a aumentar su presencia digital, mejorar la interacción con su audiencia y convertir seguidores en oportunidades.<br><br>También desarrollo experiencias web modernas con Astro y tecnologías Front-End, creando páginas rápidas, limpias y orientadas a objetivos comerciales." data-en="<strong>Content that connects. Communities that grow. Web experiences that convert.</strong><br><br>I am Greydemar Serrano, a Social Media Specialist focused on content creation, video editing, and digital community management.<br><br>I create Reels, Shorts, and content strategies that help brands increase their digital presence, improve engagement with their audience, and convert followers into opportunities.<br><br>I also develop modern web experiences with Astro and Front-End technologies, creating fast, clean pages geared towards business goals.">
-              <strong>Contenido que conecta. Comunidades que crecen. Experiencias web que convierten.</strong><br><br>Soy Greydemar Serrano, Social Media Specialist enfocado en creación de contenido, edición de video y gestión de comunidades digitales.<br><br>Trabajo creando Reels, Shorts y estrategias de contenido que ayudan a marcas a aumentar su presencia digital, mejorar la interacción con su audiencia y convertir seguidores en oportunidades.<br><br>También desarrollo experiencias web modernas con Astro y tecnologías Front-End, creando páginas rápidas, limpias y orientadas a objetivos comerciales.
+            <p class="expand-bio" 
+               data-es="<strong>Estrategia digital que atrae, retiene y convierte.</strong><br><br>Como Social Media Specialist, construyo comunidades sólidas combinando contenido visual magnético (Reels, Shorts) con una gestión precisa que transforma seguidores en oportunidades reales.<br><br>Como Front-End Developer, maqueto experiencias web y Landing Pages ultrarrápidas con Astro. Elimino cualquier fricción técnica para que el diseño y el código multipliquen tus ventas." 
+               data-en="<strong>Digital strategy that attracts, retains, and converts.</strong><br><br>As a Social Media Specialist, I build solid communities combining magnetic visual content (Reels, Shorts) with precise management that transforms followers into real opportunities.<br><br>As a Front-End Developer, I build ultra-fast web experiences and Landing Pages with Astro. I eliminate technical friction so design and code multiply your sales.">
+              <strong>Estrategia digital que atrae, retiene y convierte.</strong><br><br>
+              Como Social Media Specialist, construyo comunidades sólidas combinando contenido visual magnético (Reels, Shorts) con una gestión precisa que transforma seguidores en oportunidades reales.<br><br>
+              Como Front-End Developer, maqueto experiencias web y Landing Pages ultrarrápidas con Astro. Elimino cualquier fricción técnica para que el diseño y el código multipliquen tus ventas.
             </p>
             <p class="skills-title" data-es="Mis habilidades:" data-en="My skills:">Mis habilidades:</p>
             <div class="skills-grid">
               <span>Social Media</span><span>Content Creation</span><span>Video Editing</span><span>Community Management</span>
-              <span>Meta Business Suite</span><span>Meta Ads</span><span>Astro</span><span>HTML5</span><span>CSS3</span>
+              <span>Meta Ads</span><span>Astro</span><span>HTML5</span><span>CSS3</span>
               <span class="wide-skill" data-es="Front-End Development" data-en="Front-End Development">Front-End Development</span>
             </div>
           </div>
@@ -271,7 +275,7 @@
       <div class="services-grid-blocks">
         
         <div class="service-block service-toggle" style="background: rgba(168, 85, 247, 0.08); border-color: rgba(168, 85, 247, 0.2);" onclick="this.classList.toggle('open')">
-          <div class="service-block-header"><h3 data-es="📱 Content Creation & Video Editing" data-en="📱 Content Creation & Video Editing">📱 Content Creation & Video Editing</h3><span class="icon-plus">+</span></div>
+          <div class="service-block-header"><h3 data-es="Content Creation & Video Editing" data-en="Content Creation & Video Editing">Content Creation & Video Editing</h3><span class="icon-plus">+</span></div>
           <div class="service-block-body">
             <div class="minimal-flow">
               <div class="flow-block">
@@ -290,7 +294,7 @@
         </div>
 
         <div class="service-block service-toggle" style="background: rgba(59, 130, 246, 0.08); border-color: rgba(59, 130, 246, 0.2);" onclick="this.classList.toggle('open')">
-          <div class="service-block-header"><h3 data-es="💬 Social Media & Community Management" data-en="💬 Social Media & Community Management">💬 Social Media & Community Management</h3><span class="icon-plus">+</span></div>
+          <div class="service-block-header"><h3 data-es="Social Media & Community Management" data-en="Social Media & Community Management">Social Media & Community Management</h3><span class="icon-plus">+</span></div>
           <div class="service-block-body">
             <div class="minimal-flow">
               <div class="flow-block">
@@ -309,7 +313,7 @@
         </div>
 
         <div class="service-block service-toggle" style="background: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.2);" onclick="this.classList.toggle('open')">
-          <div class="service-block-header"><h3 data-es="💻 Front-End & Landing Pages" data-en="💻 Front-End & Landing Pages">💻 Front-End & Landing Pages</h3><span class="icon-plus">+</span></div>
+          <div class="service-block-header"><h3 data-es="Front-End & Landing Pages" data-en="Front-End & Landing Pages">Front-End & Landing Pages</h3><span class="icon-plus">+</span></div>
           <div class="service-block-body">
             <div class="minimal-flow">
               <div class="flow-block">
@@ -745,36 +749,40 @@
   }
 
   /* La mancha negra animada y borrosa */
-  .fluid-blob {
+  .liquid-blob {
     position: absolute;
-    top: 50%; left: 50%;
-    width: 65vw; height: 65vw;
-    max-width: 900px; max-height: 900px;
+    bottom: -15%; left: 10%;
+    width: 80vw; height: 80vw;
+    max-width: 1000px; max-height: 1000px;
     background-color: #000000;
     filter: blur(80px);
     border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-    animation: morphBlob 18s infinite alternate ease-in-out;
+    animation: morphBlob 15s infinite alternate ease-in-out;
     transform-origin: center;
+    z-index: 1;
   }
 
   @keyframes morphBlob {
-    0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; transform: translate(-50%, -50%) rotate(0deg) scale(1); }
-    50% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; transform: translate(-30%, -70%) rotate(180deg) scale(1.15); }
-    100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; transform: translate(-70%, -30%) rotate(360deg) scale(0.9); }
+    0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; transform: translate(0, 0) scale(1) rotate(0deg); }
+    50% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; transform: translate(-10%, -15%) scale(1.1) rotate(10deg); }
+    100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; transform: translate(5%, -5%) scale(0.95) rotate(-5deg); }
   }
 
   /* Overlay de grano en el Hero */
-  .hero-grain {
+  .noise-overlay {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.15'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
     pointer-events: none;
     mix-blend-mode: multiply;
+    opacity: 0.25;
+    z-index: 2;
   }
 
   /* MAGIA: El texto usa mix-blend-mode sobre la mancha negra y el fondo blanco */
   .hero-center-text h1, .brand-centered {
     color: #ffffff;
     mix-blend-mode: difference; 
+    z-index: 10;
   }
 
 
@@ -801,8 +809,8 @@
   .zoom-close { position: absolute; top: 25px; right: 35px; background: rgba(255,255,255,0.15); border: none; color: white; width: 44px; height: 44px; border-radius: 50%; font-size: 22px; cursor: pointer; transition: background 0.3s; z-index: 9999999; display: flex; align-items: center; justify-content: center; }
   .zoom-close:hover { background: rgba(255,255,255,0.35); }
 
-  .hero-wrapper { position: relative; width: 100%; min-height: 100vh; overflow: hidden; z-index: 10; background: #ffffff; /* Ahora es blanco nativo */ }
-  .top-header { position: relative; width: 100%; max-width: 1300px; margin: 0 auto; padding: 24px 32px; display: flex; justify-content: flex-end; align-items: center; z-index: 10; }
+  .hero-wrapper { position: relative; width: 100%; min-height: 100vh; overflow: hidden; z-index: 10; background: #ffffff; }
+  .top-header { position: relative; width: 100%; max-width: 1300px; margin: 0 auto; padding: 24px 32px; display: flex; justify-content: flex-end; align-items: center; z-index: 20; }
   
   .brand-centered { position: absolute; top: 38px; left: 50%; transform: translateX(-50%); font-weight: 900; font-size: 20px; letter-spacing: -0.02em; white-space: nowrap; }
   
@@ -811,21 +819,21 @@
   .lang-btn.active { background: rgba(15, 23, 42, 0.08); color: #0f172a; font-weight: 900; }
 
   .hero-container { max-width: 1300px; width: 100%; margin: auto auto; padding: 20px 32px 100px; display: grid; grid-template-columns: 320px 1fr 260px; gap: 24px; align-items: center; min-height: calc(100vh - 120px); position: relative; z-index: 10; }
-  .left-col { position: relative; display: flex; flex-direction: column; gap: 28px; }
+  .left-col { position: relative; display: flex; flex-direction: column; gap: 28px; z-index: 20; }
   
-  /* Ajuste de tarjetas de cristal para el nuevo fondo claro */
+  /* Ajuste de tarjetas de cristal para darles mejor jerarquía */
   .glass-profile-card, .glass-cases-card { 
     background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); 
-    border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 24px; padding: 16px 20px; cursor: pointer; 
+    border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 24px; padding: 20px 24px; cursor: pointer; 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06); transition: all 0.4s; overflow: hidden; color: var(--navy-dark); 
   }
   
   .card-min-header { display: flex; align-items: center; gap: 14px; transition: all 0.4s ease; flex-direction: row !important; }
   .shift-right { margin-left: 6px; } 
-  .profile-thumb { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.9); transition: all 0.3s ease; flex-shrink: 0; cursor: zoom-in; }
+  .profile-thumb { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.9); transition: all 0.3s ease; flex-shrink: 0; cursor: zoom-in; }
   
   .glass-profile-card.active .card-min-header { flex-direction: row !important; align-items: center; gap: 16px; }
-  .glass-profile-card.active .profile-thumb { width: 75px; height: 75px; border-width: 3px; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.15); margin-left: 0; }
+  .glass-profile-card.active .profile-thumb { width: 80px; height: 80px; border-width: 3px; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.15); margin-left: 0; }
   
   .profile-thumb.zoomed { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(5); z-index: 99999; box-shadow: 0 0 0 100vmax rgba(0,0,0,0.85); cursor: zoom-out; border: none; }
   @media (max-width: 900px) { .profile-thumb.zoomed { transform: translate(-50%, -50%) scale(3.5); } }
@@ -836,7 +844,7 @@
   .green-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: blink-green 2.5s infinite; }
   .status-text { font-size: 11px; font-weight: 700; color: #1e293b; }
   .name-group { display: flex; flex-direction: column; gap: 2px; }
-  .min-name { font-size: 15px; font-weight: 900; letter-spacing: -0.01em; line-height: 1.1; color: #000; }
+  .min-name { font-size: 16px; font-weight: 900; letter-spacing: -0.01em; line-height: 1.1; color: #000; }
   .min-title { font-size: 11.5px; font-weight: 700; color: #475569; }
   
   .card-expand-content { max-height: 0; opacity: 0; transition: all 0.5s; overflow: hidden; }
@@ -856,11 +864,12 @@
   .pill-green { background: var(--pastel-green); bottom: -30px; left: 10%; transform: rotate(-6deg); }
   .pill-yellow { background: var(--pastel-yellow); bottom: -25px; right: 40px; transform: rotate(2deg); }
   
+  .glass-cases-card { z-index: 20; }
   .cases-min-header { display: flex; align-items: center; justify-content: space-between; }
   .cases-title-text { font-size: 14px; font-weight: 800; color: #000; }
   .search-icon-wrapper { background: rgba(0, 0, 0, 0.05); border-radius: 50%; padding: 6px; display: flex; color: var(--navy-dark); }
-  .cases-expand-content { max-height: 0; opacity: 0; transition: all 0.5s; }
-  .glass-cases-card.active .cases-expand-content { max-height: 350px; opacity: 1; margin-top: 14px; }
+  .cases-expand-content { max-height: 0; opacity: 0; transition: all 0.5s ease-in-out; }
+  .glass-cases-card.active .cases-expand-content { max-height: 450px; opacity: 1; margin-top: 14px; }
   .quick-cases-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
   .quick-cases-list li { display: flex; align-items: flex-start; gap: 8px; }
   .quick-cases-list a { text-decoration: none; display: flex; flex-direction: column; font-size: 13.5px; }
@@ -1030,7 +1039,7 @@
   .freelance-link { background: #f1f5f9; color: var(--navy-dark); padding: 12px; border-radius: 8px; text-align: center; text-decoration: none; font-weight: 800; font-size: 14px; border: 1px solid var(--border-color); transition: all 0.3s ease; }
   .freelance-link:hover { background: var(--navy-dark); color: #ffffff; }
 
-  /* DOCK FLOTANTE ORIGINAL */
+  /* DOCK FLOTANTE ORIGINAL RESTAURADO */
   .floating-dock { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 32px; padding: 10px 22px; z-index: 9999; box-shadow: var(--glass-shadow); }
   .dock-list { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; align-items: center; }
   .dock-item { position: relative; display: flex; justify-content: center; }
@@ -1043,6 +1052,10 @@
   @media (max-width: 900px) {
     .brand-centered { font-size: 16px; top: 20px; }
     .hero-container { display: flex; flex-direction: column; gap: 16px; margin-top: 50px; }
+    
+    .glass-cases-card { width: 100%; margin-top: 1rem; }
+    .glass-cases-card.active .cases-expand-content { max-height: 500px; /* Expansión fluida en móvil */ }
+    
     .left-col { position: relative; z-index: 50; } 
     .hero-center-text { margin-top: 10px; }
     
