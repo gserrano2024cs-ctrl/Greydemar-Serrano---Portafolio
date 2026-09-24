@@ -26,47 +26,6 @@
 </head>
 <body class="animate-on-load">
 
-  <!-- ISLA DINÁMICA (NUEVO MENÚ FLOTANTE) -->
-  <nav id="dynamic-island" class="island-container">
-    <div class="island-header">
-      <span class="logo">GREY®</span>
-      <button id="toggle-menu" aria-label="Toggle Menu" class="menu-btn">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="grid-icon">
-          <rect x="3" y="3" width="7" height="7" rx="1.5" fill="currentColor"/>
-          <rect x="14" y="3" width="7" height="7" rx="1.5" fill="currentColor"/>
-          <rect x="3" y="14" width="7" height="7" rx="1.5" fill="currentColor"/>
-          <rect x="14" y="14" width="7" height="7" rx="1.5" fill="currentColor"/>
-        </svg>
-      </button>
-    </div>
-
-    <div class="island-content">
-      <ul class="main-nav">
-        <li><a href="#about" class="squiggly-link">Sobre mí</a></li>
-        <li><a href="#projects" class="squiggly-link">Casos</a></li>
-        <li><a href="#services" class="squiggly-link">Servicios</a></li>
-        <li><a href="#contact" class="squiggly-link">Contacto</a></li>
-      </ul>
-
-      <div class="sub-nav">
-        <div class="socials">
-          <p class="label">Redes</p>
-          <a href="https://www.linkedin.com/in/greydemarserrano/" target="_blank" class="arrow-link">LinkedIn <span class="arrow">↗</span></a>
-          <a href="https://wa.me/584126339776" target="_blank" class="arrow-link">WhatsApp <span class="arrow">↗</span></a>
-        </div>
-        <div class="contacts">
-          <p class="label">Contacto</p>
-          <a href="tel:+584126339776" class="arrow-link">+58 412 6339776</a>
-          <a href="mailto:greydemar06@gmail.com" class="arrow-link">greydemar06@gmail.com</a>
-        </div>
-      </div>
-
-      <a href="#contact" class="cta-btn-link">
-        <button class="cta-btn">Hablemos de tu proyecto</button>
-      </a>
-    </div>
-  </nav>
-
   <!-- SISTEMA DE ZOOM GLOBAL -->
   <div id="zoom-overlay" class="zoom-overlay" onclick="closeZoom(event)">
     <button class="zoom-close" onclick="closeZoom(event)">✕</button>
@@ -96,16 +55,18 @@
     </svg>
   </div>
 
-  <!-- 1. SECCIÓN HERO -->
+  <!-- 1. SECCIÓN HERO CON EFECTO FLUIDO BLEND MODE -->
   <section class="hero-wrapper fade-in-section delay-1">
-    <div class="hero-video-container">
-      <video autoplay loop muted playsinline class="video-bg"><source src="/avila.webm" type="video/webm" /></video>
-      <div class="avila-overlay"></div>
+    
+    <!-- NUEVO FONDO FLUIDO Y GRANO -->
+    <div class="fluid-bg-container">
+      <div class="fluid-blob"></div>
+      <div class="hero-grain"></div>
     </div>
 
     <header class="top-header">
       <div class="brand-centered">GREY SERRANO®</div>
-      <div class="lang-switch dark-mode">
+      <div class="lang-switch light-mode">
         <button class="lang-btn active" onclick="setLanguage('es')">ES</button>
         <button class="lang-btn" onclick="setLanguage('en')">EN</button>
       </div>
@@ -199,7 +160,7 @@
               <div class="stat-item"><h3 class="iridescent-text">+5</h3><p data-es="Años de experiencia" data-en="Years of experience">Años de experiencia</p></div>
               <div class="stat-item"><h3 class="iridescent-text">+8</h3><p data-es="Proyectos coordinados" data-en="Projects coordinated">Proyectos coordinados</p></div>
               <div class="stat-item"><h3 class="iridescent-text">+5</h3><p data-es="Eventos de alto impacto" data-en="High-impact events">Eventos de alto impacto</p></div>
-              <div class="stat-item"><h3 class="iridescent-text">+13</h3><p data-es="Marcas y organizaciones" data-en="Brands and organizations">Marcas y organizaciones</p></div>
+              <div class="stat-item"><h3 class="iridescent-text">+13</h3><p data-es="Marcas y organizaciones" data-en="Brands and organizations">Marcas y organizations</p></div>
             </div>
           </div>
         </div>
@@ -220,7 +181,6 @@
       </div>
 
       <div class="projects-grid">
-        <!-- 1. YP Realty (Social Media) -->
         <div class="project-card" onclick="openModal('modal-yprealty')">
           <div class="card-mac-header">
             <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
@@ -233,7 +193,6 @@
           </div>
         </div>
 
-        <!-- 2. PanHouse (Social Media) -->
         <div class="project-card" onclick="openModal('modal-panhouse')">
           <div class="card-mac-header">
             <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
@@ -246,7 +205,6 @@
           </div>
         </div>
 
-        <!-- 3. Freelance (Web) -->
         <div class="project-card" onclick="openModal('modal-freelance')">
           <div class="card-mac-header">
             <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
@@ -259,7 +217,6 @@
           </div>
         </div>
         
-        <!-- 4. Impaktemos / Landing Pages (Web) -->
         <div class="project-card" onclick="openModal('modal-impaktemos')">
           <div class="card-mac-header">
             <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
@@ -272,7 +229,6 @@
           </div>
         </div>
 
-        <!-- 5. Eurobuilding (Strategy) -->
         <div class="project-card" onclick="openModal('modal-eurobuilding')">
           <div class="card-mac-header">
             <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
@@ -285,7 +241,6 @@
           </div>
         </div>
         
-        <!-- 6. Dislocal (Strategy) -->
         <div class="project-card" onclick="openModal('modal-dislocal')">
           <div class="card-mac-header">
             <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
@@ -315,7 +270,6 @@
 
       <div class="services-grid-blocks">
         
-        <!-- BLOCK 1 -->
         <div class="service-block service-toggle" style="background: rgba(168, 85, 247, 0.08); border-color: rgba(168, 85, 247, 0.2);" onclick="this.classList.toggle('open')">
           <div class="service-block-header"><h3 data-es="📱 Content Creation & Video Editing" data-en="📱 Content Creation & Video Editing">📱 Content Creation & Video Editing</h3><span class="icon-plus">+</span></div>
           <div class="service-block-body">
@@ -335,7 +289,6 @@
           </div>
         </div>
 
-        <!-- BLOCK 2 -->
         <div class="service-block service-toggle" style="background: rgba(59, 130, 246, 0.08); border-color: rgba(59, 130, 246, 0.2);" onclick="this.classList.toggle('open')">
           <div class="service-block-header"><h3 data-es="💬 Social Media & Community Management" data-en="💬 Social Media & Community Management">💬 Social Media & Community Management</h3><span class="icon-plus">+</span></div>
           <div class="service-block-body">
@@ -355,7 +308,6 @@
           </div>
         </div>
 
-        <!-- BLOCK 3 -->
         <div class="service-block service-toggle" style="background: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.2);" onclick="this.classList.toggle('open')">
           <div class="service-block-header"><h3 data-es="💻 Front-End & Landing Pages" data-en="💻 Front-End & Landing Pages">💻 Front-End & Landing Pages</h3><span class="icon-plus">+</span></div>
           <div class="service-block-body">
@@ -428,21 +380,14 @@
 
   <!-- FOOTER NEGRO -->
   <footer class="site-footer black-footer">
-    
-    <!-- Easter Egg: Recordatorio (Lucas 24, 25-33) -->
     <div class="hidden-eyes-container" title="Lucas 24:31">
       <div style="display: flex; flex-direction: column; align-items: center;">
         <svg width="60" height="25" viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g class="blinking-eyes">
-            <!-- Pestañas Izquierda -->
             <path d="M15,10 L10,0 M25,8 L25,-2 M35,10 L40,0" stroke="#ffffff" stroke-width="1.5"/>
-            <!-- Ojo Izquierdo -->
             <path d="M10,20 Q25,5 40,20 Q25,35 10,20 Z" stroke="#ffffff" stroke-width="2.5" fill="none"/>
             <circle cx="25" cy="20" r="4.5" fill="#ffffff"/>
-
-            <!-- Pestañas Derecha -->
             <path d="M65,10 L60,0 M75,8 L75,-2 M85,10 L90,0" stroke="#ffffff" stroke-width="1.5"/>
-            <!-- Ojo Derecho -->
             <path d="M60,20 Q75,5 90,20 Q75,35 60,20 Z" stroke="#ffffff" stroke-width="2.5" fill="none"/>
             <circle cx="75" cy="20" r="4.5" fill="#ffffff"/>
           </g>
@@ -450,7 +395,6 @@
         <span style="font-size: 9px; letter-spacing: 2px; color: #ffffff; margin-top: 6px; font-weight: 700;">LUCAS 24, 25-33</span>
       </div>
     </div>
-
     <p data-es="© 2026 Greydemar Serrano. Todos los derechos reservados." data-en="© 2026 Greydemar Serrano. All rights reserved.">© 2026 Greydemar Serrano. Todos los derechos reservados.</p>
   </footer>
 
@@ -458,7 +402,6 @@
   <!-- MODALES DE PROYECTOS (ESTRUCTURA COLLAGE BENTO) -->
   <!-- ========================================== -->
   
-  <!-- YP REALTY -->
   <div id="modal-yprealty" class="modal-overlay" onclick="closeModalOutside(event, 'modal-yprealty')">
     <div class="modal-window">
       <div class="modal-mac-bar">
@@ -480,50 +423,20 @@
           <div><span class="meta-label" data-es="Herramientas" data-en="Tools">Herramientas</span><span class="meta-val">GA4, TikTok Analytics, YouTube Analytics, ROAS, CPA, CPM, CTR, CPC</span></div>
           <div><span class="meta-label" data-es="Inicio" data-en="Start">Inicio</span><span class="meta-val">2026</span></div>
         </div>
-        
         <div class="modal-gallery-container">
           <h3 data-es="Galería del Proyecto" data-en="Project Gallery">Galería del Proyecto</h3>
-          
           <div class="bento-collage">
-            <div class="media-card bento-vertical">
-              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Cisterna de agua en PR." onclick="openGalleryZoom(this)" style="background:#000;">
-                <source src="/VIDEO PARA PORTAFOLIO.webm" type="video/webm" />
-              </video>
-              <div class="media-caption">Cisterna de agua en PR.</div>
-            </div>
-            
-            <div class="media-card bento-vertical">
-              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Cierre de venta en Arecibo, Puerto Rico." onclick="openGalleryZoom(this)" style="background:#000;">
-                <source src="/PARA-PORTAFOLIO.webm" type="video/webm" />
-              </video>
-              <div class="media-caption">Cierre de venta en Arecibo, Puerto Rico.</div>
-            </div>
-
-            <div class="media-card bento-vertical">
-              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Interacción con el público trend, quién paga qué en temas de arrendamientos." onclick="openGalleryZoom(this)" style="background:#000;">
-                <source src="/VIDEO PARA PORTAFOLIO 2.webm" type="video/webm" />
-              </video>
-              <div class="media-caption">Interacción trend: ¿Quién paga qué?</div>
-            </div>
-
-            <div class="media-card bento-vertical">
-              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Isla del encanto." onclick="openGalleryZoom(this)" style="background:#000;">
-                <source src="/ISLA-DEL-ENCATO-PORTAFOLIO-.webm" type="video/webm" />
-              </video>
-              <div class="media-caption">Isla del encanto.</div>
-            </div>
-
-            <div class="media-card bento-horizontal">
-              <img src="/metricas.png" alt="Métricas YP Realty" class="horizontal-img w-full-img" data-caption="Análisis de Métricas" onclick="openGalleryZoom(this)" onerror="this.style.display='none'">
-              <div class="media-caption">Análisis de Métricas</div>
-            </div>
+            <div class="media-card bento-vertical"><video playsinline loop muted autoplay class="vertical-vid" data-caption="Cisterna de agua en PR." onclick="openGalleryZoom(this)" style="background:#000;"><source src="/VIDEO PARA PORTAFOLIO.webm" type="video/webm" /></video><div class="media-caption">Cisterna de agua en PR.</div></div>
+            <div class="media-card bento-vertical"><video playsinline loop muted autoplay class="vertical-vid" data-caption="Cierre de venta en Arecibo, Puerto Rico." onclick="openGalleryZoom(this)" style="background:#000;"><source src="/PARA-PORTAFOLIO.webm" type="video/webm" /></video><div class="media-caption">Cierre de venta en Arecibo, Puerto Rico.</div></div>
+            <div class="media-card bento-vertical"><video playsinline loop muted autoplay class="vertical-vid" data-caption="Interacción con el público trend, quién paga qué en temas de arrendamientos." onclick="openGalleryZoom(this)" style="background:#000;"><source src="/VIDEO PARA PORTAFOLIO 2.webm" type="video/webm" /></video><div class="media-caption">Interacción trend: ¿Quién paga qué?</div></div>
+            <div class="media-card bento-vertical"><video playsinline loop muted autoplay class="vertical-vid" data-caption="Isla del encanto." onclick="openGalleryZoom(this)" style="background:#000;"><source src="/ISLA-DEL-ENCATO-PORTAFOLIO-.webm" type="video/webm" /></video><div class="media-caption">Isla del encanto.</div></div>
+            <div class="media-card bento-horizontal"><img src="/metricas.png" alt="Métricas YP Realty" class="horizontal-img w-full-img" data-caption="Análisis de Métricas" onclick="openGalleryZoom(this)" onerror="this.style.display='none'"><div class="media-caption">Análisis de Métricas</div></div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- PANHOUSE -->
   <div id="modal-panhouse" class="modal-overlay" onclick="closeModalOutside(event, 'modal-panhouse')">
     <div class="modal-window">
       <div class="modal-mac-bar">
@@ -548,45 +461,17 @@
         <div class="modal-gallery-container">
           <h3 data-es="Galería del Proyecto" data-en="Project Gallery">Galería del Proyecto</h3>
           <div class="bento-collage">
-            
-            <div class="media-card bento-vertical">
-              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Cobertura de comunicación en PanHouse" onclick="openGalleryZoom(this)" style="background:#000;">
-                <source src="/video panhouse.mp4" type="video/mp4" />
-              </video>
-              <div class="media-caption">Cobertura de comunicaciones PanHouse</div>
-            </div>
-
-            <div class="media-card bento-vertical">
-              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Feria Internacional del Libro en Guadalajara" onclick="openGalleryZoom(this)" style="background:#000;">
-                <source src="/ph.mp4" type="video/mp4" />
-              </video>
-              <div class="media-caption">Feria Internacional del Libro en Guadalajara</div>
-            </div>
-
-            <div class="media-card bento-vertical">
-              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Despliegue logístico en Cerro Verde" onclick="openGalleryZoom(this)" style="background:#000;">
-                <source src="/cerro verde ph.mp4" type="video/mp4" />
-              </video>
-              <div class="media-caption">Despliegue logístico en Cerro Verde</div>
-            </div>
-
-            <div class="media-card bento-horizontal">
-              <img src="/evento ph.png" alt="Evento VIP Editorial PanHouse" class="horizontal-img w-full-img" data-caption="Ejecución de Evento VIP" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
-              <div class="media-caption">Ejecución de Evento VIP</div>
-            </div>
-
-            <div class="media-card bento-horizontal">
-              <img src="/manychat.png" alt="Automatización ManyChat" class="horizontal-img w-full-img" data-caption="Flujos de automatización de atención con IA (ManyChat)" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
-              <div class="media-caption">Automatización de atención con IA</div>
-            </div>
-            
+            <div class="media-card bento-vertical"><video playsinline loop muted autoplay class="vertical-vid" data-caption="Cobertura de comunicación en PanHouse" onclick="openGalleryZoom(this)" style="background:#000;"><source src="/video panhouse.mp4" type="video/mp4" /></video><div class="media-caption">Cobertura de comunicaciones PanHouse</div></div>
+            <div class="media-card bento-vertical"><video playsinline loop muted autoplay class="vertical-vid" data-caption="Feria Internacional del Libro en Guadalajara" onclick="openGalleryZoom(this)" style="background:#000;"><source src="/ph.mp4" type="video/mp4" /></video><div class="media-caption">Feria Internacional del Libro en Guadalajara</div></div>
+            <div class="media-card bento-vertical"><video playsinline loop muted autoplay class="vertical-vid" data-caption="Despliegue logístico en Cerro Verde" onclick="openGalleryZoom(this)" style="background:#000;"><source src="/cerro verde ph.mp4" type="video/mp4" /></video><div class="media-caption">Despliegue logístico en Cerro Verde</div></div>
+            <div class="media-card bento-horizontal"><img src="/evento ph.png" alt="Evento VIP Editorial PanHouse" class="horizontal-img w-full-img" data-caption="Ejecución de Evento VIP" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" /><div class="media-caption">Ejecución de Evento VIP</div></div>
+            <div class="media-card bento-horizontal"><img src="/manychat.png" alt="Automatización ManyChat" class="horizontal-img w-full-img" data-caption="Flujos de automatización de atención con IA (ManyChat)" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" /><div class="media-caption">Automatización de atención con IA</div></div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- FREELANCE (WEB) -->
   <div id="modal-freelance" class="modal-overlay" onclick="closeModalOutside(event, 'modal-freelance')">
     <div class="modal-window">
       <div class="modal-mac-bar">
@@ -610,41 +495,16 @@
         </div>
         <div class="modal-gallery-container">
           <h3 data-es="Casos de Diseño Web" data-en="Web Design Cases">Casos de Diseño Web</h3>
-          
           <div class="bento-collage">
-            <!-- Video Laura Navarro -->
-            <div class="media-card bento-horizontal">
-              <video playsinline loop muted autoplay class="horizontal-vid" data-caption="Diseño Web - Laura Navarro" onclick="openGalleryZoom(this)">
-                <source src="/laura navarro.mp4" type="video/mp4" />
-              </video>
-              <div class="media-caption">Diseño Web - Laura Navarro</div>
-              <a href="https://gserrano2024cs-ctrl.github.io/Dra.LauraNavarroActiveLearningEducationLeadership/" target="_blank" class="freelance-link" data-es="🌐 Ver sitio: Laura Navarro" data-en="🌐 View site: Laura Navarro">🌐 Ver sitio web</a>
-            </div>
-
-            <!-- Video Beatriz Briceño -->
-            <div class="media-card bento-horizontal">
-              <video playsinline loop muted autoplay class="horizontal-vid" data-caption="Diseño Web - Beatriz Briceño" onclick="openGalleryZoom(this)">
-                <source src="/bea briceño.mp4" type="video/mp4" />
-              </video>
-              <div class="media-caption">Diseño Web - Beatriz Briceño</div>
-              <a href="https://beatriz-brice-o-pic-n.vercel.app/" target="_blank" class="freelance-link" data-es="🌐 Ver sitio: Beatriz Briceño" data-en="🌐 View site: Beatriz Briceño">🌐 Ver sitio web</a>
-            </div>
-
-            <!-- Video MBI -->
-            <div class="media-card bento-horizontal">
-              <video playsinline loop muted autoplay class="horizontal-vid" data-caption="Diseño Web - Mario Briceño Iragorry" onclick="openGalleryZoom(this)">
-                <source src="/mbi.mp4" type="video/mp4" />
-              </video>
-              <div class="media-caption">Diseño Web - Mario Briceño Iragorry</div>
-              <a href="https://mbihoy.vercel.app/?v=1" target="_blank" class="freelance-link" data-es="🌐 Ver sitio: Mario Briceño Iragorry" data-en="🌐 View site: Mario Briceño Iragorry">🌐 Ver sitio web</a>
-            </div>
+            <div class="media-card bento-horizontal"><video playsinline loop muted autoplay class="horizontal-vid" data-caption="Diseño Web - Laura Navarro" onclick="openGalleryZoom(this)"><source src="/laura navarro.mp4" type="video/mp4" /></video><div class="media-caption">Diseño Web - Laura Navarro</div><a href="https://gserrano2024cs-ctrl.github.io/Dra.LauraNavarroActiveLearningEducationLeadership/" target="_blank" class="freelance-link" data-es="🌐 Ver sitio: Laura Navarro" data-en="🌐 View site: Laura Navarro">🌐 Ver sitio web</a></div>
+            <div class="media-card bento-horizontal"><video playsinline loop muted autoplay class="horizontal-vid" data-caption="Diseño Web - Beatriz Briceño" onclick="openGalleryZoom(this)"><source src="/bea briceño.mp4" type="video/mp4" /></video><div class="media-caption">Diseño Web - Beatriz Briceño</div><a href="https://beatriz-brice-o-pic-n.vercel.app/" target="_blank" class="freelance-link" data-es="🌐 Ver sitio: Beatriz Briceño" data-en="🌐 View site: Beatriz Briceño">🌐 Ver sitio web</a></div>
+            <div class="media-card bento-horizontal"><video playsinline loop muted autoplay class="horizontal-vid" data-caption="Diseño Web - Mario Briceño Iragorry" onclick="openGalleryZoom(this)"><source src="/mbi.mp4" type="video/mp4" /></video><div class="media-caption">Diseño Web - Mario Briceño Iragorry</div><a href="https://mbihoy.vercel.app/?v=1" target="_blank" class="freelance-link" data-es="🌐 Ver sitio: Mario Briceño Iragorry" data-en="🌐 View site: Mario Briceño Iragorry">🌐 Ver sitio web</a></div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- IMPAKTEMOS (LANDING PAGES) -->
   <div id="modal-impaktemos" class="modal-overlay" onclick="closeModalOutside(event, 'modal-impaktemos')">
     <div class="modal-window">
       <div class="modal-mac-bar">
@@ -670,38 +530,16 @@
         <div class="modal-gallery-container">
           <h3 data-es="Galería del Proyecto" data-en="Project Gallery">Galería del Proyecto</h3>
           <div class="bento-collage">
-            
-            <div class="media-card bento-vertical">
-              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Plataforma Las Minitas en acción" onclick="openGalleryZoom(this)" style="background:#000;">
-                <source src="/video plataforma.mp4" type="video/mp4" />
-              </video>
-              <div class="media-caption">Plataforma Las Minitas en acción</div>
-            </div>
-
-            <div class="media-card bento-vertical">
-              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Intervención logística en Ciudad Piar, La Guaira." onclick="openGalleryZoom(this)" style="background:#000;">
-                <source src="/ciudad piar.mp4" type="video/mp4" />
-              </video>
-              <div class="media-caption">Logística en Ciudad Piar, La Guaira</div>
-            </div>
-
-            <div class="media-card bento-horizontal">
-              <img src="/impaktemos 1.png" alt="Refuerzo escolar" class="horizontal-img w-full-img" data-caption="Refuerzo escolar en plataforma las minitas." onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
-              <div class="media-caption">Refuerzo escolar (Las Minitas)</div>
-            </div>
-
-            <div class="media-card bento-horizontal">
-              <img src="/landingpage plataforma.png" alt="Diseño de Landing Page" class="horizontal-img w-full-img" data-caption="Diseño UI/UX de la Landing Page" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
-              <div class="media-caption">Diseño de Landing Page</div>
-            </div>
-
+            <div class="media-card bento-vertical"><video playsinline loop muted autoplay class="vertical-vid" data-caption="Plataforma Las Minitas en acción" onclick="openGalleryZoom(this)" style="background:#000;"><source src="/video plataforma.mp4" type="video/mp4" /></video><div class="media-caption">Plataforma Las Minitas en acción</div></div>
+            <div class="media-card bento-vertical"><video playsinline loop muted autoplay class="vertical-vid" data-caption="Intervención logística en Ciudad Piar, La Guaira." onclick="openGalleryZoom(this)" style="background:#000;"><source src="/ciudad piar.mp4" type="video/mp4" /></video><div class="media-caption">Logística en Ciudad Piar, La Guaira</div></div>
+            <div class="media-card bento-horizontal"><img src="/impaktemos 1.png" alt="Refuerzo escolar" class="horizontal-img w-full-img" data-caption="Refuerzo escolar en plataforma las minitas." onclick="openGalleryZoom(this)" onerror="this.style.display='none'" /><div class="media-caption">Refuerzo escolar (Las Minitas)</div></div>
+            <div class="media-card bento-horizontal"><img src="/landingpage plataforma.png" alt="Diseño de Landing Page" class="horizontal-img w-full-img" data-caption="Diseño UI/UX de la Landing Page" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" /><div class="media-caption">Diseño de Landing Page</div></div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- EUROBUILDING -->
   <div id="modal-eurobuilding" class="modal-overlay" onclick="closeModalOutside(event, 'modal-eurobuilding')">
     <div class="modal-window">
       <div class="modal-mac-bar">
@@ -726,30 +564,15 @@
         <div class="modal-gallery-container">
           <h3 data-es="Galería del Proyecto" data-en="Project Gallery">Galería del Proyecto</h3>
           <div class="bento-collage">
-            
-            <div class="media-card bento-horizontal">
-              <video playsinline loop muted autoplay class="horizontal-vid" data-caption="Operaciones y estándares de servicio en Eurobuilding." onclick="openGalleryZoom(this)">
-                <source src="/video euro.mp4" type="video/mp4" />
-              </video>
-              <div class="media-caption">Operaciones y estándares de servicio</div>
-            </div>
-
-            <div class="media-card bento-horizontal">
-              <img src="/equipo euro.png" alt="Equipo Eurobuilding" class="horizontal-img w-full-img" data-caption="Equipo de trabajo Eurobuilding" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
-              <div class="media-caption">Equipo de trabajo Eurobuilding</div>
-            </div>
-
-            <div class="media-card bento-horizontal">
-              <img src="/OPERA PMS.png" alt="Sistema Opera PMS" class="horizontal-img w-full-img" data-caption="Gestión y reservas con Opera PMS" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
-              <div class="media-caption">Gestión y reservas con Opera PMS</div>
-            </div>
+            <div class="media-card bento-horizontal"><video playsinline loop muted autoplay class="horizontal-vid" data-caption="Operaciones y estándares de servicio en Eurobuilding." onclick="openGalleryZoom(this)"><source src="/video euro.mp4" type="video/mp4" /></video><div class="media-caption">Operaciones y estándares de servicio</div></div>
+            <div class="media-card bento-horizontal"><img src="/equipo euro.png" alt="Equipo Eurobuilding" class="horizontal-img w-full-img" data-caption="Equipo de trabajo Eurobuilding" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" /><div class="media-caption">Equipo de trabajo Eurobuilding</div></div>
+            <div class="media-card bento-horizontal"><img src="/OPERA PMS.png" alt="Sistema Opera PMS" class="horizontal-img w-full-img" data-caption="Gestión y reservas con Opera PMS" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" /><div class="media-caption">Gestión y reservas con Opera PMS</div></div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- DISLOCAL -->
   <div id="modal-dislocal" class="modal-overlay" onclick="closeModalOutside(event, 'modal-dislocal')">
     <div class="modal-window">
       <div class="modal-mac-bar">
@@ -775,41 +598,26 @@
         <div class="modal-gallery-container">
           <h3 data-es="Galería del Proyecto" data-en="Project Gallery">Galería del Proyecto</h3>
           <div class="bento-collage">
-            
-            <div class="media-card bento-vertical">
-              <video playsinline loop muted autoplay class="vertical-vid" data-caption="Proyecto Dislocal en acción" onclick="openGalleryZoom(this)" style="background:#000;">
-                <source src="/video dislocal.mp4" type="video/mp4" />
-              </video>
-              <div class="media-caption">Proyecto Dislocal en acción</div>
-            </div>
-
-            <div class="media-card bento-horizontal">
-              <video playsinline loop muted autoplay class="horizontal-vid" data-caption="Navegación web Dislocal" onclick="openGalleryZoom(this)" style="background:#000;">
-                <source src="/web dislocal.mp4" type="video/mp4" />
-              </video>
-              <div class="media-caption">Navegación web Dislocal</div>
-            </div>
-
-            <div class="media-card bento-horizontal">
-              <img src="/dislocal 1.png" alt="Logística y trabajo de campo" class="horizontal-img w-full-img" data-caption="Evento social para la comunidad del Calvario en el cine." onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
-              <div class="media-caption">Evento social en el cine (El Calvario)</div>
-            </div>
-
-            <div class="media-card bento-horizontal">
-              <img src="/dislocal 202.png" alt="Organización de eventos Dislocal" class="horizontal-img w-full-img" data-caption="Documentación de la vida cotidiana en el Calvario." onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
-              <div class="media-caption">Documentación en campo</div>
-            </div>
-
-            <div class="media-card bento-horizontal">
-              <img src="/imagen trello dislocal (2).png" alt="Tablero Trello" class="horizontal-img w-full-img" data-caption="Coordinación de recursos y tareas en Trello" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" />
-              <div class="media-caption">Coordinación de recursos en Trello</div>
-            </div>
-            
+            <div class="media-card bento-vertical"><video playsinline loop muted autoplay class="vertical-vid" data-caption="Proyecto Dislocal en acción" onclick="openGalleryZoom(this)" style="background:#000;"><source src="/video dislocal.mp4" type="video/mp4" /></video><div class="media-caption">Proyecto Dislocal en acción</div></div>
+            <div class="media-card bento-horizontal"><video playsinline loop muted autoplay class="horizontal-vid" data-caption="Navegación web Dislocal" onclick="openGalleryZoom(this)" style="background:#000;"><source src="/web dislocal.mp4" type="video/mp4" /></video><div class="media-caption">Navegación web Dislocal</div></div>
+            <div class="media-card bento-horizontal"><img src="/dislocal 1.png" alt="Logística y trabajo de campo" class="horizontal-img w-full-img" data-caption="Evento social para la comunidad del Calvario en el cine." onclick="openGalleryZoom(this)" onerror="this.style.display='none'" /><div class="media-caption">Evento social en el cine (El Calvario)</div></div>
+            <div class="media-card bento-horizontal"><img src="/dislocal 202.png" alt="Organización de eventos Dislocal" class="horizontal-img w-full-img" data-caption="Documentación de la vida cotidiana en el Calvario." onclick="openGalleryZoom(this)" onerror="this.style.display='none'" /><div class="media-caption">Documentación en campo</div></div>
+            <div class="media-card bento-horizontal"><img src="/imagen trello dislocal (2).png" alt="Tablero Trello" class="horizontal-img w-full-img" data-caption="Coordinación de recursos y tareas en Trello" onclick="openGalleryZoom(this)" onerror="this.style.display='none'" /><div class="media-caption">Coordinación de recursos en Trello</div></div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- DOCK FLOTANTE RESTAURADO -->
+  <nav class="floating-dock">
+    <ul class="dock-list">
+      <li class="dock-item" data-tooltip="Sobre mí" data-tooltip-es="Sobre mí" data-tooltip-en="About Me"><a href="#about" class="dock-link"><img src="/notas.webp" class="mac-icon" alt="Notas"></a></li>
+      <li class="dock-item" data-tooltip="Casos" data-tooltip-es="Casos" data-tooltip-en="Cases"><a href="#projects" class="dock-link"><img src="/foto.png" class="mac-icon" alt="Fotos"></a></li>
+      <li class="dock-item" data-tooltip="Servicios" data-tooltip-es="Servicios" data-tooltip-en="Services"><a href="#services" class="dock-link"><img src="/finder icon.png" class="mac-icon" alt="Finder"></a></li>
+      <li class="dock-item" data-tooltip="Contacto" data-tooltip-es="Contacto" data-tooltip-en="Contact"><a href="#contact" class="dock-link"><img src="/ICON MAIL.webp" class="mac-icon" alt="Mail"></a></li>
+    </ul>
+  </nav>
 
   <script is:inline>
     // Configuración del Idioma
@@ -821,6 +629,10 @@
         el.innerHTML = el.getAttribute(`data-${lang}`); 
       });
       
+      document.querySelectorAll('[data-tooltip-es]').forEach(el => { 
+        el.setAttribute('data-tooltip', el.getAttribute(`data-tooltip-${lang}`)); 
+      });
+
       const msgArea = document.getElementById('wa-message');
       if(msgArea) { 
         msgArea.placeholder = lang === 'es' ? msgArea.getAttribute('data-es-placeholder') : "Hi Grey, I'd like to work on..."; 
@@ -901,26 +713,9 @@
       window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
     }
 
-    // Inicialización al cargar el DOM (Isla dinámica y Animaciones)
+    // Inicialización al cargar el DOM
     document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.add('loaded');
-      
-      // Lógica de la Isla Dinámica
-      const toggleBtn = document.getElementById('toggle-menu');
-      const islandContainer = document.getElementById('dynamic-island');
-      const navLinks = document.querySelectorAll('.island-content a');
-
-      if (toggleBtn && islandContainer) {
-        toggleBtn.addEventListener('click', () => {
-          islandContainer.classList.toggle('is-expanded');
-        });
-
-        navLinks.forEach(link => {
-          link.addEventListener('click', () => {
-            islandContainer.classList.remove('is-expanded');
-          });
-        });
-      }
     });
   </script>
 
@@ -932,83 +727,61 @@
     --navy-dark: #0f172a; --pastel-yellow: #fef08a; --pastel-pink: #fbcfe8; --pastel-green: #bbf7d0;
     --glass-bg: rgba(255, 255, 255, 0.4); --glass-border: rgba(255, 255, 255, 0.6); --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
     --text-muted: #475569; --bg-soft: rgba(255, 255, 255, 0.7); --border-color: rgba(0, 0, 0, 0.1);
-    
-    /* Variables Isla Dinámica */
-    --island-bg: rgba(255, 255, 255, 0.9);
-    --blur-effect: blur(20px);
-    --transition-curve: cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--navy-dark); overflow-x: hidden; position: relative; scroll-behavior: smooth; }
 
   /* ========================================================= */
-  /* ESTILOS ISLA DINÁMICA (NUEVO MENÚ) */
+  /* EFECTO DE MANCHA FLUIDA Y BLEND MODE EN HERO              */
   /* ========================================================= */
-  .island-container {
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
-    width: 130px;
-    background: var(--island-bg);
-    backdrop-filter: var(--blur-effect);
-    -webkit-backdrop-filter: var(--blur-effect);
-    border: 1px solid rgba(0,0,0,0.05);
-    border-radius: 2rem;
-    overflow: hidden;
-    max-height: 56px;
-    transition: max-height 0.6s var(--transition-curve), width 0.6s var(--transition-curve), box-shadow 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    padding: 0 1.2rem;
-    z-index: 99999;
-  }
-
-  .island-container.is-expanded {
-    width: 340px;
-    max-height: 550px;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-  }
-
-  .island-header { display: flex; justify-content: space-between; align-items: center; height: 56px; }
-  .logo { font-weight: 900; font-size: 1.1rem; color: var(--navy-dark); letter-spacing: -0.02em; }
-  .menu-btn { background: none; border: none; cursor: pointer; color: var(--navy-dark); display: flex; align-items: center; justify-content: center; padding: 0; }
-  .grid-icon { transition: transform 0.4s var(--transition-curve); }
-  .island-container.is-expanded .grid-icon { transform: rotate(45deg) scale(0.9); }
-
-  .island-content {
-    opacity: 0; pointer-events: none; transform: translateY(-10px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    padding-bottom: 1.5rem; display: flex; flex-direction: column; gap: 2rem;
-  }
-
-  .island-container.is-expanded .island-content { opacity: 1; pointer-events: auto; transform: translateY(0); transition-delay: 0.1s; }
-
-  .main-nav { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem; }
-  .squiggly-link { font-size: 2.2rem; font-weight: 800; text-decoration: none; color: var(--navy-dark); position: relative; display: inline-block; letter-spacing: -0.03em; }
   
-  .squiggly-link:hover::after {
-    content: ""; position: absolute; bottom: 30%; left: 0; width: 100%; height: 6px;
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cpath fill='none' stroke='%23fbcfe8' stroke-width='2' d='M0 2c3.33 0 3.33-2 6.67-2s3.33 2 6.67 2 3.33-2 6.67-2 3.33 2 6.67 2'/%3E%3C/svg%3E");
-    background-repeat: repeat-x; background-size: 20px 4px; animation: squiggly 0.5s infinite linear; z-index: -1;
+  .fluid-bg-container {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    background-color: #ffffff; /* Fondo blanco requerido para el blend-mode */
   }
 
-  @keyframes squiggly { 0% { background-position: 0 0; } 100% { background-position: 20px 0; } }
+  /* La mancha negra animada y borrosa */
+  .fluid-blob {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 65vw; height: 65vw;
+    max-width: 900px; max-height: 900px;
+    background-color: #000000;
+    filter: blur(80px);
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    animation: morphBlob 18s infinite alternate ease-in-out;
+    transform-origin: center;
+  }
 
-  .sub-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; font-size: 0.85rem; }
-  .socials, .contacts { display: flex; flex-direction: column; gap: 0.5rem; }
-  .label { color: #94a3b8; margin: 0 0 0.2rem 0; font-weight: 800; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.05em; }
-  .arrow-link { text-decoration: none; color: var(--navy-dark); font-weight: 600; display: flex; align-items: center; gap: 4px; transition: color 0.2s ease; }
-  .arrow-link:hover { color: #3b82f6; }
-  .arrow { opacity: 0; transform: translate(-5px, 5px); transition: all 0.2s ease; font-weight: bold; color: #3b82f6; }
-  .arrow-link:hover .arrow { opacity: 1; transform: translate(0, 0); }
+  @keyframes morphBlob {
+    0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+    50% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; transform: translate(-30%, -70%) rotate(180deg) scale(1.15); }
+    100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; transform: translate(-70%, -30%) rotate(360deg) scale(0.9); }
+  }
 
-  .cta-btn-link { text-decoration: none; width: 100%; }
-  .cta-btn { width: 100%; background: var(--navy-dark); color: white; border: none; border-radius: 12px; padding: 1.2rem; font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.3s ease; margin-top: 0.5rem; }
-  .cta-btn:hover { background: #1e293b; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2); }
+  /* Overlay de grano en el Hero */
+  .hero-grain {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.15'/%3E%3C/svg%3E");
+    pointer-events: none;
+    mix-blend-mode: multiply;
+  }
+
+  /* MAGIA: El texto usa mix-blend-mode sobre la mancha negra y el fondo blanco */
+  .hero-center-text h1, .brand-centered {
+    color: #ffffff;
+    mix-blend-mode: difference; 
+  }
+
 
   /* ========================================================= */
-  /* ESTILOS GLOBALES ORIGINALES                               */
+  /* ESTILOS GLOBALES Y RESTO DE SECCIONES                     */
   /* ========================================================= */
+
   .fade-in-section { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
   body.loaded .fade-in-section { opacity: 1; transform: translateY(0); }
   .delay-1 { transition-delay: 0.1s; } .delay-2 { transition-delay: 0.2s; } .delay-3 { transition-delay: 0.3s; }
@@ -1028,21 +801,24 @@
   .zoom-close { position: absolute; top: 25px; right: 35px; background: rgba(255,255,255,0.15); border: none; color: white; width: 44px; height: 44px; border-radius: 50%; font-size: 22px; cursor: pointer; transition: background 0.3s; z-index: 9999999; display: flex; align-items: center; justify-content: center; }
   .zoom-close:hover { background: rgba(255,255,255,0.35); }
 
-  .hero-wrapper { position: relative; width: 100%; min-height: 100vh; overflow: hidden; z-index: 10; background: #000; }
-  .hero-video-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
-  .video-bg { width: 100%; height: 100%; object-fit: cover; opacity: 0.8;}
-  .avila-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.35); }
+  .hero-wrapper { position: relative; width: 100%; min-height: 100vh; overflow: hidden; z-index: 10; background: #ffffff; /* Ahora es blanco nativo */ }
   .top-header { position: relative; width: 100%; max-width: 1300px; margin: 0 auto; padding: 24px 32px; display: flex; justify-content: flex-end; align-items: center; z-index: 10; }
-  .brand-centered { position: absolute; top: 38px; left: 50%; transform: translateX(-50%); font-weight: 900; font-size: 20px; letter-spacing: -0.02em; color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.4); white-space: nowrap; }
   
-  .lang-switch.dark-mode { background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px); padding: 4px; border-radius: 30px; display: flex; align-items: center; gap: 4px; border: 1px solid rgba(255,255,255,0.1); }
-  .lang-btn { background: transparent; border: none; font-weight: 700; font-size: 12px; color: rgba(255,255,255,0.6); cursor: pointer; padding: 6px 12px; border-radius: 20px; transition: all 0.3s ease; }
-  .lang-btn.active { background: rgba(255,255,255,0.15); color: #ffffff; font-weight: 900; }
+  .brand-centered { position: absolute; top: 38px; left: 50%; transform: translateX(-50%); font-weight: 900; font-size: 20px; letter-spacing: -0.02em; white-space: nowrap; }
+  
+  .lang-switch.light-mode { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); padding: 4px; border-radius: 30px; display: flex; align-items: center; gap: 4px; border: 1px solid rgba(0,0,0,0.1); }
+  .lang-btn { background: transparent; border: none; font-weight: 700; font-size: 12px; color: #64748b; cursor: pointer; padding: 6px 12px; border-radius: 20px; transition: all 0.3s ease; }
+  .lang-btn.active { background: rgba(15, 23, 42, 0.08); color: #0f172a; font-weight: 900; }
 
   .hero-container { max-width: 1300px; width: 100%; margin: auto auto; padding: 20px 32px 100px; display: grid; grid-template-columns: 320px 1fr 260px; gap: 24px; align-items: center; min-height: calc(100vh - 120px); position: relative; z-index: 10; }
   .left-col { position: relative; display: flex; flex-direction: column; gap: 28px; }
   
-  .glass-profile-card { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 24px; padding: 16px 20px; cursor: pointer; box-shadow: var(--glass-shadow); transition: all 0.4s; overflow: hidden; }
+  /* Ajuste de tarjetas de cristal para el nuevo fondo claro */
+  .glass-profile-card, .glass-cases-card { 
+    background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); 
+    border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 24px; padding: 16px 20px; cursor: pointer; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06); transition: all 0.4s; overflow: hidden; color: var(--navy-dark); 
+  }
   
   .card-min-header { display: flex; align-items: center; gap: 14px; transition: all 0.4s ease; flex-direction: row !important; }
   .shift-right { margin-left: 6px; } 
@@ -1060,37 +836,36 @@
   .green-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: blink-green 2.5s infinite; }
   .status-text { font-size: 11px; font-weight: 700; color: #1e293b; }
   .name-group { display: flex; flex-direction: column; gap: 2px; }
-  .min-name { font-size: 15px; font-weight: 900; letter-spacing: -0.01em; line-height: 1.1; }
-  .min-title { font-size: 11.5px; font-weight: 700; opacity: 0.65; }
+  .min-name { font-size: 15px; font-weight: 900; letter-spacing: -0.01em; line-height: 1.1; color: #000; }
+  .min-title { font-size: 11.5px; font-weight: 700; color: #475569; }
   
   .card-expand-content { max-height: 0; opacity: 0; transition: all 0.5s; overflow: hidden; }
-  .glass-profile-card.active .card-expand-content { max-height: 600px; opacity: 1; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.4); }
-  .expand-bio { font-size: 15px; font-weight: 500; line-height: 1.55; margin-bottom: 16px; }
+  .glass-profile-card.active .card-expand-content { max-height: 600px; opacity: 1; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(0, 0, 0, 0.1); }
+  .expand-bio { font-size: 15px; font-weight: 500; line-height: 1.55; margin-bottom: 16px; color: #1e293b; }
   .expand-bio strong { font-weight: 900; color: #000; }
   
-  .skills-title { font-size: 11px; font-weight: 800; color: var(--navy-dark); text-transform: uppercase; margin-bottom: 8px; opacity: 0.8; }
+  .skills-title { font-size: 11px; font-weight: 800; color: var(--navy-dark); text-transform: uppercase; margin-bottom: 8px; }
   .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
-  .skills-grid span { font-size: 10.5px; font-weight: 800; background: rgba(255, 255, 255, 0.75); padding: 8px 10px; border-radius: 6px; text-align: center; white-space: nowrap; }
+  .skills-grid span { font-size: 10.5px; font-weight: 800; background: rgba(0, 0, 0, 0.05); padding: 8px 10px; border-radius: 6px; text-align: center; white-space: nowrap; color: var(--navy-dark); }
   .skills-grid .wide-skill { grid-column: span 2; }
   
   .hero-center-text { text-align: center; position: relative; display: flex; justify-content: center; align-items: center; }
-  .hero-center-text h1 { font-size: 5.5rem; font-weight: 900; line-height: 0.98; letter-spacing: -0.04em; text-transform: uppercase; margin: 0 auto; max-width: 900px; color: #ffffff; text-shadow: 0 8px 30px rgba(0,0,0,0.3); }
-  .floating-pill { position: absolute; padding: 6px 14px; border-radius: 30px; font-size: 12px; font-weight: 800; white-space: nowrap; color: var(--navy-dark); pointer-events: none;}
+  .hero-center-text h1 { font-size: 5.5rem; font-weight: 900; line-height: 0.98; letter-spacing: -0.04em; text-transform: uppercase; margin: 0 auto; max-width: 900px; }
+  .floating-pill { position: absolute; padding: 6px 14px; border-radius: 30px; font-size: 12px; font-weight: 800; white-space: nowrap; color: var(--navy-dark); pointer-events: none; mix-blend-mode: normal; z-index: 10; }
   .pill-pink { background: var(--pastel-pink); top: -25px; right: 15px; transform: rotate(3deg); }
   .pill-green { background: var(--pastel-green); bottom: -30px; left: 10%; transform: rotate(-6deg); }
   .pill-yellow { background: var(--pastel-yellow); bottom: -25px; right: 40px; transform: rotate(2deg); }
   
-  .glass-cases-card { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 20px; padding: 14px 18px; cursor: pointer; transition: all 0.4s; overflow: hidden; box-shadow: var(--glass-shadow); }
   .cases-min-header { display: flex; align-items: center; justify-content: space-between; }
-  .cases-title-text { font-size: 14px; font-weight: 800; color: var(--navy-dark); }
+  .cases-title-text { font-size: 14px; font-weight: 800; color: #000; }
   .search-icon-wrapper { background: rgba(0, 0, 0, 0.05); border-radius: 50%; padding: 6px; display: flex; color: var(--navy-dark); }
   .cases-expand-content { max-height: 0; opacity: 0; transition: all 0.5s; }
   .glass-cases-card.active .cases-expand-content { max-height: 350px; opacity: 1; margin-top: 14px; }
   .quick-cases-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
   .quick-cases-list li { display: flex; align-items: flex-start; gap: 8px; }
   .quick-cases-list a { text-decoration: none; display: flex; flex-direction: column; font-size: 13.5px; }
-  .quick-cases-list strong { font-weight: 800; color: var(--navy-dark);}
-  .quick-cases-list span { font-size: 11px; color: var(--text-muted); margin-top: 2px;}
+  .quick-cases-list strong { font-weight: 800; color: #000;}
+  .quick-cases-list span { font-size: 11px; color: #475569; margin-top: 2px;}
 
   .marquee-section { width: 100%; background: #ffffff; padding: 15px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); z-index: 5; position: relative; overflow: hidden; }
   .marquee-container { width: 100vw; max-width: 100%; overflow: hidden; display: flex; align-items: center; }
@@ -1255,6 +1030,16 @@
   .freelance-link { background: #f1f5f9; color: var(--navy-dark); padding: 12px; border-radius: 8px; text-align: center; text-decoration: none; font-weight: 800; font-size: 14px; border: 1px solid var(--border-color); transition: all 0.3s ease; }
   .freelance-link:hover { background: var(--navy-dark); color: #ffffff; }
 
+  /* DOCK FLOTANTE ORIGINAL */
+  .floating-dock { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 32px; padding: 10px 22px; z-index: 9999; box-shadow: var(--glass-shadow); }
+  .dock-list { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; align-items: center; }
+  .dock-item { position: relative; display: flex; justify-content: center; }
+  .dock-link { display: flex; align-items: center; }
+  .mac-icon { width: 52px; height: 52px; object-fit: contain; transition: transform 0.2s; }
+  .dock-link:hover .mac-icon { transform: scale(1.2) translateY(-6px); }
+  .dock-item::before { content: attr(data-tooltip); position: absolute; top: -42px; background: var(--navy-dark); color: white; font-size: 12px; font-weight: 700; padding: 6px 12px; border-radius: 8px; opacity: 0; visibility: hidden; transition: all 0.2s; white-space: nowrap; pointer-events: none; }
+  .dock-item:hover::before { opacity: 1; visibility: visible; top: -48px; }
+
   @media (max-width: 900px) {
     .brand-centered { font-size: 16px; top: 20px; }
     .hero-container { display: flex; flex-direction: column; gap: 16px; margin-top: 50px; }
@@ -1266,6 +1051,9 @@
     .about-subtitle { font-size: 1.15rem; }
     
     .floating-pill { display: none; }
+    .floating-dock { padding: 10px 16px; }
+    .mac-icon { width: 44px; height: 44px; }
+    .dock-list { gap: 16px; }
     
     .about-section, .services-section { padding: 60px 20px; }
     .projects-section { padding: 40px 20px; }
