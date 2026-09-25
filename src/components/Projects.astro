@@ -1,1 +1,106 @@
+---
+---
+<section id="projects" class="projects-section fade-in-section delay-4">
+  <div class="projects-container">
+    <div class="sticky-note">
+      <svg class="real-pin pin-blue" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10V22" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="5" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5"/><circle cx="10.5" cy="5.5" r="1.5" fill="#ffffff" opacity="0.6"/></svg>
+      <span class="note-text" data-es="Casos" data-en="Cases">Casos</span>
+    </div>
+    <div class="section-header">
+      <h2 data-es="Proyectos que cuentan historias." data-en="Projects that tell stories.">Proyectos que cuentan historias.</h2>
+      <p data-es="Selección de ecosistemas y estrategias destacadas." data-en="Selection of featured ecosystems and strategies.">Selección de ecosistemas y estrategias destacadas.</p>
+    </div>
 
+    <div class="projects-grid">
+      <!-- Tarjeta 1: YP Realty -->
+      <div class="project-card" onclick="openModal('modal-yprealty')">
+        <div class="card-mac-header">
+          <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+          <span class="project-num-tag">01</span>
+        </div>
+        <div class="card-body">
+          <img src="/portada-yprealty.png" alt="YP Realty" class="card-img" style="object-position: top center;" />
+          <p class="card-category">Social Media + Video Editing</p>
+          <h3>YP Realty</h3>
+          <p class="card-desc">Estrategia de contenido y crecimiento orgánico para inmobiliaria.</p>
+          <div class="mini-result"><strong>+604%</strong><span>Interacciones</span></div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2: PanHouse -->
+      <div class="project-card" onclick="openModal('modal-panhouse')">
+        <div class="card-mac-header">
+          <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+          <span class="project-num-tag">02</span>
+        </div>
+        <div class="card-body">
+          <img src="/portada-panhouse.png" alt="Editorial PanHouse" class="card-img" />
+          <p class="card-category">Comunicaciones Internas + IA</p>
+          <h3>Editorial PanHouse</h3>
+          <p class="card-desc">Sistemas de automatización y estandarización corporativa.</p>
+          <div class="mini-result"><strong>IA</strong><span>Flujos ManyChat</span></div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3: Freelance Web -->
+      <div class="project-card" onclick="openModal('modal-freelance')">
+        <div class="card-mac-header">
+          <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+          <span class="project-num-tag">03</span>
+        </div>
+        <div class="card-body">
+          <img src="/portada freelance.png" alt="Freelance" class="card-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlMmU4ZjAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZmlsbD0iIzk0YTNiOCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5EaXNlw7FvIHkgV2ViPC90ZXh0Pjwvc3ZnPg=='" />
+          <p class="card-category">Astro + Diseño UI</p>
+          <h3>Freelance Web</h3>
+          <p class="card-desc">Landing pages optimizadas para conversión internacional.</p>
+          <div class="mini-result"><strong>3+</strong><span>Sitios lanzados</span></div>
+        </div>
+      </div>
+      
+      <!-- Tarjeta 4: Impaktemos -->
+      <div class="project-card" onclick="openModal('modal-impaktemos')">
+        <div class="card-mac-header">
+          <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+          <span class="project-num-tag">04</span>
+        </div>
+        <div class="card-body">
+          <img src="/portada-impaktemos.png" alt="Impaktemos" class="card-img" />
+          <p class="card-category">Web + Operaciones</p>
+          <h3>Landing Pages</h3>
+          <p class="card-desc">Desarrollo de plataforma para organizar el flujo de voluntarios.</p>
+          <div class="mini-result"><strong>100%</strong><span>Control de tareas</span></div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 5: Eurobuilding -->
+      <div class="project-card" onclick="openModal('modal-eurobuilding')">
+        <div class="card-mac-header">
+          <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+          <span class="project-num-tag">05</span>
+        </div>
+        <div class="card-body">
+          <img src="/portada-eurobuilding.png" alt="Eurobuilding" class="card-img" />
+          <p class="card-category">B2B + Business Center</p>
+          <h3>Eurobuilding</h3>
+          <p class="card-desc">Logística, reservas corporativas y gestión de 7 departamentos.</p>
+          <div class="mini-result"><strong>100%</strong><span>Resolución</span></div>
+        </div>
+      </div>
+      
+      <!-- Tarjeta 6: Dislocal -->
+      <div class="project-card" onclick="openModal('modal-dislocal')">
+        <div class="card-mac-header">
+          <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+          <span class="project-num-tag">06</span>
+        </div>
+        <div class="card-body">
+          <img src="/portada-dislocal.png" alt="Dislocal" class="card-img" />
+          <p class="card-category">Project Management</p>
+          <h3>Dislocal</h3>
+          <p class="card-desc">Ejecución logística de proyectos de impacto local con equipos globales.</p>
+          <div class="mini-result"><strong>Agile</strong><span>Metodología</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
