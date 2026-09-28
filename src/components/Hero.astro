@@ -1,72 +1,69 @@
 ---
 ---
-<section class="hero-wrapper fade-in-section delay-1">
+<section class="hero-wrapper">
   
-  <!-- 1. FONDO DE VIDEO (EL ÁVILA) Y OVERLAY -->
+  <!-- 1. FONDO DE VIDEO (EL ÁVILA) Y CAPA DE CONTRASTE -->
   <div class="hero-bg-video-container">
-    <video autoplay loop muted playsinline class="hero-bg-video">
+    <video autoplay loop muted playsinline preload="auto" class="hero-bg-video">
       <source src="/avila.mp4" type="video/mp4" />
     </video>
     <div class="bg-overlay"></div>
   </div>
 
-  <!-- 2. HEADER Y SELECTOR DE IDIOMA -->
-  <header class="top-header">
-    <div class="brand-centered text-white">GREYDEMAR SERRANO®</div>
-    <div class="lang-switch glass-pill">
+  <!-- 2. NAVBAR REFINADA / IDENTIDAD COMO FIRMA -->
+  <header class="top-navbar">
+    <div class="brand-signature">
+      <span>GREY SERRANO ®</span>
+    </div>
+    
+    <div class="lang-switch-minimal">
       <button class="lang-btn active" onclick="setLanguage('es')">ES</button>
+      <span class="lang-divider">/</span>
       <button class="lang-btn" onclick="setLanguage('en')">EN</button>
     </div>
   </header>
 
-  <!-- 3. CONTENIDO CENTRAL HERO -->
-  <main class="hero-container-editorial">
-    <div class="hero-text-content">
-      
-      <div class="hero-badge" data-es="👋 Hola, soy Greydemar Serrano" data-en="👋 Hi, I'm Greydemar Serrano">
-        👋 Hola, soy Greydemar Serrano
-      </div>
-
-      <h1 class="hero-title-calibrated">
-        <span class="role-line-1">Digital Content &</span>
-        <span class="role-line-2">Social Media Specialist</span>
+  <!-- 3. CONTENIDO HERO: NARRATIVA DIRECTA -->
+  <div class="hero-center-content">
+    
+    <div class="hero-lead-group">
+      <h1 class="hero-main-title">
+        <span class="greeting-text" data-es="Hola, soy" data-en="Hi, I'm">Hola, soy</span>
+        <span class="highlight-name">Grey</span>
       </h1>
       
-      <!-- Subtítulo de especialidades -->
-      <div class="hero-specialties-row">
+      <h2 class="hero-role-title">
+        Digital Content &<br />Social Media Specialist
+      </h2>
+      
+      <div class="hero-subspecialties">
         <span>Social Media</span>
-        <span class="dot-separator">·</span>
+        <span class="dot">·</span>
         <span>Community Management</span>
-        <span class="dot-separator">·</span>
+        <span class="dot">·</span>
         <span>Video Editing</span>
-        <span class="dot-separator">·</span>
+        <span class="dot">·</span>
         <span>Landing Pages UX</span>
       </div>
-      
-      <!-- Descripción orientada a valor -->
-      <p class="hero-description" 
-         data-es="Soy comunicadora social con más de 5 años de experiencia creando contenido, coordinando proyectos digitales y desarrollando experiencias web. Combino estrategia, creatividad y análisis para transformar ideas en contenido que atrae, comunica y genera acciones." 
-         data-en="I am a communications specialist with 5+ years of experience creating digital content, coordinating projects, and building web experiences. I combine strategy, creativity, and data to turn ideas into engaging content that drives real action.">
-        Soy comunicadora social con más de 5 años de experiencia creando contenido, coordinando proyectos digitales y desarrollando experiencias web. Combino estrategia, creatividad y análisis para transformar ideas en contenido que atrae, comunica y genera acciones.
+
+      <p class="hero-description"
+         data-es="Creo estrategias y contenidos digitales que ayudan a las marcas a conectar con sus audiencias, crear comunidad y transformar ideas en experiencias digitales."
+         data-en="I create digital strategies and content that help brands connect with audiences, build communities and transform ideas into digital experiences.">
+        Creo estrategias y contenidos digitales que ayudan a las marcas a conectar con sus audiencias, crear comunidad y transformar ideas en experiencias digitales.
       </p>
-
-      <!-- Botones de Acción -->
-      <div class="hero-actions">
-        <a href="#projects" class="btn-primary" data-es="Ver proyectos destacados" data-en="View featured projects">Ver proyectos destacados</a>
-        <a href="#contact" class="btn-secondary" data-es="Contactarme" data-en="Contact me">Contactarme</a>
-      </div>
-
     </div>
-  </main>
 
-  <!-- 4. CINTA HORIZONTAL INFINITA PREDETERMINADA -->
-  <div class="hero-marquee-strip">
-    <div class="hero-marquee-track">
-      <span>SOCIAL MEDIA STRATEGY ✦ COMMUNITY MANAGEMENT ✦ SHORT-FORM VIDEO ✦ LANDING PAGES UX ✦ MARKETING ANALYTICS ✦ PROJECT COORDINATION ✦ </span>
-      <span>SOCIAL MEDIA STRATEGY ✦ COMMUNITY MANAGEMENT ✦ SHORT-FORM VIDEO ✦ LANDING PAGES UX ✦ MARKETING ANALYTICS ✦ PROJECT COORDINATION ✦ </span>
-      <span>SOCIAL MEDIA STRATEGY ✦ COMMUNITY MANAGEMENT ✦ SHORT-FORM VIDEO ✦ LANDING PAGES UX ✦ MARKETING ANALYTICS ✦ PROJECT COORDINATION ✦ </span>
-    </div>
+    <!-- 4. INDICADOR DE SCROLL MINIMALISTA (Reemplazo de botones invasivos) -->
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down to explore">
+      <span class="scroll-text" data-es="Scroll para explorar" data-en="Scroll to explore">Scroll para explorar</span>
+      <svg class="scroll-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="5" x2="12" y2="19"></line>
+        <polyline points="19 12 12 19 5 12"></polyline>
+      </svg>
+    </a>
+
   </div>
+
 </section>
 
 <style>
@@ -74,261 +71,244 @@
     position: relative;
     width: 100%;
     min-height: 100vh;
-    overflow: hidden;
-    z-index: 10;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden;
+    z-index: 10;
   }
 
   .hero-bg-video-container {
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: 0;
     overflow: hidden;
   }
-  
+
   .hero-bg-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
   }
-  
+
   .bg-overlay {
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(180deg, rgba(15, 23, 42, 0.65) 0%, rgba(15, 23, 42, 0.92) 100%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.6) 0%, rgba(15, 23, 42, 0.88) 100%);
     z-index: 1;
   }
 
-  .top-header {
+  /* 1. NAVBAR / FIRMA PERSONAL */
+  .top-navbar {
     position: relative;
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 24px 32px;
+    padding: 34px 40px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     z-index: 20;
   }
-  
-  .brand-centered {
-    position: absolute;
-    top: 26px; left: 50%;
-    transform: translateX(-50%);
-    font-weight: 900;
-    font-size: 16px;
-    letter-spacing: 0.15em;
-    white-space: nowrap;
-    text-transform: uppercase;
-  }
 
-  .text-white {
-    color: #ffffff !important;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-  }
-
-  .glass-pill {
-    background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 4px;
-    border-radius: 40px;
-    display: flex;
-    gap: 4px;
-  }
-
-  .glass-pill .lang-btn {
+  .brand-signature {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
     color: #ffffff;
-    opacity: 0.65;
-    padding: 6px 14px;
-    border-radius: 30px;
-    font-weight: 700;
-    font-size: 12px;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    text-transform: uppercase;
+    opacity: 0.92;
+    transition: opacity 0.3s ease;
   }
 
-  .glass-pill .lang-btn.active {
-    background: rgba(255, 255, 255, 0.25);
+  .brand-signature:hover {
     opacity: 1;
-    font-weight: 900;
   }
 
-  .hero-container-editorial {
-    position: relative;
-    width: 100%;
-    max-width: 1100px;
-    margin: auto auto;
-    padding: 30px 24px 100px;
-    display: flex;
-    justify-content: center;
+  /* 2. SELECTOR DE IDIOMA MINIMALISTA */
+  .lang-switch-minimal {
+    display: inline-flex;
     align-items: center;
-    z-index: 10;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    padding: 5px 12px;
+    border-radius: 20px;
   }
 
-  .hero-text-content {
+  .lang-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    opacity: 0.55;
+    padding: 2px 4px;
+    transition: all 0.25s ease;
+    font-family: inherit;
+  }
+
+  .lang-btn:hover {
+    opacity: 0.9;
+  }
+
+  .lang-btn.active {
+    opacity: 1;
+    font-weight: 700;
+    color: #fef08a;
+  }
+
+  .lang-divider {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 12px;
+  }
+
+  /* 3. HERO CONTENT */
+  .hero-center-content {
+    position: relative;
+    z-index: 10;
+    max-width: 960px;
+    margin: auto auto;
+    padding: 20px 24px 70px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 18px;
   }
 
-  .hero-badge {
-    background: rgba(254, 240, 138, 0.15);
-    border: 1px solid rgba(254, 240, 138, 0.4);
-    color: #fef08a;
-    font-size: 0.95rem;
-    font-weight: 700;
-    padding: 8px 18px;
-    border-radius: 30px;
-    letter-spacing: 0.02em;
-    backdrop-filter: blur(8px);
-  }
-
-  /* TÍTULO HERO CALIBRADO (NO GIGANTE DESMEDIDO) */
-  .hero-title-calibrated {
+  .hero-lead-group {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #ffffff;
-    line-height: 1.05;
-    margin: 4px 0;
-    text-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    gap: 16px;
   }
 
-  .role-line-1, .role-line-2 {
-    font-size: clamp(2.4rem, 5vw, 4.2rem);
-    font-weight: 900;
+  .hero-main-title {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.1;
+  }
+
+  .greeting-text {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    margin-right: 8px;
+    opacity: 0.95;
+  }
+
+  .highlight-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: #fef08a;
+    letter-spacing: -0.02em;
+    position: relative;
+    cursor: default;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+
+  .highlight-name:hover {
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(254, 240, 138, 0.7);
+  }
+
+  .hero-role-title {
+    font-size: clamp(1.8rem, 3.8vw, 3.2rem);
+    font-weight: 800;
     letter-spacing: -0.03em;
-    text-transform: uppercase;
-  }
-
-  .role-line-1 {
     color: #ffffff;
-  }
-  
-  .role-line-2 {
-    color: #fef08a; /* Acento suave */
+    line-height: 1.15;
+    text-transform: uppercase;
+    margin: 0;
   }
 
-  .hero-specialties-row {
+  .hero-subspecialties {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     gap: 10px;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 0.95rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.85);
     text-transform: uppercase;
-  }
-
-  .dot-separator {
-    color: #fef08a;
-    opacity: 0.8;
-  }
-
-  .hero-description {
-    color: rgba(255, 255, 255, 0.82);
-    font-size: 1.15rem;
-    line-height: 1.65;
-    max-width: 780px;
-    font-weight: 500;
     margin-top: 4px;
   }
 
-  .hero-actions {
-    display: flex;
-    gap: 16px;
-    margin-top: 14px;
-  }
-
-  .btn-primary, .btn-secondary {
-    padding: 14px 30px;
-    border-radius: 40px;
-    font-size: 1rem;
-    font-weight: 800;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .btn-primary {
-    background: #ffffff;
-    color: #0f172a;
-  }
-  
-  .btn-primary:hover {
-    background: #fef08a;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-  }
-
-  .btn-secondary {
-    background: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
-  }
-
-  .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.22);
-    border-color: #ffffff;
-    transform: translateY(-3px);
-  }
-
-  /* CINTA INFINITA CON TAMAÑO PREDETERMINADO ELEGANTE */
-  .hero-marquee-strip {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: rgba(15, 23, 42, 0.75);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  .dot {
     color: #fef08a;
-    padding: 12px 0; /* Altura estilizada estándar */
-    z-index: 20;
-    overflow: hidden;
-    display: flex;
+    opacity: 0.7;
   }
 
-  .hero-marquee-track {
-    display: flex;
-    white-space: nowrap;
-    width: max-content;
-    gap: 32px;
-    padding-right: 32px;
-    font-weight: 800;
-    font-size: 0.88rem; /* Tamaño proporcional para cinta */
-    letter-spacing: 1.5px;
-    animation: scroll-hero-marquee 35s linear infinite;
+  .hero-description {
+    font-size: 1.12rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 720px;
+    margin-top: 10px;
+    font-weight: 400;
   }
 
-  @keyframes scroll-hero-marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-33.33%); }
+  /* 4. SCROLL INDICATOR */
+  .scroll-indicator {
+    margin-top: 45px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+  }
+
+  .scroll-text {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .scroll-arrow {
+    animation: gentle-bounce 2.2s infinite ease-in-out;
+  }
+
+  .scroll-indicator:hover {
+    color: #fef08a;
+  }
+
+  @keyframes gentle-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
   }
 
   @media (max-width: 768px) {
-    .brand-centered { font-size: 13px; top: 22px; }
-    .hero-title-calibrated { font-size: 2.2rem; }
-    .hero-specialties-row { font-size: 0.82rem; }
-    .hero-description { font-size: 1rem; }
-    .hero-actions { flex-direction: column; width: 100%; max-width: 280px; }
-    .btn-primary, .btn-secondary { width: 100%; }
-    .hero-marquee-strip { padding: 10px 0; }
-    .hero-marquee-track { font-size: 0.8rem; }
+    .top-navbar {
+      padding: 24px 20px;
+    }
+    .brand-signature {
+      font-size: 11px;
+    }
+    .hero-center-content {
+      padding: 10px 20px 50px;
+    }
+    .hero-subspecialties {
+      font-size: 0.78rem;
+      gap: 6px;
+    }
+    .hero-description {
+      font-size: 0.98rem;
+    }
   }
 </style>
