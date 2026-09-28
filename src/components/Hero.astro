@@ -2,9 +2,14 @@
 ---
 <section class="hero-wrapper fade-in-section delay-1">
   
-  <!-- 1. FONDO DEL ÁVILA Y CAPA DE CONTRASTE -->
-  <div class="hero-bg-image"></div>
-  <div class="bg-overlay"></div>
+  <!-- 1. FONDO DE VIDEO (EL ÁVILA) Y CAPA DE CONTRASTE -->
+  <div class="hero-bg-video-container">
+    <video autoplay loop muted playsinline class="hero-bg-video">
+      <!-- Asegúrate de subir tu video a public/avila.mp4 -->
+      <source src="/avila.mp4" type="video/mp4" />
+    </video>
+    <div class="bg-overlay"></div>
+  </div>
 
   <!-- 2. HEADER Y BOTONES DE IDIOMA ESTILO GLASS -->
   <header class="top-header">
@@ -15,63 +20,42 @@
     </div>
   </header>
 
-  <!-- CONTENIDO CENTRAL -->
-  <main class="hero-container">
-    <div class="left-col">
-      <div class="glass-profile-card" onclick="this.classList.toggle('active')">
-        <div class="card-min-header">
-          <img src="/grey.jpeg" alt="Greydemar Serrano" class="profile-thumb shift-right" id="heroProfileImg" onclick="toggleProfileZoom(event)" title="Ver a detalle" />
-          <div class="min-meta">
-            <div class="status-line"><span class="green-dot"></span><span class="status-text" data-es="En línea" data-en="Online">En línea</span></div>
-            <div class="name-group">
-              <h2 class="min-name">GREYDEMAR SERRANO</h2>
-              <span class="min-title" data-es="Growth Marketer & Front-End Developer" data-en="Growth Marketer & Front-End Developer">Growth Marketer & Front-End Developer</span>
-            </div>
-          </div>
-        </div>
-        <div class="card-expand-content">
-          <p class="expand-bio" 
-             data-es="<strong>Atraigo, retengo y convierto.</strong> Creo comunidades digitales a través de contenido visual magnético y estrategias orgánicas que transforman simples seguidores en oportunidades de venta reales.<br><br>Además, maqueto experiencias web ultrarrápidas utilizando Astro. Mi enfoque es eliminar la fricción técnica para que el código y el diseño multipliquen tus conversiones." 
-             data-en="<strong>I attract, retain, and convert.</strong> I build digital communities through magnetic visual content and organic strategies that transform simple followers into real sales opportunities.<br><br>Additionally, I build ultra-fast web experiences using Astro. My focus is to eliminate technical friction so that code and design multiply your conversions.">
-             <strong>Atraigo, retengo y convierto.</strong> Creo comunidades digitales a través de contenido visual magnético y estrategias orgánicas que transforman simples seguidores en oportunidades de venta reales.<br><br>
-             Además, maqueto experiencias web ultrarrápidas utilizando Astro. Mi enfoque es eliminar la fricción técnica para que el código y el diseño multipliquen tus conversiones.
-          </p>
-          <p class="skills-title" data-es="Sistemas Centrales:" data-en="Core Systems:">Sistemas Centrales:</p>
-          <div class="skills-grid">
-            <span class="wide-skill">Content Systems</span>
-            <span class="wide-skill">Communities</span>
-            <span class="wide-skill">Conversion Websites</span>
-          </div>
-        </div>
+  <!-- 3. CONTENIDO CENTRAL: TIPOGRAFÍA GIGANTE TIPO EDITORIAL -->
+  <main class="hero-container-editorial">
+    
+    <div class="hero-text-content">
+      <h1 class="hero-title-giant">
+        <span class="hi-text">hi, I'm Grey</span>
+        <span class="role-line-1">Digital Content</span>
+        <span class="role-line-2">& Social Media Specialist.</span>
+      </h1>
+      
+      <!-- Subtítulo de especialidades integrado al hero text -->
+      <div class="hero-specialties-row">
+        <span>Social Media</span>
+        <span class="dot-separator">·</span>
+        <span>Community Management</span>
+        <span class="dot-separator">·</span>
+        <span>Video Editing</span>
+        <span class="dot-separator">·</span>
+        <span>Landing Pages UX</span>
+      </div>
+      
+      <!-- Descripción enfocada a recruiters -->
+      <p class="hero-description" data-es="Creo estrategias y contenidos digitales que ayudan a las marcas a captar atención, construir comunidad y convertir visitas en acciones." data-en="I create digital strategies and content that help brands capture attention, build community, and turn visits into actions.">
+        Creo estrategias y contenidos digitales que ayudan a las marcas a captar atención, construir comunidad y convertir visitas en acciones.
+      </p>
+
+      <!-- Botones de acción principales -->
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary" data-es="Ver mis proyectos" data-en="View my projects">Ver mis proyectos</a>
+        <a href="#contact" class="btn-secondary" data-es="Contactarme" data-en="Contact me">Contactarme</a>
       </div>
     </div>
 
-    <div class="hero-center-text">
-      <h1 data-es="CREO CONTENIDO DIGITAL QUE CONECTA,<br>CONVIERTE Y CRECE" data-en="I CREATE DIGITAL CONTENT THAT CONNECTS,<br>CONVERTS AND GROWS">CREO CONTENIDO DIGITAL QUE CONECTA,<br>CONVIERTE Y CRECE</h1>
-      <span class="floating-pill pill-pink">Social Media</span>
-      <span class="floating-pill pill-green">Content Creator</span>
-      <span class="floating-pill pill-yellow" data-es="Front-End Web" data-en="Front-End Web">Front-End Web</span>
-    </div>
-
-    <div class="glass-cases-card" onclick="this.classList.toggle('active')">
-      <div class="cases-min-header">
-        <span class="cases-title-text" data-es="Casos Destacados" data-en="Featured Cases">Casos Destacados</span>
-        <span class="search-icon-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
-      </div>
-      <div class="cases-expand-content">
-        <ul class="quick-cases-list">
-          <li><a href="#projects" onclick="setTimeout(() => openModal('modal-yprealty'), 400);"><strong>YP Realty</strong><span data-es="Social Media" data-en="Social Media">Social Media</span></a></li>
-          <li><a href="#projects" onclick="setTimeout(() => openModal('modal-panhouse'), 400);"><strong>Editorial PanHouse</strong><span data-es="Social Media" data-en="Social Media">Social Media</span></a></li>
-          <li><a href="#projects" onclick="setTimeout(() => openModal('modal-freelance'), 400);"><strong>Freelance Web</strong><span data-es="Web" data-en="Web">Web</span></a></li>
-          <li><a href="#projects" onclick="setTimeout(() => openModal('modal-impaktemos'), 400);"><strong>Landing Pages</strong><span data-es="Web" data-en="Web">Web</span></a></li>
-          <li><a href="#projects" onclick="setTimeout(() => openModal('modal-eurobuilding'), 400);"><strong>Eurobuilding</strong><span data-es="Strategy / Operations" data-en="Strategy / Operations">Strategy / Operations</span></a></li>
-          <li><a href="#projects" onclick="setTimeout(() => openModal('modal-dislocal'), 400);"><strong>Dislocal</strong><span data-es="Strategy / Operations" data-en="Strategy / Operations">Strategy / Operations</span></a></li>
-        </ul>
-      </div>
-    </div>
   </main>
 
-  <!-- 3. CINTA MARQUEE HORIZONTAL INFINITA (Base del Hero) -->
+  <!-- 4. CINTA MARQUEE HORIZONTAL INFINITA (Base del Hero) -->
   <div class="hero-marquee-strip">
     <div class="hero-marquee-track">
       <span>COMMUNITY MANAGEMENT ✦ VIDEO EDITING ✦ CONTENT CREATION ✦ GROWTH MARKETING ✦ ASTRO DEVELOPMENT ✦ LANDING PAGES ✦ ANALYTICS ✦ </span>
@@ -82,22 +66,64 @@
 </section>
 
 <style>
-  /* FONDO ÁVILA */
-  .hero-bg-image {
+  /* =========================================
+     ESTILOS DEL HERO (Basado en la ref editorial)
+     ========================================= */
+
+  .hero-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* FONDO DE VIDEO (EL ÁVILA) */
+  .hero-bg-video-container {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background-image: url('/avila.jpg'); /* ASEGÚRATE DE SUBIR ESTA IMAGEN */
-    background-size: cover;
-    background-position: center center;
     z-index: 0;
+    overflow: hidden;
   }
   
-  /* OVERLAY PARA DAR LECTURABILIDAD A LAS CARTAS Y AL H1 */
+  .hero-bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video llene toda la pantalla 1920x1080 */
+    object-position: center;
+  }
+  
+  /* OVERLAY PARA CONTRASTE (Ajusta la opacidad según necesites para que el texto resalte) */
   .bg-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0.85) 100%);
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.5) 0%, rgba(15, 23, 42, 0.9) 100%);
     z-index: 1;
+  }
+
+  /* HEADER TOP */
+  .top-header {
+    position: relative;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 20;
+  }
+  
+  .brand-centered {
+    position: absolute;
+    top: 38px; left: 50%;
+    transform: translateX(-50%);
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
   }
 
   .text-white {
@@ -105,13 +131,13 @@
     text-shadow: 0 2px 10px rgba(0,0,0,0.5);
   }
 
-  /* BOTÓN DE IDIOMA TIPO GLASSMORPHISM */
+  /* BOTÓN DE IDIOMA GLASS */
   .glass-pill {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 6px;
+    padding: 8px;
     border-radius: 40px;
     display: flex;
     gap: 4px;
@@ -120,8 +146,14 @@
   .glass-pill .lang-btn {
     color: #ffffff;
     opacity: 0.6;
-    padding: 6px 14px;
+    padding: 8px 18px;
     border-radius: 30px;
+    font-weight: 700;
+    font-size: 13px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
   }
 
   .glass-pill .lang-btn.active {
@@ -130,7 +162,136 @@
     font-weight: 900;
   }
 
-  /* NUEVA CINTA MARQUEE HORIZONTAL */
+  /* =========================================
+     CONTENIDO CENTRAL EDITORIAL (Aprovecha 1920x1080)
+     ========================================= */
+  .hero-container-editorial {
+    position: relative;
+    width: 100%;
+    max-width: 1600px; /* Más ancho para usar la pantalla completa */
+    margin: auto auto;
+    padding: 40px 40px 140px; /* Padding bottom extra para el marquee */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    flex-grow: 1;
+  }
+
+  .hero-text-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  /* LA TIPOGRAFÍA GIGANTE */
+  .hero-title-giant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    line-height: 0.9;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+
+  .hi-text {
+    font-family: 'Times New Roman', Times, serif; /* O usa la fuente serif que prefieras para el itálico */
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: -15px;
+    z-index: 2;
+  }
+
+  .role-line-1, .role-line-2 {
+    font-size: clamp(4rem, 8vw, 9rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+  }
+
+  .role-line-1 {
+    color: #ffffff;
+  }
+  
+  .role-line-2 {
+    color: #ffffff;
+    /* Puedes darle un toque de tu color amarillo o dejarlo blanco, según prefieras. Aquí lo dejo blanco por la referencia */
+  }
+
+  /* SUBTÍTULOS Y DESCRIPCIÓN */
+  .hero-specialties-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    color: var(--pastel-yellow, #fef08a);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+
+  .dot-separator {
+    opacity: 0.5;
+  }
+
+  .hero-description {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.4rem;
+    line-height: 1.6;
+    max-width: 800px;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+
+  /* BOTONES GRANDES */
+  .hero-actions {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .btn-primary, .btn-secondary {
+    padding: 16px 36px;
+    border-radius: 40px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary {
+    background: #ffffff;
+    color: #0f172a;
+  }
+  
+  .btn-primary:hover {
+    background: var(--pastel-yellow, #fef08a);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+
+  .btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+    transform: translateY(-4px);
+  }
+
+  /* =========================================
+     CINTA MARQUEE HORIZONTAL INFINITA
+     ========================================= */
   .hero-marquee-strip {
     width: 100%;
     position: absolute;
@@ -140,8 +301,8 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: #fef08a; /* Color pastel yellow que usas en la web */
-    padding: 14px 0;
+    color: var(--pastel-yellow, #fef08a);
+    padding: 20px 0; /* Cinta más alta */
     z-index: 20;
     overflow: hidden;
     display: flex;
@@ -154,7 +315,7 @@
     gap: 40px;
     padding-right: 40px;
     font-weight: 900;
-    font-size: 1.1rem;
+    font-size: 1.3rem; /* Letra más grande */
     letter-spacing: 2px;
     animation: scroll-hero-marquee 30s linear infinite;
   }
@@ -164,10 +325,13 @@
     100% { transform: translateX(-33.33%); }
   }
 
-  /* Aseguramos que el H1 sea blanco para contrastar con el Ávila */
-  .hero-center-text h1 {
-    color: #ffffff !important;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.6);
-    mix-blend-mode: normal !important; /* Quitamos el difference que se usaba con la mancha negra */
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hi-text { font-size: 2.5rem; }
+    .role-line-1, .role-line-2 { font-size: 3rem; }
+    .hero-specialties-row { font-size: 0.9rem; }
+    .hero-description { font-size: 1.1rem; }
+    .hero-actions { flex-direction: column; width: 100%; max-width: 300px; }
+    .btn-primary, .btn-secondary { width: 100%; text-align: center; }
   }
 </style>
