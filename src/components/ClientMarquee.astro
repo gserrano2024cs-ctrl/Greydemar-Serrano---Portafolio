@@ -1,10 +1,88 @@
 ---
 ---
-<section class="marquee-section fade-in-section delay-5">
-  <div class="marquee-container">
-    <div class="marquee-track">
-      <img src="/logo plano creativo.png" alt="Plano Creativo"><img src="/logo dislocal.png" alt="Dislocal"><img src="/logo plano mariano moreno.png" alt="Instituto Superior Mariano Moreno"><img src="/logo impaktemos.png" alt="Impaktemos"><img src="/logo universidad.png" alt="Universidad"><img src="/logo yprealty.png" alt="YP Realty"><img src="/logo eurobuilding.png" alt="Eurobuilding Hotels"><img src="/logo panhouse.png" alt="PanHouse">
-      <img src="/logo plano creativo.png" alt="Plano Creativo"><img src="/logo dislocal.png" alt="Dislocal"><img src="/logo plano mariano moreno.png" alt="Instituto Superior Mariano Moreno"><img src="/logo impaktemos.png" alt="Impaktemos"><img src="/logo universidad.png" alt="Universidad"><img src="/logo yprealty.png" alt="YP Realty"><img src="/logo eurobuilding.png" alt="Eurobuilding Hotels"><img src="/logo panhouse.png" alt="PanHouse">
+<section class="clients-section" aria-label="Marcas y organizaciones">
+  <div class="clients-container">
+    <span class="clients-title" data-es="Marcas y organizaciones que han confiado en mi trabajo:" data-en="Brands & organizations I've collaborated with:">
+      Marcas y organizaciones que han confiado en mi trabajo:
+    </span>
+    
+    <div class="marquee-wrapper">
+      <div class="logos-track">
+        <img src="/logo plano creativo.png" alt="Plano Creativo" />
+        <img src="/logo dislocal.png" alt="Dislocal" />
+        <img src="/logo plano mariano moreno.png" alt="Mariano Moreno" />
+        <img src="/logo impaktemos.png" alt="Impaktemos" />
+        <img src="/logo yprealty.png" alt="YP Realty" />
+        <img src="/logo eurobuilding.png" alt="Eurobuilding" />
+        <img src="/logo panhouse.png" alt="Editorial PanHouse" />
+        <!-- Duplicados para bucle continuo -->
+        <img src="/logo plano creativo.png" alt="Plano Creativo" />
+        <img src="/logo dislocal.png" alt="Dislocal" />
+        <img src="/logo plano mariano moreno.png" alt="Mariano Moreno" />
+        <img src="/logo impaktemos.png" alt="Impaktemos" />
+        <img src="/logo yprealty.png" alt="YP Realty" />
+        <img src="/logo eurobuilding.png" alt="Eurobuilding" />
+        <img src="/logo panhouse.png" alt="Editorial PanHouse" />
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+  .clients-section {
+    width: 100%;
+    padding: 60px 20px;
+    background: #ffffff;
+    border-top: 1px solid #f1f5f9;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .clients-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .clients-title {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #94a3b8;
+    margin-bottom: 30px;
+    display: block;
+  }
+
+  .marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .logos-track {
+    display: flex;
+    gap: 60px;
+    padding-right: 60px;
+    width: max-content;
+    animation: scrollLogos 32s linear infinite;
+    align-items: center;
+  }
+
+  .logos-track img {
+    height: 44px;
+    width: auto;
+    opacity: 0.45;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+  }
+
+  .logos-track img:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+  }
+
+  @keyframes scrollLogos {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+</style>
