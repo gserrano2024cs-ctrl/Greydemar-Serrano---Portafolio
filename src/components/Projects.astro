@@ -1,100 +1,347 @@
 ---
 ---
-<section id="projects" class="projects-section fade-in-section delay-4">
-  <div class="projects-container">
-    <div class="sticky-note">
-      <svg class="real-pin pin-blue" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 10V22" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="5" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5"/><circle cx="10.5" cy="5.5" r="1.5" fill="#ffffff" opacity="0.6"/></svg>
-      <span class="note-text" data-es="Casos" data-en="Cases">Casos</span>
-    </div>
-    <div class="section-header">
-      <h2 data-es="Proyectos que cuentan historias." data-en="Projects that tell stories.">Proyectos que cuentan historias.</h2>
-      <p data-es="Selección de ecosistemas y estrategias destacadas." data-en="Selection of featured ecosystems and strategies.">Selección de ecosistemas y estrategias destacadas.</p>
+<section id="projects" class="projects-clean-section">
+  <div class="projects-clean-container">
+    
+    <div class="section-tag" data-es="Evidencia" data-en="Evidence">
+      Evidencia
     </div>
 
-    <div class="projects-grid">
-      <div class="project-card" onclick="openModal('modal-yprealty')">
-        <div class="card-mac-header">
-          <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-          <span class="project-num-tag">01</span>
+    <div class="section-header-clean">
+      <h2 data-es="Casos Destacados." data-en="Featured Cases.">Casos Destacados.</h2>
+      <p data-es="Estrategia, contenido audiovisual y desarrollo web con impacto y métricas demostrables."
+         data-en="Strategy, audiovisual content, and web development with measurable impact.">
+        Estrategia, contenido audiovisual y desarrollo web con impacto y métricas demostrables.
+      </p>
+    </div>
+
+    <div class="projects-featured-grid">
+      
+      <!-- 1. YP REALTY -->
+      <div class="featured-case-card" onclick="openModal('modal-yprealty')">
+        <div class="card-thumb-wrap">
+          <img src="/portada-yprealty.png" alt="YP Realty Real Estate" class="case-img" style="object-position: top center;" />
+          <span class="case-category-badge">Social Media & Video</span>
         </div>
-        <div class="card-body">
-          <img src="/portada-yprealty.png" alt="YP Realty" class="card-img" style="object-position: top center;" />
-          <p class="card-category">Social Media + Video Editing</p>
+        
+        <div class="case-content">
           <h3>YP Realty</h3>
-          <p class="card-desc">Estrategia de contenido y crecimiento orgánico para inmobiliaria.</p>
-          <div class="mini-result"><strong>+604%</strong><span>Interacciones</span></div>
+          <p class="case-sub">Social Media Strategy · Video Editing · Content</p>
+          <p class="case-summary">Estrategia, guiones y edición de contenido orgánico para el mercado inmobiliario de Puerto Rico.</p>
+          
+          <div class="case-metric-highlight">
+            <span class="metric-num">↑ 604.5%</span>
+            <span class="metric-desc">en interacciones de contenido (+56.1% alcance)</span>
+          </div>
+
+          <button class="btn-open-modal" data-es="Ver caso completo →" data-en="View full case →">Ver caso completo →</button>
         </div>
       </div>
 
-      <div class="project-card" onclick="openModal('modal-panhouse')">
-        <div class="card-mac-header">
-          <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-          <span class="project-num-tag">02</span>
+      <!-- 2. LANDING PAGES FREELANCE -->
+      <div class="featured-case-card" onclick="openModal('modal-freelance')">
+        <div class="card-thumb-wrap">
+          <img src="/portada freelance.png" alt="Landing Pages Freelance" class="case-img" onerror="this.src='/landingpage plataforma.png'" />
+          <span class="case-category-badge">UX & Web Design</span>
         </div>
-        <div class="card-body">
-          <img src="/portada-panhouse.png" alt="Editorial PanHouse" class="card-img" />
-          <p class="card-category">Comunicaciones Internas + IA</p>
-          <h3>Editorial PanHouse</h3>
-          <p class="card-desc">Sistemas de automatización y estandarización corporativa.</p>
-          <div class="mini-result"><strong>IA</strong><span>Flujos ManyChat</span></div>
+        
+        <div class="case-content">
+          <h3>Landing Pages Freelance</h3>
+          <p class="case-sub">UX · Web Design · Development</p>
+          <p class="case-summary">Diseño y desarrollo de sitios web y landing pages adaptadas a diferentes marcas y profesionales.</p>
+          
+          <div class="case-sites-direct">
+            <span class="sites-label">Sitios publicados y navegables:</span>
+            <div class="sites-links">
+              <a href="https://gserrano2024cs-ctrl.github.io/Dra.LauraNavarroActiveLearningEducationLeadership/" target="_blank" onclick="event.stopPropagation()">🌐 Dra. Laura Navarro</a>
+              <a href="https://beatriz-brice-o-pic-n.vercel.app/" target="_blank" onclick="event.stopPropagation()">🌐 Beatriz Briceño-Picón</a>
+              <a href="https://mbihoy.vercel.app/?v=1" target="_blank" onclick="event.stopPropagation()">🌐 Mario Briceño-Iragorry</a>
+            </div>
+          </div>
+
+          <button class="btn-open-modal" data-es="Ver proyectos web →" data-en="View web projects →">Ver proyectos web →</button>
         </div>
       </div>
 
-      <div class="project-card" onclick="openModal('modal-freelance')">
-        <div class="card-mac-header">
-          <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-          <span class="project-num-tag">03</span>
+      <!-- 3. IMPAKTEMOS -->
+      <div class="featured-case-card" onclick="openModal('modal-impaktemos')">
+        <div class="card-thumb-wrap">
+          <img src="/portada-impaktemos.png" alt="Impaktemos Plataforma" class="case-img" />
+          <span class="case-category-badge">Operations & UX</span>
         </div>
-        <div class="card-body">
-          <img src="/portada freelance.png" alt="Freelance" class="card-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlMmU4ZjAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZmlsbD0iIzk0YTNiOCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5EaXNlw7FvIHkgV2ViPC90ZXh0Pjwvc3ZnPg=='" />
-          <p class="card-category">Astro + Diseño UI</p>
-          <h3>Freelance Web</h3>
-          <p class="card-desc">Landing pages optimizadas para conversión internacional.</p>
-          <div class="mini-result"><strong>3+</strong><span>Sitios lanzados</span></div>
-        </div>
-      </div>
-      
-      <div class="project-card" onclick="openModal('modal-impaktemos')">
-        <div class="card-mac-header">
-          <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-          <span class="project-num-tag">04</span>
-        </div>
-        <div class="card-body">
-          <img src="/portada-impaktemos.png" alt="Impaktemos" class="card-img" />
-          <p class="card-category">Web + Operaciones</p>
-          <h3>Landing Pages</h3>
-          <p class="card-desc">Desarrollo de plataforma para organizar el flujo de voluntarios.</p>
-          <div class="mini-result"><strong>100%</strong><span>Control de tareas</span></div>
+        
+        <div class="case-content">
+          <h3>Impaktemos</h3>
+          <p class="case-sub">Landing Page · Operations · UX Flow</p>
+          <p class="case-summary">Diseño y desarrollo de plataforma para organizar voluntarios, distribuir tareas y facilitar el seguimiento de actividades.</p>
+          
+          <div class="case-metric-highlight">
+            <span class="metric-num">100%</span>
+            <span class="metric-desc">control operativo y distribución de tareas</span>
+          </div>
+
+          <button class="btn-open-modal" data-es="Ver proyecto →" data-en="View project →">Ver proyecto →</button>
         </div>
       </div>
 
-      <div class="project-card" onclick="openModal('modal-eurobuilding')">
-        <div class="card-mac-header">
-          <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-          <span class="project-num-tag">05</span>
-        </div>
-        <div class="card-body">
-          <img src="/portada-eurobuilding.png" alt="Eurobuilding" class="card-img" />
-          <p class="card-category">B2B + Business Center</p>
-          <h3>Eurobuilding</h3>
-          <p class="card-desc">Logística, reservas corporativas y gestión de 7 departamentos.</p>
-          <div class="mini-result"><strong>100%</strong><span>Resolución</span></div>
-        </div>
+    </div>
+
+    <!-- ENLACE A EXPERIENCIA COMPLEMENTARIA -->
+    <div class="additional-exp-strip">
+      <div>
+        <h4 data-es="Experiencia en Coordinación & Eventos" data-en="Coordination & Events Experience">Experiencia en Coordinación & Eventos</h4>
+        <p data-es="Proyectos con Editorial PanHouse (FIL Guadalajara), Dislocal (Impacto social) y Eurobuilding (Hotelería 5★)."
+           data-en="Projects with Editorial PanHouse, Dislocal, and Eurobuilding.">
+          Proyectos adicionales con Editorial PanHouse, Dislocal y Eurobuilding.
+        </p>
       </div>
-      
-      <div class="project-card" onclick="openModal('modal-dislocal')">
-        <div class="card-mac-header">
-          <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-          <span class="project-num-tag">06</span>
-        </div>
-        <div class="card-body">
-          <img src="/portada-dislocal.png" alt="Dislocal" class="card-img" />
-          <p class="card-category">Project Management</p>
-          <h3>Dislocal</h3>
-          <p class="card-desc">Ejecución logística de proyectos de impacto local con equipos globales.</p>
-          <div class="mini-result"><strong>Agile</strong><span>Metodología</span></div>
-        </div>
+      <div class="additional-btns">
+        <button onclick="openModal('modal-panhouse')" class="btn-small-tag">Editorial PanHouse</button>
+        <button onclick="openModal('modal-dislocal')" class="btn-small-tag">Dislocal</button>
+        <button onclick="openModal('modal-eurobuilding')" class="btn-small-tag">Eurobuilding</button>
       </div>
     </div>
+
   </div>
 </section>
+
+<style>
+  .projects-clean-section {
+    position: relative;
+    width: 100%;
+    padding: 130px 24px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+  }
+
+  .projects-clean-container {
+    max-width: 1140px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .projects-featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 28px;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .featured-case-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .featured-case-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+    border-color: #cbd5e1;
+  }
+
+  .card-thumb-wrap {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: #0f172a;
+  }
+
+  .case-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .featured-case-card:hover .case-img {
+    transform: scale(1.03);
+  }
+
+  .case-category-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+  }
+
+  .case-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .case-content h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 4px;
+  }
+
+  .case-sub {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #3b82f6;
+    margin-bottom: 12px;
+  }
+
+  .case-summary {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.55;
+    margin-bottom: 20px;
+  }
+
+  .case-metric-highlight {
+    background: #f8fafc;
+    border-left: 3px solid #fef08a;
+    padding: 12px 14px;
+    border-radius: 0 8px 8px 0;
+    margin-top: auto;
+    margin-bottom: 20px;
+  }
+
+  .metric-num {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #0f172a;
+  }
+
+  .metric-desc {
+    font-size: 0.82rem;
+    color: #64748b;
+    font-weight: 600;
+  }
+
+  .case-sites-direct {
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+    padding: 12px 14px;
+    border-radius: 8px;
+    margin-top: auto;
+    margin-bottom: 20px;
+  }
+
+  .sites-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .sites-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .sites-links a {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #2563eb;
+    text-decoration: none;
+  }
+
+  .sites-links a:hover {
+    text-decoration: underline;
+  }
+
+  .btn-open-modal {
+    width: 100%;
+    padding: 12px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0f172a;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .featured-case-card:hover .btn-open-modal {
+    background: #0f172a;
+    color: #ffffff;
+    border-color: #0f172a;
+  }
+
+  /* BARRA INFERIOR DE EXPERIENCIA COMPLEMENTARIA */
+  .additional-exp-strip {
+    width: 100%;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 24px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .additional-exp-strip h4 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 4px;
+  }
+
+  .additional-exp-strip p {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin: 0;
+  }
+
+  .additional-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .btn-small-tag {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #0f172a;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-small-tag:hover {
+    background: #0f172a;
+    color: #ffffff;
+    border-color: #0f172a;
+  }
+
+  @media (max-width: 800px) {
+    .projects-clean-section {
+      padding: 80px 20px;
+    }
+    .additional-exp-strip {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
