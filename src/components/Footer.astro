@@ -1,0 +1,314 @@
+---
+---
+<footer id="contact" class="footer-cinematic">
+  
+  <!-- MARCA DE AGUA GIGANTE "GREYS" CON SCROLL REVEAL (REFERENCIA IMAGEN 2) -->
+  <div class="watermark-greys" aria-hidden="true">
+    <span>GREYS</span>
+  </div>
+
+  <div class="footer-content-wrap">
+    
+    <div class="footer-top-grid">
+      
+      <!-- TITULAR EDITORIAL ESTILO REFERENCIA -->
+      <div class="footer-headline">
+        <h2 class="scaling-title">
+          Scaling Brands<br />with Purpose.
+        </h2>
+        <p class="footer-profile-role">
+          GREY SERRANO<br />
+          <span>Digital Content & Social Media Specialist</span>
+        </p>
+      </div>
+
+      <!-- PILLS DE QUICK LINKS (IDÉNTICAS A IMAGEN 2) -->
+      <div class="footer-col">
+        <span class="col-heading">/Quick links</span>
+        <div class="pills-menu">
+          <a href="#about" class="pill-btn">About Me</a>
+          <a href="#services" class="pill-btn">Services</a>
+          <a href="#how-i-work" class="pill-btn">How I Work</a>
+          <a href="#projects" class="pill-btn">Works</a>
+          <a href="#faq" class="pill-btn">FAQ</a>
+        </div>
+      </div>
+
+      <!-- CONTACTO DIRECTO SIN EMOJIS -->
+      <div class="footer-col">
+        <span class="col-heading">/Contact</span>
+        <div class="contact-links-list">
+          <a href="mailto:greydemar06@gmail.com" class="direct-link">greydemar06@gmail.com</a>
+          <a href="https://www.linkedin.com/in/greydemarserrano/" target="_blank" class="direct-link">LinkedIn Profile</a>
+          <a href="https://instagram.com" target="_blank" class="direct-link">Instagram</a>
+          <a href="https://wa.me/584126339776" target="_blank" class="direct-link">WhatsApp Direct</a>
+          <a href="/CV-Greydemar-Serrano.pdf" target="_blank" class="direct-link cv-link" download>Download CV</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FORMULARIO DIRECTO WHATSAPP -->
+    <div class="footer-form-panel">
+      <div class="form-intro">
+        <h3 data-es="Inicia una conversación directa" data-en="Start a direct conversation">Inicia una conversación directa</h3>
+        <p data-es="Conversemos sobre cómo potenciar la presencia digital y contenido de tu marca o equipo."
+           data-en="Let's talk about scaling your brand's digital presence and content strategy.">
+          Conversemos sobre cómo potenciar la presencia digital y contenido de tu marca o equipo.
+        </p>
+      </div>
+
+      <form id="wa-form" class="wa-compact-form" onsubmit="sendToWhatsApp(event)">
+        <div class="form-inputs-row">
+          <input type="text" id="wa-name" required placeholder="Nombre / Organización" />
+          <input type="email" id="wa-email" required placeholder="Correo electrónico" />
+        </div>
+        <textarea id="wa-message" rows="3" required placeholder="Hola Grey, queremos hablar contigo sobre..."></textarea>
+        
+        <div class="form-bottom-row">
+          <label class="terms-chk">
+            <input type="checkbox" id="privacy-accept" required />
+            <span>Acepto los <a href="/terminos" target="_blank">términos de privacidad</a></span>
+          </label>
+          <button type="submit" class="btn-send-wa">Enviar a WhatsApp →</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom-line">
+      <p>© 2026 Grey Serrano. All rights reserved.</p>
+    </div>
+
+  </div>
+</footer>
+
+<style>
+  .footer-cinematic {
+    position: relative;
+    width: 100%;
+    background: #090d16;
+    color: #ffffff;
+    padding: 130px 24px 60px;
+    overflow: hidden;
+    z-index: 10;
+  }
+
+  /* WATERMARK GIGANTE "GREYS" REVELADO AL FONDO (REFERENCIA IMAGEN 2) */
+  .watermark-greys {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1400px;
+    text-align: center;
+    pointer-events: none;
+    user-select: none;
+    z-index: 1;
+  }
+
+  .watermark-greys span {
+    font-size: clamp(6rem, 18vw, 17rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    color: rgba(255, 255, 255, 0.038);
+    display: inline-block;
+    transition: transform 1.2s ease, opacity 1.2s ease;
+  }
+
+  .footer-content-wrap {
+    position: relative;
+    z-index: 10;
+    max-width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+  }
+
+  .footer-top-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 50px;
+  }
+
+  .scaling-title {
+    font-size: clamp(2rem, 3.6vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+
+  .footer-profile-role {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.5;
+  }
+
+  .footer-profile-role span {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+  }
+
+  .col-heading {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 18px;
+    display: block;
+  }
+
+  /* PILLS DE QUICK LINKS */
+  .pills-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .pill-btn {
+    background: #ffffff;
+    color: #0f172a;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.25s ease, background 0.25s ease;
+  }
+
+  .pill-btn:hover {
+    transform: translateY(-2px);
+    background: #fef08a;
+  }
+
+  /* CONTACT LINKS LIST */
+  .contact-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .direct-link {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.25s ease, transform 0.25s ease;
+    display: inline-block;
+  }
+
+  .direct-link:hover {
+    color: #fef08a;
+    transform: translateX(4px);
+  }
+
+  .cv-link {
+    color: #fef08a;
+    font-weight: 700;
+  }
+
+  /* PANEL FORMULARIO */
+  .footer-form-panel {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    padding: 36px;
+  }
+
+  .form-intro h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 6px;
+  }
+
+  .form-intro p {
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 24px;
+  }
+
+  .wa-compact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .form-inputs-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .wa-compact-form input, .wa-compact-form textarea {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.92rem;
+    color: #ffffff;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.25s;
+  }
+
+  .wa-compact-form input:focus, .wa-compact-form textarea:focus {
+    border-color: #fef08a;
+  }
+
+  .form-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6px;
+  }
+
+  .terms-chk {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .terms-chk a {
+    color: #fef08a;
+  }
+
+  .btn-send-wa {
+    background: #ffffff;
+    color: #0f172a;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: transform 0.25s ease, background 0.25s ease;
+  }
+
+  .btn-send-wa:hover {
+    transform: scale(1.03);
+    background: #fef08a;
+  }
+
+  .footer-bottom-line {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 24px;
+    text-align: center;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  @media (max-width: 860px) {
+    .footer-top-grid { grid-template-columns: 1fr; gap: 36px; }
+    .form-inputs-row { grid-template-columns: 1fr; }
+    .form-bottom-row { flex-direction: column; gap: 14px; align-items: flex-start; }
+    .btn-send-wa { width: 100%; }
+  }
+</style>
