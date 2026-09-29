@@ -1,11 +1,13 @@
 ---
 import Hero from "../components/Hero.astro";
-import DisciplineMarquee from "../components/DisciplineMarquee.astro";
+import InfiniteMarquee from "../components/InfiniteMarquee.astro";
 import About from "../components/About.astro";
 import Services from "../components/Services.astro";
+import HowIWork from "../components/HowIWork.astro";
+import FAQ from "../components/FAQ.astro";
 import Projects from "../components/Projects.astro";
 import ClientMarquee from "../components/ClientMarquee.astro";
-import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
 ---
 <!DOCTYPE html>
 <html lang="es">
@@ -13,11 +15,10 @@ import Contact from "../components/Contact.astro";
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- SEO OFICIAL SOLICITADO -->
   <title>Grey Serrano | Digital Content & Social Media Specialist</title>
   <meta name="title" content="Grey Serrano | Digital Content & Social Media Specialist">
   <meta name="description" content="Portfolio of Grey Serrano, Digital Content Specialist focused on Social Media, Community Management, Video Editing and UX Landing Pages.">
-  <meta name="keywords" content="Social Media, Community Management, Video Editing, UX Landing Pages, Digital Content Specialist, Grey Serrano, Astro">
+  <meta name="keywords" content="Social Media, Community Management, Video Editing, UX Landing Pages, Digital Growth, Grey Serrano">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Grey Serrano | Digital Content & Social Media Specialist">
@@ -25,16 +26,28 @@ import Contact from "../components/Contact.astro";
   <meta property="og:type" content="website">
 
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230f172a%22 rx=%2212%22/><g transform=%22skewX(-15)%22><text x=%2260%22 y=%2272%22 font-size=%2265%22 font-weight=%22900%22 font-family=%22sans-serif%22 fill=%22%23ffffff%22 text-anchor=%22middle%22>G</text></g></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230f172a%22 rx=%2212%22/><text x=%2250%22 y=%2268%22 font-size=%2260%22 font-weight=%22900%22 font-family=%22sans-serif%22 fill=%22%23ffffff%22 text-anchor=%22middle%22>G</text></svg>">
 
-  <!-- TIPOGRAFÍAS: MONTSERRAT (Funcional) + PLAYFAIR DISPLAY (Editorial) -->
+  <!-- FUENTES: MONTSERRAT (Funcional) + PLAYFAIR DISPLAY (Editorial) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- ZOOM OVERLAY GLOBAL -->
+  <!-- 1. LOADING SCREEN CINEMATOGRÁFICA -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-content">
+      <span class="loading-title">GREY</span>
+      <span class="loading-sub">DIGITAL CONTENT</span>
+      <div class="loading-line"></div>
+    </div>
+  </div>
+
+  <!-- 2. TEXTURA EDITORIAL / GRAIN BACKGROUND GLOBAL FIJO -->
+  <div class="global-grain-overlay"></div>
+
+  <!-- 3. ZOOM OVERLAY GLOBAL -->
   <div id="zoom-overlay" class="zoom-overlay" onclick="closeZoom(event)">
     <button class="zoom-close" onclick="closeZoom(event)">✕</button>
     <div class="zoom-content-wrapper">
@@ -44,35 +57,20 @@ import Contact from "../components/Contact.astro";
   </div>
 
   <!-- ========================================== -->
-  <!-- SECUENCIA DEFINITIVA DE SECCIONES          -->
+  <!-- SECUENCIA ESTRATÉGICA DE SECCIONES         -->
   <!-- ========================================== -->
   <Hero />
-  <DisciplineMarquee />
+  <InfiniteMarquee />
   <About />
   <Services />
+  <HowIWork />
+  <FAQ />
   <Projects />
   <ClientMarquee />
-  <Contact />
-
-  <!-- FOOTER MINIMALISTA -->
-  <footer class="site-footer">
-    <p data-es="© 2026 Grey Serrano. Todos los derechos reservados." data-en="© 2026 Grey Serrano. All rights reserved.">
-      © 2026 Grey Serrano. Todos los derechos reservados.
-    </p>
-  </footer>
-
-  <!-- DOCK FLOTANTE CON ACCESOS DIRECTOS -->
-  <nav class="floating-dock">
-    <ul class="dock-list">
-      <li class="dock-item" data-tooltip="Sobre mí"><a href="#about" class="dock-link"><img src="/notas.webp" class="mac-icon" alt="Sobre mí"></a></li>
-      <li class="dock-item" data-tooltip="Servicios"><a href="#services" class="dock-link"><img src="/finder icon.png" class="mac-icon" alt="Servicios"></a></li>
-      <li class="dock-item" data-tooltip="Proyectos"><a href="#projects" class="dock-link"><img src="/foto.png" class="mac-icon" alt="Proyectos"></a></li>
-      <li class="dock-item" data-tooltip="Contacto"><a href="#contact" class="dock-link"><img src="/ICON MAIL.webp" class="mac-icon" alt="Contacto"></a></li>
-    </ul>
-  </nav>
+  <Footer />
 
   <!-- ========================================== -->
-  <!-- MODALES DE PROYECTOS CON FORMATO ESTÁNDAR  -->
+  <!-- MODALES DE PROYECTOS (SCROLL BLOQUEADO)    -->
   <!-- ========================================== -->
 
   <!-- MODAL 1: YP REALTY -->
@@ -80,7 +78,7 @@ import Contact from "../components/Contact.astro";
     <div class="modal-window">
       <div class="modal-mac-bar">
         <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-        <div class="modal-search-bar">yprealty.com · Caso Social Media & Video</div>
+        <div class="modal-search-bar">yprealty.com · Social Media Case</div>
         <button class="close-btn-text" onclick="closeModal('modal-yprealty')">Cerrar</button>
       </div>
       <div class="modal-content-scroll">
@@ -92,42 +90,30 @@ import Contact from "../components/Contact.astro";
           </div>
         </div>
 
-        <div class="structured-brief">
-          <div class="brief-item"><strong>Empresa / Contexto:</strong> Agencia inmobiliaria en Puerto Rico que buscaba captar compradores orgánicos en redes sociales.</div>
-          <div class="brief-item"><strong>Objetivo:</strong> Aumentar interacción de valor y autoridad de marca a través de formatos de video corto.</div>
-          <div class="brief-item"><strong>Qué hice:</strong> Planificación estratégica, redacción de guiones con hooks visuales, edición dinámica de Reels/TikToks y analítica.</div>
-          <div class="brief-item result-item">
-            <strong>Resultados obtenidos:</strong>
-            <span class="highlight-metric">↑ 604.5% en interacciones de contenido</span> y <span class="highlight-metric">↑ 56.1% en alcance orgánico</span>.
-          </div>
-        </div>
-
-        <div class="metadata-grid">
-          <div><span class="meta-label">Rol</span><span class="meta-val">Social Media Manager & Video Editor</span></div>
-          <div><span class="meta-label">Herramientas</span><span class="meta-val">Meta Business Suite, CapCut, Premiere, Canva Pro</span></div>
-          <div><span class="meta-label">Métricas / KPIs</span><span class="meta-val">Reach, Content Interactions, Engagement Rate</span></div>
+        <div class="brief-box">
+          <div><strong>Contexto:</strong> Mercado inmobiliario en Puerto Rico con necesidad de captar compradores e inquilinos orgánicos.</div>
+          <div><strong>Qué hice:</strong> Planificación estratégica de contenido, redacción de guiones con hooks visuales y edición dinámica de Reels/TikToks.</div>
+          <div class="brief-result"><strong>Resultado destacado:</strong> <span class="badge-result">↑ 604.5% en interacciones de contenido</span> y ↑ 56.1% en alcance.</div>
         </div>
 
         <div class="modal-gallery-container">
-          <h3>Galería del Proyecto</h3>
+          <h3>Piezas y Analítica</h3>
           <div class="bento-collage">
-            <div class="media-card bento-vertical"><video playsinline loop muted autoplay class="vertical-vid" data-caption="Cisterna de agua en PR." onclick="openGalleryZoom(this)" style="background:#000;"><source src="/VIDEO PARA PORTAFOLIO.webm" type="video/webm" /></video><div class="media-caption">Cisterna de agua en PR.</div></div>
-            <div class="media-card bento-vertical"><video playsinline loop muted autoplay class="vertical-vid" data-caption="Cierre de venta en Arecibo, Puerto Rico." onclick="openGalleryZoom(this)" style="background:#000;"><source src="/PARA-PORTAFOLIO.webm" type="video/webm" /></video><div class="media-caption">Cierre de venta en Arecibo</div></div>
-            <div class="media-card bento-vertical"><video playsinline loop muted autoplay class="vertical-vid" data-caption="Interacción trend: ¿Quién paga qué?" onclick="openGalleryZoom(this)" style="background:#000;"><source src="/VIDEO PARA PORTAFOLIO 2.webm" type="video/webm" /></video><div class="media-caption">Trend de interacción</div></div>
-            <div class="media-card bento-vertical"><video playsinline loop muted autoplay class="vertical-vid" data-caption="Isla del encanto." onclick="openGalleryZoom(this)" style="background:#000;"><source src="/ISLA-DEL-ENCATO-PORTAFOLIO-.webm" type="video/webm" /></video><div class="media-caption">Isla del encanto</div></div>
-            <div class="media-card bento-horizontal"><img src="/metricas.png" alt="Métricas YP Realty" class="horizontal-img w-full-img" data-caption="Análisis de Métricas Reales" onclick="openGalleryZoom(this)" onerror="this.style.display='none'"><div class="media-caption">Métricas oficiales de interacción (+604.5%)</div></div>
+            <div class="media-card bento-vertical"><video playsinline loop muted autoplay class="vertical-vid" data-caption="Cisterna de agua en PR." onclick="openGalleryZoom(this)" style="background:#000;"><source src="/VIDEO PARA PORTAFOLIO.webm" type="video/webm" /></video><div class="media-caption">Cisterna en PR</div></div>
+            <div class="media-card bento-vertical"><video playsinline loop muted autoplay class="vertical-vid" data-caption="Cierre de venta en Arecibo." onclick="openGalleryZoom(this)" style="background:#000;"><source src="/PARA-PORTAFOLIO.webm" type="video/webm" /></video><div class="media-caption">Cierre de venta</div></div>
+            <div class="media-card bento-horizontal"><img src="/metricas.png" alt="Métricas Reales" class="horizontal-img w-full-img" data-caption="Analítica oficial de interacción (+604.5%)" onclick="openGalleryZoom(this)" /><div class="media-caption">Reporte oficial de analítica (+604.5% interacciones)</div></div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- MODAL 2: LANDING PAGES FREELANCE -->
+  <!-- MODAL 2: FREELANCE -->
   <div id="modal-freelance" class="modal-overlay" onclick="closeModalOutside(event, 'modal-freelance')">
     <div class="modal-window">
       <div class="modal-mac-bar">
         <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-        <div class="modal-search-bar">freelance.landingpages.dev</div>
+        <div class="modal-search-bar">freelance.projects</div>
         <button class="close-btn-text" onclick="closeModal('modal-freelance')">Cerrar</button>
       </div>
       <div class="modal-content-scroll">
@@ -135,39 +121,16 @@ import Contact from "../components/Contact.astro";
         <div class="modal-title-row">
           <div class="title-text-group">
             <span class="project-counter">Caso 02 / 06</span>
-            <h2>Landing Pages — Proyectos Freelance</h2>
+            <h2>Landing Pages Freelance</h2>
           </div>
         </div>
-
-        <div class="structured-brief">
-          <div class="brief-item"><strong>Contexto:</strong> Clientes y profesionales independientes que requerían presencia digital de alto impacto y conversión.</div>
-          <div class="brief-item"><strong>Objetivo:</strong> Diseñar y maquetar sitios web responsive optimizados para comunicar autoridad profesional.</div>
-          <div class="brief-item"><strong>Qué hice:</strong> Arquitectura de información, wireframing en Figma, desarrollo en Astro/HTML/CSS y optimización para móviles.</div>
-        </div>
-
-        <div class="metadata-grid">
-          <div><span class="meta-label">Rol</span><span class="meta-val">UX Designer & Web Developer</span></div>
-          <div><span class="meta-label">Herramientas</span><span class="meta-val">Astro, HTML5, CSS3, Figma, GitHub</span></div>
-          <div><span class="meta-label">Resultados</span><span class="meta-val">3 Sitios web en producción activos</span></div>
-        </div>
-
-        <div class="modal-gallery-container">
-          <h3>Sitios Web Navegables</h3>
-          <div class="bento-collage">
-            <div class="media-card bento-horizontal">
-              <video playsinline loop muted autoplay class="horizontal-vid" data-caption="Diseño Web - Laura Navarro" onclick="openGalleryZoom(this)"><source src="/laura navarro.mp4" type="video/mp4" /></video>
-              <div class="media-caption">Dra. Laura Navarro</div>
-              <a href="https://gserrano2024cs-ctrl.github.io/Dra.LauraNavarroActiveLearningEducationLeadership/" target="_blank" class="freelance-link">🌐 Ver sitio web en vivo →</a>
-            </div>
-            <div class="media-card bento-horizontal">
-              <video playsinline loop muted autoplay class="horizontal-vid" data-caption="Diseño Web - Beatriz Briceño" onclick="openGalleryZoom(this)"><source src="/bea briceño.mp4" type="video/mp4" /></video>
-              <div class="media-caption">Beatriz Briceño-Picón</div>
-              <a href="https://beatriz-brice-o-pic-n.vercel.app/" target="_blank" class="freelance-link">🌐 Ver sitio web en vivo →</a>
-            </div>
-            <div class="media-card bento-horizontal">
-              <video playsinline loop muted autoplay class="horizontal-vid" data-caption="Diseño Web - Mario Briceño Iragorry" onclick="openGalleryZoom(this)"><source src="/mbi.mp4" type="video/mp4" /></video>
-              <div class="media-caption">Mario Briceño Iragorry</div>
-              <a href="https://mbihoy.vercel.app/?v=1" target="_blank" class="freelance-link">🌐 Ver sitio web en vivo →</a>
+        <div class="brief-box">
+          <div><strong>Contexto:</strong> Profesionales independientes y marcas que necesitaban presencia web responsive, clara y optimizada.</div>
+          <div><strong>Sitios navegables:</strong>
+            <div style="margin-top: 8px; display: flex; flex-direction: column; gap: 4px;">
+              <a href="https://gserrano2024cs-ctrl.github.io/Dra.LauraNavarroActiveLearningEducationLeadership/" target="_blank" style="color: #2563eb; font-weight: 700;">🌐 Dra. Laura Navarro</a>
+              <a href="https://beatriz-brice-o-pic-n.vercel.app/" target="_blank" style="color: #2563eb; font-weight: 700;">🌐 Beatriz Briceño-Picón</a>
+              <a href="https://mbihoy.vercel.app/?v=1" target="_blank" style="color: #2563eb; font-weight: 700;">🌐 Mario Briceño Iragorry</a>
             </div>
           </div>
         </div>
@@ -180,7 +143,7 @@ import Contact from "../components/Contact.astro";
     <div class="modal-window">
       <div class="modal-mac-bar">
         <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-        <div class="modal-search-bar">impaktemos.org · Las Minitas Platform</div>
+        <div class="modal-search-bar">impaktemos.org</div>
         <button class="close-btn-text" onclick="closeModal('modal-impaktemos')">Cerrar</button>
       </div>
       <div class="modal-content-scroll">
@@ -190,28 +153,10 @@ import Contact from "../components/Contact.astro";
             <span class="project-counter">Caso 03 / 06</span>
             <h2>Impaktemos — Plataforma Las Minitas</h2>
           </div>
-          <a href="https://minitas-mission-guide.lovable.app/" target="_blank" class="simple-modal-link">🌐 Ver plataforma →</a>
+          <a href="https://minitas-mission-guide.lovable.app/" target="_blank" style="color: #2563eb; font-weight: 700; text-decoration: none;">🌐 Ver plataforma →</a>
         </div>
-
-        <div class="structured-brief">
-          <div class="brief-item"><strong>Contexto:</strong> Iniciativa comunitaria con necesidad de coordinar voluntarios en terreno y organizar actividades pedagógicas.</div>
-          <div class="brief-item"><strong>Objetivo:</strong> Diseñar una plataforma ágil para asignación de tareas, seguimiento de actividades y registro de colaboradores.</div>
-          <div class="brief-item"><strong>Qué hice:</strong> Diseño de interfaces UX, arquitectura de tareas operativas y desarrollo de la landing page.</div>
-        </div>
-
-        <div class="metadata-grid">
-          <div><span class="meta-label">Rol</span><span class="meta-val">Coordinadora Operativa & Web UX</span></div>
-          <div><span class="meta-label">Herramientas</span><span class="meta-val">Astro, HTML/CSS, Lovable, Trello</span></div>
-          <div><span class="meta-label">Impacto</span><span class="meta-val">100% seguimiento de tareas y voluntarios</span></div>
-        </div>
-
-        <div class="modal-gallery-container">
-          <h3>Galería del Proyecto</h3>
-          <div class="bento-collage">
-            <div class="media-card bento-vertical"><video playsinline loop muted autoplay class="vertical-vid" data-caption="Plataforma en acción" onclick="openGalleryZoom(this)"><source src="/video plataforma.mp4" type="video/mp4" /></video><div class="media-caption">Uso de la plataforma</div></div>
-            <div class="media-card bento-vertical"><video playsinline loop muted autoplay class="vertical-vid" data-caption="Logística en terreno" onclick="openGalleryZoom(this)"><source src="/ciudad piar.mp4" type="video/mp4" /></video><div class="media-caption">Logística en terreno</div></div>
-            <div class="media-card bento-horizontal"><img src="/landingpage plataforma.png" alt="Diseño de Landing Page" class="horizontal-img w-full-img" data-caption="Diseño de Landing Page" onclick="openGalleryZoom(this)" /><div class="media-caption">Diseño UI/UX de la Landing Page</div></div>
-          </div>
+        <div class="brief-box">
+          <div><strong>Objetivo:</strong> Diseñar y maquetar una landing page operativa para coordinar voluntarios y tareas comunitarias.</div>
         </div>
       </div>
     </div>
@@ -226,23 +171,10 @@ import Contact from "../components/Contact.astro";
         <button class="close-btn-text" onclick="closeModal('modal-panhouse')">Cerrar</button>
       </div>
       <div class="modal-content-scroll">
-        <div class="modal-hero-banner"><img src="/portada-panhouse.png" alt="PanHouse Banner" /></div>
-        <div class="modal-title-row">
-          <div class="title-text-group">
-            <span class="project-counter">Experiencia Adicional</span>
-            <h2>Editorial PanHouse</h2>
-          </div>
-        </div>
-        <div class="structured-brief">
-          <div class="brief-item"><strong>Contexto:</strong> Editorial con despliegue de eventos corporativos internacionales y flujos de ventas de libros.</div>
-          <div class="brief-item"><strong>Qué hice:</strong> Sincronización entre departamentos de Marketing, Ventas y RRPP, coordinación logística (FIL Guadalajara) y automatización con ManyChat.</div>
-        </div>
-        <div class="modal-gallery-container">
-          <h3>Galería</h3>
-          <div class="bento-collage">
-            <div class="media-card bento-horizontal"><img src="/evento ph.png" alt="Evento VIP" class="horizontal-img w-full-img" onclick="openGalleryZoom(this)" /><div class="media-caption">Evento VIP PanHouse</div></div>
-            <div class="media-card bento-horizontal"><img src="/manychat.png" alt="ManyChat" class="horizontal-img w-full-img" onclick="openGalleryZoom(this)" /><div class="media-caption">Flujos de automatización ManyChat</div></div>
-          </div>
+        <div class="modal-hero-banner"><img src="/portada-panhouse.png" alt="PanHouse" /></div>
+        <div class="modal-title-row"><h2>Editorial PanHouse</h2></div>
+        <div class="brief-box">
+          <p>Coordinación entre Marketing, Ventas y RRPP, eventos internacionales (FIL Guadalajara) y automatización con ManyChat.</p>
         </div>
       </div>
     </div>
@@ -251,22 +183,11 @@ import Contact from "../components/Contact.astro";
   <!-- MODAL 5: EUROBUILDING -->
   <div id="modal-eurobuilding" class="modal-overlay" onclick="closeModalOutside(event, 'modal-eurobuilding')">
     <div class="modal-window">
-      <div class="modal-mac-bar">
-        <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-        <div class="modal-search-bar">eurobuilding.com.ve</div>
-        <button class="close-btn-text" onclick="closeModal('modal-eurobuilding')">Cerrar</button>
-      </div>
+      <div class="modal-mac-bar"><button class="close-btn-text" onclick="closeModal('modal-eurobuilding')">Cerrar</button></div>
       <div class="modal-content-scroll">
         <div class="modal-hero-banner"><img src="/portada-eurobuilding.png" alt="Eurobuilding" /></div>
-        <div class="modal-title-row">
-          <div class="title-text-group">
-            <span class="project-counter">Experiencia Adicional</span>
-            <h2>Eurobuilding — Business Center & B2B</h2>
-          </div>
-        </div>
-        <div class="structured-brief">
-          <div class="brief-item"><strong>Qué hice:</strong> Gestión de portafolio corporativo B2B, estándares hoteleros 5 estrellas y coordinación entre 7 departamentos operativos con 100% resolución de incidencias.</div>
-        </div>
+        <h2>Eurobuilding — B2B & Business Center</h2>
+        <div class="brief-box"><p>Gestión corporativa hotelera 5 estrellas y coordinación operativa de 7 departamentos.</p></div>
       </div>
     </div>
   </div>
@@ -274,104 +195,99 @@ import Contact from "../components/Contact.astro";
   <!-- MODAL 6: DISLOCAL -->
   <div id="modal-dislocal" class="modal-overlay" onclick="closeModalOutside(event, 'modal-dislocal')">
     <div class="modal-window">
-      <div class="modal-mac-bar">
-        <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-        <div class="modal-search-bar">dislocal.org</div>
-        <button class="close-btn-text" onclick="closeModal('modal-dislocal')">Cerrar</button>
-      </div>
+      <div class="modal-mac-bar"><button class="close-btn-text" onclick="closeModal('modal-dislocal')">Cerrar</button></div>
       <div class="modal-content-scroll">
         <div class="modal-hero-banner"><img src="/portada-dislocal.png" alt="Dislocal" /></div>
-        <div class="modal-title-row">
-          <div class="title-text-group">
-            <span class="project-counter">Experiencia Adicional</span>
-            <h2>Dislocal — Producción & Agile</h2>
-          </div>
-          <a href="https://www.dislocal.org/" target="_blank" class="simple-modal-link">🌐 Ver sitio web →</a>
-        </div>
-        <div class="structured-brief">
-          <div class="brief-item"><strong>Qué hice:</strong> Planificación y ejecución logística de proyectos de impacto social con metodologías ágiles coordinando equipos multidisciplinarios.</div>
-        </div>
+        <h2>Dislocal — Producción & Agile</h2>
+        <div class="brief-box"><p>Planificación logística ágil para proyectos de impacto social comunitario.</p></div>
       </div>
     </div>
   </div>
 
   <!-- SCRIPTS GLOBALES -->
   <script is:inline>
-    // Idioma ES / EN
+    // 1. Loading Screen
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loading-screen');
+      setTimeout(() => {
+        if (loader) {
+          loader.classList.add('hide');
+          setTimeout(() => loader.remove(), 700);
+        }
+      }, 900);
+    });
+
+    // 2. Idioma
     function setLanguage(lang) {
-      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.lang-opt').forEach(btn => btn.classList.remove('active'));
       if (event && event.target) event.target.classList.add('active');
       
       document.querySelectorAll('[data-es]').forEach(el => { 
         el.innerHTML = el.getAttribute(`data-${lang}`); 
       });
 
-      const msgArea = document.getElementById('wa-message');
-      if (msgArea) { 
-        msgArea.placeholder = lang === 'es' ? msgArea.getAttribute('data-es-placeholder') : "Hi Grey, I'd like to work with you on..."; 
+      const msg = document.getElementById('wa-message');
+      if (msg) {
+        msg.placeholder = lang === 'es' ? "Hola Grey, queremos hablar contigo sobre..." : "Hi Grey, we'd like to talk with you about...";
       }
     }
 
-    // Modales
-    function openModal(modalId) { 
-      const modal = document.getElementById(modalId);
-      if (modal) {
-        modal.classList.add('active'); 
-        document.body.style.overflow = 'hidden'; 
+    // 3. Modales con bloqueo de scroll
+    function openModal(id) {
+      const m = document.getElementById(id);
+      if (m) {
+        m.classList.add('active');
+        document.body.style.overflow = 'hidden';
       }
-    }
-    function closeModal(modalId) { 
-      const modal = document.getElementById(modalId);
-      if (modal) {
-        modal.classList.remove('active'); 
-        document.body.style.overflow = 'auto'; 
-      }
-    }
-    function closeModalOutside(event, modalId) { 
-      if (event.target.id === modalId) { 
-        closeModal(modalId); 
-      } 
     }
 
-    // Zoom Media
-    function openGalleryZoom(element) {
+    function closeModal(id) {
+      const m = document.getElementById(id);
+      if (m) {
+        m.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    function closeModalOutside(e, id) {
+      if (e.target.id === id) closeModal(id);
+    }
+
+    // 4. Zoom
+    function openGalleryZoom(el) {
       const overlay = document.getElementById('zoom-overlay');
       const container = document.getElementById('zoom-media-container');
       const caption = document.getElementById('zoom-caption');
-      
-      container.innerHTML = ''; 
-      
-      if (element.tagName === 'VIDEO') {
-        const video = document.createElement('video');
-        video.src = element.querySelector('source').src;
-        video.controls = true; 
-        video.autoplay = true;
-        video.className = 'zoom-media';
-        container.appendChild(video);
+      container.innerHTML = '';
+      if (el.tagName === 'VIDEO') {
+        const vid = document.createElement('video');
+        vid.src = el.querySelector('source').src;
+        vid.controls = true;
+        vid.autoplay = true;
+        vid.className = 'zoom-media';
+        container.appendChild(vid);
       } else {
         const img = document.createElement('img');
-        img.src = element.src;
+        img.src = el.src;
         img.className = 'zoom-media';
         container.appendChild(img);
       }
-      
-      caption.innerText = element.getAttribute('data-caption') || '';
+      caption.innerText = el.getAttribute('data-caption') || '';
       overlay.classList.add('active');
     }
 
     function closeZoom(e) {
       if (e.target.id === 'zoom-overlay' || e.target.classList.contains('zoom-close')) {
         document.getElementById('zoom-overlay').classList.remove('active');
-        document.getElementById('zoom-media-container').innerHTML = ''; 
       }
     }
 
-    // Envío a WhatsApp
-    function sendToWhatsApp(event) {
-      event.preventDefault();
-      const acceptCheckbox = document.getElementById('privacy-accept');
-      if (!acceptCheckbox.checked) {
-        alert("Debes aceptar la política de privacidad para enviar el mensaje.");
+    // 5. WhatsApp
+    function sendToWhatsApp(e) {
+      e.preventDefault();
+      const accept = document.getElementById('privacy-accept');
+      if (!accept.checked) {
+        alert("Debes aceptar la política de privacidad.");
         return;
       }
       const name = document.getElementById('wa-name').value;
@@ -387,14 +303,6 @@ import Contact from "../components/Contact.astro";
 </html>
 
 <style is:global>
-  :root {
-    --navy-dark: #0f172a;
-    --navy-light: #1e293b;
-    --pastel-yellow: #fef08a;
-    --text-body: #475569;
-    --border-subtle: #e2e8f0;
-  }
-
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   html {
@@ -403,94 +311,92 @@ import Contact from "../components/Contact.astro";
 
   body {
     font-family: 'Montserrat', sans-serif;
-    color: var(--navy-dark);
-    background-color: #ffffff;
+    color: #0f172a;
+    background-color: #fcfcfc;
     overflow-x: hidden;
     position: relative;
     -webkit-font-smoothing: antialiased;
   }
 
-  /* Footer */
-  .site-footer {
-    background: #000000;
-    color: rgba(255, 255, 255, 0.45);
-    padding: 30px 20px 100px;
-    text-align: center;
-    font-size: 0.85rem;
-    font-weight: 500;
-  }
-
-  /* Dock Flotante Mac */
-  .floating-dock {
+  /* LOADING SCREEN CINEMÁTICA */
+  .loading-screen {
     position: fixed;
-    bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    border-radius: 30px;
-    padding: 8px 18px;
-    z-index: 999;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  }
-
-  .dock-list {
-    display: flex;
-    gap: 16px;
-    list-style: none;
-    align-items: center;
-  }
-
-  .dock-item {
-    position: relative;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: #0f172a;
+    z-index: 999999;
     display: flex;
     justify-content: center;
+    align-items: center;
+    transition: opacity 0.7s ease, visibility 0.7s ease;
   }
 
-  .mac-icon {
-    width: 44px;
-    height: 44px;
-    object-fit: contain;
-    transition: transform 0.2s ease;
-  }
-
-  .dock-link:hover .mac-icon {
-    transform: scale(1.2) translateY(-4px);
-  }
-
-  .dock-item::before {
-    content: attr(data-tooltip);
-    position: absolute;
-    top: -38px;
-    background: var(--navy-dark);
-    color: white;
-    font-size: 11px;
-    font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 6px;
+  .loading-screen.hide {
     opacity: 0;
     visibility: hidden;
-    transition: all 0.2s;
-    white-space: nowrap;
+  }
+
+  .loading-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .loading-title {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 0.25em;
+    color: #ffffff;
+    animation: fadeDown 0.8s ease forwards;
+  }
+
+  .loading-sub {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.35em;
+    color: #fef08a;
+    animation: fadeUp 0.8s ease forwards 0.2s;
+    opacity: 0;
+  }
+
+  .loading-line {
+    width: 40px;
+    height: 2px;
+    background: #fef08a;
+    margin-top: 12px;
+    animation: expandLine 0.9s ease forwards 0.4s;
+    transform: scaleX(0);
+  }
+
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-15px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes expandLine {
+    to { transform: scaleX(1); }
+  }
+
+  /* TEXTURA GRAIN EDITORIAL */
+  .global-grain-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.038'/%3E%3C/svg%3E");
     pointer-events: none;
+    z-index: 2;
   }
 
-  .dock-item:hover::before {
-    opacity: 1;
-    visibility: visible;
-    top: -44px;
-  }
-
-  /* Modales Estilizados */
+  /* MODALES */
   .modal-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(15, 23, 42, 0.75);
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(15, 23, 42, 0.78);
     backdrop-filter: blur(8px);
     display: flex;
     justify-content: center;
@@ -508,7 +414,7 @@ import Contact from "../components/Contact.astro";
   }
 
   .modal-window {
-    background: white;
+    background: #ffffff;
     width: 100%;
     max-width: 840px;
     max-height: 88vh;
@@ -517,12 +423,12 @@ import Contact from "../components/Contact.astro";
     display: flex;
     flex-direction: column;
     box-shadow: 0 25px 60px rgba(0,0,0,0.3);
-    transform: translateY(20px);
+    transform: translateY(20px) scale(0.98);
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .modal-overlay.active .modal-window {
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 
   .modal-mac-bar {
@@ -534,17 +440,8 @@ import Contact from "../components/Contact.astro";
     border-bottom: 1px solid #e2e8f0;
   }
 
-  .mac-dots {
-    display: flex;
-    gap: 6px;
-  }
-
-  .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-  }
-
+  .mac-dots { display: flex; gap: 6px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
   .dot.red { background: #ff5f56; }
   .dot.yellow { background: #ffbd2e; }
   .dot.green { background: #27c93f; }
@@ -553,16 +450,11 @@ import Contact from "../components/Contact.astro";
     font-size: 12px;
     color: #64748b;
     font-weight: 500;
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    padding: 4px 16px;
-    border-radius: 20px;
   }
 
   .close-btn-text {
     background: none;
     border: none;
-    font-size: 13px;
     font-weight: 700;
     color: #0f172a;
     cursor: pointer;
@@ -570,7 +462,7 @@ import Contact from "../components/Contact.astro";
 
   .modal-content-scroll {
     overflow-y: auto;
-    padding: 30px;
+    padding: 28px;
   }
 
   .modal-hero-banner img {
@@ -581,85 +473,25 @@ import Contact from "../components/Contact.astro";
     margin-bottom: 20px;
   }
 
-  .modal-title-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 18px;
-  }
-
-  .project-counter {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #64748b;
-  }
-
-  .modal-title-row h2 {
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: #0f172a;
-  }
-
-  .structured-brief {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  .brief-box {
     background: #f8fafc;
     border: 1px solid #e2e8f0;
-    padding: 18px 20px;
+    padding: 18px;
     border-radius: 12px;
     margin-bottom: 24px;
     font-size: 0.95rem;
     line-height: 1.6;
-    color: #334155;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 
-  .result-item {
-    border-top: 1px solid #e2e8f0;
-    padding-top: 10px;
-    margin-top: 4px;
-  }
-
-  .highlight-metric {
-    color: #0f172a;
-    font-weight: 800;
+  .badge-result {
     background: #fef08a;
-    padding: 2px 6px;
+    color: #0f172a;
+    font-weight: 800;
+    padding: 2px 8px;
     border-radius: 4px;
-  }
-
-  .metadata-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 14px;
-    background: #f8fafc;
-    padding: 16px 20px;
-    border-radius: 12px;
-    border: 1px solid #e2e8f0;
-    margin-bottom: 26px;
-  }
-
-  .meta-label {
-    font-size: 10px;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: #64748b;
-    display: block;
-    margin-bottom: 4px;
-  }
-
-  .meta-val {
-    font-size: 13px;
-    font-weight: 700;
-    color: #0f172a;
-  }
-
-  .modal-gallery-container h3 {
-    font-size: 1.15rem;
-    font-weight: 800;
-    color: #0f172a;
-    margin-bottom: 16px;
   }
 
   .bento-collage {
@@ -689,8 +521,7 @@ import Contact from "../components/Contact.astro";
   }
 
   .vertical-vid { aspect-ratio: 9/16; }
-  .horizontal-vid, .horizontal-img { aspect-ratio: 16/9; }
-  .w-full-img { height: auto; max-height: 420px; object-fit: contain; }
+  .w-full-img { height: auto; max-height: 400px; object-fit: contain; }
 
   .media-caption {
     font-size: 12px;
@@ -699,31 +530,10 @@ import Contact from "../components/Contact.astro";
     text-align: center;
   }
 
-  .freelance-link {
-    background: #0f172a;
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 6px;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 13px;
-  }
-
-  .simple-modal-link {
-    font-size: 13px;
-    font-weight: 700;
-    color: #2563eb;
-    text-decoration: none;
-  }
-
-  /* Zoom Overlay */
+  /* ZOOM OVERLAY */
   .zoom-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    top: 0; left: 0; width: 100vw; height: 100vh;
     background: rgba(0,0,0,0.92);
     z-index: 99999;
     display: flex;
@@ -736,54 +546,9 @@ import Contact from "../components/Contact.astro";
     padding: 20px;
   }
 
-  .zoom-overlay.active {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .zoom-content-wrapper {
-    position: relative;
-    max-width: 90vw;
-  }
-
-  .zoom-media {
-    max-width: 100%;
-    max-height: 75vh;
-    border-radius: 8px;
-    object-fit: contain;
-  }
-
-  .zoom-caption {
-    color: #ffffff;
-    margin-top: 14px;
-    font-size: 1rem;
-    font-weight: 600;
-    text-align: center;
-  }
-
-  .zoom-close {
-    position: absolute;
-    top: 25px;
-    right: 35px;
-    background: rgba(255,255,255,0.2);
-    border: none;
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 20px;
-    cursor: pointer;
-  }
-
-  @media (max-width: 768px) {
-    .bento-collage {
-      grid-template-columns: 1fr;
-    }
-    .bento-vertical {
-      grid-column: 1 / -1;
-    }
-    .modal-content-scroll {
-      padding: 18px;
-    }
-  }
+  .zoom-overlay.active { opacity: 1; visibility: visible; }
+  .zoom-content-wrapper { position: relative; max-width: 90vw; }
+  .zoom-media { max-width: 100%; max-height: 75vh; border-radius: 8px; object-fit: contain; }
+  .zoom-caption { color: #ffffff; margin-top: 14px; font-size: 1rem; text-align: center; }
+  .zoom-close { position: absolute; top: 25px; right: 35px; background: rgba(255,255,255,0.2); border: none; color: white; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; }
 </style>
