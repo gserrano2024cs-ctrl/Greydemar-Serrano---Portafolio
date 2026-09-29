@@ -1,0 +1,151 @@
+---
+---
+<section id="how-i-work" class="how-section">
+  <div class="how-container">
+    
+    <div class="section-label" data-es="Metodología" data-en="Methodology">
+      Metodología
+    </div>
+
+    <div class="how-header">
+      <h2 data-es="Cómo trabajo." data-en="How I work.">Cómo trabajo.</h2>
+      <p data-es="Un proceso claro en 4 fases que elimina la fricción y asegura entregables de alto impacto."
+         data-en="A 4-phase structured process that removes friction and guarantees high-impact deliverables.">
+        Un proceso claro en 4 fases que elimina la fricción y asegura entregables de alto impacto.
+      </p>
+    </div>
+
+    <!-- STORYTELLING VERTICAL ESCALONADO -->
+    <div class="timeline-vertical">
+      
+      <div class="timeline-step">
+        <div class="step-marker">01</div>
+        <div class="step-card-content">
+          <h3>Descubrimiento</h3>
+          <p>Analizo a fondo tus objetivos comerciales, tu audiencia objetivo, los dolores del cliente y el contexto del proyecto para sentar bases sólidas.</p>
+        </div>
+      </div>
+
+      <div class="timeline-step">
+        <div class="step-marker">02</div>
+        <div class="step-card-content">
+          <h3>Estrategia</h3>
+          <p>Defino la dirección creativa, los pilares de contenido, los formatos y la arquitectura de la experiencia antes de producir una sola pieza.</p>
+        </div>
+      </div>
+
+      <div class="timeline-step">
+        <div class="step-marker">03</div>
+        <div class="step-card-content">
+          <h3>Producción</h3>
+          <p>Desarrollo las piezas digitales, la edición de video con hooks dinámicos o la maquetación web asegurando coherencia visual y técnica.</p>
+        </div>
+      </div>
+
+      <div class="timeline-step">
+        <div class="step-marker">04</div>
+        <div class="step-card-content">
+          <h3>Optimización</h3>
+          <p>Monitoreo el rendimiento del contenido y los puntos de contacto para iterar con datos reales y maximizar resultados sostenibles.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .how-section {
+    position: relative;
+    width: 100%;
+    padding: 130px 24px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+  }
+
+  .how-container {
+    max-width: 900px;
+    width: 100%;
+  }
+
+  .how-header {
+    margin-bottom: 50px;
+  }
+
+  .how-header h2 {
+    font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 12px;
+  }
+
+  .how-header p {
+    font-size: 1.1rem;
+    color: #64748b;
+  }
+
+  .timeline-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+  }
+
+  .timeline-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .timeline-step:hover {
+    transform: translateX(8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border-color: #0f172a;
+  }
+
+  .step-marker {
+    font-family: monospace;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #0f172a;
+    background: #fef08a;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .step-card-content h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+  }
+
+  .step-card-content p {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: #475569;
+    margin: 0;
+  }
+
+  @media (max-width: 650px) {
+    .timeline-step {
+      flex-direction: column;
+      gap: 16px;
+      padding: 22px;
+    }
+  }
+</style>
