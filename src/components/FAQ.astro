@@ -1,52 +1,61 @@
 ---
 ---
-<section id="faq" class="faq-clean-section">
-  <div class="faq-clean-container">
+<section id="faq" class="faq-editorial-section">
+  <div class="faq-editorial-container">
     
-    <div class="section-label" data-es="Claridad" data-en="Clarity">
-      Claridad
+    <div class="section-kicker" data-es="Procesos Creativos" data-en="Creative Workflow">
+      Procesos Creativos
     </div>
 
-    <div class="faq-head">
+    <div class="faq-title-wrap">
       <h2 data-es="Preguntas frecuentes." data-en="Frequently asked questions.">Preguntas frecuentes.</h2>
-      <p data-es="Transparencia total sobre dinámica de trabajo, contratos y formas de pago."
-         data-en="Complete transparency on workflow, agreements, and payment structure.">
-        Transparencia total sobre dinámica de trabajo, contratos y formas de pago.
+      <p data-es="Respuestas transparentes sobre cómo inicio, desarrollo y acompaño cada proyecto."
+         data-en="Transparent answers on how I initiate, develop, and support each project.">
+        Respuestas transparentes sobre cómo inicio, desarrollo y acompaño cada proyecto.
       </p>
     </div>
 
-    <div class="faq-accordion-box">
+    <div class="faq-accordion-stack">
       
-      <!-- P1 -->
-      <div class="faq-row" onclick="toggleFaqRow(this)">
-        <div class="faq-header-bar">
-          <h3>¿Cómo comienza un proyecto?</h3>
-          <span class="faq-arrow">+</span>
+      <!-- PREGUNTA 1 -->
+      <div class="faq-capsule" onclick="toggleFaqAccordion(this)">
+        <div class="faq-q-bar">
+          <span class="faq-text" data-es="¿Cómo comienza un proyecto?" data-en="How does a project begin?">¿Cómo comienza un proyecto?</span>
+          <span class="faq-plus">+</span>
         </div>
-        <div class="faq-collapse">
-          <p>Realizamos una reunión inicial para conocer objetivos, necesidades y alcance. Luego se presenta una propuesta formal con entregables, tiempos y metodología detallada.</p>
-        </div>
-      </div>
-
-      <!-- P2 -->
-      <div class="faq-row" onclick="toggleFaqRow(this)">
-        <div class="faq-header-bar">
-          <h3>¿Cómo funcionan los pagos?</h3>
-          <span class="faq-arrow">+</span>
-        </div>
-        <div class="faq-collapse">
-          <p>Para reservar disponibilidad en agenda e iniciar el proyecto se requiere un anticipo del 50%. El pago restante se efectúa al completar y aprobar los entregables establecidos.</p>
+        <div class="faq-a-body">
+          <p data-es="Realizamos una reunión inicial de inmersión para conocer tus objetivos, la audiencia y las necesidades prioritarias. A partir de allí, presento una propuesta con ruta creativa, entregables y cronograma claro."
+             data-en="We hold an initial discovery session to explore your objectives, audience, and priorities. From there, I deliver a proposal with creative route, deliverables, and a clear timeline.">
+            Realizamos una reunión inicial de inmersión para conocer tus objetivos, la audiencia y las necesidades prioritarias. A partir de allí, presento una propuesta con ruta creativa, entregables y cronograma claro.
+          </p>
         </div>
       </div>
 
-      <!-- P3 -->
-      <div class="faq-row" onclick="toggleFaqRow(this)">
-        <div class="faq-header-bar">
-          <h3>¿Trabajas con contrato?</h3>
-          <span class="faq-arrow">+</span>
+      <!-- PREGUNTA 2 -->
+      <div class="faq-capsule" onclick="toggleFaqAccordion(this)">
+        <div class="faq-q-bar">
+          <span class="faq-text" data-es="¿Cómo trabajas una landing page?" data-en="How do you build a landing page?">¿Cómo trabajas una landing page?</span>
+          <span class="faq-plus">+</span>
         </div>
-        <div class="faq-collapse">
-          <p>Sí. Cada proyecto incluye un acuerdo de prestación de servicios donde se definen por escrito alcance, tiempos, entregables, número de revisiones y condiciones de pago para mutua seguridad.</p>
+        <div class="faq-a-body">
+          <p data-es="No utilizo plantillas genéricas. Diseño la arquitectura de información y prototipo en Figma enfocándome en UX y copywriting persuasivo. Luego desarrollo el sitio con código limpio en Astro para asegurar máxima velocidad y adaptación responsive impecable."
+             data-en="I don't use generic templates. I design the information architecture and Figma prototypes focusing on UX and persuasive copywriting, then develop with clean Astro code for maximum performance and flawless responsiveness.">
+            No utilizo plantillas genéricas. Diseño la arquitectura de información y prototipo en Figma enfocándome en UX y copywriting persuasivo. Luego desarrollo el sitio con código limpio en Astro para asegurar máxima velocidad y adaptación responsive impecable.
+          </p>
+        </div>
+      </div>
+
+      <!-- PREGUNTA 3 -->
+      <div class="faq-capsule" onclick="toggleFaqAccordion(this)">
+        <div class="faq-q-bar">
+          <span class="faq-text" data-es="¿Puedes acompañar un proyecto después de entregarlo?" data-en="Can you support a project after delivery?">¿Puedes acompañar un proyecto después de entregarlo?</span>
+          <span class="faq-plus">+</span>
+        </div>
+        <div class="faq-a-body">
+          <p data-es="Sí, completamente. Ofrezco acompañamiento continuo para monitoreo de métricas, optimización iterativa de contenidos en redes sociales, actualización de piezas audiovisuales y soporte técnico post-lanzamiento."
+             data-en="Yes, absolutely. I offer ongoing support for metric monitoring, iterative social media content optimization, audiovisual asset updates, and post-launch technical support.">
+            Sí, completamente. Ofrezco acompañamiento continuo para monitoreo de métricas, optimización iterativa de contenidos en redes sociales, actualización de piezas audiovisuales y soporte técnico post-lanzamiento.
+          </p>
         </div>
       </div>
 
@@ -56,26 +65,24 @@
 </section>
 
 <script is:inline>
-  function toggleFaqRow(row) {
-    const isOpen = row.classList.contains('active');
-    document.querySelectorAll('.faq-row').forEach(r => {
-      r.classList.remove('active');
-      const c = r.querySelector('.faq-collapse');
-      if (c) c.style.maxHeight = null;
+  function toggleFaqAccordion(card) {
+    const wasActive = card.classList.contains('active');
+    document.querySelectorAll('.faq-capsule').forEach(c => {
+      c.classList.remove('active');
+      const body = c.querySelector('.faq-a-body');
+      if (body) body.style.maxHeight = null;
     });
 
-    if (!isOpen) {
-      row.classList.add('active');
-      const collapse = row.querySelector('.faq-collapse');
-      if (collapse) {
-        collapse.style.maxHeight = collapse.scrollHeight + 'px';
-      }
+    if (!wasActive) {
+      card.classList.add('active');
+      const body = card.querySelector('.faq-a-body');
+      if (body) body.style.maxHeight = body.scrollHeight + 'px';
     }
   }
 </script>
 
 <style>
-  .faq-clean-section {
+  .faq-editorial-section {
     position: relative;
     width: 100%;
     padding: 110px 24px;
@@ -85,36 +92,34 @@
     z-index: 5;
   }
 
-  .faq-clean-container {
+  .faq-editorial-container {
     max-width: 860px;
     width: 100%;
-    text-align: center;
   }
 
-  .faq-head {
+  .faq-title-wrap {
     margin-bottom: 40px;
   }
 
-  .faq-head h2 {
+  .faq-title-wrap h2 {
     font-size: clamp(2rem, 3.4vw, 2.8rem);
     font-weight: 800;
     color: #0f172a;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
-  .faq-head p {
+  .faq-title-wrap p {
     font-size: 1.05rem;
     color: #64748b;
   }
 
-  .faq-accordion-box {
+  .faq-accordion-stack {
     display: flex;
     flex-direction: column;
     gap: 14px;
-    text-align: left;
   }
 
-  .faq-row {
+  .faq-capsule {
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(0, 0, 0, 0.08);
@@ -124,52 +129,47 @@
     transition: all 0.3s ease;
   }
 
-  .faq-row:hover {
-    border-color: #0f172a;
-  }
-
-  .faq-row.active {
+  .faq-capsule.active {
     background: #ffffff;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.04);
     border-color: #0f172a;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
   }
 
-  .faq-header-bar {
+  .faq-q-bar {
     padding: 22px 26px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .faq-header-bar h3 {
+  .faq-text {
     font-size: 1.15rem;
     font-weight: 700;
     color: #0f172a;
-    margin: 0;
   }
 
-  .faq-arrow {
-    font-size: 1.4rem;
+  .faq-plus {
+    font-size: 1.5rem;
     color: #64748b;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
   }
 
-  .faq-row.active .faq-arrow {
+  .faq-capsule.active .faq-plus {
     transform: rotate(45deg);
-    color: #0f172a;
+    color: #b91c1c;
   }
 
-  .faq-collapse {
+  .faq-a-body {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  .faq-collapse p {
+  .faq-a-body p {
     padding: 0 26px 24px;
     margin: 0;
-    font-size: 0.98rem;
-    line-height: 1.65;
+    font-size: 1rem;
+    line-height: 1.7;
     color: #475569;
   }
 </style>
