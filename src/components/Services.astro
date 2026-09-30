@@ -1,91 +1,104 @@
 ---
 ---
-<section id="services" class="services-section">
-  <div class="services-container">
+<section id="services" class="services-flip-section">
+  <div class="services-flip-container">
     
-    <div class="section-label" data-es="Qué hago" data-en="What I do">
-      Qué hago
+    <div class="section-kicker" data-es="Áreas de Dominio" data-en="Core Disciplines">
+      Áreas de Dominio
     </div>
 
-    <div class="services-header">
-      <h2 class="services-title" data-es="Servicios." data-en="Services.">Servicios.</h2>
-      <p class="services-sub" data-es="Especialidades diseñadas para impulsar comunidades, marcas personales y ecosistemas de conversión."
-         data-en="Specialties crafted to scale communities, personal brands, and conversion ecosystems.">
-        Especialidades diseñadas para impulsar comunidades, marcas personales y ecosistemas de conversión.
+    <div class="section-headline">
+      <h2 data-es="Servicios." data-en="Services.">Servicios.</h2>
+      <p data-es="Haz click en cada tarjeta para girar y explorar el desglose estratégico de cada especialidad."
+         data-en="Click each card to flip and explore the strategic breakdown of each discipline.">
+        Haz click en cada tarjeta para girar y explorar el desglose estratégico de cada especialidad.
       </p>
     </div>
 
-    <div class="services-grid-large">
+    <!-- TARJETAS TIPO FLIP CARD (3D ROTATION AL CLICK) -->
+    <div class="flip-cards-grid">
       
-      <!-- 1. SOCIAL MEDIA -->
-      <div class="service-card-lg">
-        <span class="card-num">01</span>
-        <h3>Social Media Strategy</h3>
-        <p>Planificación estratégica de contenidos, investigación de audiencias y posicionamiento orgánico para construir presencia digital de largo plazo.</p>
-        <div class="service-tags">
-          <span>Estrategia</span>
-          <span>Pilares de contenido</span>
-          <span>Posicionamiento</span>
+      <!-- 1. SOCIAL MEDIA STRATEGY -->
+      <div class="flip-card-wrapper" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          
+          <!-- PARTE FRONTAL -->
+          <div class="flip-card-front card-theme-social">
+            <span class="front-index">01</span>
+            <div class="front-icon-symbol">✦</div>
+            <h3 class="front-title">Social Media Strategy</h3>
+            <span class="front-instruction" data-es="Click para girar ↺" data-en="Click to flip ↺">Click para girar ↺</span>
+          </div>
+
+          <!-- PARTE POSTERIOR -->
+          <div class="flip-card-back">
+            <span class="back-tag">Social Media Strategy</span>
+            <ul class="back-details-list">
+              <li>Estrategia digital integral</li>
+              <li>Definición de pilares de contenido</li>
+              <li>Posicionamiento de marca</li>
+              <li>Planificación editorial mensual</li>
+              <li>Análisis cuantitativo de audiencia</li>
+            </ul>
+            <span class="back-close-hint" data-es="Click para regresar ↺" data-en="Click to flip back ↺">Click para regresar ↺</span>
+          </div>
+
         </div>
       </div>
 
       <!-- 2. COMMUNITY MANAGEMENT -->
-      <div class="service-card-lg">
-        <span class="card-num">02</span>
-        <h3>Community Management</h3>
-        <p>Moderación activa, gestión de mensajes directos, construcción de comunidad y dinamización de audiencias para convertir seguidores en embajadores.</p>
-        <div class="service-tags">
-          <span>Engagement</span>
-          <span>Fidelización</span>
-          <span>Interacción activa</span>
+      <div class="flip-card-wrapper" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          
+          <!-- PARTE FRONTAL -->
+          <div class="flip-card-front card-theme-community">
+            <span class="front-index">02</span>
+            <div class="front-icon-symbol">💬</div>
+            <h3 class="front-title">Community Management</h3>
+            <span class="front-instruction" data-es="Click para girar ↺" data-en="Click to flip ↺">Click para girar ↺</span>
+          </div>
+
+          <!-- PARTE POSTERIOR -->
+          <div class="flip-card-back">
+            <span class="back-tag">Community Management</span>
+            <ul class="back-details-list">
+              <li>Gestión de comunidades activas</li>
+              <li>Atención profesional al público</li>
+              <li>Respuesta estratégica de mensajes (DMs)</li>
+              <li>Interacción proactiva con usuarios</li>
+              <li>Construcción de relaciones y fidelización</li>
+            </ul>
+            <span class="back-close-hint" data-es="Click para regresar ↺" data-en="Click to flip back ↺">Click para regresar ↺</span>
+          </div>
+
         </div>
       </div>
 
-      <!-- 3. VIDEO EDITING -->
-      <div class="service-card-lg">
-        <span class="card-num">03</span>
-        <h3>Video Editing & Short-form</h3>
-        <p>Edición ágil de Reels, TikToks y formatos verticales con ganchos visuales (hooks), ritmo dinámico, subtítulos y narrativa envolvente.</p>
-        <div class="service-tags">
-          <span>Short-form</span>
-          <span>Storytelling</span>
-          <span>Hooks visuales</span>
-        </div>
-      </div>
+      <!-- 3. VIDEO EDITING SHORT FORM -->
+      <div class="flip-card-wrapper" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          
+          <!-- PARTE FRONTAL -->
+          <div class="flip-card-front card-theme-video">
+            <span class="front-index">03</span>
+            <div class="front-icon-symbol">▶</div>
+            <h3 class="front-title">Video Editing Short Form</h3>
+            <span class="front-instruction" data-es="Click para girar ↺" data-en="Click to flip ↺">Click para girar ↺</span>
+          </div>
 
-      <!-- 4. UX LANDING PAGES -->
-      <div class="service-card-lg">
-        <span class="card-num">04</span>
-        <h3>UX Landing Pages</h3>
-        <p>Diseño y maquetación web funcional en Astro/HTML/CSS centrada en la experiencia de usuario, claridad visual y optimización de conversión.</p>
-        <div class="service-tags">
-          <span>Diseño responsive</span>
-          <span>Arquitectura UX</span>
-          <span>Alta velocidad</span>
-        </div>
-      </div>
+          <!-- PARTE POSTERIOR -->
+          <div class="flip-card-back">
+            <span class="back-tag">Video Editing Short Form</span>
+            <ul class="back-details-list">
+              <li>Edición dinámica (Reels & TikToks)</li>
+              <li>Hooks visuales de alta retención</li>
+              <li>Ritmo audiovisual milimétrico</li>
+              <li>Transiciones y sound design</li>
+              <li>Storytelling visual persuasivo</li>
+            </ul>
+            <span class="back-close-hint" data-es="Click para regresar ↺" data-en="Click to flip back ↺">Click para regresar ↺</span>
+          </div>
 
-      <!-- 5. CONTENT STRATEGY -->
-      <div class="service-card-lg">
-        <span class="card-num">05</span>
-        <h3>Content Creation</h3>
-        <p>Guionización, copywriting persuasivo y curaduría visual para formatos multiplataforma que comunican la identidad única de cada marca.</p>
-        <div class="service-tags">
-          <span>Copywriting</span>
-          <span>Guiones</span>
-          <span>Calendario editorial</span>
-        </div>
-      </div>
-
-      <!-- 6. ANALYTICS -->
-      <div class="service-card-lg">
-        <span class="card-num">06</span>
-        <h3>Analytics & Digital Growth</h3>
-        <p>Monitoreo continuo de métricas clave (Reach, Engagement, CTR, Comportamiento) para iterar, optimizar y justificar decisiones con datos reales.</p>
-        <div class="service-tags">
-          <span>Métricas</span>
-          <span>Reportes de impacto</span>
-          <span>Optimización</span>
         </div>
       </div>
 
@@ -95,7 +108,7 @@
 </section>
 
 <style>
-  .services-section {
+  .services-flip-section {
     position: relative;
     width: 100%;
     padding: 130px 24px;
@@ -105,16 +118,25 @@
     z-index: 5;
   }
 
-  .services-container {
-    max-width: 1160px;
+  .services-flip-container {
+    max-width: 1180px;
     width: 100%;
   }
 
-  .services-header {
+  .section-kicker {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #b91c1c;
+    margin-bottom: 20px;
+  }
+
+  .section-headline {
     margin-bottom: 50px;
   }
 
-  .services-title {
+  .section-headline h2 {
     font-size: clamp(2.2rem, 3.8vw, 3.2rem);
     font-weight: 800;
     color: #0f172a;
@@ -122,80 +144,144 @@
     margin-bottom: 12px;
   }
 
-  .services-sub {
-    font-size: 1.12rem;
+  .section-headline p {
+    font-size: 1.1rem;
     color: #64748b;
-    max-width: 650px;
-    line-height: 1.6;
-    margin: 0;
   }
 
-  .services-grid-large {
+  /* FLIP CARDS EN GRID */
+  .flip-cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-    gap: 28px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
   }
 
-  .service-card-lg {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 18px;
+  .flip-card-wrapper {
+    background-color: transparent;
+    height: 420px;
+    perspective: 1200px; /* Profundidad 3D */
+    cursor: pointer;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-style: preserve-3d;
+    border-radius: 20px;
+  }
+
+  /* ESTADO GIRADO (FLIPPED) */
+  .flip-card-wrapper.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px;
     padding: 36px 30px;
     display: flex;
     flex-direction: column;
-    transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+    justify-content: space-between;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.08);
   }
 
-  .service-card-lg:hover {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
-    border-color: #0f172a;
+  /* FRENTES CON COLORES INDIVIDUALES */
+  .card-theme-social {
+    background: linear-gradient(145deg, #ffffff 0%, #fef2f2 100%);
+    border-color: rgba(185, 28, 28, 0.2);
   }
 
-  .card-num {
+  .card-theme-community {
+    background: linear-gradient(145deg, #ffffff 0%, #eff6ff 100%);
+    border-color: rgba(59, 130, 246, 0.2);
+  }
+
+  .card-theme-video {
+    background: linear-gradient(145deg, #ffffff 0%, #fefce8 100%);
+    border-color: rgba(234, 179, 8, 0.25);
+  }
+
+  .front-index {
     font-family: monospace;
     font-size: 1.2rem;
     font-weight: 800;
     color: #94a3b8;
-    margin-bottom: 20px;
   }
 
-  .service-card-lg h3 {
-    font-size: 1.35rem;
+  .front-icon-symbol {
+    font-size: 2.8rem;
+    color: #0f172a;
+    margin: 10px 0;
+  }
+
+  .front-title {
+    font-size: 1.7rem;
     font-weight: 800;
     color: #0f172a;
-    margin-bottom: 12px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
   }
 
-  .service-card-lg p {
-    font-size: 0.96rem;
-    line-height: 1.65;
-    color: #475569;
-    margin-bottom: 24px;
-    flex-grow: 1;
+  .front-instruction {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
   }
 
-  .service-tags {
+  /* DORSO DE LA TARJETA */
+  .flip-card-back {
+    background: #0f172a;
+    color: #ffffff;
+    transform: rotateY(180deg);
+    border-color: #0f172a;
+  }
+
+  .back-tag {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #fef08a;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .back-details-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    border-top: 1px solid #f1f5f9;
-    padding-top: 18px;
+    flex-direction: column;
+    gap: 12px;
   }
 
-  .service-tags span {
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: #0f172a;
-    padding: 4px 10px;
-    border-radius: 6px;
+  .back-details-list li {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.45;
+    display: flex;
+    align-items: center;
   }
 
-  @media (max-width: 768px) {
-    .services-section { padding: 80px 20px; }
-    .services-grid-large { grid-template-columns: 1fr; }
+  .back-details-list li::before {
+    content: "✦";
+    color: #b91c1c;
+    margin-right: 10px;
+    font-size: 0.8rem;
+  }
+
+  .back-close-hint {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.45);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
   }
 </style>
