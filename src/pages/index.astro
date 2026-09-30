@@ -197,18 +197,100 @@ import Contact from "../components/Contact.astro";
     </div>
   </div>
 
-  <!-- CONTROLADORES GLOBALES JS -->
+   <!-- CONTROLADORES GLOBALES JS CON RETIRO AUTOMÁTICO DE LA PANTALLA DE CARGA -->
   <script is:inline>
-    // 1. Loading screen de estudio
-    window.addEventListener('load', () => {
+    // Función a prueba de fallos para ocultar la pantalla de carga
+    function dismissLoader() {
       const loader = document.getElementById('studio-loader');
-      setTimeout(() => {
-        if (loader) {
-          loader.classList.add('fade-out');
-          setTimeout(() => loader.remove(), 700);
-        }
-      }, 850);
+      if (loader && !loader.classList.contains('fade-out')) {
+        loader.classList.add('fade-out');
+        document.body.style.overflow = 'auto'; // Restaura el scroll
+        setTimeout(() => {
+          if (loader.parentNode) loader.parentNode.removeChild(loader);
+        }, 700);
+      }
+    }
+
+    // 1. Se ejecuta apenas el HTML está listo (sin esperar videos pesados)
+    if (document.readyState === 'interactive' || document.readyState === 'complete') {
+      setTimeout(dismissLoader, 900);
+    } else {
+      document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(dismissLoader, 900);
+      });
+    }
+
+    // 2. Respaldo forzado de seguridad: se retira sí o sí a los 1.5 segundos
+    setTimeout(dismissLoader, 1500);
+
+    // 3. Respaldo por click: si el usuario hace click, se quita al instante
+    document.addEventListener('click', function(e) {
+      const loader = document.getElementById('studio-loader');
+      if (loader && !loader.classList.contains('fade-out')) {
+        dismissLoader();
+      }
     });
+
+    // Idioma ES / EN
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      if (event && event.target) event.target.classList.add('active');
+      
+      document.querySelectorAll('[data-es]').forEach(el => { 
+        el.innerHTML = el.getAttribute(`data-${lang}`); 
+      });
+    }
+
+    // Modales con bloqueo de scroll
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    function closeModalOutside(e, id) {
+      if (e.target.id === id) closeModal(id);
+    }
+
+    // Zoom de Galería
+    function openGalleryZoom(el) {
+      const overlay = document.getElementById('zoom-overlay');
+      const container = document.getElementById('zoom-media-container');
+      const caption = document.getElementById('zoom-caption');
+      container.innerHTML = '';
+      if (el.tagName === 'VIDEO') {
+        const vid = document.createElement('video');
+        vid.src = el.querySelector('source').src;
+        vid.controls = true;
+        vid.autoplay = true;
+        vid.className = 'zoom-media';
+        container.appendChild(vid);
+      } else {
+        const img = document.createElement('img');
+        img.src = el.src;
+        img.className = 'zoom-media';
+        container.appendChild(img);
+      }
+      caption.innerText = el.getAttribute('data-caption') || '';
+      overlay.classList.add('active');
+    }
+
+    function closeZoom(e) {
+      if (e.target.id === 'zoom-overlay' || e.target.classList.contains('zoom-close')) {
+        document.getElementById('zoom-overlay').classList.remove('active');
+      }
+    }
+  </script>
 
     // 2. Idioma ES / EN (Español por defecto)
     function setLanguage(lang) {
