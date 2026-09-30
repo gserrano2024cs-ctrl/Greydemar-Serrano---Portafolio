@@ -197,7 +197,7 @@ import Contact from "../components/Contact.astro";
     </div>
   </div>
 
-   <!-- CONTROLADORES GLOBALES JS CON RETIRO AUTOMÁTICO DE LA PANTALLA DE CARGA -->
+  <!-- CONTROLADORES GLOBALES JS CON RETIRO AUTOMÁTICO DE LA PANTALLA DE CARGA -->
   <script is:inline>
     // Función a prueba de fallos para ocultar la pantalla de carga
     function dismissLoader() {
@@ -263,67 +263,6 @@ import Contact from "../components/Contact.astro";
     }
 
     // Zoom de Galería
-    function openGalleryZoom(el) {
-      const overlay = document.getElementById('zoom-overlay');
-      const container = document.getElementById('zoom-media-container');
-      const caption = document.getElementById('zoom-caption');
-      container.innerHTML = '';
-      if (el.tagName === 'VIDEO') {
-        const vid = document.createElement('video');
-        vid.src = el.querySelector('source').src;
-        vid.controls = true;
-        vid.autoplay = true;
-        vid.className = 'zoom-media';
-        container.appendChild(vid);
-      } else {
-        const img = document.createElement('img');
-        img.src = el.src;
-        img.className = 'zoom-media';
-        container.appendChild(img);
-      }
-      caption.innerText = el.getAttribute('data-caption') || '';
-      overlay.classList.add('active');
-    }
-
-    function closeZoom(e) {
-      if (e.target.id === 'zoom-overlay' || e.target.classList.contains('zoom-close')) {
-        document.getElementById('zoom-overlay').classList.remove('active');
-      }
-    }
-  </script>
-
-    // 2. Idioma ES / EN (Español por defecto)
-    function setLanguage(lang) {
-      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-      if (event && event.target) event.target.classList.add('active');
-      
-      document.querySelectorAll('[data-es]').forEach(el => { 
-        el.innerHTML = el.getAttribute(`data-${lang}`); 
-      });
-    }
-
-    // 3. Modales con bloqueo de scroll detrás
-    function openModal(id) {
-      const modal = document.getElementById(id);
-      if (modal) {
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-    }
-
-    function closeModal(id) {
-      const modal = document.getElementById(id);
-      if (modal) {
-        modal.classList.remove('active');
-        document.body.style.overflow = 'auto';
-      }
-    }
-
-    function closeModalOutside(e, id) {
-      if (e.target.id === id) closeModal(id);
-    }
-
-    // 4. Zoom de Galería
     function openGalleryZoom(el) {
       const overlay = document.getElementById('zoom-overlay');
       const container = document.getElementById('zoom-media-container');
